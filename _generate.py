@@ -7,7 +7,7 @@ BASE = os.path.dirname(os.path.abspath(__file__))
 
 # ── NAV HTML ──────────────────────────────────────────────────────────────────
 NAV = """
-<nav class="site-nav">
+<nav class="site-nav" id="site-navigation" aria-label="Navigation principale">
   <div class="nav-item">
     <a href="/comparatifs/" class="nav-link">
       Comparatifs
@@ -108,7 +108,7 @@ HEADER = """
     </a>
     {nav}
     <a href="/guides/choisir-bloc-notes-numerique/" class="header-cta">Trouver mon modèle</a>
-    <button class="burger" aria-label="Menu">
+    <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-navigation">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -124,7 +124,7 @@ FOOTER = """
           <span class="logo-line1">bloc-notes</span>
           <span class="logo-line2">numériques.fr</span>
         </div>
-        <p class="footer-tagline">Tests, comparatifs et guides indépendants pour choisir une tablette de prise de notes réellement adaptée à vos usages.</p>
+        <p class="footer-tagline">Analyses, comparatifs et guides indépendants pour choisir une tablette de prise de notes adaptée à vos usages.</p>
       </div>
       <div class="footer-col">
         <h4>Comparatifs</h4>
@@ -154,7 +154,7 @@ FOOTER = """
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 bloc-notes numériques.fr — Tous droits réservés</span>
+      <span>© 2026 bloc-notes numériques.fr — Tous droits réservés</span>
       <span>Ce site contient des liens affiliés. <a href="/transparence-affiliation/">En savoir plus.</a></span>
     </div>
   </div>
@@ -164,6 +164,7 @@ FOOTER = """
 def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
     depth = canonical.count("/") - 1
     css_path = ("../" * depth) + "style.css" if depth > 0 else "style.css"
+    js_path = ("../" * depth) + "site.js" if depth > 0 else "site.js"
     return f"""<!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -171,6 +172,7 @@ def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content="{description}">
+  <meta name="robots" content="noindex,follow">
   <link rel="canonical" href="https://bloc-notes-numeriques.fr{canonical}">
   <link rel="stylesheet" href="{css_path}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,6 +184,7 @@ def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
 {content_html}
 </main>
 {FOOTER}
+<script src="{js_path}" defer></script>
 </body>
 </html>"""
 
@@ -232,7 +235,7 @@ def content_page(title, desc, canonical, crumbs, page_type=""):
     <p class="lead">{desc}</p>
     <div class="page-meta">
       <span class="update-tag">Mis à jour régulièrement</span>
-      <span class="page-meta-item">Vérification : MM/AAAA</span>
+      <span class="page-meta-item">Contenu en préparation</span>
     </div>
   </div>
 </section>
@@ -261,11 +264,11 @@ def test_page(title, desc, canonical, crumbs, product_name, score="—"):
     content = f"""
 <section class="page-hero">
   <div class="container">
-    <span class="content-type type-test">Test</span>
+    <span class="content-type type-test">Analyse produit</span>
     <h1>{title}</h1>
     <p class="lead">{desc}</p>
     <div class="page-meta">
-      <span class="update-tag">Dernière vérification : MM/AAAA</span>
+      <span class="update-tag">Analyse en préparation</span>
     </div>
   </div>
 </section>
@@ -282,11 +285,7 @@ def test_page(title, desc, canonical, crumbs, product_name, score="—"):
           <div class="summary-row"><span class="summary-label">Prix constaté</span><span class="summary-val">— €</span></div>
         </div>
       </div>
-      <div class="hero-actions" style="margin-bottom:32px;">
-        <a href="#test" class="btn btn-secondary">Lire le test</a>
-        <a href="#prix" class="btn btn-accent">Voir le prix</a>
-        <a href="#alternatives" class="btn btn-ghost">Comparer les alternatives</a>
-      </div>
+      <p class="draft-notice">Cette page est en préparation. Aucun verdict ni lien marchand ne sera publié avant vérification des informations.</p>
       <!-- Contenu du test à rédiger -->
     </article>
     <aside class="content-sidebar">
@@ -341,24 +340,24 @@ def write(path, content):
 
 # ── HOMEPAGE ─────────────────────────────────────────────────────────────────
 homepage = html_page(
-    "Bloc-notes numériques — Tests, comparatifs et guides indépendants",
-    "Trouvez le meilleur bloc-notes numérique selon votre usage. Tests indépendants, comparatifs et guides sur reMarkable, Kindle Scribe, Boox, Kobo Elipsa et Supernote.",
+    "Bloc-notes numériques — Comparatifs, analyses et guides",
+    "Trouvez le bloc-notes numérique adapté à votre usage grâce à des comparatifs, analyses documentées et guides sur reMarkable, Kindle Scribe, Boox, Kobo Elipsa et Supernote.",
     "",
     """
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
       <div class="hero-content">
-        <span class="hero-tag">Tests &amp; comparatifs indépendants</span>
+        <span class="hero-tag">Comparatifs &amp; guides indépendants</span>
         <h1 class="hero-title">Le bon bloc-notes numérique,<br>selon votre manière de travailler.</h1>
-        <p class="lead hero-desc">Tests, comparatifs et guides indépendants pour choisir une tablette de prise de notes réellement adaptée à vos usages.</p>
+        <p class="lead hero-desc">Comparatifs, analyses documentées et guides pour choisir une tablette de prise de notes réellement adaptée à vos usages.</p>
         <div class="hero-actions">
           <a href="/comparatifs/meilleur-bloc-notes-numerique/" class="btn btn-primary btn-lg">Comparer les meilleurs modèles</a>
           <a href="/guides/choisir-bloc-notes-numerique/" class="btn btn-secondary btn-lg">Trouver mon bloc-notes numérique</a>
         </div>
       </div>
       <div class="hero-visual">
-        <p class="hero-visual-placeholder">Visuels produits<br>(photos à intégrer)</p>
+        <div class="paper-study" aria-hidden="true"><span></span><span></span><span></span></div>
       </div>
     </div>
   </div>
@@ -410,8 +409,8 @@ homepage = html_page(
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Comparatif</p>
-      <h2>Les 5 meilleurs bloc-notes numériques</h2>
-      <p>Notre sélection mise à jour régulièrement, basée sur des tests approfondis.</p>
+      <h2>Cinq modèles à comparer</h2>
+      <p>Une grille de comparaison commune, complétée au fur et à mesure de nos vérifications.</p>
     </div>
     <div class="table-wrapper">
       <table class="comp-table">
@@ -434,7 +433,7 @@ homepage = html_page(
             <td><span class="badge badge-primary">Couleur</span></td>
             <td>Optionnel</td>
             <td>— €</td>
-            <td class="verdict-star">★ Meilleur choix</td>
+            <td>Positionnement à vérifier</td>
           </tr>
           <tr>
             <td><strong>Kindle Scribe</strong></td>
@@ -443,7 +442,7 @@ homepage = html_page(
             <td><span class="badge badge-neutral">N&amp;B</span></td>
             <td>Non</td>
             <td>— €</td>
-            <td>Meilleur rapport qualité-prix</td>
+            <td>Positionnement à vérifier</td>
           </tr>
           <tr>
             <td><strong>Boox Note Air 4</strong></td>
@@ -452,7 +451,7 @@ homepage = html_page(
             <td><span class="badge badge-primary">Couleur</span></td>
             <td>Non</td>
             <td>— €</td>
-            <td>Plus polyvalent</td>
+            <td>Positionnement à vérifier</td>
           </tr>
           <tr>
             <td><strong>Kobo Elipsa 2E</strong></td>
@@ -461,7 +460,7 @@ homepage = html_page(
             <td><span class="badge badge-neutral">N&amp;B</span></td>
             <td>Non</td>
             <td>— €</td>
-            <td>Idéal lecteurs Kobo</td>
+            <td>Positionnement à vérifier</td>
           </tr>
           <tr>
             <td><strong>Supernote A5X2</strong></td>
@@ -470,7 +469,7 @@ homepage = html_page(
             <td><span class="badge badge-neutral">N&amp;B</span></td>
             <td>Non</td>
             <td>— €</td>
-            <td>Communauté fidèle</td>
+            <td>Positionnement à vérifier</td>
           </tr>
         </tbody>
       </table>
@@ -484,13 +483,13 @@ homepage = html_page(
 <section class="section section--alt">
   <div class="container">
     <div class="section-heading">
-      <p class="eyebrow">Nos recommandations</p>
-      <h2>Le bon choix selon votre profil</h2>
+      <p class="eyebrow">Profils d’usage</p>
+      <h2>Les positionnements à documenter</h2>
     </div>
     <div class="reco-grid">
       <div class="reco-card">
-        <div class="reco-card-badge">Meilleur choix global</div>
-        <div class="reco-card-img"><span style="font-family:var(--font-serif);font-style:italic;color:var(--color-text-muted);font-size:.85rem">Photo produit</span></div>
+        <div class="reco-card-badge">Écriture et couleur</div>
+        <div class="reco-card-img" aria-hidden="true"><span class="product-silhouette"></span></div>
         <div class="reco-card-body">
           <h3>reMarkable Paper Pro</h3>
           <div class="reco-meta">
@@ -499,14 +498,14 @@ homepage = html_page(
           </div>
           <div class="reco-price">— €</div>
           <div class="reco-actions">
-            <a href="/marques/remarkable/remarkable-paper-pro-avis/" class="btn btn-ghost">Lire le test</a>
-            <a href="#prix" class="btn btn-accent">Voir le prix</a>
+            <a href="/marques/remarkable/remarkable-paper-pro-avis/" class="btn btn-ghost">Lire l’analyse</a>
+            <span class="btn btn-accent btn-disabled" aria-disabled="true">Prix à venir</span>
           </div>
         </div>
       </div>
       <div class="reco-card">
-        <div class="reco-card-badge accent">Meilleur pour les pros</div>
-        <div class="reco-card-img"><span style="font-family:var(--font-serif);font-style:italic;color:var(--color-text-muted);font-size:.85rem">Photo produit</span></div>
+        <div class="reco-card-badge accent">Environnement ouvert</div>
+        <div class="reco-card-img" aria-hidden="true"><span class="product-silhouette product-silhouette--wide"></span></div>
         <div class="reco-card-body">
           <h3>Boox Tab Ultra C Pro</h3>
           <div class="reco-meta">
@@ -515,14 +514,14 @@ homepage = html_page(
           </div>
           <div class="reco-price">— €</div>
           <div class="reco-actions">
-            <a href="/marques/boox/avis/" class="btn btn-ghost">Lire le test</a>
-            <a href="#prix" class="btn btn-accent">Voir le prix</a>
+            <a href="/marques/boox/avis/" class="btn btn-ghost">Lire l’analyse</a>
+            <span class="btn btn-accent btn-disabled" aria-disabled="true">Prix à venir</span>
           </div>
         </div>
       </div>
       <div class="reco-card">
-        <div class="reco-card-badge neutral">Meilleur rapport qualité-prix</div>
-        <div class="reco-card-img"><span style="font-family:var(--font-serif);font-style:italic;color:var(--color-text-muted);font-size:.85rem">Photo produit</span></div>
+        <div class="reco-card-badge neutral">Lecture et annotation</div>
+        <div class="reco-card-img" aria-hidden="true"><span class="product-silhouette product-silhouette--compact"></span></div>
         <div class="reco-card-body">
           <h3>Kindle Scribe</h3>
           <div class="reco-meta">
@@ -531,8 +530,8 @@ homepage = html_page(
           </div>
           <div class="reco-price">— €</div>
           <div class="reco-actions">
-            <a href="/marques/kindle-scribe/" class="btn btn-ghost">Lire le test</a>
-            <a href="#prix" class="btn btn-accent">Voir le prix</a>
+            <a href="/marques/kindle-scribe/" class="btn btn-ghost">Lire l’analyse</a>
+            <span class="btn btn-accent btn-disabled" aria-disabled="true">Prix à venir</span>
           </div>
         </div>
       </div>
@@ -580,19 +579,19 @@ homepage = html_page(
       <a href="/marques/remarkable/remarkable-paper-pro-avis/" class="content-card">
         <div class="content-card-img"></div>
         <div class="content-card-body">
-          <span class="content-type type-test">Test</span>
+          <span class="content-type type-test">Analyse</span>
           <h3>reMarkable Paper Pro — Avis complet</h3>
-          <p>Notre test approfondi après plusieurs semaines d'utilisation.</p>
-          <span class="content-date">Vérifié : MM/AAAA</span>
+          <p>Analyse détaillée de l'expérience d'écriture, de l'écran et de l'écosystème.</p>
+          <span class="content-date">Contenu en préparation</span>
         </div>
       </a>
       <a href="/comparatifs/meilleur-bloc-notes-numerique/" class="content-card">
         <div class="content-card-img"></div>
         <div class="content-card-body">
           <span class="content-type type-comparatif">Comparatif</span>
-          <h3>Meilleur bloc-notes numérique en 2025</h3>
+          <h3>Quel bloc-notes numérique choisir ?</h3>
           <p>Notre sélection des meilleures tablettes de prise de notes.</p>
-          <span class="content-date">Vérifié : MM/AAAA</span>
+          <span class="content-date">Contenu en préparation</span>
         </div>
       </a>
       <a href="/guides/choisir-bloc-notes-numerique/" class="content-card">
@@ -601,7 +600,7 @@ homepage = html_page(
           <span class="content-type type-guide">Guide</span>
           <h3>Comment choisir son bloc-notes numérique ?</h3>
           <p>Tous les critères à connaître avant d'acheter.</p>
-          <span class="content-date">Vérifié : MM/AAAA</span>
+          <span class="content-date">Contenu en préparation</span>
         </div>
       </a>
     </div>
@@ -613,7 +612,7 @@ homepage = html_page(
     <div class="section-heading" style="max-width:600px;margin-left:auto;margin-right:auto;text-align:center;">
       <p class="eyebrow">Méthodologie</p>
       <h2>Comment évaluons-nous les bloc-notes numériques ?</h2>
-      <p>Nos tests sont réalisés sur plusieurs semaines. Nous n'acceptons aucune rémunération pour nos avis éditoriaux.</p>
+      <p>Chaque recommandation devra indiquer clairement son niveau de preuve et les informations effectivement vérifiées.</p>
     </div>
     <div class="method-grid">
       <div class="method-card">
@@ -676,8 +675,8 @@ write("/comparatifs/index.html", hub_page(
 ))
 
 COMPARATIFS = [
-    ("/comparatifs/meilleur-bloc-notes-numerique/", "Meilleur bloc-notes numérique — Comparatif & sélection", "Quel est le meilleur bloc-notes numérique en 2025 ? Notre comparatif indépendant des meilleures tablettes E Ink pour la prise de notes.", "comparatif"),
-    ("/comparatifs/tablette-e-ink/", "Meilleure tablette E Ink — Comparatif", "Comparatif des meilleures tablettes E Ink disponibles en 2025.", "comparatif"),
+    ("/comparatifs/meilleur-bloc-notes-numerique/", "Meilleur bloc-notes numérique — Comparatif & sélection", "Quel bloc-notes numérique choisir ? Notre grille comparative des tablettes E Ink pour la prise de notes.", "comparatif"),
+    ("/comparatifs/tablette-e-ink/", "Meilleure tablette E Ink — Comparatif", "Comparaison des principales tablettes E Ink pour comprendre leurs usages et leurs limites.", "comparatif"),
     ("/comparatifs/bloc-notes-numerique-professionnel/", "Meilleur bloc-notes numérique pour les professionnels", "Quel bloc-notes numérique choisir pour une utilisation professionnelle ? Notre sélection pour le travail.", "comparatif"),
     ("/comparatifs/bloc-notes-numerique-etudiant/", "Meilleur bloc-notes numérique pour les étudiants", "Quel bloc-notes numérique choisir pour les études ? Notre comparatif pour les étudiants.", "comparatif"),
     ("/comparatifs/bloc-notes-numerique-couleur/", "Meilleur bloc-notes numérique couleur", "Comparatif des bloc-notes numériques avec écran couleur E Ink.", "comparatif"),
@@ -733,8 +732,8 @@ write("/marques/remarkable/index.html", hub_page(
 REMARKABLE_PAGES = [
     ("/marques/remarkable/remarkable-paper-pro/", "reMarkable Paper Pro — Fiche technique et présentation", "Découvrez le reMarkable Paper Pro : caractéristiques, fonctionnalités et pour qui c'est fait."),
     ("/marques/remarkable/remarkable-2/", "reMarkable 2 — Fiche technique et présentation", "Le reMarkable 2 : caractéristiques, fonctionnalités et comparaison avec le Paper Pro."),
-    ("/marques/remarkable/remarkable-2-avis/", "reMarkable 2 — Avis et test complet", "Notre test complet du reMarkable 2 après plusieurs semaines d'utilisation intensive."),
-    ("/marques/remarkable/remarkable-paper-pro-avis/", "reMarkable Paper Pro — Avis et test complet", "Notre test complet du reMarkable Paper Pro : écriture, écran couleur, logiciel et verdict."),
+    ("/marques/remarkable/remarkable-2-avis/", "reMarkable 2 — Avis et analyse complète", "Analyse détaillée du reMarkable 2 : écriture, écran, logiciel et limites."),
+    ("/marques/remarkable/remarkable-paper-pro-avis/", "reMarkable Paper Pro — Avis et analyse complète", "Analyse du reMarkable Paper Pro : écriture, écran couleur, logiciel et limites."),
     ("/marques/remarkable/abonnement-connect/", "Abonnement reMarkable Connect — Vaut-il le coup ?", "Faut-il souscrire à l'abonnement Connect de reMarkable ? Notre analyse détaillée."),
     ("/marques/remarkable/accessoires/", "Accessoires reMarkable — Stylets, housses et étuis", "Les meilleurs accessoires compatibles avec reMarkable 2 et Paper Pro."),
     ("/marques/remarkable/alternatives/", "Alternatives à reMarkable — Que choisir à la place ?", "Les meilleures alternatives au reMarkable : Boox, Supernote, Kindle Scribe et Kobo Elipsa."),
@@ -768,7 +767,7 @@ write("/marques/boox/index.html", hub_page(
 BOOX_PAGES = [
     ("/marques/boox/boox-note-air/", "Boox Note Air — Fiche technique et présentation", "Tout sur le Boox Note Air : caractéristiques, fonctionnalités et avis."),
     ("/marques/boox/boox-tab-ultra/", "Boox Tab Ultra — Fiche technique et présentation", "Le Boox Tab Ultra : la tablette E Ink Android la plus complète du marché."),
-    ("/marques/boox/avis/", "Boox — Avis et tests complets", "Nos tests complets des tablettes Boox : Note Air, Tab Ultra et comparaisons."),
+    ("/marques/boox/avis/", "Boox — Avis et analyses", "Analyses des tablettes Boox : Note Air, Tab Ultra et comparaisons."),
     ("/marques/boox/accessoires/", "Accessoires Boox — Stylets et housses compatibles", "Les meilleurs accessoires pour vos tablettes Boox."),
     ("/marques/boox/alternatives/", "Alternatives à Boox — Que choisir à la place ?", "Les meilleures alternatives à Boox selon votre usage et votre budget."),
 ]
@@ -786,10 +785,27 @@ BRAND_SIMPLE = [
 
 for path, title, desc, brand in BRAND_SIMPLE:
     crumbs = breadcrumb(("Marques", "/marques/"), brand)
+    related = {
+        "Kindle Scribe": [
+            ("Kindle Scribe vs reMarkable", "/comparatifs/kindle-scribe-vs-remarkable/"),
+            ("Kindle Scribe vs Kobo Elipsa", "/comparatifs/kindle-scribe-vs-kobo-elipsa/"),
+            ("Liseuse ou bloc-notes numérique ?", "/guides/liseuse-ou-bloc-notes-numerique/"),
+        ],
+        "Kobo Elipsa": [
+            ("Kobo Elipsa vs reMarkable", "/comparatifs/kobo-elipsa-vs-remarkable/"),
+            ("Kindle Scribe vs Kobo Elipsa", "/comparatifs/kindle-scribe-vs-kobo-elipsa/"),
+            ("Lire et prendre des notes", "/usages/lecture-et-prise-de-notes/"),
+        ],
+        "Supernote": [
+            ("reMarkable vs Supernote", "/comparatifs/remarkable-vs-supernote/"),
+            ("Boox vs Supernote", "/comparatifs/boox-vs-supernote/"),
+            ("Prendre des notes au travail", "/usages/prise-de-notes-professionnelle/"),
+        ],
+    }
     write(path + "index.html", hub_page(
         title, desc, path, crumbs,
         f"Le hub {brand} : tout ce que vous devez savoir avant d'acheter.",
-        [("Tests et avis", path + "avis/"), ("Accessoires", path + "accessoires/"), ("Alternatives", path + "alternatives/")]
+        related[brand]
     ))
 
 # ── USAGES ────────────────────────────────────────────────────────────────────
