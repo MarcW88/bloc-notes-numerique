@@ -10,6 +10,7 @@ issues = []
 FORBIDDEN_TYPES = {"decision_matrix", "table", "comparison_table"}
 EDITORIAL_EXTENSIONS = {".webp", ".png", ".jpg", ".jpeg", ".avif"}
 counts = {"functional_diagram": 0, "editorial_image": 0, "no_visual": 0}
+pending_editorial = 0
 
 if set(manifests) != set(guides):
     missing = sorted(set(guides) - set(manifests))
@@ -47,11 +48,11 @@ for slug, page in guides.items():
         issues.append(f"{slug}: output missing")
         continue
     asset = ROOT / output_value
-    if not asset.exists():
-        issues.append(f"{slug}: asset missing")
-        continue
 
     if asset_mode == "functional_diagram":
+        if not asset.exists():
+            issues.append(f"{slug}: functional diagram asset missing")
+            continue
         if spec.get("type") in FORBIDDEN_TYPES:
             issues.append(f"{slug}: table-like visual forbidden ({spec.get('type')})")
         svg = asset.read_text(encoding="utf-8")
@@ -64,6 +65,11 @@ for slug, page in guides.items():
     elif asset_mode == "editorial_image":
         if asset.suffix.lower() not in EDITORIAL_EXTENSIONS:
             issues.append(f"{slug}: unsupported editorial image extension")
+        if not asset.exists():
+            pending_editorial += 1
+            if all_visuals != 0:
+                issues.append(f"{slug}: pending editorial image must not leave an injected visual block")
+            continue
     else:
         issues.append(f"{slug}: unsupported asset_mode {asset_mode}")
         continue
@@ -84,6 +90,7 @@ if issues:
 print(
     "PASS: guide visual routing valid — "
     f"{counts.get('functional_diagram', 0)} functional diagrams, "
-    f"{counts.get('editorial_image', 0)} editorial images, "
+    f"{counts.get('editorial_image', 0)} editorial images "
+    f"({pending_editorial} pending generation), "
     f"{counts.get('no_visual', 0)} no-visual pages"
 )
