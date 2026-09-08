@@ -6,6 +6,16 @@ import json
 import re
 from pathlib import Path
 
+REQUIRED_DATA = {
+    "decision_tree": "nodes",
+    "process_flow": "steps",
+    "ecosystem_map": "layers",
+    "checklist": "items",
+    "decision_matrix": "rows",
+    "cost_breakdown": "items",
+    "size_comparison": "sizes",
+}
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -20,6 +30,10 @@ def main() -> None:
     spec = json.loads(manifest.read_text(encoding="utf-8"))
 
     failures = []
+    visual_type = spec.get("type")
+    if visual_type not in REQUIRED_DATA:
+        failures.append(f"unsupported visual type: {visual_type}")
+
     output = root / spec["output"]
     if not output.exists():
         failures.append(f"asset missing: {spec['output']}")
@@ -27,24 +41,33 @@ def main() -> None:
         svg = output.read_text(encoding="utf-8")
         if "<svg" not in svg or "viewBox=" not in svg:
             failures.append("SVG or viewBox missing")
-        if re.search(r'<image\b[^>]+(?:href|xlink:href)="https?://', svg, re.I):
-            failures.append("external raster image embedded in SVG")
+        if re.search(r'<image\b', svg, re.I):
+            failures.append("embedded image element forbidden")
+        if "<title" not in svg or "<desc" not in svg:
+            failures.append("accessible SVG title/description missing")
 
     if not str(spec.get("alt", "")).strip():
         failures.append("alt text missing")
     if not str(spec.get("caption", "")).strip():
         failures.append("caption missing")
-    if not spec.get("after_section_id"):
-        failures.append("after_section_id missing")
-    if len(spec.get("nodes", [])) < 2:
-        failures.append("visual has too few nodes")
+    if not str(spec.get("page_url", "")).startswith("/guides/"):
+        failures.append("guide page_url missing")
+
+    data_key = REQUIRED_DATA.get(visual_type)
+    if data_key and len(spec.get(data_key, [])) < 2:
+        failures.append(f"visual has too little {data_key} data")
+
+    if visual_type == "decision_tree" and len(spec.get("edges", [])) < 1:
+        failures.append("decision tree has no edges")
+    if visual_type == "decision_matrix" and len(spec.get("columns", [])) < 2:
+        failures.append("decision matrix has too few columns")
 
     if failures:
         for failure in failures:
             print("FAIL:", failure)
         raise SystemExit(1)
 
-    print("PASS: visual asset manifest and SVG meet structural requirements")
+    print(f"PASS: {visual_type} asset manifest and SVG meet structural requirements")
 
 
 if __name__ == "__main__":
