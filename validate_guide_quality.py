@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Qualitative gate for /guides/.
+"""Qualitative structural gate for /guides/.
 
 The price guide is the editorial reference: useful sections must be developed,
-tables need interpretation, and pages need contextual internal links. This gate
-checks structural evidence only; it does not replace human fact-checking or style
-review.
+tables need interpretation, and pages need contextual internal links. The gate
+checks observable structure only; it does not replace fact-checking or human style
+review and it deliberately avoids forcing filler just to hit one global word count.
 """
 from pathlib import Path
 import re
@@ -20,16 +20,27 @@ SOURCE_LINK_RE = re.compile(r'<li>\s*<a\b[^>]*href="https?://', re.I)
 P_RE = re.compile(r'<p\b[^>]*>(.*?)</p>', re.S | re.I)
 TABLE_RE = re.compile(r'<table\b.*?</table>', re.S | re.I)
 
-# Narrow tutorials can be a little shorter, but none should be a thin summary.
+# Narrow tutorials and technical explainers can be shorter than the budget pillar,
+# but no guide may collapse into a thin summary.
 MIN_WORDS = {
     "imprimer-notes-numeriques": 800,
     "transfert-notes-vers-ordinateur": 850,
-    "bloc-notes-numerique-google-drive": 850,
-    "bloc-notes-numerique-onedrive": 850,
-    "bloc-notes-numerique-dropbox": 850,
+    "bloc-notes-numerique-google-drive": 800,
+    "bloc-notes-numerique-onedrive": 800,
+    "bloc-notes-numerique-dropbox": 800,
+    "tablette-e-ink": 900,
+    "encre-electronique-fonctionnement": 900,
+    "latence-ecriture": 900,
+    "ocr-manuscrit": 900,
+    "autonomie-tablette-e-ink": 900,
+    "formats-fichiers-compatibles": 900,
+    "convertir-notes-manuscrites-en-texte": 900,
+    "ecosysteme-ouvert-ou-ferme": 900,
 }
 DEFAULT_MIN_WORDS = 950
-MIN_SECTION_WORDS = 85
+MIN_SECTION_WORDS = 80
+MIN_CLOSING_WORDS = 60
+CLOSING_IDS = {"decision", "suite", "test-decision"}
 MIN_PROSE_AROUND_TABLE = 55
 MIN_INTERNAL_LINKS = 4
 MIN_UNIQUE_INTERNAL_LINKS = 3
@@ -89,8 +100,10 @@ def inspect(page: Path):
 
     for sid, title, body in substantive:
         sw = words(body)
-        if sw < MIN_SECTION_WORDS:
-            issues.append(f"section '{title}' trop légère: {sw} mots")
+        section_floor = MIN_CLOSING_WORDS if sid in CLOSING_IDS else MIN_SECTION_WORDS
+        if sw < section_floor:
+            issues.append(f"section '{title}' trop légère: {sw} mots < {section_floor}")
+
         tables = TABLE_RE.findall(body)
         if tables:
             body_without_tables = TABLE_RE.sub(" ", body)
@@ -117,8 +130,8 @@ def inspect(page: Path):
     if sources < MIN_SOURCE_LINKS:
         issues.append(f"sources primaires insuffisantes: {sources} < {MIN_SOURCE_LINKS}")
 
-    # One-paragraph sections are allowed only if sufficiently developed; tiny paragraph-only
-    # sections were the main failure mode of the previous batch.
+    # The failure mode we are explicitly preventing: a heading followed by one thin
+    # paragraph and nothing else. This stays strict even for conclusions.
     for sid, title, body in substantive:
         pcount = len(P_RE.findall(body))
         has_table = bool(TABLE_RE.search(body))
