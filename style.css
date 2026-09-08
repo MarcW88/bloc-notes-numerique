@@ -652,6 +652,46 @@ p  { font-size: 1rem; color: var(--color-text); }
 .content-main h2 { margin: 40px 0 16px; }
 .content-main h3 { margin: 28px 0 12px; }
 .content-main p  { margin-bottom: 16px; }
+.content-main ul:not(.source-list),
+.content-main ol {
+  margin: 0 0 20px 24px;
+  padding-left: 4px;
+}
+.content-main ul:not(.source-list) { list-style: disc; }
+.content-main ol { list-style: decimal; }
+.content-main li {
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+.content-main li::marker { color: var(--color-primary); }
+
+/* Sources form one calm editorial panel, despite the heading and list
+   remaining separate semantic elements in the article markup. */
+.content-main h2#sources {
+  margin-bottom: 0;
+  padding: 22px 24px 10px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-bottom: 0;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  font-size: 1.35rem;
+}
+.content-main .source-list {
+  list-style: disc;
+  margin: 0 0 24px;
+  padding: 0 24px 22px 48px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-top: 0;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+.content-main .source-list a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+}
+.content-main .source-list a:hover { text-decoration-color: var(--color-primary); }
 .content-sidebar {
   position: sticky;
   top: calc(var(--header-h) + 16px);
@@ -684,6 +724,11 @@ p  { font-size: 1rem; color: var(--color-text); }
   transition: color 0.15s, border-color 0.15s;
 }
 .sidebar-toc a:hover { color: var(--color-primary); border-color: var(--color-primary); }
+.sidebar-toc a.toc-level-3 {
+  padding-left: 22px;
+  font-size: 0.78rem;
+  border-left-color: transparent;
+}
 .affiliation-note {
   font-size: 0.75rem;
   color: var(--color-text-muted);
