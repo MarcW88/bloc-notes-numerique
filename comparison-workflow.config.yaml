@@ -1,0 +1,29 @@
+project:
+  name: "bloc-notes-numeriques.fr"
+  domain: "https://bloc-notes-numeriques.fr"
+  language: "fr"
+
+content:
+  scope:
+    - "/comparatifs/"
+  source_of_truth: "comparison_content.py"
+  generated_output: "comparatifs/*/index.html"
+  content_type: "affiliate-comparison"
+  mode: "auto"
+
+quality:
+  quality_reference: "/guides/prix-bloc-notes-numerique/"
+  draft_robots: "noindex,follow"
+
+comparison:
+  score_scale_max: 10
+  require_weights_sum_100: true
+  enable_confidence_adjustment: true
+  require_hard_gates: true
+  require_total_solution_cost_when_relevant: true
+
+workflow:
+  comparisons_dir: ".content/comparisons"
+  reviews_dir: ".content/reviews"
+  require_human_validation_before_publish: true
+  allow_automatic_merge: false
