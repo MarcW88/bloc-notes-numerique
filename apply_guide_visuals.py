@@ -71,7 +71,7 @@ def apply(spec: dict) -> None:
         raise SystemExit(f"{page}: noindex,follow missing")
 
     # Always remove any previously injected guide visual first. This allows a
-    # page to move cleanly from a diagram to no_visual or editorial_image.
+    # page to move cleanly between diagram, editorial image and no_visual.
     html = strip_existing_visuals(html)
 
     asset_mode = spec.get("asset_mode", "functional_diagram")
@@ -85,6 +85,12 @@ def apply(spec: dict) -> None:
 
     asset = ROOT / spec["output"]
     if not asset.exists():
+        if asset_mode == "editorial_image":
+            # Editorial manifests can be prepared before the paid API generation
+            # step. Keep the page clean until the asset is actually available.
+            page.write_text(html, encoding="utf-8")
+            print(f"pending editorial image for {spec['page_url']}: {asset.relative_to(ROOT)}")
+            return
         raise SystemExit(f"Visual asset missing: {asset}")
 
     if spec.get("after_section_id"):
