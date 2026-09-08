@@ -1,7 +1,7 @@
 ---
 url: /guides/prix-bloc-notes-numerique/
 slug: prix-bloc-notes-numerique
-status: QA_IN_PROGRESS
+status: DRAFT_READY
 guide_type: choice
 primary_keyword: prix bloc-notes numérique
 search_intent: établir un budget complet avant de comparer les offres
