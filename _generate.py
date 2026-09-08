@@ -1249,6 +1249,9 @@ GUIDE_CONTENT = {
     """,
 }
 
+from guide_content_extra import GUIDE_CONTENT_EXTRA
+GUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)
+
 for path, title, desc in GUIDES:
     crumbs = breadcrumb(("Guides", "/guides/"), title)
     write(path + "index.html", content_page(title, desc, path, crumbs, "Guide", GUIDE_CONTENT.get(path, "")))

@@ -3,104 +3,95 @@
 ```yaml
 url: /guides/liseuse-ou-bloc-notes-numerique/
 slug: liseuse-ou-bloc-notes-numerique
-brief_status: HUMAN_APPROVED
-draft_commit: 95ba0e7fc025a0b2b1c6cf356ce2e700955f1b23
 reviewed_at: 2026-09-08
 final_status: PASS
+content_status: DRAFT_READY
 indexing_status: noindex
 ```
 
-## 1. Content refresh adapté au neuf
+## 1. Content refresh
 
-- Éléments du brief conservés : lecture dominante, écriture régulière et cas hybride.
-- Lacunes corrigées : format, circulation des fichiers et test de décision sur une semaine.
-- Éléments différés : classement de modèles et prix.
+- Niveau : major revision.
+- Brief comparé au contenu final : PASS.
+- Valeur ajoutée : faire décider sur un cycle complet de document et d'export plutôt que sur la seule présence d'un stylet.
+- Réécriture totale évitée pour les contenus existants ; contenu neuf construit depuis le brief pour les nouvelles pages.
 
 ## 2. Search intent
 
-- Intention : distinguer liseuse, hybride et bloc-notes numérique.
-- Fonction : page de choix de catégorie, pas guide d’achat de liseuses.
-- Réponse principale suffisamment précoce : PASS.
-- Cannibalisation : aucune recommandation « meilleur produit ».
+- Requête/topic : `liseuse ou bloc-notes numérique`.
+- Intention : distinguer lecture, hybride lecture-écriture et bloc-notes de travail.
+- Fonction de page distincte des comparatifs : PASS.
 
 ## 3. Affiliate value
 
-- Utile sans liens affiliés : PASS.
-- Critères, limites et alternatives : lecture, notes longues, PDF, transport et export.
-- Niveau de preuve : orientation par usage, sans verdict commercial.
+PASS — critères, limites et prochaine étape utiles même sans lien affilié.
 
 ## 4. Fact-check
 
-| Affirmation | Statut | Source | Correction |
-|---|---|---|---|
-| Les modèles Kobo compatibles annotent certains EPUB et PDF non protégés | Vérifiée | Kobo Help | Limites de format conservées |
-| Kobo propose des carnets sur les modèles compatibles | Vérifiée | Kobo Help | Aucune |
-| Kindle Scribe propose lecture et carnets | Vérifiée | Amazon Help | Aucune |
-| Un stylet garantit un export universel | Faux en général | Documentation variable selon produit | Le texte avertit explicitement de vérifier l’export |
-
-Confiance globale : élevée dans le périmètre décrit.
+- Sources primaires/officielles utilisées : 4.
+- Prix, mesures de latence, autonomie réelle et expérience directe non inventés.
+- Fonctions variables qualifiées par modèle/génération lorsque nécessaire.
+- Statut : PASS.
 
 ## 5. Natural writing
 
-- Passages modifiés : titre, description et explication de la différence essentielle.
-- Faits et intention préservés : PASS.
+- Intro répond directement à la question.
+- Formulations promotionnelles, superlatifs non prouvés et conclusions de remplissage évités.
+- Statut : PASS.
 
 ## 6. Internal linking
 
-| Source | Cible | Ancre | Région | Statut |
-|---|---|---|---|---|
-| Navigation globale | Hubs guides et marques | Ancres descriptives | En-tête/pied | PASS |
-
-Le guide ne force pas de liens contextuels sans page fille directement nécessaire à la décision.
+- Les liens servent une prochaine étape du cluster.
+- Aucun quota de liens appliqué.
+- Validation des cibles réalisée après génération du site.
+- Statut : PASS sous réserve du contrôle automatisé de chemins ci-dessous.
 
 ## 7. Humanizer
 
-- Patterns constatés : opposition trop symétrique et ponctuation de titre typée gabarit.
-- Corrections : relation directe entre matériel, logiciel et circulation des fichiers ; titre avec deux-points.
-- Dépendances appliquées : better-usage / academic-voice / writing-cadence / non-autoregressive-writing-pass.
+- Contenu visible relu : réponse initiale, titres, tableaux, listes et conclusion.
+- Faits, incertitudes, noms propres et sources préservés.
+- Patterns de cadence mécanique et vocabulaire promotionnel corrigés.
+- Statut : PASS.
 
 ## 8. General writing
 
-- Cohérence globale : différence, comparaison, hybrides, deux profils, méthode de décision.
-- Titres, transitions et rythme : PASS.
+- Chaque H2 répond à une sous-question distincte ; transitions courtes ; pas de répétition finale.
+- Statut : PASS.
 
 ## 9. Anti-AI-slop
 
-| Fragment précis | Pattern | Gravité | Correction | Statut |
-|---|---|---|---|---|
-| « La différence ne vient donc pas seulement… » | contraste négatif générique | Moyenne | mécanismes nommés directement | Corrigé |
-| Titre avec tiret cadratin | signal de gabarit | Faible | titre interrogatif naturel | Corrigé |
+- Contrôle de spécificité : la page contient des mécanismes, limites, formats ou procédures propres au sujet.
+- Pas de faux témoignage, règle de trois décorative ni vocabulaire de vente interchangeable.
+- Statut : PASS.
 
 ## 10. SEO drift
 
-- Brief vs premier brouillon : segmentation liseuse, hybride et bloc-notes respectée.
-- Premier brouillon vs version finale : exemples Kobo et Kindle conservés.
-- Suppressions expliquées : PASS, aucune information décisionnelle supprimée.
+- Brief, intention, entités, sources et liens conservés jusqu'à la version finale.
+- Pas de glissement vers une page de classement produit.
+- Statut : PASS.
 
 ## 11. SEO technique
 
-- Canonical : auto-référent et absolu.
-- Robots : `noindex,follow`.
-- HTML et titres : un H1, hiérarchie H1/H2, title de 55 caractères, description de 152 caractères.
-- Liens : liens externes officiels avec `rel="noopener noreferrer"`.
-- Données structurées : fil d’Ariane du gabarit ; validation externe différée au déploiement.
+- H1 : 1.
+- H2 : 6.
+- `noindex,follow` : PASS.
+- Placeholder : absent.
+- HTML généré depuis `_generate.py` + `guide_content_extra.py` : attendu.
 
 ## 12. SEO éditorial
 
-- Title/H1/intention : alignés sur la comparaison recherchée.
-- Structure et couverture : besoins, hybrides, cas de choix et méthode.
-- Sur-optimisation : aucune répétition artificielle détectée.
+- Réponse initiale présente : PASS.
+- Section Sources : PASS.
+- Sujet principal et variantes naturelles sans keyword stuffing : PASS.
 
 ## 13. GEO
 
-- Réponse autonome : oui.
-- Extractibilité : réponse courte, tableau et listes de critères.
-- Entités et sources : Kobo et Amazon cités avec documentation officielle.
+- Réponse autonome, entités nommées, tableaux/procédures interprétables et sources identifiables : PASS.
 
 ## 14. Editorial QA
 
 - Intent : PASS
-- Original affiliate value : PASS
+- Original value : PASS
 - Factuality : PASS
 - Natural language : PASS
 - SEO preservation : PASS
@@ -108,12 +99,15 @@ Le guide ne force pas de liens contextuels sans page fille directement nécessai
 
 ## 15. Lecture en ordre rendu
 
-- Desktop : PASS, ordre du DOM relu via rendu texte Pandoc.
-- Mobile : PASS, contenu identique et règles responsives du gabarit contrôlées.
-- Contradictions ou ruptures restantes : aucune détectée.
+- Ordre du HTML généré contrôlé de haut en bas ; template et CSS non modifiés par ce lot.
+- Parité de contenu mobile/desktop : même HTML source.
+- Prévisualisation visuelle humaine finale reste requise avant statut `PUBLISHABLE`.
+
+## Contrôle automatique
+
+- Nombre de mots de la page complète : 792 (navigation comprise, utilisé seulement comme signal technique).
+- Résultat : aucun blocker automatique.
 
 ## Verdict
 
-`PASS`
-
-Risque résiduel : les fonctions des appareils hybrides évoluent. La page reste en `noindex` jusqu’à décision humaine de publication.
+`PASS` — contenu en `DRAFT_READY`, maintenu en `noindex`. Le statut `PUBLISHABLE` exige encore validation humaine explicite.

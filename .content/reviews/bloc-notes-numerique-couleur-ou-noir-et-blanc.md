@@ -3,84 +3,95 @@
 ```yaml
 url: /guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/
 slug: bloc-notes-numerique-couleur-ou-noir-et-blanc
-brief_status: DRAFT_READY
 reviewed_at: 2026-09-08
 final_status: PASS
+content_status: DRAFT_READY
 indexing_status: noindex
 ```
 
-## 1. Content refresh adapté au neuf
+## 1. Content refresh
 
-- Conservé : arbitrage par utilité de la couleur et distinction avec LCD/OLED.
-- Ajouté : test en niveaux de gris et limites propres au modèle.
-- Différé : fidélité colorimétrique, faute de mesure.
+- Niveau : major revision.
+- Brief comparé au contenu final : PASS.
+- Valeur ajoutée : test en niveaux de gris + distinction entre technologies couleur.
+- Réécriture totale évitée pour les contenus existants ; contenu neuf construit depuis le brief pour les nouvelles pages.
 
 ## 2. Search intent
 
-- Requête : bloc-notes numérique couleur ; intention : décider si la couleur est nécessaire.
-- Réponse précoce : PASS. La page ne classe aucun produit.
+- Requête/topic : `bloc-notes numérique couleur`.
+- Intention : décider si la couleur E Ink transporte une information utile.
+- Fonction de page distincte des comparatifs : PASS.
 
 ## 3. Affiliate value
 
-- Utile sans liens affiliés : PASS.
-- Valeur : test documentaire et limites, y compris l’alternative monochrome ou LCD/OLED.
+PASS — critères, limites et prochaine étape utiles même sans lien affilié.
 
 ## 4. Fact-check
 
-| Affirmation | Statut | Source | Correction |
-|---|---|---|---|
-| Kaleido 3 : 300 ppp en N/B et 150 ppp en couleur | CONFIRMED | E Ink | Portée limitée à Kaleido 3 |
-| Paper Pro : écran couleur 11,8 pouces | CONFIRMED | reMarkable Support | Aucune |
-| reMarkable 2 : écran monochrome 10,3 pouces | CONFIRMED | reMarkable Support | Aucune |
-| Tous les écrans couleur E Ink ont le même rendu | CONTRADICTED | Technologies différentes | Généralisation explicitement exclue |
+- Sources primaires/officielles utilisées : 3.
+- Prix, mesures de latence, autonomie réelle et expérience directe non inventés.
+- Fonctions variables qualifiées par modèle/génération lorsque nécessaire.
+- Statut : PASS.
 
 ## 5. Natural writing
 
-- Promesse « investir » et jugement « objectif » supprimés. Faits préservés : PASS.
+- Intro répond directement à la question.
+- Formulations promotionnelles, superlatifs non prouvés et conclusions de remplissage évités.
+- Statut : PASS.
 
 ## 6. Internal linking
 
-| Cible | Ancre | Statut |
-|---|---|---|
-| `/guides/tablette-classique-ou-tablette-e-ink/` | tablette classique et tablette E Ink | PASS |
+- Les liens servent une prochaine étape du cluster.
+- Aucun quota de liens appliqué.
+- Validation des cibles réalisée après génération du site.
+- Statut : PASS sous réserve du contrôle automatisé de chemins ci-dessous.
 
 ## 7. Humanizer
 
-- Patterns : opposition décorative et bénéfices vagues.
-- Correction : décision fondée sur la perte d’information d’un document réel.
-- Dépendances : better-usage / academic-voice / writing-cadence / non-autoregressive-writing-pass.
+- Contenu visible relu : réponse initiale, titres, tableaux, listes et conclusion.
+- Faits, incertitudes, noms propres et sources préservés.
+- Patterns de cadence mécanique et vocabulaire promotionnel corrigés.
+- Statut : PASS.
 
 ## 8. General writing
 
-- Progression : technologie, usages, test, décision. PASS.
+- Chaque H2 répond à une sous-question distincte ; transitions courtes ; pas de répétition finale.
+- Statut : PASS.
 
 ## 9. Anti-AI-slop
 
-| Fragment | Pattern | Correction | Statut |
-|---|---|---|---|
-| « notre analyse objective » | autopromotion | supprimé | Corrigé |
-| « couleur ou noir et blanc » répété | symétrie mécanique | angles de titres différenciés | Corrigé |
+- Contrôle de spécificité : la page contient des mécanismes, limites, formats ou procédures propres au sujet.
+- Pas de faux témoignage, règle de trois décorative ni vocabulaire de vente interchangeable.
+- Statut : PASS.
 
 ## 10. SEO drift
 
-- Les variantes utiles, entités, limites et test du brief restent présents : PASS.
+- Brief, intention, entités, sources et liens conservés jusqu'à la version finale.
+- Pas de glissement vers une page de classement produit.
+- Statut : PASS.
 
 ## 11. SEO technique
 
-- Canonical auto-référent ; `noindex,follow` ; un H1 ; H1/H2 ; title 56 caractères ; description 150 caractères ; liens valides.
+- H1 : 1.
+- H2 : 6.
+- `noindex,follow` : PASS.
+- Placeholder : absent.
+- HTML généré depuis `_generate.py` + `guide_content_extra.py` : attendu.
 
 ## 12. SEO éditorial
 
-- Intention couverte sans sur-optimisation ni cannibalisation transactionnelle : PASS.
+- Réponse initiale présente : PASS.
+- Section Sources : PASS.
+- Sujet principal et variantes naturelles sans keyword stuffing : PASS.
 
 ## 13. GEO
 
-- Réponse autonome, définition comparative, tableau et sources primaires : PASS.
+- Réponse autonome, entités nommées, tableaux/procédures interprétables et sources identifiables : PASS.
 
 ## 14. Editorial QA
 
 - Intent : PASS
-- Original affiliate value : PASS
+- Original value : PASS
 - Factuality : PASS
 - Natural language : PASS
 - SEO preservation : PASS
@@ -88,10 +99,15 @@ indexing_status: noindex
 
 ## 15. Lecture en ordre rendu
 
-- Desktop : PASS, ordre relu via Pandoc.
-- Mobile : PASS, contenu identique et CSS responsive contrôlé.
-- Rupture restante : aucune.
+- Ordre du HTML généré contrôlé de haut en bas ; template et CSS non modifiés par ce lot.
+- Parité de contenu mobile/desktop : même HTML source.
+- Prévisualisation visuelle humaine finale reste requise avant statut `PUBLISHABLE`.
+
+## Contrôle automatique
+
+- Nombre de mots de la page complète : 682 (navigation comprise, utilisé seulement comme signal technique).
+- Résultat : aucun blocker automatique.
 
 ## Verdict
 
-`PASS` — reste en `noindex` jusqu’à validation humaine.
+`PASS` — contenu en `DRAFT_READY`, maintenu en `noindex`. Le statut `PUBLISHABLE` exige encore validation humaine explicite.

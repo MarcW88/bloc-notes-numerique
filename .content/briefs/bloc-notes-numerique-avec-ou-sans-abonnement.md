@@ -4,26 +4,55 @@ slug: bloc-notes-numerique-avec-ou-sans-abonnement
 status: DRAFT_READY
 guide_type: choice
 primary_keyword: bloc-notes numérique sans abonnement
-search_intent: comprendre les fonctions gratuites et payantes après l’achat
-audience: acheteur voulant éviter un coût récurrent ou une dépendance cloud
-business_role: sécuriser le coût total et l’accès aux notes avant achat
+search_intent: comprendre ce qui reste utilisable sans coût récurrent
+audience: acheteur qui veut éviter dépendance cloud ou abonnement
 last_researched: 2026-09-08
+refresh_level: major revision
 ---
 
 ## Décision éditoriale
 
-- Question centrale : quelles fonctions indispensables cessent ou se réduisent sans abonnement ?
-- Réponse attendue : vérifier un scénario complet sans formule payante, puis juger la valeur des fonctions récurrentes.
-- Valeur propre : grille d’audit des fonctions et plan de sortie des données.
-- Hors périmètre : forfaits 4G, abonnements de lecture et tablettes seniors, malgré leurs volumes trompeurs.
+- Question centrale : comprendre ce qui reste utilisable sans coût récurrent.
+- Valeur propre : comparer les fonctions réellement perdues sans paiement dans plusieurs écosystèmes.
+- Traitement : Contenu existant enrichi sans full rewrite.
+- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
 
-## Analyse sémantique et SERP
+## Demande, intention et SERP
 
-Le thème « abonnement tablette » affiche 12 100 recherches, mais ses expansions concernent surtout les forfaits mobiles, Ardoiz et Facilotab. Ces termes ne correspondent pas à l’intention d’un acheteur de bloc-notes E Ink et sont exclus.
+La page doit satisfaire une intention dominante de type `choice`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
 
-## Sources et risques
+## Entités à expliciter
 
-- reMarkable, Connect : https://support.remarkable.com/s/article/About-Connect-Subscription
-- reMarkable sans abonnement : https://support.remarkable.com/s/article/Using-reMarkable-without-a-subscription
-- changement de tarif Connect en 2026 : https://support.remarkable.com/s/article/Changes-to-Connect-subscription-pricing
-- Les offres changent : vérification officielle requise avant mise à jour. `noindex,follow` conservé.
+reMarkable Connect, Kindle Scribe, Kobo, BOOX, Supernote, cloud, OCR.
+
+## Registre de preuves
+
+- reMarkable Connect: https://support.remarkable.com/articles/Knowledge/About-Connect-Subscription
+- reMarkable cloud sans Connect: https://support.remarkable.com/articles/Knowledge/Pair-your-reMarkable-with-the-cloud
+- Amazon cloud Scribe: https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd
+- Kobo carnets: https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook
+- BOOX cloud tiers: https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
+- Supernote transfert: https://support.supernote.com/en_US/transfer-files
+
+Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
+
+## Architecture validée
+
+- Réponse autonome dans les premières phrases.
+- H2 : fonctions sans paiement;  écosystèmes;  cas reMarkable;  plan de sortie;  décision.
+- Tableau ou procédure uniquement lorsqu'il améliore la décision.
+- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
+- Section Sources visible.
+
+## Content refresh / différenciation
+
+- Niveau : `major revision`.
+- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
+- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
+- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+
+## Risques
+
+fonctions et tarifs évolutifs ; distinguer abonnement fabricant, service cloud et abonnement de lecture.
+
+`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
