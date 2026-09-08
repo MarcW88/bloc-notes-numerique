@@ -1,7 +1,0 @@
-{
-  "asset_mode": "no_visual",
-  "visual_goal": "Éviter une checklist graphique redondante avec les vérifications HTML du guide.",
-  "reason": "La checklist SVG était une seconde version d'une liste éditoriale ; le HTML est plus accessible, plus précis et maintenable.",
-  "page_url": "/guides/formats-fichiers-compatibles/",
-  "id": "formats-fichiers-compatibles-no-visual"
-}

@@ -140,13 +140,6 @@
       <p>Lorsque vous déplacez le stylet, le numériseur détecte sa position et éventuellement la pression ou l’inclinaison. Le logiciel transforme ces données en trait, puis le contrôleur décide quelles zones de l’écran doivent être mises à jour. Enfin, la dalle E Ink change d’état. Chaque étape peut ajouter un délai ou être optimisée.</p>
       <p>Cette chaîne explique pourquoi deux appareils utilisant une dalle proche peuvent avoir des sensations différentes. Le fabricant peut réduire le délai logiciel, prédire une partie du mouvement, limiter la zone rafraîchie ou utiliser une forme d’onde rapide. À l’inverse, une application tierce mal optimisée peut ralentir la sensation même sur un appareil puissant.</p>
       <p>Le mécanisme physique du dernier maillon est détaillé dans <a href="/guides/encre-electronique-fonctionnement/">le fonctionnement de l’encre électronique</a>.</p>
-
-<!-- visual:start:latence-ecriture-process-flow -->
-<figure class="guide-visual guide-visual--process_flow" data-visual-id="latence-ecriture-process-flow" data-asset-mode="functional_diagram">
-  <img src="/assets/guides/latence-ecriture/latence-ecriture-process-flow.svg" alt="Schéma des étapes qui contribuent à la latence entre le mouvement du stylet et l&#x27;affichage du trait." loading="lazy" decoding="async" width="1200" height="390">
-  <figcaption>La sensation finale dépend du stylet, du système, du rendu et du rafraîchissement de l&#x27;écran.</figcaption>
-</figure>
-<!-- visual:end:latence-ecriture-process-flow -->
 <h2 id="mesures">Pourquoi les chiffres de millisecondes sont difficiles à comparer</h2>
       <p>Une mesure de latence dépend du point de départ et du point d’arrivée. Mesure-t-on le contact du stylet, le mouvement initial, le premier pixel visible ou le trait final nettoyé ? Une caméra à 60 images/s ne donne pas la même résolution temporelle qu’une caméra à haute vitesse. La version logicielle, le stylet et l’application modifient aussi le résultat.</p>
       <p>reMarkable publie par exemple une valeur de latence pour certains modèles, mais cette donnée décrit son propre système et son protocole. Elle ne doit pas être placée dans un classement face à une mesure indépendante d’un autre appareil comme s’il s’agissait de la même expérience.</p>

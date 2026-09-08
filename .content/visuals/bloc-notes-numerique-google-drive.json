@@ -1,7 +1,0 @@
-{
-  "asset_mode": "no_visual",
-  "visual_goal": "Ne pas transformer une intégration variable selon les marques en workflow générique trompeur.",
-  "reason": "Le visuel import-annotation-export était trop générique et moins précis que le texte sur les différences d'implémentation.",
-  "page_url": "/guides/bloc-notes-numerique-google-drive/",
-  "id": "bloc-notes-numerique-google-drive-no-visual"
-}
