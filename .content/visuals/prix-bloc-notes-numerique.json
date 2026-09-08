@@ -1,7 +1,22 @@
 {
-  "asset_mode": "no_visual",
-  "visual_goal": "Ne pas redessiner sous forme graphique la composition du coût déjà traitée en tableaux et texte.",
-  "reason": "Le cost breakdown était une forme de tableau déguisé et répétait la logique de coût total déjà expliquée dans la page de référence.",
+  "asset_mode": "editorial_image",
+  "visual_goal": "Montrer qu'un budget concerne une configuration complète sans redessiner le tableau de prix ni inventer de montant.",
+  "placement": "after_intro",
+  "aspect_ratio": "3:2",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "prompt": "Premium editorial flat-lay photograph of a generic unbranded e-paper writing tablet, stylus, simple protective folio and a small set of neutral accessories laid out on a calm desk, visual idea of a complete usable setup rather than a device alone, natural soft light, restrained European technology magazine aesthetic, no currency, no price labels, no packaging, no brand cues",
+  "negative_constraints": [
+    "no logos",
+    "no readable text",
+    "no fake UI or screenshot",
+    "no recognizable branded device",
+    "no price tags or product specification claims"
+  ],
+  "output": "assets/guides/prix-bloc-notes-numerique/editorial.webp",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Configuration générique de bloc-notes numérique avec stylet, protection et accessoires disposés sur un bureau.",
   "page_url": "/guides/prix-bloc-notes-numerique/",
-  "id": "prix-bloc-notes-numerique-no-visual"
+  "id": "prix-bloc-notes-numerique-editorial-image"
 }

@@ -1,7 +1,22 @@
 {
-  "asset_mode": "no_visual",
-  "visual_goal": "Éviter de dupliquer le guide OCR avec un second diagramme presque identique.",
-  "reason": "Le schéma écriture-reconnaissance-relecture-export est déjà couvert par le guide OCR ; garder les deux visuels crée une répétition inter-pages.",
+  "asset_mode": "editorial_image",
+  "visual_goal": "Montrer le passage du manuscrit vers un environnement numérique sans fabriquer de résultat OCR lisible.",
+  "placement": "after_intro",
+  "aspect_ratio": "3:2",
+  "model": "gpt-image-2",
+  "quality": "medium",
+  "prompt": "Editorial close-up of a hand writing with a stylus on a generic unbranded e-paper tablet beside a laptop, the laptop showing only soft abstract interface shapes with absolutely no readable text, calm professional desk, natural daylight, realistic understated technology photography, focus on the transition from handwriting to digital work rather than on a specific product",
+  "negative_constraints": [
+    "no logos",
+    "no readable text",
+    "no fake UI or screenshot",
+    "no recognizable branded device",
+    "no price tags or product specification claims"
+  ],
+  "output": "assets/guides/convertir-notes-manuscrites-en-texte/editorial.webp",
+  "width": 1536,
+  "height": 1024,
+  "alt": "Prise de notes manuscrites sur une tablette à encre électronique générique à côté d'un ordinateur portable.",
   "page_url": "/guides/convertir-notes-manuscrites-en-texte/",
-  "id": "convertir-notes-manuscrites-en-texte-no-visual"
+  "id": "convertir-notes-manuscrites-en-texte-editorial-image"
 }
