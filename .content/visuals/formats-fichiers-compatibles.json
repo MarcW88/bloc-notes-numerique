@@ -1,36 +1,7 @@
 {
-  "type": "checklist",
-  "title": "5 vérifications avant de déclarer un format compatible",
-  "subtitle": "« Pris en charge » ne veut pas toujours dire « utilisable dans votre workflow ».",
-  "alt": "Checklist pour vérifier la compatibilité réelle d'un format de fichier sur une tablette E Ink.",
-  "caption": "Testez le fichier réel, son annotation et sa sortie plutôt que le seul nom du format.",
-  "items": [
-    [
-      "Ouverture",
-      "Le fichier s'ouvre-t-il correctement ?"
-    ],
-    [
-      "Mise en page",
-      "Le contenu reste-t-il lisible ?"
-    ],
-    [
-      "Annotation",
-      "Pouvez-vous écrire ou surligner comme prévu ?"
-    ],
-    [
-      "Export",
-      "Les annotations ressortent-elles dans un format exploitable ?"
-    ],
-    [
-      "Protection",
-      "DRM, compte ou conversion imposent-ils une étape supplémentaire ?"
-    ]
-  ],
-  "id": "formats-fichiers-compatibles-checklist",
+  "asset_mode": "no_visual",
+  "visual_goal": "Éviter une checklist graphique redondante avec les vérifications HTML du guide.",
+  "reason": "La checklist SVG était une seconde version d'une liste éditoriale ; le HTML est plus accessible, plus précis et maintenable.",
   "page_url": "/guides/formats-fichiers-compatibles/",
-  "output": "assets/guides/formats-fichiers-compatibles/formats-fichiers-compatibles-checklist.svg",
-  "canvas": {
-    "width": 1200,
-    "height": 700
-  }
+  "id": "formats-fichiers-compatibles-no-visual"
 }

@@ -1,32 +1,7 @@
 {
-  "type": "process_flow",
-  "title": "Google Drive : suivez le fichier de bout en bout",
-  "subtitle": "Le nom de l'intégration compte moins que ce qu'elle permet réellement.",
-  "alt": "Schéma d'un workflow Google Drive entre tablette E Ink, cloud et ordinateur.",
-  "caption": "Testez import, annotation, export et récupération du fichier final.",
-  "steps": [
-    [
-      "Drive",
-      "Document source"
-    ],
-    [
-      "Tablette",
-      "Importer ou ouvrir"
-    ],
-    [
-      "Travail",
-      "Annoter ou compléter"
-    ],
-    [
-      "Sortie",
-      "Exporter vers Drive ou ordinateur"
-    ]
-  ],
-  "id": "bloc-notes-numerique-google-drive-process-flow",
+  "asset_mode": "no_visual",
+  "visual_goal": "Ne pas transformer une intégration variable selon les marques en workflow générique trompeur.",
+  "reason": "Le visuel import-annotation-export était trop générique et moins précis que le texte sur les différences d'implémentation.",
   "page_url": "/guides/bloc-notes-numerique-google-drive/",
-  "output": "assets/guides/bloc-notes-numerique-google-drive/bloc-notes-numerique-google-drive-process-flow.svg",
-  "canvas": {
-    "width": 1200,
-    "height": 700
-  }
+  "id": "bloc-notes-numerique-google-drive-no-visual"
 }

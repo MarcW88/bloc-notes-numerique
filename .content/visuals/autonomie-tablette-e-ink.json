@@ -1,36 +1,7 @@
 {
-  "type": "checklist",
-  "title": "Ce qui change vraiment l'autonomie",
-  "subtitle": "Comparez des usages, pas seulement une promesse constructeur.",
-  "alt": "Checklist des facteurs à vérifier pour juger l'autonomie d'une tablette E Ink.",
-  "caption": "L'autonomie dépend du scénario réel d'utilisation et des fonctions activées.",
-  "items": [
-    [
-      "Éclairage",
-      "Son usage augmente la consommation."
-    ],
-    [
-      "Wi-Fi et cloud",
-      "Synchronisation et réseau ajoutent de l'activité."
-    ],
-    [
-      "Applications",
-      "Elles peuvent solliciter davantage le système."
-    ],
-    [
-      "Rafraîchissement",
-      "Une activité d'écran fréquente consomme davantage."
-    ],
-    [
-      "Votre cadence",
-      "Lecture, écriture et veille ne consomment pas de la même façon."
-    ]
-  ],
-  "id": "autonomie-tablette-e-ink-checklist",
+  "asset_mode": "no_visual",
+  "visual_goal": "Éviter une checklist graphique qui répète les facteurs déjà expliqués dans le guide.",
+  "reason": "Les facteurs d'autonomie sont mieux servis par le texte et les listes HTML ; la checklist SVG était une duplication visuelle sans valeur supplémentaire.",
   "page_url": "/guides/autonomie-tablette-e-ink/",
-  "output": "assets/guides/autonomie-tablette-e-ink/autonomie-tablette-e-ink-checklist.svg",
-  "canvas": {
-    "width": 1200,
-    "height": 700
-  }
+  "id": "autonomie-tablette-e-ink-no-visual"
 }

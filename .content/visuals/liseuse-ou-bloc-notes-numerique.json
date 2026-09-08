@@ -1,8 +1,10 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "decision_tree",
-  "title": "Liseuse, hybride ou bloc-notes : partez de l’activité dominante",
+  "visual_goal": "Faire choisir une catégorie à partir de l'activité dominante plutôt que recopier le tableau comparatif.",
+  "title": "Liseuse, hybride ou bloc-notes : partez de l'activité dominante",
   "subtitle": "Le tableau détaille les fonctions ; ce schéma montre la bifurcation de choix.",
-  "alt": "Arbre de décision entre liseuse, appareil hybride avec stylet et bloc-notes numérique selon la place de la lecture, de l’écriture et de l’export.",
+  "alt": "Arbre de décision entre liseuse, appareil hybride avec stylet et bloc-notes numérique selon la place de la lecture, de l'écriture et de l'export.",
   "caption": "Utilisez le tableau pour les détails et ce schéma uniquement pour le chemin de décision.",
   "nodes": [
     {
@@ -52,7 +54,7 @@
       "style": "accent",
       "lines": [
         "Liseuse",
-        "lecture d’abord",
+        "lecture d'abord",
         "annotations secondaires"
       ]
     },
@@ -79,7 +81,7 @@
       "lines": [
         "Bloc-notes",
         "écriture, organisation",
-        "et export d’abord"
+        "et export d'abord"
       ]
     }
   ],
@@ -109,8 +111,8 @@
       "to": "notebook"
     }
   ],
-  "id": "liseuse-ou-bloc-notes-numerique-decision-tree",
   "page_url": "/guides/liseuse-ou-bloc-notes-numerique/",
+  "id": "liseuse-ou-bloc-notes-numerique-decision-tree",
   "output": "assets/guides/liseuse-ou-bloc-notes-numerique/liseuse-ou-bloc-notes-numerique-decision-tree.svg",
   "canvas": {
     "width": 1200,

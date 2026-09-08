@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "size_comparison",
+  "visual_goal": "Représenter physiquement la différence de surface entre familles de tailles d'écran.",
   "title": "La taille d'écran change la surface de travail et la mobilité",
   "subtitle": "Comparez le format au document que vous manipulez le plus souvent.",
   "alt": "Comparaison visuelle de plusieurs tailles d'écran courantes pour les bloc-notes numériques.",
@@ -30,8 +32,8 @@
       "Grands PDF"
     ]
   ],
-  "id": "taille-ecran-bloc-notes-numerique-size-comparison",
   "page_url": "/guides/taille-ecran-bloc-notes-numerique/",
+  "id": "taille-ecran-bloc-notes-numerique-size-comparison",
   "output": "assets/guides/taille-ecran-bloc-notes-numerique/taille-ecran-bloc-notes-numerique-size-comparison.svg",
   "canvas": {
     "width": 1200,

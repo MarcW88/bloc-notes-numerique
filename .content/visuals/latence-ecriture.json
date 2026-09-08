@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "process_flow",
+  "visual_goal": "Montrer que la latence perçue est une chaîne de traitement et pas une seule spécification.",
   "title": "D'où vient la latence d'écriture ?",
   "subtitle": "Le délai perçu est une chaîne, pas une seule spécification.",
   "alt": "Schéma des étapes qui contribuent à la latence entre le mouvement du stylet et l'affichage du trait.",
@@ -22,8 +24,8 @@
       "Trait rendu et rafraîchi"
     ]
   ],
-  "id": "latence-ecriture-process-flow",
   "page_url": "/guides/latence-ecriture/",
+  "id": "latence-ecriture-process-flow",
   "output": "assets/guides/latence-ecriture/latence-ecriture-process-flow.svg",
   "canvas": {
     "width": 1200,

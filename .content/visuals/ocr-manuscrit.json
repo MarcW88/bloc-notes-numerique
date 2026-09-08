@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "process_flow",
+  "visual_goal": "Montrer que la reconnaissance manuscrite produit un texte à relire avant réutilisation.",
   "title": "Ce que fait réellement l'OCR manuscrit",
   "subtitle": "Reconnaître, relire, puis réutiliser.",
   "alt": "Schéma du traitement OCR d'une note manuscrite jusqu'au texte réutilisable.",
@@ -22,8 +24,8 @@
       "Copier, exporter ou rechercher"
     ]
   ],
-  "id": "ocr-manuscrit-process-flow",
   "page_url": "/guides/ocr-manuscrit/",
+  "id": "ocr-manuscrit-process-flow",
   "output": "assets/guides/ocr-manuscrit/ocr-manuscrit-process-flow.svg",
   "canvas": {
     "width": 1200,

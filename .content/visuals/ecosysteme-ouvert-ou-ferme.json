@@ -1,9 +1,11 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "decision_tree",
+  "visual_goal": "Montrer l'ordre de décision entre besoins d'applications tierces et préférence pour un workflow spécialisé.",
   "title": "Ouvert ou fermé : partez de vos contraintes logicielles",
   "subtitle": "Le bon choix dépend surtout des applications et transferts indispensables.",
   "alt": "Arbre de décision pour choisir entre un écosystème spécialisé et un écosystème plus ouvert selon les applications et intégrations nécessaires.",
-  "caption": "Le visuel complète le tableau : il montre le chemin de décision plutôt que de répéter les mêmes critères.",
+  "caption": "Le schéma montre le chemin de décision sans répéter le tableau détaillé.",
   "nodes": [
     {
       "id": "start",
@@ -14,7 +16,7 @@
       "style": "primary",
       "lines": [
         "Avez-vous besoin",
-        "d’applications tierces précises ?"
+        "d'applications tierces précises ?"
       ]
     },
     {
@@ -27,7 +29,7 @@
       "lines": [
         "Oui",
         "vérifiez leur disponibilité",
-        "et leurs droits d’accès"
+        "et leurs droits d'accès"
       ]
     },
     {
@@ -90,8 +92,8 @@
       "to": "simplicity"
     }
   ],
-  "id": "ecosysteme-ouvert-ou-ferme-decision-tree",
   "page_url": "/guides/ecosysteme-ouvert-ou-ferme/",
+  "id": "ecosysteme-ouvert-ou-ferme-decision-tree",
   "output": "assets/guides/ecosysteme-ouvert-ou-ferme/ecosysteme-ouvert-ou-ferme-decision-tree.svg",
   "canvas": {
     "width": 1200,

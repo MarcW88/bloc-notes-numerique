@@ -1,32 +1,7 @@
 {
-  "type": "process_flow",
-  "title": "OneDrive : valider le workflow avant l'achat",
-  "subtitle": "Particulièrement important si Microsoft 365 structure votre travail.",
-  "alt": "Schéma d'un workflow OneDrive entre document, tablette E Ink, annotation et ordinateur.",
-  "caption": "Une intégration utile doit permettre de récupérer les documents dans le format attendu.",
-  "steps": [
-    [
-      "OneDrive",
-      "Document d'origine"
-    ],
-    [
-      "Tablette",
-      "Accès ou import"
-    ],
-    [
-      "Annotation",
-      "Notes et modifications"
-    ],
-    [
-      "Microsoft 365",
-      "Retour vers le poste de travail"
-    ]
-  ],
-  "id": "bloc-notes-numerique-onedrive-process-flow",
+  "asset_mode": "no_visual",
+  "visual_goal": "Conserver la nuance sur les intégrations Microsoft plutôt qu'un schéma universel.",
+  "reason": "Le process flow dupliquait le parcours narratif et ne représentait aucune propriété spatiale ou mécanique distincte.",
   "page_url": "/guides/bloc-notes-numerique-onedrive/",
-  "output": "assets/guides/bloc-notes-numerique-onedrive/bloc-notes-numerique-onedrive-process-flow.svg",
-  "canvas": {
-    "width": 1200,
-    "height": 700
-  }
+  "id": "bloc-notes-numerique-onedrive-no-visual"
 }

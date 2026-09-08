@@ -1,32 +1,7 @@
 {
-  "type": "process_flow",
-  "title": "Exporter une note : pensez au format final",
-  "subtitle": "Le bon export dépend de ce que vous voulez faire après.",
-  "alt": "Schéma d'export d'une note numérique depuis le carnet vers un format puis une destination.",
-  "caption": "Commencez par la destination et le besoin de réédition avant de choisir le format.",
-  "steps": [
-    [
-      "Note",
-      "Manuscrit ou document annoté"
-    ],
-    [
-      "Format",
-      "PDF, image, texte selon le besoin"
-    ],
-    [
-      "Canal",
-      "Cloud, email, USB ou application"
-    ],
-    [
-      "Destination",
-      "Ordinateur, collègue ou archive"
-    ]
-  ],
-  "id": "exporter-notes-process-flow",
+  "asset_mode": "no_visual",
+  "visual_goal": "Ne pas illustrer une simple succession note-format-canal-destination déjà évidente dans le contenu.",
+  "reason": "Le process flow reformulait littéralement le texte sans mécanisme ni bifurcation utile.",
   "page_url": "/guides/exporter-notes/",
-  "output": "assets/guides/exporter-notes/exporter-notes-process-flow.svg",
-  "canvas": {
-    "width": 1200,
-    "height": 700
-  }
+  "id": "exporter-notes-no-visual"
 }

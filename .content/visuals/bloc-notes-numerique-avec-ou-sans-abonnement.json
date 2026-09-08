@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "decision_tree",
+  "visual_goal": "Faire bifurquer la décision selon qu'une fonction essentielle dépend ou non d'un abonnement.",
   "title": "L'abonnement est-il un vrai critère d'achat ?",
   "subtitle": "Séparez fonctions essentielles, confort cloud et services optionnels.",
   "alt": "Arbre de décision pour savoir si un abonnement doit peser dans le choix d'un bloc-notes numérique.",
@@ -88,8 +90,8 @@
       "to": "no2"
     }
   ],
-  "id": "bloc-notes-numerique-avec-ou-sans-abonnement-decision-tree",
   "page_url": "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
+  "id": "bloc-notes-numerique-avec-ou-sans-abonnement-decision-tree",
   "output": "assets/guides/bloc-notes-numerique-avec-ou-sans-abonnement/bloc-notes-numerique-avec-ou-sans-abonnement-decision-tree.svg",
   "canvas": {
     "width": 1200,

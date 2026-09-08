@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "decision_tree",
+  "visual_goal": "Montrer quand la couleur transporte réellement une information utile.",
   "title": "La couleur change-t-elle réellement votre travail ?",
   "subtitle": "Le bon critère est l'information portée par la couleur.",
   "alt": "Arbre de décision pour choisir entre un écran E Ink couleur et noir et blanc.",
@@ -90,8 +92,8 @@
       "to": "bw"
     }
   ],
-  "id": "bloc-notes-numerique-couleur-ou-noir-et-blanc-decision-tree",
   "page_url": "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+  "id": "bloc-notes-numerique-couleur-ou-noir-et-blanc-decision-tree",
   "output": "assets/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/bloc-notes-numerique-couleur-ou-noir-et-blanc-decision-tree.svg",
   "canvas": {
     "width": 1200,

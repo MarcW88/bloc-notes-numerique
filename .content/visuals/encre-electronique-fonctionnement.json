@@ -1,5 +1,7 @@
 {
+  "asset_mode": "functional_diagram",
   "type": "process_flow",
+  "visual_goal": "Relier le mécanisme électrophorétique à la persistance de l'image.",
   "title": "Pourquoi une image E Ink reste affichée",
   "subtitle": "Le principe électrophorétique explique la faible consommation et le rafraîchissement.",
   "alt": "Schéma simplifié du fonctionnement de l'encre électronique, de la commande électrique à l'image visible.",
@@ -22,8 +24,8 @@
       "Elle reste visible sans rafraîchissement continu"
     ]
   ],
-  "id": "encre-electronique-fonctionnement-process-flow",
   "page_url": "/guides/encre-electronique-fonctionnement/",
+  "id": "encre-electronique-fonctionnement-process-flow",
   "output": "assets/guides/encre-electronique-fonctionnement/encre-electronique-fonctionnement-process-flow.svg",
   "canvas": {
     "width": 1200,
