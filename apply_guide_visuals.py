@@ -30,16 +30,35 @@ def svg_dimensions(spec: dict) -> tuple[int, int]:
     return int(float(match.group(1))), int(float(match.group(2)))
 
 
+def asset_dimensions(spec: dict) -> tuple[int, int]:
+    if spec.get("asset_mode", "functional_diagram") == "functional_diagram":
+        return svg_dimensions(spec)
+    width = int(spec.get("width", 1200))
+    height = int(spec.get("height", 800))
+    return width, height
+
+
 def figure_html(spec: dict) -> str:
     asset_url = "/" + spec["output"].lstrip("/")
-    width, height = svg_dimensions(spec)
+    width, height = asset_dimensions(spec)
     visual_id = spec["id"]
+    asset_mode = spec.get("asset_mode", "functional_diagram")
+    css_type = spec.get("type", asset_mode)
+    caption = spec.get("caption", "")
+    caption_html = f"\n  <figcaption>{escape(caption)}</figcaption>" if caption else ""
     return f'''\n<!-- visual:start:{escape(visual_id, quote=True)} -->
-<figure class="guide-visual guide-visual--{escape(spec['type'], quote=True)}" data-visual-id="{escape(visual_id, quote=True)}">
-  <img src="{escape(asset_url, quote=True)}" alt="{escape(spec['alt'], quote=True)}" loading="lazy" decoding="async" width="{width}" height="{height}">
-  <figcaption>{escape(spec['caption'])}</figcaption>
+<figure class="guide-visual guide-visual--{escape(css_type, quote=True)}" data-visual-id="{escape(visual_id, quote=True)}" data-asset-mode="{escape(asset_mode, quote=True)}">
+  <img src="{escape(asset_url, quote=True)}" alt="{escape(spec['alt'], quote=True)}" loading="lazy" decoding="async" width="{width}" height="{height}">{caption_html}
 </figure>
 <!-- visual:end:{escape(visual_id, quote=True)} -->\n'''
+
+
+def strip_existing_visuals(html: str) -> str:
+    block_re = re.compile(
+        r"\s*<!-- visual:start:[^>]+ -->.*?<!-- visual:end:[^>]+ -->\s*",
+        re.S,
+    )
+    return block_re.sub("\n", html)
 
 
 def apply(spec: dict) -> None:
@@ -47,21 +66,26 @@ def apply(spec: dict) -> None:
     if not page.exists():
         raise SystemExit(f"Missing guide page: {page}")
 
-    asset = ROOT / spec["output"]
-    if not asset.exists():
-        raise SystemExit(f"Generated visual asset missing: {asset}")
-
     html = page.read_text(encoding="utf-8")
     if 'name="robots" content="noindex,follow"' not in html:
         raise SystemExit(f"{page}: noindex,follow missing")
 
-    # Remove the previously injected guide visual, even when its type/id changed.
-    # This prevents an old table-like visual from surviving beside its replacement.
-    block_re = re.compile(
-        r"\s*<!-- visual:start:[^>]+ -->.*?<!-- visual:end:[^>]+ -->\s*",
-        re.S,
-    )
-    html = block_re.sub("\n", html)
+    # Always remove any previously injected guide visual first. This allows a
+    # page to move cleanly from a diagram to no_visual or editorial_image.
+    html = strip_existing_visuals(html)
+
+    asset_mode = spec.get("asset_mode", "functional_diagram")
+    if asset_mode == "no_visual":
+        page.write_text(html, encoding="utf-8")
+        print(f"removed guide visual from {spec['page_url']} (no_visual)")
+        return
+
+    if asset_mode not in {"functional_diagram", "editorial_image"}:
+        raise SystemExit(f"Unsupported asset_mode: {asset_mode}")
+
+    asset = ROOT / spec["output"]
+    if not asset.exists():
+        raise SystemExit(f"Visual asset missing: {asset}")
 
     if spec.get("after_section_id"):
         section_id = re.escape(spec["after_section_id"])
