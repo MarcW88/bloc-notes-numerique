@@ -1,6 +1,100 @@
-"""Legacy visual overrides.
+"""Editorial-image overrides applied after the curated base routing.
 
-The curated routing now lives directly in guide_visual_catalog.py.
+These pages previously had weak or redundant diagrams. They now carry versioned
+editorial prompts and remain visually empty until the generated asset exists.
 """
 
-NON_TABULAR_OVERRIDES = {}
+COMMON_NEGATIVE_CONSTRAINTS = [
+    "no logos",
+    "no readable text",
+    "no fake UI or screenshot",
+    "no recognizable branded device",
+    "no price tags or product specification claims",
+]
+
+NON_TABULAR_OVERRIDES = {
+    "autonomie-tablette-e-ink": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Contextualiser une longue session de lecture et d'écriture sans transformer l'autonomie en chiffre ou promesse visuelle.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Editorial photograph of a generic unbranded e-paper writing tablet and stylus on a calm lived-in desk during a long work session, notebook and reading glasses nearby, soft natural daylight shifting toward evening, subtle sense of sustained use, premium European technology magazine aesthetic, realistic materials, no charger emphasized, no battery indicator",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/autonomie-tablette-e-ink/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Tablette à encre électronique générique et stylet sur un bureau pendant une longue session de travail.",
+    },
+    "convertir-notes-manuscrites-en-texte": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Montrer le passage du manuscrit vers un environnement numérique sans fabriquer de résultat OCR lisible.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Editorial close-up of a hand writing with a stylus on a generic unbranded e-paper tablet beside a laptop, the laptop showing only soft abstract interface shapes with absolutely no readable text, calm professional desk, natural daylight, realistic understated technology photography, focus on the transition from handwriting to digital work rather than on a specific product",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/convertir-notes-manuscrites-en-texte/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Prise de notes manuscrites sur une tablette à encre électronique générique à côté d'un ordinateur portable.",
+    },
+    "imprimer-notes-numeriques": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Contextualiser le passage d'une note numérique vers un document papier sans répéter les étapes du guide.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Editorial photograph of a generic unbranded e-paper writing tablet with stylus on a desk next to a compact home-office printer and a few freshly printed sheets containing only abstract non-readable marks, clean realistic workspace, soft daylight, premium understated technology magazine look, no instructional infographic",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/imprimer-notes-numeriques/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Tablette à encre électronique générique près d'une imprimante et de feuilles imprimées sur un bureau.",
+    },
+    "organiser-notes-numeriques": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Évoquer un environnement de notes structuré et retrouvable sans transformer la méthode en checklist graphique.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Editorial overhead photograph of a generic unbranded e-paper tablet with stylus in an organized but lived-in workspace, a few neutral folders, index cards and desk objects arranged into a clear visual system, no readable labels, natural daylight, muted premium editorial palette, credible specialist magazine photography rather than stock photo",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/organiser-notes-numeriques/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Tablette à encre électronique générique dans un espace de travail organisé avec dossiers et cartes sans texte lisible.",
+    },
+    "prix-bloc-notes-numerique": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Montrer qu'un budget concerne une configuration complète sans redessiner le tableau de prix ni inventer de montant.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Premium editorial flat-lay photograph of a generic unbranded e-paper writing tablet, stylus, simple protective folio and a small set of neutral accessories laid out on a calm desk, visual idea of a complete usable setup rather than a device alone, natural soft light, restrained European technology magazine aesthetic, no currency, no price labels, no packaging, no brand cues",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/prix-bloc-notes-numerique/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Configuration générique de bloc-notes numérique avec stylet, protection et accessoires disposés sur un bureau.",
+    },
+    "transfert-notes-vers-ordinateur": {
+        "asset_mode": "editorial_image",
+        "visual_goal": "Contextualiser le transfert entre tablette et ordinateur sans imposer un protocole ou une intégration précise.",
+        "placement": "after_intro",
+        "aspect_ratio": "3:2",
+        "model": "gpt-image-2",
+        "quality": "medium",
+        "prompt": "Editorial photograph of a generic unbranded e-paper tablet and a laptop side by side on a modern desk, a simple neutral USB cable and subtle shared-work context suggesting transfer between devices without showing a specific protocol, no visible interface details, natural daylight, understated specialist technology magazine aesthetic",
+        "negative_constraints": COMMON_NEGATIVE_CONSTRAINTS,
+        "output": "assets/guides/transfert-notes-vers-ordinateur/editorial.webp",
+        "width": 1536,
+        "height": 1024,
+        "alt": "Tablette à encre électronique générique et ordinateur portable côte à côte dans un contexte de transfert de notes.",
+    },
+}
