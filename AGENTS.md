@@ -20,3 +20,13 @@ Pour toute création, modification ou revue de l’interface :
 - Afficher les limites et le niveau de preuve aussi clairement que les avantages.
 - Conserver une hiérarchie HTML sémantique et une navigation accessible.
 - Respecter les commandes de build, lint et test définies par le projet lorsqu’elles seront disponibles.
+
+## Production éditoriale
+
+Pour toute création ou réécriture d’un guide :
+
+1. Utiliser `.agents/skills/guide-content-workflow/SKILL.md`.
+2. Séparer la pré-analyse, la rédaction et la validation ; conserver le brief dans `.content/briefs/`.
+3. Vérifier les informations susceptibles d’évoluer auprès de sources officielles avant publication.
+4. Ne jamais présenter une synthèse documentaire comme un test produit.
+5. Ne retirer `noindex` qu’après validation humaine du contenu final.
