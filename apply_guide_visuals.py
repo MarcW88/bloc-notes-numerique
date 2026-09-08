@@ -21,10 +21,18 @@ def page_path(page_url: str) -> Path:
     return ROOT / page_url.strip("/") / "index.html"
 
 
+def svg_dimensions(spec: dict) -> tuple[int, int]:
+    asset = ROOT / spec["output"]
+    svg = asset.read_text(encoding="utf-8")
+    match = re.search(r'viewBox="\s*0\s+0\s+([0-9.]+)\s+([0-9.]+)\s*"', svg, re.I)
+    if not match:
+        raise SystemExit(f"Could not read SVG dimensions: {asset}")
+    return int(float(match.group(1))), int(float(match.group(2)))
+
+
 def figure_html(spec: dict) -> str:
     asset_url = "/" + spec["output"].lstrip("/")
-    width = int(spec.get("canvas", {}).get("width", 1200))
-    height = int(spec.get("canvas", {}).get("height", 700))
+    width, height = svg_dimensions(spec)
     visual_id = spec["id"]
     return f'''\n<!-- visual:start:{escape(visual_id, quote=True)} -->
 <figure class="guide-visual guide-visual--{escape(spec['type'], quote=True)}" data-visual-id="{escape(visual_id, quote=True)}">
