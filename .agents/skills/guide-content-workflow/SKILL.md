@@ -14,7 +14,8 @@ Lire avant de commencer :
 - `AGENTS.md` et `DESIGN.md` ;
 - la page cible et `_generate.py` ;
 - l’analyse sémantique fournie pour le projet, si elle est accessible ;
-- les autres pages du cluster afin d’éviter cannibalisation et répétitions.
+- les autres pages du cluster afin d’éviter cannibalisation et répétitions ;
+- `/guides/prix-bloc-notes-numerique/` comme référence de profondeur éditoriale et de valeur décisionnelle.
 
 Identifier l’URL, le mot-clé principal, l’intention, le public, la place dans le cluster et les liens internes attendus. Si une donnée essentielle manque, faire une hypothèse prudente et la consigner dans le brief.
 
@@ -58,7 +59,43 @@ Rédiger uniquement à partir du brief validé ou, si l’utilisateur a demandé
 - Ajouter des liens internes uniquement lorsqu’ils aident à poursuivre la décision.
 - Conserver `noindex,follow` pendant la phase de brouillon.
 
-Intégrer le contenu dans `_generate.py`, puis régénérer les pages. Ne pas éditer seulement le HTML généré.
+Intégrer le contenu dans `_generate.py` ou dans un module explicitement chargé par `_generate.py`, puis régénérer les pages. Ne pas éditer seulement le HTML généré.
+
+## Quality floor obligatoire — référence guide Prix
+
+`/guides/prix-bloc-notes-numerique/` sert de **plancher qualitatif**, pas de gabarit de longueur identique. Une page plus étroite peut être plus courte, mais elle doit offrir le même niveau de contextualisation et d’utilité.
+
+### Une section H2 doit être une unité sémantique complète
+
+- Ne pas publier un H2 important suivi d’un seul petit paragraphe générique.
+- Définir ou contextualiser le concept, expliquer son impact et, lorsque pertinent, donner un exemple, une limite ou une conséquence pratique.
+- Une section mono-paragraphe n’est acceptable que si le paragraphe est réellement développé et que le sujet ne justifie pas davantage.
+- Un H2 ne doit pas exister uniquement pour placer une variante de mot-clé.
+
+### Les tableaux, listes et procédures doivent être interprétés
+
+- Introduire un tableau avant de l’afficher : expliquer ce qu’il compare et pourquoi.
+- Ajouter après le tableau une interprétation ou une règle de décision ; ne jamais laisser le tableau conclure seul la section.
+- Une procédure doit préciser le résultat attendu, les limites et l’étape suivante utile.
+
+### Profondeur sémantique et entités
+
+- Couvrir les entités du brief lorsqu’elles améliorent réellement la compréhension : technologies, formats, services, marques et concepts associés.
+- Pour un sujet transversal, utiliser plusieurs écosystèmes lorsque cela évite de transformer le guide en page d’une seule marque.
+- Relier mécanisme et décision : une caractéristique technique doit expliquer ce qu’elle change pour le lecteur.
+- Inclure cas limites, contre-indications et situations où le critère devient secondaire.
+
+### Maillage et valeur commerciale
+
+- Construire un parcours réel dans le cluster : guides connexes, usages, marques et comparatifs lorsqu’ils constituent une prochaine étape naturelle.
+- Les guides proches de l’achat doivent déboucher vers au moins une étape transactionnelle pertinente sans se transformer eux-mêmes en classement.
+- Ne pas ajouter des liens pour un quota ; en revanche une page presque sans maillage interne est considérée comme incomplète.
+
+### Gate structurel
+
+`validate_guide_quality.py` matérialise le plancher observable : profondeur du corps d’article, nombre de sections substantielles, développement des H2, contextualisation des tableaux, diversité du maillage et présence de sources. Ces seuils sont des garde-fous, jamais un substitut à la relecture éditoriale.
+
+Un CI vert ne prouve pas que `humanizer`, `fact-check`, `anti-ai-slop`, SEO ou GEO sont passés. **Aucun de ces contrôles ne peut recevoir `PASS` automatiquement sur la seule base de H1/H2, nombre de mots ou présence d’une source.** Chaque verdict qualitatif doit être fondé sur une passe réellement effectuée et sur des constats visibles dans `.content/reviews/<slug>.md`.
 
 ## Étape 4 — Chaîne de contrôle obligatoire après rédaction
 
@@ -99,6 +136,9 @@ Attribuer `FAIL` si l’un des points suivants subsiste :
 - affirmation importante non vérifiée présentée comme certaine ;
 - contradictions entre sections ou versions de produit ;
 - contenu principalement interchangeable avec une page concurrente ou marchande ;
+- H2 important réduit à un fragment de contenu sans profondeur ni raison ;
+- tableau ou liste posé sans contexte ni interprétation ;
+- maillage presque absent alors que des prochaines étapes existent dans le cluster ;
 - clusters de formulations génériques, promotionnelles ou mécaniques relevés par `anti-ai-slop` ;
 - suppression inexpliquée d’un élément validé dans le brief ;
 - nouvelle cannibalisation, lien interne cassé, canonical/robots incorrect ou HTML invalide ;
