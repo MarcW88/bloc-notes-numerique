@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-      - guide-visual-assets-all-guides
-      - fix-guide-visuals-clean3
+      - optimize-guide-visual-selection
     paths:
       - 'guide_visual_catalog.py'
       - 'guide_visual_overrides.py'
@@ -30,23 +29,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Build manifests for all guides
+      - name: Build manifests and remove obsolete generated assets
         run: python build_guide_visual_manifests.py
-      - name: Render every visual
+      - name: Render selected functional diagrams
         run: |
           for manifest in .content/visuals/*.json; do
             python tools/guide-visual-assets-workflow/scripts/render_visual_assets.py --manifest "$manifest"
           done
-      - name: Validate SVG assets
+      - name: Validate routed assets
         run: |
           for manifest in .content/visuals/*.json; do
             python tools/guide-visual-assets-workflow/scripts/validate_visual_assets.py "$manifest"
           done
-      - name: Inject visuals into guide pages
+      - name: Apply visual routing to guide pages
         run: python apply_guide_visuals.py
-      - name: Validate complete guide visual coverage
+      - name: Validate guide visual selection
         run: python validate_guide_visuals.py
-      - name: Commit generated visual batch
+      - name: Commit generated visual changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -54,6 +53,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes"
           else
-            git commit -m "visual: generate one useful non-tabular asset for every guide"
+            git commit -m "visual: apply curated guide visual routing"
             git push origin HEAD:${{ github.ref_name }}
           fi
