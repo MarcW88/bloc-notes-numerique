@@ -1,0 +1,16 @@
+{
+  "id": "example-decision-tree",
+  "page_url": "/guides/example/",
+  "type": "decision_tree",
+  "output": "assets/guides/example/example-decision-tree.svg",
+  "after_section_id": "workflow",
+  "alt": "Arbre de décision résumant les principales étapes de choix.",
+  "caption": "Utilisez ce schéma comme raccourci, puis vérifiez les critères détaillés dans le texte.",
+  "canvas": {"width": 1200, "height": 900},
+  "title": "Quel choix vous convient ?",
+  "subtitle": "Commencez par votre besoin principal.",
+  "nodes": [
+    {"id": "start", "x": 400, "y": 120, "w": 400, "h": 80, "style": "primary", "lines": ["Votre besoin principal ?"]}
+  ],
+  "edges": []
+}
