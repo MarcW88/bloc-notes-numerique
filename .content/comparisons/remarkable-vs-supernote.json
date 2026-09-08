@@ -1,0 +1,139 @@
+{
+  "slug": "remarkable-vs-supernote",
+  "url": "/comparatifs/remarkable-vs-supernote/",
+  "researched_at": "2026-09-08",
+  "status": "DRAFT_READY",
+  "intent": {
+    "query": "reMarkable vs Supernote",
+    "type": "head_to_head",
+    "user_job": "choisir entre simplicité reMarkable et organisation avancée Supernote"
+  },
+  "criteria": [
+    {
+      "id": "writing",
+      "label": "writing",
+      "weight": 25
+    },
+    {
+      "id": "organization",
+      "label": "organization",
+      "weight": 20
+    },
+    {
+      "id": "pdf",
+      "label": "pdf",
+      "weight": 15
+    },
+    {
+      "id": "export",
+      "label": "export",
+      "weight": 15
+    },
+    {
+      "id": "simplicity",
+      "label": "simplicity",
+      "weight": 15
+    },
+    {
+      "id": "cost",
+      "label": "cost",
+      "weight": 10
+    }
+  ],
+  "product_universe": [
+    {
+      "id": "remarkable_pure",
+      "name": "reMarkable Paper Pure",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/fr-FR/shop/compare",
+      "price_snapshot": "à partir de 399 €"
+    },
+    {
+      "id": "supernote_manta",
+      "name": "Supernote Manta",
+      "status": "ELIGIBLE",
+      "source": "https://supernote.com/products/supernote-manta",
+      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
+    }
+  ],
+  "scores": {
+    "remarkable_pure": {
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
+      },
+      "pdf": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
+      },
+      "simplicity": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
+      },
+      "cost": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
+      }
+    },
+    "supernote_manta": {
+      "writing": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
+      },
+      "organization": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
+      },
+      "export": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
+      },
+      "simplicity": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
+      },
+      "cost": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
+      }
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "product_id": "supernote_manta",
+      "score": 9.0
+    },
+    {
+      "rank": 2,
+      "product_id": "remarkable_pure",
+      "score": 8.4
+    }
+  ],
+  "affiliate_commission_used_in_ranking": false,
+  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+}

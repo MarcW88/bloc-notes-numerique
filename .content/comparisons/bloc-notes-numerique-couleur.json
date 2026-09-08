@@ -1,0 +1,252 @@
+{
+  "slug": "bloc-notes-numerique-couleur",
+  "url": "/comparatifs/bloc-notes-numerique-couleur/",
+  "researched_at": "2026-09-08",
+  "status": "DRAFT_READY",
+  "intent": {
+    "query": "meilleur bloc-notes numérique couleur",
+    "type": "feature_specific",
+    "user_job": "utiliser la couleur pour surligner, coder et annoter sans passer sur LCD"
+  },
+  "criteria": [
+    {
+      "id": "color",
+      "label": "color",
+      "weight": 35
+    },
+    {
+      "id": "pdf",
+      "label": "pdf",
+      "weight": 15
+    },
+    {
+      "id": "writing",
+      "label": "writing",
+      "weight": 15
+    },
+    {
+      "id": "export",
+      "label": "export",
+      "weight": 10
+    },
+    {
+      "id": "apps",
+      "label": "apps",
+      "weight": 10
+    },
+    {
+      "id": "frontlight",
+      "label": "frontlight",
+      "weight": 10
+    },
+    {
+      "id": "cost",
+      "label": "cost",
+      "weight": 5
+    }
+  ],
+  "product_universe": [
+    {
+      "id": "remarkable_pro",
+      "name": "reMarkable Paper Pro",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+      "price_snapshot": "à partir de 649 €"
+    },
+    {
+      "id": "boox_air5c",
+      "name": "BOOX Note Air5 C",
+      "status": "ELIGIBLE",
+      "source": "https://shop.boox.com/en-ca/products/noteair5c",
+      "price_snapshot": "499,99 $ US sur la boutique consultée"
+    },
+    {
+      "id": "kindle_colorsoft",
+      "name": "Kindle Scribe Colorsoft",
+      "status": "ELIGIBLE",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+      "price_snapshot": "prix à vérifier sur Amazon"
+    },
+    {
+      "id": "remarkable_move",
+      "name": "reMarkable Paper Pro Move",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+      "price_snapshot": "à partir de 479 €"
+    }
+  ],
+  "scores": {
+    "remarkable_pro": {
+      "color": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for color."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
+      },
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 3,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for apps."
+      },
+      "frontlight": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for frontlight."
+      },
+      "cost": {
+        "score": 5,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
+      }
+    },
+    "boox_air5c": {
+      "color": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for color."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for pdf."
+      },
+      "writing": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for writing."
+      },
+      "export": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for apps."
+      },
+      "frontlight": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for frontlight."
+      },
+      "cost": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for cost."
+      }
+    },
+    "kindle_colorsoft": {
+      "color": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for color."
+      },
+      "pdf": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for pdf."
+      },
+      "writing": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for writing."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 2,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for apps."
+      },
+      "frontlight": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for frontlight."
+      },
+      "cost": {
+        "score": 5,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for cost."
+      }
+    },
+    "remarkable_move": {
+      "color": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for color."
+      },
+      "pdf": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for pdf."
+      },
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for writing."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 3,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for apps."
+      },
+      "frontlight": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for frontlight."
+      },
+      "cost": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for cost."
+      }
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "product_id": "boox_air5c",
+      "score": 8.55
+    },
+    {
+      "rank": 2,
+      "product_id": "remarkable_pro",
+      "score": 8.0
+    },
+    {
+      "rank": 3,
+      "product_id": "remarkable_move",
+      "score": 7.6
+    },
+    {
+      "rank": 4,
+      "product_id": "kindle_colorsoft",
+      "score": 7.1
+    }
+  ],
+  "affiliate_commission_used_in_ranking": false,
+  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+}

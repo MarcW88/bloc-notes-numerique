@@ -1,0 +1,385 @@
+{
+  "slug": "meilleur-bloc-notes-numerique",
+  "url": "/comparatifs/meilleur-bloc-notes-numerique/",
+  "researched_at": "2026-09-08",
+  "status": "DRAFT_READY",
+  "intent": {
+    "query": "meilleur bloc-notes numérique",
+    "type": "best_overall",
+    "user_job": "choisir le meilleur équilibre pour écrire, annoter et retrouver ses notes"
+  },
+  "criteria": [
+    {
+      "id": "writing",
+      "label": "writing",
+      "weight": 20
+    },
+    {
+      "id": "pdf",
+      "label": "pdf",
+      "weight": 15
+    },
+    {
+      "id": "organization",
+      "label": "organization",
+      "weight": 15
+    },
+    {
+      "id": "export",
+      "label": "export",
+      "weight": 15
+    },
+    {
+      "id": "reading",
+      "label": "reading",
+      "weight": 10
+    },
+    {
+      "id": "cost",
+      "label": "cost",
+      "weight": 10
+    },
+    {
+      "id": "simplicity",
+      "label": "simplicity",
+      "weight": 10
+    },
+    {
+      "id": "portability",
+      "label": "portability",
+      "weight": 5
+    }
+  ],
+  "product_universe": [
+    {
+      "id": "remarkable_pure",
+      "name": "reMarkable Paper Pure",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/fr-FR/shop/compare",
+      "price_snapshot": "à partir de 399 €"
+    },
+    {
+      "id": "boox_go2",
+      "name": "BOOX Go 10.3 (Gen II)",
+      "status": "ELIGIBLE",
+      "source": "https://shop.boox.com/products/go103gen2",
+      "price_snapshot": "à partir de 399,99 $ US"
+    },
+    {
+      "id": "supernote_manta",
+      "name": "Supernote Manta",
+      "status": "ELIGIBLE",
+      "source": "https://supernote.com/products/supernote-manta",
+      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
+    },
+    {
+      "id": "kindle_scribe3",
+      "name": "Kindle Scribe (3e génération)",
+      "status": "ELIGIBLE",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+      "price_snapshot": "prix à vérifier sur Amazon"
+    },
+    {
+      "id": "kobo_elipsa",
+      "name": "Kobo Elipsa 2E",
+      "status": "ELIGIBLE",
+      "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+      "price_snapshot": "399,99 €"
+    },
+    {
+      "id": "remarkable_pro",
+      "name": "reMarkable Paper Pro",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+      "price_snapshot": "à partir de 649 €"
+    }
+  ],
+  "scores": {
+    "remarkable_pure": {
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for portability."
+      }
+    },
+    "boox_go2": {
+      "writing": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for portability."
+      }
+    },
+    "supernote_manta": {
+      "writing": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for portability."
+      }
+    },
+    "kindle_scribe3": {
+      "writing": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for portability."
+      }
+    },
+    "kobo_elipsa": {
+      "writing": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for portability."
+      }
+    },
+    "remarkable_pro": {
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
+      },
+      "reading": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for reading."
+      },
+      "cost": {
+        "score": 5,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
+      },
+      "simplicity": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for simplicity."
+      },
+      "portability": {
+        "score": 5,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for portability."
+      }
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "product_id": "supernote_manta",
+      "score": 8.7
+    },
+    {
+      "rank": 2,
+      "product_id": "boox_go2",
+      "score": 8.35
+    },
+    {
+      "rank": 3,
+      "product_id": "remarkable_pure",
+      "score": 8.15
+    },
+    {
+      "rank": 4,
+      "product_id": "remarkable_pro",
+      "score": 7.85
+    },
+    {
+      "rank": 5,
+      "product_id": "kindle_scribe3",
+      "score": 7.5
+    },
+    {
+      "rank": 6,
+      "product_id": "kobo_elipsa",
+      "score": 7.45
+    }
+  ],
+  "affiliate_commission_used_in_ranking": false,
+  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+}

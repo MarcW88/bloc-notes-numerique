@@ -1,0 +1,154 @@
+{
+  "slug": "remarkable-vs-boox",
+  "url": "/comparatifs/remarkable-vs-boox/",
+  "researched_at": "2026-09-08",
+  "status": "DRAFT_READY",
+  "intent": {
+    "query": "reMarkable vs BOOX",
+    "type": "head_to_head",
+    "user_job": "choisir entre simplicité spécialisée et Android ouvert"
+  },
+  "criteria": [
+    {
+      "id": "writing",
+      "label": "writing",
+      "weight": 20
+    },
+    {
+      "id": "pdf",
+      "label": "pdf",
+      "weight": 15
+    },
+    {
+      "id": "organization",
+      "label": "organization",
+      "weight": 15
+    },
+    {
+      "id": "export",
+      "label": "export",
+      "weight": 15
+    },
+    {
+      "id": "apps",
+      "label": "apps",
+      "weight": 20
+    },
+    {
+      "id": "simplicity",
+      "label": "simplicity",
+      "weight": 10
+    },
+    {
+      "id": "cost",
+      "label": "cost",
+      "weight": 5
+    }
+  ],
+  "product_universe": [
+    {
+      "id": "remarkable_pure",
+      "name": "reMarkable Paper Pure",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/fr-FR/shop/compare",
+      "price_snapshot": "à partir de 399 €"
+    },
+    {
+      "id": "boox_go2",
+      "name": "BOOX Go 10.3 (Gen II)",
+      "status": "ELIGIBLE",
+      "source": "https://shop.boox.com/products/go103gen2",
+      "price_snapshot": "à partir de 399,99 $ US"
+    }
+  ],
+  "scores": {
+    "remarkable_pure": {
+      "writing": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 7,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 3,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for apps."
+      },
+      "simplicity": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
+      },
+      "cost": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
+      }
+    },
+    "boox_go2": {
+      "writing": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for organization."
+      },
+      "export": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for apps."
+      },
+      "simplicity": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for simplicity."
+      },
+      "cost": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for cost."
+      }
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "product_id": "boox_go2",
+      "score": 8.65
+    },
+    {
+      "rank": 2,
+      "product_id": "remarkable_pure",
+      "score": 7.25
+    }
+  ],
+  "affiliate_commission_used_in_ranking": false,
+  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+}

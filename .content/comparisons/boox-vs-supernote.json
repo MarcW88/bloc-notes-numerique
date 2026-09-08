@@ -1,0 +1,139 @@
+{
+  "slug": "boox-vs-supernote",
+  "url": "/comparatifs/boox-vs-supernote/",
+  "researched_at": "2026-09-08",
+  "status": "DRAFT_READY",
+  "intent": {
+    "query": "BOOX vs Supernote",
+    "type": "head_to_head",
+    "user_job": "choisir entre applications Android et outil d’écriture spécialisé"
+  },
+  "criteria": [
+    {
+      "id": "writing",
+      "label": "writing",
+      "weight": 20
+    },
+    {
+      "id": "organization",
+      "label": "organization",
+      "weight": 20
+    },
+    {
+      "id": "pdf",
+      "label": "pdf",
+      "weight": 15
+    },
+    {
+      "id": "export",
+      "label": "export",
+      "weight": 15
+    },
+    {
+      "id": "apps",
+      "label": "apps",
+      "weight": 20
+    },
+    {
+      "id": "simplicity",
+      "label": "simplicity",
+      "weight": 10
+    }
+  ],
+  "product_universe": [
+    {
+      "id": "boox_go2",
+      "name": "BOOX Go 10.3 (Gen II)",
+      "status": "ELIGIBLE",
+      "source": "https://shop.boox.com/products/go103gen2",
+      "price_snapshot": "à partir de 399,99 $ US"
+    },
+    {
+      "id": "supernote_manta",
+      "name": "Supernote Manta",
+      "status": "ELIGIBLE",
+      "source": "https://supernote.com/products/supernote-manta",
+      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
+    }
+  ],
+  "scores": {
+    "boox_go2": {
+      "writing": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
+      },
+      "organization": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for organization."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
+      },
+      "export": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for apps."
+      },
+      "simplicity": {
+        "score": 6,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for simplicity."
+      }
+    },
+    "supernote_manta": {
+      "writing": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
+      },
+      "organization": {
+        "score": 10,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
+      },
+      "pdf": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
+      },
+      "export": {
+        "score": 9,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
+      },
+      "apps": {
+        "score": 5,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for apps."
+      },
+      "simplicity": {
+        "score": 8,
+        "evidence_class": "VERIFIED",
+        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
+      }
+    }
+  },
+  "ranking": [
+    {
+      "rank": 1,
+      "product_id": "boox_go2",
+      "score": 8.65
+    },
+    {
+      "rank": 2,
+      "product_id": "supernote_manta",
+      "score": 8.5
+    }
+  ],
+  "affiliate_commission_used_in_ranking": false,
+  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+}
