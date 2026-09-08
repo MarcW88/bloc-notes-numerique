@@ -7,6 +7,7 @@ ROOT = Path(__file__).resolve().parent
 manifests = {p.stem: p for p in (ROOT / ".content" / "visuals").glob("*.json")}
 guides = {p.parent.name: p for p in (ROOT / "guides").glob("*/index.html")}
 issues = []
+FORBIDDEN_TYPES = {"decision_matrix", "table", "comparison_table"}
 
 if set(manifests) != set(guides):
     missing = sorted(set(guides) - set(manifests))
@@ -18,6 +19,9 @@ for slug, page in guides.items():
     if not manifest_path:
         continue
     spec = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if spec.get("type") in FORBIDDEN_TYPES:
+        issues.append(f"{slug}: table-like visual forbidden ({spec.get('type')})")
+
     asset = ROOT / spec["output"]
     if not asset.exists():
         issues.append(f"{slug}: asset missing")
@@ -37,7 +41,10 @@ for slug, page in guides.items():
         issues.append(f"{slug}: noindex,follow lost")
     marker = f'data-visual-id="{spec["id"]}"'
     if html.count(marker) != 1:
-        issues.append(f"{slug}: expected one visual, found {html.count(marker)}")
+        issues.append(f"{slug}: expected current visual once, found {html.count(marker)}")
+    all_visuals = len(re.findall(r'data-visual-id="[^"]+"', html))
+    if all_visuals != 1:
+        issues.append(f"{slug}: expected exactly one guide visual block, found {all_visuals}")
     if f'/{spec["output"]}' not in html:
         issues.append(f"{slug}: asset URL absent from page")
 
@@ -46,4 +53,4 @@ if issues:
         print("FAIL", issue)
     raise SystemExit(1)
 
-print(f"PASS: {len(guides)} guide pages each contain exactly one validated visual")
+print(f"PASS: {len(guides)} guide pages each contain exactly one validated non-tabular visual")
