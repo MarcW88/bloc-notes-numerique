@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from html import escape
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -23,14 +24,14 @@ def page_path(page_url: str) -> Path:
 def figure_html(spec: dict) -> str:
     asset_url = "/" + spec["output"].lstrip("/")
     width = int(spec.get("canvas", {}).get("width", 1200))
-    height = int(spec.get("canvas", {}).get("height", 900))
+    height = int(spec.get("canvas", {}).get("height", 700))
     visual_id = spec["id"]
-    return f'''\n      <!-- visual:start:{visual_id} -->
-      <figure class="guide-visual guide-visual--{spec['type']}" data-visual-id="{visual_id}">
-        <img src="{asset_url}" alt="{spec['alt']}" loading="lazy" decoding="async" width="{width}" height="{height}">
-        <figcaption>{spec['caption']}</figcaption>
-      </figure>
-      <!-- visual:end:{visual_id} -->\n'''
+    return f'''\n<!-- visual:start:{escape(visual_id, quote=True)} -->
+<figure class="guide-visual guide-visual--{escape(spec['type'], quote=True)}" data-visual-id="{escape(visual_id, quote=True)}">
+  <img src="{escape(asset_url, quote=True)}" alt="{escape(spec['alt'], quote=True)}" loading="lazy" decoding="async" width="{width}" height="{height}">
+  <figcaption>{escape(spec['caption'])}</figcaption>
+</figure>
+<!-- visual:end:{escape(visual_id, quote=True)} -->\n'''
 
 
 def apply(spec: dict) -> None:
@@ -44,24 +45,26 @@ def apply(spec: dict) -> None:
 
     html = page.read_text(encoding="utf-8")
     if 'name="robots" content="noindex,follow"' not in html:
-        raise SystemExit("Pilot page lost noindex,follow")
+        raise SystemExit(f"{page}: noindex,follow missing")
 
     visual_id = re.escape(spec["id"])
-    block_re = re.compile(
-        rf"\s*<!-- visual:start:{visual_id} -->.*?<!-- visual:end:{visual_id} -->\s*",
-        re.S,
-    )
+    block_re = re.compile(rf"\s*<!-- visual:start:{visual_id} -->.*?<!-- visual:end:{visual_id} -->\s*", re.S)
     html = block_re.sub("\n", html)
 
-    section_id = re.escape(spec["after_section_id"])
-    heading = re.search(rf'<h2\s+id="{section_id}"[^>]*>.*?</h2>', html, re.S | re.I)
-    if not heading:
-        raise SystemExit(f"Insertion section not found: {spec['after_section_id']}")
-
-    next_h2 = re.search(r"<h2\b", html[heading.end():], re.I)
-    if not next_h2:
-        raise SystemExit("Could not find following H2 for insertion")
-    insert_at = heading.end() + next_h2.start()
+    if spec.get("after_section_id"):
+        section_id = re.escape(spec["after_section_id"])
+        heading = re.search(rf'<h2\s+id="{section_id}"[^>]*>.*?</h2>', html, re.S | re.I)
+        if not heading:
+            raise SystemExit(f"Insertion section not found: {spec['after_section_id']}")
+        next_h2 = re.search(r"<h2\b", html[heading.end():], re.I)
+        if not next_h2:
+            raise SystemExit(f"{page}: could not find following H2")
+        insert_at = heading.end() + next_h2.start()
+    else:
+        headings = list(re.finditer(r"<h2\b[^>]*>.*?</h2>", html, re.S | re.I))
+        if len(headings) < 2:
+            raise SystemExit(f"{page}: need at least two H2s for generic insertion")
+        insert_at = headings[1].start()
 
     html = html[:insert_at] + figure_html(spec) + html[insert_at:]
     page.write_text(html, encoding="utf-8")
@@ -69,9 +72,11 @@ def apply(spec: dict) -> None:
 
 
 def main() -> None:
-    if len(sys.argv) != 2:
-        raise SystemExit("Usage: apply_guide_visuals.py .content/visuals/<slug>.json")
-    apply(load_manifest(sys.argv[1]))
+    args = sys.argv[1:]
+    if not args:
+        args = [str(path.relative_to(ROOT)) for path in sorted((ROOT / ".content" / "visuals").glob("*.json"))]
+    for arg in args:
+        apply(load_manifest(arg))
 
 
 if __name__ == "__main__":
