@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "Transférer une note vers l'ordinateur",
+  "subtitle": "Choisissez le chemin qui garde le bon format et le bon niveau de contrôle.",
+  "alt": "Schéma de transfert de notes d'une tablette E Ink vers un ordinateur par export, cloud ou USB.",
+  "caption": "Le meilleur chemin est celui qui produit un fichier que vous pouvez réellement réutiliser.",
+  "steps": [
+    [
+      "Tablette",
+      "Note ou document"
+    ],
+    [
+      "Méthode",
+      "Cloud, USB ou export"
+    ],
+    [
+      "Fichier",
+      "PDF, image ou texte"
+    ],
+    [
+      "Ordinateur",
+      "Archiver, partager ou modifier"
+    ]
+  ],
+  "id": "transfert-notes-vers-ordinateur-process-flow",
+  "page_url": "/guides/transfert-notes-vers-ordinateur/",
+  "output": "assets/guides/transfert-notes-vers-ordinateur/transfert-notes-vers-ordinateur-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

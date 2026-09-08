@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "Annoter un PDF sans casser le workflow",
+  "subtitle": "Le bon appareil doit gérer tout le parcours, pas seulement l'écriture.",
+  "alt": "Schéma du parcours d'un PDF : import, annotation, export et vérification du fichier final.",
+  "caption": "Testez un PDF réel de bout en bout avant de choisir un appareil.",
+  "steps": [
+    [
+      "Importer",
+      "Ouvrir le PDF dans l'appareil"
+    ],
+    [
+      "Annoter",
+      "Écrire, surligner, naviguer"
+    ],
+    [
+      "Exporter",
+      "Créer une copie exploitable"
+    ],
+    [
+      "Vérifier",
+      "Ouvrir le fichier sur ordinateur"
+    ]
+  ],
+  "id": "annoter-pdf-tablette-e-ink-process-flow",
+  "page_url": "/guides/annoter-pdf-tablette-e-ink/",
+  "output": "assets/guides/annoter-pdf-tablette-e-ink/annoter-pdf-tablette-e-ink-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

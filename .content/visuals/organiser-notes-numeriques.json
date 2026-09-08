@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "Une organisation simple qui reste retrouvable",
+  "subtitle": "La capture n'est utile que si la note peut être retrouvée plus tard.",
+  "alt": "Schéma d'organisation des notes numériques de la capture au classement puis à la recherche.",
+  "caption": "Évitez de multiplier les catégories : classez selon la manière dont vous retrouverez la note.",
+  "steps": [
+    [
+      "Capturer",
+      "Créer la note"
+    ],
+    [
+      "Nommer",
+      "Titre ou contexte clair"
+    ],
+    [
+      "Classer",
+      "Dossier, carnet ou tag"
+    ],
+    [
+      "Retrouver",
+      "Recherche, filtre ou navigation"
+    ]
+  ],
+  "id": "organiser-notes-numeriques-process-flow",
+  "page_url": "/guides/organiser-notes-numeriques/",
+  "output": "assets/guides/organiser-notes-numeriques/organiser-notes-numeriques-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

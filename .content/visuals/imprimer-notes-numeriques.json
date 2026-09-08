@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "De la note numérique à l'impression",
+  "subtitle": "La plupart des workflows passent par un fichier exporté.",
+  "alt": "Schéma pour imprimer une note numérique : export, ouverture, contrôle puis impression.",
+  "caption": "Vérifiez la mise en page du fichier exporté avant de lancer l'impression.",
+  "steps": [
+    [
+      "Note",
+      "Carnet ou page"
+    ],
+    [
+      "Exporter",
+      "PDF ou image"
+    ],
+    [
+      "Contrôler",
+      "Mise en page sur ordinateur"
+    ],
+    [
+      "Imprimer",
+      "Pilote et imprimante"
+    ]
+  ],
+  "id": "imprimer-notes-numeriques-process-flow",
+  "page_url": "/guides/imprimer-notes-numeriques/",
+  "output": "assets/guides/imprimer-notes-numeriques/imprimer-notes-numeriques-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

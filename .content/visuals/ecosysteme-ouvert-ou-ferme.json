@@ -1,0 +1,46 @@
+{
+  "type": "decision_matrix",
+  "title": "Écosystème ouvert ou fermé : où se situe le compromis ?",
+  "subtitle": "L'ouverture apporte de la flexibilité ; la spécialisation peut réduire la complexité.",
+  "alt": "Matrice comparant un écosystème spécialisé et un écosystème plus ouvert.",
+  "caption": "Choisissez en fonction des applications et transferts réellement nécessaires.",
+  "columns": [
+    "Critère",
+    "Écosystème spécialisé",
+    "Écosystème plus ouvert"
+  ],
+  "rows": [
+    [
+      "Applications",
+      "Sélection limitée",
+      "Plus de choix"
+    ],
+    [
+      "Simplicité",
+      "Souvent plus directe",
+      "Plus de réglages"
+    ],
+    [
+      "Intégrations",
+      "Parcours définis",
+      "Plus de possibilités"
+    ],
+    [
+      "Dépendance",
+      "Services du fabricant",
+      "Services tiers possibles"
+    ],
+    [
+      "À privilégier si",
+      "workflow stable",
+      "besoins logiciels variés"
+    ]
+  ],
+  "id": "ecosysteme-ouvert-ou-ferme-decision-matrix",
+  "page_url": "/guides/ecosysteme-ouvert-ou-ferme/",
+  "output": "assets/guides/ecosysteme-ouvert-ou-ferme/ecosysteme-ouvert-ou-ferme-decision-matrix.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

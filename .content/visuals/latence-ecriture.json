@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "D'où vient la latence d'écriture ?",
+  "subtitle": "Le délai perçu est une chaîne, pas une seule spécification.",
+  "alt": "Schéma des étapes qui contribuent à la latence entre le mouvement du stylet et l'affichage du trait.",
+  "caption": "La sensation finale dépend du stylet, du système, du rendu et du rafraîchissement de l'écran.",
+  "steps": [
+    [
+      "Stylet",
+      "Mouvement détecté"
+    ],
+    [
+      "Numériseur",
+      "Position transmise"
+    ],
+    [
+      "Logiciel",
+      "Trait calculé"
+    ],
+    [
+      "Écran E Ink",
+      "Trait rendu et rafraîchi"
+    ]
+  ],
+  "id": "latence-ecriture-process-flow",
+  "page_url": "/guides/latence-ecriture/",
+  "output": "assets/guides/latence-ecriture/latence-ecriture-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

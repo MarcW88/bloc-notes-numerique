@@ -1,0 +1,36 @@
+{
+  "type": "cost_breakdown",
+  "title": "Le vrai coût est celui de la configuration utilisable",
+  "subtitle": "Prix de l'appareil + éléments réellement nécessaires à votre usage.",
+  "alt": "Décomposition du coût total d'un bloc-notes numérique entre appareil, stylet, protection, accessoires et abonnement éventuel.",
+  "caption": "N'ajoutez au coût total que les accessoires et services nécessaires à votre scénario.",
+  "items": [
+    [
+      "Appareil",
+      "Base de la configuration"
+    ],
+    [
+      "Stylet",
+      "Inclus ou séparé selon le modèle"
+    ],
+    [
+      "Protection",
+      "À pondérer selon la mobilité"
+    ],
+    [
+      "Clavier / accessoires",
+      "Seulement si utiles"
+    ],
+    [
+      "Abonnement",
+      "Uniquement si une fonction nécessaire en dépend"
+    ]
+  ],
+  "id": "prix-bloc-notes-numerique-cost-breakdown",
+  "page_url": "/guides/prix-bloc-notes-numerique/",
+  "output": "assets/guides/prix-bloc-notes-numerique/prix-bloc-notes-numerique-cost-breakdown.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "type": "decision_matrix",
+  "title": "Tablette classique ou E Ink : le compromis principal",
+  "subtitle": "Polyvalence et multimédia d'un côté, lecture/écriture spécialisée de l'autre.",
+  "alt": "Matrice comparant tablette classique et tablette E Ink selon plusieurs usages.",
+  "caption": "Le choix dépend surtout des applications indispensables et du temps passé à lire ou écrire.",
+  "columns": [
+    "Usage",
+    "Tablette classique",
+    "Tablette E Ink"
+  ],
+  "rows": [
+    [
+      "Applications",
+      "Très large choix",
+      "Variable selon le système"
+    ],
+    [
+      "Vidéo / animation",
+      "Adaptée",
+      "Peu adaptée"
+    ],
+    [
+      "Lecture longue",
+      "Écran lumineux",
+      "Affichage papier"
+    ],
+    [
+      "Écriture / PDF",
+      "Polyvalente",
+      "Souvent spécialisée"
+    ],
+    [
+      "Autonomie",
+      "Recharge plus fréquente",
+      "Souvent plus longue"
+    ]
+  ],
+  "id": "tablette-classique-ou-tablette-e-ink-decision-matrix",
+  "page_url": "/guides/tablette-classique-ou-tablette-e-ink/",
+  "output": "assets/guides/tablette-classique-ou-tablette-e-ink/tablette-classique-ou-tablette-e-ink-decision-matrix.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

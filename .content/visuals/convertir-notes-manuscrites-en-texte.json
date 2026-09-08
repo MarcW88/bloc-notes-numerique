@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "Du manuscrit au texte exploitable",
+  "subtitle": "La reconnaissance n'est qu'une étape du workflow.",
+  "alt": "Schéma de conversion d'une note manuscrite en texte : écriture, reconnaissance, relecture et export.",
+  "caption": "Prévoyez toujours une relecture avant de réutiliser le texte reconnu.",
+  "steps": [
+    [
+      "Écrire",
+      "Note manuscrite lisible"
+    ],
+    [
+      "Reconnaître",
+      "OCR ou reconnaissance d'écriture"
+    ],
+    [
+      "Relire",
+      "Corriger les erreurs"
+    ],
+    [
+      "Exporter",
+      "Texte, document ou application cible"
+    ]
+  ],
+  "id": "convertir-notes-manuscrites-en-texte-process-flow",
+  "page_url": "/guides/convertir-notes-manuscrites-en-texte/",
+  "output": "assets/guides/convertir-notes-manuscrites-en-texte/convertir-notes-manuscrites-en-texte-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

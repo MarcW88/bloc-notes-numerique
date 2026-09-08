@@ -1,0 +1,52 @@
+{
+  "type": "decision_matrix",
+  "title": "Liseuse ou bloc-notes numérique : partez de la tâche dominante",
+  "subtitle": "Les appareils hybrides rapprochent les deux usages sans les rendre identiques.",
+  "alt": "Matrice comparant liseuse, appareil hybride avec stylet et bloc-notes numérique spécialisé.",
+  "caption": "La meilleure catégorie dépend du poids relatif de la lecture, de l'écriture et de l'export.",
+  "columns": [
+    "Besoin",
+    "Liseuse",
+    "Hybride",
+    "Bloc-notes"
+  ],
+  "rows": [
+    [
+      "Lecture d'ebooks",
+      "Prioritaire",
+      "Prioritaire",
+      "Variable"
+    ],
+    [
+      "Carnets manuscrits",
+      "Secondaire",
+      "Présents",
+      "Prioritaires"
+    ],
+    [
+      "PDF de travail",
+      "Variable",
+      "Correct",
+      "Souvent central"
+    ],
+    [
+      "Organisation de notes",
+      "Limitée",
+      "Intermédiaire",
+      "Plus poussée"
+    ],
+    [
+      "Export",
+      "Selon l'écosystème",
+      "Selon l'écosystème",
+      "Critère central"
+    ]
+  ],
+  "id": "liseuse-ou-bloc-notes-numerique-decision-matrix",
+  "page_url": "/guides/liseuse-ou-bloc-notes-numerique/",
+  "output": "assets/guides/liseuse-ou-bloc-notes-numerique/liseuse-ou-bloc-notes-numerique-decision-matrix.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

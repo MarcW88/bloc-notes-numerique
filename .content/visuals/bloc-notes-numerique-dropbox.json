@@ -1,0 +1,32 @@
+{
+  "type": "process_flow",
+  "title": "Dropbox : distinguer accès, copie et synchronisation",
+  "subtitle": "Une intégration cloud ne signifie pas toujours la même chose selon l'appareil.",
+  "alt": "Schéma d'un workflow Dropbox entre tablette E Ink, cloud et ordinateur.",
+  "caption": "Vérifiez ce qui est réellement synchronisé et ce qui n'est qu'importé ou exporté.",
+  "steps": [
+    [
+      "Tablette",
+      "Note ou document"
+    ],
+    [
+      "Intégration",
+      "Importer, exporter ou synchroniser"
+    ],
+    [
+      "Dropbox",
+      "Stockage cloud"
+    ],
+    [
+      "Ordinateur",
+      "Récupérer et réutiliser le fichier"
+    ]
+  ],
+  "id": "bloc-notes-numerique-dropbox-process-flow",
+  "page_url": "/guides/bloc-notes-numerique-dropbox/",
+  "output": "assets/guides/bloc-notes-numerique-dropbox/bloc-notes-numerique-dropbox-process-flow.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

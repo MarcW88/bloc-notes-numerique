@@ -1,0 +1,36 @@
+{
+  "type": "ecosystem_map",
+  "title": "Une tablette E Ink est un système, pas seulement un écran",
+  "subtitle": "Matériel, logiciel, stylet, fichiers et cloud déterminent l'usage.",
+  "alt": "Carte des principales couches d'une tablette E Ink : écran, stylet, système, fichiers, cloud et export.",
+  "caption": "Deux appareils E Ink peuvent avoir des usages très différents selon leur logiciel et leur écosystème.",
+  "layers": [
+    [
+      "Écran E Ink",
+      "Affichage et rafraîchissement"
+    ],
+    [
+      "Stylet",
+      "Écriture et interaction"
+    ],
+    [
+      "Système",
+      "Interface et applications"
+    ],
+    [
+      "Documents",
+      "PDF, ebooks et notes"
+    ],
+    [
+      "Cloud / export",
+      "Sortie et circulation des données"
+    ]
+  ],
+  "id": "tablette-e-ink-ecosystem-map",
+  "page_url": "/guides/tablette-e-ink/",
+  "output": "assets/guides/tablette-e-ink/tablette-e-ink-ecosystem-map.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "type": "ecosystem_map",
+  "title": "Synchroniser n'est pas simplement copier un fichier",
+  "subtitle": "Suivez ce qui se passe entre l'appareil, le cloud et les autres appareils.",
+  "alt": "Carte d'écosystème montrant la tablette, le service cloud, les autres appareils et l'export.",
+  "caption": "Vérifiez la direction des échanges, les conflits et ce qui reste accessible hors ligne.",
+  "layers": [
+    [
+      "Tablette",
+      "Notes et documents"
+    ],
+    [
+      "Service cloud",
+      "Synchronisation ou stockage"
+    ],
+    [
+      "Autres appareils",
+      "Mobile et ordinateur"
+    ],
+    [
+      "Export",
+      "Copie indépendante pour archive ou partage"
+    ]
+  ],
+  "id": "synchroniser-notes-cloud-ecosystem-map",
+  "page_url": "/guides/synchroniser-notes-cloud/",
+  "output": "assets/guides/synchroniser-notes-cloud/synchroniser-notes-cloud-ecosystem-map.svg",
+  "canvas": {
+    "width": 1200,
+    "height": 700
+  }
+}
