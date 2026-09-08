@@ -1,16 +1,17 @@
 {
-  "id": "example-decision-tree",
   "page_url": "/guides/example/",
-  "type": "decision_tree",
-  "output": "assets/guides/example/example-decision-tree.svg",
-  "after_section_id": "workflow",
-  "alt": "Arbre de décision résumant les principales étapes de choix.",
-  "caption": "Utilisez ce schéma comme raccourci, puis vérifiez les critères détaillés dans le texte.",
-  "canvas": {"width": 1200, "height": 900},
-  "title": "Quel choix vous convient ?",
-  "subtitle": "Commencez par votre besoin principal.",
-  "nodes": [
-    {"id": "start", "x": 400, "y": 120, "w": 400, "h": 80, "style": "primary", "lines": ["Votre besoin principal ?"]}
+  "asset_mode": "editorial_image",
+  "visual_goal": "contextualiser le sujet avec une scène éditoriale qui n'ajoute aucun fait produit",
+  "placement": "hero",
+  "aspect_ratio": "3:2",
+  "prompt": "Editorial photograph of a generic unbranded e-paper writing tablet with stylus in a calm real-world work setting, natural daylight, premium magazine aesthetic, subtle neutral palette, no logos, no readable text, no identifiable commercial product, no fake interface",
+  "negative_constraints": [
+    "no logos",
+    "no readable text",
+    "no fake UI",
+    "no recognizable branded device",
+    "no product specification claims"
   ],
-  "edges": []
+  "output": "assets/guides/example/hero.webp",
+  "alt": "Tablette à encre électronique générique et stylet dans un environnement de travail sobre."
 }
