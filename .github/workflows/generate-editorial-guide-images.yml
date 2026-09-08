@@ -1,0 +1,141 @@
+name: Generate editorial guide images
+
+on:
+  push:
+    branches:
+      - add-editorial-image-api-workflow
+    paths:
+      - 'tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py'
+      - 'tools/guide-visual-assets-workflow/SKILL.md'
+      - 'tools/guide-visual-assets-workflow/README.md'
+      - 'tools/guide-visual-assets-workflow/references/asset-spec-template.json'
+      - '.github/workflows/generate-editorial-guide-images.yml'
+  workflow_dispatch:
+    inputs:
+      slug:
+        description: 'Guide slug to generate, or all'
+        required: true
+        default: 'all'
+        type: string
+      quality:
+        description: 'Image quality'
+        required: true
+        default: 'medium'
+        type: choice
+        options:
+          - low
+          - medium
+          - high
+      overwrite:
+        description: 'Regenerate an existing editorial image'
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  validate-generator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile generator
+        run: python -m py_compile tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py
+      - name: Dry-run editorial routing
+        run: python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py --all --dry-run
+
+  generate:
+    if: github.event_name == 'workflow_dispatch'
+    needs: validate-generator
+    runs-on: ubuntu-latest
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_IMAGE_MODEL: gpt-image-2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Check API key availability
+        id: api_key
+        shell: bash
+        run: |
+          if [ -z "$OPENAI_API_KEY" ]; then
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::OPENAI_API_KEY is not configured. Generation is skipped; validation remains green."
+          else
+            echo "available=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate selected editorial images
+        if: steps.api_key.outputs.available == 'true'
+        shell: bash
+        env:
+          SLUG: ${{ inputs.slug }}
+          QUALITY: ${{ inputs.quality }}
+          OVERWRITE: ${{ inputs.overwrite }}
+        run: |
+          args=(--quality "$QUALITY")
+          if [ "$OVERWRITE" = "true" ]; then
+            args+=(--overwrite)
+          fi
+          if [ "$SLUG" = "all" ]; then
+            python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py --all "${args[@]}"
+          else
+            manifest=".content/visuals/${SLUG}.json"
+            test -f "$manifest" || { echo "Unknown guide manifest: $manifest"; exit 1; }
+            python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py "$manifest" "${args[@]}"
+          fi
+
+      - name: Apply generated editorial images
+        if: steps.api_key.outputs.available == 'true'
+        shell: bash
+        env:
+          SLUG: ${{ inputs.slug }}
+        run: |
+          if [ "$SLUG" = "all" ]; then
+            python - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          manifests = []
+          for path in sorted(Path('.content/visuals').glob('*.json')):
+              spec = json.loads(path.read_text(encoding='utf-8'))
+              if spec.get('asset_mode') == 'editorial_image':
+                  manifests.append(str(path))
+          if manifests:
+              subprocess.run([sys.executable, 'apply_guide_visuals.py', *manifests], check=True)
+          else:
+              print('No editorial_image manifests to apply.')
+          PY
+          else
+            python apply_guide_visuals.py ".content/visuals/${SLUG}.json"
+          fi
+
+      - name: Validate guide visual routing
+        if: steps.api_key.outputs.available == 'true'
+        run: python validate_guide_visuals.py
+
+      - name: Commit generated images and page integration
+        if: steps.api_key.outputs.available == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/guides/ guides/ .content/visuals/
+          if git diff --cached --quiet; then
+            echo "No generated editorial image changes"
+          else
+            git commit -m "visual: generate editorial guide images"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
