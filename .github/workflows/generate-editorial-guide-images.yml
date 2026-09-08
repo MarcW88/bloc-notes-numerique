@@ -5,7 +5,12 @@ on:
     branches:
       - add-editorial-image-api-workflow
     paths:
+      - 'guide_visual_overrides.py'
+      - 'build_guide_visual_manifests.py'
+      - 'apply_guide_visuals.py'
+      - 'validate_guide_visuals.py'
       - 'tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py'
+      - 'tools/guide-visual-assets-workflow/scripts/validate_visual_assets.py'
       - 'tools/guide-visual-assets-workflow/SKILL.md'
       - 'tools/guide-visual-assets-workflow/README.md'
       - 'tools/guide-visual-assets-workflow/references/asset-spec-template.json'
@@ -45,7 +50,19 @@ jobs:
           python-version: '3.12'
       - name: Compile generator
         run: python -m py_compile tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py
-      - name: Dry-run editorial routing
+      - name: Build routed manifests
+        run: python build_guide_visual_manifests.py
+      - name: Validate manifests including pending editorial images
+        shell: bash
+        run: |
+          for manifest in .content/visuals/*.json; do
+            python tools/guide-visual-assets-workflow/scripts/validate_visual_assets.py "$manifest"
+          done
+      - name: Apply pending routing without requiring image assets
+        run: python apply_guide_visuals.py
+      - name: Validate complete guide routing
+        run: python validate_guide_visuals.py
+      - name: Dry-run editorial generation plan
         run: python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py --all --dry-run
 
   generate:
@@ -63,6 +80,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Build routed manifests
+        run: python build_guide_visual_manifests.py
 
       - name: Check API key availability
         id: api_key
