@@ -881,10 +881,10 @@ GUIDES = [
     ("/guides/choisir-bloc-notes-numerique/", "Comment choisir son bloc-notes numérique selon son usage ?", "Choisissez un bloc-notes numérique selon vos documents, vos exports, votre usage du stylet, la taille d’écran et le coût total des accessoires à prévoir."),
     ("/guides/liseuse-ou-bloc-notes-numerique/", "Liseuse ou bloc-notes numérique : quelles différences ?", "Comparez liseuse et bloc-notes numérique selon la lecture, l’écriture au stylet, les PDF, le format de l’appareil et les possibilités d’export de notes."),
     ("/guides/tablette-classique-ou-tablette-e-ink/", "Tablette classique ou tablette E Ink : laquelle choisir ?", "Comparez tablette classique et tablette E Ink selon l’écriture, la lecture, la couleur, les applications, la vidéo et les contraintes d’export de fichiers."),
-    ("/guides/taille-ecran-bloc-notes-numerique/", "Quelle taille d'écran pour un bloc-notes numérique ?", "A5, A4, 10 ou 13 pouces : notre guide pour choisir le bon format selon votre usage."),
-    ("/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/", "Bloc-notes numérique couleur ou noir et blanc ?", "Faut-il investir dans un écran couleur E Ink ? Notre analyse objective."),
-    ("/guides/bloc-notes-numerique-avec-ou-sans-abonnement/", "Bloc-notes numérique avec ou sans abonnement ?", "Les abonnements des tablettes E Ink valent-ils vraiment le coup ? Notre analyse."),
-    ("/guides/prix-bloc-notes-numerique/", "Prix des bloc-notes numériques — Quel budget prévoir ?", "Combien coûte un bon bloc-notes numérique ? Budget d'entrée, moyen et premium."),
+    ("/guides/taille-ecran-bloc-notes-numerique/", "Quelle taille d’écran pour un bloc-notes numérique ?", "Comparez les formats compacts, 10 pouces et grands écrans selon vos notes, vos PDF, vos déplacements et la surface réellement disponible pour bien écrire."),
+    ("/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/", "Bloc-notes numérique couleur ou noir et blanc : le choix", "Choisissez entre écran E Ink couleur et noir et blanc selon vos documents, vos codes visuels, le contraste attendu et votre usage quotidien du stylet."),
+    ("/guides/bloc-notes-numerique-avec-ou-sans-abonnement/", "Bloc-notes numérique avec ou sans abonnement : choisir", "Identifiez les fonctions disponibles sans abonnement, les services payants, les limites du cloud et le coût récurrent avant de choisir votre appareil."),
+    ("/guides/prix-bloc-notes-numerique/", "Prix d’un bloc-notes numérique : quel budget prévoir ?", "Calculez le prix réel d’un bloc-notes numérique avec le stylet, la protection, les accessoires, les services éventuels et la durée d’utilisation prévue."),
     ("/guides/tablette-e-ink/", "Comprendre la technologie E Ink", "Qu'est-ce qu'une tablette E Ink ? Fonctionnement, avantages et limites expliqués simplement."),
     ("/guides/encre-electronique-fonctionnement/", "Comment fonctionne l'encre électronique ?", "Le principe de l'encre électronique expliqué : microcapsules, bistabilité et consommation énergétique."),
     ("/guides/latence-ecriture/", "Latence d'écriture sur tablette E Ink — Ce qu'il faut savoir", "Qu'est-ce que la latence d'écriture et comment impacte-t-elle votre expérience ?"),
@@ -905,6 +905,152 @@ GUIDES = [
 ]
 
 GUIDE_CONTENT = {
+    "/guides/taille-ecran-bloc-notes-numerique/": """
+      <p class="article-answer"><strong>Un écran d’environ 10 pouces offre le compromis le plus courant pour écrire et annoter des PDF.</strong> Un format proche de 7 pouces se transporte mieux, tandis qu’un écran de 11 à 13 pouces donne plus d’espace aux grands documents. La bonne taille dépend toutefois de la page affichée, du poids et de l’encombrement acceptables.</p>
+
+      <h2 id="mesure">La diagonale ne suffit pas</h2>
+      <p>La taille annoncée mesure l’écran en diagonale. Elle ne décrit ni ses proportions, ni les bordures, ni l’espace occupé par l’interface. Deux appareils ayant une diagonale proche peuvent donc afficher un document différemment.</p>
+      <p>Pour comparer, ouvrez un document représentatif et regardez la largeur de texte obtenue à un niveau de zoom lisible. Cette vérification est plus utile qu’une comparaison abstraite entre pouces et formats de papier.</p>
+
+      <h2 id="formats">Quel format pour quel usage ?</h2>
+      <div class="table-wrapper"><table class="comp-table">
+        <thead><tr><th>Taille indicative</th><th>Usage cohérent</th><th>Compromis</th></tr></thead>
+        <tbody>
+          <tr><td>7 à 8 pouces</td><td>notes brèves, listes, journal et mobilité</td><td>peu d’espace pour les PDF complexes</td></tr>
+          <tr><td>Environ 10 pouces</td><td>réunions, cours, carnets et PDF courants</td><td>lecture de documents A4 parfois zoomée</td></tr>
+          <tr><td>11 à 13 pouces</td><td>articles, partitions, plans et travail proche de l’A4</td><td>poids, prix et transport plus contraignants</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2 id="reperes">Trois repères concrets</h2>
+      <p>Les gammes actuelles illustrent l’écart entre les formats. reMarkable indique 7,3 pouces pour le Paper Pro Move, 10,3 pouces pour le reMarkable 2 et 11,8 pouces pour le Paper Pro. Ces exemples servent de repères de taille, pas de recommandation de modèle.</p>
+      <p>Un petit écran peut convenir à une écriture linéaire, mais devient vite étroit pour afficher deux zones, une grande marge d’annotation ou une page de manuel. À l’inverse, une grande surface perd son intérêt si l’appareil reste à la maison parce qu’il est trop encombrant.</p>
+
+      <h2 id="test">Testez votre document avant l’achat</h2>
+      <ol>
+        <li>Choisissez le PDF ou le modèle de page que vous utilisez le plus souvent.</li>
+        <li>Relevez ses proportions et la taille minimale de texte encore confortable pour vous.</li>
+        <li>Vérifiez sur une démonstration ou dans le manuel du produit si la page exige un zoom fréquent.</li>
+        <li>Ajoutez l’étui et le stylet lorsque vous comparez poids et dimensions de transport.</li>
+      </ol>
+
+      <h2 id="decision">La règle de décision</h2>
+      <p>Choisissez le plus petit écran qui affiche correctement votre document principal. Vous évitez ainsi de payer et de transporter une surface inutilisée. Si vous annotez régulièrement des PDF proches de l’A4, le grand format mérite d’être examiné ; pour des carnets et des réunions, 10 pouces reste un point de départ plus équilibré.</p>
+      <p>Vous pouvez ensuite vérifier les autres critères dans le guide pour <a href="/guides/choisir-bloc-notes-numerique/">choisir un bloc-notes numérique</a> et comparer <a href="/guides/prix-bloc-notes-numerique/">le budget total</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2><ul class="source-list">
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro-Move" rel="noopener noreferrer">reMarkable : dimensions du Paper Pro Move</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable : dimensions du reMarkable 2</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro" rel="noopener noreferrer">reMarkable : dimensions du Paper Pro</a></li>
+      </ul>
+    """,
+    "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/": """
+      <p class="article-answer"><strong>Choisissez la couleur si elle transporte une information que vous utilisez vraiment : légende, correction, priorité ou catégorie.</strong> Pour des notes textuelles, des romans et des documents conçus en noir et blanc, un écran monochrome reste souvent suffisant.</p>
+
+      <h2 id="difference">La couleur E Ink n’est pas celle d’une tablette classique</h2>
+      <p>Un écran E Ink couleur vise la lecture et l’annotation de contenus relativement statiques. Il ne faut pas attendre le même rendu qu’un écran LCD ou OLED destiné aux photos et à la vidéo. La technologie Kaleido 3 annoncée par E Ink affiche par exemple une définition différente en noir et blanc et en couleur : jusqu’à 300 ppp pour le premier, 150 ppp pour la seconde.</p>
+      <p>D’autres technologies couleur existent. Le reMarkable Paper Pro emploie un écran couleur de 11,8 pouces, tandis que le reMarkable 2 reste monochrome. Il faut donc comparer le rendu du modèle précis, pas attribuer les mêmes propriétés à tous les écrans E Ink.</p>
+
+      <h2 id="usages">Quand la couleur apporte quelque chose</h2>
+      <div class="table-wrapper"><table class="comp-table">
+        <thead><tr><th>Document</th><th>Couleur utile si…</th><th>Noir et blanc suffisant si…</th></tr></thead>
+        <tbody>
+          <tr><td>Cours ou rapport</td><td>les surlignages indiquent une priorité</td><td>la structure repose sur les titres et annotations</td></tr>
+          <tr><td>Schéma ou carte</td><td>la légende distingue des catégories</td><td>formes et textures restent compréhensibles</td></tr>
+          <tr><td>Agenda</td><td>chaque couleur correspond à un type d’activité</td><td>une seule hiérarchie visuelle suffit</td></tr>
+          <tr><td>Photo ou création</td><td>la couleur sert seulement de repère</td><td>la fidélité du rendu est indispensable : préférez alors LCD/OLED</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2 id="test">Faites le test en niveaux de gris</h2>
+      <p>Prenez trois documents habituels et convertissez-les en niveaux de gris. Si une légende disparaît, si deux courbes deviennent impossibles à distinguer ou si vos corrections perdent leur fonction, la couleur a une valeur concrète. Si le document reste parfaitement exploitable, elle constitue surtout une préférence.</p>
+      <p>Vérifiez ensuite l’éclairage, la définition annoncée pour la couleur et les options d’export. Une annotation colorée peut rester utile dans le fichier exporté, même si son affichage sur l’appareil paraît plus discret.</p>
+
+      <h2 id="decision">Choisir sans surpayer une fonction décorative</h2>
+      <p>La couleur se justifie lorsque vous pouvez nommer le code visuel qu’elle préserve. Sinon, comparez d’abord le contraste, la taille, le logiciel et le prix total. Pour un besoin de vidéo, de photographie ou de création graphique fidèle, consultez plutôt la comparaison entre <a href="/guides/tablette-classique-ou-tablette-e-ink/">tablette classique et tablette E Ink</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2><ul class="source-list">
+        <li><a href="https://www.eink.com/brand/detail/Kaleido3" rel="noopener noreferrer">E Ink : caractéristiques de Kaleido 3</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro" rel="noopener noreferrer">reMarkable : écran couleur du Paper Pro</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable : écran monochrome du reMarkable 2</a></li>
+      </ul>
+    """,
+    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/": """
+      <p class="article-answer"><strong>Un abonnement n’est acceptable que s’il finance une fonction dont vous avez besoin chaque mois.</strong> Avant l’achat, vérifiez que l’écriture, l’accès local aux notes, l’export et la sauvegarde minimale restent possibles sans paiement récurrent.</p>
+
+      <h2 id="types">De quel abonnement parle-t-on ?</h2>
+      <p>Il faut distinguer le service lié à l’appareil d’un abonnement de livres ou d’un forfait mobile. Pour un bloc-notes numérique, le coût récurrent peut couvrir davantage de stockage cloud, des fonctions dans les applications, une conversion avancée ou une protection supplémentaire. Il ne devrait pas être confondu avec Kindle Unlimited, Audible ou une carte SIM.</p>
+
+      <h2 id="verifier">Les fonctions à vérifier sans formule payante</h2>
+      <div class="table-wrapper"><table class="comp-table">
+        <thead><tr><th>Fonction</th><th>Question à poser</th><th>Risque si elle dépend du paiement</th></tr></thead>
+        <tbody>
+          <tr><td>Accès aux notes</td><td>restent-elles lisibles et modifiables sur l’appareil ?</td><td>dépendance pour un usage de base</td></tr>
+          <tr><td>Export</td><td>peut-on récupérer PDF, image ou texte ?</td><td>données difficiles à déplacer</td></tr>
+          <tr><td>Synchronisation</td><td>quels appareils, délais et quotas sont inclus ?</td><td>historique incomplet ou transfert manuel</td></tr>
+          <tr><td>Conversion</td><td>l’écriture manuscrite vers le texte est-elle incluse ?</td><td>coût récurrent pour une fonction de travail</td></tr>
+          <tr><td>Sauvegarde</td><td>existe-t-il une copie locale ou un export de secours ?</td><td>perte d’accès en cas de changement d’offre</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2 id="exemple">L’exemple de reMarkable Connect</h2>
+      <p>reMarkable documente séparément les fonctions de Connect et celles disponibles sans abonnement. Sans Connect, l’appareil conserve notamment des intégrations avec Google Drive, Dropbox et OneDrive, tandis que l’offre payante ajoute des services tels que le stockage cloud illimité et des fonctions dans les applications reMarkable. Cette répartition peut évoluer ; consultez les deux pages officielles le jour de l’achat.</p>
+
+      <h2 id="calcul">Calculez le coût sur votre durée d’usage</h2>
+      <p>Multipliez le tarif mensuel par le nombre de mois pendant lesquels vous pensez garder l’appareil. Ajoutez ce montant au prix du matériel et des accessoires. Le tarif Connect affiché sur la boutique reMarkable lors de notre consultation était de 3,99 € par mois après la période d’essai, soit 143,64 € sur trois ans si le prix ne change pas.</p>
+      <p>Ce calcul n’est pas une prévision : reMarkable a déjà annoncé une modification de tarif en mars 2026. Il montre seulement pourquoi un faible montant mensuel doit apparaître dans la comparaison initiale.</p>
+
+      <h2 id="decision">La règle de décision</h2>
+      <p>Simulez une semaine de travail sans abonnement. Si une tâche essentielle devient impossible, comparez le coût total ou choisissez un écosystème différent. Si seules des fonctions de confort disparaissent, vous pourrez décider après l’achat sans rendre vos notes dépendantes du paiement.</p>
+      <p>Poursuivez avec les guides sur le <a href="/guides/prix-bloc-notes-numerique/">prix total</a>, l’<a href="/guides/exporter-notes/">export des notes</a> et la <a href="/guides/synchroniser-notes-cloud/">synchronisation cloud</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2><ul class="source-list">
+        <li><a href="https://support.remarkable.com/s/article/About-Connect-Subscription" rel="noopener noreferrer">reMarkable : fonctions de Connect</a></li>
+        <li><a href="https://support.remarkable.com/s/article/Using-reMarkable-without-a-subscription" rel="noopener noreferrer">reMarkable : utilisation sans abonnement</a></li>
+        <li><a href="https://support.remarkable.com/s/article/Changes-to-Connect-subscription-pricing" rel="noopener noreferrer">reMarkable : modification du tarif Connect en 2026</a></li>
+        <li><a href="https://remarkable.com/shop" rel="noopener noreferrer">reMarkable : tarif affiché lors de la consultation du 8 septembre 2026</a></li>
+      </ul>
+    """,
+    "/guides/prix-bloc-notes-numerique/": """
+      <p class="article-answer"><strong>Le prix réel d’un bloc-notes numérique comprend l’appareil, le stylet nécessaire, la protection, les consommables et les services payants.</strong> Comparez un panier prêt à l’emploi sur la durée prévue plutôt que le prix d’appel affiché seul.</p>
+
+      <h2 id="formule">La formule du budget complet</h2>
+      <p>Votre coût total correspond au prix de l’appareil et des accessoires indispensables, auquel s’ajoutent les abonnements sur la durée d’utilisation. Déduisez uniquement les éléments réellement inclus dans le coffret. Un stylet ou un étui offert dans une configuration ne le sera pas nécessairement dans une autre.</p>
+
+      <div class="table-wrapper"><table class="comp-table">
+        <thead><tr><th>Poste</th><th>À vérifier</th><th>Quand il devient indispensable</th></tr></thead>
+        <tbody>
+          <tr><td>Appareil</td><td>stockage, taille et version exacte</td><td>toujours</td></tr>
+          <tr><td>Stylet</td><td>inclus, gomme, boutons et recharge</td><td>prise de notes manuscrites</td></tr>
+          <tr><td>Protection</td><td>étui officiel ou compatible</td><td>transport régulier</td></tr>
+          <tr><td>Pointes</td><td>nombre fourni et prix du lot</td><td>usage intensif selon le stylet</td></tr>
+          <tr><td>Abonnement</td><td>fonction payante, tarif et essai</td><td>seulement si la fonction est nécessaire</td></tr>
+          <tr><td>Clavier</td><td>compatibilité et disposition</td><td>saisie fréquente de texte tapé</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2 id="exemples">Deux prix officiels pour cadrer le calcul</h2>
+      <p>Le 8 septembre 2026, la boutique Kobo France affichait le Kobo Elipsa 2E à 399,99 €. La boutique reMarkable affichait Connect à 3,99 € par mois après essai. Ces montants ne constituent ni une moyenne du marché, ni un prix garanti : ils montrent la différence entre achat ponctuel et coût récurrent.</p>
+      <p>Les offres, packs et générations changent rapidement. Pour cette raison, une page de guide ne doit pas figer une longue liste de tarifs. Les réductions datées appartiennent à la rubrique <a href="/bons-plans/bloc-notes-numerique/">bons plans</a>.</p>
+
+      <h2 id="comparer">Comparez des paniers équivalents</h2>
+      <ol>
+        <li>Choisissez la capacité et la taille réellement nécessaires.</li>
+        <li>Ajoutez un stylet offrant les fonctions dont vous avez besoin.</li>
+        <li>Ajoutez la protection si l’appareil sera transporté.</li>
+        <li>Calculez les services payants sur deux ou trois ans.</li>
+        <li>Vérifiez enfin la garantie, le retour et le coût d’une pointe ou d’un stylet de remplacement.</li>
+      </ol>
+
+      <h2 id="economiser">Économiser sans déplacer le problème</h2>
+      <p>Un appareil moins cher peut coûter davantage si le stylet, l’étui ou une fonction logicielle essentielle sont vendus séparément. À l’inverse, un pack complet n’est pas avantageux si vous n’utilisez pas ses accessoires. Le bon budget est celui du matériel nécessaire à votre scénario, sans fonctions décoratives.</p>
+      <p>Avant la comparaison finale, vérifiez la <a href="/guides/taille-ecran-bloc-notes-numerique/">taille d’écran utile</a> et la présence éventuelle d’un <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">abonnement</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2><ul class="source-list">
+        <li><a href="https://fr.kobobooks.com/collections/ereaders" rel="noopener noreferrer">Kobo France : prix affiché de l’Elipsa 2E le 8 septembre 2026</a></li>
+        <li><a href="https://remarkable.com/shop" rel="noopener noreferrer">reMarkable : tarif Connect affiché le 8 septembre 2026</a></li>
+      </ul>
+    """,
     "/guides/choisir-bloc-notes-numerique/": """
       <p class="article-answer"><strong>Pour choisir un bloc-notes numérique, partez de votre flux de travail.</strong> Repérez les documents que vous utilisez, leur destination après annotation et les services cloud indispensables. Vous pourrez ensuite comparer la taille de l’écran, le stylet et l’autonomie sans vous laisser guider par une fiche technique trop longue.</p>
 
