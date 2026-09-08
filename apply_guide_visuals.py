@@ -55,8 +55,12 @@ def apply(spec: dict) -> None:
     if 'name="robots" content="noindex,follow"' not in html:
         raise SystemExit(f"{page}: noindex,follow missing")
 
-    visual_id = re.escape(spec["id"])
-    block_re = re.compile(rf"\s*<!-- visual:start:{visual_id} -->.*?<!-- visual:end:{visual_id} -->\s*", re.S)
+    # Remove the previously injected guide visual, even when its type/id changed.
+    # This prevents an old table-like visual from surviving beside its replacement.
+    block_re = re.compile(
+        r"\s*<!-- visual:start:[^>]+ -->.*?<!-- visual:end:[^>]+ -->\s*",
+        re.S,
+    )
     html = block_re.sub("\n", html)
 
     if spec.get("after_section_id"):
