@@ -4,6 +4,8 @@
   "visual_goal": "contextualiser le sujet avec une scène éditoriale qui n'ajoute aucun fait produit",
   "placement": "hero",
   "aspect_ratio": "3:2",
+  "model": "gpt-image-2",
+  "quality": "medium",
   "prompt": "Editorial photograph of a generic unbranded e-paper writing tablet with stylus in a calm real-world work setting, natural daylight, premium magazine aesthetic, subtle neutral palette, no logos, no readable text, no identifiable commercial product, no fake interface",
   "negative_constraints": [
     "no logos",
