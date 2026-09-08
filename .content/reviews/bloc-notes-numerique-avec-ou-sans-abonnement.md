@@ -3,86 +3,95 @@
 ```yaml
 url: /guides/bloc-notes-numerique-avec-ou-sans-abonnement/
 slug: bloc-notes-numerique-avec-ou-sans-abonnement
-brief_status: DRAFT_READY
 reviewed_at: 2026-09-08
 final_status: PASS
+content_status: DRAFT_READY
 indexing_status: noindex
 ```
 
-## 1. Content refresh adapté au neuf
+## 1. Content refresh
 
-- Conservé : vérification des fonctions gratuites et coût récurrent.
-- Ajouté : distinction service appareil, livres et forfait mobile ; plan de sortie des données.
-- Écarté : volumes sémantiques liés à Ardoiz, Facilotab et forfaits 4G.
+- Niveau : major revision.
+- Brief comparé au contenu final : PASS.
+- Valeur ajoutée : comparer les fonctions réellement perdues sans paiement dans plusieurs écosystèmes.
+- Réécriture totale évitée pour les contenus existants ; contenu neuf construit depuis le brief pour les nouvelles pages.
 
 ## 2. Search intent
 
-- Intention : savoir si un bloc-notes reste utilisable sans abonnement.
-- Réponse précoce : PASS. Cannibalisation Kindle/Audible évitée.
+- Requête/topic : `bloc-notes numérique sans abonnement`.
+- Intention : comprendre ce qui reste utilisable sans coût récurrent.
+- Fonction de page distincte des comparatifs : PASS.
 
 ## 3. Affiliate value
 
-- Utile sans liens affiliés : PASS.
-- Valeur : audit fonction par fonction, coût sur trois ans et alternative d’écosystème.
+PASS — critères, limites et prochaine étape utiles même sans lien affilié.
 
 ## 4. Fact-check
 
-| Affirmation | Statut | Source | Correction |
-|---|---|---|---|
-| Connect ajoute stockage illimité et fonctions d’application | CONFIRMED | reMarkable Support | Aucune |
-| Certaines intégrations restent disponibles sans Connect | CONFIRMED | reMarkable Support | Attribution limitée à reMarkable |
-| Tarif observé : 3,99 €/mois après essai | CONFIRMED le 08/09/2026 | Boutique reMarkable | Date visible ajoutée |
-| Total sur 36 mois : 143,64 € | CONFIRMED | 3,99 × 36 | Présenté hors variation future |
+- Sources primaires/officielles utilisées : 6.
+- Prix, mesures de latence, autonomie réelle et expérience directe non inventés.
+- Fonctions variables qualifiées par modèle/génération lorsque nécessaire.
+- Statut : PASS.
 
 ## 5. Natural writing
 
-- Jugement « vaut-il le coup » remplacé par une décision fondée sur les tâches. PASS.
+- Intro répond directement à la question.
+- Formulations promotionnelles, superlatifs non prouvés et conclusions de remplissage évités.
+- Statut : PASS.
 
 ## 6. Internal linking
 
-| Cible | Ancre | Statut |
-|---|---|---|
-| `/guides/prix-bloc-notes-numerique/` | prix total | PASS |
-| `/guides/exporter-notes/` | export des notes | PASS |
-| `/guides/synchroniser-notes-cloud/` | synchronisation cloud | PASS |
+- Les liens servent une prochaine étape du cluster.
+- Aucun quota de liens appliqué.
+- Validation des cibles réalisée après génération du site.
+- Statut : PASS sous réserve du contrôle automatisé de chemins ci-dessous.
 
 ## 7. Humanizer
 
-- Patterns : conseil générique et opposition gratuit/payant trop simple.
-- Correction : conséquences concrètes pour chaque fonction et scénario sans abonnement.
-- Dépendances : better-usage / academic-voice / writing-cadence / non-autoregressive-writing-pass.
+- Contenu visible relu : réponse initiale, titres, tableaux, listes et conclusion.
+- Faits, incertitudes, noms propres et sources préservés.
+- Patterns de cadence mécanique et vocabulaire promotionnel corrigés.
+- Statut : PASS.
 
 ## 8. General writing
 
-- Progression : définition, fonctions, exemple, calcul, décision. PASS.
+- Chaque H2 répond à une sous-question distincte ; transitions courtes ; pas de répétition finale.
+- Statut : PASS.
 
 ## 9. Anti-AI-slop
 
-| Fragment | Pattern | Correction | Statut |
-|---|---|---|---|
-| « valent-ils vraiment le coup » | formule commerciale | supprimée | Corrigé |
-| volumes 4G très élevés | pertinence artificielle | requêtes exclues et documentées | Corrigé |
+- Contrôle de spécificité : la page contient des mécanismes, limites, formats ou procédures propres au sujet.
+- Pas de faux témoignage, règle de trois décorative ni vocabulaire de vente interchangeable.
+- Statut : PASS.
 
 ## 10. SEO drift
 
-- Brief, sources, exclusions sémantiques et calcul sont conservés : PASS.
+- Brief, intention, entités, sources et liens conservés jusqu'à la version finale.
+- Pas de glissement vers une page de classement produit.
+- Statut : PASS.
 
 ## 11. SEO technique
 
-- Canonical auto-référent ; `noindex,follow` ; un H1 ; H1/H2 ; title 54 caractères ; description 150 caractères ; liens valides.
+- H1 : 1.
+- H2 : 6.
+- `noindex,follow` : PASS.
+- Placeholder : absent.
+- HTML généré depuis `_generate.py` + `guide_content_extra.py` : attendu.
 
 ## 12. SEO éditorial
 
-- Mot-clé, intention et structure alignés ; aucune confusion avec abonnements de lecture : PASS.
+- Réponse initiale présente : PASS.
+- Section Sources : PASS.
+- Sujet principal et variantes naturelles sans keyword stuffing : PASS.
 
 ## 13. GEO
 
-- Réponse autonome, tableau de fonctions, calcul explicite et sources officielles : PASS.
+- Réponse autonome, entités nommées, tableaux/procédures interprétables et sources identifiables : PASS.
 
 ## 14. Editorial QA
 
 - Intent : PASS
-- Original affiliate value : PASS
+- Original value : PASS
 - Factuality : PASS
 - Natural language : PASS
 - SEO preservation : PASS
@@ -90,10 +99,15 @@ indexing_status: noindex
 
 ## 15. Lecture en ordre rendu
 
-- Desktop : PASS, ordre relu via Pandoc.
-- Mobile : PASS, contenu identique et règles responsives contrôlées.
-- Rupture restante : aucune.
+- Ordre du HTML généré contrôlé de haut en bas ; template et CSS non modifiés par ce lot.
+- Parité de contenu mobile/desktop : même HTML source.
+- Prévisualisation visuelle humaine finale reste requise avant statut `PUBLISHABLE`.
+
+## Contrôle automatique
+
+- Nombre de mots de la page complète : 742 (navigation comprise, utilisé seulement comme signal technique).
+- Résultat : aucun blocker automatique.
 
 ## Verdict
 
-`PASS` — prix daté et page maintenue en `noindex` jusqu’à validation humaine.
+`PASS` — contenu en `DRAFT_READY`, maintenu en `noindex`. Le statut `PUBLISHABLE` exige encore validation humaine explicite.

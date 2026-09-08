@@ -1,0 +1,97 @@
+name: Regenerate guide cluster
+
+on:
+  push:
+    branches:
+      - refresh-all-guides
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: refresh-all-guides
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wire guide content into generator
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('_generate.py')
+          text = path.read_text(encoding='utf-8')
+          marker = '}\n\nfor path, title, desc in GUIDES:'
+          replacement = '}\n\nfrom guide_content_extra import GUIDE_CONTENT_EXTRA\nGUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)\n\nfor path, title, desc in GUIDES:'
+          if 'GUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)' not in text:
+              if marker not in text:
+                  raise SystemExit('Could not find GUIDE_CONTENT insertion point')
+              text = text.replace(marker, replacement, 1)
+              path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Regenerate site pages
+        run: python _generate.py
+
+      - name: Validate internal links in guide bodies
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          root = Path('.')
+          failures=[]
+          for page in sorted((root/'guides').glob('*/index.html')):
+              html=page.read_text(encoding='utf-8')
+              if '<!-- Contenu à rédiger -->' in html:
+                  continue
+              for href in re.findall(r'href="(/[^"]+)"', html):
+                  if href.startswith('//') or '#' in href or '?' in href:
+                      continue
+                  target=root/href.lstrip('/')
+                  if target.is_dir():
+                      target=target/'index.html'
+                  if not target.exists():
+                      failures.append(f'{page}: broken internal link {href}')
+          if failures:
+              print('\n'.join(failures))
+              raise SystemExit(1)
+          print('PASS: contextual internal targets exist')
+          PY
+
+      - name: Generate briefs and QA reports
+        run: python generate_guide_metadata.py
+
+      - name: Verify all guide pages are still noindex
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          failed=[]
+          for page in Path('guides').glob('*/index.html'):
+              html=page.read_text(encoding='utf-8')
+              if 'name="robots" content="noindex,follow"' not in html:
+                  failed.append(str(page))
+          if failed:
+              raise SystemExit('Missing noindex: ' + ', '.join(failed))
+          print('PASS: all guide pages remain noindex,follow')
+          PY
+
+      - name: Commit generated guide batch
+        run: |
+          git config user.name "Marc Williame"
+          git config user.email "146358493+MarcW88@users.noreply.github.com"
+          git add _generate.py guide_content_extra.py guides/ .content/briefs/ .content/reviews/
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit"
+          else
+            git commit -m "content: regenerate and validate full guide cluster"
+            git push origin refresh-all-guides
+          fi

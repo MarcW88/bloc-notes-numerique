@@ -1,29 +1,56 @@
 ---
 url: /guides/liseuse-ou-bloc-notes-numerique/
 slug: liseuse-ou-bloc-notes-numerique
-status: HUMAN_APPROVED
+status: DRAFT_READY
 guide_type: choice
 primary_keyword: liseuse ou bloc-notes numérique
-search_intent: distinguer appareil de lecture et appareil de prise de notes
-audience: lecteur hésitant entre une liseuse, un modèle hybride et une tablette de notes
-business_role: orienter vers le bon univers produit sans classement
+search_intent: distinguer lecture, hybride lecture-écriture et bloc-notes de travail
+audience: lecteur hésitant entre liseuse avec stylet et tablette de notes
 last_researched: 2026-09-08
+refresh_level: major revision
 ---
 
 ## Décision éditoriale
 
-- Question centrale : quelle activité doit déterminer le type d’appareil ?
-- Réponse attendue : lecture dominante = liseuse ; écriture et PDF = bloc-notes ; usage équilibré = hybride à vérifier sur le flux complet.
-- Valeur propre : dépasser l’opposition simpliste par une analyse du logiciel et des exports.
-- Hors périmètre : comparaison de modèles précis.
+- Question centrale : distinguer lecture, hybride lecture-écriture et bloc-notes de travail.
+- Valeur propre : faire décider sur un cycle complet de document et d'export plutôt que sur la seule présence d'un stylet.
+- Traitement : Contenu existant enrichi sans full rewrite.
+- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
 
-## Analyse sémantique et SERP
+## Demande, intention et SERP
 
-Le fichier est dominé par des termes génériques liés aux liseuses, mais aucune variante volumique propre ne justifie de transformer cette page en guide d’achat de liseuses. Les résultats français répondent surtout à « liseuse ou tablette » ; l’angle « liseuse ou bloc-notes » permet de traiter spécifiquement les hybrides avec stylet.
+La page doit satisfaire une intention dominante de type `choice`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
 
-## Sources et risques
+## Entités à expliciter
 
-- Kobo, annotations et formats : https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo
-- Kobo, carnets : https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook
-- Amazon, Kindle Scribe : https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx
-- Les frontières produit évoluent ; les fonctions hybrides doivent être revérifiées. `noindex,follow` conservé.
+Kindle Scribe, Kobo Elipsa, EPUB, PDF, carnet, export.
+
+## Registre de preuves
+
+- Kobo annotations: https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo
+- Kobo carnets: https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet
+- Amazon import cloud: https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN
+- Amazon partage Scribe: https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs
+
+Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
+
+## Architecture validée
+
+- Réponse autonome dans les premières phrases.
+- H2 : différence logicielle;  comparaison liseuse/hybride/bloc-notes;  hybrides;  cycle complet;  règle de décision.
+- Tableau ou procédure uniquement lorsqu'il améliore la décision.
+- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
+- Section Sources visible.
+
+## Content refresh / différenciation
+
+- Niveau : `major revision`.
+- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
+- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
+- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+
+## Risques
+
+frontières produit évolutives ; ne pas généraliser les exports d'un format à un autre.
+
+`noindex,follow` doit rester actif jusqu'à validation humaine du lot.

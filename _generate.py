@@ -1012,43 +1012,76 @@ GUIDE_CONTENT = {
       </ul>
     """,
     "/guides/prix-bloc-notes-numerique/": """
-      <p class="article-answer"><strong>Le prix réel d’un bloc-notes numérique comprend l’appareil, le stylet nécessaire, la protection, les consommables et les services payants.</strong> Comparez un panier prêt à l’emploi sur la durée prévue plutôt que le prix d’appel affiché seul.</p>
+      <p class="article-answer"><strong>Le prix d’un bloc-notes numérique se compare comme une configuration prête à l’emploi, pas comme un appareil nu.</strong> Comptez l’appareil, le stylet nécessaire, la protection si vous le transportez, les consommables et les services payants que votre usage exige. Deux modèles affichés au même prix peuvent donc représenter des budgets très différents.</p>
 
-      <h2 id="formule">La formule du budget complet</h2>
-      <p>Votre coût total correspond au prix de l’appareil et des accessoires indispensables, auquel s’ajoutent les abonnements sur la durée d’utilisation. Déduisez uniquement les éléments réellement inclus dans le coffret. Un stylet ou un étui offert dans une configuration ne le sera pas nécessairement dans une autre.</p>
+      <h2 id="combien">Combien coûte réellement un bloc-notes numérique ?</h2>
+      <p>Il n’existe pas un prix unique qui résume le marché. Le format de l’écran, la couleur, les accessoires inclus et l’écosystème logiciel changent fortement le montant à prévoir. Pour cadrer le budget sans fabriquer une moyenne, le plus fiable consiste à partir de configurations officielles datées.</p>
 
       <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Poste</th><th>À vérifier</th><th>Quand il devient indispensable</th></tr></thead>
+        <thead><tr><th>Repère officiel au 8 septembre 2026</th><th>Prix affiché</th><th>Ce que ce prix permet de comprendre</th></tr></thead>
         <tbody>
-          <tr><td>Appareil</td><td>stockage, taille et version exacte</td><td>toujours</td></tr>
-          <tr><td>Stylet</td><td>inclus, gomme, boutons et recharge</td><td>prise de notes manuscrites</td></tr>
-          <tr><td>Protection</td><td>étui officiel ou compatible</td><td>transport régulier</td></tr>
-          <tr><td>Pointes</td><td>nombre fourni et prix du lot</td><td>usage intensif selon le stylet</td></tr>
-          <tr><td>Abonnement</td><td>fonction payante, tarif et essai</td><td>seulement si la fonction est nécessaire</td></tr>
-          <tr><td>Clavier</td><td>compatibilité et disposition</td><td>saisie fréquente de texte tapé</td></tr>
+          <tr><td>Kobo Elipsa 2E</td><td>399,99 €</td><td>un appareil 10,3 pouces peut démarrer autour de 400 €, avant d’ajouter les accessoires de transport non inclus dans le panier choisi</td></tr>
+          <tr><td>reMarkable Paper Pure</td><td>à partir de 399 €</td><td>le Marker est inclus dans le prix de départ affiché par reMarkable</td></tr>
+          <tr><td>reMarkable Paper Pro avec Marker Plus</td><td>699 €</td><td>un grand écran couleur et un stylet plus complet font monter nettement le budget</td></tr>
+          <tr><td>reMarkable Paper Pro avec Book Folio</td><td>849 €</td><td>la protection officielle peut modifier fortement le prix d’une configuration prête à transporter</td></tr>
+          <tr><td>reMarkable Paper Pro avec Type Folio</td><td>899 €</td><td>un clavier transforme le panier en outil de saisie plus polyvalent, avec un surcoût important</td></tr>
         </tbody>
       </table></div>
 
-      <h2 id="exemples">Deux prix officiels pour cadrer le calcul</h2>
-      <p>Le 8 septembre 2026, la boutique Kobo France affichait le Kobo Elipsa 2E à 399,99 €. La boutique reMarkable affichait Connect à 3,99 € par mois après essai. Ces montants ne constituent ni une moyenne du marché, ni un prix garanti : ils montrent la différence entre achat ponctuel et coût récurrent.</p>
-      <p>Les offres, packs et générations changent rapidement. Pour cette raison, une page de guide ne doit pas figer une longue liste de tarifs. Les réductions datées appartiennent à la rubrique <a href="/bons-plans/bloc-notes-numerique/">bons plans</a>.</p>
+      <p>Ces montants sont des instantanés de boutiques officielles, pas une fourchette garantie. Ils montrent surtout pourquoi il faut comparer le contenu du panier. Le Kobo Elipsa 2E SleepCover était par exemple affiché séparément à 69,99 € lors de la même vérification. Un acheteur qui veut protéger l’appareil pendant les déplacements doit donc intégrer cette dépense au lieu de comparer uniquement les 399,99 € de l’appareil.</p>
 
-      <h2 id="comparer">Comparez des paniers équivalents</h2>
+      <h2 id="formule">Les postes à intégrer dans votre budget</h2>
+      <p>Votre coût total correspond au prix du matériel réellement nécessaire, auquel s’ajoutent les coûts récurrents pendant la durée d’utilisation prévue. Un accessoire n’a pas à entrer dans le calcul s’il ne sert pas à votre scénario.</p>
+
+      <div class="table-wrapper"><table class="comp-table">
+        <thead><tr><th>Poste</th><th>À vérifier</th><th>Quand il change la décision</th></tr></thead>
+        <tbody>
+          <tr><td>Appareil</td><td>taille, version, stockage et génération exacte</td><td>toujours</td></tr>
+          <tr><td>Stylet</td><td>inclus ou non, gomme, boutons, recharge</td><td>dès que l’écriture manuscrite est centrale</td></tr>
+          <tr><td>Protection</td><td>étui officiel ou compatible, maintien du stylet</td><td>si l’appareil voyage régulièrement</td></tr>
+          <tr><td>Pointes</td><td>nombre fourni, compatibilité et prix du remplacement</td><td>pour certains stylets en usage intensif</td></tr>
+          <tr><td>Abonnement</td><td>fonction concernée, tarif mensuel ou annuel, période d’essai</td><td>si une fonction de travail dépend du service</td></tr>
+          <tr><td>Clavier</td><td>compatibilité, disposition et protection intégrée</td><td>si vous tapez fréquemment de longs textes</td></tr>
+        </tbody>
+      </table></div>
+
+      <p>La formule de comparaison reste simple : <strong>coût total = appareil + accessoires indispensables + consommables + abonnements sur la durée retenue.</strong> Cette méthode évite qu’un prix d’appel avantage artificiellement un modèle dont le stylet, l’étui ou une fonction logicielle essentielle sont facturés séparément.</p>
+
+      <h2 id="paniers">Comparez des configurations équivalentes</h2>
+      <p>Une comparaison utile part de la même tâche. Si vous cherchez un appareil pour les réunions, comparez par exemple chaque modèle avec le stylet nécessaire et une protection de transport. Si vous annotez de grands PDF au bureau, un étui peut être secondaire mais la taille d’écran devient prioritaire.</p>
+
       <ol>
-        <li>Choisissez la capacité et la taille réellement nécessaires.</li>
-        <li>Ajoutez un stylet offrant les fonctions dont vous avez besoin.</li>
-        <li>Ajoutez la protection si l’appareil sera transporté.</li>
-        <li>Calculez les services payants sur deux ou trois ans.</li>
-        <li>Vérifiez enfin la garantie, le retour et le coût d’une pointe ou d’un stylet de remplacement.</li>
+        <li>Définissez les deux ou trois tâches que l’appareil doit remplacer.</li>
+        <li>Choisissez la taille et les fonctions indispensables à ces tâches.</li>
+        <li>Ajoutez uniquement les accessoires nécessaires pour obtenir cette configuration.</li>
+        <li>Intégrez les services payants si une fonction importante en dépend.</li>
+        <li>Comparez ensuite les totaux, pas les prix d’appel.</li>
       </ol>
 
+      <p>Les bundles officiels illustrent bien l’écart possible à produit presque identique. Pour le Paper Pro, reMarkable affichait 699 € avec Marker Plus, 849 € avec Book Folio et 899 € avec Type Folio. Le bon panier dépend donc moins du nombre d’accessoires que de ceux que vous utiliserez vraiment.</p>
+
+      <h2 id="duree">Prix d’achat ou coût sur plusieurs années ?</h2>
+      <p>Un abonnement modeste peut devenir visible sur trois ou quatre ans. Sur la boutique reMarkable en zone euro consultée le 8 septembre 2026, Connect était affiché à 3,99 € par mois ou 39,90 € par an après la période d’essai. À tarif inchangé, cela représenterait 143,64 € sur trois ans en paiement mensuel, ou 119,70 € avec trois années facturées au tarif annuel.</p>
+      <p>Ce calcul n’est pas une prévision de prix. Il sert à montrer l’effet d’un coût récurrent sur le panier initial. Avant d’ajouter un abonnement, vérifiez quelles fonctions restent disponibles gratuitement et lesquelles vous utiliserez réellement. Le guide <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">bloc-notes numérique avec ou sans abonnement</a> détaille cette vérification.</p>
+
+      <h2 id="payer-plus">Quand vaut-il la peine de payer plus cher ?</h2>
+      <p>Un surcoût est défendable lorsqu’il supprime une contrainte concrète. Un grand écran peut éviter des zooms permanents sur des PDF, la couleur peut préserver des légendes indispensables, un clavier peut remplacer une partie de la saisie sur ordinateur et un logiciel plus ouvert peut être nécessaire pour une application métier.</p>
+      <p>À l’inverse, payer davantage pour une fonction rarement utilisée ne rend pas l’appareil plus adapté. Si vos notes sont surtout textuelles et que vous exportez quelques PDF, un écran couleur ou un clavier coûteux peut rester sans effet sur votre travail quotidien.</p>
+
       <h2 id="economiser">Économiser sans déplacer le problème</h2>
-      <p>Un appareil moins cher peut coûter davantage si le stylet, l’étui ou une fonction logicielle essentielle sont vendus séparément. À l’inverse, un pack complet n’est pas avantageux si vous n’utilisez pas ses accessoires. Le bon budget est celui du matériel nécessaire à votre scénario, sans fonctions décoratives.</p>
-      <p>Avant la comparaison finale, vérifiez la <a href="/guides/taille-ecran-bloc-notes-numerique/">taille d’écran utile</a> et la présence éventuelle d’un <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">abonnement</a>.</p>
+      <p>Le prix le plus bas n’est intéressant que si l’appareil couvre déjà votre besoin. Une économie sur le matériel peut disparaître si vous devez acheter un stylet, une protection ou un service supplémentaire juste après la commande.</p>
+      <p>Commencez donc par éliminer les fonctions inutiles, puis comparez les paniers restants. Une taille d’écran plus petite peut réduire le budget si elle affiche correctement vos documents. À l’inverse, acheter trop compact pour de grands PDF peut vous pousser à remplacer l’appareil plus tôt. Notre guide sur la <a href="/guides/taille-ecran-bloc-notes-numerique/">taille d’écran d’un bloc-notes numérique</a> aide à trancher ce point avant de regarder les promotions.</p>
+
+      <h2 id="suite">Quel comparatif consulter selon votre budget ?</h2>
+      <p>Une fois votre panier cible défini, passez au comparatif correspondant à votre contrainte. Les <a href="/comparatifs/bloc-notes-numerique-pas-cher/">bloc-notes numériques pas chers</a> servent à chercher une configuration accessible, tandis que le <a href="/comparatifs/meilleur-bloc-notes-numerique/">comparatif général des bloc-notes numériques</a> permet d’arbitrer entre plusieurs usages. Si vous refusez tout coût récurrent, consultez directement les <a href="/comparatifs/bloc-notes-numerique-sans-abonnement/">modèles sans abonnement</a>.</p>
+      <p>Les réductions temporaires, elles, restent séparées de ce guide. Elles sont regroupées dans les <a href="/bons-plans/bloc-notes-numerique/">bons plans bloc-notes numériques</a> afin de ne pas confondre budget structurel et promotion du moment.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://fr.kobobooks.com/collections/ereaders" rel="noopener noreferrer">Kobo France : prix affiché de l’Elipsa 2E le 8 septembre 2026</a></li>
-        <li><a href="https://remarkable.com/shop" rel="noopener noreferrer">reMarkable : tarif Connect affiché le 8 septembre 2026</a></li>
+        <li><a href="https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e" rel="noopener noreferrer">Kobo France : Kobo Elipsa 2E, prix affiché le 8 septembre 2026</a></li>
+        <li><a href="https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e-sleepcover-black" rel="noopener noreferrer">Kobo France : SleepCover Elipsa 2E, prix affiché le 8 septembre 2026</a></li>
+        <li><a href="https://remarkable.com/fr-FR/shop/compare" rel="noopener noreferrer">reMarkable : comparaison des tablettes et prix de départ du Paper Pure</a></li>
+        <li><a href="https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250" rel="noopener noreferrer">reMarkable : configurations et prix du Paper Pro</a></li>
+        <li><a href="https://remarkable.com/de-AT/shop/connect" rel="noopener noreferrer">reMarkable : tarif Connect en zone euro consulté le 8 septembre 2026</a></li>
       </ul>
     """,
     "/guides/choisir-bloc-notes-numerique/": """
@@ -1215,6 +1248,9 @@ GUIDE_CONTENT = {
       </ul>
     """,
 }
+
+from guide_content_extra import GUIDE_CONTENT_EXTRA
+GUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)
 
 for path, title, desc in GUIDES:
     crumbs = breadcrumb(("Guides", "/guides/"), title)

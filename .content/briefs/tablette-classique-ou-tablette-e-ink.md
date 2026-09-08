@@ -1,29 +1,55 @@
 ---
 url: /guides/tablette-classique-ou-tablette-e-ink/
 slug: tablette-classique-ou-tablette-e-ink
-status: HUMAN_APPROVED
+status: DRAFT_READY
 guide_type: choice
 primary_keyword: tablette classique ou tablette E Ink
-search_intent: choisir une technologie d’écran et un type d’appareil selon ses tâches
-audience: acheteur hésitant entre iPad/tablette Android et tablette à encre électronique
-business_role: qualifier les visiteurs pour lesquels l’E Ink est réellement pertinente
+search_intent: choisir la technologie selon les tâches incompatibles avec chaque écran
+audience: acheteur hésitant entre iPad/Android classique et E Ink
 last_researched: 2026-09-08
+refresh_level: major revision
 ---
 
 ## Décision éditoriale
 
-- Question centrale : quelles tâches rendent l’une des deux technologies inadaptée ?
-- Réponse attendue : E Ink pour contenu statique et concentration ; LCD/OLED pour vitesse, couleur et multimédia.
-- Valeur propre : présenter les limites de l’E Ink aussi clairement que ses bénéfices.
-- Hors périmètre : recommandations de modèles et promesses médicales sur la fatigue visuelle.
+- Question centrale : choisir la technologie selon les tâches incompatibles avec chaque écran.
+- Valeur propre : expliciter aussi clairement les cas où l'E Ink est déconseillée que ses avantages.
+- Traitement : Contenu existant enrichi sans full rewrite.
+- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
 
-## Analyse sémantique et SERP
+## Demande, intention et SERP
 
-Le fichier contient le thème « tablette E Ink » (18 100) et des variantes transactionnelles réservées aux comparatifs. Les résultats actuels opposent souvent liseuse et tablette ou vantent l’E Ink sans détailler le coût fonctionnel du rafraîchissement. La page se concentre sur les tâches incompatibles et les compromis.
+La page doit satisfaire une intention dominante de type `choice`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
 
-## Sources et risques
+## Entités à expliciter
 
-- BOOX, appareil E Ink Android : https://shop.boox.com/products/go103
-- reMarkable, caractéristiques officielles : https://support.remarkable.com/s/article/About-reMarkable-2
-- Kobo, formats et DRM : https://help.kobo.com/hc/en-us/articles/360017763713-File-formats-your-Kobo-eReader-and-Kobo-Books-app-support
-- Aucun bénéfice de santé n’est affirmé. Les comportements des applications Android sur E Ink varient. `noindex,follow` conservé.
+E Ink, LCD, OLED, BOOX, Android, vidéo, rafraîchissement.
+
+## Registre de preuves
+
+- E Ink fonctionnement: https://www.eink.com/tech/detail/How_it_works
+- E Ink bénéfices: https://www.eink.com/tech/detail/Benefits
+- BOOX cloud tiers: https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
+
+Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
+
+## Architecture validée
+
+- Réponse autonome dans les premières phrases.
+- H2 : deux technologies;  comparaison par tâche;  quand déconseiller E Ink;  tablette classique surdimensionnée;  couleur;  décision.
+- Tableau ou procédure uniquement lorsqu'il améliore la décision.
+- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
+- Section Sources visible.
+
+## Content refresh / différenciation
+
+- Niveau : `major revision`.
+- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
+- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
+- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+
+## Risques
+
+aucune promesse médicale sur la fatigue visuelle ; Android installé ne garantit pas une bonne UX E Ink.
+
+`noindex,follow` doit rester actif jusqu'à validation humaine du lot.

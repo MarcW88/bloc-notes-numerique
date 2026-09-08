@@ -1,39 +1,56 @@
 ---
 url: /guides/choisir-bloc-notes-numerique/
 slug: choisir-bloc-notes-numerique
-status: HUMAN_APPROVED
+status: DRAFT_READY
 guide_type: choice
 primary_keyword: choisir bloc-notes numérique
-search_intent: choisir une tablette E Ink de prise de notes selon son usage
-audience: acheteur français en phase de découverte ou de présélection
-business_role: guide pilier dirigeant vers les comparatifs et guides de critères
+search_intent: choisir une tablette E Ink de prise de notes selon son flux de travail
+audience: acheteur en découverte ou présélection
 last_researched: 2026-09-08
+refresh_level: major revision
 ---
 
 ## Décision éditoriale
 
-- Question centrale : quels critères éliminatoires vérifier avant de comparer les modèles ?
-- Réponse attendue : partir du flux de documents, des exports et de l’usage, puis seulement du matériel.
-- Valeur propre : une méthode de choix ordonnée qui ne prétend pas avoir testé les produits.
-- Hors périmètre : classement des meilleurs modèles, prix du jour et verdicts produits.
+- Question centrale : choisir une tablette E Ink de prise de notes selon son flux de travail.
+- Valeur propre : ordonner les critères éliminatoires avant les caractéristiques matérielles.
+- Traitement : Contenu existant enrichi sans full rewrite.
+- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
 
-## Univers sémantique
+## Demande, intention et SERP
 
-L’analyse contient « bloc note numérique » (74 000), « meilleur bloc note numérique » (49 500) et « bloc note numérique comparatif » (40 500). Les variantes « meilleur » et « comparatif » appartiennent au hub `/comparatifs/`; le présent guide traite uniquement la méthode de choix afin d’éviter la cannibalisation.
+La page doit satisfaire une intention dominante de type `choice`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
 
-## Analyse des résultats de recherche
+## Entités à expliciter
 
-Les résultats consultés mélangent définitions, longues listes de fonctions et sélections commerciales. L’opportunité consiste à ordonner les critères par dépendance : flux de travail, fichiers et écosystème avant les promesses matérielles.
+reMarkable, BOOX, Kindle Scribe, Kobo Elipsa, Supernote, PDF, cloud, export.
 
-## Sources et preuves
+## Registre de preuves
 
-- reMarkable Support, caractéristiques officielles : https://support.remarkable.com/s/article/About-reMarkable-2
-- BOOX, caractéristiques et Google Play : https://shop.boox.com/products/go103
-- Kobo, annotation et compatibilité du stylet : https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo
-- Amazon, fonctions Kindle Scribe : https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx
+- reMarkable import/export: https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files
+- BOOX cloud tiers: https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
+- Kobo carnets: https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet
+- Amazon cloud Kindle Scribe: https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL
 
-## Risques et exclusions
+Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
 
-- Les sensations d’écriture et autonomies réelles exigent des essais contrôlés : aucun verdict n’est formulé.
-- Les fonctions logicielles peuvent évoluer : revérification officielle requise à chaque mise à jour.
-- `noindex,follow` conservé jusqu’à validation humaine.
+## Architecture validée
+
+- Réponse autonome dans les premières phrases.
+- H2 : critères éliminatoires;  profils d'écosystème;  cinq questions;  ouvert ou spécialisé;  critères matériels.
+- Tableau ou procédure uniquement lorsqu'il améliore la décision.
+- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
+- Section Sources visible.
+
+## Content refresh / différenciation
+
+- Niveau : `major revision`.
+- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
+- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
+- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+
+## Risques
+
+cannibalisation avec /comparatifs/meilleur-bloc-notes-numerique/ ; aucune hiérarchie de produits ni pseudo-test.
+
+`noindex,follow` doit rester actif jusqu'à validation humaine du lot.

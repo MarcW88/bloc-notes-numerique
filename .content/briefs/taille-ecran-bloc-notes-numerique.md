@@ -4,26 +4,52 @@ slug: taille-ecran-bloc-notes-numerique
 status: DRAFT_READY
 guide_type: choice
 primary_keyword: taille écran bloc-notes numérique
-search_intent: choisir une diagonale adaptée aux notes, PDF et déplacements
-audience: acheteur hésitant entre un appareil compact, 10 pouces ou grand format
-business_role: guider un critère matériel avant consultation des comparatifs
+search_intent: choisir une diagonale selon documents, mobilité et surface utile
+audience: acheteur hésitant entre compact, ~10 pouces et grand format
 last_researched: 2026-09-08
+refresh_level: light edit
 ---
 
 ## Décision éditoriale
 
-- Question centrale : quelle surface permet de travailler sans imposer un appareil inutilement encombrant ?
-- Réponse attendue : petit format pour notes mobiles, environ 10 pouces comme compromis, grand format pour documents proches de l’A4.
-- Valeur propre : choisir à partir du document réel et de son affichage, pas seulement de la diagonale commerciale.
-- Hors périmètre : classement de modèles et affirmation sur le confort sans essai.
+- Question centrale : choisir une diagonale selon documents, mobilité et surface utile.
+- Valeur propre : partir du document réel et de sa lisibilité plutôt que de la diagonale commerciale.
+- Traitement : Contenu existant enrichi sans full rewrite.
+- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
 
-## Analyse sémantique et SERP
+## Demande, intention et SERP
 
-Le fichier contient beaucoup de requêtes génériques sur les tablettes 11 ou 14 pouces, souvent sans lien avec l’E Ink. Elles sont exclues. L’angle retenu répond à la taille utile pour l’écriture et l’annotation de PDF.
+La page doit satisfaire une intention dominante de type `choice`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
 
-## Sources et risques
+## Entités à expliciter
 
-- reMarkable Paper Pro Move, écran 7,3 pouces : https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro-Move
-- reMarkable 2, écran 10,3 pouces : https://support.remarkable.com/s/article/About-reMarkable-2
-- reMarkable Paper Pro, écran 11,8 pouces : https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro
-- Une diagonale ne décrit pas seule la surface utile : ratio, bordures et interface doivent être vérifiés. `noindex,follow` conservé.
+diagonale, PDF A4, reMarkable Paper Pro Move, reMarkable 2, Paper Pro.
+
+## Registre de preuves
+
+- reMarkable Paper Pro Move: https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro-Move
+- reMarkable 2: https://support.remarkable.com/s/article/About-reMarkable-2
+- reMarkable Paper Pro: https://support.remarkable.com/s/article/About-reMarkable-Paper-Pro
+
+Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
+
+## Architecture validée
+
+- Réponse autonome dans les premières phrases.
+- H2 : surface utile;  formats par usage;  partir du document;  test;  décision.
+- Tableau ou procédure uniquement lorsqu'il améliore la décision.
+- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
+- Section Sources visible.
+
+## Content refresh / différenciation
+
+- Niveau : `light edit`.
+- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
+- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
+- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+
+## Risques
+
+ne pas transformer les repères de gamme en recommandation de marque.
+
+`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
