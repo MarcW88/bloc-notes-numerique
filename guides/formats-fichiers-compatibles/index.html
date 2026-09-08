@@ -134,38 +134,59 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>PDF et EPUB sont les formats les plus largement partagés entre les grands écosystèmes E Ink, mais la compatibilité ne garantit pas les mêmes fonctions d'annotation, d'export ou de DRM.</strong> Pour choisir, vérifiez votre format principal et ce que l'appareil permet d'en faire après import.</p>
+      <p class="article-answer"><strong>La compatibilité d’un bloc-notes numérique ne se résume pas à une liste d’extensions.</strong> Un appareil peut ouvrir un PDF ou EPUB sans pour autant conserver toutes les annotations, gérer les DRM, réexporter le fichier dans le format voulu ou offrir la même expérience avec un DOCX. Pour choisir, vérifiez séparément l’import, l’annotation, l’export et les protections du document.</p>
 
-      <h2 id="tableau">Formats : les grandes différences par écosystème</h2>
-      <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Écosystème</th><th>Formats documentaires utiles à connaître</th><th>Attention</th></tr></thead>
-        <tbody>
-          <tr><td>reMarkable</td><td>PDF, EPUB ; import web JPG/PNG converti en PDF</td><td>les formats d'export diffèrent des formats d'import</td></tr>
-          <tr><td>Kobo</td><td>EPUB, PDF, MOBI, TXT, HTML, RTF, CBZ/CBR et images</td><td>DRM et annotations limitent certaines opérations</td></tr>
-          <tr><td>Kindle Scribe</td><td>PDF, DOC/DOCX, TXT, RTF, HTML, images, EPUB via services d'import</td><td>le traitement dépend de Send to Kindle ou du cloud</td></tr>
-          <tr><td>BOOX</td><td>PDF et nombreux formats réajustables dont EPUB, DOC/DOCX, HTML, MOBI, RTF, TXT</td><td>lecture possible ne signifie pas édition complète</td></tr>
-          <tr><td>Supernote</td><td>PDF, EPUB et documents Word parmi les formats de travail documentés</td><td>certaines fonctions varient selon le type de document</td></tr>
-        </tbody>
-      </table></div>
+      <h2 id="quatre-niveaux">Un format peut être « compatible » à quatre niveaux différents</h2>
+      <p>La première question est l’ouverture : le fichier est-il accepté ? La deuxième est l’édition ou l’annotation : peut-on écrire dessus ou seulement le lire ? La troisième est la restitution : peut-on réexporter le document avec les modifications ? La quatrième concerne la structure : le texte reste-t-il éditable ou le document devient-il une image/PDF aplati ?</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Niveau</th><th>Question</th><th>Exemple de piège</th></tr></thead><tbody>
+        <tr><td>Import</td><td>le fichier entre-t-il sur l’appareil ?</td><td>format absent ou limite de taille</td></tr>
+        <tr><td>Lecture</td><td>la mise en page reste-t-elle exploitable ?</td><td>DOCX rendu différemment</td></tr>
+        <tr><td>Annotation</td><td>où sont stockés les traits et surlignages ?</td><td>note liée mais pas incorporée au fichier</td></tr>
+        <tr><td>Export</td><td>que récupère-t-on ?</td><td>PDF/image au lieu de texte éditable</td></tr>
+      </tbody></table></div>
+      <p>Cette grille explique pourquoi une simple colonne « PDF : oui » dans un comparatif est insuffisante. Pour un workflow professionnel, la sortie est souvent plus importante que l’ouverture initiale.</p>
 
-      <h2 id="pdf">PDF : format fixe, fonctions variables</h2>
-      <p>Le PDF conserve sa mise en page. C'est utile pour contrats, articles et formulaires, mais la taille de l'écran compte davantage. Les annotations peuvent aussi être intégrées différemment lors de l'export. Kobo précise par exemple que les PDF non protégés peuvent être exportés avec les annotations manuscrites, alors que les restrictions sont différentes pour les EPUB.</p>
+      <h2 id="pdf">PDF : le format le plus courant, mais pas toujours le plus simple</h2>
+      <p>Le PDF préserve la mise en page et convient bien aux contrats, articles, cours et documents à annoter. reMarkable, Kobo, Kindle Scribe, BOOX et Supernote le prennent en charge sous différentes formes. La différence se situe dans la navigation, l’annotation, la gestion des liens et la manière dont les notes sont exportées.</p>
+      <p>Un PDF protégé par mot de passe ou DRM peut limiter l’écriture. Amazon indique par exemple que certains PDF protégés importés sur Kindle Scribe deviennent lecture seule. BOOX peut demander d’incorporer les annotations au PDF avant de le synchroniser ailleurs pour que les traits apparaissent dans un autre lecteur.</p>
+      <p>Si les PDF représentent votre usage principal, consultez <a href="/guides/annoter-pdf-tablette-e-ink/">le guide d’annotation PDF</a> plutôt que de vous arrêter au support du format.</p>
 
-      <h2 id="epub">EPUB : plus souple pour la lecture</h2>
-      <p>EPUB est un format de livre réajustable. Le texte peut changer de taille et se redistribuer, mais les fonctions d'écriture dépendent du fabricant. Une mention "EPUB compatible" ne vous dit donc pas si vos annotations seront exportables.</p>
+      <h2 id="epub">EPUB et DRM : le fichier n’est pas toujours librement transférable</h2>
+      <p>EPUB est un format de livre reflowable : le texte peut s’adapter à la taille et à la police choisies. Mais les livres achetés peuvent être protégés par DRM. Kobo explique par exemple que les EPUB ou PDF protégés par Adobe DRM nécessitent Adobe Digital Editions pour certains transferts. Un EPUB non protégé suit un parcours plus simple.</p>
+      <p>Les annotations d’un ebook ne fonctionnent pas nécessairement comme celles d’un PDF. Elles peuvent rester liées à la bibliothèque et au moteur de lecture plutôt qu’être incorporées dans un fichier portable. Si vous devez partager vos annotations, vérifiez donc la méthode spécifique au fabricant.</p>
+      <p>Cette différence est centrale dans <a href="/guides/liseuse-ou-bloc-notes-numerique/">liseuse ou bloc-notes numérique</a>.</p>
 
-      <h2 id="drm">Ne confondez pas format et droits numériques</h2>
-      <p>Un fichier peut avoir une extension compatible tout en restant protégé par DRM. Kobo distingue par exemple Adobe DRM et Social DRM et impose Adobe Digital Editions dans certains cas. Les possibilités d'annotation et de transfert peuvent alors être différentes d'un PDF ou EPUB personnel non protégé.</p>
+      <h2 id="bureautique">DOCX, PPTX et fichiers bureautiques : ouverture ne veut pas dire édition complète</h2>
+      <p>Les tablettes Android E Ink comme BOOX prennent en charge de nombreux formats dans leurs lecteurs et peuvent installer des applications tierces. Supernote documente également la création et l’édition de documents Word dans certaines fonctions. Mais une mise en page complexe, des macros, commentaires avancés ou polices spécifiques peuvent ne pas se comporter comme sur un ordinateur.</p>
+      <p>Si vous devez réellement éditer un DOCX, testez la fonction précise : correction de texte, insertion, suivi des modifications, tableaux et export final. Pour un simple document à lire et annoter, convertir en PDF peut parfois produire un workflow plus stable.</p>
+      <p>Ne choisissez donc pas un appareil parce qu’une extension apparaît dans une liste. Décrivez l’action nécessaire sur ce fichier et vérifiez-la dans la documentation ou une démonstration.</p>
 
-      <h2 id="test">Le test qui évite les mauvaises surprises</h2>
-      <p>Prenez trois fichiers réels : votre PDF le plus complexe, un ebook et un document de travail. Vérifiez import, affichage, annotation et export. Si vous ne récupérez pas le résultat dans le format voulu, la simple compatibilité d'ouverture ne suffit pas. Poursuivez avec <a href="/guides/exporter-notes/">le guide d'export des notes</a>.</p>
+      <h2 id="notes">Les formats de notes propriétaires nécessitent un plan de sortie</h2>
+      <p>Les carnets internes utilisent souvent un format propre au fabricant afin de conserver les traits, objets, liens et métadonnées. Ce format est utile dans l’écosystème mais ne sera pas toujours lisible ailleurs. L’important est de savoir quels exports standard sont proposés : PDF, PNG, SVG, TXT, DOCX ou autre.</p>
+      <p>Une exportation standard peut perdre certaines fonctions. Les liens internes entre pages, tags ou structure de calques peuvent disparaître dans un PDF. Avant de créer plusieurs années d’archives, décidez quelles informations doivent survivre à un changement de marque.</p>
+      <p>Le guide <a href="/guides/exporter-notes/">exporter ses notes</a> et celui sur <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">les dépendances d’écosystème</a> permettent de construire ce plan.</p>
+
+      <h2 id="comparatif">Repères documentés selon les écosystèmes</h2>
+      <p>Les formats évoluent avec les mises à jour, mais les documentations officielles montrent des philosophies différentes. reMarkable concentre l’import sur PDF/EPUB et certains médias selon la méthode, avec export en PDF, PNG, SVG ou texte pour certains contenus. Kobo liste EPUB, PDF, images et plusieurs formats texte. BOOX annonce un éventail très large incluant PDF, EPUB, DOC/DOCX, PPT/PPTX et de nombreux formats de lecture.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Écosystème</th><th>Force</th><th>Point de vigilance</th></tr></thead><tbody>
+        <tr><td>reMarkable</td><td>workflow document/notes simple</td><td>formats d’import volontairement resserrés</td></tr>
+        <tr><td>Kobo</td><td>large bibliothèque de formats lecture</td><td>DRM et types de carnets</td></tr>
+        <tr><td>BOOX</td><td>grand nombre de formats + Android</td><td>comportement variable selon application</td></tr>
+        <tr><td>Supernote</td><td>notes, PDF/EPUB et Word</td><td>vérifier l’export de chaque type de contenu</td></tr>
+        <tr><td>Kindle Scribe</td><td>Kindle + documents compatibles</td><td>génération et méthode d’envoi/import</td></tr>
+      </tbody></table></div>
+      <p>Ces repères ne remplacent pas la vérification du fichier réel. La meilleure pratique reste d’essayer un document représentatif avant l’achat ou de consulter le manuel de la version logicielle actuelle.</p>
+
+      <h2 id="decision">La checklist compatibilité avant achat</h2>
+      <p>Choisissez trois fichiers réels : le plus fréquent, le plus complexe et celui que vous devez partager. Pour chacun, vérifiez import, lecture, annotation et export. Ajoutez la question des DRM et de la taille maximale si elle est pertinente. Si le workflow fonctionne sur ces trois cas, la compatibilité est probablement suffisante.</p>
+      <p>Ensuite, replacez ce critère dans le <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a> et, si le cloud intervient, dans <a href="/guides/synchroniser-notes-cloud/">la synchronisation des notes</a>.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : formats d'import et d'export</a></li>
-        <li><a href="https://help.kobo.com/hc/fr/articles/360017763713-Formats-de-fichiers-pris-en-charge-par-votre-application-Kobo-eReader-et-Kobo-Books" rel="noopener noreferrer">Kobo : formats pris en charge</a></li>
-        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu" rel="noopener noreferrer">Amazon : formats compatibles via cloud drive</a></li>
-        <li><a href="https://help.boox.com/hc/en-us/articles/25400769451540-Adjust-EPUB-and-Similar" rel="noopener noreferrer">BOOX : formats réajustables</a></li>
-        <li><a href="https://support.supernote.com/en_US/epub-and-pdf-documents" rel="noopener noreferrer">Supernote : EPUB et PDF</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : formats d’import et d’export</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360017763713-File-formats-your-Kobo-eReader-and-Kobo-Books-app-support" rel="noopener noreferrer">Kobo : formats et DRM</a></li>
+        <li><a href="https://shop.boox.com/products/go103gen2" rel="noopener noreferrer">BOOX : formats documentaires du Go 10.3 Gen II</a></li>
+        <li><a href="https://support.supernote.com/en_US/Tools-Features/word-documents" rel="noopener noreferrer">Supernote : documents Word</a></li>
+        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu" rel="noopener noreferrer">Amazon : limites de fichiers Kindle Scribe</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

@@ -134,36 +134,54 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>Synchroniser des notes ne signifie pas simplement les copier dans le cloud.</strong> Une vraie synchronisation maintient plusieurs appareils ou applications au même état ; un export vers Google Drive, OneDrive ou Dropbox crée parfois seulement une copie. Vérifiez cette différence avant de construire votre flux de travail.</p>
+      <p class="article-answer"><strong>Synchroniser des notes dans le cloud signifie maintenir une version accessible depuis plusieurs appareils ou services, mais tous les systèmes ne font pas de synchronisation bidirectionnelle.</strong> Certains répliquent les fichiers natifs dans le cloud du fabricant, d’autres copient des PDF vers Drive, Dropbox ou OneDrive. Avant l’achat, vérifiez ce qui se synchronise, dans quel sens, à quel moment et comment sont gérés les conflits.</p>
 
-      <h2 id="trois">Trois opérations souvent confondues</h2>
-      <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Opération</th><th>Ce qui se passe</th></tr></thead>
-        <tbody>
-          <tr><td>Synchronisation</td><td>les mêmes notes ou fichiers se mettent à jour entre appareils</td></tr>
-          <tr><td>Import cloud</td><td>une copie d'un fichier distant est téléchargée sur la tablette</td></tr>
-          <tr><td>Export cloud</td><td>une nouvelle copie est envoyée vers le service distant</td></tr>
-        </tbody>
-      </table></div>
+      <h2 id="sync-export">Ne confondez pas synchronisation et export vers le cloud</h2>
+      <p>Une synchronisation véritable cherche à conserver le même contenu à jour sur plusieurs emplacements. Un export crée une nouvelle copie. Cette différence est capitale : si vous annotez un PDF importé depuis Drive et que l’appareil vous permet seulement de renvoyer une copie, le document original ne change pas automatiquement.</p>
+      <p>Les fabricants utilisent parfois le mot « cloud » pour des fonctions très différentes. Le cloud reMarkable sert notamment à relier la tablette à ses applications. BOOX peut synchroniser certaines données via le compte ONYX et accéder parallèlement à des stockages tiers. Supernote propose plusieurs services de synchronisation. Kindle Scribe 2025+ traite Drive et OneDrive comme des connexions d’import/export de copies pour plusieurs scénarios.</p>
+      <p>Si votre besoin est seulement de récupérer un fichier terminé, le guide <a href="/guides/exporter-notes/">exporter ses notes</a> peut être plus pertinent qu’une synchronisation permanente.</p>
 
-      <h2 id="remarkable">reMarkable</h2>
-      <p>Les fichiers reMarkable se synchronisent via le cloud du fabricant vers les applications compagnon. Sans Connect, la synchronisation est limitée pour les documents restés inactifs plus de 50 jours. Google Drive, Dropbox et OneDrive servent aussi d'intégrations pour parcourir, copier et envoyer des fichiers ; il ne faut pas confondre ces intégrations avec le cloud natif reMarkable.</p>
+      <h2 id="questions">Les cinq questions à poser à n’importe quel cloud</h2>
+      <p>Le nom du service ne suffit pas. Une intégration Google Drive peut signifier navigation dans les dossiers, import manuel, export d’une copie ou synchronisation d’un répertoire. Pour éviter les mauvaises surprises, utilisez toujours la même grille.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Question</th><th>Pourquoi elle compte</th><th>Risque</th></tr></thead><tbody>
+        <tr><td>Qu’est-ce qui est synchronisé ?</td><td>fichiers, notes natives, annotations, métadonnées</td><td>archive incomplète</td></tr>
+        <tr><td>Dans quel sens ?</td><td>tablette → cloud, cloud → tablette ou les deux</td><td>croire qu’un original est mis à jour</td></tr>
+        <tr><td>Quand ?</td><td>automatique, à l’ouverture, bouton manuel</td><td>version obsolète</td></tr>
+        <tr><td>Comment sont gérés les conflits ?</td><td>édition sur plusieurs appareils</td><td>doublons ou écrasement</td></tr>
+        <tr><td>Que reste-t-il sans abonnement ?</td><td>continuité à long terme</td><td>dépendance au service</td></tr>
+      </tbody></table></div>
+      <p>Cette grille est plus utile qu’une liste de logos cloud. Elle permet de comparer deux intégrations qui portent le même nom mais n’offrent pas le même workflow.</p>
 
-      <h2 id="boox-supernote">BOOX et Supernote</h2>
-      <p>BOOX synchronise ses notes via le compte ONYX et propose en parallèle des stockages tiers intégrés comme Google Drive, OneDrive et Dropbox. Supernote permet de sélectionner un service de synchronisation parmi Supernote Cloud et plusieurs clouds tiers, puis de choisir les dossiers concernés.</p>
+      <h2 id="remarkable">reMarkable : cloud maison et intégrations tierces ont des rôles différents</h2>
+      <p>reMarkable synchronise ses fichiers avec les applications compagnon lorsque la tablette est connectée au Wi-Fi. La documentation précise qu’un utilisateur sans Connect conserve la synchronisation, mais que les documents non ouverts et synchronisés depuis plus de 50 jours cessent d’être disponibles dans les apps. L’appareil garde néanmoins ses fichiers localement.</p>
+      <p>Les intégrations Google Drive, Dropbox et OneDrive servent aussi à importer et exporter des documents. Il faut donc distinguer le cloud reMarkable, qui maintient l’écosystème tablette/apps, et les stockages tiers, utilisés comme sources ou destinations de fichiers.</p>
+      <p>Pour comprendre le rôle de Connect dans ce dispositif, consultez <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">bloc-notes avec ou sans abonnement</a>.</p>
 
-      <h2 id="kindle-kobo">Kindle Scribe et Kobo</h2>
-      <p>Les Kindle Scribe récents peuvent importer des fichiers depuis Google Drive ou OneDrive et renvoyer des copies annotées. Amazon précise que les annotations d'un document importé ne se resynchronisent pas automatiquement vers le fichier d'origine. Kobo peut accéder à Google Drive ou Dropbox sur certains modèles et sauvegarde aussi les carnets dans son propre environnement. Là encore, import/export et synchronisation continue ne sont pas synonymes.</p>
+      <h2 id="boox-supernote">BOOX et Supernote offrent plus d’une méthode de transfert</h2>
+      <p>BOOX documente l’intégration de Dropbox, Google Drive, OneDrive et d’autres services WebDAV dans sa bibliothèque. Le système peut télécharger des fichiers vers la bibliothèque et copier certains documents vers le stockage cloud. Parallèlement, les données de lecture et notes BOOX peuvent utiliser le compte ONYX pour une synchronisation propre à l’écosystème.</p>
+      <p>Supernote propose Supernote Cloud, Dropbox et Google Drive dans sa documentation de transfert, et OneDrive comme option de synchronisation ajoutée à son système. La marque propose également USB, Browse & Access sur le réseau local et des applications partenaires. Cela permet de construire un workflow qui ne repose pas obligatoirement sur un seul cloud.</p>
+      <p>Cette différence illustre le thème <a href="/guides/ecosysteme-ouvert-ou-ferme/">écosystème ouvert ou fermé</a> : davantage d’options donnent de la flexibilité mais demandent aussi de comprendre quelle méthode fait quoi.</p>
 
-      <h2 id="choisir">Choisissez selon votre source de vérité</h2>
-      <p>Décidez quel emplacement contient la version de référence : la tablette, le cloud du fabricant ou votre Drive d'entreprise. Si deux services peuvent modifier le même document sans synchronisation bidirectionnelle, les doublons deviennent probables. Pour une intégration précise, consultez les guides <a href="/guides/bloc-notes-numerique-google-drive/">Google Drive</a>, <a href="/guides/bloc-notes-numerique-onedrive/">OneDrive</a> et <a href="/guides/bloc-notes-numerique-dropbox/">Dropbox</a>.</p>
+      <h2 id="conflits">La synchronisation crée aussi un risque de conflits</h2>
+      <p>Lorsque deux appareils modifient un même fichier avant que la synchronisation soit terminée, le système doit choisir entre écraser, dupliquer ou signaler le conflit. Supernote conseille par exemple d’éviter l’édition simultanée du même fichier sur deux appareils et d’attendre la fin du sync avant de poursuivre ailleurs.</p>
+      <p>Dans un environnement professionnel, cette règle devient importante : une tablette E Ink n’est pas forcément un outil de coédition temps réel. Si plusieurs personnes travaillent sur une source unique, un workflow de copie annotée peut être préférable à une pseudo-synchronisation ambiguë, ou il faut conserver l’outil collaboratif principal sur ordinateur.</p>
+      <p>Testez donc le cas problématique avant de l’ignorer : modifiez un fichier sur la tablette et sur l’ordinateur, puis observez exactement ce que le système conserve.</p>
+
+      <h2 id="securite">Cloud et sauvegarde ne sont pas synonymes</h2>
+      <p>Une synchronisation réplique parfois aussi une suppression ou une erreur. Pour les carnets importants, conservez périodiquement une copie indépendante dans un format standard. Un PDF exporté n’offre pas toutes les fonctions du carnet natif, mais constitue une archive lisible si le compte cloud rencontre un problème.</p>
+      <p>Pour les données sensibles, vérifiez aussi les politiques de l’organisation : un compte OneDrive professionnel peut bloquer une connexion tierce, Amazon rappelle par exemple que l’accès à un drive d’entreprise dépend des paramètres de sécurité de l’organisation. Les droits et l’authentification font donc partie de la compatibilité.</p>
+      <p>Le guide <a href="/guides/transfert-notes-vers-ordinateur/">transférer ses notes vers l’ordinateur</a> présente les alternatives locales lorsque le cloud n’est pas souhaité.</p>
+
+      <h2 id="decision">La checklist avant de choisir une intégration cloud</h2>
+      <p>Choisissez un document réel, faites-le entrer depuis votre cloud, annotez-le, renvoyez-le puis modifiez-le sur ordinateur. Vérifiez si vous manipulez une seule version ou plusieurs copies, comment les noms de fichiers évoluent et ce qui arrive aux annotations. Faites ensuite le même test avec un carnet natif.</p>
+      <p>Une fois le mécanisme compris, les guides dédiés à <a href="/guides/bloc-notes-numerique-google-drive/">Google Drive</a>, <a href="/guides/bloc-notes-numerique-onedrive/">OneDrive</a> et <a href="/guides/bloc-notes-numerique-dropbox/">Dropbox</a> permettent de vérifier les différences propres à chaque service.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : sync et intégrations</a></li>
-        <li><a href="https://help.boox.com/hc/en-us/articles/25401889318548-Note-Syncing" rel="noopener noreferrer">BOOX : synchronisation des notes</a></li>
-        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : services cloud</a></li>
-        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN" rel="noopener noreferrer">Amazon : import cloud Kindle Scribe</a></li>
-        <li><a href="https://help.kobo.com/hc/en-us/articles/15335985512983-Add-books-to-your-eReader-using-Google-Drive" rel="noopener noreferrer">Kobo : Google Drive</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/Help-with-sync-and-the-reMarkable-cloud" rel="noopener noreferrer">reMarkable : synchronisation cloud</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : intégrations tierces</a></li>
+        <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : stockages cloud intégrés</a></li>
+        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : services cloud et transferts</a></li>
+        <li><a href="https://support.supernote.com/en_US/how-to-sync-files-between-two-devices" rel="noopener noreferrer">Supernote : gestion des conflits entre appareils</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

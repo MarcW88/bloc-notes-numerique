@@ -134,33 +134,53 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>OneDrive est aujourd'hui compatible avec plusieurs écosystèmes E Ink, notamment reMarkable, BOOX, Supernote et les Kindle Scribe sortis en 2025 ou après.</strong> La fonction peut toutefois être un import/export de fichiers plutôt qu'une édition synchronisée du document source.</p>
+      <p class="article-answer"><strong>OneDrive est particulièrement important si vos notes doivent rejoindre un environnement Microsoft, mais les intégrations varient fortement.</strong> reMarkable, BOOX, Supernote et les Kindle Scribe récents proposent des formes de connexion à OneDrive. Selon le système, il s’agit d’import/export, de synchronisation de dossiers ou d’accès via Android. Vérifiez aussi les restrictions de votre compte Microsoft 365 professionnel.</p>
 
-      <h2 id="comparaison">OneDrive selon l'écosystème</h2>
-      <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Écosystème</th><th>Fonction principale</th><th>Attention</th></tr></thead>
-        <tbody>
-          <tr><td>reMarkable</td><td>parcourir OneDrive, copier des fichiers, envoyer des notes et documents</td><td>certaines fonctions d'intégration sont associées à Connect</td></tr>
-          <tr><td>BOOX</td><td>OneDrive fait partie des stockages tiers intégrés</td><td>l'usage des fichiers et la sync des notes restent deux mécanismes</td></tr>
-          <tr><td>Supernote</td><td>OneDrive peut être choisi pour synchroniser des dossiers</td><td>configuration et sélection de dossiers nécessaires</td></tr>
-          <tr><td>Kindle Scribe 2025+</td><td>import et partage vers Microsoft OneDrive</td><td>une copie annotée est envoyée, le fichier source n'est pas modifié en direct</td></tr>
-        </tbody>
-      </table></div>
+      <h2 id="besoin">Définissez ce que « travailler avec OneDrive » veut dire</h2>
+      <p>Pour certains utilisateurs, OneDrive sert simplement à recevoir des PDF et y déposer des versions annotées. Pour d’autres, il est le stockage central d’une entreprise avec règles d’accès, dossiers partagés et politiques de sécurité. Ces deux scénarios demandent des intégrations différentes.</p>
+      <p>Une tablette peut être techniquement compatible avec OneDrive tout en échouant sur un compte d’entreprise si l’administrateur bloque l’autorisation de l’application. Amazon rappelle explicitement que l’accès aux drives professionnels dépend des paramètres de sécurité de l’organisation. Il faut donc tester le compte réel, pas seulement un compte personnel.</p>
+      <p>Si votre besoin se limite à sortir un fichier final, le guide <a href="/guides/exporter-notes/">exporter ses notes</a> peut suffire à définir le workflow.</p>
 
-      <h2 id="entreprise">Compte Microsoft 365 professionnel : vérifiez les politiques IT</h2>
-      <p>Amazon indique que l'accès à un drive professionnel dépend des paramètres de sécurité de l'entreprise. Cette prudence vaut plus largement pour les appareils personnels connectés à Microsoft 365 : authentification, politiques de conformité et autorisations peuvent bloquer une intégration pourtant compatible en théorie.</p>
+      <h2 id="modeles">Quatre types d’intégration OneDrive à reconnaître</h2>
+      <p>Comme avec Drive, le logo du service ne dit pas le niveau de connexion. Les approches vont du transfert ponctuel à la synchronisation de dossiers. Une tablette Android peut aussi installer l’application officielle, avec des avantages et limites différents de l’intégration du fabricant.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Approche</th><th>Exemple de fonctionnement</th><th>À surveiller</th></tr></thead><tbody>
+        <tr><td>Import/export</td><td>ouvrir un PDF puis renvoyer une copie</td><td>pas de mise à jour de l’original</td></tr>
+        <tr><td>Sync de dossiers</td><td>sélectionner des dossiers à synchroniser</td><td>conflits et rythme du sync</td></tr>
+        <tr><td>Cloud intégré</td><td>naviguer dans OneDrive depuis la bibliothèque</td><td>formats copiables</td></tr>
+        <tr><td>Application Android</td><td>utiliser l’app OneDrive</td><td>ergonomie et rafraîchissement E Ink</td></tr>
+      </tbody></table></div>
+      <p>Pour un environnement Microsoft lourd, la possibilité d’installer des apps peut sembler séduisante, mais elle doit être testée sur E Ink. Pour un flux simple de PDF, une intégration native plus limitée peut être plus efficace.</p>
 
-      <h2 id="workflow">Le bon test avant achat</h2>
-      <p>Connectez un compte de test si possible, importez un PDF, annotez-le puis renvoyez-le vers OneDrive. Vérifiez le dossier de destination, le nom du fichier et le comportement en cas de nouvelle version. Si votre processus exige une édition bidirectionnelle instantanée, une simple fonction d'import/export ne suffit pas.</p>
+      <h2 id="remarkable">reMarkable : OneDrive comme source et destination de documents</h2>
+      <p>reMarkable prend en charge OneDrive parmi ses intégrations cloud et permet l’upload de fichiers depuis la tablette. L’usage typique consiste à récupérer un document, l’annoter puis exporter le résultat. Le cloud reMarkable et OneDrive jouent des rôles différents : le premier relie l’écosystème reMarkable, le second sert de stockage tiers.</p>
+      <p>Dans un contexte professionnel, vérifiez l’autorisation OAuth et les politiques de l’entreprise. Une intégration qui fonctionne sur un compte Microsoft personnel ne garantit pas que votre tenant professionnel l’acceptera.</p>
+      <p>Si le coût de Connect intervient dans votre comparaison, consultez <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">le guide sur les abonnements</a>.</p>
 
-      <h2 id="decision">Quand OneDrive doit-il guider le choix ?</h2>
-      <p>Il devient prioritaire dans un environnement Microsoft centré sur SharePoint/OneDrive et Office. Dans ce cas, ajoutez aussi à vos critères l'export PDF, les comptes d'entreprise et les politiques IT. Pour la vue globale, consultez <a href="/guides/synchroniser-notes-cloud/">synchroniser ses notes dans le cloud</a>.</p>
+      <h2 id="kindle">Kindle Scribe 2025+ : OneDrive est une connexion d’import et de partage</h2>
+      <p>Amazon permet aux Kindle Scribe sortis en 2025 ou après de se connecter à Microsoft OneDrive. Des fichiers compatibles peuvent être importés, annotés puis partagés vers OneDrive. Amazon précise que les annotations ne se synchronisent pas automatiquement dans la source : une nouvelle copie du document est envoyée.</p>
+      <p>Les carnets peuvent aussi être partagés vers OneDrive avec plusieurs options de format, dont PDF manuscrit, conversion en texte et PDF recherchable selon le cas. Cette logique est efficace pour déposer un livrable dans OneDrive, mais elle ne transforme pas le Scribe en coéditeur d’un fichier Office.</p>
+      <p>Le guide <a href="/guides/liseuse-ou-bloc-notes-numerique/">liseuse ou bloc-notes</a> aide à décider si cette logique orientée lecture reste suffisante pour votre travail.</p>
+
+      <h2 id="boox-supernote">BOOX et Supernote proposent des approches plus proches du système de fichiers</h2>
+      <p>BOOX intègre OneDrive à sa bibliothèque cloud et permet de télécharger ou copier certains documents. Sur les modèles Android, l’application OneDrive elle-même peut être installée. Cela offre davantage de chemins possibles, mais augmente aussi le risque d’utiliser plusieurs copies ou dossiers sans convention claire.</p>
+      <p>Supernote a ajouté OneDrive comme option de synchronisation. L’utilisateur autorise le service, sélectionne les dossiers à synchroniser puis déclenche le sync. Les notes et fichiers doivent toutefois être gérés avec prudence sur plusieurs appareils pour éviter les conflits.</p>
+      <p>Le guide <a href="/guides/synchroniser-notes-cloud/">synchroniser ses notes cloud</a> explique pourquoi une synchronisation de dossiers demande davantage de discipline qu’un export ponctuel.</p>
+
+      <h2 id="entreprise">Le vrai test : votre compte Microsoft 365 professionnel</h2>
+      <p>Si OneDrive est un critère professionnel, effectuez le test avec le compte d’entreprise avant la fin de la période de retour. Vérifiez l’autorisation de connexion, les dossiers partagés, la taille des fichiers, le MFA et les restrictions éventuelles de l’administrateur. N’utilisez pas un compte personnel comme preuve de compatibilité.</p>
+      <p>Testez aussi un fichier réel : import, annotation, export, ouverture dans OneDrive sur PC et éventuel partage à un collègue. Si votre workflow exige Word ou OneNote plutôt qu’un PDF final, vérifiez ces applications séparément ; « compatible OneDrive » ne garantit pas une édition Office complète.</p>
+      <p>Si vous avez besoin d’applications métier Microsoft, comparez aussi <a href="/guides/ecosysteme-ouvert-ou-ferme/">écosystème ouvert ou fermé</a>.</p>
+
+      <h2 id="decision">Quand OneDrive doit-il éliminer un modèle ?</h2>
+      <p>Si votre entreprise centralise tous les documents dans OneDrive et interdit d’autres clouds, l’intégration devient un critère éliminatoire. Exigez alors le niveau exact dont vous avez besoin : dépôt de PDF, import de fichiers, synchronisation de dossiers ou usage d’une application. Si OneDrive sert seulement d’archive finale, une simple exportation fiable peut suffire.</p>
+      <p>Pour comparer avec d’autres services, consultez <a href="/guides/bloc-notes-numerique-google-drive/">Google Drive</a> et <a href="/guides/bloc-notes-numerique-dropbox/">Dropbox</a>, puis revenez au <a href="/guides/choisir-bloc-notes-numerique/">guide de choix</a>.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://support.remarkable.com/articles/Knowledge/About-my-remarkable-com" rel="noopener noreferrer">reMarkable : OneDrive</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : OneDrive comme intégration</a></li>
+        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd" rel="noopener noreferrer">Amazon : connexion OneDrive</a></li>
+        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu" rel="noopener noreferrer">Amazon : limites et cloud professionnel</a></li>
         <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : OneDrive intégré</a></li>
         <li><a href="https://support.supernote.com/en_US/Whats-New/utilize-onedrive-your-new-cloud-sync-option-for-file-backup" rel="noopener noreferrer">Supernote : synchronisation OneDrive</a></li>
-        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL" rel="noopener noreferrer">Amazon : partage Kindle Scribe vers OneDrive</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

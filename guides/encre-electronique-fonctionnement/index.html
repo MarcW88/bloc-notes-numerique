@@ -134,30 +134,46 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>L'encre électronique E Ink fonctionne en déplaçant des particules chargées dans de minuscules capsules ou cellules sous l'effet d'un champ électrique.</strong> Une fois les particules positionnées, l'image reste visible sans alimentation continue. C'est ce mécanisme qui permet un affichage réfléchissant et bistable.</p>
+      <p class="article-answer"><strong>L’encre électronique forme une image en déplaçant des particules chargées à l’intérieur de microcapsules ou structures comparables.</strong> Une fois les particules positionnées, l’image peut rester visible sans être redessinée en continu. C’est ce fonctionnement bistable qui explique la très faible consommation sur une page statique, la lisibilité en lumière ambiante et, en même temps, les rafraîchissements plus lents qu’un écran LCD ou OLED.</p>
 
-      <h2 id="capsules">Des particules noires et blanches qui se déplacent</h2>
-      <p>Dans les systèmes noir et blanc décrits par E Ink, chaque microcapsule ou Microcup contient des particules blanches et noires portant des charges opposées. Une tension attire l'une ou l'autre couleur vers la surface. Le lecteur voit alors un point clair ou sombre. Des millions de zones commandées forment le texte et les images.</p>
+      <h2 id="capsules">Des particules chargées forment les pixels visibles</h2>
+      <p>Dans le système monochrome décrit par E Ink, des microcapsules contiennent notamment des particules blanches et noires portant des charges opposées. Lorsqu’un champ électrique est appliqué, certaines particules migrent vers la surface et deviennent visibles. En contrôlant cette migration pixel par pixel, l’écran produit du texte, des images et différents niveaux de gris.</p>
+      <p>Le terme « encre » peut induire en erreur : rien n’est imprimé définitivement. La couche d’encre fait partie d’un module électronique commandé par une matrice et un contrôleur. La différence avec un écran lumineux vient de la manière dont l’état optique est créé et maintenu.</p>
+      <p>Cette base physique permet de comprendre les choix pratiques décrits dans le guide <a href="/guides/tablette-e-ink/">qu’est-ce qu’une tablette E Ink</a>.</p>
 
-      <h2 id="couches">L'encre n'est qu'une couche de l'écran</h2>
-      <p>Le film d'encre est laminé sur une couche de circuits qui crée les champs électriques nécessaires. Un module complet comprend aussi le TFT, des couches de protection, l'électronique de pilotage et les connecteurs. Une tablette E Ink ne se résume donc pas à "de l'encre" : la couche tactile, le stylet et le logiciel participent aussi à l'expérience.</p>
+      <h2 id="bistable">Pourquoi une page statique consomme si peu</h2>
+      <p>L’un des intérêts majeurs de l’ePaper est son caractère bistable : une fois l’image formée, elle peut rester visible sans alimentation continue de chaque pixel. L’énergie est surtout nécessaire lorsque l’état de l’écran change. Un livre affichant la même page pendant trente secondes n’a donc pas le même profil de consommation qu’un navigateur qui défile continuellement.</p>
+      <p>Cette propriété explique pourquoi les fabricants annoncent souvent des autonomies en semaines sur des usages de lecture ou de notes. Elle ne signifie pas que toute la tablette consomme presque zéro : processeur, Wi-Fi, éclairage frontal, stockage, stylet actif et applications continuent à demander de l’énergie.</p>
+      <p>Le guide sur <a href="/guides/autonomie-tablette-e-ink/">l’autonomie des tablettes E Ink</a> aide à interpréter les chiffres fabricants sans attribuer toute la consommation à la dalle.</p>
 
-      <h2 id="bistabilite">Pourquoi l'image reste sans consommer en continu</h2>
-      <p>La technologie est bistable. Une fois les particules en place, elles peuvent maintenir l'image sans que l'écran soit constamment alimenté. La consommation intervient principalement lors des changements d'image. Cela ne signifie pas que l'appareil entier ne consomme rien : processeur, réseau, stockage et éclairage frontal restent alimentés selon l'usage.</p>
+      <h2 id="refresh">Pourquoi le rafraîchissement est plus lent et produit du ghosting</h2>
+      <p>Déplacer physiquement des particules n’est pas instantané comme modifier l’intensité d’un sous-pixel LCD. Les contrôleurs appliquent donc des formes d’onde et différents modes de mise à jour selon le compromis recherché. Un rafraîchissement complet peut nettoyer davantage l’image, tandis qu’un mode rapide privilégie la vitesse.</p>
+      <p>Le ghosting correspond à des traces résiduelles d’un état précédent. Il n’indique pas nécessairement un défaut : il peut être le résultat volontaire d’un mode qui évite de nettoyer entièrement chaque pixel à chaque mouvement. Les appareils déclenchent alors périodiquement un rafraîchissement plus complet.</p>
+      <p>Cette logique est directement liée à la <a href="/guides/latence-ecriture/">latence d’écriture</a> : le trait peut être affiché rapidement avec une stratégie optimisée, puis l’image finalisée ensuite.</p>
 
-      <h2 id="rafraichissement">Pourquoi les rafraîchissements sont visibles</h2>
-      <p>Déplacer les particules prend plus de temps que modifier les pixels d'un LCD ou d'un OLED. E Ink propose plusieurs modes de mise à jour ; certains sont plus rapides au prix d'un rendu ou d'une efficacité énergétique différents. Les traces résiduelles observées avant un rafraîchissement complet viennent de ce compromis de pilotage, pas d'une image "gravée" définitivement.</p>
+      <h2 id="couleur">Comment la couleur est-elle ajoutée à l’E Ink ?</h2>
+      <p>Il existe plusieurs approches. Kaleido 3 utilise une couche de filtres couleur au-dessus de l’encre monochrome. E Ink annonce 4 096 couleurs et une résolution de 300 ppp en noir et blanc contre 150 ppp en couleur. D’autres technologies E Ink gèrent la couleur différemment et ne doivent pas être assimilées automatiquement à Kaleido.</p>
+      <p>La couche couleur modifie le compromis optique : la lecture de texte, les couleurs, l’éclairage frontal et le contraste doivent être évalués ensemble. C’est pourquoi une tablette couleur n’est pas simplement une tablette monochrome à laquelle on aurait ajouté des pixels rouges, verts et bleus comme sur un LCD.</p>
+      <p>Pour décider si ce compromis a une valeur pour vos documents, consultez <a href="/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/">couleur ou noir et blanc</a>.</p>
 
-      <h2 id="couleur">Comment obtient-on de la couleur ?</h2>
-      <p>E Ink commercialise plusieurs familles couleur. Kaleido utilise une approche différente de Gallery, et leurs caractéristiques ne doivent pas être mélangées. Dans les systèmes couleur à particules multiples, différentes particules chargées peuvent être positionnées pour produire les teintes visibles. Pour choisir un appareil, consultez les spécifications du modèle plutôt que de généraliser à partir du terme "E Ink couleur".</p>
+      <h2 id="lumiere">Écran réfléchissant et front light ne sont pas contradictoires</h2>
+      <p>L’ePaper est lisible grâce à la lumière réfléchie par sa surface, ce qui le rapproche visuellement d’un support imprimé. Certains appareils ajoutent toutefois un front light : des LED diffusent de la lumière au-dessus ou à travers une couche optique pour éclairer la surface. La lumière ne provient donc pas du même mécanisme que sur un écran LCD rétroéclairé.</p>
+      <p>Un appareil sans front light peut être excellent en plein jour mais nécessiter une lampe dans une pièce sombre. Un modèle avec éclairage offre plus de souplesse, au prix d’une consommation supplémentaire et d’une structure d’écran différente. Ce critère doit être relié à votre environnement d’utilisation.</p>
+      <p>Le <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a> permet de placer l’éclairage après les critères de fichiers et de workflow.</p>
 
-      <h2 id="suite">Ce que ce fonctionnement change pour l'utilisateur</h2>
-      <p>Il explique trois propriétés concrètes : une page reste visible sans rafraîchissement permanent, l'écran utilise la lumière ambiante, et les changements d'image sont moins immédiats que sur une tablette classique. Pour l'impact sur l'écriture, consultez <a href="/guides/latence-ecriture/">le guide sur la latence</a>.</p>
+      <h2 id="ecriture">Pourquoi l’écriture peut sembler rapide malgré l’E Ink</h2>
+      <p>La chaîne d’écriture comprend le stylet, le numériseur, le processeur, le logiciel de dessin, le contrôleur d’écran et la dalle. Les fabricants peuvent optimiser le rendu du trait pour n’actualiser qu’une zone ou utiliser une forme d’onde rapide. Le chiffre de rafraîchissement général de l’écran ne suffit donc pas à prédire la sensation du stylet.</p>
+      <p>reMarkable, BOOX, Supernote et d’autres fabricants appliquent leurs propres stratégies. Deux appareils utilisant de l’E Ink peuvent ainsi réagir différemment, notamment selon l’application et le mode sélectionné. Une mesure de latence n’est comparable que si le protocole est identique.</p>
+      <p>Cette distinction est développée dans <a href="/guides/latence-ecriture/">le guide dédié à la latence</a>.</p>
+
+      <h2 id="decision">Ce que ce fonctionnement change lors d’un achat</h2>
+      <p>Vous pouvez déduire trois règles. Premièrement, l’E Ink est particulièrement cohérent pour des contenus statiques. Deuxièmement, les performances de scroll ou vidéo ne doivent pas être extrapolées à partir de la seule puissance du processeur. Troisièmement, autonomie, latence et couleur sont des propriétés du système complet, pas de la couche d’encre isolée.</p>
+      <p>Pour passer de la technologie aux modèles, utilisez le <a href="/comparatifs/tablette-e-ink/">comparatif des tablettes E Ink</a> en gardant ces mécanismes comme grille de lecture.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://www.eink.com/tech/detail/FAQ" rel="noopener noreferrer">E Ink : microcapsules, Microcups et charges</a></li>
-        <li><a href="https://www.eink.com/tech/detail/Electronic_Ink_Film" rel="noopener noreferrer">E Ink : film d'encre et couches du module</a></li>
-        <li><a href="https://www.eink.com/tech/detail/Benefits" rel="noopener noreferrer">E Ink : bistabilité</a></li>
+        <li><a href="https://www.eink.com/tech/detail/How_it_works" rel="noopener noreferrer">E Ink : fonctionnement des particules chargées</a></li>
+        <li><a href="https://www.eink.com/brand/detail/Kaleido" rel="noopener noreferrer">E Ink : structure Kaleido et filtres couleur</a></li>
+        <li><a href="https://www.eink.com/brand/detail/Kaleido3" rel="noopener noreferrer">E Ink : Kaleido 3</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

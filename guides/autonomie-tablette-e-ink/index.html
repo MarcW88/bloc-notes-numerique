@@ -134,42 +134,53 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>L'E Ink réduit la consommation de l'écran lorsque l'image reste statique, mais l'autonomie réelle d'une tablette dépend surtout de ce que vous faites entre deux pages.</strong> Wi-Fi, éclairage, synchronisation, processeur, fréquence d'écriture et applications rendent les promesses "en semaines" difficiles à comparer directement.</p>
+      <p class="article-answer"><strong>L’autonomie d’une tablette E Ink ne se résume pas à « plusieurs semaines ».</strong> L’écran consomme très peu lorsqu’une image reste fixe, mais le Wi-Fi, l’éclairage frontal, le processeur, les applications, la synchronisation et les rafraîchissements rapides peuvent changer fortement le résultat. Comparez donc les autonomies avec un scénario d’usage, pas uniquement avec la capacité de batterie ou une promesse fabricant.</p>
 
-      <h2 id="bistabilite">Pourquoi l'E Ink peut consommer peu à l'affichage</h2>
-      <p>E Ink décrit ses écrans comme bistables : une image peut rester visible sans alimentation continue. L'énergie est principalement utilisée lors des changements d'image. Cette propriété favorise les usages de lecture statique, mais elle ne couvre qu'une partie de la consommation totale d'un appareil.</p>
+      <h2 id="ecran">Pourquoi l’écran E Ink peut économiser beaucoup d’énergie</h2>
+      <p>Une image ePaper peut rester affichée sans être redessinée en continu. L’énergie est surtout consommée lorsqu’un changement d’état est nécessaire. Lire une page pendant une minute est donc très différent d’utiliser une interface qui défile constamment. Cette propriété permet à de nombreux appareils E Ink de viser des durées entre charges plus longues que les tablettes classiques.</p>
+      <p>Mais l’écran n’est qu’un composant. Une tablette moderne contient un processeur, du stockage, du Wi-Fi, parfois Bluetooth, un front light et des services de synchronisation. Sur un modèle Android, les applications en arrière-plan peuvent également augmenter la consommation.</p>
+      <p>Pour comprendre le rôle spécifique de la dalle, consultez <a href="/guides/encre-electronique-fonctionnement/">le fonctionnement de l’encre électronique</a>.</p>
 
-      <h2 id="facteurs">Ce qui réduit l'autonomie</h2>
-      <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Facteur</th><th>Pourquoi il compte</th></tr></thead>
-        <tbody>
-          <tr><td>Éclairage frontal</td><td>les LED consomment tant qu'elles sont allumées</td></tr>
-          <tr><td>Wi-Fi et cloud</td><td>synchronisation et transferts sollicitent réseau et processeur</td></tr>
-          <tr><td>Écriture fréquente</td><td>le trait oblige l'écran et le système à actualiser souvent</td></tr>
-          <tr><td>Applications Android</td><td>certaines tâches sollicitent davantage CPU, mémoire et réseau</td></tr>
-          <tr><td>Rafraîchissements rapides</td><td>les interactions fréquentes réduisent l'avantage du contenu statique</td></tr>
-        </tbody>
-      </table></div>
+      <h2 id="facteurs">Les facteurs qui font varier l’autonomie au quotidien</h2>
+      <p>Deux personnes utilisant le même appareil peuvent obtenir des résultats très différents. Un lecteur hors ligne avec front light éteint change peu souvent d’écran. Un utilisateur qui synchronise des PDF, utilise une application Android, navigue sur le web et choisit un rafraîchissement rapide sollicite beaucoup plus le système.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Facteur</th><th>Pourquoi il consomme</th><th>Comment le contrôler</th></tr></thead><tbody>
+        <tr><td>Wi-Fi / cloud</td><td>transferts et synchronisations</td><td>désactiver lorsque inutile</td></tr>
+        <tr><td>Front light</td><td>LED d’éclairage</td><td>réduire l’intensité</td></tr>
+        <tr><td>Rafraîchissement rapide</td><td>plus de mises à jour</td><td>réserver aux apps qui en ont besoin</td></tr>
+        <tr><td>Applications Android</td><td>CPU, réseau et tâches de fond</td><td>limiter les apps actives</td></tr>
+        <tr><td>Écriture intensive</td><td>numériseur + rafraîchissements fréquents</td><td>normal, à intégrer au scénario</td></tr>
+      </tbody></table></div>
+      <p>Il ne s’agit pas de désactiver toutes les fonctions pour atteindre un record. Le but est de savoir lesquelles vous utiliserez réellement afin d’interpréter une autonomie annoncée dans un contexte comparable au vôtre.</p>
 
-      <h2 id="semaines">Pourquoi "plusieurs semaines" ne suffit pas</h2>
-      <p>Une autonomie annoncée en semaines dépend d'un scénario : durée quotidienne d'utilisation, nombre de pages, éclairage, Wi-Fi et veille. Deux fabricants peuvent annoncer la même durée avec des hypothèses différentes. Sans protocole commun, convertir ces chiffres en classement est trompeur.</p>
+      <h2 id="fabricants">Pourquoi les annonces fabricants ne sont pas directement comparables</h2>
+      <p>Les fabricants n’emploient pas nécessairement les mêmes protocoles. reMarkable annonce par exemple jusqu’à deux semaines pour le reMarkable 2, mais cette valeur appartient à ses conditions d’utilisation. Une autre marque peut annoncer une durée avec un autre mélange de lecture, écriture, Wi-Fi ou éclairage.</p>
+      <p>La capacité en mAh ne résout pas le problème. Une batterie plus grande alimente parfois un processeur plus puissant, un écran couleur, un front light ou des modes rapides. Comparer 3 700 mAh à 3 000 mAh ne permet donc pas de déduire directement laquelle durera plus longtemps.</p>
+      <p>Traitez les annonces comme des repères propres à chaque produit, puis cherchez des tests indépendants utilisant un protocole explicite si l’autonomie est un critère critique.</p>
 
-      <h2 id="protocole">Comment comparer proprement deux modèles</h2>
-      <ol>
-        <li>Fixez une durée quotidienne d'écriture et de lecture.</li>
-        <li>Utilisez le même niveau d'éclairage ou désactivez-le.</li>
-        <li>Gardez le Wi-Fi dans le même état.</li>
-        <li>Notez la fréquence de synchronisation.</li>
-        <li>Comparez la baisse de batterie sur plusieurs jours plutôt qu'une seule session.</li>
-      </ol>
-      <p>Sans test direct, utilisez l'autonomie annoncée comme repère interne à une gamme et concentrez votre décision sur les fonctions vérifiables.</p>
+      <h2 id="couleur-android">Couleur, Android et rafraîchissement rapide changent le profil énergétique</h2>
+      <p>Une tablette E Ink couleur ou Android peut offrir davantage de fonctions, mais ces fonctions rendent le scénario plus proche d’une tablette polyvalente. Les modèles BOOX avec Android, Google Play et modes de rafraîchissement avancés peuvent utiliser plus souvent le processeur et le réseau qu’un e-note spécialisé restant sur un carnet statique.</p>
+      <p>Cela ne signifie pas qu’Android « a une mauvaise autonomie ». Cela signifie qu’il permet des usages qui consomment davantage. Si vous installez email, navigateur et outils collaboratifs, l’appareil n’est plus utilisé comme une liseuse traditionnelle.</p>
+      <p>Le guide <a href="/guides/ecosysteme-ouvert-ou-ferme/">écosystème ouvert ou fermé</a> aide à déterminer si cette polyvalence justifie le compromis pour votre travail.</p>
 
-      <h2 id="decision">Quand l'autonomie doit-elle décider ?</h2>
-      <p>Elle devient prioritaire si vous travaillez loin d'une prise pendant plusieurs jours. Pour un usage de bureau, un mauvais flux de fichiers ou un écran inadapté pénalisera souvent davantage que quelques recharges supplémentaires. Replacez donc l'autonomie dans la méthode générale pour <a href="/guides/choisir-bloc-notes-numerique/">choisir un bloc-notes numérique</a>.</p>
+      <h2 id="scenario">Construisez votre propre scénario de comparaison</h2>
+      <p>Définissez une journée type : nombre d’heures d’écriture, de lecture, usage du front light, synchronisations et applications. Demandez ensuite si l’appareil doit tenir une journée, une semaine de travail ou un voyage sans chargeur. Ce seuil est plus utile qu’une recherche du maximum absolu.</p>
+      <ol><li>Notez le nombre d’heures d’écran actif par jour.</li><li>Indiquez si le Wi-Fi reste connecté en permanence.</li><li>Ajoutez l’éclairage frontal et son niveau habituel.</li><li>Listez les applications tierces éventuelles.</li><li>Fixez la fréquence de recharge que vous acceptez.</li></ol>
+      <p>Une personne qui peut charger au bureau chaque vendredi n’a pas besoin du même compromis qu’un voyageur qui part dix jours sans prise disponible. L’autonomie doit donc être évaluée comme une contrainte logistique.</p>
+
+      <h2 id="preserver">Comment préserver l’autonomie sans dégrader l’usage</h2>
+      <p>Désactivez surtout ce qui ne sert pas. Couper le Wi-Fi pendant plusieurs heures de lecture, réduire l’éclairage dans une pièce déjà lumineuse et éviter un mode de rafraîchissement ultra-rapide dans une application statique sont des optimisations logiques. Fermer des applications Android inutiles peut également réduire les tâches en arrière-plan.</p>
+      <p>En revanche, ne sacrifiez pas une fonction essentielle uniquement pour atteindre une durée théorique. Si la synchronisation est au cœur de votre travail, gardez-la et intégrez sa consommation dans votre décision. Une autonomie réaliste avec vos fonctions actives vaut plus qu’un record obtenu en mode minimal.</p>
+      <p>Pour replacer l’autonomie parmi les autres critères, revenez au <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a>.</p>
+
+      <h2 id="decision">La règle de décision</h2>
+      <p>Ne comparez ni les semaines annoncées ni les mAh isolément. Comparez la capacité de l’appareil à tenir votre intervalle de recharge habituel avec les fonctions que vous utiliserez réellement. Si deux modèles dépassent déjà largement ce seuil, donnez davantage de poids aux fichiers, à l’écran et au logiciel.</p>
+      <p>Si l’autonomie devient un critère éliminatoire, utilisez le <a href="/comparatifs/tablette-e-ink/">comparatif des tablettes E Ink</a> uniquement avec des données dont le protocole ou les conditions sont clairement indiqués.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://www.eink.com/tech/detail/Benefits" rel="noopener noreferrer">E Ink : bistabilité et consommation de l'affichage</a></li>
-        <li><a href="https://www.eink.com/tech/detail/How_it_works" rel="noopener noreferrer">E Ink : modes de rafraîchissement</a></li>
+        <li><a href="https://www.eink.com/tech/detail/How_it_works" rel="noopener noreferrer">E Ink : principe bistable</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/About-reMarkable-2" rel="noopener noreferrer">reMarkable : batterie et autonomie annoncée</a></li>
+        <li><a href="https://shop.boox.com/products/go103gen2" rel="noopener noreferrer">BOOX : batterie, Android et caractéristiques du Go 10.3 Gen II</a></li>
+        <li><a href="https://support.supernote.com/en_US/faq" rel="noopener noreferrer">Supernote : ressources d’autonomie et batterie</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

@@ -1,9 +1,9 @@
-name: Regenerate guide cluster
+name: Regenerate and quality-check guide cluster
 
 on:
   push:
     branches:
-      - refresh-all-guides
+      - raise-guide-quality
   workflow_dispatch:
 
 permissions:
@@ -13,10 +13,10 @@ jobs:
   regenerate-guides:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout branch
+      - name: Checkout current branch
         uses: actions/checkout@v4
         with:
-          ref: refresh-all-guides
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -24,18 +24,28 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Wire guide content into generator
+      - name: Wire price-standard content into generator
         run: |
           python - <<'PY'
           from pathlib import Path
           path = Path('_generate.py')
           text = path.read_text(encoding='utf-8')
-          marker = '}\n\nfor path, title, desc in GUIDES:'
-          replacement = '}\n\nfrom guide_content_extra import GUIDE_CONTENT_EXTRA\nGUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)\n\nfor path, title, desc in GUIDES:'
-          if 'GUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)' not in text:
-              if marker not in text:
-                  raise SystemExit('Could not find GUIDE_CONTENT insertion point')
-              text = text.replace(marker, replacement, 1)
+          anchor = "from guide_content_extra import GUIDE_CONTENT_EXTRA\nGUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)\n"
+          quality = anchor + """
+
+          from guide_content_quality_choice import GUIDE_CONTENT_QUALITY_CHOICE
+          from guide_content_quality_tech import GUIDE_CONTENT_QUALITY_TECH
+          from guide_content_quality_cloud import GUIDE_CONTENT_QUALITY_CLOUD
+          from guide_content_quality_workflows import GUIDE_CONTENT_QUALITY_WORKFLOWS
+          GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_CHOICE)
+          GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_TECH)
+          GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_CLOUD)
+          GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_WORKFLOWS)
+          """
+          if 'GUIDE_CONTENT_QUALITY_CHOICE' not in text:
+              if anchor not in text:
+                  raise SystemExit('Could not find GUIDE_CONTENT_EXTRA anchor')
+              text = text.replace(anchor, quality, 1)
               path.write_text(text, encoding='utf-8')
           PY
 
@@ -51,26 +61,32 @@ jobs:
           failures=[]
           for page in sorted((root/'guides').glob('*/index.html')):
               html=page.read_text(encoding='utf-8')
-              if '<!-- Contenu à rédiger -->' in html:
+              m=re.search(r'<article\b[^>]*class="[^"]*content-main[^"]*"[^>]*>(.*?)</article>', html, re.S|re.I)
+              if not m:
+                  failures.append(f'{page}: article content-main absent')
                   continue
-              for href in re.findall(r'href="(/[^"]+)"', html):
+              article=m.group(1)
+              for href in re.findall(r'href="(/[^"]+)"', article):
                   if href.startswith('//') or '#' in href or '?' in href:
                       continue
                   target=root/href.lstrip('/')
                   if target.is_dir():
                       target=target/'index.html'
                   if not target.exists():
-                      failures.append(f'{page}: broken internal link {href}')
+                      failures.append(f'{page}: broken contextual link {href}')
           if failures:
               print('\n'.join(failures))
               raise SystemExit(1)
           print('PASS: contextual internal targets exist')
           PY
 
-      - name: Generate briefs and QA reports
+      - name: Enforce price-guide structural quality floor
+        run: python validate_guide_quality.py
+
+      - name: Generate evidence-based QA reports
         run: python generate_guide_metadata.py
 
-      - name: Verify all guide pages are still noindex
+      - name: Verify all guide pages remain noindex
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -84,14 +100,14 @@ jobs:
           print('PASS: all guide pages remain noindex,follow')
           PY
 
-      - name: Commit generated guide batch
+      - name: Commit regenerated quality batch
         run: |
           git config user.name "Marc Williame"
           git config user.email "146358493+MarcW88@users.noreply.github.com"
-          git add _generate.py guide_content_extra.py guides/ .content/briefs/ .content/reviews/
+          git add _generate.py guides/ .content/reviews/
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
-            git commit -m "content: regenerate and validate full guide cluster"
-            git push origin refresh-all-guides
+            git commit -m "content: regenerate guides at price-standard quality"
+            git push origin HEAD:${{ github.ref_name }}
           fi

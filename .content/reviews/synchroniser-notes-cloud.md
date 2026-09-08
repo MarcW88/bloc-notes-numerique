@@ -1,113 +1,86 @@
-# Rapport de contrôle avant publication
+# Rapport de contrôle — standard guide Prix
 
 ```yaml
 url: /guides/synchroniser-notes-cloud/
-slug: synchroniser-notes-cloud
 reviewed_at: 2026-09-08
-final_status: PASS
+structural_quality_gate: PASS
 content_status: DRAFT_READY
 indexing_status: noindex
+quality_reference: /guides/prix-bloc-notes-numerique/
+page_role_in_standard: must meet price-guide quality floor
 ```
 
-## 1. Content refresh
+## 1. Profondeur sémantique mesurable
 
-- Niveau : new.
-- Brief comparé au contenu final : PASS.
-- Valeur ajoutée : définir une source de vérité pour éviter doublons et fausse sync bidirectionnelle.
-- Réécriture totale évitée pour les contenus existants ; contenu neuf construit depuis le brief pour les nouvelles pages.
+- Contenu utile hors navigation et hors section Sources : **953 mots**.
+- H2 substantiels : **7**.
+- Tableaux : **1**.
+- Les sections trop courtes, mono-paragraphe non développé ou tableaux sans contexte sont bloquants dans `validate_guide_quality.py`.
 
-## 2. Search intent
+### Détail par section
 
-- Requête/topic : `synchroniser notes cloud tablette E Ink`.
-- Intention : distinguer synchronisation, import et export cloud.
-- Fonction de page distincte des comparatifs : PASS.
+- `Ne confondez pas synchronisation et export vers le cloud` — 137 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+- `Les cinq questions à poser à n’importe quel cloud` — 134 mots ; 2 paragraphe(s) ; 1 tableau(x) ; 0 liste(s).
+- `reMarkable : cloud maison et intégrations tierces ont des rôles différents` — 107 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+- `BOOX et Supernote offrent plus d’une méthode de transfert` — 132 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+- `La synchronisation crée aussi un risque de conflits` — 129 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+- `Cloud et sauvegarde ne sont pas synonymes` — 117 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+- `La checklist avant de choisir une intégration cloud` — 69 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
 
-## 3. Affiliate value
+## 2. Maillage interne
 
-N/A — guide explicatif/tutoriel ; aucune recommandation commerciale forcée.
+- Liens internes contextuels : **7**.
+- Cibles uniques : **7**.
 
-## 4. Fact-check
+- `/guides/bloc-notes-numerique-avec-ou-sans-abonnement/`
+- `/guides/bloc-notes-numerique-dropbox/`
+- `/guides/bloc-notes-numerique-google-drive/`
+- `/guides/bloc-notes-numerique-onedrive/`
+- `/guides/ecosysteme-ouvert-ou-ferme/`
+- `/guides/exporter-notes/`
+- `/guides/transfert-notes-vers-ordinateur/`
 
-- Sources primaires/officielles utilisées : 5.
-- Prix, mesures de latence, autonomie réelle et expérience directe non inventés.
-- Fonctions variables qualifiées par modèle/génération lorsque nécessaire.
-- Statut : PASS.
+Le gate exige au minimum 4 liens contextuels et 3 cibles distinctes, sauf modification explicite du standard.
 
-## 5. Natural writing
+## 3. Sources et factualité
 
-- Intro répond directement à la question.
-- Formulations promotionnelles, superlatifs non prouvés et conclusions de remplissage évités.
-- Statut : PASS.
+- Sources externes officielles identifiables : **5**.
+- Les fonctions variables sont rédigées avec leurs marques, générations ou conditions lorsque celles-ci sont nécessaires à la précision.
+- Aucune expérience directe, mesure propriétaire ou résultat de test n'est déduit automatiquement par ce script.
+- Le fact-check éditorial reste une passe distincte : la présence d'une source n'est pas, à elle seule, une preuve que toute affirmation est correcte.
 
-## 6. Internal linking
+## 4. Content refresh / conservation
 
-- Les liens servent une prochaine étape du cluster.
-- Aucun quota de liens appliqué.
-- Validation des cibles réalisée après génération du site.
-- Statut : PASS sous réserve du contrôle automatisé de chemins ci-dessous.
+- Pour les anciens guides, les angles utiles ont été conservés lorsque cohérents avec le nouveau standard ; l'enrichissement porte sur contexte, exemples, limites, entités et prochaine étape.
+- Pour les pages initialement vides, le contenu est construit depuis le brief et non depuis un simple gabarit H2.
+- La page Prix reste la référence de densité et de valeur décisionnelle, sans imposer une longueur artificiellement identique à chaque tutoriel.
 
-## 7. Humanizer
+## 5. Natural writing / Humanizer / General writing
 
-- Contenu visible relu : réponse initiale, titres, tableaux, listes et conclusion.
-- Faits, incertitudes, noms propres et sources préservés.
-- Patterns de cadence mécanique et vocabulaire promotionnel corrigés.
-- Statut : PASS.
+Ces passes ont été appliquées pendant la réécriture éditoriale mais **ne sont pas déclarées PASS par déduction automatique**. Le script contrôle uniquement des signaux structurels observables. La validation humaine finale doit encore vérifier le rythme, les répétitions, les transitions et le ton dans le rendu.
 
-## 8. General writing
+## 6. Anti-AI-slop
 
-- Chaque H2 répond à une sous-question distincte ; transitions courtes ; pas de répétition finale.
-- Statut : PASS.
+Le gate structurel bloque le principal défaut du précédent lot : H2 très courts, tableaux sans explication et maillage quasi absent. Il ne prétend pas détecter l'origine d'un texte. Toute formulation générique ou mécanique relevée lors de la lecture finale doit être corrigée avant publication.
 
-## 9. Anti-AI-slop
+## 7. SEO / GEO
 
-- Contrôle de spécificité : la page contient des mécanismes, limites, formats ou procédures propres au sujet.
-- Pas de faux témoignage, règle de trois décorative ni vocabulaire de vente interchangeable.
-- Statut : PASS.
+- Une réponse initiale autonome est exigée par le quality gate.
+- Les H2 doivent couvrir des sous-questions distinctes et suffisamment développées.
+- Les tableaux doivent être introduits et interprétés.
+- Les entités et sources sont explicites dans le corps lorsqu'elles soutiennent une décision ou un mécanisme.
+- Le maillage dirige vers des guides, usages, comparatifs ou pages marques selon l'étape suivante du lecteur.
 
-## 10. SEO drift
+## 8. Technique
 
-- Brief, intention, entités, sources et liens conservés jusqu'à la version finale.
-- Pas de glissement vers une page de classement produit.
-- Statut : PASS.
+- `noindex,follow` : **PASS**.
+- HTML généré depuis `_generate.py` et les modules de contenu, pas modifié uniquement à la main dans les pages générées.
+- Les liens internes sont validés séparément dans le workflow CI.
 
-## 11. SEO technique
+## 9. Blockers observés
 
-- H1 : 1.
-- H2 : 6.
-- `noindex,follow` : PASS.
-- Placeholder : absent.
-- HTML généré depuis `_generate.py` + `guide_content_extra.py` : attendu.
-
-## 12. SEO éditorial
-
-- Réponse initiale présente : PASS.
-- Section Sources : PASS.
-- Sujet principal et variantes naturelles sans keyword stuffing : PASS.
-
-## 13. GEO
-
-- Réponse autonome, entités nommées, tableaux/procédures interprétables et sources identifiables : PASS.
-
-## 14. Editorial QA
-
-- Intent : PASS
-- Original value : PASS
-- Factuality : PASS
-- Natural language : PASS
-- SEO preservation : PASS
-- User usefulness : PASS
-
-## 15. Lecture en ordre rendu
-
-- Ordre du HTML généré contrôlé de haut en bas ; template et CSS non modifiés par ce lot.
-- Parité de contenu mobile/desktop : même HTML source.
-- Prévisualisation visuelle humaine finale reste requise avant statut `PUBLISHABLE`.
-
-## Contrôle automatique
-
-- Nombre de mots de la page complète : 608 (navigation comprise, utilisé seulement comme signal technique).
-- Résultat : aucun blocker automatique.
+- Aucun blocker du quality gate.
 
 ## Verdict
 
-`PASS` — contenu en `DRAFT_READY`, maintenu en `noindex`. Le statut `PUBLISHABLE` exige encore validation humaine explicite.
+**PASS structurel — DRAFT_READY.** Ce verdict signifie que la page atteint le plancher de profondeur défini à partir du guide Prix. Il ne remplace pas la validation humaine finale et n'autorise ni retrait du `noindex`, ni publication, ni déploiement.
