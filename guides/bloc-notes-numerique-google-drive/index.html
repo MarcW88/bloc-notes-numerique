@@ -134,40 +134,54 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>Google Drive est utilisable avec plusieurs familles de bloc-notes numériques, mais pas toujours comme une synchronisation bidirectionnelle.</strong> reMarkable, BOOX, certains Kobo, Supernote et les Kindle Scribe sortis en 2025 ou après proposent désormais des formes d'accès, d'import ou d'export vers Google Drive.</p>
+      <p class="article-answer"><strong>Google Drive peut être intégré à plusieurs bloc-notes numériques, mais l’expression « compatible Google Drive » couvre des fonctions très différentes.</strong> Selon l’appareil, vous pouvez importer un fichier, exporter une copie, synchroniser certains dossiers ou utiliser une application Android. Vérifiez surtout si vos annotations reviennent automatiquement dans le fichier d’origine — ce n’est pas toujours le cas.</p>
 
-      <h2 id="comparaison">Google Drive selon l'écosystème</h2>
-      <div class="table-wrapper"><table class="comp-table">
-        <thead><tr><th>Écosystème</th><th>Fonction documentée</th><th>À retenir</th></tr></thead>
-        <tbody>
-          <tr><td>reMarkable</td><td>parcourir, copier depuis Drive et envoyer des fichiers vers Drive</td><td>intégration distincte du cloud natif reMarkable</td></tr>
-          <tr><td>BOOX</td><td>stockage tiers intégré, téléchargement et envoi de documents</td><td>plusieurs comptes et services peuvent coexister</td></tr>
-          <tr><td>Kobo compatibles</td><td>ajout de PDF/EPUB non protégés depuis Drive</td><td>fonction limitée à certains modèles</td></tr>
-          <tr><td>Supernote</td><td>synchronisation de dossiers sélectionnés</td><td>Google Drive peut être choisi comme service de sync</td></tr>
-          <tr><td>Kindle Scribe 2025+</td><td>import de fichiers et partage de copies vers Drive</td><td>les annotations ne modifient pas automatiquement le fichier source</td></tr>
-        </tbody>
-      </table></div>
+      <h2 id="compatibilite">Quatre niveaux de compatibilité avec Google Drive</h2>
+      <p>Une intégration peut se limiter à choisir un fichier dans Drive, tandis qu’une autre expose des dossiers dans la bibliothèque de la tablette. Les modèles Android peuvent aussi installer l’application Drive elle-même. Pour comparer, séparez accès, import, export et synchronisation.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Niveau</th><th>Ce que cela permet</th><th>Question à poser</th></tr></thead><tbody>
+        <tr><td>Accès</td><td>voir les dossiers/fichiers</td><td>tous les formats sont-ils visibles ?</td></tr>
+        <tr><td>Import</td><td>copier un document sur la tablette</td><td>le fichier reste-t-il lié à l’original ?</td></tr>
+        <tr><td>Export</td><td>envoyer une copie vers Drive</td><td>annotations et nom sont-ils conservés ?</td></tr>
+        <tr><td>Synchronisation</td><td>maintenir des dossiers à jour</td><td>est-elle bidirectionnelle et automatique ?</td></tr>
+      </tbody></table></div>
+      <p>Cette grille évite un raccourci fréquent : la présence du logo Drive ne prouve pas qu’un document est coédité entre tablette et ordinateur. Dans de nombreux workflows, la tablette télécharge une copie puis en renvoie une autre.</p>
 
-      <h2 id="attention">Le piège principal : croire que le PDF source se met à jour</h2>
-      <p>Sur Kindle Scribe, Amazon précise explicitement qu'un fichier importé depuis Drive est copié sur l'appareil ; après annotation, il faut renvoyer une nouvelle copie vers le cloud. Cette distinction existe aussi dans d'autres écosystèmes selon le type de fichier. Avant l'achat, vérifiez si votre workflow exige une vraie synchronisation ou seulement un aller-retour de documents.</p>
+      <h2 id="remarkable">reMarkable : Drive comme intégration de fichiers</h2>
+      <p>reMarkable permet de connecter Google Drive puis d’importer et d’exporter des fichiers depuis la tablette. Sa documentation actuelle décrit aussi l’upload vers Drive depuis « My files ». Cette intégration est utile pour faire entrer un PDF de travail et renvoyer ensuite une version annotée.</p>
+      <p>Il faut toutefois distinguer cette intégration du cloud reMarkable, qui synchronise les fichiers entre la tablette et les applications compagnon. Drive n’est pas simplement le stockage natif de la tablette : c’est un service tiers utilisé comme source et destination.</p>
+      <p>Si vous utilisez aussi Connect, consultez <a href="/guides/bloc-notes-numerique-avec-ou-sans-abonnement/">avec ou sans abonnement</a> pour séparer clairement les deux rôles.</p>
 
-      <h2 id="workflow">Un workflow simple et robuste</h2>
-      <ol>
-        <li>Conservez un dossier Drive dédié aux documents à annoter.</li>
-        <li>Importez ou ouvrez une copie sur la tablette.</li>
-        <li>Après annotation, exportez vers un dossier distinct "annotés".</li>
-        <li>N'écrasez le fichier source que si vous êtes certain du comportement de l'écosystème.</li>
-      </ol>
+      <h2 id="kindle">Kindle Scribe 2025+ : import et retour d’une copie</h2>
+      <p>Amazon a ajouté une connexion Google Drive aux Kindle Scribe sortis en 2025 ou après. L’utilisateur peut importer certains fichiers compatibles depuis Drive, les annoter puis envoyer une copie vers son cloud. Amazon précise que les annotations réalisées sur le Scribe ne se synchronisent pas automatiquement dans le fichier original : il faut uploader une nouvelle copie.</p>
+      <p>Pour les carnets, les modèles compatibles peuvent partager vers Drive sous plusieurs formes, dont PDF manuscrit, texte converti ou PDF recherchable selon les options. Le workflow est donc plus riche qu’un simple import, mais il reste fondé sur des copies explicites.</p>
+      <p>Si Kindle est au cœur de votre choix, le <a href="/comparatifs/kindle-scribe-vs-remarkable/">comparatif Kindle Scribe vs reMarkable</a> aide à comparer deux philosophies d’intégration.</p>
 
-      <h2 id="choix">Google Drive est-il un critère éliminatoire ?</h2>
-      <p>Oui si votre organisation centralise tous les documents dans Drive. Mais vérifiez le détail : accès aux fichiers, formats acceptés, comptes professionnels et sens de la synchronisation. Pour comparer avec d'autres services, consultez <a href="/guides/synchroniser-notes-cloud/">le guide de synchronisation cloud</a>.</p>
+      <h2 id="kobo">Kobo : Drive pour les fichiers non protégés sur certains modèles</h2>
+      <p>Kobo documente Google Drive sur plusieurs liseuses, dont Kobo Elipsa et Elipsa 2E. Le service permet notamment d’ajouter des EPUB ou PDF non protégés depuis Drive. Kobo précise qu’un contenu protégé par DRM suit un autre parcours, généralement via Adobe Digital Editions.</p>
+      <p>Cette nuance est importante pour une bibliothèque professionnelle ou académique : « le PDF est dans Drive » ne signifie pas qu’il sera forcément importable et annotable de la même manière. Vérifiez la protection du fichier et la version logicielle de la liseuse.</p>
+      <p>Le guide <a href="/guides/formats-fichiers-compatibles/">formats compatibles</a> explique pourquoi DRM, format et méthode de transfert doivent être vérifiés ensemble.</p>
+
+      <h2 id="boox-supernote">BOOX et Supernote : Drive peut s’intégrer à une logique de dossiers</h2>
+      <p>BOOX permet de lier Google Drive dans son stockage cloud tiers. Les documents peuvent être téléchargés vers la bibliothèque et certains fichiers copiés vers le cloud. Sur les modèles Android, l’application Google Drive peut également être installée, ce qui ajoute une autre méthode avec un comportement différent de l’intégration système.</p>
+      <p>Supernote documente Google Drive comme option de synchronisation de dossiers, aux côtés de Supernote Cloud et Dropbox. La logique de sélection des dossiers à synchroniser est donc plus proche d’une organisation persistante que d’un simple bouton d’export.</p>
+      <p>Plus il existe de méthodes, plus il est important de choisir une méthode principale afin d’éviter les doublons. Le guide <a href="/guides/synchroniser-notes-cloud/">synchronisation cloud</a> propose une grille commune.</p>
+
+      <h2 id="workflow">Le workflow Google Drive à tester avant achat</h2>
+      <p>Créez un dossier de test dans Drive avec un PDF simple, un PDF lourd et un fichier protégé si vous en utilisez. Importez le premier, annotez-le, exportez-le puis ouvrez la copie sur ordinateur. Vérifiez le nom, l’emplacement, la présence des annotations et la différence avec le fichier source.</p>
+      <ol><li>Connectez le compte exact que vous utiliserez.</li><li>Importez un fichier représentatif.</li><li>Ajoutez écriture et surlignage.</li><li>Renvoyez le document vers Drive.</li><li>Contrôlez s’il s’agit d’une copie ou d’un sync.</li></ol>
+      <p>Si votre organisation impose Microsoft plutôt que Google, comparez ensuite avec <a href="/guides/bloc-notes-numerique-onedrive/">OneDrive</a>. Si vous cherchez une solution plus neutre entre systèmes, examinez aussi <a href="/guides/bloc-notes-numerique-dropbox/">Dropbox</a>.</p>
+
+      <h2 id="decision">Quand Google Drive doit-il devenir un critère éliminatoire ?</h2>
+      <p>Drive est éliminatoire si tous vos documents arrivent par ce service et que vous refusez les transferts manuels. Mais ne cochez pas seulement « oui/non » : exigez le niveau de compatibilité qui correspond à votre flux. Un import/export de copie peut être parfait pour de la correction ; une équipe qui attend une source synchronisée aura besoin d’un autre fonctionnement.</p>
+      <p>Replacez ensuite l’intégration dans le <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a>, car un cloud compatible ne compense pas une mauvaise taille d’écran ou un export inadapté.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://support.remarkable.com/articles/Knowledge/About-my-remarkable-com" rel="noopener noreferrer">reMarkable : intégration Google Drive</a></li>
-        <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : Google Drive intégré</a></li>
-        <li><a href="https://help.kobo.com/hc/en-us/articles/15335985512983-Add-books-to-your-eReader-using-Google-Drive" rel="noopener noreferrer">Kobo : Google Drive</a></li>
-        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : Google Drive</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : Google Drive et export</a></li>
         <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN" rel="noopener noreferrer">Amazon : import depuis Google Drive</a></li>
+        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL" rel="noopener noreferrer">Amazon : partage vers Google Drive</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/15335985512983-Add-books-to-your-eReader-using-Google-Drive" rel="noopener noreferrer">Kobo : Google Drive et fichiers non protégés</a></li>
+        <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : Google Drive intégré</a></li>
+        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : synchronisation Google Drive</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

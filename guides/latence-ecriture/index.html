@@ -134,32 +134,52 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>La latence d'écriture est le délai entre le mouvement du stylet et l'apparition du trait à l'écran.</strong> Elle ne dépend pas d'un seul chiffre : numériseur, traitement du stylet, logiciel de dessin, mode de rafraîchissement et écran participent tous à la sensation finale.</p>
+      <p class="article-answer"><strong>La latence d’écriture est le délai entre le mouvement du stylet et l’apparition visible du trait, mais elle ne dépend pas d’un seul composant.</strong> Numériseur, traitement du stylet, application, contrôleur d’écran, mode de rafraîchissement et dalle participent tous au résultat. C’est pourquoi un chiffre annoncé en millisecondes ne doit être comparé entre appareils que si le protocole de mesure est identique.</p>
 
-      <h2 id="chaine">La latence est une chaîne complète</h2>
-      <p>Le stylet doit d'abord être détecté, sa position interprétée, le trait calculé puis affiché. Un fabricant peut optimiser une partie de cette chaîne sans modifier la technologie d'encre elle-même. C'est pourquoi deux appareils utilisant de l'E Ink peuvent donner une sensation d'écriture différente.</p>
+      <h2 id="chaine">Du stylet à l’encre : la latence est une chaîne complète</h2>
+      <p>Lorsque vous déplacez le stylet, le numériseur détecte sa position et éventuellement la pression ou l’inclinaison. Le logiciel transforme ces données en trait, puis le contrôleur décide quelles zones de l’écran doivent être mises à jour. Enfin, la dalle E Ink change d’état. Chaque étape peut ajouter un délai ou être optimisée.</p>
+      <p>Cette chaîne explique pourquoi deux appareils utilisant une dalle proche peuvent avoir des sensations différentes. Le fabricant peut réduire le délai logiciel, prédire une partie du mouvement, limiter la zone rafraîchie ou utiliser une forme d’onde rapide. À l’inverse, une application tierce mal optimisée peut ralentir la sensation même sur un appareil puissant.</p>
+      <p>Le mécanisme physique du dernier maillon est détaillé dans <a href="/guides/encre-electronique-fonctionnement/">le fonctionnement de l’encre électronique</a>.</p>
 
-      <h2 id="eink">Le rafraîchissement E Ink n'est qu'un maillon</h2>
-      <p>E Ink indique que ses écrans disposent de plusieurs modes de mise à jour, avec des temps et compromis différents. Les modes rapides servent aux interactions plus fréquentes ; les rafraîchissements complets réduisent les résidus visuels. Pour l'écriture, les fabricants utilisent donc des stratégies de rendu qui privilégient la réactivité du trait avant le nettoyage complet de la page.</p>
+      <h2 id="mesures">Pourquoi les chiffres de millisecondes sont difficiles à comparer</h2>
+      <p>Une mesure de latence dépend du point de départ et du point d’arrivée. Mesure-t-on le contact du stylet, le mouvement initial, le premier pixel visible ou le trait final nettoyé ? Une caméra à 60 images/s ne donne pas la même résolution temporelle qu’une caméra à haute vitesse. La version logicielle, le stylet et l’application modifient aussi le résultat.</p>
+      <p>reMarkable publie par exemple une valeur de latence pour certains modèles, mais cette donnée décrit son propre système et son protocole. Elle ne doit pas être placée dans un classement face à une mesure indépendante d’un autre appareil comme s’il s’agissait de la même expérience.</p>
+      <p>Une bonne comparaison distingue donc les valeurs officielles, les tests tiers avec protocole publié et l’expérience subjective. Sans protocole commun, quelques millisecondes d’écart donnent une précision trompeuse.</p>
 
-      <h2 id="mesures">Pourquoi un chiffre de latence ne suffit pas</h2>
-      <p>Un nombre annoncé par un fabricant ou mesuré par un test n'est comparable que si la méthode est identique : point de départ du chronométrage, stylet, application, fréquence d'échantillonnage, caméra et version logicielle. Sans protocole commun, classer des appareils sur quelques millisecondes donne une précision trompeuse.</p>
+      <h2 id="refresh">Le rafraîchissement de l’écran n’est qu’un maillon</h2>
+      <p>E Ink utilise différents modes de mise à jour. Un mode rapide peut faire apparaître plus vite une modification locale, tandis qu’un rafraîchissement complet nettoie davantage les résidus visuels. Pour l’écriture, les fabricants cherchent souvent à faire apparaître le trait rapidement puis à finaliser la page ensuite.</p>
+      <p>Le ghosting que vous observez après un trait ou un déplacement peut donc provenir du compromis choisi pour privilégier la vitesse. Un appareil qui nettoie systématiquement chaque zone pourrait être plus propre mais moins réactif. La sensation d’écriture résulte de cet équilibre, pas d’une course vers un chiffre unique.</p>
+      <p>Les tablettes Android E Ink ajoutent parfois plusieurs modes de rafraîchissement selon l’application. Le même appareil peut alors sembler différent dans l’app Notes intégrée et dans une application tierce.</p>
 
-      <h2 id="verifier">Ce qu'il faut vérifier en pratique</h2>
-      <ul>
-        <li>le trait suit-il suffisamment votre main pour votre vitesse d'écriture ?</li>
-        <li>les hachures, petits caractères et signatures restent-ils contrôlables ?</li>
-        <li>les rafraîchissements complets interrompent-ils votre rythme ?</li>
-        <li>l'expérience reste-t-elle correcte dans l'application que vous utiliserez réellement ?</li>
-      </ul>
-      <p>Ces questions nécessitent idéalement un essai direct. Sans test contrôlé, il est plus rigoureux de documenter le fonctionnement et les modes disponibles que de promettre une sensation "papier".</p>
+      <h2 id="sensation">La latence ressentie n’est pas la seule dimension du confort d’écriture</h2>
+      <p>Deux appareils ayant une latence proche peuvent donner des sensations différentes à cause de l’épaisseur entre la pointe et l’image, du frottement de surface, de la précision du numériseur, du poids du stylet ou du comportement de la gomme. Il faut donc éviter de faire de la latence un synonyme de « sensation papier ».</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Facteur</th><th>Ce que vous ressentez</th><th>Comment le tester</th></tr></thead><tbody>
+        <tr><td>Latence</td><td>trait qui suit plus ou moins vite la main</td><td>écriture rapide et hachures</td></tr>
+        <tr><td>Distance pointe/image</td><td>impression d’écrire au-dessus du trait</td><td>petits caractères et précision</td></tr>
+        <tr><td>Friction</td><td>glisse ou résistance</td><td>long paragraphe</td></tr>
+        <tr><td>Précision</td><td>écart entre pointe et trait</td><td>bords, diagonales, signatures</td></tr>
+        <tr><td>Rafraîchissement</td><td>ghosting ou clignotement</td><td>effacer, déplacer et tourner des pages</td></tr>
+      </tbody></table></div>
+      <p>Ce tableau explique pourquoi un test en magasin doit reproduire votre écriture. Tracer trois lignes lentes ne révèle pas les mêmes limites qu’un cours pris à grande vitesse ou un croquis avec nombreuses corrections.</p>
 
-      <h2 id="decision">Quand la latence doit-elle devenir un critère prioritaire ?</h2>
-      <p>Elle compte surtout si vous écrivez vite, dessinez, faites des schémas détaillés ou signez fréquemment. Pour de la lecture et des annotations ponctuelles, les contraintes de fichiers et d'export peuvent être plus importantes. Retrouvez ces critères dans le guide <a href="/guides/choisir-bloc-notes-numerique/">comment choisir son bloc-notes numérique</a>.</p>
+      <h2 id="usages">Quand la latence devient-elle vraiment prioritaire ?</h2>
+      <p>Elle compte davantage pour l’écriture rapide, le dessin, les schémas fins et les signatures. Dans ces usages, un retard visible peut perturber le contrôle du geste. Pour de la lecture et quelques annotations marginales, une différence modeste de latence pèse souvent moins que la taille d’écran, le format de fichier ou la qualité de l’export.</p>
+      <p>Un étudiant qui écrit tout un cours à la main doit donc donner davantage de poids à la réactivité qu’un lecteur qui surligne quelques passages. Un professionnel qui signe des documents doit vérifier la précision aux bords autant que la vitesse du trait.</p>
+      <p>Pour remettre ce critère parmi les autres, consultez <a href="/guides/choisir-bloc-notes-numerique/">comment choisir son bloc-notes numérique</a> et <a href="/usages/prise-de-notes-etudiant/">la prise de notes pour les études</a>.</p>
+
+      <h2 id="protocole">Un protocole simple pour tester la latence vous-même</h2>
+      <p>Si vous pouvez essayer un appareil, ne cherchez pas à produire une mesure scientifique sans équipement. Cherchez plutôt des situations où le délai vous gênerait. Utilisez la même application et le même mode de rafraîchissement pendant tout le test, puis observez le comportement à plusieurs vitesses.</p>
+      <ol><li>Écrivez une phrase à votre vitesse normale.</li><li>Écrivez plus vite que d’habitude pour faire apparaître une limite éventuelle.</li><li>Tracez de petites lettres et des diagonales près des bords.</li><li>Faites des hachures et des corrections successives.</li><li>Effacez et déplacez des éléments pour observer le rafraîchissement.</li></ol>
+      <p>Si vous comparez deux appareils, répétez exactement la même séquence. Cette méthode ne produit pas un nombre universel, mais elle répond à la question qui compte : le système suit-il suffisamment votre geste pour votre usage ?</p>
+
+      <h2 id="decision">La règle de décision</h2>
+      <p>Traitez la latence comme un critère d’usage, pas comme un score absolu. Plus vous écrivez vite et dessinez, plus elle doit peser. Pour des annotations occasionnelles, donnez davantage de poids aux fichiers, à la taille et à l’export. Et si un fabricant annonce un chiffre, vérifiez le protocole avant de le comparer.</p>
+      <p>Pour passer aux appareils après ce diagnostic, le <a href="/comparatifs/meilleur-bloc-notes-numerique/">comparatif des bloc-notes numériques</a> peut être lu avec cette grille plutôt qu’avec une simple colonne « ms ».</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://www.eink.com/tech/detail/How_it_works" rel="noopener noreferrer">E Ink : modes et temps de mise à jour</a></li>
-        <li><a href="https://www.eink.com/tech/detail/FAQ" rel="noopener noreferrer">E Ink : fonctionnement des modules</a></li>
+        <li><a href="https://www.eink.com/tech/detail/How_it_works" rel="noopener noreferrer">E Ink : fonctionnement de l’affichage</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/About-reMarkable-2" rel="noopener noreferrer">reMarkable : exemple de latence annoncée sur reMarkable 2</a></li>
+        <li><a href="https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes" rel="noopener noreferrer">BOOX : outils d’écriture et rafraîchissement</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">

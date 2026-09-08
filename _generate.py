@@ -1252,6 +1252,16 @@ GUIDE_CONTENT = {
 from guide_content_extra import GUIDE_CONTENT_EXTRA
 GUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)
 
+
+from guide_content_quality_choice import GUIDE_CONTENT_QUALITY_CHOICE
+from guide_content_quality_tech import GUIDE_CONTENT_QUALITY_TECH
+from guide_content_quality_cloud import GUIDE_CONTENT_QUALITY_CLOUD
+from guide_content_quality_workflows import GUIDE_CONTENT_QUALITY_WORKFLOWS
+GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_CHOICE)
+GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_TECH)
+GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_CLOUD)
+GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_WORKFLOWS)
+
 for path, title, desc in GUIDES:
     crumbs = breadcrumb(("Guides", "/guides/"), title)
     write(path + "index.html", content_page(title, desc, path, crumbs, "Guide", GUIDE_CONTENT.get(path, "")))

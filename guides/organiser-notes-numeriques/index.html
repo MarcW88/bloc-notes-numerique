@@ -134,35 +134,55 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>Organisez vos notes autour de la manière dont vous les retrouverez, pas autour du nombre de dossiers disponibles.</strong> Une structure simple combine quelques dossiers stables, des titres explicites, des liens ou mots-clés lorsque l'appareil les prend en charge, et une règle d'archivage.</p>
+      <p class="article-answer"><strong>Pour organiser des notes numériques, construisez une structure assez simple pour être utilisée tous les jours : peu de dossiers, une convention de noms, un moyen de retrouver les sujets et une règle d’archivage.</strong> Les tags, liens, OCR et recherche ne remplacent pas cette structure ; ils servent à retrouver l’information à l’intérieur. Une bonne organisation doit aussi survivre à l’export et à un éventuel changement de marque.</p>
 
-      <h2 id="structure">Commencez avec peu de dossiers</h2>
-      <p>Créez d'abord les catégories qui correspondent à des contextes durables : travail, études, personnel ou projets majeurs. Évitez de reproduire une arborescence de serveur avec de nombreux niveaux ; sur une tablette, la recherche et les titres deviennent vite plus rapides que la navigation profonde.</p>
+      <h2 id="probleme">Le vrai problème n’est pas de classer, mais de retrouver</h2>
+      <p>Une arborescence parfaite au moment de la création peut devenir inutilisable six mois plus tard si vous ne vous souvenez plus où une note a été rangée. À l’inverse, tout mettre dans un dossier unique et compter sur la recherche fonctionne mal si les titres sont vagues ou si l’OCR ne reconnaît pas votre écriture.</p>
+      <p>Définissez donc votre méthode à partir des questions que vous vous poserez : « où est la réunion avec ce client ? », « quelles notes concernent ce projet ? », « où ai-je écrit ce terme ? ». Dossiers, titres, tags et liens doivent répondre à ces recherches réelles.</p>
+      <p>Si la recherche manuscrite est centrale, consultez <a href="/guides/ocr-manuscrit/">OCR et reconnaissance manuscrite</a> pour vérifier ce que l’appareil indexe réellement.</p>
 
-      <h2 id="nommage">Utilisez des titres qui se trient naturellement</h2>
-      <p>Une convention comme "2026-09-08 - Client - Réunion" facilite le tri et évite les carnets appelés "Notes 3". Pour un projet long, gardez le nom du projet stable puis ajoutez le type de note ou la date.</p>
+      <h2 id="structure">Commencez avec peu de niveaux de dossiers</h2>
+      <p>Une structure simple résiste mieux au temps. Par exemple : Travail / Personnel / Références, puis projets ou domaines actifs. Évitez de créer huit niveaux avant d’avoir des notes à y ranger. Chaque décision de classement supplémentaire augmente le risque que vous laissiez finalement le fichier dans une boîte d’entrée générique.</p>
+      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Niveau</th><th>Exemple</th><th>Rôle</th></tr></thead><tbody>
+        <tr><td>1</td><td>Travail</td><td>grand contexte</td></tr>
+        <tr><td>2</td><td>Client A / Projet X</td><td>unité de travail</td></tr>
+        <tr><td>3</td><td>Réunions / Recherche / Livrables</td><td>type seulement si utile</td></tr>
+      </tbody></table></div>
+      <p>Si vous avez besoin de plus de niveaux, demandez-vous si un tag ou un lien ne répond pas mieux au besoin. Une note peut appartenir à un dossier principal tout en étant retrouvée par plusieurs mots-clés.</p>
 
-      <h2 id="fonctions">Exploitez les fonctions natives utiles</h2>
-      <p>Les outils varient selon l'écosystème. BOOX propose des tags sur le contenu manuscrit. Supernote permet notamment titres, mots-clés, liens et digests. reMarkable propose des tags pour organiser les documents. Kindle Scribe récent peut rechercher dans l'écriture manuscrite de ses carnets dans plusieurs langues. La bonne méthode utilise ces fonctions uniquement si elles accélèrent réellement la récupération.</p>
+      <h2 id="noms">Une convention de titres produit plus de valeur qu’un classement complexe</h2>
+      <p>Les titres doivent contenir les informations que vous connaissez au moment de créer la note. Une convention comme « 2026-09-08 – Client – Sujet » rend le tri chronologique et la recherche plus prévisibles. Pour un étudiant : « Cours – Chapitre – Date ». Pour un journal : la date seule peut suffire.</p>
+      <p>Évitez « Notes », « Réunion », « Brouillon 2 ». Ces noms forcent à ouvrir les fichiers un par un et se dégradent encore lors de l’export. Une convention stable facilite aussi la sauvegarde sur ordinateur, Drive ou OneDrive.</p>
+      <p>Pour la sortie des données, voir <a href="/guides/exporter-notes/">exporter ses notes</a> et <a href="/guides/transfert-notes-vers-ordinateur/">les transférer vers l’ordinateur</a>.</p>
 
-      <h2 id="archive">Séparez travail actif et archive</h2>
-      <p>Une fois un projet terminé, exportez les documents importants en PDF ou texte, placez-les dans votre stockage de référence, puis archivez ou supprimez les brouillons inutiles de l'appareil. Cela limite les résultats de recherche et réduit la dépendance au format natif du fabricant.</p>
+      <h2 id="tags-liens">Tags, liens et favoris servent des fonctions différentes</h2>
+      <p>Un tag ajoute une catégorie transversale : « urgent », « idée », « examen ». Un lien relie deux contenus précis : une réunion vers un projet ou une note de synthèse vers ses sources. Un favori ou accès rapide sert à ouvrir souvent un petit nombre de documents. Les mélanger crée de la redondance.</p>
+      <p>Les écosystèmes diffèrent sur ces fonctions. Supernote propose notamment des liens, mots-clés et accès rapides. D’autres systèmes utilisent davantage des dossiers et la recherche. Ne choisissez pas une méthode d’organisation qui dépend d’une fonction absente de votre appareil.</p>
+      <p>Si votre organisation repose sur une fonctionnalité propriétaire, prévoyez ce qui restera après export. Un PDF conserve la page, pas nécessairement les liens entre carnets.</p>
 
-      <h2 id="routine">Une routine de cinq minutes</h2>
-      <ol>
-        <li>Renommez les carnets créés dans la journée.</li>
-        <li>Déplacez-les dans leur dossier principal.</li>
-        <li>Ajoutez un tag ou mot-clé seulement si vous savez comment vous le rechercherez.</li>
-        <li>Exportez les éléments qui doivent vivre ailleurs.</li>
-        <li>Archivez les projets terminés une fois par mois.</li>
-      </ol>
-      <p>Pour sécuriser l'archive, consultez <a href="/guides/exporter-notes/">exporter ses notes</a> et <a href="/guides/synchroniser-notes-cloud/">synchroniser ses notes dans le cloud</a>.</p>
+      <h2 id="recherche">La recherche complète la structure mais ne doit pas être la seule stratégie</h2>
+      <p>La recherche de titres fonctionne partout où les fichiers sont nommés. La recherche dans le texte tapé est généralement fiable. La recherche manuscrite dépend de la reconnaissance et du type de note. Supernote permet par exemple de rechercher l’écriture reconnue dans certaines notes à reconnaissance en temps réel.</p>
+      <p>Si votre écriture contient beaucoup d’abréviations ou de termes techniques, testez la reconnaissance avant de supprimer toute structure de dossiers. L’objectif est d’avoir plusieurs chemins de retour vers une note : titre, dossier et éventuellement recherche ou tag.</p>
+      <p>Le guide <a href="/guides/convertir-notes-manuscrites-en-texte/">conversion des notes manuscrites</a> aide à décider si vous avez besoin de texte éditable ou seulement d’une recherche.</p>
+
+      <h2 id="inbox">Utilisez une boîte d’entrée, mais videz-la régulièrement</h2>
+      <p>Une Inbox ou dossier « À classer » réduit la friction lorsque vous devez noter vite. Son intérêt disparaît si elle devient le lieu définitif de toutes les notes. Fixez un moment de revue : fin de semaine, fin de projet ou après chaque réunion importante.</p>
+      <ol><li>Renommez les nouvelles notes avec votre convention.</li><li>Déplacez-les dans le projet principal.</li><li>Ajoutez un tag uniquement s’il sert à une recherche transversale.</li><li>Exportez ou archivez les contenus terminés.</li><li>Supprimez les brouillons devenus inutiles.</li></ol>
+      <p>Cette routine est plus importante que le nombre de fonctions de classement proposées par le fabricant. Un système simple entretenu bat une taxonomie sophistiquée abandonnée après deux semaines.</p>
+
+      <h2 id="archive">Séparez les notes actives des archives</h2>
+      <p>Un carnet terminé n’a pas besoin d’occuper le même espace mental qu’un projet en cours. Déplacez les archives dans un dossier dédié et, pour les contenus importants, exportez périodiquement une copie standard sur votre ordinateur ou votre cloud. Cela réduit la dépendance à la structure native du fabricant.</p>
+      <p>Si vous changez d’appareil, vous pourrez alors conserver au minimum une archive lisible avec des noms cohérents. Les fonctions avancées — liens, calques, objets — peuvent être perdues, mais votre système documentaire reste compréhensible.</p>
+      <p>Le guide <a href="/guides/synchroniser-notes-cloud/">synchronisation cloud</a> permet de décider ce qui doit être synchronisé et ce qui mérite une sauvegarde indépendante.</p>
+
+      <h2 id="decision">Une méthode simple à adopter dès aujourd’hui</h2>
+      <p>Créez trois niveaux maximum, choisissez une convention de titre, gardez une Inbox temporaire et définissez un rythme d’archivage. Ajoutez ensuite tags et liens seulement lorsqu’un besoin réel apparaît. Testez enfin votre système en cherchant une note vieille d’un mois sans parcourir toute l’arborescence.</p>
+      <p>Si l’organisation devient un critère d’achat, comparez les fonctions natives dans le <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a> plutôt que de vous fier à un simple nombre de dossiers ou tags.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://help.boox.com/hc/en-us/articles/10991847539732-Tag-System" rel="noopener noreferrer">BOOX : système de tags</a></li>
-        <li><a href="https://support.supernote.com/en_US/introduction-to-the-toolbar" rel="noopener noreferrer">Supernote : titres, mots-clés et liens</a></li>
-        <li><a href="https://support.supernote.com/en_US/what-is-digest-and-what-does-it-do" rel="noopener noreferrer">Supernote : Digest</a></li>
-        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TXEroxFZdxObrcesZO" rel="noopener noreferrer">Amazon : recherche Kindle Scribe</a></li>
+        <li><a href="https://support.supernote.com/global-search-using-categorization" rel="noopener noreferrer">Supernote : recherche manuscrite et catégories</a></li>
+        <li><a href="https://support.supernote.com/Tools-Features/using-the-new-sidebar" rel="noopener noreferrer">Supernote : accès rapides et fichiers récents</a></li>
+        <li><a href="https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes" rel="noopener noreferrer">BOOX : tags et recherche dans les notes</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">
