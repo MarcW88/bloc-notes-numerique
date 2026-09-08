@@ -11,10 +11,11 @@ REQUIRED_DATA = {
     "process_flow": "steps",
     "ecosystem_map": "layers",
     "checklist": "items",
-    "decision_matrix": "rows",
     "cost_breakdown": "items",
     "size_comparison": "sizes",
 }
+
+FORBIDDEN_TYPES = {"decision_matrix", "table", "comparison_table"}
 
 
 def main() -> None:
@@ -31,7 +32,9 @@ def main() -> None:
 
     failures = []
     visual_type = spec.get("type")
-    if visual_type not in REQUIRED_DATA:
+    if visual_type in FORBIDDEN_TYPES:
+        failures.append(f"table-like visual type forbidden: {visual_type}")
+    elif visual_type not in REQUIRED_DATA:
         failures.append(f"unsupported visual type: {visual_type}")
 
     output = root / spec["output"]
@@ -59,8 +62,6 @@ def main() -> None:
 
     if visual_type == "decision_tree" and len(spec.get("edges", [])) < 1:
         failures.append("decision tree has no edges")
-    if visual_type == "decision_matrix" and len(spec.get("columns", [])) < 2:
-        failures.append("decision matrix has too few columns")
 
     if failures:
         for failure in failures:
