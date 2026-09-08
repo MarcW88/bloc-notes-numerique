@@ -1,44 +1,98 @@
 {
-  "type": "decision_matrix",
-  "title": "Écosystème ouvert ou fermé : où se situe le compromis ?",
-  "subtitle": "L'ouverture apporte de la flexibilité ; la spécialisation peut réduire la complexité.",
-  "alt": "Matrice comparant un écosystème spécialisé et un écosystème plus ouvert.",
-  "caption": "Choisissez en fonction des applications et transferts réellement nécessaires.",
-  "columns": [
-    "Critère",
-    "Écosystème spécialisé",
-    "Écosystème plus ouvert"
+  "type": "decision_tree",
+  "title": "Ouvert ou fermé : partez de vos contraintes logicielles",
+  "subtitle": "Le bon choix dépend surtout des applications et transferts indispensables.",
+  "alt": "Arbre de décision pour choisir entre un écosystème spécialisé et un écosystème plus ouvert selon les applications et intégrations nécessaires.",
+  "caption": "Le visuel complète le tableau : il montre le chemin de décision plutôt que de répéter les mêmes critères.",
+  "nodes": [
+    {
+      "id": "start",
+      "x": 390,
+      "y": 110,
+      "w": 420,
+      "h": 92,
+      "style": "primary",
+      "lines": [
+        "Avez-vous besoin",
+        "d’applications tierces précises ?"
+      ]
+    },
+    {
+      "id": "apps_yes",
+      "x": 90,
+      "y": 300,
+      "w": 400,
+      "h": 105,
+      "style": "muted",
+      "lines": [
+        "Oui",
+        "vérifiez leur disponibilité",
+        "et leurs droits d’accès"
+      ]
+    },
+    {
+      "id": "apps_no",
+      "x": 710,
+      "y": 300,
+      "w": 400,
+      "h": 105,
+      "style": "muted",
+      "lines": [
+        "Non",
+        "un workflow spécialisé",
+        "peut suffire"
+      ]
+    },
+    {
+      "id": "integrations",
+      "x": 70,
+      "y": 530,
+      "w": 440,
+      "h": 125,
+      "style": "accent",
+      "lines": [
+        "Priorité : ouverture",
+        "apps, cloud, partage",
+        "et intégrations tierces"
+      ]
+    },
+    {
+      "id": "simplicity",
+      "x": 690,
+      "y": 530,
+      "w": 440,
+      "h": 125,
+      "style": "accent",
+      "lines": [
+        "Priorité : simplicité",
+        "workflow cohérent",
+        "et moins de réglages"
+      ]
+    }
   ],
-  "rows": [
-    [
-      "Applications",
-      "Sélection limitée",
-      "Plus de choix"
-    ],
-    [
-      "Simplicité",
-      "Souvent plus directe",
-      "Plus de réglages"
-    ],
-    [
-      "Intégrations",
-      "Parcours définis",
-      "Plus de possibilités"
-    ],
-    [
-      "Dépendance",
-      "Services du fabricant",
-      "Services tiers possibles"
-    ],
-    [
-      "À privilégier si",
-      "workflow stable",
-      "besoins logiciels variés"
-    ]
+  "edges": [
+    {
+      "from": "start",
+      "to": "apps_yes",
+      "label": "Oui"
+    },
+    {
+      "from": "start",
+      "to": "apps_no",
+      "label": "Non"
+    },
+    {
+      "from": "apps_yes",
+      "to": "integrations"
+    },
+    {
+      "from": "apps_no",
+      "to": "simplicity"
+    }
   ],
-  "id": "ecosysteme-ouvert-ou-ferme-decision-matrix",
+  "id": "ecosysteme-ouvert-ou-ferme-decision-tree",
   "page_url": "/guides/ecosysteme-ouvert-ou-ferme/",
-  "output": "assets/guides/ecosysteme-ouvert-ou-ferme/ecosysteme-ouvert-ou-ferme-decision-matrix.svg",
+  "output": "assets/guides/ecosysteme-ouvert-ou-ferme/ecosysteme-ouvert-ou-ferme-decision-tree.svg",
   "canvas": {
     "width": 1200,
     "height": 700

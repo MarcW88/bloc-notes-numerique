@@ -1,50 +1,117 @@
 {
-  "type": "decision_matrix",
-  "title": "Liseuse ou bloc-notes numérique : partez de la tâche dominante",
-  "subtitle": "Les appareils hybrides rapprochent les deux usages sans les rendre identiques.",
-  "alt": "Matrice comparant liseuse, appareil hybride avec stylet et bloc-notes numérique spécialisé.",
-  "caption": "La meilleure catégorie dépend du poids relatif de la lecture, de l'écriture et de l'export.",
-  "columns": [
-    "Besoin",
-    "Liseuse",
-    "Hybride",
-    "Bloc-notes"
+  "type": "decision_tree",
+  "title": "Liseuse, hybride ou bloc-notes : partez de l’activité dominante",
+  "subtitle": "Le tableau détaille les fonctions ; ce schéma montre la bifurcation de choix.",
+  "alt": "Arbre de décision entre liseuse, appareil hybride avec stylet et bloc-notes numérique selon la place de la lecture, de l’écriture et de l’export.",
+  "caption": "Utilisez le tableau pour les détails et ce schéma uniquement pour le chemin de décision.",
+  "nodes": [
+    {
+      "id": "start",
+      "x": 390,
+      "y": 100,
+      "w": 420,
+      "h": 90,
+      "style": "primary",
+      "lines": [
+        "Votre activité dominante",
+        "est-elle la lecture ?"
+      ]
+    },
+    {
+      "id": "read_yes",
+      "x": 80,
+      "y": 280,
+      "w": 400,
+      "h": 105,
+      "style": "muted",
+      "lines": [
+        "Oui",
+        "les notes servent-elles",
+        "surtout à commenter ?"
+      ]
+    },
+    {
+      "id": "read_no",
+      "x": 720,
+      "y": 280,
+      "w": 400,
+      "h": 105,
+      "style": "muted",
+      "lines": [
+        "Non",
+        "écriture, PDF et export",
+        "structurent le travail"
+      ]
+    },
+    {
+      "id": "reader",
+      "x": 40,
+      "y": 520,
+      "w": 300,
+      "h": 120,
+      "style": "accent",
+      "lines": [
+        "Liseuse",
+        "lecture d’abord",
+        "annotations secondaires"
+      ]
+    },
+    {
+      "id": "hybrid",
+      "x": 450,
+      "y": 520,
+      "w": 300,
+      "h": 120,
+      "style": "accent",
+      "lines": [
+        "Hybride",
+        "lecture + stylet",
+        "réellement équilibrés"
+      ]
+    },
+    {
+      "id": "notebook",
+      "x": 860,
+      "y": 520,
+      "w": 300,
+      "h": 120,
+      "style": "accent",
+      "lines": [
+        "Bloc-notes",
+        "écriture, organisation",
+        "et export d’abord"
+      ]
+    }
   ],
-  "rows": [
-    [
-      "Lecture d'ebooks",
-      "Prioritaire",
-      "Prioritaire",
-      "Variable"
-    ],
-    [
-      "Carnets manuscrits",
-      "Secondaire",
-      "Présents",
-      "Prioritaires"
-    ],
-    [
-      "PDF de travail",
-      "Variable",
-      "Correct",
-      "Souvent central"
-    ],
-    [
-      "Organisation de notes",
-      "Limitée",
-      "Intermédiaire",
-      "Plus poussée"
-    ],
-    [
-      "Export",
-      "Selon l'écosystème",
-      "Selon l'écosystème",
-      "Critère central"
-    ]
+  "edges": [
+    {
+      "from": "start",
+      "to": "read_yes",
+      "label": "Oui"
+    },
+    {
+      "from": "start",
+      "to": "read_no",
+      "label": "Non"
+    },
+    {
+      "from": "read_yes",
+      "to": "reader",
+      "label": "Oui"
+    },
+    {
+      "from": "read_yes",
+      "to": "hybrid",
+      "label": "Non"
+    },
+    {
+      "from": "read_no",
+      "to": "notebook"
+    }
   ],
-  "id": "liseuse-ou-bloc-notes-numerique-decision-matrix",
+  "id": "liseuse-ou-bloc-notes-numerique-decision-tree",
   "page_url": "/guides/liseuse-ou-bloc-notes-numerique/",
-  "output": "assets/guides/liseuse-ou-bloc-notes-numerique/liseuse-ou-bloc-notes-numerique-decision-matrix.svg",
+  "output": "assets/guides/liseuse-ou-bloc-notes-numerique/liseuse-ou-bloc-notes-numerique-decision-tree.svg",
   "canvas": {
     "width": 1200,
     "height": 700
