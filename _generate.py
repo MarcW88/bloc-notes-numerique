@@ -225,8 +225,10 @@ def hub_page(title, desc, canonical, crumbs, intro, links):
 """
     return html_page(title, desc, crumbs, content, canonical)
 
-def content_page(title, desc, canonical, crumbs, page_type=""):
+def content_page(title, desc, canonical, crumbs, page_type="", body_html=""):
     type_badge = f'<span class="content-type type-{page_type.lower()}">{page_type}</span>' if page_type else ""
+    article_content = body_html.strip() if body_html else "<!-- Contenu à rédiger -->"
+    content_status = "Vérifié le 8 septembre 2026" if body_html else "Contenu en préparation"
     content = f"""
 <section class="page-hero">
   <div class="container">
@@ -235,14 +237,14 @@ def content_page(title, desc, canonical, crumbs, page_type=""):
     <p class="lead">{desc}</p>
     <div class="page-meta">
       <span class="update-tag">Mis à jour régulièrement</span>
-      <span class="page-meta-item">Contenu en préparation</span>
+      <span class="page-meta-item">{content_status}</span>
     </div>
   </div>
 </section>
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <!-- Contenu à rédiger -->
+      {article_content}
     </article>
     <aside class="content-sidebar">
       <div class="sidebar-box sidebar-toc">
@@ -876,9 +878,9 @@ write("/guides/index.html", hub_page(
 ))
 
 GUIDES = [
-    ("/guides/choisir-bloc-notes-numerique/", "Comment choisir son bloc-notes numérique ?", "Tous les critères essentiels pour bien choisir votre tablette E Ink de prise de notes."),
-    ("/guides/liseuse-ou-bloc-notes-numerique/", "Liseuse ou bloc-notes numérique — Quelle différence ?", "Liseuse ou tablette de prise de notes : comment choisir selon votre usage principal ?"),
-    ("/guides/tablette-classique-ou-tablette-e-ink/", "Tablette classique ou tablette E Ink — Laquelle choisir ?", "iPad ou tablette E Ink ? Notre comparaison honnête pour vous aider à décider."),
+    ("/guides/choisir-bloc-notes-numerique/", "Comment choisir son bloc-notes numérique selon son usage ?", "Choisissez un bloc-notes numérique selon vos documents, vos exports, votre usage du stylet, la taille d’écran et le coût total des accessoires à prévoir."),
+    ("/guides/liseuse-ou-bloc-notes-numerique/", "Liseuse ou bloc-notes numérique : quelles différences ?", "Comparez liseuse et bloc-notes numérique selon la lecture, l’écriture au stylet, les PDF, le format de l’appareil et les possibilités d’export de notes."),
+    ("/guides/tablette-classique-ou-tablette-e-ink/", "Tablette classique ou tablette E Ink : laquelle choisir ?", "Comparez tablette classique et tablette E Ink selon l’écriture, la lecture, la couleur, les applications, la vidéo et les contraintes d’export de fichiers."),
     ("/guides/taille-ecran-bloc-notes-numerique/", "Quelle taille d'écran pour un bloc-notes numérique ?", "A5, A4, 10 ou 13 pouces : notre guide pour choisir le bon format selon votre usage."),
     ("/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/", "Bloc-notes numérique couleur ou noir et blanc ?", "Faut-il investir dans un écran couleur E Ink ? Notre analyse objective."),
     ("/guides/bloc-notes-numerique-avec-ou-sans-abonnement/", "Bloc-notes numérique avec ou sans abonnement ?", "Les abonnements des tablettes E Ink valent-ils vraiment le coup ? Notre analyse."),
@@ -902,9 +904,175 @@ GUIDES = [
     ("/guides/imprimer-notes-numeriques/", "Imprimer ses notes numériques", "Comment imprimer les notes créées sur un bloc-notes numérique ?"),
 ]
 
+GUIDE_CONTENT = {
+    "/guides/choisir-bloc-notes-numerique/": """
+      <p class="article-answer"><strong>Pour choisir un bloc-notes numérique, partez de votre flux de travail.</strong> Repérez les documents que vous utilisez, leur destination après annotation et les services cloud indispensables. Vous pourrez ensuite comparer la taille de l’écran, le stylet et l’autonomie sans vous laisser guider par une fiche technique trop longue.</p>
+
+      <h2 id="questions">Les cinq questions à trancher avant l’achat</h2>
+      <ol>
+        <li><strong>Écrivez-vous surtout des notes libres ou annotez-vous des PDF ?</strong> Un carnet de réunion et un article scientifique au format A4 n’imposent pas la même surface d’écran.</li>
+        <li><strong>Où les notes doivent-elles arriver ?</strong> Listez les formats et destinations nécessaires : PDF, image, texte converti, ordinateur, Google Drive, OneDrive ou Dropbox.</li>
+        <li><strong>Avez-vous besoin d’applications tierces ?</strong> Un système volontairement limité réduit les distractions ; un appareil Android accepte davantage d’outils, avec plus de réglages et de complexité.</li>
+        <li><strong>Lisez-vous autant que vous écrivez ?</strong> L’accès aux livres, les formats pris en charge et la gestion des annotations varient fortement selon l’écosystème.</li>
+        <li><strong>Quel coût total acceptez-vous ?</strong> Ajoutez au prix de l’appareil le stylet, l’étui, les pointes et les éventuels services récurrents.</li>
+      </ol>
+
+      <h2 id="criteres">Les critères qui changent vraiment le choix</h2>
+      <div class="table-wrapper">
+        <table class="comp-table">
+          <thead><tr><th>Critère</th><th>À privilégier si…</th><th>Point à vérifier</th></tr></thead>
+          <tbody>
+            <tr><td>Taille d’écran</td><td>vous consultez de grands PDF ou écrivez côte à côte</td><td>dimensions réelles de la zone d’écriture, poids et encombrement</td></tr>
+            <tr><td>Éclairage</td><td>vous lisez souvent le soir ou dans une pièce sombre</td><td>présence d’un éclairage frontal et effet éventuel sur l’épaisseur</td></tr>
+            <tr><td>Couleur</td><td>vos schémas ou documents reposent sur des codes couleur</td><td>rendu plus discret que sur un écran LCD/OLED</td></tr>
+            <tr><td>Logiciel</td><td>vous avez un flux de travail précis</td><td>export, synchronisation, OCR, recherche et applications disponibles</td></tr>
+            <tr><td>Stylet</td><td>vous écrivez plusieurs heures par jour</td><td>stylet inclus, gomme, boutons, pointes et coût de remplacement</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>La fiche technique ne permet pas, à elle seule, de juger la sensation d’écriture. La latence perçue, le frottement de la pointe et le bruit dépendent du couple écran–stylet et des préférences de chacun. Sans essai direct, il est plus honnête de comparer les fonctions vérifiables que de promettre une sensation « identique au papier ».</p>
+
+      <h2 id="ecosysteme">Écosystème fermé ou tablette E Ink ouverte ?</h2>
+      <p>Un appareil spécialisé comme reMarkable concentre l’expérience sur les carnets, les documents et ses propres applications. Une tablette BOOX récente repose sur Android et peut intégrer Google Play, ce qui élargit le choix d’applications. Cette ouverture ne garantit toutefois pas que chaque application soit agréable sur un écran à rafraîchissement lent.</p>
+      <p>La compatibilité avec votre manière de travailler doit décider. Avant d’acheter, suivez un document pendant tout son parcours : réception, annotation, classement, export, puis ouverture sur l’ordinateur d’un collègue. Un blocage à l’une de ces étapes suffit à écarter le modèle.</p>
+
+      <h2 id="profils">Quel profil vous ressemble ?</h2>
+      <ul>
+        <li><strong>Réunions et concentration :</strong> recherchez une interface simple, une sortie PDF fiable et une organisation claire des carnets.</li>
+        <li><strong>Études et recherche :</strong> privilégiez un écran assez grand, l’annotation de PDF, la recherche et une méthode d’export exploitable sur ordinateur.</li>
+        <li><strong>Lecture dominante :</strong> vérifiez d’abord la librairie, les formats de livres et le confort de prise en main. Une liseuse avec stylet peut suffire.</li>
+        <li><strong>Applications et polyvalence :</strong> une tablette E Ink Android est plus flexible, mais demande davantage de configuration.</li>
+        <li><strong>Couleur et multimédia :</strong> si la fidélité des couleurs, la vidéo ou la navigation fluide sont prioritaires, une tablette classique reste généralement plus adaptée.</li>
+      </ul>
+
+      <h2 id="erreurs">Trois erreurs fréquentes</h2>
+      <p>La première erreur consiste à choisir sur l’autonomie annoncée. Les fabricants l’expriment souvent en semaines, alors que le Wi-Fi, l’éclairage, la fréquence d’écriture et la synchronisation modifient le résultat réel.</p>
+      <p>La deuxième consiste à confondre stockage et portabilité des notes. Beaucoup d’espace ne sert pas si les fichiers restent difficiles à sortir de l’écosystème.</p>
+      <p>Enfin, un modèle très polyvalent n’est pas toujours le plus pratique. Plus d’applications peut aussi apporter davantage de réglages et de distractions. Une fonction compte seulement si elle améliore un usage régulier.</p>
+
+      <h2 id="checklist">Checklist finale</h2>
+      <p>Avant la commande, notez vos trois tâches principales et vérifiez-les dans la documentation du modèle. Confirmez ensuite le format d’export, le service cloud, les accessoires inclus, l’éclairage, le poids et les conditions de l’abonnement éventuel. Si un seul de ces points est bloquant, éliminez le modèle avant de comparer les détails secondaires.</p>
+      <p>Pour poursuivre, consultez nos guides sur la <a href="/guides/taille-ecran-bloc-notes-numerique/">taille d’écran</a>, les <a href="/guides/formats-fichiers-compatibles/">formats compatibles</a> et le choix entre <a href="/guides/ecosysteme-ouvert-ou-ferme/">écosystème ouvert ou fermé</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2>
+      <ul class="source-list">
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable Support : caractéristiques du reMarkable 2</a></li>
+        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX : caractéristiques officielles du Go 10.3</a></li>
+        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo : annotation avec le Kobo Stylus</a></li>
+        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon : fonctions du Kindle Scribe</a></li>
+      </ul>
+    """,
+    "/guides/liseuse-ou-bloc-notes-numerique/": """
+      <p class="article-answer"><strong>Choisissez une liseuse si votre priorité est de lire ; choisissez un bloc-notes numérique si vous devez écrire régulièrement, organiser des carnets ou annoter des documents.</strong> Certains appareils hybrides savent faire les deux, mais leur orientation principale reste déterminante pour le confort quotidien.</p>
+
+      <h2 id="difference">La différence essentielle</h2>
+      <p>Une liseuse est conçue autour du livre numérique : bibliothèque, lecture prolongée, navigation dans un ouvrage et prise en main légère. Un bloc-notes numérique est organisé autour de la page de travail : carnets, stylet, classement, annotation et export.</p>
+      <p>Les deux familles peuvent utiliser un écran à encre électronique. Leur format physique, leur logiciel, leur stylet et la circulation des fichiers déterminent donc l’expérience quotidienne.</p>
+
+      <h2 id="tableau">Liseuse ou bloc-notes : comparaison rapide</h2>
+      <div class="table-wrapper">
+        <table class="comp-table">
+          <thead><tr><th>Besoin</th><th>Liseuse</th><th>Bloc-notes numérique</th></tr></thead>
+          <tbody>
+            <tr><td>Lire des romans</td><td>Usage central, format souvent plus léger</td><td>Possible, mais appareil plus grand</td></tr>
+            <tr><td>Prendre des notes longues</td><td>Limité ou secondaire selon le modèle</td><td>Usage central avec carnets et outils d’écriture</td></tr>
+            <tr><td>Annoter des PDF</td><td>Possible sur certains modèles</td><td>Généralement mieux adapté, surtout avec grand écran</td></tr>
+            <tr><td>Transport quotidien</td><td>Souvent plus compact</td><td>Plus encombrant en 10 pouces et au-delà</td></tr>
+            <tr><td>Exporter et partager</td><td>Dépend fortement de l’écosystème</td><td>Fonction importante, mais méthodes variables</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="hybrides">Les appareils hybrides changent-ils la réponse ?</h2>
+      <p>Oui, partiellement. Le Kindle Scribe et le Kobo Elipsa associent lecture et stylet. Kobo permet par exemple d’annoter des EPUB, des Kobo EPUB et des PDF non protégés avec les modèles compatibles. Le Kindle Scribe propose des carnets en plus de l’environnement Kindle. Ces appareils conviennent lorsque la lecture reste importante mais que l’écriture n’est plus occasionnelle.</p>
+      <p>Un hybride ne supprime pas les compromis. Vérifiez la taille, le poids, les formats acceptés, la manière d’écrire dans les livres et surtout l’export des annotations. La présence d’un stylet ne signifie pas que toutes les notes pourront être récupérées dans le format souhaité.</p>
+
+      <h2 id="choisir-liseuse">Choisissez plutôt une liseuse si…</h2>
+      <ul>
+        <li>vous lisez principalement des romans et peu de grands PDF ;</li>
+        <li>vous voulez tenir facilement l’appareil à une main ;</li>
+        <li>vos annotations restent liées aux livres ;</li>
+        <li>vous n’avez pas besoin de carnets complexes ou d’un flux de travail professionnel.</li>
+      </ul>
+
+      <h2 id="choisir-bloc-notes">Choisissez plutôt un bloc-notes numérique si…</h2>
+      <ul>
+        <li>l’écriture manuscrite est une activité quotidienne ;</li>
+        <li>vous travaillez sur des supports de cours, contrats ou articles en PDF ;</li>
+        <li>vous avez besoin de dossiers, modèles de pages, conversion en texte ou partage régulier ;</li>
+        <li>vous acceptez un format plus grand pour obtenir une surface d’écriture confortable.</li>
+      </ul>
+
+      <h2 id="decision">La méthode la plus simple pour décider</h2>
+      <p>Pendant une semaine, comptez les séances de lecture et d’écriture que remplacerait l’appareil. Si la lecture représente nettement la majorité et que vos notes sont brèves, commencez par une liseuse. Si vous remplissez plusieurs pages, annotez des documents ou devez envoyer vos notes à d’autres personnes, partez d’un bloc-notes numérique.</p>
+      <p>Si les deux usages sont équilibrés, comparez les hybrides sur une tâche complète plutôt que sur leur liste de fonctions : ouvrir votre livre ou PDF, écrire, retrouver l’annotation et l’exporter.</p>
+
+      <h2 id="sources">Sources consultées</h2>
+      <ul class="source-list">
+        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo : formats et modèles compatibles avec les annotations au stylet</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook" rel="noopener noreferrer">Kobo : utilisation des carnets intégrés</a></li>
+        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon : fonctions de lecture et de carnets du Kindle Scribe</a></li>
+      </ul>
+    """,
+    "/guides/tablette-classique-ou-tablette-e-ink/": """
+      <p class="article-answer"><strong>Une tablette E Ink convient mieux à la lecture et à l’écriture concentrées ; une tablette classique convient mieux aux applications, à la couleur, à la vidéo et aux interactions rapides.</strong> Commencez par les tâches indispensables : elles révèlent rapidement les compromis impossibles à accepter.</p>
+
+      <h2 id="ecrans">Deux technologies, deux rythmes d’utilisation</h2>
+      <p>Une tablette classique utilise un écran LCD ou OLED conçu pour afficher des animations, de la vidéo et des couleurs riches avec un rafraîchissement rapide. Un écran E Ink privilégie l’affichage de pages statiques ; ses changements d’écran sont plus lents et peuvent laisser des traces résiduelles jusqu’au rafraîchissement suivant.</p>
+      <p>Cette différence explique l’essentiel des usages. L’E Ink est cohérente pour lire, écrire et consulter des documents relativement statiques. Une tablette classique est plus adaptée dès que l’activité exige défilement rapide, vidéo, visioconférence, retouche d’image ou applications non optimisées.</p>
+
+      <h2 id="comparaison">Comparaison par usage</h2>
+      <div class="table-wrapper">
+        <table class="comp-table">
+          <thead><tr><th>Usage</th><th>Tablette E Ink</th><th>Tablette classique</th></tr></thead>
+          <tbody>
+            <tr><td>Écriture manuscrite</td><td>Interface souvent centrée sur le stylet</td><td>Très bonnes applications, sensation d’écran différente</td></tr>
+            <tr><td>Lecture longue</td><td>Page mate et usage spécialisé</td><td>Écran lumineux, très polyvalent</td></tr>
+            <tr><td>Couleur</td><td>Disponible mais plus atténuée</td><td>Couleurs plus riches et fidèles</td></tr>
+            <tr><td>Vidéo et animation</td><td>Peu adaptée</td><td>Usage normal</td></tr>
+            <tr><td>Applications</td><td>Choix limité ou expérience variable</td><td>Écosystèmes applicatifs complets</td></tr>
+            <tr><td>Autonomie</td><td>Souvent annoncée en semaines selon l’usage</td><td>Généralement pensée pour une recharge plus fréquente</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="eink">Quand une tablette E Ink est le meilleur outil</h2>
+      <p>Choisissez l’E Ink lorsque votre journée numérique doit surtout remplacer des cahiers et des documents papier. Elle est particulièrement cohérente pour les réunions, les cours, les brouillons, la lecture attentive et l’annotation de PDF. Son intérêt vient aussi de ses limites : moins de notifications et d’usages multimédias peuvent favoriser un environnement de travail plus calme.</p>
+      <p>Il faut cependant vérifier le logiciel. Certaines tablettes E Ink sont très spécialisées ; d’autres utilisent Android et donnent accès à Google Play. Même sur Android, une application conçue pour un écran classique peut présenter des animations, contrastes ou gestes peu adaptés à l’encre électronique.</p>
+
+      <h2 id="classique">Quand une tablette classique reste préférable</h2>
+      <p>Gardez une tablette LCD ou OLED si vous alternez fréquemment écriture, web, vidéo, présentations, messagerie et création visuelle. C’est également le choix le plus prudent lorsque votre travail dépend d’une application précise, d’une restitution fidèle des couleurs ou d’une navigation très fluide.</p>
+      <p>Une tablette classique n’empêche pas la prise de notes au stylet. Elle offre souvent des outils plus riches, mais aussi davantage de sollicitations. Le choix oppose donc une machine polyvalente à un outil volontairement spécialisé, pas une « bonne » à une « mauvaise » technologie.</p>
+
+      <h2 id="compromis">Les compromis à accepter avec l’E Ink</h2>
+      <ul>
+        <li>un rafraîchissement plus lent et parfois des traces résiduelles avant nettoyage de l’écran ;</li>
+        <li>des couleurs moins saturées sur les modèles couleur ;</li>
+        <li>une compatibilité applicative ou documentaire à vérifier modèle par modèle ;</li>
+        <li>un rapport équipement-prix difficile à comparer directement à celui d’une tablette classique.</li>
+      </ul>
+
+      <h2 id="test-decision">Un test de décision en trois questions</h2>
+      <ol>
+        <li>La vidéo, la visioconférence ou une application métier sont-elles indispensables ? Si oui, privilégiez une tablette classique.</li>
+        <li>La lecture et l’écriture représentent-elles l’essentiel de l’usage ? Si oui, examinez une tablette E Ink.</li>
+        <li>Hésitez-vous encore ? Vérifiez l’export et l’application la plus importante. Le premier blocage concret doit décider avant l’autonomie ou le design.</li>
+      </ol>
+      <p>Pour affiner le choix, consultez notre guide sur <a href="/guides/choisir-bloc-notes-numerique/">les critères d’un bloc-notes numérique</a> et celui consacré à <a href="/guides/tablette-e-ink/">la technologie E Ink</a>.</p>
+
+      <h2 id="sources">Sources consultées</h2>
+      <ul class="source-list">
+        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX : exemple officiel de tablette E Ink Android avec Google Play</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable : caractéristiques et autonomie annoncée du reMarkable 2</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360017763713-File-formats-your-Kobo-eReader-and-Kobo-Books-app-support" rel="noopener noreferrer">Kobo : formats pris en charge et limites liées aux DRM</a></li>
+      </ul>
+    """,
+}
+
 for path, title, desc in GUIDES:
     crumbs = breadcrumb(("Guides", "/guides/"), title)
-    write(path + "index.html", content_page(title, desc, path, crumbs, "Guide"))
+    write(path + "index.html", content_page(title, desc, path, crumbs, "Guide", GUIDE_CONTENT.get(path, "")))
 
 # ── BONS PLANS ────────────────────────────────────────────────────────────────
 write("/bons-plans/index.html", hub_page(
