@@ -36,7 +36,76 @@ Direction par défaut :
 - pas de faux screenshot ;
 - pas de copie approximative d'un modèle réel ;
 - ratio horizontal `16:9` ou `3:2` ;
-- `webp` en priorité.
+- `webp` ou `png`.
+
+## Génération API des images éditoriales
+
+Le script `scripts/generate_editorial_image.py` produit les manifests `asset_mode=editorial_image` via l'API Images OpenAI.
+
+Configuration par défaut :
+
+- endpoint : `POST /v1/images/generations` ;
+- modèle : `gpt-image-2` ;
+- qualité : `medium` ;
+- paysage : `1536x1024` ;
+- portrait : `1024x1536` ;
+- carré : `1024x1024`.
+
+Le script utilise uniquement la bibliothèque standard Python. Il accepte les réponses image encodées en base64 et les réponses contenant une URL temporaire.
+
+### Local
+
+Définir la clé sans jamais la versionner :
+
+```bash
+export OPENAI_API_KEY='...'
+```
+
+Dry-run sans appel API :
+
+```bash
+python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py --all --dry-run
+```
+
+Générer une seule image :
+
+```bash
+python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py \
+  .content/visuals/<slug>.json
+```
+
+Générer toutes les images éditoriales manquantes :
+
+```bash
+python tools/guide-visual-assets-workflow/scripts/generate_editorial_image.py --all
+```
+
+Ajouter `--overwrite` uniquement pour régénérer volontairement un asset déjà présent.
+
+### GitHub Actions
+
+Workflow : `.github/workflows/generate-editorial-guide-images.yml`.
+
+La génération réelle est **manuelle** via `workflow_dispatch` afin d'éviter des coûts API déclenchés par un simple push.
+
+Ajouter un repository secret nommé exactement :
+
+`OPENAI_API_KEY`
+
+Le workflow permet ensuite de choisir :
+
+- un `slug` précis ou `all` ;
+- la qualité `low`, `medium` ou `high` ;
+- la régénération d'un asset existant via `overwrite`.
+
+Si `OPENAI_API_KEY` n'est pas configuré, la génération est ignorée proprement et le job de validation reste vert.
+
+Après génération, le workflow :
+
+1. écrit l'image dans `assets/guides/...` ;
+2. applique le manifest avec `apply_guide_visuals.py` ;
+3. exécute `validate_guide_visuals.py` ;
+4. committe automatiquement l'asset et l'intégration HTML si tout passe.
 
 ## Diagrammes fonctionnels
 
@@ -71,6 +140,8 @@ Exemple `editorial_image` :
   "visual_goal": "contextualiser le choix d'un bloc-notes numérique dans un environnement de travail",
   "placement": "hero",
   "aspect_ratio": "3:2",
+  "model": "gpt-image-2",
+  "quality": "medium",
   "prompt": "Editorial photograph of a generic unbranded e-paper writing tablet with stylus on a calm modern desk, natural daylight, premium magazine aesthetic, no logos, no readable text, no identifiable commercial product",
   "negative_constraints": [
     "no logos",
