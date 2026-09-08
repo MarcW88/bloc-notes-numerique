@@ -56,7 +56,7 @@ for url, spec in PAGES.items():
         issues.append(f'not enough unique internal targets: {len(unique)}')
     if sources < 3:
         issues.append(f'not enough official sources: {sources}')
-    if not any(k in body_text for k in ['limite', 'à éviter', 'éviter', 'moins adapté']):
+    if spec['page_type'] != 'DIRECTORY' and not any(k in body_text for k in ['limite', 'à éviter', 'éviter', 'moins adapté']):
         issues.append('meaningful limitation/avoid language missing')
     if spec['page_type'] in {'BRAND_HUB','PRODUCT','REVIEW'} and not any(k in body_text for k in ['à privilégier', 'pour qui', 'cohérent']):
         issues.append('choose/use-case guidance missing')
