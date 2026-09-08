@@ -30,3 +30,5 @@ Pour toute création ou réécriture d’un guide :
 3. Vérifier les informations susceptibles d’évoluer auprès de sources officielles avant publication.
 4. Ne jamais présenter une synthèse documentaire comme un test produit.
 5. Ne retirer `noindex` qu’après validation humaine du contenu final.
+6. Après rédaction, exécuter dans l’ordre la chaîne de contrôle définie dans le skill : intention, valeur affiliée, fact-check, natural-writing, maillage interne, Humanizer, general-writing, anti-AI-slop, contrôle de dérive, SEO technique, SEO éditorial et editorial QA.
+7. Une page ne peut être fusionnée ou indexée que si le rapport de contrôle se termine par `PASS`.

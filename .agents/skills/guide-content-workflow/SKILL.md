@@ -60,46 +60,49 @@ Rédiger uniquement à partir du brief validé ou, si l’utilisateur a demandé
 
 Intégrer le contenu dans `_generate.py`, puis régénérer les pages. Ne pas éditer seulement le HTML généré.
 
-## Étape 4 — Contrôles
+## Étape 4 — Chaîne de contrôle obligatoire après rédaction
 
-Vérifier avant remise :
+Appliquer la même chaîne de finition que pour les `/koopgids/` d’italiaanse-percolator.nl, sans le diagnostic GSC. Chaque passe est distincte. Ne pas déclarer plusieurs contrôles effectués après une simple relecture globale.
 
-### Exactitude
+1. **`content-refresh` adapté au contenu neuf** : comparer le brief validé au brouillon. Conserver les passages utiles, corriger les lacunes et éviter une réécriture totale sans raison. Produire la liste de ce qui reste, change ou manque.
+2. **`search-intent`** : vérifier requête principale, intention, fonction de page, réponse attendue et risque de cannibalisation.
+3. **`affiliate-value` lorsque le guide influence un achat** : la page doit rester utile si tous les liens affiliés disparaissent. Vérifier critères, limites, alternatives et niveau de preuve.
+4. **`fact-check`** : extraire les affirmations vérifiables dans une passe séparée. Attribuer `CONFIRMED`, `PARTIAL`, `UNVERIFIED`, `CONTRADICTED` ou `OUTDATED`, puis corriger le brouillon.
+5. **`natural-writing`** : supprimer seulement les formulations réellement génériques, répétitives ou promotionnelles sans modifier les faits ni l’intention.
+6. **`internal-linking-audit`** : vérifier chaque lien existant, les prochaines étapes utiles, les ancres et la présence réelle des cibles. Ne pas ajouter de liens pour atteindre un quota.
 
-- chaque information instable possède une source officielle récente ;
-- aucune extrapolation n’est présentée comme une donnée mesurée ;
-- les limites, exceptions et différences de version sont explicites ;
-- les liens et intitulés de sources correspondent réellement aux affirmations.
+### Finition éditoriale obligatoire
 
-### SEO
+Exécuter ensuite, dans cet ordre :
 
-- intention satisfaite sans détour ;
-- title, H1 et description distincts et naturels ;
-- aucune concurrence évidente avec une autre URL du site ;
-- hiérarchie H2/H3 logique, canonical correct et liens internes fonctionnels ;
-- vocabulaire secondaire couvert selon son utilité, sans quota ni répétition forcée.
+7. **`humanizer` en mode embedded/file** : relire l’intégralité du contenu visible, y compris title, introduction, titres, tableaux, encadrés, libellés et conclusion. Préserver faits, sources, liens et distinctions techniques. Appliquer aussi ses dépendances `better-usage`, `academic-voice`, `writing-cadence` et `non-autoregressive-writing-pass`.
+8. **`general-writing`** : passe de style globale avec le minimum de modifications nécessaires. Contrôler cohérence de la voix, transitions, titres, appels et équilibre des sections.
+9. **`anti-ai-slop`** : audit de crédibilité fondé sur des passages précis. Chaque constat doit citer le fragment, expliquer le défaut et proposer une correction. Ne jamais prétendre détecter l’origine IA du texte.
+10. **`seo-drift` adapté au neuf** : comparer le brief validé, le premier brouillon et la version finale. Documenter toute perte d’intention, de terme utile, de source, de lien, de tableau ou de nuance. Une suppression inexpliquée entraîne un échec.
 
-### GEO
+### Contrôles techniques et gate final
 
-- réponse initiale autonome et factuelle ;
-- définitions, critères et procédures extractibles hors contexte ;
-- sujets et entités nommés explicitement lorsque les pronoms créeraient une ambiguïté ;
-- tableaux accompagnés d’une interprétation textuelle ;
-- sources primaires identifiables et date de vérification visible.
+11. **`seo-technical`** : vérifier canonical, robots, balisage, titres, liens, données structurées éventuelles, crawlabilité et HTML généré.
+12. **`seo-best-practices`** : vérifier satisfaction de l’intention, title/H1, structure, entités, lisibilité, maillage et absence de sur-optimisation.
+13. **Contrôle GEO** : vérifier réponse initiale autonome, définitions et procédures extractibles, entités explicites, tableaux interprétés et sources primaires identifiables.
+14. **`editorial-qa`** : rendre le verdict final `PASS` ou `FAIL`. En cas de `FAIL`, nommer le gate bloquant et revenir uniquement à la passe concernée.
+15. **Lecture complète en ordre rendu** : lire la page de haut en bas après la dernière modification, en mobile et desktop lorsque le rendu est disponible. Rechercher contradictions voisines, ton recousu, répétitions, avertissements défensifs, pseudo-précision et sections trop symétriques.
 
-### Qualité éditoriale
+Consigner chaque passe dans `.content/reviews/<slug>.md` selon `references/publish-gate-template.md`. L’absence de rapport complet interdit le statut `PUBLISHABLE`.
 
-- absence de formules creuses, superlatifs automatiques et transitions mécaniques ;
-- pas de paragraphes uniformes ni de succession artificielle de listes ;
-- conclusion utile, sans résumé répétitif ni CTA affilié agressif ;
-- distinction claire entre analyse documentaire et essai réel.
+## Échecs automatiques
 
-### Technique
+Attribuer `FAIL` si l’un des points suivants subsiste :
 
-- génération réussie ;
-- HTML valide dans les limites du projet ;
-- absence de liens internes cassés et d’ancres factices ;
-- rendu mobile et desktop vérifié lorsque l’environnement le permet.
+- expérience directe, test, auteur ou mesure inventés ;
+- recommandation plus forte que les preuves ;
+- affirmation importante non vérifiée présentée comme certaine ;
+- contradictions entre sections ou versions de produit ;
+- contenu principalement interchangeable avec une page concurrente ou marchande ;
+- clusters de formulations génériques, promotionnelles ou mécaniques relevés par `anti-ai-slop` ;
+- suppression inexpliquée d’un élément validé dans le brief ;
+- nouvelle cannibalisation, lien interne cassé, canonical/robots incorrect ou HTML invalide ;
+- page non relue intégralement dans l’ordre rendu.
 
 ## Étape 5 — Statut et validation humaine
 
@@ -107,6 +110,7 @@ Renseigner le brief avec l’un des statuts suivants :
 
 - `BRIEF_READY` : pré-analyse terminée, rédaction non commencée ;
 - `DRAFT_READY` : contenu intégré, contrôles automatiques passés ;
+- `QA_IN_PROGRESS` : chaîne de contrôle en cours ;
 - `REVISION_REQUIRED` : problème documenté à corriger ;
 - `HUMAN_APPROVED` : validation explicite de l’utilisateur ;
 - `PUBLISHABLE` : validation humaine obtenue et exigences techniques passées.
