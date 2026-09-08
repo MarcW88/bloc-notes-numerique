@@ -131,31 +131,6 @@ def render_checklist(spec):
     return shell(spec, width, height, "".join(body))
 
 
-def render_matrix(spec):
-    columns = spec["columns"]
-    rows = spec["rows"]
-    width = 1200
-    x = 60
-    top = 145
-    table_width = 1080
-    col_width = table_width / len(columns)
-    row_height = 72
-    height = top + row_height * (len(rows) + 1) + 55
-    body = []
-    for ci, column in enumerate(columns):
-        xx = x + ci * col_width
-        body.append(f'<rect x="{xx}" y="{top}" width="{col_width}" height="{row_height}" fill="{PALETTE["primary"]}" stroke="#FFFFFF" stroke-width="1"/>')
-        body.append(text_lines([column], xx + col_width / 2, top + 44, 16, 22, fill="#FFFFFF"))
-    for ri, row in enumerate(rows):
-        yy = top + (ri + 1) * row_height
-        for ci, value in enumerate(row):
-            xx = x + ci * col_width
-            fill = "#FFFFFF" if ri % 2 == 0 else PALETTE["soft"]
-            body.append(f'<rect x="{xx}" y="{yy}" width="{col_width}" height="{row_height}" fill="{fill}" stroke="{PALETTE["border"]}" stroke-width="1"/>')
-            body.append(text_lines([value], xx + col_width / 2, yy + 43, 15, 21))
-    return shell(spec, width, height, "".join(body))
-
-
 def render_cost(spec):
     items = spec["items"]
     width = 1200
@@ -199,7 +174,6 @@ RENDERERS = {
     "process_flow": lambda spec: render_process(spec, False),
     "ecosystem_map": lambda spec: render_process(spec, True),
     "checklist": render_checklist,
-    "decision_matrix": render_matrix,
     "cost_breakdown": render_cost,
     "size_comparison": render_sizes,
 }
@@ -215,9 +189,25 @@ def main():
     if not manifest.is_absolute():
         manifest = root / manifest
     spec = json.loads(manifest.read_text(encoding="utf-8"))
+
+    # Backward compatibility: historical manifests without asset_mode are diagrams.
+    asset_mode = spec.get("asset_mode", "functional_diagram")
+
+    if asset_mode == "no_visual":
+        print(f"skip {manifest.relative_to(root)}: no_visual")
+        return
+
+    if asset_mode == "editorial_image":
+        print(f"skip {manifest.relative_to(root)}: editorial_image is produced by an image generator, not the SVG renderer")
+        return
+
+    if asset_mode != "functional_diagram":
+        raise SystemExit(f"Unsupported asset_mode: {asset_mode}")
+
     visual_type = spec.get("type")
     if visual_type not in RENDERERS:
-        raise SystemExit(f"Unsupported visual type: {visual_type}")
+        raise SystemExit(f"Unsupported functional diagram type: {visual_type}")
+
     output = root / spec["output"]
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(RENDERERS[visual_type](spec), encoding="utf-8")
