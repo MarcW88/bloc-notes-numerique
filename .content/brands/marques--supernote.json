@@ -1,0 +1,60 @@
+{
+  "url": "/marques/supernote/",
+  "title": "Supernote — Manta, Nomad, notes liées et comparatifs",
+  "page_type": "BRAND_HUB",
+  "brand": "supernote",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Ce qui distingue Supernote",
+    "La gamme actuelle et les générations à distinguer",
+    "Comment fonctionne l’écosystème Supernote",
+    "Les forces réelles de la marque",
+    "Les limites à connaître avant d’acheter",
+    "Pour qui Supernote est cohérent — et pour qui il l’est moins",
+    "Quels contenus consulter ensuite ?",
+    "Ce qu’il faut vérifier avec vos propres documents",
+    "La marque doit-elle décider de l’achat ?",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/exporter-notes/",
+    "/comparatifs/",
+    "/comparatifs/remarkable-vs-supernote/",
+    "/comparatifs/boox-vs-supernote/",
+    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+    "/comparatifs/bloc-notes-numerique-professionnel/",
+    "/guides/organiser-notes-numeriques/",
+    "/guides/convertir-notes-manuscrites-en-texte/",
+    "/usages/prise-de-notes-professionnelle/",
+    "/usages/prise-de-notes-etudiant/",
+    "/usages/annotation-pdf/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/guides/transfert-notes-vers-ordinateur/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/",
+    "/comparatifs/bloc-notes-numerique-professionnel/",
+    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+    "/comparatifs/boox-vs-supernote/",
+    "/comparatifs/remarkable-vs-supernote/",
+    "/guides/convertir-notes-manuscrites-en-texte/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/exporter-notes/",
+    "/guides/organiser-notes-numeriques/",
+    "/guides/transfert-notes-vers-ordinateur/",
+    "/usages/annotation-pdf/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/usages/prise-de-notes-etudiant/",
+    "/usages/prise-de-notes-professionnelle/"
+  ],
+  "official_sources": [
+    "https://supernote.com/products/supernote-manta",
+    "https://supernote.com/products/supernote-nomad",
+    "https://supernote.com/blogs/supernote-blog/an-explanation-of-supernote-product-naming-evolution",
+    "https://support.supernote.com/en_US/Tools-Features/handwriting-recognition",
+    "https://support.supernote.com/en_US/transfer-files"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": false
+}

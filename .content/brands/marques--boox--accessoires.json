@@ -1,0 +1,42 @@
+{
+  "url": "/marques/boox/accessoires/",
+  "title": "Accessoires BOOX — Stylets, étuis, claviers et compatibilités",
+  "page_type": "ACCESSORY_HUB",
+  "brand": "boox",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Obligatoire, recommandé ou optionnel ?",
+    "La compatibilité est plus importante que le logo",
+    "Le stylet est l’accessoire qui change le plus l’usage",
+    "Étui et protection : utile si l’appareil voyage",
+    "Clavier : ne le payez que s’il remplace une vraie tâche",
+    "Comment construire votre panier",
+    "Rapportez le coût à la durée et à la fonction",
+    "À éviter",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/guides/prix-bloc-notes-numerique/",
+    "/guides/latence-ecriture/",
+    "/marques/boox/boox-note-air/",
+    "/marques/boox/boox-tab-ultra/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/comparatifs/boox-vs-supernote/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/boox-vs-supernote/",
+    "/guides/latence-ecriture/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/boox/boox-note-air/",
+    "/marques/boox/boox-tab-ultra/"
+  ],
+  "official_sources": [
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/notemax"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": false
+}

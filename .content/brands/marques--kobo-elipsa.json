@@ -1,0 +1,59 @@
+{
+  "url": "/marques/kobo-elipsa/",
+  "title": "Kobo Elipsa 2E — Écosystème, notes, PDF et comparatifs",
+  "page_type": "BRAND_HUB",
+  "brand": "kobo",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Ce qui distingue Kobo Elipsa",
+    "La gamme actuelle et les générations à distinguer",
+    "Comment fonctionne l’écosystème Kobo Elipsa",
+    "Les forces réelles de la marque",
+    "Les limites à connaître avant d’acheter",
+    "Pour qui Kobo Elipsa est cohérent — et pour qui il l’est moins",
+    "Quels contenus consulter ensuite ?",
+    "Ce qu’il faut vérifier avec vos propres documents",
+    "La marque doit-elle décider de l’achat ?",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/exporter-notes/",
+    "/comparatifs/",
+    "/comparatifs/kobo-elipsa-vs-remarkable/",
+    "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/bloc-notes-numerique-google-drive/",
+    "/guides/formats-fichiers-compatibles/",
+    "/usages/prise-de-notes-professionnelle/",
+    "/usages/prise-de-notes-etudiant/",
+    "/usages/annotation-pdf/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/guides/transfert-notes-vers-ordinateur/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/",
+    "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
+    "/comparatifs/kobo-elipsa-vs-remarkable/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/bloc-notes-numerique-google-drive/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/exporter-notes/",
+    "/guides/formats-fichiers-compatibles/",
+    "/guides/transfert-notes-vers-ordinateur/",
+    "/usages/annotation-pdf/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/usages/prise-de-notes-etudiant/",
+    "/usages/prise-de-notes-professionnelle/"
+  ],
+  "official_sources": [
+    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+    "https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet",
+    "https://help.kobo.com/hc/fr/articles/15335985512983-Ajouter-des-livres-sur-votre-liseuse-%C3%A0-l-aide-de-Google-Drive",
+    "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
+    "https://www.kobo.com/fr/fr/p/support-documents"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": false
+}

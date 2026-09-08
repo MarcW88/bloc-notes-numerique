@@ -1,0 +1,48 @@
+{
+  "url": "/marques/remarkable/remarkable-2-avis/",
+  "title": "reMarkable 2 — Avis documentaire en 2026 : encore pertinente ?",
+  "page_type": "REVIEW",
+  "brand": "remarkable",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Quel est le niveau de preuve de cet avis ?",
+    "Les points forts que l’on peut défendre",
+    "Les limites qui peuvent faire changer de choix",
+    "Ce que cela implique dans un workflow réel",
+    "Pour qui reMarkable 2 est cohérent ?",
+    "Alternatives et comparatifs utiles",
+    "Ce que cette analyse ne prétend pas mesurer",
+    "Comment vérifier ce verdict pour votre usage",
+    "Verdict éditorial",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/marques/remarkable/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/exporter-notes/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/remarkable-paper-pro/",
+    "/marques/remarkable/remarkable-paper-pro-avis/",
+    "/comparatifs/remarkable-vs-supernote/",
+    "/bons-plans/bloc-notes-numerique-occasion/"
+  ],
+  "unique_internal_targets": [
+    "/bons-plans/bloc-notes-numerique-occasion/",
+    "/comparatifs/remarkable-vs-supernote/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/exporter-notes/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/",
+    "/marques/remarkable/remarkable-paper-pro-avis/",
+    "/marques/remarkable/remarkable-paper-pro/"
+  ],
+  "official_sources": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": true
+}

@@ -1,0 +1,76 @@
+{
+  "brand": "kobo",
+  "name": "Kobo Elipsa",
+  "positioning": "une liseuse grand format centrée sur l’écosystème Kobo, qui ajoute stylet, carnets, annotation PDF et transferts Google Drive/Dropbox sans devenir une tablette Android généraliste",
+  "current_range": [
+    [
+      "Kobo Elipsa 2E",
+      "CURRENT",
+      "10,3″ Carta 1200, 32 Go",
+      "lecture, PDF et carnets",
+      "annotations EPUB manuscrites peu portables"
+    ],
+    [
+      "Kobo Elipsa",
+      "PREVIOUS_GENERATION",
+      "10,3″",
+      "ancienne génération",
+      "moins pertinente face à l’Elipsa 2E actuelle"
+    ]
+  ],
+  "ecosystem": [
+    [
+      "Bibliothèque",
+      "Kobo Store et livres Kobo."
+    ],
+    [
+      "Stylet",
+      "Kobo Stylus / Stylus 2 selon compatibilité."
+    ],
+    [
+      "Carnets",
+      "Basic et Advanced notebooks, recherche et conversion manuscrite."
+    ],
+    [
+      "PDF",
+      "annotation possible sur PDF non protégés."
+    ],
+    [
+      "EPUB",
+      "annotation manuscrite possible, mais export limité selon le type de contenu."
+    ],
+    [
+      "Cloud",
+      "Kobo Cloud pour carnets, plus Google Drive et Dropbox."
+    ],
+    [
+      "Import",
+      "PDF et EPUB non protégés via Google Drive sur modèles compatibles."
+    ],
+    [
+      "Partage",
+      "export de carnets et PDF annotés selon format et droits."
+    ]
+  ],
+  "strengths": [
+    "lecture et prise de notes réunies dans un environnement simple",
+    "Google Drive et Dropbox intégrés sur l’Elipsa 2E",
+    "éclairage ComfortLight PRO et grand écran pour lecture documentaire"
+  ],
+  "limits": [
+    "les annotations manuscrites EPUB restent liées à la liseuse et ne s’exportent pas comme un PDF annoté",
+    "les PDF protégés par DRM ne se prêtent pas à l’annotation manuscrite",
+    "moins d’outils de gestion de connaissances qu’un Supernote ou BOOX"
+  ],
+  "choose": [
+    "vous lisez beaucoup dans l’écosystème Kobo",
+    "vous voulez annoter des PDF et créer des carnets sans tablette Android",
+    "Google Drive ou Dropbox suffit pour votre circulation de documents"
+  ],
+  "avoid": [
+    "vous devez exporter toutes vos annotations de livres vers d’autres outils",
+    "vous avez besoin d’applications métier",
+    "votre priorité est une organisation sophistiquée de centaines de notes liées"
+  ],
+  "verified_at": "8 septembre 2026"
+}

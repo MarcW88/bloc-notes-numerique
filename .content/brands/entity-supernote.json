@@ -1,0 +1,83 @@
+{
+  "brand": "supernote",
+  "name": "Supernote",
+  "positioning": "des e-notebooks spécialisés dans l’écriture et l’organisation de connaissances, avec liens, titres, reconnaissance manuscrite, transferts cloud et une forte logique de réparabilité",
+  "current_range": [
+    [
+      "Supernote Manta",
+      "CURRENT",
+      "10,7″, 300 ppp, sans éclairage",
+      "écriture, PDF, notes structurées",
+      "pas de couleur ni de lumière frontale"
+    ],
+    [
+      "Supernote Nomad",
+      "CURRENT",
+      "format compact",
+      "mobilité et notes personnelles",
+      "surface réduite pour grands PDF"
+    ],
+    [
+      "A5 X / A6 X",
+      "PREVIOUS_GENERATION",
+      "ancienne nomenclature",
+      "parc installé",
+      "à distinguer de Manta/Nomad"
+    ]
+  ],
+  "ecosystem": [
+    [
+      "Matériel",
+      "Manta et Nomad, conception modulaire avec batterie/stockage selon modèle."
+    ],
+    [
+      "Stylet",
+      "écosystème de stylos avec pointe céramique NeverReplace."
+    ],
+    [
+      "Système",
+      "Chauvet, système Android 11 spécialisé."
+    ],
+    [
+      "Notes",
+      "liens, headings, mots-clés, étoiles et organisation orientée connaissances."
+    ],
+    [
+      "OCR",
+      "reconnaissance manuscrite en temps réel, export TXT/DOCX."
+    ],
+    [
+      "Cloud",
+      "Supernote Cloud, Dropbox et Google Drive documentés."
+    ],
+    [
+      "Transfert",
+      "USB-C, email, réseau local et Browse & Access."
+    ],
+    [
+      "Applications",
+      "apps compagnon desktop/mobile et intégration Kindle."
+    ]
+  ],
+  "strengths": [
+    "organisation des notes particulièrement poussée",
+    "reconnaissance manuscrite et export texte sans abonnement récurrent annoncé",
+    "conception modulaire et réparabilité mises en avant sur Manta/Nomad"
+  ],
+  "limits": [
+    "pas d’éclairage frontal sur Manta",
+    "pas d’écran couleur dans la gamme actuelle documentée",
+    "moins d’applications généralistes qu’une BOOX Android ouverte"
+  ],
+  "choose": [
+    "vous construisez un système de notes reliées plutôt qu’un simple carnet",
+    "vous voulez garder un workflow sans abonnement pour la reconnaissance manuscrite",
+    "vous valorisez la réparabilité et le stockage extensible"
+  ],
+  "avoid": [
+    "vous avez besoin de couleur ou de lumière frontale",
+    "vous utilisez beaucoup d’applications tierces Android",
+    "la lecture commerciale Kindle/Kobo est votre besoin dominant"
+  ],
+  "verified_at": "8 septembre 2026"
+}
