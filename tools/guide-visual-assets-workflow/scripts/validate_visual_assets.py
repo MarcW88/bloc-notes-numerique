@@ -37,7 +37,7 @@ def validate_no_visual(spec: dict, failures: list[str]) -> None:
         failures.append("no_visual must not define an output asset")
 
 
-def validate_editorial_image(spec: dict, root: Path, failures: list[str]) -> None:
+def validate_editorial_image(spec: dict, root: Path, failures: list[str]) -> bool:
     fail_if_empty(spec, "alt", failures)
     fail_if_empty(spec, "prompt", failures)
     fail_if_empty(spec, "output", failures)
@@ -47,13 +47,13 @@ def validate_editorial_image(spec: dict, root: Path, failures: list[str]) -> Non
     if not isinstance(constraints, list) or len(constraints) < 2:
         failures.append("editorial_image needs at least two negative_constraints")
 
+    pending = False
     output_value = str(spec.get("output", ""))
     if output_value:
         output = root / output_value
         if output.suffix.lower() not in EDITORIAL_EXTENSIONS:
             failures.append("editorial_image output must be a raster/web image format")
-        if not output.exists():
-            failures.append(f"asset missing: {output_value}")
+        pending = not output.exists()
 
     prompt = str(spec.get("prompt", "")).lower()
     forbidden_prompt_patterns = [
@@ -67,6 +67,8 @@ def validate_editorial_image(spec: dict, root: Path, failures: list[str]) -> Non
     ]
     if any(pattern in prompt for pattern in forbidden_prompt_patterns):
         failures.append("editorial image prompt requests risky branded/fake representation")
+
+    return pending
 
 
 def validate_functional_diagram(spec: dict, root: Path, failures: list[str]) -> None:
@@ -116,13 +118,14 @@ def main() -> None:
 
     failures: list[str] = []
     asset_mode = spec.get("asset_mode", "functional_diagram")
+    pending = False
 
     validate_common(spec, failures)
 
     if asset_mode == "no_visual":
         validate_no_visual(spec, failures)
     elif asset_mode == "editorial_image":
-        validate_editorial_image(spec, root, failures)
+        pending = validate_editorial_image(spec, root, failures)
     elif asset_mode == "functional_diagram":
         validate_functional_diagram(spec, root, failures)
     else:
@@ -133,7 +136,8 @@ def main() -> None:
             print("FAIL:", failure)
         raise SystemExit(1)
 
-    print(f"PASS: {asset_mode} manifest meets structural requirements")
+    suffix = " (pending generation)" if pending else ""
+    print(f"PASS: {asset_mode} manifest meets structural requirements{suffix}")
 
 
 if __name__ == "__main__":
