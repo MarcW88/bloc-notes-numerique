@@ -1,0 +1,90 @@
+{
+  "brand": "kindle",
+  "name": "Kindle Scribe",
+  "positioning": "la branche écriture du Kindle : priorité à la lecture Amazon, complétée par carnets, annotation de documents et, sur les générations 2025+, connexions Google Drive, OneDrive et OneNote",
+  "current_range": [
+    [
+      "Kindle Scribe (3e génération)",
+      "CURRENT",
+      "noir et blanc, éclairage",
+      "lecture Kindle + notes",
+      "workflow de fichiers moins ouvert qu’Android"
+    ],
+    [
+      "Kindle Scribe Colorsoft",
+      "CURRENT",
+      "couleur, éclairage",
+      "lecture et annotations couleur",
+      "écosystème centré Amazon"
+    ],
+    [
+      "Kindle Scribe sans éclairage",
+      "CURRENT",
+      "16 Go, noir et blanc",
+      "écriture/lecture avec configuration plus simple",
+      "pas d’éclairage frontal"
+    ],
+    [
+      "Kindle Scribe 2024",
+      "PREVIOUS_GENERATION",
+      "noir et blanc",
+      "ancienne génération encore supportée",
+      "pas toutes les nouvelles connexions cloud"
+    ]
+  ],
+  "ecosystem": [
+    [
+      "Bibliothèque",
+      "Kindle Store et bibliothèque Kindle."
+    ],
+    [
+      "Stylet",
+      "Premium Pen sur les nouvelles générations documentées."
+    ],
+    [
+      "Workspace",
+      "réunit livres, documents et carnets sur les modèles 2025+."
+    ],
+    [
+      "Notes",
+      "carnets, écriture manuscrite, recherche sur nouvelles générations."
+    ],
+    [
+      "Documents",
+      "Send to Kindle et import de formats compatibles."
+    ],
+    [
+      "Cloud tiers",
+      "Google Drive et OneDrive pour modèles 2025+, avec import/export de copies plutôt que synchronisation bidirectionnelle."
+    ],
+    [
+      "OneNote",
+      "export de carnets en texte ou image selon le flux proposé."
+    ],
+    [
+      "Partage",
+      "email et PDF, avec conversion/recherche selon les fonctions."
+    ]
+  ],
+  "strengths": [
+    "lecture Kindle très intégrée",
+    "nouvelles générations nettement plus ouvertes au cloud de travail",
+    "un même appareil pour livres, documents et carnets"
+  ],
+  "limits": [
+    "les fichiers importés depuis Drive/OneDrive ne se synchronisent pas automatiquement en retour",
+    "les fonctions cloud modernes exigent un Scribe sorti en 2025 ou après",
+    "moins orienté organisation complexe de connaissances que Supernote ou BOOX"
+  ],
+  "choose": [
+    "la lecture Kindle reste une part importante de votre usage",
+    "vous voulez annoter des documents sans quitter l’écosystème Amazon",
+    "vous appréciez les nouvelles connexions Drive/OneDrive sans avoir besoin d’Android complet"
+  ],
+  "avoid": [
+    "vous voulez une vraie synchronisation bidirectionnelle des fichiers cloud",
+    "vous avez besoin d’applications tierces nombreuses",
+    "vous recherchez un système de liens et de structuration de notes très avancé"
+  ],
+  "verified_at": "8 septembre 2026"
+}

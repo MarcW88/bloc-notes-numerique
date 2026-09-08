@@ -1,0 +1,69 @@
+project:
+  name: "bloc-notes-numeriques.fr"
+  domain: "https://bloc-notes-numeriques.fr"
+  language: "fr"
+
+content:
+  scope:
+    - "/marques/"
+  source_of_truth:
+    - "brand_data.py"
+    - "brand_render_common.py"
+    - "brand_render_pages.py"
+    - "brand_pages.py"
+  mode: "recovery"
+
+quality:
+  quality_reference: "/guides/prix-bloc-notes-numerique/"
+  draft_robots: "noindex,follow"
+
+routing:
+  page_types:
+    - DIRECTORY
+    - BRAND_HUB
+    - PRODUCT
+    - REVIEW
+    - SERVICE
+    - ACCESSORY_HUB
+    - ALTERNATIVES
+
+entities:
+  require_entity_map: true
+  require_current_range: true
+  require_ecosystem_map: true
+  require_brand_positioning: true
+
+evidence:
+  prefer_primary_sources: true
+  verified_at: "2026-09-08"
+  statuses:
+    - VERIFIED
+    - SUPPORTED
+    - INFERRED
+    - UNKNOWN
+    - OUTDATED
+    - CONTRADICTED
+
+internal_linking:
+  required_paths:
+    - "/comparatifs/"
+    - "/guides/"
+    - "/usages/"
+  minimum_contextual_links: 6
+  minimum_unique_targets: 5
+
+workflow:
+  brands_dir: ".content/brands"
+  reviews_dir: ".content/reviews"
+  apply_script: "apply_brand_content.py"
+  audit_script: "generate_brand_metadata.py"
+  validator: "validate_brands.py"
+  require_human_validation_before_publish: true
+  allow_automatic_merge: false
+
+quality_gate:
+  minimum_sources: 3
+  require_limit_section: true
+  require_choose_avoid: true
+  require_noindex_in_draft: true
+  prohibit_fake_test_language: true

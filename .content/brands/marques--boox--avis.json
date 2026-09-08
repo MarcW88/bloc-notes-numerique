@@ -1,0 +1,48 @@
+{
+  "url": "/marques/boox/avis/",
+  "title": "BOOX — Avis documentaire : forces, complexité et choix de gamme",
+  "page_type": "REVIEW",
+  "brand": "boox",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Quel est le niveau de preuve de cet avis ?",
+    "Les points forts que l’on peut défendre",
+    "Les limites qui peuvent faire changer de choix",
+    "Ce que cela implique dans un workflow réel",
+    "Pour qui BOOX est cohérent ?",
+    "Alternatives et comparatifs utiles",
+    "Ce que cette analyse ne prétend pas mesurer",
+    "Comment vérifier ce verdict pour votre usage",
+    "Verdict éditorial",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/marques/boox/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/exporter-notes/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/comparatifs/remarkable-vs-boox/",
+    "/comparatifs/boox-vs-supernote/",
+    "/marques/boox/boox-note-air/",
+    "/marques/boox/alternatives/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/boox-vs-supernote/",
+    "/comparatifs/remarkable-vs-boox/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/exporter-notes/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/boox/",
+    "/marques/boox/alternatives/",
+    "/marques/boox/boox-note-air/"
+  ],
+  "official_sources": [
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/notemax"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": true
+}

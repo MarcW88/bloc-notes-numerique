@@ -1,0 +1,42 @@
+{
+  "url": "/marques/remarkable/accessoires/",
+  "title": "Accessoires reMarkable — Compatibilités, Marker, Folio et Type Folio",
+  "page_type": "ACCESSORY_HUB",
+  "brand": "remarkable",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Obligatoire, recommandé ou optionnel ?",
+    "La compatibilité est plus importante que le logo",
+    "Le stylet est l’accessoire qui change le plus l’usage",
+    "Étui et protection : utile si l’appareil voyage",
+    "Clavier : ne le payez que s’il remplace une vraie tâche",
+    "Comment construire votre panier",
+    "Rapportez le coût à la durée et à la fonction",
+    "À éviter",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/guides/prix-bloc-notes-numerique/",
+    "/guides/latence-ecriture/",
+    "/marques/remarkable/remarkable-paper-pro/",
+    "/marques/remarkable/remarkable-2/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/comparatifs/remarkable-vs-boox/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/remarkable-vs-boox/",
+    "/guides/latence-ecriture/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/remarkable-2/",
+    "/marques/remarkable/remarkable-paper-pro/"
+  ],
+  "official_sources": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": false
+}

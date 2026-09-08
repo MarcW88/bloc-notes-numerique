@@ -1,0 +1,90 @@
+{
+  "brand": "remarkable",
+  "name": "reMarkable",
+  "positioning": "un écosystème volontairement spécialisé dans l’écriture, la lecture de documents et le travail sans distractions, avec une gamme actuelle structurée entre noir et blanc, mobilité et grand écran couleur",
+  "current_range": [
+    [
+      "Paper Pure",
+      "CURRENT",
+      "10,3″, noir et blanc",
+      "écriture et notes concentrées",
+      "pas d’applications tierces généralistes"
+    ],
+    [
+      "Paper Pro Move",
+      "CURRENT",
+      "format compact, couleur",
+      "mobilité et notes rapides",
+      "surface plus petite pour grands PDF"
+    ],
+    [
+      "Paper Pro",
+      "CURRENT",
+      "11,8″, couleur",
+      "grands documents, couleur, écriture",
+      "coût de configuration élevé"
+    ],
+    [
+      "reMarkable 2",
+      "DISCONTINUED",
+      "10,3″, noir et blanc",
+      "ancienne génération encore documentée",
+      "markers incompatibles avec la nouvelle génération"
+    ]
+  ],
+  "ecosystem": [
+    [
+      "Matériel",
+      "Paper Pure, Paper Pro Move, Paper Pro ; reMarkable 2 reste documentée comme génération précédente."
+    ],
+    [
+      "Stylet",
+      "Marker / Marker Plus ; la compatibilité dépend de la génération de tablette."
+    ],
+    [
+      "Système",
+      "reMarkable OS, système Linux spécialisé pour papier numérique."
+    ],
+    [
+      "Notes",
+      "carnets, dossiers, étiquettes, modèles, conversion manuscrite."
+    ],
+    [
+      "Documents",
+      "import PDF/EPUB et export PDF/PNG/SVG selon les fonctions."
+    ],
+    [
+      "Cloud",
+      "cloud reMarkable ; certaines fonctions avancées et stockage illimité passent par Connect."
+    ],
+    [
+      "Intégrations",
+      "Google Drive, OneDrive, Dropbox et outils de travail selon le niveau de service."
+    ],
+    [
+      "Applications",
+      "apps bureau/mobile ; ce n’est pas une tablette Android généraliste."
+    ]
+  ],
+  "strengths": [
+    "interface spécialisée et cohérente pour écrire et relire",
+    "gamme lisible : noir et blanc, compact couleur ou grand écran couleur",
+    "workflow mobile/desktop et export documentaire bien intégré"
+  ],
+  "limits": [
+    "écosystème plus fermé que BOOX",
+    "certaines fonctions cloud et applicatives avancées sont liées à Connect",
+    "compatibilité des Markers à vérifier entre reMarkable 2 et la génération Paper"
+  ],
+  "choose": [
+    "vous voulez remplacer cahiers et impressions par un outil spécialisé",
+    "vous privilégiez une interface simple plutôt qu’un catalogue d’applications",
+    "vous travaillez surtout avec des notes manuscrites, des PDF et des documents à relire"
+  ],
+  "avoid": [
+    "vous dépendez d’applications Android ou d’un navigateur très polyvalent",
+    "vous voulez éviter tout service récurrent pour les fonctions cloud avancées",
+    "vous cherchez surtout une liseuse avec une vaste boutique de livres intégrée"
+  ],
+  "verified_at": "8 septembre 2026"
+}

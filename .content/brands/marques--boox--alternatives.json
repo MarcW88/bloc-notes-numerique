@@ -1,0 +1,54 @@
+{
+  "url": "/marques/boox/alternatives/",
+  "title": "Alternatives à BOOX — reMarkable, Supernote, Kindle ou Kobo ?",
+  "page_type": "ALTERNATIVES",
+  "brand": "boox",
+  "verified_at": "8 septembre 2026",
+  "h2": [
+    "Commencez par la raison de votre départ",
+    "Comparez le workflow, pas le nombre de fonctions",
+    "Comparez aussi le coût de la configuration",
+    "Quand rester dans l’écosystème actuel ?",
+    "Quand faut-il réellement envisager une alternative ?",
+    "Le coût caché d’un changement d’écosystème",
+    "Construire une shortlist utile",
+    "Comparatifs à consulter",
+    "Sources officielles consultées"
+  ],
+  "internal_links": [
+    "/comparatifs/remarkable-vs-boox/",
+    "/comparatifs/boox-vs-supernote/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/comparatifs/meilleur-bloc-notes-numerique/",
+    "/comparatifs/bloc-notes-numerique-professionnel/",
+    "/comparatifs/bloc-notes-numerique-etudiant/",
+    "/comparatifs/bloc-notes-numerique-sans-abonnement/"
+  ],
+  "unique_internal_targets": [
+    "/comparatifs/bloc-notes-numerique-etudiant/",
+    "/comparatifs/bloc-notes-numerique-professionnel/",
+    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+    "/comparatifs/boox-vs-supernote/",
+    "/comparatifs/meilleur-bloc-notes-numerique/",
+    "/comparatifs/remarkable-vs-boox/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/"
+  ],
+  "official_sources": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
+    "https://shop.boox.com/collections/all-products/reading-tools"
+  ],
+  "noindex_follow": true,
+  "analysis_documentary": false
+}

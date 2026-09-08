@@ -1,0 +1,97 @@
+{
+  "brand": "boox",
+  "name": "BOOX",
+  "positioning": "des tablettes E Ink Android qui privilégient l’ouverture logicielle, la compatibilité documentaire et les applications tierces, au prix d’une interface plus riche et plus complexe",
+  "current_range": [
+    [
+      "Go 10.3 (Gen II)",
+      "CURRENT",
+      "10,3″ noir et blanc",
+      "notes, PDF et mobilité",
+      "pas d’éclairage frontal sur ce positionnement minimaliste"
+    ],
+    [
+      "Note Air5 C",
+      "CURRENT",
+      "10,3″ Kaleido 3 couleur",
+      "notes, couleur et productivité légère",
+      "couleur moins vive qu’un écran LCD/OLED"
+    ],
+    [
+      "Note Max",
+      "CURRENT",
+      "13,3″ noir et blanc 300 ppp",
+      "PDF A4, recherche, travail de bureau",
+      "grand format et absence d’éclairage frontal"
+    ],
+    [
+      "Tab X C",
+      "CURRENT",
+      "13,3″ couleur",
+      "grand écran couleur et productivité",
+      "format lourd et budget élevé"
+    ],
+    [
+      "Tab Ultra C Pro",
+      "CURRENT_DOCUMENTED",
+      "10,3″ couleur, Android 12",
+      "workflow type tablette avec clavier",
+      "génération logicielle plus ancienne que Note Air5 C"
+    ]
+  ],
+  "ecosystem": [
+    [
+      "Matériel",
+      "gamme large du lecteur compact au 13,3 pouces."
+    ],
+    [
+      "Stylet",
+      "Pen Plus, Pen3 ou InkSense selon les appareils."
+    ],
+    [
+      "Système",
+      "Android, avec versions différentes selon génération ; Google Play sur les modèles concernés."
+    ],
+    [
+      "Notes",
+      "Notes BOOX, liens, tags, reconnaissance de texte, export PDF/PNG/.note."
+    ],
+    [
+      "Lecture",
+      "NeoReader pour PDF, EPUB et de nombreux formats."
+    ],
+    [
+      "Cloud",
+      "Onyx Cloud et intégrations Dropbox, Google Drive, OneDrive, WebDAV/Nextcloud selon firmware."
+    ],
+    [
+      "Synchronisation",
+      "progression, annotations et sauvegardes selon les méthodes BOOX."
+    ],
+    [
+      "Applications",
+      "apps tierces : avantage majeur, mais qualité variable sur E Ink."
+    ]
+  ],
+  "strengths": [
+    "ouverture Android et choix d’applications",
+    "large compatibilité de formats et outils PDF",
+    "gamme très étendue en taille, couleur et usage"
+  ],
+  "limits": [
+    "plus de réglages, de menus et de comportements à comprendre",
+    "toutes les applications Android ne sont pas optimisées pour E Ink",
+    "la gamme évolue vite et exige de vérifier génération, Android et stylet"
+  ],
+  "choose": [
+    "vous avez des applications métier ou cloud à conserver",
+    "vous manipulez beaucoup de PDF et de formats différents",
+    "vous voulez un appareil plus proche d’une tablette polyvalente que d’un carnet fermé"
+  ],
+  "avoid": [
+    "vous recherchez une expérience ultra-minimaliste",
+    "vous ne voulez pas gérer les réglages de rafraîchissement et d’applications",
+    "vous préférez un écosystème dont toutes les fonctions sont pensées par un seul fabricant"
+  ],
+  "verified_at": "8 septembre 2026"
+}
