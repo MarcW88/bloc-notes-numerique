@@ -1,7 +1,7 @@
 ---
 url: /guides/liseuse-ou-bloc-notes-numerique/
 slug: liseuse-ou-bloc-notes-numerique
-status: DRAFT_READY
+status: HUMAN_APPROVED
 guide_type: choice
 primary_keyword: liseuse ou bloc-notes numérique
 search_intent: distinguer appareil de lecture et appareil de prise de notes

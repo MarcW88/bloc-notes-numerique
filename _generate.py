@@ -878,9 +878,9 @@ write("/guides/index.html", hub_page(
 ))
 
 GUIDES = [
-    ("/guides/choisir-bloc-notes-numerique/", "Comment choisir son bloc-notes numérique ?", "Tous les critères essentiels pour bien choisir votre tablette E Ink de prise de notes."),
-    ("/guides/liseuse-ou-bloc-notes-numerique/", "Liseuse ou bloc-notes numérique — Quelle différence ?", "Liseuse ou tablette de prise de notes : comment choisir selon votre usage principal ?"),
-    ("/guides/tablette-classique-ou-tablette-e-ink/", "Tablette classique ou tablette E Ink — Laquelle choisir ?", "iPad ou tablette E Ink ? Notre comparaison honnête pour vous aider à décider."),
+    ("/guides/choisir-bloc-notes-numerique/", "Comment choisir son bloc-notes numérique selon son usage ?", "Choisissez un bloc-notes numérique selon vos documents, vos exports, votre usage du stylet, la taille d’écran et le coût total des accessoires à prévoir."),
+    ("/guides/liseuse-ou-bloc-notes-numerique/", "Liseuse ou bloc-notes numérique : quelles différences ?", "Comparez liseuse et bloc-notes numérique selon la lecture, l’écriture au stylet, les PDF, le format de l’appareil et les possibilités d’export de notes."),
+    ("/guides/tablette-classique-ou-tablette-e-ink/", "Tablette classique ou tablette E Ink : laquelle choisir ?", "Comparez tablette classique et tablette E Ink selon l’écriture, la lecture, la couleur, les applications, la vidéo et les contraintes d’export de fichiers."),
     ("/guides/taille-ecran-bloc-notes-numerique/", "Quelle taille d'écran pour un bloc-notes numérique ?", "A5, A4, 10 ou 13 pouces : notre guide pour choisir le bon format selon votre usage."),
     ("/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/", "Bloc-notes numérique couleur ou noir et blanc ?", "Faut-il investir dans un écran couleur E Ink ? Notre analyse objective."),
     ("/guides/bloc-notes-numerique-avec-ou-sans-abonnement/", "Bloc-notes numérique avec ou sans abonnement ?", "Les abonnements des tablettes E Ink valent-ils vraiment le coup ? Notre analyse."),
@@ -906,7 +906,7 @@ GUIDES = [
 
 GUIDE_CONTENT = {
     "/guides/choisir-bloc-notes-numerique/": """
-      <p class="article-answer"><strong>Pour choisir un bloc-notes numérique, partez de votre flux de travail plutôt que d’une marque.</strong> Vérifiez d’abord la taille des documents, les méthodes d’export, les services cloud indispensables et la place de la lecture dans votre usage. L’écran, le stylet et l’autonomie ne deviennent décisifs qu’après ces critères.</p>
+      <p class="article-answer"><strong>Pour choisir un bloc-notes numérique, partez de votre flux de travail.</strong> Repérez les documents que vous utilisez, leur destination après annotation et les services cloud indispensables. Vous pourrez ensuite comparer la taille de l’écran, le stylet et l’autonomie sans vous laisser guider par une fiche technique trop longue.</p>
 
       <h2 id="questions">Les cinq questions à trancher avant l’achat</h2>
       <ol>
@@ -935,7 +935,7 @@ GUIDE_CONTENT = {
 
       <h2 id="ecosysteme">Écosystème fermé ou tablette E Ink ouverte ?</h2>
       <p>Un appareil spécialisé comme reMarkable concentre l’expérience sur les carnets, les documents et ses propres applications. Une tablette BOOX récente repose sur Android et peut intégrer Google Play, ce qui élargit le choix d’applications. Cette ouverture ne garantit toutefois pas que chaque application soit agréable sur un écran à rafraîchissement lent.</p>
-      <p>Le bon critère est donc moins « ouvert ou fermé » que <strong>compatible ou non avec votre manière de travailler</strong>. Avant d’acheter, reproduisez mentalement un cycle complet : recevoir un document, l’annoter, le retrouver, l’exporter puis l’ouvrir sur l’ordinateur d’un collègue.</p>
+      <p>La compatibilité avec votre manière de travailler doit décider. Avant d’acheter, suivez un document pendant tout son parcours : réception, annotation, classement, export, puis ouverture sur l’ordinateur d’un collègue. Un blocage à l’une de ces étapes suffit à écarter le modèle.</p>
 
       <h2 id="profils">Quel profil vous ressemble ?</h2>
       <ul>
@@ -947,9 +947,9 @@ GUIDE_CONTENT = {
       </ul>
 
       <h2 id="erreurs">Trois erreurs fréquentes</h2>
-      <p><strong>Choisir uniquement sur l’autonomie annoncée.</strong> Les fabricants expriment souvent l’autonomie en semaines, mais le Wi-Fi, l’éclairage, la fréquence d’écriture et la synchronisation modifient le résultat réel.</p>
-      <p><strong>Confondre stockage et portabilité des notes.</strong> Beaucoup d’espace ne sert pas si les fichiers restent difficiles à sortir de l’écosystème.</p>
-      <p><strong>Acheter un modèle trop polyvalent.</strong> Plus d’applications peut signifier plus de distractions et une interface moins cohérente. Une fonction n’a de valeur que si elle améliore votre usage régulier.</p>
+      <p>La première erreur consiste à choisir sur l’autonomie annoncée. Les fabricants l’expriment souvent en semaines, alors que le Wi-Fi, l’éclairage, la fréquence d’écriture et la synchronisation modifient le résultat réel.</p>
+      <p>La deuxième consiste à confondre stockage et portabilité des notes. Beaucoup d’espace ne sert pas si les fichiers restent difficiles à sortir de l’écosystème.</p>
+      <p>Enfin, un modèle très polyvalent n’est pas toujours le plus pratique. Plus d’applications peut aussi apporter davantage de réglages et de distractions. Une fonction compte seulement si elle améliore un usage régulier.</p>
 
       <h2 id="checklist">Checklist finale</h2>
       <p>Avant la commande, notez vos trois tâches principales et vérifiez-les dans la documentation du modèle. Confirmez ensuite le format d’export, le service cloud, les accessoires inclus, l’éclairage, le poids et les conditions de l’abonnement éventuel. Si un seul de ces points est bloquant, éliminez le modèle avant de comparer les détails secondaires.</p>
@@ -957,10 +957,10 @@ GUIDE_CONTENT = {
 
       <h2 id="sources">Sources consultées</h2>
       <ul class="source-list">
-        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable Support — caractéristiques du reMarkable 2</a></li>
-        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX — caractéristiques officielles du Go 10.3</a></li>
-        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo — annotation avec le Kobo Stylus</a></li>
-        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon — fonctions du Kindle Scribe</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable Support : caractéristiques du reMarkable 2</a></li>
+        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX : caractéristiques officielles du Go 10.3</a></li>
+        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo : annotation avec le Kobo Stylus</a></li>
+        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon : fonctions du Kindle Scribe</a></li>
       </ul>
     """,
     "/guides/liseuse-ou-bloc-notes-numerique/": """
@@ -968,7 +968,7 @@ GUIDE_CONTENT = {
 
       <h2 id="difference">La différence essentielle</h2>
       <p>Une liseuse est conçue autour du livre numérique : bibliothèque, lecture prolongée, navigation dans un ouvrage et prise en main légère. Un bloc-notes numérique est organisé autour de la page de travail : carnets, stylet, classement, annotation et export.</p>
-      <p>Les deux familles peuvent utiliser un écran à encre électronique. La différence ne vient donc pas seulement de l’écran, mais du format physique, du logiciel, du stylet et de la manière dont les fichiers circulent.</p>
+      <p>Les deux familles peuvent utiliser un écran à encre électronique. Leur format physique, leur logiciel, leur stylet et la circulation des fichiers déterminent donc l’expérience quotidienne.</p>
 
       <h2 id="tableau">Liseuse ou bloc-notes : comparaison rapide</h2>
       <div class="table-wrapper">
@@ -1010,16 +1010,16 @@ GUIDE_CONTENT = {
 
       <h2 id="sources">Sources consultées</h2>
       <ul class="source-list">
-        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo — formats et modèles compatibles avec les annotations au stylet</a></li>
-        <li><a href="https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook" rel="noopener noreferrer">Kobo — utilisation des carnets intégrés</a></li>
-        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon — fonctions de lecture et de carnets du Kindle Scribe</a></li>
+        <li><a href="https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo" rel="noopener noreferrer">Kobo : formats et modèles compatibles avec les annotations au stylet</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook" rel="noopener noreferrer">Kobo : utilisation des carnets intégrés</a></li>
+        <li><a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=T4sq0EZZFwu9vvH3Fx" rel="noopener noreferrer">Amazon : fonctions de lecture et de carnets du Kindle Scribe</a></li>
       </ul>
     """,
     "/guides/tablette-classique-ou-tablette-e-ink/": """
-      <p class="article-answer"><strong>Une tablette E Ink convient mieux à la lecture et à l’écriture concentrées ; une tablette classique convient mieux aux applications, à la couleur, à la vidéo et aux interactions rapides.</strong> Le choix dépend moins de la puissance brute que des tâches que vous refusez de sacrifier.</p>
+      <p class="article-answer"><strong>Une tablette E Ink convient mieux à la lecture et à l’écriture concentrées ; une tablette classique convient mieux aux applications, à la couleur, à la vidéo et aux interactions rapides.</strong> Commencez par les tâches indispensables : elles révèlent rapidement les compromis impossibles à accepter.</p>
 
       <h2 id="ecrans">Deux technologies, deux rythmes d’utilisation</h2>
-      <p>Une tablette classique utilise un écran LCD ou OLED conçu pour afficher des animations, de la vidéo et des couleurs riches avec un rafraîchissement rapide. Une tablette E Ink déplace des pigments pour former l’image et conserve la page affichée sans la redessiner en permanence. Elle privilégie ainsi la stabilité de la page, mais les changements d’écran sont plus lents.</p>
+      <p>Une tablette classique utilise un écran LCD ou OLED conçu pour afficher des animations, de la vidéo et des couleurs riches avec un rafraîchissement rapide. Un écran E Ink privilégie l’affichage de pages statiques ; ses changements d’écran sont plus lents et peuvent laisser des traces résiduelles jusqu’au rafraîchissement suivant.</p>
       <p>Cette différence explique l’essentiel des usages. L’E Ink est cohérente pour lire, écrire et consulter des documents relativement statiques. Une tablette classique est plus adaptée dès que l’activité exige défilement rapide, vidéo, visioconférence, retouche d’image ou applications non optimisées.</p>
 
       <h2 id="comparaison">Comparaison par usage</h2>
@@ -1063,9 +1063,9 @@ GUIDE_CONTENT = {
 
       <h2 id="sources">Sources consultées</h2>
       <ul class="source-list">
-        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX — exemple officiel de tablette E Ink Android avec Google Play</a></li>
-        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable — caractéristiques et autonomie annoncée du reMarkable 2</a></li>
-        <li><a href="https://help.kobo.com/hc/en-us/articles/360017763713-File-formats-your-Kobo-eReader-and-Kobo-Books-app-support" rel="noopener noreferrer">Kobo — formats pris en charge et limites liées aux DRM</a></li>
+        <li><a href="https://shop.boox.com/products/go103" rel="noopener noreferrer">BOOX : exemple officiel de tablette E Ink Android avec Google Play</a></li>
+        <li><a href="https://support.remarkable.com/s/article/About-reMarkable-2" rel="noopener noreferrer">reMarkable : caractéristiques et autonomie annoncée du reMarkable 2</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360017763713-File-formats-your-Kobo-eReader-and-Kobo-Books-app-support" rel="noopener noreferrer">Kobo : formats pris en charge et limites liées aux DRM</a></li>
       </ul>
     """,
 }

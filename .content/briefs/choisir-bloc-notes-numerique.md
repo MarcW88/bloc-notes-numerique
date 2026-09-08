@@ -1,7 +1,7 @@
 ---
 url: /guides/choisir-bloc-notes-numerique/
 slug: choisir-bloc-notes-numerique
-status: DRAFT_READY
+status: HUMAN_APPROVED
 guide_type: choice
 primary_keyword: choisir bloc-notes numérique
 search_intent: choisir une tablette E Ink de prise de notes selon son usage

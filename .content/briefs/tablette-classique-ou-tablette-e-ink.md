@@ -1,7 +1,7 @@
 ---
 url: /guides/tablette-classique-ou-tablette-e-ink/
 slug: tablette-classique-ou-tablette-e-ink
-status: DRAFT_READY
+status: HUMAN_APPROVED
 guide_type: choice
 primary_keyword: tablette classique ou tablette E Ink
 search_intent: choisir une technologie d’écran et un type d’appareil selon ses tâches
