@@ -1,301 +1,41 @@
 {
   "slug": "bloc-notes-numerique-professionnel",
   "url": "/comparatifs/bloc-notes-numerique-professionnel/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "meilleur bloc-notes numérique professionnel",
     "type": "best_for_use_case",
-    "user_job": "gérer réunions, PDF, exports et outils de travail"
+    "user_job": "prendre des notes au travail puis faire circuler l'information vers les documents, clouds et outils professionnels"
   },
   "criteria": [
-    {
-      "id": "organization",
-      "label": "organization",
-      "weight": 20
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 20
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 15
-    },
-    {
-      "id": "apps",
-      "label": "apps",
-      "weight": 15
-    },
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 15
-    },
-    {
-      "id": "simplicity",
-      "label": "simplicity",
-      "weight": 10
-    },
-    {
-      "id": "no_sub",
-      "label": "no_sub",
-      "weight": 5
-    }
+    {"id": "post_meeting_workflow", "label": "Workflow après la réunion"},
+    {"id": "cloud_apps", "label": "Clouds et applications"},
+    {"id": "pdf", "label": "PDF et annotation"},
+    {"id": "organization", "label": "Organisation sur plusieurs projets"},
+    {"id": "frontlight", "label": "Environnements de travail variables"},
+    {"id": "focus", "label": "Focus et simplicité"},
+    {"id": "keyboard_caveat", "label": "Usage clavier et limites E Ink"}
   ],
-  "product_universe": [
-    {
-      "id": "boox_go_lumi",
-      "name": "BOOX Go 10.3 (Gen II) Lumi",
-      "status": "ELIGIBLE",
-      "source": "https://shop.boox.com/products/go103gen2",
-      "price_snapshot": "à partir de 429,99 $ US"
-    },
-    {
-      "id": "supernote_manta",
-      "name": "Supernote Manta",
-      "status": "ELIGIBLE",
-      "source": "https://supernote.com/products/supernote-manta",
-      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
-    },
-    {
-      "id": "remarkable_pure",
-      "name": "reMarkable Paper Pure",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/shop/compare",
-      "price_snapshot": "à partir de 399 €"
-    },
-    {
-      "id": "remarkable_pro",
-      "name": "reMarkable Paper Pro",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
-      "price_snapshot": "à partir de 649 €"
-    },
-    {
-      "id": "boox_air5c",
-      "name": "BOOX Note Air5 C",
-      "status": "ELIGIBLE",
-      "source": "https://shop.boox.com/en-ca/products/noteair5c",
-      "price_snapshot": "499,99 $ US sur la boutique consultée"
-    }
+  "candidate_scope": [
+    {"name": "BOOX Go 10.3 Gen II Lumi", "role": "choix connecté général", "source": "https://shop.boox.com/products/go103gen2"},
+    {"name": "reMarkable Paper Pure", "role": "choix réunion focalisée", "source": "https://remarkable.com/products/remarkable-paper/pure"},
+    {"name": "Supernote Manta", "role": "choix organisation de projets", "source": "https://supernote.com/pages/supernote-manta"},
+    {"name": "BOOX Note Air5 C", "role": "apps et documents couleur", "source": "https://shop.boox.com/products/noteair5c"},
+    {"name": "reMarkable Paper Pro", "role": "grand écran couleur focalisé", "source": "https://remarkable.com/products/remarkable-paper/pro"}
   ],
-  "scores": {
-    "boox_go_lumi": {
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for export."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for pdf."
-      },
-      "apps": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for apps."
-      },
-      "writing": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for writing."
-      },
-      "simplicity": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for simplicity."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II) Lumi; numeric score is an editorial normalization for no_sub."
-      }
-    },
-    "supernote_manta": {
-      "organization": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
-      },
-      "apps": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for apps."
-      },
-      "writing": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
-      },
-      "simplicity": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for no_sub."
-      }
-    },
-    "remarkable_pure": {
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
-      },
-      "apps": {
-        "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for apps."
-      },
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
-      },
-      "simplicity": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
-      },
-      "no_sub": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for no_sub."
-      }
-    },
-    "remarkable_pro": {
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
-      },
-      "apps": {
-        "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for apps."
-      },
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
-      },
-      "simplicity": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for simplicity."
-      },
-      "no_sub": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for no_sub."
-      }
-    },
-    "boox_air5c": {
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for export."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for pdf."
-      },
-      "apps": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for apps."
-      },
-      "writing": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for writing."
-      },
-      "simplicity": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for simplicity."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for no_sub."
-      }
-    }
+  "recommendation_logic": {
+    "default": "BOOX Go 10.3 Gen II Lumi lorsque plusieurs apps/clouds et le front light sont utiles",
+    "conditional": ["Paper Pure pour protéger le focus", "Manta pour retrouver des mois de notes", "Note Air5 C pour couleur/apps", "Paper Pro pour couleur sans Android"]
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "boox_go_lumi",
-      "score": 8.75
-    },
-    {
-      "rank": 2,
-      "product_id": "supernote_manta",
-      "score": 8.7
-    },
-    {
-      "rank": 3,
-      "product_id": "boox_air5c",
-      "score": 8.65
-    },
-    {
-      "rank": 4,
-      "product_id": "remarkable_pro",
-      "score": 7.45
-    },
-    {
-      "rank": 5,
-      "product_id": "remarkable_pure",
-      "score": 7.4
-    }
+  "source_urls": [
+    "https://www.zdnet.fr/guide-achat/remarkable-paper-pure-vs-boox-go-10-3-lumi-2e-generation-quelle-tablette-choisir-pour-le-travail-496047.htm",
+    "https://shop.boox.com/products/go103gen2",
+    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://support.supernote.com/setting-up-your-own-supernote-private-cloud-beta",
+    "https://remarkable.com/shop/connect/pricing"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Le choix professionnel est structuré par workflows réels et par ce qui arrive aux notes après la capture. Aucun score global. Les exigences IT/confidentialité doivent être vérifiées dans le contexte de l'entreprise."
 }
