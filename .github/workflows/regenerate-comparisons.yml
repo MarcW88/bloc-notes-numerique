@@ -7,6 +7,7 @@ on:
       - "comparison_products.py"
       - "comparison_pages.py"
       - "comparison_methodology.py"
+      - "comparison_editorial_strategy.py"
       - "comparison_content.py"
       - "comparison_content_professional.py"
       - "apply_comparison_content.py"
