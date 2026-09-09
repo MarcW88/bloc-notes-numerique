@@ -40,6 +40,17 @@ def replace_once(text: str, pattern: str, repl: str, label: str) -> str:
     return out
 
 
+def apply_usage_badge(html: str) -> str:
+    """Give Usage its own taxonomy class without depending on generator state."""
+    return re.sub(
+        r'<span class="content-type type-(?:guide|usage)">(?:Guide|Par usage)</span>',
+        '<span class="content-type type-usage">Par usage</span>',
+        html,
+        count=1,
+        flags=re.I,
+    )
+
+
 def apply_body(route: str, body: str) -> None:
     fp = route_file(route)
     html = fp.read_text(encoding="utf-8")
@@ -62,8 +73,7 @@ def apply_body(route: str, body: str) -> None:
         html = replace_once(html, r"<h1>.*?</h1>", f"<h1>{meta['title']}</h1>", f"h1 {route}")
         html = replace_once(html, r'<p class="lead">.*?</p>', f'<p class="lead">{meta["description"]}</p>', f"lead {route}")
 
-    # Usage is its own visible taxonomy. Keep existing guide badge styling.
-    html = html.replace('<span class="content-type type-guide">Guide</span>', '<span class="content-type type-guide">Par usage</span>', 1)
+    html = apply_usage_badge(html)
     if 'name="robots" content="noindex,follow"' not in html:
         raise RuntimeError(f"Usage noindex missing before write: {route}")
     fp.write_text(html, encoding="utf-8")
@@ -73,7 +83,7 @@ def apply_body(route: str, body: str) -> None:
 def apply_keep_badge(route: str) -> None:
     fp = route_file(route)
     html = fp.read_text(encoding="utf-8")
-    html = html.replace('<span class="content-type type-guide">Guide</span>', '<span class="content-type type-guide">Par usage</span>', 1)
+    html = apply_usage_badge(html)
     fp.write_text(html, encoding="utf-8")
 
 
