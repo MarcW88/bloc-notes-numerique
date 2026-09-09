@@ -61,9 +61,37 @@ def patch_page(path: str) -> None:
     print(f"✓ {path}")
 
 
+def patch_pending_about() -> None:
+    """Remove unsupported team/test language while keeping the page explicitly pending."""
+    page = ROOT / "a-propos" / "index.html"
+    text = page.read_text(encoding="utf-8")
+    text = replace_once(
+        text,
+        r'<meta name="description" content=".*?">',
+        '<meta name="description" content="Présentation de l’éditeur et des choix éditoriaux du site — informations en cours de confirmation.">',
+        "pending about description",
+    )
+    text = replace_once(
+        text,
+        r'<p class="lead">.*?</p>',
+        '<p class="lead">Cette page présentera l’éditeur du site, son parcours et ses règles éditoriales une fois ces informations confirmées.</p>',
+        "pending about lead",
+    )
+    text = replace_once(
+        text,
+        r'<p class="affiliation-note">.*?</p>',
+        '<p class="affiliation-note">Ce site contient des liens affiliés. Leur rôle dans le financement et les classements est détaillé dans notre <a href="/transparence-affiliation/">politique de transparence</a>.</p>',
+        "pending about affiliate note",
+    )
+    text = text.replace(">Méthode de test</a>", ">Méthode d’évaluation</a>")
+    page.write_text(text, encoding="utf-8")
+    print("✓ /a-propos/ (placeholder neutralized; content still pending)")
+
+
 def main() -> int:
     for path in TRUST_CONTENT:
         patch_page(path)
+    patch_pending_about()
     return 0
 
 
