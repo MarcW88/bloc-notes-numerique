@@ -143,6 +143,7 @@ for url, spec in PAGES.items():
         continue
 
     html = page.read_text(encoding='utf-8')
+    raw_html_lower = html.lower()
 
     article_match = re.search(r'<article class="content-main">(.*?)</article>', html, re.S | re.I)
     if not article_match:
@@ -151,10 +152,9 @@ for url, spec in PAGES.items():
 
     body = article_match.group(1)
     body_text = normalized_text(body)
-    page_text = normalized_text(html)
 
     # Draft safety and basic SEO integrity.
-    if '<!-- contenu à rédiger -->' in page_text or 'contenu en préparation' in page_text:
+    if '<!-- contenu à rédiger -->' in raw_html_lower or 'contenu en préparation' in raw_html_lower:
         issues.append('placeholder/preparation marker remains')
 
     robots = ROBOTS_RE.search(html)
@@ -183,17 +183,14 @@ for url, spec in PAGES.items():
 
     # Editorial blockers visible in user-facing prose.
     for label, patterns in EDITOR_FACING_PATTERNS.items():
-        matches = find_matches(body_text, patterns)
-        if matches:
+        if find_matches(body_text, patterns):
             issues.append(f'{label} detected')
 
     for label, patterns in HIGH_SLOP_PATTERNS.items():
-        matches = find_matches(body_text, patterns)
-        if matches:
+        if find_matches(body_text, patterns):
             issues.append(f'high-risk generic writing pattern: {label}')
 
-    fake_hands_on = find_matches(body_text, FAKE_HANDS_ON_PATTERNS)
-    if fake_hands_on:
+    if find_matches(body_text, FAKE_HANDS_ON_PATTERNS):
         issues.append('unsupported first-hand test language detected')
 
     # Reviews need explicit evidence framing when no test data is stored in this repo.
@@ -206,8 +203,7 @@ for url, spec in PAGES.items():
     issues.extend(page_type_concept_failures(spec['page_type'], body_text))
 
     # Sources are required for factual commercial pages, but we do not impose an arbitrary count.
-    source_count = len(SOURCE_RE.findall(body))
-    if source_count == 0:
+    if len(SOURCE_RE.findall(body)) == 0:
         issues.append('no external source found in article')
 
     # Internal linking is judged contextually by the publish gate; machine validator only flags total absence.
@@ -215,8 +211,8 @@ for url, spec in PAGES.items():
     if not internal_links:
         notes.append('no internal link found; verify next-step navigation manually')
 
-    # Avoid accidental affiliate/test claims hidden in comments or attributes too.
-    if re.search(r'\b(best|meilleur)\b', body_text) and not any(term in body_text for term in ['critère', 'selon', 'pour ', 'notre sélection']):
+    # Absolute best-language needs a manual criteria check rather than an automatic failure.
+    if re.search(r'\bmeilleur\b', body_text) and not any(term in body_text for term in ['critère', 'selon', 'pour ', 'notre sélection']):
         notes.append('absolute best-language may need explicit criteria')
 
     if issues:
