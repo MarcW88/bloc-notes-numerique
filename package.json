@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "visual:install": "playwright install chromium",
-    "visual:brands": "node .agents/skills/site-design-review/scripts/run-visual-review.mjs --scope brands"
+    "visual:brands": "node .agents/skills/site-design-review/scripts/run-visual-review.mjs --scope brands",
+    "visual:comparisons": "node .agents/skills/site-design-review/scripts/run-visual-review.mjs --scope comparisons"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0"
