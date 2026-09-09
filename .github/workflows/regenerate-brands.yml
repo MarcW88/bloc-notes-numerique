@@ -8,6 +8,7 @@ on:
       - "brand_render_common.py"
       - "brand_render_pages.py"
       - "brand_pages.py"
+      - "brand_reviewed_output.py"
       - "apply_brand_content.py"
       - "generate_brand_metadata.py"
       - "validate_brands.py"
