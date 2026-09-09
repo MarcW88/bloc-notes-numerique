@@ -10,7 +10,9 @@ on:
       - "comparison_bespoke_priority_20260909.py"
       - "comparison_bespoke_remaining_20260909.py"
       - "comparison_content.py"
+      - "comparison_publication.py"
       - "apply_comparison_content.py"
+      - "apply_comparison_indexation.py"
       - "generate_comparison_metadata.py"
       - "validate_comparisons.py"
       - ".agents/skills/comparison-content-workflow/**"
@@ -48,6 +50,8 @@ jobs:
         run: python apply_comparison_content.py
       - name: Generate comparison methodology files
         run: python generate_comparison_metadata.py
+      - name: Apply approved comparison indexation
+        run: python apply_comparison_indexation.py
       - name: Validate comparison cluster
         run: python validate_comparisons.py
       - name: Commit generated comparison pages
