@@ -12,6 +12,7 @@ on:
       - "brand_enriched_output.py"
       - "brand_bespoke_output.py"
       - "brand_hub_bespoke_output.py"
+      - "brand_light_update_output.py"
       - "apply_brand_content.py"
       - "generate_brand_metadata.py"
       - "validate_brands.py"
