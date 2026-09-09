@@ -1,251 +1,56 @@
 {
   "slug": "prise-de-notes-professionnelle",
   "page_url": "/usages/prise-de-notes-professionnelle/",
-  "status": "HUMAN_APPROVED",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "last_researched": "2026-09-09",
   "intent": {
     "primary_query": "bloc-notes numérique professionnel",
-    "dominant_intent": "Comprendre si un bloc-notes numérique convient à un workflow professionnel et quels critères deviennent déterminants.",
-    "reader_maturity": "Évaluation de catégorie avant comparaison de modèles",
-    "expected_outcome": "Identifier les workflows où E Ink apporte une valeur et les hard gates IT/export.",
-    "semantic_variants": [
-      "bloc notes numérique travail",
-      "tablette e ink professionnel",
-      "prise de notes numérique travail"
-    ],
+    "dominant_intent": "Évaluer si un bloc-notes numérique s'intègre réellement à un workflow professionnel avant de comparer les modèles.",
     "closest_comparison": "/comparatifs/bloc-notes-numerique-professionnel/",
-    "related_guides": [
-      "/guides/exporter-notes/",
-      "/guides/synchroniser-notes-cloud/",
-      "/guides/ecosysteme-ouvert-ou-ferme/",
-      "/guides/organiser-notes-numeriques/"
-    ],
-    "related_brand_pages": [
-      "/marques/remarkable/",
-      "/marques/boox/",
-      "/marques/supernote/",
-      "/marques/kindle-scribe/"
-    ],
-    "cannibalization_risks": [
-      "Ne pas classer les modèles professionnels",
-      "Ne pas devenir un tutoriel d'export ou de cloud"
-    ]
+    "boundary": "Cette page traite continuité documentaire, règles IT, organisation et handoff ; la page Réunion traite uniquement le moment réunion et son suivi immédiat."
   },
   "jtbd": {
     "primary_job_statement": {
-      "circumstances": "Quand mes journées alternent réunions, lecture de documents et notes personnelles",
-      "progress": "capturer puis retrouver l'information sans la disperser entre plusieurs supports",
-      "outcome": "réutiliser ou partager mes notes dans mon environnement de travail",
+      "circumstances": "Quand documents, notes et décisions doivent circuler entre plusieurs moments et outils de travail",
+      "progress": "capturer sans disperser puis conserver une continuité documentaire",
+      "outcome": "retrouver et transmettre une sortie exploitable dans l'environnement de l'entreprise",
       "evidence_class": "INFERRED"
     },
-    "secondary_jobs": [
-      "annoter des documents",
-      "retrouver des décisions",
-      "préparer un suivi"
-    ],
-    "functional_jobs": [
-      "capturer",
-      "classer",
-      "retrouver",
-      "exporter",
-      "partager"
-    ],
-    "emotional_jobs": [
-      {
-        "job": "avoir confiance dans la sauvegarde et la récupération",
-        "evidence_class": "HYPOTHESIS"
-      }
-    ],
-    "social_jobs": [
-      {
-        "job": "partager un résultat lisible par des collègues",
-        "evidence_class": "INFERRED"
-      }
-    ],
+    "current_hires": ["cahier papier", "ordinateur portable", "tablette LCD", "OneNote"],
     "forces": {
-      "push": [
-        "notes dispersées",
-        "ressaisie",
-        "documents papier difficiles à archiver"
-      ],
-      "pull": [
-        "centralisation",
-        "écriture au stylet",
-        "sortie numérique"
-      ],
-      "anxiety": [
-        "confidentialité",
-        "cloud non autorisé",
-        "format propriétaire"
-      ],
-      "habit": [
-        "carnet papier",
-        "ordinateur déjà intégré au SI"
-      ]
-    },
-    "current_hires": [
-      "cahier papier",
-      "ordinateur portable",
-      "tablette LCD",
-      "OneNote",
-      "impression papier"
-    ],
-    "big_hire": [
-      "adopter un appareil dédié de prise de notes"
-    ],
-    "little_hire": [
-      "ouvrir l'appareil à chaque réunion",
-      "retrouver une note plusieurs semaines plus tard",
-      "exporter vers le workflow d'équipe"
-    ]
+      "push": ["notes dispersées", "ressaisie", "handoffs incomplets"],
+      "pull": ["centralisation", "recherche", "export"],
+      "anxiety": ["confidentialité", "cloud non autorisé", "format propriétaire"],
+      "habit": ["ordinateur déjà intégré au SI", "papier"]
+    }
   },
   "workflow_map": [
-    {
-      "stage": "entrée",
-      "task": "recevoir un document",
-      "current_friction": "supports dispersés",
-      "failure_consequence": "document absent au moment utile",
-      "helpful_capability": "import/cloud/USB",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "stage": "capture",
-      "task": "écrire pendant le travail",
-      "current_friction": "changement d'outil",
-      "failure_consequence": "perte de contexte",
-      "helpful_capability": "accès rapide au carnet",
-      "evidence_class": "INFERRED"
-    },
-    {
-      "stage": "organisation",
-      "task": "retrouver une note",
-      "current_friction": "volume de carnets",
-      "failure_consequence": "temps perdu",
-      "helpful_capability": "dossiers/tags/recherche",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "stage": "sortie",
-      "task": "partager ou archiver",
-      "current_friction": "ressaisie",
-      "failure_consequence": "information enfermée dans l'appareil",
-      "helpful_capability": "PDF/PNG/texte/cloud",
-      "evidence_class": "SUPPORTED"
-    }
+    {"stage": "entrée", "task": "recevoir un document", "current_friction": "sources dispersées", "failure_consequence": "contexte absent", "helpful_capability": "import/cloud/USB", "evidence_class": "SUPPORTED"},
+    {"stage": "capture", "task": "produire une note", "current_friction": "changement d'outil", "failure_consequence": "information fragmentée", "helpful_capability": "accès rapide", "evidence_class": "INFERRED"},
+    {"stage": "archive", "task": "retrouver", "current_friction": "volume", "failure_consequence": "temps perdu", "helpful_capability": "classement/recherche", "evidence_class": "INFERRED"},
+    {"stage": "handoff", "task": "transmettre", "current_friction": "format ou service incompatible", "failure_consequence": "ressaisie ou dépendance", "helpful_capability": "export interopérable", "evidence_class": "SUPPORTED"}
   ],
   "criteria": [
-    {
-      "criterion": "export interopérable",
-      "priority": "MUST_HAVE",
-      "why_it_matters": "les notes doivent sortir du dispositif",
-      "conditions": "si partage ou archivage externe",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "criterion": "compatibilité avec la politique IT",
-      "priority": "MUST_HAVE",
-      "why_it_matters": "un cloud ou compte non autorisé peut bloquer l'usage",
-      "conditions": "entreprise avec règles de sécurité",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "criterion": "organisation et recherche",
-      "priority": "HIGH",
-      "why_it_matters": "le volume augmente avec les projets",
-      "conditions": "usage récurrent",
-      "evidence_class": "INFERRED"
-    },
-    {
-      "criterion": "taille et poids",
-      "priority": "CONDITIONAL",
-      "why_it_matters": "dépend de la mobilité et des PDF",
-      "conditions": "déplacements fréquents ou documents A4",
-      "evidence_class": "INFERRED"
-    }
+    {"criterion": "export interopérable", "priority": "MUST_HAVE", "why_it_matters": "les notes doivent sortir du dispositif", "conditions": "partage ou archivage", "evidence_class": "SUPPORTED"},
+    {"criterion": "compatibilité avec la politique IT", "priority": "MUST_HAVE", "why_it_matters": "un service non autorisé peut bloquer tout le workflow", "conditions": "environnement d'entreprise", "evidence_class": "SUPPORTED"},
+    {"criterion": "organisation et recherche", "priority": "HIGH", "why_it_matters": "la valeur dépend de la récupération dans le temps", "conditions": "usage récurrent", "evidence_class": "INFERRED"}
   ],
   "solution_families": [
-    {
-      "family": "E Ink minimaliste",
-      "best_when": "écriture/lecture dominantes",
-      "main_strength": "workflow dédié",
-      "main_friction": "intégrations limitées",
-      "avoid_when": "applications métiers indispensables"
-    },
-    {
-      "family": "E Ink ouvert",
-      "best_when": "applications et services tiers nécessaires",
-      "main_strength": "flexibilité",
-      "main_friction": "complexité accrue",
-      "avoid_when": "simplicité maximale recherchée"
-    },
-    {
-      "family": "tablette LCD/ordinateur",
-      "best_when": "multitâche et applications métiers",
-      "main_strength": "polyvalence",
-      "main_friction": "moins spécialisé pour l'écriture",
-      "avoid_when": "le besoin est quasi exclusivement lecture/notes"
-    }
+    {"family": "E Ink spécialisé", "best_when": "écriture, lecture et documents dominent", "main_strength": "workflow dédié", "main_friction": "intégrations plus limitées", "avoid_when": "applications métiers indispensables"},
+    {"family": "E Ink ouvert", "best_when": "plusieurs services tiers sont nécessaires", "main_strength": "flexibilité", "main_friction": "complexité", "avoid_when": "simplicité maximale"},
+    {"family": "tablette LCD/ordinateur", "best_when": "multitâche, collaboration et apps métiers dominent", "main_strength": "polyvalence", "main_friction": "outil moins spécialisé", "avoid_when": "besoin presque exclusivement documentaire"}
   ],
-  "contraindications": [
-    "coédition temps réel indispensable",
-    "visioconférence",
-    "tableurs ou présentations complexes",
-    "cloud externe interdit"
-  ],
+  "contraindications": ["coédition temps réel indispensable", "visioconférence centrale", "applications métiers complexes", "cloud externe interdit sans alternative locale"],
   "evidence_ledger": [
-    {
-      "claim": "reMarkable prend en charge plusieurs voies d'import/export et des intégrations cloud",
-      "source": "https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files",
-      "date_checked": "2026-09-09",
-      "stability": "évolutive",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "claim": "BOOX permet l'export des notes en PNG/PDF/.note",
-      "source": "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
-      "date_checked": "2026-09-09",
-      "stability": "évolutive",
-      "evidence_class": "SUPPORTED"
-    },
-    {
-      "claim": "les connexions cloud professionnelles Kindle Scribe dépendent des réglages de sécurité de l'organisation",
-      "source": "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL",
-      "date_checked": "2026-09-09",
-      "stability": "évolutive",
-      "evidence_class": "SUPPORTED"
-    }
+    {"claim": "reMarkable prend en charge plusieurs voies d'import/export et des intégrations cloud", "source": "https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "BOOX permet l'export de notes manuscrites", "source": "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "l'accès Kindle Scribe aux clouds professionnels dépend des réglages de sécurité de l'organisation", "source": "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"}
   ],
   "editorial": {
-    "differentiation": "Partir du cycle de vie de la note professionnelle plutôt que d'une liste de modèles.",
-    "opening_answer": "Pertinent si capture, organisation et sortie numérique sont les frictions principales.",
-    "recommended_sections": [
-      "situations",
-      "workflow",
-      "critères",
-      "familles",
-      "surévalué",
-      "contre-indications",
-      "suite"
-    ],
+    "differentiation": "Construire la décision autour des ruptures de continuité professionnelles et du handoff, pas autour d'une liste de fonctions.",
+    "structure_basis": "documents entrants → situations professionnelles → règles IT → handoff → limites → comparatif",
     "comparison_handoff": "/comparatifs/bloc-notes-numerique-professionnel/",
-    "guide_handoffs": [
-      "/guides/exporter-notes/",
-      "/guides/synchroniser-notes-cloud/"
-    ],
-    "excluded_claims": [
-      "meilleure productivité",
-      "moins de distraction comme bénéfice universel"
-    ]
+    "excluded_claims": ["meilleure productivité", "moins de distraction comme bénéfice universel"]
   },
-  "qa": {
-    "jtbd_without_product": true,
-    "circumstances_specific": true,
-    "alternatives_considered": true,
-    "criteria_derived_from_workflow": true,
-    "contraindications_present": true,
-    "no_product_ranking": true,
-    "hypotheses_labeled": true,
-    "noindex_preserved": true,
-    "final_verdict": "PASS"
-  }
+  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PENDING_PUBLISH_REVIEW"}
 }
