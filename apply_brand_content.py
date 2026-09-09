@@ -61,6 +61,16 @@ for url, page_data in PAGES.items():
             '<h2 id="compatibilite">Compatibilités et limites : le principal piège reste la génération des accessoires</h2>',
         )
 
+    if url == '/marques/remarkable/remarkable-2-avis/':
+        body = body.replace(
+            '<h2 id="methode">Sur quoi repose cet avis ?</h2>',
+            '<h2 id="methode">Sur quoi repose cet avis ?</h2>\n<p><strong>Il s’agit d’une analyse documentaire, pas d’un test physique réalisé par nos soins.</strong></p>',
+        )
+        body = body.replace(
+            '<h2 id="sources">Sources consultées</h2>',
+            '<h2 id="sources">Sources consultées</h2>\n<p>Statut, support et sources vérifiés le 9 septembre 2026.</p>',
+        )
+
     if url == '/marques/boox/boox-tab-ultra/':
         body = body.replace(
             '<h2 id="limites">Pourquoi l’ancienneté du système compte</h2>',
