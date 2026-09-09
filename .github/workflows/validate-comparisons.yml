@@ -9,10 +9,13 @@ on:
       - ".agents/skills/comparison-editorial-publish-gate/**"
       - "comparison_products.py"
       - "comparison_pages.py"
+      - "comparison_methodology.py"
       - "comparison_content.py"
+      - "comparison_content_professional.py"
       - "apply_comparison_content.py"
       - "generate_comparison_metadata.py"
       - "validate_comparisons.py"
+      - "validate_comparison_v2.py"
       - "comparison-workflow.config.yaml"
       - "AGENTS.md"
       - ".github/workflows/validate-comparisons.yml"
@@ -25,10 +28,13 @@ on:
       - ".agents/skills/comparison-editorial-publish-gate/**"
       - "comparison_products.py"
       - "comparison_pages.py"
+      - "comparison_methodology.py"
       - "comparison_content.py"
+      - "comparison_content_professional.py"
       - "apply_comparison_content.py"
       - "generate_comparison_metadata.py"
       - "validate_comparisons.py"
+      - "validate_comparison_v2.py"
       - "comparison-workflow.config.yaml"
       - "AGENTS.md"
       - ".github/workflows/validate-comparisons.yml"
@@ -41,10 +47,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Regenerate comparison methodology in the runner
+        run: python3 generate_comparison_metadata.py
       - name: Validate the implemented comparison pipeline
         run: python3 validate_comparisons.py
+      - name: Validate enriched comparison workflow v2 data
+        run: python3 validate_comparison_v2.py
       - name: Explain evaluation boundary
         run: |
-          echo "Machine PASS only proves mechanical consistency of the implemented comparison pipeline."
+          echo "Machine PASS proves pipeline consistency and v2 data integrity, not final publication quality."
           echo "Run .agents/skills/comparison-editorial-publish-gate/SKILL.md to evaluate each phase of comparison-content-workflow."
           echo "Keep noindex until that evaluation passes and a human explicitly validates publication."
