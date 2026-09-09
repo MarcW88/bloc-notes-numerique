@@ -961,9 +961,8 @@ html:has(link[rel="canonical"][href*="/marques/"]) .page-hero .content-type.type
   border-left-color: var(--color-accent);
 }
 
-/* The current renderer does not output a sidebar on brand pages. Do not
-   reserve an empty 280px column; keep a comfortable editorial measure.
-   If a real sidebar is added later, the two-column layout is restored. */
+/* Brand pages use the editorial sidebar when present; the single-column
+   fallback keeps the same reading measure if a renderer omits it. */
 html:has(link[rel="canonical"][href*="/marques/"]) .section:has(.content-layout) {
   padding: 0;
 }
@@ -977,6 +976,10 @@ html:has(link[rel="canonical"][href*="/marques/"]) .content-layout:has(.content-
   grid-template-columns: minmax(0, 1fr) 280px;
   justify-content: stretch;
   gap: 48px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-sidebar .sidebar-box {
+  max-height: calc(100vh - var(--header-h) - 32px);
+  overflow-y: auto;
 }
 html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2 {
   margin: 36px 0 14px;
@@ -1082,6 +1085,28 @@ html:has(link[rel="canonical"][href*="/marques/"]) .product-summary-header {
   border-bottom: 1px solid var(--color-border);
 }
 
+@media (max-width: 1024px) {
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-layout:has(.content-sidebar) {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+    gap: 24px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-sidebar {
+    position: static;
+    order: -1;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-sidebar .sidebar-box {
+    max-height: none;
+    overflow: visible;
+    padding: 16px 18px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .sidebar-toc {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   html:has(link[rel="canonical"][href*="/marques/"]) .page-hero {
     padding: 38px 0 30px;
@@ -1114,5 +1139,11 @@ html:has(link[rel="canonical"][href*="/marques/"]) .product-summary-header {
   }
   html:has(link[rel="canonical"][href*="/marques/"]) .summary-label {
     min-width: 0;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .sidebar-toc {
+    grid-template-columns: 1fr;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .sidebar-toc a.toc-level-3 {
+    display: none;
   }
 }
