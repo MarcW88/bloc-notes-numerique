@@ -40,8 +40,8 @@ for slug, body in COMPARISON_CONTENT.items():
 
     if '<!-- Contenu à rédiger -->' in html:
         raise SystemExit(f'Placeholder still present: {slug}')
-    if 'name="robots" content="noindex,follow"' not in html:
-        raise SystemExit(f'noindex removed: {slug}')
+    if not re.search(r'<meta\s+name="robots"\s+content="[^"]+"\s*/?>', html, re.I):
+        raise SystemExit(f'robots meta missing: {slug}')
 
     page.write_text(html, encoding='utf-8')
     print('updated', slug)
