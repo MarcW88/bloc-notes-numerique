@@ -1,106 +1,133 @@
 ---
 name: usage-content-workflow
-description: Pré-analyser, rédiger et valider les pages SEO/GEO sous /usages/ de bloc-notes-numeriques.fr. Utiliser pour les pages centrées sur un contexte ou un job-to-be-done : étudiant, professionnel, réunion, annotation PDF, lecture, dessin, remplacement du papier, etc. Ne pas utiliser pour classer des produits, expliquer une technologie ou rédiger une page de marque.
+description: Workflow unique de production et correction des pages SEO/GEO sous /usages/ de bloc-notes-numeriques.fr. Utiliser après usage-analysis-workflow lorsqu'une page nécessite LIGHT_UPDATE ou DEEP_REWRITE, ou pour produire une nouvelle page centrée sur un job-to-be-done. Ne pas utiliser pour classer des produits, expliquer principalement une technologie ou rédiger une page de marque.
+metadata:
+  adapted_for: bloc-notes-numeriques.fr
+  orchestration_target: ">=80% existing skills"
 ---
 
 # Usage Content Workflow
 
-## Objectif
+## Rôle
 
-Produire des pages `/usages/` qui expliquent **dans quelles situations un bloc-notes numérique est pertinent, quelles contraintes changent réellement l'expérience et quel type de solution convient**, sans transformer la page en comparatif produit déguisé.
+C'est le **seul workflow de production/correction** à utiliser pour les URLs sous `/usages/`.
+
+Il ne décide plus seul si une page existante doit être réécrite. Pour une URL existante, la séquence normale est :
+
+`usage-analysis-workflow / AUDIT` → décision → correction si nécessaire → `usage-analysis-workflow / PUBLISH_REVIEW`.
+
+Décisions consommées :
+
+- `KEEP` → ne pas rédiger ;
+- `LIGHT_UPDATE` → corriger uniquement le scope identifié par l'audit ;
+- `DEEP_REWRITE` → reconstruire la page en préservant les éléments valides ;
+- `MERGE` / `NOINDEX` → ne pas produire une nouvelle version sans décision humaine sur le rôle de l'URL.
+
+Pour une **nouvelle URL**, réaliser directement le cadrage intention + JTBD + recherche avant la rédaction ; il n'existe évidemment pas de contenu historique à auditer.
 
 Principe de séparation :
 
-- `/usages/` = comprendre le besoin, le workflow et les critères ;
-- `/comparatifs/` = choisir et classer des produits ;
+- `/usages/` = comprendre le besoin, les circonstances, le workflow, les frictions et les critères ;
+- `/comparatifs/` = choisir entre des produits ;
 - `/guides/` = expliquer une technologie, un critère ou une procédure ;
 - `/marques/` = documenter un écosystème, une gamme ou un produit.
 
-Une page usage doit rester utile même si aucun produit précis n'est cité.
+Une page usage doit rester utile même si aucun produit précis ni lien affilié n'est cité.
 
-## Entrées obligatoires
+---
+
+# 1. Entrées
 
 Lire avant toute production :
 
 - `AGENTS.md` et `DESIGN.md` ;
-- `.agents/skills/jobs-to-be-done/SKILL.md` ;
-- la page cible et `_generate.py` ;
-- l'analyse sémantique du projet si elle est accessible ;
-- les autres pages `/usages/` ;
+- `usage-workflow.config.yaml` ;
+- `.agents/skills/usage-analysis-workflow/SKILL.md` ;
+- l'audit de la page lorsqu'elle existe ;
+- la page cible et son fichier `.content/usages/<slug>.json` ;
+- les autres pages `/usages/` pertinentes ;
 - les guides, comparatifs et pages marques susceptibles de répondre à une sous-question ;
-- `/guides/prix-bloc-notes-numerique/` comme référence de profondeur et de valeur décisionnelle, sans en copier la structure.
+- les données sémantiques, GSC ou autres signaux disponibles ;
+- les sources nécessaires aux faits actuels.
 
-Créer ou mettre à jour `.content/usages/<slug>.json` avant la rédaction.
+Créer ou mettre à jour `.content/usages/<slug>.json` **avant la rédaction**.
 
-## Étape 1 — Définir le rôle exact de la page
+Ne pas utiliser la mémoire du modèle pour combler un manque factuel.
 
-Documenter :
+---
 
-- URL et requête principale ;
-- intention dominante ;
-- situation ou contexte central ;
-- niveau de maturité du lecteur ;
+# 2. Chaîne de production fondée sur les skills réutilisés
+
+La majorité de la méthode doit provenir des skills existants. Le présent workflow orchestre ; il ne doit pas recréer leurs méthodes sous forme de règles custom.
+
+## Étape 1 — intention et rôle
+
+Utiliser `search-intent` pour confirmer :
+
+- requête/topic principal ;
+- intention ;
+- situation ou problème central ;
+- niveau de maturité ;
 - résultat attendu ;
-- page comparative la plus proche ;
-- guides proches ;
+- pages internes proches ;
 - risque de cannibalisation.
 
-### Gate anti-cannibalisation
+Pour une page existante, respecter le diagnostic de `usage-analysis-workflow / AUDIT` et préserver la valeur déjà identifiée.
 
-Une page usage ne doit pas répondre à « quel modèle est le meilleur ? » par un classement.
+### Gate de frontière
 
-Exemple :
+Une page usage ne doit pas devenir :
 
-- `/usages/prise-de-notes-etudiant/` explique les situations d'étude, workflows, contraintes, critères et types de solutions ;
-- `/comparatifs/bloc-notes-numerique-etudiant/` compare et classe des modèles pour ces critères.
+- un classement de produits ;
+- un guide technique autonome ;
+- une page de marque ;
+- un pseudo-persona générique.
 
-Si les deux pages pourraient conserver le même H1, le même tableau central et la même conclusion en changeant seulement quelques mots, le cadrage échoue.
+Si la production révèle que le rôle de l'URL est mauvais malgré l'audit, arrêter la rédaction et renvoyer vers `usage-analysis-workflow` plutôt que forcer le contenu dans le slug.
 
-## Étape 2 — Analyse JTBD
+## Étape 2 — `jobs-to-be-done`
 
-Utiliser `jobs-to-be-done` avant toute sélection de produit.
+Utiliser le skill `jobs-to-be-done` avant toute recommandation de solution.
 
-Pour le job principal et les jobs secondaires, documenter :
+Documenter uniquement les dimensions utiles au sujet :
 
-1. **Circumstances** — quand, où et avec quels supports le besoin apparaît ;
-2. **Progress** — progrès recherché ;
-3. **Outcome** — résultat concret attendu ;
-4. **Functional jobs** ;
-5. **Emotional jobs** ;
-6. **Social jobs** ;
-7. **Push / Pull / Anxiety / Habit** ;
-8. **Current hires** — papier, ordinateur, tablette LCD, smartphone, liseuse, impression, bricolages, non-consommation ;
-9. **Big Hire / Little Hire** — achat initial vs usage répété.
+- circumstances ;
+- progress/outcome ;
+- functional jobs ;
+- emotional/social jobs lorsqu'ils sont réellement utiles ;
+- Push / Pull / Anxiety / Habit ;
+- current hires ;
+- Big Hire / Little Hire.
 
-Ne pas transformer « étudiant », « professionnel » ou « dessinateur » en pseudo-persona générique. Les circonstances priment sur les attributs démographiques.
+Ne pas remplir mécaniquement toutes les cases.
 
 ### Gate de preuve JTBD
 
-Sans interview utilisateur ou donnée comportementale, les dimensions émotionnelles/sociales et certains pains restent des hypothèses éditoriales. Les enregistrer comme `HYPOTHESIS` ou `INFERRED`. Ne jamais écrire « les étudiants veulent… » sans preuve suffisante.
+Sans interview utilisateur ou donnée comportementale :
 
-## Étape 3 — Cartographier le workflow réel
+- les motivations émotionnelles/sociales restent `INFERRED` ou `HYPOTHESIS` ;
+- ne jamais écrire « les étudiants veulent… », « les professionnels préfèrent… » ou équivalent comme un fait universel ;
+- les circonstances et tâches observables doivent primer sur les attributs démographiques.
 
-Décomposer le job en séquence d'usage, par exemple :
+## Étape 3 — cartographier le workflow utile
 
-- entrée : recevoir/importer un document ou ouvrir un carnet ;
-- travail : écrire, annoter, lire, dessiner ;
-- organisation : classer, retrouver, lier, rechercher ;
-- sortie : exporter, partager, imprimer ou synchroniser ;
-- continuité : reprendre le travail sur un autre appareil ou quelques jours plus tard.
+Décomposer le job uniquement autant que nécessaire pour comprendre les frictions qui changent la décision.
 
-Pour chaque étape, noter :
+Des étapes possibles sont : entrée/import, travail principal, organisation/retrouvabilité, sortie/export/partage, continuité dans le temps ou entre appareils.
+
+Pour chaque étape réellement pertinente, relier :
 
 - tâche ;
-- friction actuelle ;
+- friction ;
 - conséquence si elle échoue ;
-- caractéristique ou capacité qui peut réduire cette friction ;
+- capacité ou caractéristique qui réduit la friction ;
 - niveau de preuve.
 
-Le workflow réel sert à éviter les listes de fonctionnalités sans relation avec l'usage.
+Aucun nombre d'étapes n'est obligatoire.
 
-## Étape 4 — Transformer le job en critères
+## Étape 4 — transformer les frictions en critères
 
-Classer chaque critère :
+Hiérarchiser les critères seulement lorsque cette hiérarchie apporte une décision plus claire :
 
 - `MUST_HAVE` ;
 - `HIGH` ;
@@ -108,36 +135,19 @@ Classer chaque critère :
 - `LOW` ;
 - `CONTRAINDICATION`.
 
-Chaque critère doit expliquer **ce qu'il change dans le job**.
+Chaque critère doit pouvoir répondre à :
 
-Exemples possibles : taille d'écran, poids, annotation PDF, latence, organisation, OCR, recherche, cloud, applications, autonomie, couleur, export, abonnement, coût total.
+> Qu'est-ce que ce critère change dans ce job précis ?
 
-Ne pas attribuer de score produit dans cette étape.
+Ne pas attribuer de scores produit ici. Les critères proviennent du workflow réel, pas du catalogue de fonctionnalités disponibles.
 
-## Étape 5 — Définir les familles de solutions adaptées
+## Étape 5 — recherche et preuves
 
-La page usage peut distinguer des types de solutions, par exemple :
+Utiliser `fact-check` pour les claims vérifiables.
 
-- appareil minimaliste centré sur l'écriture ;
-- appareil ouvert avec applications ;
-- grand écran orienté PDF ;
-- appareil couleur ;
-- liseuse avec prise de notes ;
-- tablette LCD classique ;
-- papier ou solution hybride.
+Lorsque la page contient un jugement expérientiel important sur un appareil, utiliser également `evidence-based-reviews` avec un niveau de preuve proportionné au claim. Ne pas l'appeler mécaniquement pour chaque spec.
 
-Pour chaque famille :
-
-- quand elle est pertinente ;
-- ce qu'elle résout bien ;
-- sa friction principale ;
-- quand elle devient un mauvais choix.
-
-Ne pas transformer cette section en podium de produits. Si un classement devient utile, créer un handoff explicite vers `comparison-content-workflow`.
-
-## Étape 6 — Registre de preuves
-
-Pour les affirmations vérifiables, conserver dans le fichier usage :
+Conserver dans le record usage, pour les claims importants :
 
 - claim ;
 - source ;
@@ -145,112 +155,172 @@ Pour les affirmations vérifiables, conserver dans le fichier usage :
 - stabilité ;
 - evidence class.
 
-Classes : `OBSERVED`, `SUPPORTED`, `INFERRED`, `HYPOTHESIS`, `UNKNOWN`.
+Classes usage : `OBSERVED`, `SUPPORTED`, `INFERRED`, `HYPOTHESIS`, `UNKNOWN`.
 
-Pour les capacités produit ou logiciel susceptibles d'évoluer, privilégier les sources officielles et dater la vérification.
+Pour les capacités produit ou logiciel susceptibles d'évoluer, privilégier des sources primaires et dater la vérification.
 
-## Étape 7 — Architecture éditoriale
+## Étape 6 — familles et alternatives de solutions
 
-Une page usage complète peut suivre cette logique, à adapter au sujet :
+Déterminer les familles de solutions **après** le JTBD et les critères.
 
-1. réponse initiale autonome ;
-2. dans quelles situations cet usage justifie un bloc-notes numérique ;
-3. workflow réel et frictions ;
-4. critères réellement déterminants ;
-5. critères secondaires ou surévalués ;
-6. familles de solutions adaptées ;
-7. situations où un bloc-notes numérique n'est pas le bon outil ;
-8. comment arbitrer selon les variantes du job ;
-9. prochaine étape : guides et comparatifs pertinents ;
-10. sources.
+Une famille peut être, lorsque le sujet le justifie : appareil minimaliste, plateforme ouverte, grand écran PDF, couleur, liseuse avec stylet, tablette LCD, papier ou workflow hybride.
 
-### Règles de profondeur
+Ne jamais imposer les mêmes familles à toutes les pages.
 
-- Un H2 important doit définir, expliquer et relier le point au job.
-- Un tableau doit être introduit puis interprété.
-- Une liste de critères sans hiérarchie ni conséquence pratique est insuffisante.
-- Les contre-indications doivent être aussi visibles que les bénéfices.
-- La page ne doit pas être une succession artificielle de sections symétriques.
+Pour chaque famille réellement utile, expliquer :
 
-## Étape 8 — Rédaction
+- quand elle convient ;
+- quelle friction elle résout ;
+- son compromis principal ;
+- dans quelles circonstances elle devient un mauvais choix.
 
-Rédiger uniquement après création du fichier `.content/usages/<slug>.json`.
+Si le lecteur a désormais besoin de savoir **quel produit acheter**, créer un handoff vers `comparison-content-workflow` plutôt que construire un podium ici.
 
-- Répondre au job principal dès les premières phrases.
-- Employer un français naturel, précis et sobre.
-- Expliquer les compromis plutôt que promettre un appareil « idéal ».
-- Distinguer faits, déductions et hypothèses.
-- Ne jamais inventer expérience, test, prix, autonomie mesurée ou avis utilisateur.
-- Conserver `noindex,follow` pendant toute la phase de brouillon.
-- Intégrer le contenu dans `_generate.py` ou un module explicitement importé par `_generate.py`, puis régénérer les pages. Ne pas éditer uniquement le HTML généré.
+## Étape 7 — `affiliate-value`
 
-## Étape 9 — Handoff vers les autres workflows
+Si la page influence l'achat, utiliser `affiliate-value` avant la rédaction finale.
 
-### Vers `guide-content-workflow`
+La page doit apporter de la valeur même sans liens affiliés : compromis, limites, alternatives, critères, contre-indications et parcours de décision.
 
-Utiliser lorsqu'une sous-question mérite une explication autonome : fonctionnement E Ink, OCR, export, synchronisation, taille d'écran, prix, latence, etc.
+## Étape 8 — brief et architecture bespoke
 
-### Vers `comparison-content-workflow`
+Utiliser `content-brief-authoring` pour transformer :
 
-Utiliser dès qu'il faut :
+- intention ;
+- JTBD ;
+- frictions ;
+- critères ;
+- preuves ;
+- valeur existante à préserver ;
+- handoffs vers guides/comparatifs ;
 
-- constituer un univers produit ;
-- attribuer des critères pondérés ;
-- scorer ;
-- classer ;
-- désigner un « meilleur » modèle.
+en un **plan propre à cette page**.
 
-Le fichier usage peut fournir les critères et contraintes au comparatif, mais ne doit pas stocker un ranking produit comme source de vérité.
+### Règle centrale
 
-### Vers `brand-content-workflow`
+Il n'existe **aucune architecture éditoriale obligatoire par type d'usage**.
 
-Utiliser lorsqu'une question porte principalement sur un écosystème ou une marque.
+Ne pas partir d'un plan fixe du genre : situation → workflow → critères → familles → contre-indications → conclusion si ce plan n'est pas celui que le research justifie.
 
-## Étape 10 — Chaîne de contrôle obligatoire
+Deux pages usage peuvent partager des composants visuels, mais leurs sections, leur ordre, leur nombre de H2/H3, leur usage des tableaux et leur conclusion doivent découler de la décision propre au job.
 
-Après rédaction, exécuter distinctement :
+Le brief doit justifier les grandes sections par :
 
-1. `content-refresh` adapté au neuf ;
-2. `search-intent` ;
-3. `affiliate-value` si la page influence l'achat ;
-4. `fact-check` ;
-5. `natural-writing` ;
-6. `internal-linking-audit` ;
-7. `humanizer` ;
-8. `general-writing` ;
-9. `anti-ai-slop` ;
-10. `seo-drift` en comparant le fichier usage, le brouillon initial et la version finale ;
-11. `seo-technical` ;
-12. `seo-best-practices` ;
-13. contrôle GEO ;
-14. `editorial-qa` ;
-15. lecture complète dans l'ordre rendu.
+- une question utilisateur ;
+- une friction ;
+- une preuve ;
+- un arbitrage ;
+- ou une prochaine étape nécessaire.
 
-Le contrôle final doit vérifier en plus :
+## Étape 9 — rédaction
+
+Utiliser `content-and-copy` pour produire la page à partir du brief et du registre de preuves.
+
+Règles :
+
+- répondre au job principal rapidement ;
+- employer un français naturel, précis et sobre ;
+- expliquer les compromis plutôt que promettre une solution idéale ;
+- distinguer faits, déductions et hypothèses ;
+- rendre les contre-indications aussi honnêtes que les bénéfices ;
+- ne jamais inventer test, expérience personnelle, autonomie mesurée, prix ou avis utilisateur ;
+- ne pas transformer la page en comparatif produit ;
+- conserver l'état robots de brouillon défini par la politique du site ;
+- intégrer le contenu dans la vraie source de vérité (`usage_content.py` ou module explicitement relié à la génération), pas seulement dans le HTML généré.
+
+Pour `LIGHT_UPDATE`, ne pas réécrire par réflexe les passages que l'audit a demandé de préserver.
+
+## Étape 10 — contrôles post-rédaction
+
+Exécuter dans cet ordre logique, sans refaire inutilement les étapes déjà validées :
+
+1. `fact-check` post-draft sur les claims réellement écrits ;
+2. `internal-linking-audit` ;
+3. `humanizer` ;
+4. `general-writing` ;
+5. `anti-ai-slop` ;
+6. `seo-drift` seulement si un baseline utile existe ;
+7. `seo-technical` ;
+8. `seo-best-practices` / `seo-onpage` selon les éléments réellement applicables ;
+9. `editorial-qa` ;
+10. lecture complète dans l'ordre rendu.
+
+Après `humanizer` et `general-writing`, ne jamais accepter une modification qui introduit un nouveau fait sans le repasser par `fact-check`.
+
+Le contrôle final doit notamment confirmer :
 
 - que le job n'a pas été remplacé par une liste de specs ;
-- que les circonstances sont encore visibles ;
-- que les critères restent hiérarchisés ;
+- que les circonstances ou frictions nécessaires sont encore visibles ;
+- que les critères restent reliés au job ;
 - que les contre-indications n'ont pas disparu ;
-- que la page ne s'est pas transformée en comparatif.
+- que les hypothèses ne sont pas devenues des certitudes ;
+- que la page ne s'est pas transformée en comparatif ;
+- que la structure ne copie pas mécaniquement les pages sœurs.
 
-## Échecs automatiques
+---
 
-Attribuer `FAIL` si :
+# 3. Handoffs vers les autres workflows
 
-- le job est formulé uniquement comme « trouver le meilleur bloc-notes pour X » ;
-- la page repose surtout sur des caractéristiques démographiques ;
-- une motivation utilisateur hypothétique est présentée comme un fait ;
-- les critères viennent des produits plutôt que du workflow réel ;
-- les alternatives hors E Ink ne sont jamais envisagées ;
-- la page classe des produits sans passer par le workflow comparatif ;
-- les contre-indications sont absentes ;
-- la page usage cannibalise manifestement un comparatif ou un guide ;
-- des affirmations produit instables sont non sourcées ;
-- le maillage ne mène pas vers les prochaines étapes utiles ;
-- `noindex` est retiré sans validation humaine.
+## Vers `guide-content-workflow`
 
-## Statuts
+Utiliser lorsqu'une sous-question mérite une explication autonome : fonctionnement E Ink, OCR, export, synchronisation, taille d'écran, prix, latence, annotation PDF procédurale, etc.
+
+## Vers `comparison-content-workflow`
+
+Utiliser dès qu'il faut réellement :
+
+- sélectionner des candidats produits ;
+- comparer plusieurs modèles ;
+- scorer ou pondérer ;
+- classer ;
+- désigner un choix ou un meilleur modèle.
+
+Le record usage peut transmettre les contraintes/critères au comparatif mais ne doit pas stocker un ranking produit comme source de vérité.
+
+## Vers `brand-content-workflow`
+
+Utiliser lorsque la question porte principalement sur une marque, une gamme, un produit ou un service de marque.
+
+---
+
+# 4. PUBLISH_REVIEW obligatoire
+
+Une fois la correction/rédaction terminée, **ne pas auto-valider la page dans ce workflow**.
+
+Passer la main à :
+
+`usage-analysis-workflow / PUBLISH_REVIEW`
+
+Ce mode réexécute le validateur machine et les gates substantiels, puis retourne :
+
+- `PASS — READY_FOR_HUMAN_VALIDATION` ;
+- ou `FAIL — KEEP_NOINDEX`.
+
+Un PASS reste suivi d'une validation humaine explicite avant toute instruction d'indexation.
+
+---
+
+# 5. Échecs de production
+
+Arrêter ou renvoyer vers l'analyse si :
+
+- le job se réduit à « trouver le meilleur produit pour X » ;
+- la page repose surtout sur une catégorie démographique ;
+- des motivations hypothétiques sont traitées comme des faits ;
+- les critères viennent des produits plutôt que des frictions ;
+- aucune alternative hors E Ink n'est considérée alors qu'elle est plausible ;
+- un ranking produit apparaît ;
+- les contre-indications disparaissent sans justification ;
+- la page devient substantiellement identique à un guide ou comparatif proche ;
+- des claims instables sont non sourcés ;
+- l'architecture a été copiée d'une autre page sans justification ;
+- un faux hands-on est introduit.
+
+---
+
+# 6. Statuts du record usage
+
+Les statuts de production internes peuvent rester :
 
 - `JTBD_READY` ;
 - `EVIDENCE_READY` ;
@@ -260,4 +330,23 @@ Attribuer `FAIL` si :
 - `HUMAN_APPROVED` ;
 - `PUBLISHABLE`.
 
-`PUBLISHABLE` exige une validation humaine explicite et le passage des contrôles techniques. Ne pas merger/indexer une page uniquement parce que son fichier usage est complet.
+Ils ne remplacent pas la décision de `usage-analysis-workflow`.
+
+`PUBLISHABLE` exige : PUBLISH_REVIEW PASS + validation humaine + contrôles techniques. L'indexation reste une instruction explicite séparée.
+
+---
+
+# 7. Ce que ce workflow ne doit pas devenir
+
+Ne pas ajouter :
+
+- quota de mots ;
+- nombre minimum de H2/H3 ;
+- quota de liens ;
+- score qualité artificiel ;
+- architecture fixe "par usage" ;
+- matrice JTBD remplie mécaniquement ;
+- ranking produit ;
+- deuxième copie des méthodes déjà présentes dans les skills spécialisés.
+
+La couche custom reste limitée à l'orchestration et aux frontières propres à `/usages/`.
