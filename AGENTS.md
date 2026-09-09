@@ -54,28 +54,30 @@ Pour toute URL sous `/comparatifs/`, il n’existe que deux workflows comparison
 1. **Analyser / auditer** : `.agents/skills/comparison-analysis-workflow/SKILL.md`.
 2. **Créer / réécrire** : `.agents/skills/comparison-content-workflow/SKILL.md`.
 
-Les skills transversaux appelés par ces workflows (`content-audit`, `search-intent`, `jobs-to-be-done`, `affiliate-value`, `fact-check`, `evidence-based-reviews`, `humanizer`, `general-writing`, `anti-ai-slop`, etc.) sont des briques internes. Ne pas créer un nouveau workflow comparatif lorsqu’un de ces skills couvre déjà l’étape.
+Ces deux fichiers sont des **orchestrateurs**. La méthodologie doit venir majoritairement des skills GitHub spécialisés déjà présents dans le dépôt, notamment `seo-content-audit`, `seo-keyword`, `jobs-to-be-done`, `evidence-based-reviews`, `content-brief-authoring`, `content-and-copy`, `seo-onpage`, `humanizer`, `general-writing` et `anti-ai-slop`. Ne pas recopier leurs méthodes dans un nouveau workflow custom.
 
 ### Règles obligatoires
 
-1. Une page existante doit passer par `comparison-analysis-workflow` en mode `AUDIT` avant une réécriture substantielle.
-2. Déterminer le type `BEST_OVERALL`, `USE_CASE`, `BUDGET`, `FEATURE_SPECIFIC` ou `HEAD_TO_HEAD`, mais utiliser ce type uniquement comme grille méthodologique. **Le type de comparatif ne doit jamais imposer un plan, un ordre de sections, un nombre de H2/H3, un tableau, une FAQ ou des fiches produits symétriques.**
-3. Respecter la chaîne décisionnelle : intention → univers produit → équivalence → preuves → critères → hard gates → pondération/TSC si pertinents → scoring → ranking → plan → rédaction.
-4. Les critères et poids sont définis avant le gagnant. Ils ne peuvent pas être modifiés pour produire un classement souhaité.
-5. Toute exclusion de produit doit être documentée. Aucun produit n'est inclus ou favorisé parce qu'il possède un meilleur lien ou une meilleure commission d'affiliation.
-6. Utiliser des sources fiables et actuelles. Les specs reposent d'abord sur le fabricant/documentation ; les jugements d'usage nécessitent des sources indépendantes ou des patterns suffisamment documentés.
-7. Ne jamais remplir un trou de preuve avec la connaissance du modèle. Une information reste `UNKNOWN`, est qualifiée ou est supprimée.
-8. Le scoring doit être auditable : chaque note importante possède une justification et un niveau de preuve. Une spec ne devient pas automatiquement une preuve d'expérience d'usage.
-9. Utiliser les hard gates lorsque l'intention comporte une contrainte éliminatoire. Un produit qui échoue un besoin essentiel ne peut pas gagner par simple moyenne.
-10. Comparer le coût de la configuration réellement utilisable lorsque le prix change la décision. Ne pas comparer un appareil nu à un bundle complet sans le signaler.
-11. Le #1 doit expliquer ce qu'il gagne et ce qu'il ne gagne pas. Un `HEAD_TO_HEAD` peut avoir un verdict conditionnel plutôt qu'un gagnant absolu.
-12. Comparer la structure et la méthode aux comparatifs voisins : réutiliser sans justification les mêmes critères, poids, ordre de produits ou architecture sur des intentions différentes est un signal de production industrialisée et peut imposer `DEEP_REWRITE`.
-13. La page doit rester utile si tous les liens affiliés disparaissent. Les défauts significatifs du gagnant ne doivent pas être masqués.
-14. Après rédaction, exécuter la chaîne définie dans `comparison-content-workflow`, puis `comparison-analysis-workflow` en mode `PUBLISH_REVIEW`.
-15. `validate_comparisons.py` contrôle uniquement les blockers détectables automatiquement. Un PASS machine ne signifie jamais que le ranking ou la page sont publiables.
-16. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION`. Un seul blocker maintient la page en `noindex,follow`.
-17. Ne retirer `noindex` qu’après validation humaine explicite **et** instruction explicite de rendre la page indexable.
-18. Aucun quota de mots, H2/H3, tableaux ou liens internes ne peut servir de proxy de qualité.
+1. Une page existante passe d’abord par `comparison-analysis-workflow` en mode `AUDIT` avant une réécriture substantielle.
+2. L’analyse juge d’abord **la qualité de la décision offerte au lecteur**, pas la sophistication apparente de la méthodologie.
+3. Le scope doit contenir les choix plausibles pour la requête. Il n’est pas nécessaire de documenter tout le marché ; une exclusion importante est expliquée seulement lorsqu’elle peut changer la conclusion.
+4. Les critères sont définis avant la recommandation et découlent de l’intention, du JTBD lorsque pertinent et des différences réelles entre produits.
+5. Le scoring, la pondération, les hard gates, l’Equivalence Engine et le Total Solution Cost sont **optionnels**. Les utiliser uniquement lorsqu’ils rendent la décision plus claire.
+6. Si un score existe, le présenter comme un jugement éditorial sauf mesure réelle. Une spec vérifie un fait ; elle ne prouve pas automatiquement une sensation d’usage. Éviter la fausse précision.
+7. Utiliser `evidence-based-reviews` pour adapter le niveau de preuve au claim : specs officielles pour les faits, sources propriétaires/utilisateurs ou tests experts pour les jugements qui en ont besoin, hands-on uniquement lorsqu’il existe réellement.
+8. Ne jamais remplir un trou de preuve avec la connaissance du modèle. Une donnée absente reste inconnue ou est qualifiée.
+9. Aucun produit n’est inclus ou favorisé parce qu’il possède un meilleur lien ou une meilleure commission d’affiliation.
+10. Le verdict doit être traçable aux critères et aux preuves et préciser quand un autre choix devient meilleur. Un `HEAD_TO_HEAD` peut parfaitement conclure « X si…, Y si… » sans gagnant universel.
+11. Pour une intention fortement budgétaire, comparer une configuration réellement utilisable. Pour les autres pages, ne pas imposer un calcul de coût complexe s’il ne change pas la décision.
+12. Le plan final est construit **après** l’intention, les preuves et la logique de recommandation. Aucun type de comparatif n’impose un ordre de sections, un nombre de H2/H3, un tableau, une FAQ ou des fiches produits symétriques.
+13. Comparer la structure aux comparatifs voisins : mêmes H2 fonctionnels, mêmes blocs produit, mêmes arguments et mêmes conclusions sous des intentions différentes constituent un signal de production industrialisée.
+14. `DEEP_REWRITE` est réservé aux problèmes réellement structurants : intention/role mal cadré, sélection inadéquate, recommandation injustifiable, faible valeur originale, obsolescence majeure ou architecture fortement industrialisée. L’absence de scoring complexe n’est jamais à elle seule un motif de `DEEP_REWRITE`.
+15. La page doit rester utile si tous les liens affiliés disparaissent et doit montrer les limites significatives des recommandations.
+16. Après rédaction, exécuter la chaîne définie dans `comparison-content-workflow`, puis `comparison-analysis-workflow` en mode `PUBLISH_REVIEW`.
+17. `validate_comparisons.py` contrôle uniquement les blockers détectables automatiquement. Scoring, poids et ranking sont optionnels ; lorsqu’ils existent, le validateur contrôle leur cohérence.
+18. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION` avant validation humaine.
+19. Ne retirer `noindex` qu’après validation humaine explicite **et** instruction explicite de rendre la page indexable.
+20. Aucun quota de mots, H2/H3, tableaux ou liens internes ne peut servir de proxy de qualité.
 
 ## Production éditoriale — Pages marques
 
@@ -110,12 +112,12 @@ Pour toute création, réécriture ou actualisation sous `/bons-plans/` :
 1. Utiliser `.agents/skills/deal-content-workflow/SKILL.md`.
 2. Créer ou mettre à jour `.content/deals/<slug>.json` avant de modifier le texte : prix, disponibilité, statut et date de contrôle doivent être documentés.
 3. Distinguer strictement `ACTIVE_VERIFIED`, `ACTIVE_STOCK_SENSITIVE`, `PRICE_WATCH`, `EXPIRED`, `SOLD_OUT`, `UNVERIFIED` et `NOT_STARTED`.
-4. Un prix barré marchand ne suffit jamais à prouver une remise. Documenter le prix de référence et sa base avant d'afficher une économie ou un pourcentage.
+4. Un prix barré marchand ne suffit jamais à prouver une remise. Documenter le prix de référence et sa base avant d’afficher une économie ou un pourcentage.
 5. Une offre qui dépasse son TTL ne peut plus être présentée comme active sans nouvelle vérification.
-6. Les pages de bons plans n'effectuent pas de ranking produit selon la commission. Le choix produit reste dans `/comparatifs/` ; la page deal juge l'offre, pas la valeur absolue du produit.
+6. Les pages de bons plans n’effectuent pas de ranking produit selon la commission. Le choix produit reste dans `/comparatifs/` ; la page deal juge l’offre, pas la valeur absolue du produit.
 7. Les liens affiliés doivent rester transparents et utiliser `rel="sponsored"` lorsque nécessaire.
 8. Utiliser `content-refresh`, `fact-check`, `affiliate-value`, `internal-linking-audit`, `natural-writing`, `humanizer`, `anti-ai-slop` et `editorial-qa` conformément au workflow.
-9. Conserver `noindex,follow` jusqu'à validation humaine explicite.
+9. Conserver `noindex,follow` jusqu’à validation humaine explicite.
 
 ## Production éditoriale — Pages de confiance du site
 
@@ -124,9 +126,9 @@ Pour toute création ou réécriture de `/methode-de-test/`, `/comment-nous-comp
 1. Utiliser `.agents/skills/trust-content-workflow/SKILL.md`.
 2. Mettre à jour `.content/trust/<slug>.json` avant la rédaction ; ce registre est la source de vérité des claims institutionnels.
 3. Ne jamais affirmer un test physique sans `DIRECT_OBSERVATION`, ni utiliser « notre équipe », « nos experts » ou équivalent sans preuve `OWNER_CONFIRMED`.
-4. Définir concrètement l'indépendance éditoriale au lieu d'utiliser un slogan absolu ; les commissions ne doivent jamais modifier un score ou un classement.
-5. Pour l'affiliation, expliquer qu'une transaction éligible peut générer une commission sans promettre un « même prix » ou une absence de coût non vérifiable.
+4. Définir concrètement l’indépendance éditoriale au lieu d’utiliser un slogan absolu ; les commissions ne doivent jamais modifier un score ou un classement.
+5. Pour l’affiliation, expliquer qu’une transaction éligible peut générer une commission sans promettre un « même prix » ou une absence de coût non vérifiable.
 6. Les informations inconnues doivent rester `UNKNOWN` ou `NEEDS_OWNER_INPUT`, jamais être complétées par supposition.
-7. `/mentions-legales/` reste `LEGAL_PENDING` tant que les informations de l'éditeur, de l'hébergeur, des traitements de données et autres données légales n'ont pas été confirmées.
+7. `/mentions-legales/` reste `LEGAL_PENDING` tant que les informations de l’éditeur, de l’hébergeur, des traitements de données et autres données légales n’ont pas été confirmées.
 8. Exécuter `fact-check`, `affiliate-value` lorsque pertinent, `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`, `internal-linking-audit`, `editorial-qa`, puis `validate_trust_workflow.py`.
-9. Conserver `noindex,follow` jusqu'à validation humaine explicite ; une validation éditoriale n'entraîne jamais automatiquement l'indexation.
+9. Conserver `noindex,follow` jusqu’à validation humaine explicite ; une validation éditoriale n’entraîne jamais automatiquement l’indexation.
