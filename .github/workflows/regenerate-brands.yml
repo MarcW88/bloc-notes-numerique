@@ -41,7 +41,13 @@ jobs:
       - name: Generate brand audit files
         run: python generate_brand_metadata.py
       - name: Validate brand cluster
-        run: python validate_brands.py
+        run: python validate_brands.py 2>&1 | tee brand-validation.log
+      - name: Upload validation failure log
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: brand-validation-log
+          path: brand-validation.log
       - name: Commit generated brand pages
         run: |
           if git diff --quiet; then exit 0; fi
