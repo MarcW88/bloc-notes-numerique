@@ -1,58 +1,115 @@
 # Comparison methodology records
 
-Les fichiers `.content/comparisons/<slug>.json` sont la source de vérité méthodologique des pages `/comparatifs/`.
+Les fichiers `.content/comparisons/<slug>.json` sont les snapshots méthodologiques générés pour les pages `/comparatifs/`.
 
-Ils doivent expliquer pourquoi le classement existe, indépendamment du texte final.
+Leur rôle est de rendre le ranking auditable. Ils ne doivent cependant pas être considérés isolément : dans l'implémentation actuelle, le pipeline est réparti entre plusieurs fichiers.
 
-## Principe
+## Pipeline réel
+
+1. `comparison_products.py` — baseline produit partagée, sources, prix repérés, forces/limites et scores par critère.
+2. `comparison_pages.py` — intention par page, job utilisateur, produits retenus, poids et ranking.
+3. `generate_comparison_metadata.py` — transforme ces données en `.content/comparisons/<slug>.json`.
+4. `comparison_content.py` — transforme le ranking en contenu éditorial.
+5. `comparatifs/<slug>/index.html` — sortie reçue par le lecteur.
+
+L'évaluation doit donc vérifier la cohérence de bout en bout et ne jamais auditer seulement le HTML.
+
+## Principe du workflow Comparison
 
 > Critères avant gagnant. Preuves avant scoring. Scoring avant rédaction. Affiliation après décision.
 
-Le HTML ne doit jamais être la seule trace de :
+Le référentiel complet est :
 
-- l'intention et du job utilisateur ;
-- l'univers produit considéré ;
-- des exclusions ;
-- des critères et poids ;
-- des hard gates ;
-- des preuves ;
-- des notes et de leurs justifications ;
-- du classement ;
-- des incertitudes ;
-- de la date de recherche.
+`.agents/skills/comparison-content-workflow/SKILL.md`
 
-## Validation automatique
-
-`python3 validate_comparisons.py` contrôle uniquement les blockers détectables automatiquement : intégrité du registre, somme des poids, exclusion de la commission, couverture des scores, cohérence mathématique du ranking, structure HTML, noindex, faux langage hands-on, métadiscours et quelques patterns éditoriaux à haut risque.
-
-Le validateur n'impose aucun nombre minimum de mots, H2/H3, tableaux ou liens internes.
-
-Un `PASS` automatique ne signifie pas que la page est publiable.
-
-## Publish gate manuel obligatoire
-
-Après le validateur, exécuter :
+Le gate final est :
 
 `.agents/skills/comparison-editorial-publish-gate/SKILL.md`
 
-Ce gate doit notamment juger :
+Malgré son nom de publish gate, ce skill est un **workflow d'évaluation de conformité au comparison-content-workflow**. Il n'est pas dérivé du Brand gate.
 
-- la complétude réelle de l'univers produit ;
-- l'équivalence des candidats ;
-- la pertinence des critères ;
-- la robustesse des pondérations ;
-- la qualité spécifique des justifications de notes ;
-- la sensibilité du gagnant à des poids raisonnablement différents ;
-- les hard gates et le coût total ;
-- la cohérence entre scoring, verdict et texte ;
-- la transparence sur les limites et le niveau de preuve ;
-- l'indépendance du ranking vis-à-vis de l'affiliation ;
-- la naturalité, le GEO, le SEO éditorial et la cannibalisation.
+## Ce que le JSON devrait pouvoir prouver
 
-Un seul blocker suffit à maintenir la page en `noindex,follow`.
+Selon le workflow Comparison, la méthodologie devrait permettre de reconstruire :
 
-## Point d'attention sur `VERIFIED`
+- intention et type de comparatif ;
+- univers produit considéré ;
+- exclusions ;
+- équivalence/comparabilité ;
+- Evidence Ledger ;
+- critères ;
+- pondérations ;
+- scores et justification de leur normalisation ;
+- hard gates ;
+- coût total lorsque pertinent ;
+- ranking ;
+- niveau de confiance ;
+- date de recherche.
 
-Une source officielle peut vérifier un fait produit. Elle ne vérifie pas automatiquement une note éditoriale de `8/10` ou `9/10`.
+Si une étape critique n'est pas persistée, le gate peut la classer `UNPROVABLE`. Il ne doit jamais supposer qu'elle a été correctement réalisée.
 
-Le registre doit distinguer la preuve du fait et l'inférence qui transforme ce fait en score. Une justification générique du type « capacités officielles consultées, score normalisé éditorialement » ne suffit pas à défendre une différence de note entre deux produits.
+## Point critique de l'implémentation actuelle
+
+`generate_comparison_metadata.py` recrée les JSON à partir de `comparison_products.py` et `comparison_pages.py`.
+
+Cela signifie qu'une information ajoutée uniquement à la main dans un JSON — par exemple une exclusion, un hard gate ou un Evidence Ledger — risque d'être écrasée au prochain run si elle n'existe pas dans une source durable utilisée par le générateur.
+
+La durabilité de la méthode fait donc partie de l'évaluation.
+
+## Preuve factuelle ≠ note éditoriale
+
+Une source officielle peut confirmer un fait produit. Elle ne confirme pas automatiquement qu'un appareil mérite `8/10` ou `9/10`.
+
+Le workflow d'évaluation doit distinguer :
+
+1. le fait utilisé comme preuve ;
+2. le raisonnement qui transforme ce fait en score ;
+3. le poids donné au critère ;
+4. l'impact de ce score sur le ranking.
+
+Une justification générique du type « capacités officielles consultées, score normalisé éditorialement » ne suffit pas lorsqu'une note change le classement.
+
+## Validation automatique
+
+`python3 validate_comparisons.py` vérifie la cohérence mécanique du pipeline actuel :
+
+- `comparison_pages.py` ↔ JSON ;
+- `comparison_products.py` ↔ scores JSON ;
+- recalcul du score pondéré ;
+- ordre du ranking ;
+- cohérence JSON ↔ HTML ;
+- robots/noindex et structure SEO de base ;
+- faux langage hands-on et quelques blockers détectables automatiquement.
+
+Il n'impose aucun quota de mots, H2/H3, tableaux ou liens.
+
+Il émet aussi des warnings lorsque des phases du workflow Comparison ne sont pas persistées ou restent impossibles à prouver automatiquement.
+
+Un `PASS` machine ne signifie jamais que la page est publiable.
+
+## Evaluation manuelle obligatoire
+
+Après le validateur, exécuter le `Comparison Workflow Evaluation Gate`.
+
+Il suit les étapes du workflow Comparison :
+
+1. routing / search intent ;
+2. Product Universe ;
+3. Equivalence Engine ;
+4. Evidence Ledger ;
+5. critères ;
+6. pondération ;
+7. scoring ;
+8. Hard Gates ;
+9. Total Solution Cost ;
+10. Rank Justification ;
+11. Honest Comparison Standard ;
+12. architecture/rédaction ;
+13. Affiliate Value ;
+14. fact-check ;
+15. Search Intent QA / Internal Linking ;
+16. finition / SEO / GEO ;
+17. persistance et régénération ;
+18. décision de publication.
+
+Un seul blocker critique ou une phase nécessaire `UNPROVABLE` suffit à maintenir la page en `noindex,follow`.
