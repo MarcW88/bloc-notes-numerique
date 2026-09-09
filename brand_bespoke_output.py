@@ -89,3 +89,30 @@ def bespoke_metadata(url, title, description):
             'Guide de la gamme BOOX pour la prise de notes : Go 10.3 Gen II/Lumi, Note Air5 C, Note Max, Tab X C, Android, PDF, éclairage et clavier.'
         )
     return title, description
+
+
+def bespoke_entity_summary(key, summary):
+    if key != 'boox':
+        return summary
+
+    updated = dict(summary)
+    updated['current_range'] = [
+        ('Go 10.3 Gen II', 'CURRENT', '10,3″ N&B, 300 ppp, sans éclairage frontal, Android 15', 'notes, PDF et mobilité', 'lecture nocturne sans lumière externe limitée'),
+        ('Go 10.3 Gen II Lumi', 'CURRENT', '10,3″ N&B, 300 ppp, éclairage frontal, Android 15', 'notes, PDF et mobilité avec éclairage', 'plus épais et plus lourd que le Go standard'),
+        ('Note Air5 C', 'CURRENT', '10,3″ Kaleido 3, Android 15', 'couleur, notes et productivité légère', '150 ppp en couleur contre 300 ppp en N&B'),
+        ('Note Max', 'CURRENT', '13,3″ N&B, 300 ppp, Android 13', 'grands PDF et travail documentaire', 'pas d’éclairage frontal et format peu mobile'),
+        ('Tab X C', 'CURRENT', '13,3″ Kaleido 3, Android 13', 'grand écran couleur et productivité', 'plus de 600 g et encombrement élevé'),
+        ('Tab Ultra C Pro', 'CURRENT_DOCUMENTED_CHANNEL_SENSITIVE', '10,3″ Kaleido 3, Android 12', 'workflow type tablette avec clavier', 'génération logicielle plus ancienne ; disponibilité à vérifier'),
+    ]
+    updated['ecosystem'] = [
+        ('Matériel', 'formats 10,3 et 13,3 pouces, noir et blanc ou Kaleido 3 couleur selon modèle.'),
+        ('Stylet', 'InkSense Plus sur Go 10.3 Gen II, Pen3 sur Note Air5 C, Pen Plus sur Note Max et InkSpire sur Tab X C ; compatibilité à vérifier par modèle.'),
+        ('Système', 'Android 15 sur Go 10.3 Gen II et Note Air5 C, Android 13 sur Note Max et Tab X C, Android 12 sur Tab Ultra C Pro.'),
+        ('Notes', 'Notes BOOX avec écriture manuscrite, organisation et exports documentés.'),
+        ('Lecture', 'NeoReader pour PDF, EPUB et de nombreux formats.'),
+        ('Cloud', 'Onyx Cloud et intégrations Dropbox, Google Drive, OneDrive, WebDAV/Nextcloud selon firmware.'),
+        ('Synchronisation', 'progression, annotations et sauvegardes selon les méthodes BOOX.'),
+        ('Applications', 'Google Play et applications tierces sur les modèles concernés, avec une expérience qui dépend de l’optimisation E Ink.'),
+    ]
+    updated['verified_at'] = BOOX_VERIFIED_AT
+    return updated
