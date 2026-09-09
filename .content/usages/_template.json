@@ -1,0 +1,95 @@
+{
+  "slug": "",
+  "page_url": "/usages/<slug>/",
+  "status": "JTBD_READY",
+  "last_researched": null,
+  "intent": {
+    "primary_query": "",
+    "dominant_intent": "",
+    "reader_maturity": "",
+    "expected_outcome": "",
+    "semantic_variants": [],
+    "closest_comparison": null,
+    "related_guides": [],
+    "related_brand_pages": [],
+    "cannibalization_risks": []
+  },
+  "jtbd": {
+    "primary_job_statement": {
+      "circumstances": "",
+      "progress": "",
+      "outcome": "",
+      "evidence_class": "UNKNOWN"
+    },
+    "secondary_jobs": [],
+    "functional_jobs": [],
+    "emotional_jobs": [],
+    "social_jobs": [],
+    "forces": {
+      "push": [],
+      "pull": [],
+      "anxiety": [],
+      "habit": []
+    },
+    "current_hires": [],
+    "big_hire": [],
+    "little_hire": []
+  },
+  "workflow_map": [
+    {
+      "stage": "",
+      "task": "",
+      "current_friction": "",
+      "failure_consequence": "",
+      "helpful_capability": "",
+      "evidence_class": "UNKNOWN"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "",
+      "priority": "MUST_HAVE",
+      "why_it_matters": "",
+      "conditions": "",
+      "evidence_class": "UNKNOWN"
+    }
+  ],
+  "solution_families": [
+    {
+      "family": "",
+      "best_when": "",
+      "main_strength": "",
+      "main_friction": "",
+      "avoid_when": ""
+    }
+  ],
+  "contraindications": [],
+  "evidence_ledger": [
+    {
+      "claim": "",
+      "source": "",
+      "date_checked": null,
+      "stability": "",
+      "evidence_class": "UNKNOWN"
+    }
+  ],
+  "editorial": {
+    "differentiation": "",
+    "opening_answer": "",
+    "recommended_sections": [],
+    "comparison_handoff": null,
+    "guide_handoffs": [],
+    "excluded_claims": []
+  },
+  "qa": {
+    "jtbd_without_product": false,
+    "circumstances_specific": false,
+    "alternatives_considered": false,
+    "criteria_derived_from_workflow": false,
+    "contraindications_present": false,
+    "no_product_ranking": false,
+    "hypotheses_labeled": false,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}
