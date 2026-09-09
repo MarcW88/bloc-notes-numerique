@@ -44,9 +44,20 @@ const COMPARISON_ROUTES = [
   '/comparatifs/kobo-elipsa-vs-remarkable/'
 ];
 
+const USAGE_ROUTES = [
+  '/usages/',
+  '/usages/prise-de-notes-professionnelle/',
+  '/usages/prise-de-notes-etudiant/',
+  '/usages/prise-de-notes-reunion/',
+  '/usages/lecture-et-prise-de-notes/',
+  '/usages/dessin/',
+  '/usages/remplacer-cahiers-papier/'
+];
+
 const SCOPES = {
   brands: BRAND_ROUTES,
-  comparisons: COMPARISON_ROUTES
+  comparisons: COMPARISON_ROUTES,
+  usages: USAGE_ROUTES
 };
 
 const VIEWPORTS = [
@@ -100,7 +111,7 @@ async function waitForServer(url) {
 
 const options = parseArgs(process.argv.slice(2));
 if (options.help) {
-  console.log('Usage: run-visual-review.mjs [--scope brands|comparisons] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
+  console.log('Usage: run-visual-review.mjs [--scope brands|comparisons|usages] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
   process.exit(0);
 }
 
