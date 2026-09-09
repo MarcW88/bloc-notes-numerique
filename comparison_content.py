@@ -1,15 +1,30 @@
 from comparison_products import COMPARISON_PRODUCTS
 from comparison_pages import COMPARISON_PAGES, CRITERIA_LABELS
+from comparison_bespoke_output import bespoke_body
+
+# IMPORTANT:
+# `render_legacy_comparison` only preserves currently untouched comparison pages.
+# It is not the editorial template for new/reworked pages. Any page produced by
+# `comparison-content-workflow` must provide a per-URL bespoke body through
+# `comparison_bespoke_output.py` (or a future free-form source consumed there).
+
 
 def link_for(pid):
     return {'remarkable_pure': '/marques/remarkable/', 'remarkable_pro': '/marques/remarkable/remarkable-paper-pro/', 'remarkable_move': '/marques/remarkable/', 'kindle_scribe3': '/marques/kindle-scribe/', 'kindle_colorsoft': '/marques/kindle-scribe/', 'boox_go2': '/marques/boox/', 'boox_go_lumi': '/marques/boox/', 'boox_air5c': '/marques/boox/', 'boox_notemax': '/marques/boox/', 'kobo_elipsa': '/marques/kobo-elipsa/', 'supernote_manta': '/marques/supernote/', 'supernote_nomad': '/marques/supernote/'}[pid]
+
 
 def why_score(pid, p):
     prod=COMPARISON_PRODUCTS[pid]
     top=sorted(p["weights"].items(), key=lambda x:-x[1])[:3]
     return ", ".join(f"{CRITERIA_LABELS[c].lower()} ({prod['scores'][c]}/10)" for c,_ in top)
 
-def render_comparison(slug):
+
+def render_legacy_comparison(slug):
+    """Render untouched legacy pages only.
+
+    This preserves the existing site while pages are progressively audited.
+    It must not be used as an editorial skeleton by the production workflow.
+    """
     p=COMPARISON_PAGES[slug]
     products=COMPARISON_PRODUCTS
     winner=p['ranking'][0][0]; wp=products[winner]; head=p['type']=='head_to_head'
@@ -37,4 +52,8 @@ def render_comparison(slug):
     sources='<h2 id="sources">Sources officielles consultées</h2><ul class="source-list">'+''.join(f'<li><a href="{u}" rel="noopener noreferrer">{lab}</a></li>' for u,lab in srcs)+'</ul>'
     return intro+meth+crit+ranking+''.join(blocks)+decision+sources
 
-COMPARISON_CONTENT={slug:render_comparison(slug) for slug in COMPARISON_PAGES}
+
+COMPARISON_CONTENT = {
+    slug: bespoke_body(slug, render_legacy_comparison(slug))
+    for slug in COMPARISON_PAGES
+}
