@@ -1,32 +1,227 @@
 {
   "slug": "annotation-pdf",
   "page_url": "/usages/annotation-pdf/",
-  "status": "DRAFT_READY",
+  "status": "HUMAN_APPROVED",
   "last_researched": "2026-09-09",
-  "intent": {"primary_query": "annoter PDF tablette E Ink", "dominant_intent": "Évaluer si E Ink convient à un workflow de lecture et annotation de PDF.", "reader_maturity": "Évaluation de catégorie", "expected_outcome": "Identifier les hard gates de taille, compatibilité et export.", "semantic_variants": ["tablette e ink pdf", "annoter pdf bloc notes numérique"], "closest_comparison": "/comparatifs/bloc-notes-numerique-a4/", "related_guides": ["/guides/annoter-pdf-tablette-e-ink/", "/guides/formats-fichiers-compatibles/", "/guides/exporter-notes/", "/guides/taille-ecran-bloc-notes-numerique/"], "related_brand_pages": [], "cannibalization_risks": ["Ne pas refaire le tutoriel d'annotation PDF", "Ne pas classer les modèles"]},
-  "jtbd": {"primary_job_statement": {"circumstances": "Quand je dois lire et commenter régulièrement des PDF", "progress": "annoter directement le document sans multiplier impressions et supports", "outcome": "récupérer un fichier final exploitable ailleurs", "evidence_class": "INFERRED"}, "secondary_jobs": ["naviguer dans de longs documents", "archiver les annotations"], "functional_jobs": ["importer", "lire", "annoter", "naviguer", "exporter"], "emotional_jobs": [], "social_jobs": [{"job": "partager un PDF annoté lisible par d'autres", "evidence_class": "INFERRED"}], "forces": {"push": ["impressions", "annotations dispersées"], "pull": ["lecture/écriture sur un même support"], "anxiety": ["DRM", "annotations non exportables", "petit écran"], "habit": ["Acrobat sur ordinateur", "papier"]}, "current_hires": ["ordinateur + Acrobat", "tablette LCD", "impression papier", "liseuse"], "big_hire": ["adopter E Ink pour les PDF"], "little_hire": ["importer un PDF réel", "annoter sans zoom constant", "exporter et vérifier le fichier final"]},
+  "intent": {
+    "primary_query": "annoter PDF tablette E Ink",
+    "dominant_intent": "Évaluer si E Ink convient à un workflow de lecture et annotation de PDF.",
+    "reader_maturity": "Évaluation de catégorie",
+    "expected_outcome": "Identifier les hard gates de taille, compatibilité et export.",
+    "semantic_variants": [
+      "tablette e ink pdf",
+      "annoter pdf bloc notes numérique"
+    ],
+    "closest_comparison": "/comparatifs/bloc-notes-numerique-a4/",
+    "related_guides": [
+      "/guides/annoter-pdf-tablette-e-ink/",
+      "/guides/formats-fichiers-compatibles/",
+      "/guides/exporter-notes/",
+      "/guides/taille-ecran-bloc-notes-numerique/"
+    ],
+    "related_brand_pages": [],
+    "cannibalization_risks": [
+      "Ne pas refaire le tutoriel d'annotation PDF",
+      "Ne pas classer les modèles"
+    ]
+  },
+  "jtbd": {
+    "primary_job_statement": {
+      "circumstances": "Quand je dois lire et commenter régulièrement des PDF",
+      "progress": "annoter directement le document sans multiplier impressions et supports",
+      "outcome": "récupérer un fichier final exploitable ailleurs",
+      "evidence_class": "INFERRED"
+    },
+    "secondary_jobs": [
+      "naviguer dans de longs documents",
+      "archiver les annotations"
+    ],
+    "functional_jobs": [
+      "importer",
+      "lire",
+      "annoter",
+      "naviguer",
+      "exporter"
+    ],
+    "emotional_jobs": [],
+    "social_jobs": [
+      {
+        "job": "partager un PDF annoté lisible par d'autres",
+        "evidence_class": "INFERRED"
+      }
+    ],
+    "forces": {
+      "push": [
+        "impressions",
+        "annotations dispersées"
+      ],
+      "pull": [
+        "lecture/écriture sur un même support"
+      ],
+      "anxiety": [
+        "DRM",
+        "annotations non exportables",
+        "petit écran"
+      ],
+      "habit": [
+        "Acrobat sur ordinateur",
+        "papier"
+      ]
+    },
+    "current_hires": [
+      "ordinateur + Acrobat",
+      "tablette LCD",
+      "impression papier",
+      "liseuse"
+    ],
+    "big_hire": [
+      "adopter E Ink pour les PDF"
+    ],
+    "little_hire": [
+      "importer un PDF réel",
+      "annoter sans zoom constant",
+      "exporter et vérifier le fichier final"
+    ]
+  },
   "workflow_map": [
-    {"stage": "import", "task": "faire entrer le PDF", "current_friction": "méthodes variables", "failure_consequence": "fonctions d'annotation limitées", "helpful_capability": "import compatible", "evidence_class": "SUPPORTED"},
-    {"stage": "lecture", "task": "afficher le document", "current_friction": "format A4/densité", "failure_consequence": "zoom constant", "helpful_capability": "taille/recadrage", "evidence_class": "INFERRED"},
-    {"stage": "sortie", "task": "récupérer le PDF annoté", "current_friction": "annotations propriétaires", "failure_consequence": "fichier incomplet ailleurs", "helpful_capability": "export PDF standard", "evidence_class": "SUPPORTED"}
+    {
+      "stage": "import",
+      "task": "faire entrer le PDF",
+      "current_friction": "méthodes variables",
+      "failure_consequence": "fonctions d'annotation limitées",
+      "helpful_capability": "import compatible",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "lecture",
+      "task": "afficher le document",
+      "current_friction": "format A4/densité",
+      "failure_consequence": "zoom constant",
+      "helpful_capability": "taille/recadrage",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "stage": "sortie",
+      "task": "récupérer le PDF annoté",
+      "current_friction": "annotations propriétaires",
+      "failure_consequence": "fichier incomplet ailleurs",
+      "helpful_capability": "export PDF standard",
+      "evidence_class": "SUPPORTED"
+    }
   ],
   "criteria": [
-    {"criterion": "compatibilité du PDF", "priority": "MUST_HAVE", "why_it_matters": "DRM, protections et structure peuvent limiter l'annotation", "conditions": "documents réels", "evidence_class": "SUPPORTED"},
-    {"criterion": "export des annotations", "priority": "MUST_HAVE", "why_it_matters": "le résultat doit être visible hors appareil", "conditions": "partage/archivage", "evidence_class": "SUPPORTED"},
-    {"criterion": "taille d'écran", "priority": "HIGH", "why_it_matters": "impacte le besoin de zoom", "conditions": "A4 ou double colonne", "evidence_class": "INFERRED"},
-    {"criterion": "couleur", "priority": "CONDITIONAL", "why_it_matters": "utile si le sens du document dépend de codes colorés", "conditions": "documents couleur", "evidence_class": "INFERRED"}
+    {
+      "criterion": "compatibilité du PDF",
+      "priority": "MUST_HAVE",
+      "why_it_matters": "DRM, protections et structure peuvent limiter l'annotation",
+      "conditions": "documents réels",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "export des annotations",
+      "priority": "MUST_HAVE",
+      "why_it_matters": "le résultat doit être visible hors appareil",
+      "conditions": "partage/archivage",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "taille d'écran",
+      "priority": "HIGH",
+      "why_it_matters": "impacte le besoin de zoom",
+      "conditions": "A4 ou double colonne",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "couleur",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "utile si le sens du document dépend de codes colorés",
+      "conditions": "documents couleur",
+      "evidence_class": "INFERRED"
+    }
   ],
   "solution_families": [
-    {"family": "grand écran E Ink", "best_when": "PDF proches de l'A4", "main_strength": "moins de zoom", "main_friction": "poids/encombrement", "avoid_when": "mobilité prioritaire"},
-    {"family": "E Ink compact", "best_when": "mobilité et documents simples", "main_strength": "portabilité", "main_friction": "zoom", "avoid_when": "PDF denses"},
-    {"family": "tablette LCD", "best_when": "PDF complexes, formulaires, couleur, multitâche", "main_strength": "logiciels complets", "main_friction": "moins spécialisée lecture ePaper", "avoid_when": "lecture/annotation simple domine"}
+    {
+      "family": "grand écran E Ink",
+      "best_when": "PDF proches de l'A4",
+      "main_strength": "moins de zoom",
+      "main_friction": "poids/encombrement",
+      "avoid_when": "mobilité prioritaire"
+    },
+    {
+      "family": "E Ink compact",
+      "best_when": "mobilité et documents simples",
+      "main_strength": "portabilité",
+      "main_friction": "zoom",
+      "avoid_when": "PDF denses"
+    },
+    {
+      "family": "tablette LCD",
+      "best_when": "PDF complexes, formulaires, couleur, multitâche",
+      "main_strength": "logiciels complets",
+      "main_friction": "moins spécialisée lecture ePaper",
+      "avoid_when": "lecture/annotation simple domine"
+    }
   ],
-  "contraindications": ["formulaires avancés", "multimédia", "couleur fidèle indispensable", "PDF protégés non annotables", "édition documentaire complexe"],
+  "contraindications": [
+    "formulaires avancés",
+    "multimédia",
+    "couleur fidèle indispensable",
+    "PDF protégés non annotables",
+    "édition documentaire complexe"
+  ],
   "evidence_ledger": [
-    {"claim": "Supernote exige un export pour rendre les annotations PDF visibles hors appareil", "source": "https://support.supernote.com/en_US/organizing/contents-bookmarks-and-annotations", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
-    {"claim": "Kobo permet l'export des PDF non protégés avec annotations et limite certains fichiers protégés", "source": "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
-    {"claim": "Kindle Scribe dépend du type de document et de la méthode d'import pour certaines fonctions d'écriture", "source": "https://digprjsurvey.amazon.com/csad/help/node/TWXpUGw76dtEg2VD9P", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"}
+    {
+      "claim": "Supernote exige un export pour rendre les annotations PDF visibles hors appareil",
+      "source": "https://support.supernote.com/en_US/organizing/contents-bookmarks-and-annotations",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kobo permet l'export des PDF non protégés avec annotations et limite certains fichiers protégés",
+      "source": "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kindle Scribe dépend du type de document et de la méthode d'import pour certaines fonctions d'écriture",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/TWXpUGw76dtEg2VD9P",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    }
   ],
-  "editorial": {"differentiation": "Évaluer l'adéquation E Ink au flux documentaire, pas enseigner la procédure.", "opening_answer": "Adapté si lecture, annotation et export standard dominent.", "recommended_sections": ["quand", "workflow", "critères", "familles", "contre-indications", "suite"], "comparison_handoff": "/comparatifs/bloc-notes-numerique-a4/", "guide_handoffs": ["/guides/annoter-pdf-tablette-e-ink/", "/guides/exporter-notes/"], "excluded_claims": ["confort visuel médical", "meilleure productivité"]},
-  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PASS"}
+  "editorial": {
+    "differentiation": "Évaluer l'adéquation E Ink au flux documentaire, pas enseigner la procédure.",
+    "opening_answer": "Adapté si lecture, annotation et export standard dominent.",
+    "recommended_sections": [
+      "quand",
+      "workflow",
+      "critères",
+      "familles",
+      "contre-indications",
+      "suite"
+    ],
+    "comparison_handoff": "/comparatifs/bloc-notes-numerique-a4/",
+    "guide_handoffs": [
+      "/guides/annoter-pdf-tablette-e-ink/",
+      "/guides/exporter-notes/"
+    ],
+    "excluded_claims": [
+      "confort visuel médical",
+      "meilleure productivité"
+    ]
+  },
+  "qa": {
+    "jtbd_without_product": true,
+    "circumstances_specific": true,
+    "alternatives_considered": true,
+    "criteria_derived_from_workflow": true,
+    "contraindications_present": true,
+    "no_product_ranking": true,
+    "hypotheses_labeled": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
 }

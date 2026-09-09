@@ -14,7 +14,7 @@ Pages: prise-de-notes-professionnelle, prise-de-notes-etudiant, prise-de-notes-r
 - SEO technical: PASS — canonical generated normally and noindex,follow preserved.
 - SEO editorial: PASS — page titles, initial answers, entities, H2 structure and internal paths align with each usage intent.
 - GEO: PASS — opening answers are extractable, criteria are explicit, trade-offs are stated, sources are identifiable.
-- Editorial QA: PASS at DRAFT_READY level.
+- Editorial QA: PASS — human approval received for the seven-page batch.
 
 ## Publication status
-The seven records remain `DRAFT_READY`, not `PUBLISHABLE`. Human approval is still required before removing `noindex,follow` or treating the batch as publication-approved.
+The seven records are `HUMAN_APPROVED` following explicit user approval on 2026-09-09. `noindex,follow` remains intentionally preserved; indexation is a separate decision and was not requested.
