@@ -6,6 +6,7 @@ from brand_data import VERIFIED_AT, BRANDS
 from brand_reviewed_output import reviewed_body
 from brand_enriched_output import enriched_body
 from brand_bespoke_output import bespoke_body, bespoke_metadata
+from brand_hub_bespoke_output import hub_body, hub_metadata
 
 ROOT = Path(__file__).resolve().parent
 
@@ -31,9 +32,18 @@ for url, page_data in PAGES.items():
     title = page_data['title']
     description = page_data['description']
     title, description = bespoke_metadata(url, title, description)
+    title, description = hub_metadata(url, title, description)
     body = reviewed_body(url, page_data).strip()
     body = enriched_body(url, body).strip()
     body = bespoke_body(url, body).strip()
+    body = hub_body(url, body).strip()
+
+    # The reMarkable light refresh adds the current Connect source. Keep it
+    # in the source list even when the upstream body contains earlier <ul>s.
+    if url == '/marques/remarkable/':
+        connect_source = '<li><a href="https://remarkable.com/shop/connect" rel="noopener noreferrer">reMarkable Connect — fonctions 2026</a></li>'
+        body = body.replace(connect_source, '')
+        body = body.replace('<ul class="source-list">', '<ul class="source-list">' + connect_source, 1)
 
     brand_key = page_data.get('brand')
     if page_data.get('page_type') == 'BRAND_HUB' and brand_key in BRANDS:
