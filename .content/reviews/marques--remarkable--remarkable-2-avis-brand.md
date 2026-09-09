@@ -2,7 +2,7 @@
 
 - Page type: `REVIEW`
 - Brand: `remarkable`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 7
 - Internal links: 3
 - Unique targets: 3

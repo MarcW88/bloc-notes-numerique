@@ -3,7 +3,7 @@
   "title": "reMarkable 2 — Avis documentaire en 2026 : encore pertinente ?",
   "page_type": "REVIEW",
   "brand": "remarkable",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
     "Pourquoi les qualités historiques restent pertinentes",
     "Ce que 2026 change réellement dans le verdict",
@@ -40,5 +40,5 @@
     "https://www.tomsguide.com/reviews/remarkable-2-review"
   ],
   "noindex_follow": true,
-  "analysis_documentary": false
+  "analysis_documentary": true
 }
