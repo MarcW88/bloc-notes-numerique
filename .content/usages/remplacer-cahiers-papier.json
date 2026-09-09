@@ -1,0 +1,36 @@
+{
+  "slug": "remplacer-cahiers-papier",
+  "page_url": "/usages/remplacer-cahiers-papier/",
+  "status": "DRAFT_READY",
+  "last_researched": "2026-09-09",
+  "intent": {"primary_query": "remplacer cahiers papier bloc-notes numérique", "dominant_intent": "Comprendre quand un système numérique peut remplacer tout ou partie des carnets papier.", "reader_maturity": "Évaluation de migration", "expected_outcome": "Identifier les conditions d'un remplacement utile et les cas où l'hybride reste préférable.", "semantic_variants": ["remplacer papier tablette e ink", "passer au bloc notes numérique"], "closest_comparison": null, "related_guides": ["/guides/organiser-notes-numeriques/", "/guides/exporter-notes/", "/guides/synchroniser-notes-cloud/", "/guides/prix-bloc-notes-numerique/"], "related_brand_pages": [], "cannibalization_risks": ["Ne pas promettre zéro papier ou bénéfice écologique général", "Ne pas devenir un guide d'organisation uniquement"]},
+  "jtbd": {"primary_job_statement": {"circumstances": "Quand les carnets s'accumulent et que je dois retrouver, sauvegarder ou partager mes notes", "progress": "conserver la rapidité de l'écriture tout en structurant l'archive", "outcome": "réutiliser mes notes sans feuilleter ou ressaisir", "evidence_class": "INFERRED"}, "secondary_jobs": ["réduire la dispersion", "archiver", "partager"], "functional_jobs": ["capturer", "classer", "retrouver", "sauvegarder", "exporter"], "emotional_jobs": [{"job": "avoir confiance dans la conservation des notes", "evidence_class": "HYPOTHESIS"}], "social_jobs": [], "forces": {"push": ["carnets multiples", "recherche lente", "ressaisie"], "pull": ["centralisation", "recherche", "export"], "anxiety": ["batterie", "format propriétaire", "perte de données", "coût"], "habit": ["papier disponible immédiatement"]}, "current_hires": ["cahiers papier", "feuilles volantes", "photos/scans", "applications de notes"], "big_hire": ["migrer vers un appareil dédié"], "little_hire": ["choisir l'appareil plutôt que le papier pour une note rapide", "retrouver une ancienne note", "récupérer une copie hors écosystème"]},
+  "workflow_map": [
+    {"stage": "capture", "task": "prendre une note", "current_friction": "aucune sur papier", "failure_consequence": "le numérique est abandonné s'il est plus lent", "helpful_capability": "accès rapide", "evidence_class": "INFERRED"},
+    {"stage": "classement", "task": "organiser", "current_friction": "carnets dispersés", "failure_consequence": "on recrée le chaos en numérique", "helpful_capability": "dossiers/tags/noms", "evidence_class": "INFERRED"},
+    {"stage": "sauvegarde", "task": "conserver", "current_friction": "copie papier limitée", "failure_consequence": "perte de données", "helpful_capability": "sync/backup/export local", "evidence_class": "SUPPORTED"},
+    {"stage": "sortie", "task": "partager/archiver", "current_friction": "photo ou scan", "failure_consequence": "ressaisie", "helpful_capability": "PDF/image/texte", "evidence_class": "SUPPORTED"}
+  ],
+  "criteria": [
+    {"criterion": "vitesse de capture", "priority": "MUST_HAVE", "why_it_matters": "sinon le papier reste le Little Hire", "conditions": "usage quotidien", "evidence_class": "INFERRED"},
+    {"criterion": "export hors écosystème", "priority": "MUST_HAVE", "why_it_matters": "assure une porte de sortie", "conditions": "archive long terme", "evidence_class": "SUPPORTED"},
+    {"criterion": "sauvegarde comprise", "priority": "HIGH", "why_it_matters": "sync et backup ne sont pas synonymes", "conditions": "notes importantes", "evidence_class": "SUPPORTED"},
+    {"criterion": "organisation", "priority": "HIGH", "why_it_matters": "le bénéfice disparaît si les carnets numériques restent désordonnés", "conditions": "volume élevé", "evidence_class": "INFERRED"},
+    {"criterion": "coût total", "priority": "HIGH", "why_it_matters": "appareil, protection, stylet et services doivent être considérés", "conditions": "migration motivée par économie", "evidence_class": "SUPPORTED"}
+  ],
+  "solution_families": [
+    {"family": "E Ink minimaliste", "best_when": "remplacer principalement des cahiers", "main_strength": "workflow proche du carnet", "main_friction": "services limités", "avoid_when": "applications multiples nécessaires"},
+    {"family": "E Ink ouvert", "best_when": "les notes doivent rejoindre plusieurs outils", "main_strength": "intégrations", "main_friction": "complexité", "avoid_when": "simplicité prioritaire"},
+    {"family": "système hybride", "best_when": "certains contextes restent mieux servis par papier", "main_strength": "flexibilité", "main_friction": "deux systèmes à organiser", "avoid_when": "objectif d'archive unique strict"},
+    {"family": "papier", "best_when": "faible volume et aucun besoin de sortie numérique", "main_strength": "immédiateté", "main_friction": "recherche et partage", "avoid_when": "fort besoin de réutilisation numérique"}
+  ],
+  "contraindications": ["usage très occasionnel", "environnement risqué pour l'électronique", "aucun besoin de recherche/partage", "stratégie de sauvegarde non comprise"],
+  "evidence_ledger": [
+    {"claim": "reMarkable propose synchronisation et plusieurs formats d'export", "source": "https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "Kindle Scribe sauvegarde ses notebooks dans le cloud lorsque Sync est activé", "source": "https://digprjsurvey.amazon.com/csad/help/node/GDCAMDFMC2LZP6BR", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "BOOX permet l'export de notes en PNG/PDF/.note", "source": "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "l'affichage E Ink est bistable et ne consomme pas d'énergie pour maintenir une image statique", "source": "https://www.eink.com/tech/detail/Benefits", "date_checked": "2026-09-09", "stability": "stable/technologie", "evidence_class": "SUPPORTED"}
+  ],
+  "editorial": {"differentiation": "Traiter la migration comme un cycle de vie de la note et autoriser explicitement le système hybride.", "opening_answer": "Le numérique vaut surtout si classement, récupération et sortie résolvent une friction réelle du papier.", "recommended_sections": ["job", "workflow", "critères", "organisation", "familles", "contre-indications", "suite"], "comparison_handoff": null, "guide_handoffs": ["/guides/organiser-notes-numeriques/", "/guides/exporter-notes/", "/guides/synchroniser-notes-cloud/"], "excluded_claims": ["plus écologique", "moins cher à long terme", "zéro papier comme objectif universel"]},
+  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}
