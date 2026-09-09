@@ -15,6 +15,15 @@ def sources_html(keys, limit=None):
                 return '<ul class="source-list">' + "".join(rows) + "</ul>"
     return '<ul class="source-list">' + "".join(rows) + "</ul>"
 
+def sources_section(keys, limit=None, note=""):
+    note_html = f'<p>{note}</p>' if note else ''
+    return (
+        '<section class="sources-box" aria-labelledby="sources">'
+        '<h2 id="sources">Sources officielles consultées</h2>'
+        f'{note_html}{sources_html(keys, limit)}'
+        '</section>'
+    )
+
 def range_table(brand):
     rows = []
     for name, status, format_, positioning, limit in BRANDS[brand]["current_range"]:
@@ -50,5 +59,5 @@ def brand_hub(brand, extra_links, custom=""):
 <h2 id="suite">Quels contenus consulter ensuite ?</h2><p>Une page marque doit servir de hub.</p><ul>{''.join(f'<li>{internal_link(url,label)}</li>' for label,url in extra_links)}</ul><p>Vous pouvez aussi repartir de votre usage : {internal_link("/usages/prise-de-notes-professionnelle/","travail et réunions")}, {internal_link("/usages/prise-de-notes-etudiant/","études")}, {internal_link("/usages/annotation-pdf/","annotation de PDF")} ou {internal_link("/usages/lecture-et-prise-de-notes/","lecture et prise de notes")}.</p>
 <h2 id="documents">Ce qu’il faut vérifier avec vos propres documents</h2><p>Le meilleur moyen de valider un écosystème est de partir de fichiers réels plutôt que d’une liste de fonctions. Prenez un PDF typique, une note manuscrite et un document que vous devez partager avec un collègue. Vérifiez comment chacun entre dans l’appareil, comment il est classé, puis sous quelle forme il ressort.</p><p>Cette vérification révèle des différences que les fiches produit résument mal : une intégration cloud peut n’être qu’un import de copie, une annotation peut rester attachée à un format propriétaire, et une application tierce peut exister tout en étant peu agréable sur E Ink. Le guide sur {internal_link("/guides/transfert-notes-vers-ordinateur/","le transfert vers l’ordinateur")} complète ce test de workflow.</p>
 <h2 id="decision-marque">La marque doit-elle décider de l’achat ?</h2><p>La marque sert surtout à réduire l’univers des choix. Une fois les incompatibilités éliminées, revenez au modèle précis : taille d’écran, couleur, éclairage, génération, stylet et coût total peuvent modifier la décision à l’intérieur d’un même écosystème.</p><p>Autrement dit, choisissez d’abord un environnement de travail compatible, puis un appareil. Cela évite de rester fidèle à une marque alors qu’un modèle concurrent répond mieux à une contrainte concrète.</p>
-<h2 id="sources">Sources officielles consultées</h2><p>Les informations susceptibles d’évoluer ont été vérifiées le {VERIFIED_AT}.</p>{sources_html([brand],6)}
+{sources_section([brand], 6, f"Les informations susceptibles d’évoluer ont été vérifiées le {VERIFIED_AT}.")}
 '''

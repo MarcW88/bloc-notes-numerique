@@ -43,7 +43,7 @@ for url, page_data in PAGES.items():
         re.S,
     )
 
-    article_section = f'''\n<section class="section">\n  <div class="container">\n    <div class="content-layout">\n      <article class="content-main">\n      {body}\n      </article>\n    </div>\n  </div>\n</section>\n'''
+    article_section = f'''\n<section class="section">\n  <div class="container">\n    <div class="content-layout">\n      <article class="content-main">\n      {body}\n      </article>\n      <aside class="content-sidebar">\n        <div class="sidebar-box sidebar-toc">\n          <h4>Sommaire</h4>\n          <!-- Sommaire généré dynamiquement -->\n        </div>\n        <div class="sidebar-box">\n          <h4>Affiliation</h4>\n          <p class="affiliation-note">Ce site contient des liens affiliés. Nos recommandations restent indépendantes. <a href="/transparence-affiliation/">En savoir plus.</a></p>\n        </div>\n      </aside>\n    </div>\n  </div>\n</section>\n'''
 
     main_pattern = r'(<section class="page-hero">.*?</section>)(.*?)(</main>)'
     m = re.search(main_pattern, html, re.S)
