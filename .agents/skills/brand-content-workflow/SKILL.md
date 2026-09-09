@@ -1,35 +1,27 @@
 ---
 name: brand-content-workflow
-description: Workflow générique pour créer, récupérer, structurer et valider des pages marque SEO/GEO à forte valeur éditoriale et commerciale. Utiliser pour les hubs de marque, pages produit, analyses/reviews, services, accessoires et alternatives. Le workflow impose une cartographie d'entités, une gamme actuelle vérifiée, un ecosystem map, un positionnement de marque explicite, un maillage profond et une QA spécifique aux pages commerciales sans inventer de tests ni d'expérience produit.
+description: Workflow générique pour créer, récupérer, structurer et valider des pages marque SEO/GEO à forte valeur éditoriale et commerciale. Utiliser pour les hubs de marque, pages produit, analyses/reviews, services, accessoires et alternatives. Le workflow impose une cartographie d'entités, une gamme actuelle vérifiée, un ecosystem map, un positionnement de marque explicite et une QA spécifique aux pages commerciales sans inventer de tests ni d'expérience produit.
 ---
 
 # Brand Content Workflow
 
 ## Objectif
 
-Construire des pages marque qui fonctionnent à la fois comme :
+Construire des pages marque qui aident réellement un lecteur à comprendre une marque, un produit ou un écosystème et à prendre une décision informée.
 
-- **entity hubs** ;
-- **commercial hubs** ;
-- **navigation hubs** ;
-- **sources de contexte GEO** ;
-- **portes d'entrée vers produits, comparatifs, guides et usages**.
+Une bonne page marque doit permettre de comprendre, selon son type :
 
-Une bonne page marque ne doit pas seulement répondre à :
-
-> "Qu'est-ce que cette marque ?"
-
-Elle doit aussi permettre de comprendre :
-
-> Quels produits sont actuellement dans sa gamme ?  
-> Quelle est sa logique d'écosystème ?  
+> Quels produits sont actuellement dans la gamme ?  
+> Quelle est la logique de l'écosystème ?  
 > Quelles différences changent réellement la décision ?  
-> Pour quels usages la marque est-elle adaptée ou non ?  
-> Vers quelles pages du site faut-il poursuivre ?
+> Pour quels usages la marque ou le produit est-il adapté ou non ?  
+> Quelle est la prochaine information utile à consulter ?
 
 Principe central :
 
-> **Entités avant prose. Gamme actuelle avant recommandation. Écosystème avant positionnement. Maillage avant conversion.**
+> **Entités avant prose. Gamme actuelle avant recommandation. Écosystème avant positionnement. Valeur lecteur avant structure SEO.**
+
+La prose finale ne doit jamais expliquer au lecteur la stratégie éditoriale de la page. Les notions de hub, maillage, SEO, GEO, intention ou architecture servent au travail interne, pas au texte publié.
 
 ---
 
@@ -47,7 +39,8 @@ Lire avant toute production :
 - pages guides / usages associées ;
 - données sémantiques si disponibles ;
 - informations officielles actuelles de la marque ;
-- page de référence qualitative définie par `quality_reference`.
+- page de référence qualitative définie par `quality_reference` ;
+- `.agents/skills/brand-editorial-publish-gate/SKILL.md` avant la validation finale.
 
 Réutiliser les skills existants lorsqu'ils sont présents :
 
@@ -66,12 +59,22 @@ Réutiliser les skills existants lorsqu'ils sont présents :
 - `editorial-qa`
 - `comparison-content-workflow`
 - `guide-content-workflow`
+- `brand-editorial-publish-gate`
+
+Les skills hérités d'un autre projet servent de grille méthodologique. Ne pas reprendre leur langue, leur domaine, leurs exemples ou leurs quotas éventuels comme contraintes de rédaction pour bloc-notes-numeriques.fr.
 
 ---
 
 # 2. Routing obligatoire
 
 Classer la page avant de rédiger.
+
+## DIRECTORY
+
+Fonction :
+- aider à comprendre les grandes différences entre marques ;
+- orienter vers la marque ou le type de produit pertinent ;
+- éviter de reproduire un comparatif exhaustif.
 
 ## BRAND_HUB
 
@@ -83,8 +86,8 @@ Fonction :
 - définir la marque ;
 - présenter la gamme actuelle ;
 - cartographier l'écosystème ;
-- expliquer les grandes forces / limites ;
-- router vers produits, comparatifs, guides et usages.
+- expliquer les forces et limites qui changent réellement le choix ;
+- orienter naturellement vers les produits, comparatifs, guides ou usages pertinents.
 
 ## PRODUCT
 
@@ -95,9 +98,9 @@ Exemple :
 Fonction :
 - présenter un produit précis ;
 - vérifier sa génération et son statut ;
-- expliquer ses fonctions ;
-- montrer à qui il convient ;
-- relier vers comparatifs et alternatives.
+- expliquer les caractéristiques qui changent réellement la décision ;
+- montrer à qui il convient ou non ;
+- relier vers comparatifs et alternatives lorsque cela aide le lecteur.
 
 ## REVIEW
 
@@ -108,12 +111,14 @@ Exemple :
 Fonction :
 - analyser un produit ;
 - distinguer clairement desk research, prise en main et test réel ;
-- présenter forces, limites, usages et alternatives.
+- présenter un jugement éditorial proportionnel au niveau de preuve ;
+- expliquer les forces, limites, usages et alternatives sans simuler un test.
 
 Si aucun test réel n'existe :
 - ne pas utiliser de langage de test ;
 - ne pas présenter de scores mesurés ;
-- utiliser "analyse", "évaluation documentaire" ou équivalent.
+- utiliser « analyse documentaire », « analyse éditoriale » ou équivalent lorsque cette précision est nécessaire ;
+- ne pas répéter cette précaution dans chaque section.
 
 ## SERVICE
 
@@ -134,8 +139,8 @@ Exemple :
 
 Fonction :
 - expliquer les catégories d'accessoires ;
-- distinguer nécessaires / optionnels ;
-- relier vers produits compatibles ;
+- distinguer nécessaires, utiles et optionnels lorsque cette distinction est pertinente ;
+- vérifier les compatibilités ;
 - éviter le catalogue sans contexte.
 
 ## ALTERNATIVES
@@ -145,9 +150,9 @@ Exemple :
 `/marques/remarkable/alternatives/`
 
 Fonction :
-- expliquer quand quitter l'écosystème ;
-- identifier les alternatives cohérentes ;
-- déléguer la comparaison détaillée à `comparison-content-workflow` lorsque pertinent.
+- expliquer dans quels cas une autre marque ou un autre écosystème répond mieux au besoin ;
+- identifier les alternatives cohérentes selon la raison du changement ;
+- déléguer une comparaison détaillée à `comparison-content-workflow` lorsque pertinent.
 
 ---
 
@@ -159,27 +164,31 @@ Si une page existe déjà :
 
 Conserver :
 - faits toujours valides ;
-- structure utile ;
+- structure réellement utile ;
 - liens pertinents ;
 - passages différenciants ;
-- tableaux exploitables.
+- tableaux qui simplifient une décision.
 
-Réparer :
+Réparer ou supprimer :
 - gamme obsolète ;
 - entités manquantes ;
 - services mal expliqués ;
 - positionnement trop vague ;
-- maillage pauvre ;
+- maillage pauvre ou artificiel ;
 - contenu trop promotionnel ;
-- sections trop courtes ;
-- liens vers anciens modèles ;
-- produits discontinués présentés comme actuels.
+- sections ajoutées uniquement pour allonger la page ;
+- liens vers anciens modèles non contextualisés ;
+- produits discontinués présentés comme actuels ;
+- métadiscours éditorial ;
+- répétitions de patrons entre pages ;
+- phrases génériques qui pourraient s'appliquer à presque n'importe quelle marque.
 
 ## NEW_CONTENT
 
 Si page vide ou inexistante :
-- produire d'abord les données structurées ;
-- rédiger ensuite.
+- produire d'abord les données structurées et le cadrage ;
+- déterminer les questions réellement nécessaires ;
+- rédiger ensuite sans transformer le cadrage interne en texte utilisateur.
 
 ---
 
@@ -211,7 +220,7 @@ Pour chaque relation importante, expliciter :
 `BRAND -> INTEGRATION`  
 `BRAND -> COMPETITOR`
 
-La page ne doit pas seulement contenir les mots : elle doit expliquer leurs relations.
+La page ne doit pas seulement contenir les mots : elle doit expliquer leurs relations lorsque celles-ci aident le lecteur.
 
 ---
 
@@ -249,7 +258,7 @@ Une page hub ne peut pas mélanger générations actuelles et anciennes sans les
 
 # 6. Brand Proposition
 
-Formuler une proposition claire :
+Formuler une proposition interne claire :
 
 > Quelle est la logique propre de cette marque ?
 
@@ -258,6 +267,8 @@ La proposition doit venir de faits vérifiables.
 Dimensions possibles : spécialisation, ouverture logicielle, simplicité, lecture, écriture, organisation, cloud, applications tierces, couleur, accessoires et services.
 
 Ne jamais écrire qu'une marque est « la meilleure » sans critères ou comparaison documentée. Préférer une formulation conditionnelle reliant positionnement, usage et limites.
+
+La « proposition de marque » est un outil de cadrage. Elle ne doit pas être injectée telle quelle dans le texte si elle sonne comme un brief marketing ou SEO.
 
 ---
 
@@ -292,7 +303,7 @@ Pour chaque étape :
 - ce qui nécessite un service tiers ;
 - ce qui ne fonctionne pas.
 
-Le but est de montrer comment les données circulent dans l'écosystème.
+Le but est de comprendre comment les données circulent dans l'écosystème. La page finale n'a pas besoin de reproduire toutes ces étapes si certaines n'aident pas la décision.
 
 ---
 
@@ -306,104 +317,112 @@ Vérifier en priorité : gamme actuelle, services, abonnement, export, cloud, fo
 
 ---
 
-# 9. Architecture BRAND_HUB
+# 9. Couverture BRAND_HUB
 
-Architecture recommandée :
+Ne pas utiliser une architecture fixe comme template obligatoire.
 
-1. réponse rapide ;
-2. ce qui distingue la marque ;
-3. gamme actuelle ;
-4. tableau produits ;
-5. ecosystem map ;
-6. logiciels / services ;
-7. forces ;
-8. limites ;
-9. qui devrait choisir cette marque ;
-10. qui devrait éviter cette marque ;
-11. alternatives principales ;
-12. liens vers comparatifs ;
-13. liens vers guides / usages ;
-14. sources.
+Le contenu doit couvrir uniquement les éléments nécessaires parmi :
 
-Tout tableau de gamme doit être contextualisé et interprété.
+- ce qui différencie concrètement la marque ;
+- gamme actuelle et générations importantes ;
+- conséquences de l'écosystème sur les usages ;
+- logiciels, services ou abonnements qui changent la décision ;
+- forces et limites démontrables ;
+- profils ou situations pour lesquels la marque est adaptée ou moins adaptée ;
+- alternatives pertinentes ;
+- prochaines pages utiles ;
+- sources et niveau de preuve.
+
+L'ordre, le nombre de sections et le format dépendent de l'intention. Un tableau n'est utilisé que s'il facilite une comparaison réelle.
 
 ---
 
-# 10. Architecture PRODUCT
+# 10. Couverture PRODUCT
 
-1. réponse rapide ;
-2. statut actuel ;
-3. à qui il s'adresse ;
-4. caractéristiques décisionnelles ;
-5. workflow ;
-6. formats / cloud / export ;
-7. accessoires ;
-8. limites ;
-9. alternatives ;
-10. comparatifs ;
-11. guides utiles ;
-12. sources.
+Ne pas reproduire automatiquement la même structure d'un produit à l'autre.
 
-Ne pas transformer la page en fiche constructeur recopiée.
+Traiter en priorité :
+
+- statut et génération lorsque cela compte ;
+- caractéristiques qui changent réellement l'achat ;
+- workflow et compatibilités ;
+- contraintes ou limites ;
+- coût total ou accessoires lorsque pertinents ;
+- à qui le produit convient ou non ;
+- alternative logique lorsque nécessaire ;
+- sources.
+
+Ne pas transformer la page en fiche constructeur recopiée ni en mini-review si une page `REVIEW` existe déjà.
 
 ---
 
-# 11. Architecture REVIEW
+# 11. Couverture REVIEW
 
-Si test réel documenté : méthodologie, conditions, durée, limites, résultats, observations et verdict.
+Si test réel documenté : méthodologie, conditions, durée, limites, résultats, observations et verdict peuvent être utilisés proportionnellement aux preuves disponibles.
 
 Sinon :
-- mention explicite « analyse documentaire » ;
+- mention explicite mais sobre du niveau de preuve ;
 - aucune formulation du type « nous avons testé » ;
 - aucun score simulant une mesure ;
 - aucune sensation d'écriture présentée comme vécue ;
-- distinguer faits, déductions et retours utilisateurs agrégés.
+- distinguer faits, déductions et retours utilisateurs agrégés lorsqu'ils sont réellement sourcés ;
+- produire un jugement éditorial utile, pas une simple répétition de la page `PRODUCT`.
 
 ---
 
-# 12. Architecture SERVICE
+# 12. Couverture SERVICE
 
-Traiter : définition, fonctions, gratuit/payant, fonctionnement sans service, coût actuel, impact sur les données, limites, alternatives, décision et sources.
+Traiter selon pertinence : définition, fonctions, gratuit/payant, fonctionnement sans service, coût actuel, impact sur les données, limites, alternatives et décision.
 
-Toujours distinguer fonction cœur, confort, dépendance et lock-in éventuel.
-
----
-
-# 13. Architecture ACCESSORY_HUB
-
-Classer les accessoires : `REQUIRED`, `RECOMMENDED`, `OPTIONAL`, `COSMETIC`.
-
-Expliquer compatibilité, génération, valeur réelle, coût, alternatives et compatibles tiers. Ne pas créer une liste commerciale sans hiérarchie.
+Toujours distinguer fonction cœur, confort, dépendance et lock-in éventuel lorsque ces notions changent réellement l'usage.
 
 ---
 
-# 14. Architecture ALTERNATIVES
+# 13. Couverture ACCESSORY_HUB
 
-Partir des raisons de quitter la marque : prix, ouverture, lecture, apps, couleur, format, workflow, abonnement, compatibilité.
+Classer les accessoires lorsque pertinent : `REQUIRED`, `RECOMMENDED`, `OPTIONAL`, `COSMETIC`.
+
+Expliquer compatibilité, génération, valeur réelle, coût et alternatives. Ne pas créer une liste commerciale sans hiérarchie ni imposer toutes les catégories sur chaque marque.
+
+---
+
+# 14. Couverture ALTERNATIVES
+
+Partir des raisons concrètes de quitter la marque : prix, ouverture, lecture, apps, couleur, format, workflow, abonnement, compatibilité.
 
 Router ensuite les alternatives par besoin. Pour une vraie comparaison multi-produits, déléguer le scoring à `comparison-content-workflow`.
 
----
-
-# 15. Who should choose / avoid
-
-Obligatoire sur `BRAND_HUB`, `PRODUCT` et `REVIEW`.
-
-Formuler 3 à 5 cas « choose if » et 2 à 5 cas « avoid if ». Le bloc « avoid » ne doit pas être édulcoré pour préserver la conversion.
+Ne pas refaire un classement générique déjà traité dans `/comparatifs/`.
 
 ---
 
-# 16. Internal Linking Architecture
+# 15. Choose / avoid
 
-Une page marque doit être un hub profond vers modèles actuels, anciennes générations utiles, reviews, comparatifs, alternatives, accessoires, services, guides, usages, bons plans et pages prix selon pertinence.
+Utiliser des recommandations « pour qui / moins adapté » uniquement lorsqu'elles apportent une vraie décision.
 
-Une page marque presque sans liens internes est incomplète.
+Aucun nombre minimum de cas n'est imposé. Deux situations précises valent mieux que cinq formulations génériques.
+
+Les limites ne doivent pas être édulcorées pour préserver la conversion.
+
+---
+
+# 16. Internal Linking
+
+Le maillage est contextuel, pas quantitatif.
+
+Ajouter un lien uniquement lorsqu'il constitue une prochaine étape logique : modèle associé, ancienne génération utile, review, comparatif, alternative, accessoire, service, guide, usage, bon plan ou page prix.
+
+Ne jamais imposer un minimum de liens internes ou de cibles uniques. Une phrase ne doit pas exister uniquement pour accueillir un lien.
+
+Les notions de « hub profond » et de « maillage » restent internes au workflow et ne doivent jamais apparaître dans la prose utilisateur.
 
 ---
 
 # 17. Affiliate Value
 
 Utiliser `affiliate-value` et vérifier : utilité sans CTA, limites visibles, alternatives honnêtes, absence de fausse urgence, prix et disponibilité datés, disclosure claire, recommandation indépendante de la commission.
+
+La page doit rester utile si tous les liens affiliés sont supprimés.
 
 ---
 
@@ -415,17 +434,19 @@ Utiliser `fact-check` pour vérifier noms, générations, dimensions, technologi
 
 # 19. GEO Entity Pass
 
-Contrôler explicitement les relations : marque → produit, marque → logiciel, marque → service, marque → intégration, produit → technologie, produit → usage, produit → limitation, produit → alternative, marque → concurrent.
+Contrôler explicitement les relations utiles : marque → produit, marque → logiciel, marque → service, marque → intégration, produit → technologie, produit → usage, produit → limitation, produit → alternative, marque → concurrent.
 
-La page doit être facilement résumable sous forme de graphe d'entités.
+La page doit être facile à comprendre et à citer parce que les relations sont explicites, pas parce qu'elle répète artificiellement les noms d'entités ou ajoute des FAQ génériques.
 
 ---
 
 # 20. Finition éditoriale
 
-Exécuter : `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`, `seo-drift`.
+Exécuter : `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`.
 
-Le `seo-drift` compare aussi entity map, current range, ecosystem map, proposition de marque et maillage prévu.
+Utiliser `seo-drift` lorsque l'objectif est de comparer une version à un baseline antérieur ou de vérifier une régression après modification. Ne pas l'utiliser comme substitut à la QA éditoriale.
+
+La finition doit supprimer le métadiscours, les transitions de remplissage, les symétries artificielles, les structures répétées et les phrases applicables à n'importe quelle marque.
 
 ---
 
@@ -433,19 +454,44 @@ Le `seo-drift` compare aussi entity map, current range, ecosystem map, propositi
 
 Utiliser `seo-best-practices` et `seo-technical` et vérifier title, H1, intent, entities, canonical, robots, maillage, breadcrumbs, structured data si pertinent, indexation des anciennes générations et cannibalisation.
 
+Aucun nombre minimum de mots, H2/H3, tableaux ou liens ne peut servir de proxy de qualité SEO.
+
 ---
 
-# 22. Brand Quality Gate
+# 22. Validation automatique + publish gate
 
-Le contrôle automatique peut vérifier entity map, gamme actuelle, statuts produits, ecosystem map, page type, preuves, maillage, limites, sources, noindex en brouillon, liens produit/comparatif quand pertinent.
+Exécuter d'abord :
 
-Le script ne doit jamais déclarer automatiquement Fact-check PASS, GEO PASS, Humanizer PASS, positionnement juste ou review réellement testée.
+```bash
+python3 validate_brands.py
+```
+
+Le contrôle automatique vérifie uniquement des blockers détectables : structure HTML de base, sécurité `noindex` en brouillon, métadiscours évident, faux langage de test, quelques signaux génériques à haut risque, présence d'une source, disclosure documentaire d'une review et couverture sémantique minimale par type de page.
+
+Le script ne doit jamais déclarer automatiquement :
+
+- Fact-check complet PASS ;
+- E-E-A-T / Trust PASS ;
+- GEO PASS ;
+- Humanizer PASS ;
+- positionnement juste ;
+- valeur originale suffisante ;
+- cannibalisation résolue ;
+- page publiable.
+
+Après le script, exécuter obligatoirement :
+
+`.agents/skills/brand-editorial-publish-gate/SKILL.md`
+
+Le publish gate évalue intention, valeur originale, preuves, Trust/E-E-A-T observable, GEO, pertinence éditoriale, ton français, anti-AI-slop, SEO et adéquation au type de page.
+
+Un PASS machine n'autorise jamais l'indexation.
 
 ---
 
 # 23. Échecs automatiques
 
-FAIL si : génération ancienne présentée comme actuelle, produit discontinué non signalé, marque décrite uniquement en termes promotionnels, absence de limite réelle, hub sans profondeur de maillage, service payant présenté comme gratuit, abonnement omis s'il change l'usage, fake test, sensation produit inventée, relation d'entité importante absente, gamme non datée, sources officielles absentes pour claims évolutifs ou source de vérité non mise à jour.
+FAIL si : génération ancienne présentée comme actuelle, produit discontinué non signalé, marque décrite uniquement en termes promotionnels, faux test, sensation produit inventée, service payant présenté comme gratuit, abonnement omis s'il change l'usage, affirmation importante non vérifiée présentée comme certaine, absence de valeur originale au-delà des sources marchandes, métadiscours éditorial dans la prose utilisateur, signaux anti-AI-slop `HIGH` non corrigés, intention principale non satisfaite, cannibalisation forte non résolue ou page rendue indexable avant validation humaine.
 
 ---
 
@@ -456,15 +502,25 @@ FAIL si : génération ancienne présentée comme actuelle, produit discontinué
 - `ECOSYSTEM_READY`
 - `DRAFT_READY`
 - `QA_IN_PROGRESS`
+- `MACHINE_VALIDATED`
 - `REVISION_REQUIRED`
+- `PUBLISH_GATE_PASS`
 - `HUMAN_APPROVED`
 - `PUBLISHABLE`
+
+`MACHINE_VALIDATED` n'implique jamais `PUBLISH_GATE_PASS`.
 
 ---
 
 # 25. Publication
 
-Par défaut : conserver `noindex` si configuré, ne pas merger, ne pas publier, ne pas déployer. Autorisation explicite nécessaire.
+Par défaut : conserver `noindex,follow`, ne pas publier et ne pas déployer une page comme indexable.
+
+Conditions cumulatives avant retrait du `noindex` :
+
+1. `validate_brands.py` ne retourne aucun blocker ;
+2. `brand-editorial-publish-gate` retourne `PASS` et `READY FOR HUMAN VALIDATION` ;
+3. validation humaine explicite.
 
 ---
 
@@ -472,6 +528,6 @@ Par défaut : conserver `noindex` si configuré, ne pas merger, ne pas publier, 
 
 Pour chaque marque, conserver entity map, product range, ecosystem, evidence ledger, positioning, internal link map et date de recherche dans `.content/brands/`.
 
-Pour chaque page, conserver les éléments d'audit dans `.content/reviews/`.
+Pour chaque page, conserver les éléments d'audit dans `.content/reviews/` lorsque le workflow les génère.
 
 La prose finale ne doit jamais être la seule source expliquant l'écosystème de la marque.
