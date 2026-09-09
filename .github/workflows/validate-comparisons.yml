@@ -47,6 +47,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Render comparison pages in the runner
+        run: python3 apply_comparison_content.py
       - name: Regenerate comparison methodology in the runner
         run: python3 generate_comparison_metadata.py
       - name: Validate the implemented comparison pipeline
