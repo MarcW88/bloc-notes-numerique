@@ -53,6 +53,19 @@ Pour toute création ou réécriture sous `/usages/` :
 - Pour les pages marques, produits et écosystèmes, utiliser `.agents/skills/brand-content-workflow/SKILL.md`.
 - Ne jamais faire varier une recommandation, un score ou un classement en fonction d’une commission d’affiliation.
 
+## Production éditoriale — Pages marques : publish gate obligatoire
+
+Pour toute création, récupération, réécriture ou validation sous `/marques/` :
+
+1. Déterminer explicitement le type `DIRECTORY`, `BRAND_HUB`, `PRODUCT`, `REVIEW`, `SERVICE`, `ACCESSORY_HUB` ou `ALTERNATIVES` avant de rédiger.
+2. Ne jamais imposer un nombre minimum de mots, de H2/H3, de tableaux ou de liens internes comme proxy de qualité. La structure doit découler du besoin du lecteur.
+3. Éviter tout métadiscours destiné à l’éditeur du site dans le texte utilisateur : ne pas expliquer qu’une page « sert de hub », qu’une section sert le SEO/GEO, qu’un passage crée du maillage ou qu’une page doit accomplir un rôle éditorial.
+4. Toute recommandation doit distinguer faits vérifiés, interprétation éditoriale et expérience réelle. Sans preuve de test physique, une review reste une analyse documentaire ou éditoriale et ne doit jamais imiter un test hands-on.
+5. Après rédaction ou correction, exécuter : intention et rôle de page → valeur originale/affiliée → fact-check et niveau de preuve → Trust/E-E-A-T observable → qualité GEO et relations d’entités → pertinence éditoriale → français naturel/tone of voice → anti-AI-slop + Humanizer → SEO éditorial/technique → `python3 validate_brands.py` → `.agents/skills/brand-editorial-publish-gate/SKILL.md`.
+6. `validate_brands.py` contrôle uniquement les blockers détectables automatiquement. Un PASS du script ne signifie jamais que la page est publiable.
+7. Le rapport `brand-editorial-publish-gate` doit se terminer par `PASS` et `READY FOR HUMAN VALIDATION`. Un seul blocker suffit à maintenir la page en `noindex,follow`.
+8. Ne retirer `noindex` qu’après validation humaine explicite du contenu final.
+
 ## Production éditoriale — Bons plans
 
 Pour toute création, réécriture ou actualisation sous `/bons-plans/` :
