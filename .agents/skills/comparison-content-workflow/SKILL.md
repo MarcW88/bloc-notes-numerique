@@ -1,216 +1,398 @@
 ---
 name: comparison-content-workflow
-description: Workflow générique pour créer, récupérer et valider des comparatifs produits SEO/GEO orientés affiliation. Utiliser pour les pages "meilleur X", "X vs Y", "meilleur X pour Y", "pas cher", "professionnel", "étudiant" et autres pages transactionnelles comparatives. Le workflow impose des critères définis avant le classement, un registre de preuves, un scoring auditable, une justification des recommandations et une QA affiliation/SEO/GEO sans fake test.
+description: Workflow unique de création et de réécriture des pages /comparatifs/ de bloc-notes-numeriques.fr. Orchestre majoritairement des skills GitHub existants et conserve une méthodologie comparative auditable : intention, univers produit, équivalence, preuves, critères, hard gates, scoring, ranking, rédaction, fact-check et QA. La structure éditoriale doit découler de la décision utilisateur et de la méthode, jamais d'un template de comparatif.
+metadata:
+  adapted_for: bloc-notes-numeriques.fr
+  orchestration_target: ">=80% existing skills"
 ---
 
 # Comparison Content Workflow
 
-## Objectif
+## Rôle
 
-Produire des comparatifs réellement utiles à la décision d'achat, auditables et compatibles avec un modèle d'affiliation.
+C'est le **seul workflow de production** à utiliser pour créer ou réécrire une URL sous `/comparatifs/`.
 
-Le workflow ne doit jamais commencer par :
-
-> "Quels produits voulons-nous recommander ?"
-
-Il commence par :
-
-> "Quelle décision l'utilisateur essaie-t-il de prendre, quels produits sont réellement éligibles, quels critères changent cette décision, et quelles preuves permettent de les comparer ?"
+Il orchestre des skills existants plutôt que de réimplémenter leur méthode. La logique custom est limitée à ce qui est propre aux comparatifs : univers produit, équivalence, critères, pondération, hard gates, coût total, scoring et ranking.
 
 Principe central :
 
-> **Critères avant gagnant. Preuves avant scoring. Scoring avant rédaction. Affiliation après décision.**
+> **Intention avant univers produit. Preuves avant scoring. Critères avant gagnant. Méthode avant rédaction.**
+
+La page finale doit aider à prendre une décision et rester utile sans liens affiliés.
+
+---
 
 # 1. Entrées obligatoires
 
-Lire avant toute production :
-- instructions du repo (`AGENTS.md`, `README`, etc.) ;
+Lire :
+
+- `AGENTS.md` ;
 - `comparison-workflow.config.yaml` ;
-- page cible existante si elle existe ;
-- source de vérité éditoriale ;
-- analyse sémantique ;
-- pages comparatives voisines ;
-- pages marques / produits / usages / guides ;
-- données marché ou disponibilités si nécessaires ;
-- méthodologie de test du site si elle existe ;
-- règles d'affiliation ;
-- page de référence qualitative définie par `quality_reference`.
+- page cible et contenu existant ;
+- `.content/comparisons/<slug>.json` ;
+- comparatifs voisins ;
+- pages marques, produits, usages et guides pertinentes ;
+- données GSC/sémantiques/historiques disponibles ;
+- sources actuelles nécessaires à la vérification.
 
-Réutiliser les skills existants lorsqu'ils sont présents : `search-intent`, `affiliate-value`, `fact-check`, `content-refresh`, `internal-linking-audit`, `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`, `seo-drift`, `seo-technical`, `seo-best-practices`, `editorial-qa`.
+Pour une page existante, commencer obligatoirement par :
 
-# 2. Router le type de comparatif
+`.agents/skills/comparison-analysis-workflow/SKILL.md` en mode `AUDIT`.
 
-Choisir un type dominant :
-- **Best overall** : meilleur équilibre global.
-- **Best for use case** : meilleur produit pour un job-to-be-done précis.
-- **Budget** : meilleur compromis sous contrainte de coût.
-- **Feature-specific** : meilleure réponse à une caractéristique déterminante.
-- **Head-to-head** : comparaison conditionnelle entre deux produits.
+Ne pas lancer une réécriture profonde si l'audit conclut `KEEP`, `LIGHT_UPDATE`, `MERGE` ou `NOINDEX` sans raison documentée de changer cette décision.
 
-Le type de page détermine critères, poids, univers produits, architecture et niveau de scoring.
+---
 
-# 3. Mode RECOVERY ou NEW_CONTENT
+# 2. Chaîne de production fondée sur les skills existants
 
-## RECOVERY
-Si une page existe déjà : conserver les passages utiles, données valides et liens utiles. Conserver le classement uniquement s'il résiste à la nouvelle méthodologie. Ne jamais préserver un gagnant uniquement parce qu'il était déjà #1.
+## 2.1 Intention — `search-intent`
 
-## NEW_CONTENT
-Si la page est vide : construire d'abord les données, rédiger ensuite.
+Déterminer requête/topic principal, intention, décision concrète, sous-intentions, contrainte dominante, rôle de l'URL et risque de cannibalisation.
 
-# 4. Search intent avant sélection produit
+Lorsque des données historiques existent, les utiliser avant d'inférer la cible.
 
-Utiliser `search-intent`. Définir requête principale, variantes, intention dominante, sous-intentions, niveau de maturité, contrainte principale, résultat attendu et risque de cannibalisation.
+## 2.2 Job-to-be-done — `jobs-to-be-done`
 
-Une requête comme `meilleur bloc-notes numérique étudiant` ne doit pas réutiliser la grille de `meilleur bloc-notes numérique` avec seulement un changement d'introduction. Les critères et poids doivent changer.
+Obligatoire pour les comparatifs orientés contexte ou profil d'usage : étudiant, professionnel, annotation PDF, mobilité, etc.
 
-# 5. Product Universe
+Les critères doivent partir du travail à accomplir et des contraintes réelles, pas d'un persona décoratif.
 
-Construire la liste des produits éligibles avant de choisir les gagnants. Pour chaque produit : marque, modèle, génération, statut actuel, disponibilité, prix si utilisé, stylet inclus ou non, accessoires obligatoires, abonnement éventuel, principales fonctions et sources officielles.
+## 2.3 Audit/récupération — `content-audit` + `content-refresh`
 
-Classer les candidats : `ELIGIBLE`, `CONDITIONALLY_ELIGIBLE`, `OUTDATED`, `NOT_COMPARABLE`, `EXCLUDED`. Documenter toute exclusion. Un produit ne doit pas être ajouté uniquement parce qu'il existe un lien affilié.
+Pour une page existante :
 
-# 6. Equivalence Engine
+- préserver les éléments encore utiles ;
+- conserver un ranking uniquement s'il résiste à la nouvelle méthode ;
+- distinguer correction légère et reconstruction ;
+- ne jamais conserver un gagnant simplement parce qu'il était déjà #1.
 
-Avant de comparer, déterminer si les produits sont réellement comparables selon job-to-be-done, catégorie fonctionnelle, taille/capacité, workflow, fonctions clés, accessoires nécessaires, logiciel, coûts récurrents, contraintes et public cible.
+Pour une nouvelle page : `N/A`.
 
-Attribuer : `EXACT`, `FUNCTIONALLY_COMPARABLE`, `PARTIALLY_COMPARABLE`, `NOT_COMPARABLE`. Pour les comparaisons partielles, expliciter les dimensions non comparables.
+## 2.4 Recherche et evidence brief — `fact-check`
 
-# 7. Evidence Ledger
+Construire un registre des affirmations nécessaires avant scoring ou rédaction.
 
-Aucune note ne doit être attribuée avant création du registre de preuves.
+Hiérarchie par défaut : fabricant/support/manuel, distributeur officiel, retailer fiable pour prix ou disponibilité, tests indépendants, puis patterns utilisateurs suffisamment documentés.
 
-| Product | Criterion | Claim | Value | Source | Date | Evidence class |
-|---|---|---|---|---|---|---|
+Statuts : `VERIFIED`, `SUPPORTED`, `INFERRED`, `USER_PATTERN`, `FIRST_HAND`, `UNKNOWN`, `OUTDATED`, `CONTRADICTED`.
 
-Classes :
-- `VERIFIED` — source primaire actuelle ;
-- `SUPPORTED` — source secondaire crédible ;
-- `INFERRED` — conclusion raisonnable depuis plusieurs faits ;
-- `USER_PATTERN` — expérience agrégée de plusieurs utilisateurs ;
-- `FIRST_HAND` — uniquement si l'utilisateur a fourni un vrai test ;
-- `UNKNOWN` — non vérifié ;
-- `PROHIBITED` — ne doit pas être publié.
+Ne jamais utiliser la mémoire du modèle pour combler `UNKNOWN`.
 
-Ne jamais transformer `INFERRED` ou `USER_PATTERN` en expérience directe.
+## 2.5 Jugements d'usage — `evidence-based-reviews`
 
-# 8. Définir les critères AVANT le classement
+Obligatoire dès qu'un critère porte sur qualité d'écriture, ergonomie, fluidité, autonomie observée, fiabilité ou autre jugement d'expérience.
 
-Construire les critères depuis l'intention, le JTBD, les sous-questions, les contraintes et les différences réellement décisionnelles. Exemples : qualité d'écriture, annotation PDF, organisation, export, OCR, cloud, applications, taille, couleur, autonomie, lecture, simplicité, coût total, abonnement, accessoires, réparabilité, disponibilité.
+Une sensation issue d'un test tiers reste une synthèse externe. Elle ne devient jamais un hands-on propre au site.
 
-Un critère doit être pertinent pour l'intention, comparable, mesurable ou analysable et soutenu par des preuves.
+## 2.6 Valeur originale — `affiliate-value`
 
-# 9. Pondération
+Vérifier avant le ranking :
 
-Définir le poids des critères avant calcul. La somme des poids = 100. Documenter pourquoi le poids change selon l'intention.
+- critères réellement décisionnels ;
+- défauts visibles ;
+- alternatives honnêtes ;
+- coût réel ;
+- absence d'influence des commissions ;
+- page utile sans liens affiliés.
 
-**Interdit :** modifier les poids après avoir vu quel produit gagne, sauf erreur méthodologique explicitement documentée.
+---
 
-# 10. Normalisation et scoring
+# 3. Méthodologie comparative
 
-Utiliser une échelle stable, par exemple 0–10. Pour chaque score, conserver valeur, justification, evidence class et éventuelle pénalité d'incertitude.
+Cette partie est spécifique au workflow comparatif. Elle doit être exécutée **avant** le plan éditorial et la rédaction.
 
-`criterion_score = normalized_score × criterion_weight`
+## 3.1 Type méthodologique
 
-`total = Σ criterion_score / 10`
+Déterminer un type dominant :
 
-Facteurs de confiance optionnels : VERIFIED 1.00, SUPPORTED 0.95, INFERRED 0.85, USER_PATTERN 0.80. UNKNOWN est interdit pour un critère important.
+- `BEST_OVERALL`
+- `USE_CASE`
+- `BUDGET`
+- `FEATURE_SPECIFIC`
+- `HEAD_TO_HEAD`
 
-Le ranking final doit conserver score brut, score ajusté et niveau de confiance.
+Le type définit les risques, le périmètre et la méthode. **Il ne définit pas l'architecture éditoriale.**
 
-# 11. Hard Gates
+## 3.2 Product Universe
 
-Certains critères sont éliminatoires : produit non disponible, fonction indispensable absente, incompatibilité avec le besoin, génération obsolète, données essentielles non vérifiables, prix dépassant une contrainte explicite ou abonnement obligatoire incompatible avec l'intention.
+Lister les candidats pertinents avant le gagnant. Pour chaque produit : modèle, génération, statut, disponibilité, configuration utile, prix si pertinent, accessoires obligatoires, abonnement, fonctions clés et sources.
 
-Un produit qui échoue un hard gate ne doit pas gagner grâce à un bon score moyen.
+Statuts possibles : `ELIGIBLE`, `CONDITIONALLY_ELIGIBLE`, `OUTDATED`, `NOT_COMPARABLE`, `EXCLUDED`.
 
-# 12. Total Solution Cost
+Toute exclusion doit être documentée.
 
-Comparer le coût de la configuration réellement utilisable :
+## 3.3 Equivalence Engine
 
-`TSC = appareil + accessoire obligatoire + protection nécessaire + abonnement utile + consommables + autres coûts indispensables`
+Évaluer la comparabilité selon job-to-be-done, taille/capacité, workflow, fonctions clés, logiciel, accessoires, coûts récurrents et contraintes.
 
-Éviter de comparer un appareil nu à un bundle complet. Les coûts non indispensables ne doivent pas être ajoutés mécaniquement.
+Statuts : `EXACT`, `FUNCTIONALLY_COMPARABLE`, `PARTIALLY_COMPARABLE`, `NOT_COMPARABLE`.
 
-# 13. Rank Justification
+Une comparaison partielle doit expliciter ce qui ne l'est pas.
 
-Chaque produit classé doit répondre à : pourquoi il est présent, pour qui il est recommandé, pour qui il ne l'est pas, avantage principal, limitation principale, critère qui fait réellement bouger la décision, alternative logique et pourquoi il est classé à cette position.
+## 3.4 Critères avant classement
 
-Pour le #1, expliquer ce qu'il gagne **et ce qu'il ne gagne pas**. Un "meilleur" absolu sans critères explicites est interdit.
+Construire les critères depuis l'intention, le JTBD, les différences réelles et les preuves disponibles.
 
-# 14. Honest Comparison Standard
+Un critère doit être pertinent, comparable et suffisamment étayé. Ne pas ajouter un critère uniquement pour différencier artificiellement des produits.
 
-Le comparatif doit montrer les désavantages du produit recommandé, éviter le cherry-picking, distinguer différence de spec et différence d'usage, distinguer prix affiché et coût réel, distinguer test réel et desk research, distinguer fait/déduction/opinion et signaler les données instables.
+## 3.5 Pondération
 
-La commission d'affiliation ne peut jamais influencer inclusion, score, classement ou formulation des défauts.
+Définir les poids avant calcul. Si une pondération est utilisée, la somme = 100.
 
-# 15. Architecture éditoriale
+Interdit : ajuster les poids après avoir vu le gagnant, sauf correction méthodologique explicitement documentée.
 
-Une page "best X" peut contenir : réponse rapide/sélection, méthodologie, tableau de comparaison, critères déterminants, produits classés, profils, limites/exclusions, coût total, comment choisir, liens vers guides/usages/marques, sources/fraîcheur.
+## 3.6 Hard Gates
 
-Pour `A vs B` : verdict rapide conditionnel, différences qui comptent, tableau, critères comparés, coût total, pour qui choisir A, pour qui choisir B, verdict final, sources.
+Documenter les contraintes éliminatoires : fonction indispensable absente, incompatibilité, génération obsolète, prix hors contrainte, disponibilité insuffisante, abonnement obligatoire incompatible, etc.
 
-# 16. Rédaction produit
+Un produit qui échoue un hard gate ne gagne pas grâce à une moyenne élevée.
 
-Chaque bloc produit doit apporter de la décision, pas recopier une fiche constructeur. Structure possible : verdict, pourquoi il se distingue, avantage déterminant, limite déterminante, pour qui, pour qui non, alternative, CTA.
+## 3.7 Total Solution Cost
 
-Éviter les fiches symétriques artificielles si les produits nécessitent des explications différentes.
+Lorsque le coût change la décision :
 
-# 17. Affiliate Value
+`TSC = appareil + accessoire nécessaire + abonnement utile + autres coûts indispensables`
 
-Utiliser `affiliate-value`. La page doit rester utile si tous les liens affiliés disparaissent. Vérifier : commission non prise en compte dans le ranking, défauts visibles, alternatives honnêtes, aucune fausse urgence/disponibilité, prix datés, disclosure claire.
+Ne pas comparer un appareil nu à un bundle complet sans normalisation ou avertissement.
 
-# 18. Fact-check obligatoire
+## 3.8 Scoring
 
-Utiliser `fact-check` après la première rédaction. Vérifier dimensions, écran, autonomie annoncée, formats, compatibilités, cloud, stylet, accessoires, prix, abonnements, génération, disponibilité et comparaisons telles que plus rapide / plus léger / moins cher.
+Si un scoring est pertinent, utiliser une échelle stable et conserver pour chaque note : valeur, justification, niveau de preuve et incertitude éventuelle.
 
-Statuts : `CONFIRMED`, `PARTIAL`, `UNVERIFIED`, `CONTRADICTED`, `OUTDATED`.
+Aucun score important ne doit reposer sur `UNKNOWN`.
 
-# 19. Search Intent QA
+Le scoring est un outil d'aide à la décision, pas une façade de précision mathématique.
 
-Après rédaction : le ranking répond-il réellement à la requête ? Les poids reflètent-ils l'intention ? Le #1 est-il cohérent avec les hard gates ? Une autre page du site répond-elle mieux à l'intention ? Le contenu est-il devenu trop générique ?
+## 3.9 Ranking et justification
 
-# 20. Internal Linking
+Pour chaque produit classé : expliquer pourquoi il est là, pour qui, limite principale, critère qui change la décision, alternative logique et raison de sa position.
 
-Utiliser `internal-linking-audit`. Prévoir selon pertinence : guides explicatifs, usages, marques, fiches modèles, autres comparatifs, prix/budget, abonnements, technologie. Le comparatif est un hub décisionnel, pas une impasse commerciale.
+Pour le #1, expliquer aussi ce qu'il ne gagne pas.
 
-# 21. Finition éditoriale
+Un `HEAD_TO_HEAD` peut aboutir à un verdict conditionnel plutôt qu'à un « gagnant absolu » si l'intention le justifie.
 
-Exécuter ensuite `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`, `seo-drift`.
+---
 
-Le `seo-drift` compare aussi critères initiaux, poids, scores et ranking final. Toute modification du classement sans modification documentée des données ou de la méthode est un blocker.
+# 4. Construction libre mais justifiée du plan
 
-# 22. SEO
+Le plan est construit **après** intention, preuves et méthode comparative.
 
-Utiliser `seo-best-practices` et `seo-technical`. Vérifier title, H1, réponse initiale, sous-intentions, entités, maillage, canonical, robots, données structurées si pertinentes et crawlabilité.
+Pour chaque section proposée, pouvoir répondre :
 
-# 23. GEO
+1. quelle question ou décision cette section résout-elle ?
+2. quelles preuves ou données la soutiennent ?
+3. quel élément de la méthode ou du ranking explique sa présence ?
+4. pourquoi mérite-t-elle une section autonome ?
 
-Vérifier verdict autonome, relations explicites produit → usage, critères lisibles, méthodologie résumable, tableaux interprétés, sources identifiables, entités complètes et datation des prix/informations instables.
+Si ces réponses sont faibles, supprimer ou fusionner la section.
 
-Préférer « Le modèle A est le meilleur choix pour X parce que… » à « Le modèle A est le meilleur. »
+## Interdiction de template par type de comparatif
 
-# 24. Comparison Quality Gate
+Il est interdit d'imposer :
 
-Le contrôle automatique peut vérifier présence d'une méthodologie, fichier de scoring, somme des poids = 100, produits classés présents dans les données, score justifié, source pour les critères majeurs, hard gates documentés, maillage, sources, tableaux contextualisés, limites et noindex si brouillon.
+- un nombre fixe de H2/H3 ;
+- un ordre standard `verdict → tableau → produit 1 → produit 2 → méthode → FAQ` ;
+- une fiche produit symétrique obligatoire ;
+- un tableau obligatoire ;
+- une FAQ automatique ;
+- une conclusion automatique ;
+- un minimum de mots ou de liens.
 
-Il ne doit jamais déclarer automatiquement fact-check PASS, qualité du ranking PASS, Humanizer PASS, GEO PASS ou affiliation éthique PASS.
+Deux `BEST_OVERALL` ou deux `HEAD_TO_HEAD` peuvent avoir des architectures différentes lorsque les décisions et preuves diffèrent.
 
-# 25. Échecs automatiques
+---
 
-FAIL si : gagnant choisi avant critères, poids modifiés pour produire un gagnant, commission dans le scoring, score sans justification, produit obsolète classé sans justification, hard gate ignoré, configurations non équivalentes comparées, fake test, avantage comparatif non vérifié, défauts significatifs masqués, données importantes sans date, page marchande déguisée, maillage quasi absent ou source de vérité non mise à jour.
+# 5. Rédaction depuis les preuves et la méthode
 
-# 26. Statuts
+Le draft doit rester dans les limites de l'evidence brief et de la méthodologie persistée.
 
-`UNIVERSE_READY`, `EVIDENCE_READY`, `SCORING_READY`, `DRAFT_READY`, `QA_IN_PROGRESS`, `REVISION_REQUIRED`, `HUMAN_APPROVED`, `PUBLISHABLE`.
+Règles :
 
-Le ranking peut être `SCORING_READY` avant qu'une ligne éditoriale ne soit écrite.
+- chaque claim important doit être traçable ;
+- les scores doivent être expliqués par des faits ou jugements documentés ;
+- afficher les limites du gagnant aussi clairement que ses avantages ;
+- distinguer différence de spec et différence d'usage ;
+- distinguer prix affiché et coût total ;
+- ne pas simuler de test physique ;
+- ne pas transformer une inférence éditoriale en fait ;
+- ne pas adapter le verdict à la commission ;
+- ne pas écrire une section uniquement pour placer un mot-clé, un produit ou un CTA.
 
-# 27. Publication
+La prose finale ne parle pas de SEO, GEO, maillage, intention, page type ou stratégie éditoriale.
 
-Par défaut : conserver `noindex` si configuré ; ne pas merger, publier ou déployer. Autorisation explicite nécessaire.
+---
 
-# 28. Fichiers persistants
+# 6. Fact-check post-draft — `fact-check`
 
-Pour chaque comparatif, `.content/comparisons/<slug>.json` doit conserver intent, univers, exclusions, critères, poids, hard gates, evidence ledger, scores, classement, niveau de confiance et date de recherche.
+Après rédaction :
 
-Le texte final ne doit jamais être la seule source expliquant pourquoi le ranking existe.
+1. réextraire les claims vérifiables ;
+2. comparer avec l'evidence brief ;
+3. vérifier les comparatifs (« plus léger », « moins cher », « plus ouvert », etc.) ;
+4. qualifier ou supprimer `UNKNOWN` ;
+5. corriger `OUTDATED` et `CONTRADICTED` ;
+6. vérifier que les prix et disponibilités sont datés ;
+7. s'assurer qu'aucun test tiers n'est devenu une expérience propre.
+
+---
+
+# 7. Revalidation du ranking
+
+Après rédaction, recalculer ou revérifier la logique de classement à partir des données persistées.
+
+Blocker si :
+
+- la prose affirme un gagnant différent du ranking sans justification ;
+- le ranking a changé sans changement documenté de données, critères, poids ou hard gate ;
+- un produit exclu devient recommandé dans le texte ;
+- le verdict final contredit les limites ou scénarios présentés.
+
+Utiliser `seo-drift` lorsqu'un baseline avant/après est disponible pour contrôler aussi la dérive de critères, poids, scores et ranking.
+
+---
+
+# 8. Finition éditoriale — stack externe
+
+Utiliser dans cet ordre :
+
+1. `humanizer` ;
+2. `general-writing` ;
+3. `anti-ai-slop`.
+
+Pour les pages françaises, `natural-writing` n'est pas une étape obligatoire car le skill présent est spécifique au néerlandais.
+
+La finition peut modifier la structure et le rythme mais ne peut ajouter aucun fait ou modifier le ranking sans preuve.
+
+Contrôler particulièrement :
+
+- blocs produits artificiellement symétriques ;
+- mêmes avantages/limites sur toutes les fiches ;
+- rule of three systématique ;
+- verdicts génériques ;
+- transitions recyclées ;
+- conclusion qui répète le classement sans apporter de décision ;
+- structure interchangeable avec un autre comparatif.
+
+---
+
+# 9. Maillage — `internal-linking-audit`
+
+Ajouter uniquement les liens qui servent une prochaine question : marque, produit, usage, guide, service, prix, technologie, autre comparatif.
+
+Aucun quota.
+
+---
+
+# 10. SEO / GEO
+
+Utiliser `seo-technical` et `seo-best-practices` pour les règles applicables.
+
+Vérifier title, H1, intention, canonical, robots, entités, structured data honnête, tableaux contextualisés, relations explicites produit → usage et méthodologie résumable.
+
+Aucun nombre de mots, headings, tableaux ou liens n'est un KPI de qualité.
+
+---
+
+# 11. QA générique — `editorial-qa`
+
+La page doit passer intention, valeur originale, factualité, naturel, SEO et utilité sans affiliation.
+
+Un comparatif peut être factuellement correct et quand même échouer si son ranking n'aide pas réellement à décider.
+
+---
+
+# 12. Gate final — `comparison-analysis-workflow` / `PUBLISH_REVIEW`
+
+Une fois le draft stable, appeler :
+
+`.agents/skills/comparison-analysis-workflow/SKILL.md` en mode `PUBLISH_REVIEW`.
+
+Cette étape :
+
+- exécute `python3 validate_comparisons.py` ;
+- recontrôle intention, preuves, univers, équivalence, critères, hard gates, scoring et ranking ;
+- compare la structure aux comparatifs voisins ;
+- cherche l'industrialisation éditoriale et méthodologique.
+
+Résultat attendu avant validation humaine :
+
+`PASS — READY_FOR_HUMAN_VALIDATION`
+
+Sinon :
+
+`FAIL — KEEP_NOINDEX`
+
+---
+
+# 13. Persistance
+
+`.content/comparisons/<slug>.json` doit rester la source de vérité méthodologique et conserver, selon pertinence :
+
+- intent/JTBD ;
+- product universe et exclusions ;
+- équivalence ;
+- evidence ledger ;
+- critères et poids ;
+- hard gates ;
+- Total Solution Cost ;
+- scores et justifications ;
+- ranking ;
+- niveau de confiance ;
+- date de recherche ;
+- statut.
+
+Le texte final ne doit jamais être le seul endroit où le ranking est expliqué.
+
+---
+
+# 14. Indexation
+
+Par défaut, conserver `noindex,follow`.
+
+Le workflow n'est jamais autorisé à retirer `noindex` automatiquement.
+
+Conditions cumulatives :
+
+1. `validate_comparisons.py` sans blocker ;
+2. `comparison-analysis-workflow / PUBLISH_REVIEW` = `PASS — READY_FOR_HUMAN_VALIDATION` ;
+3. validation humaine explicite ;
+4. instruction explicite de rendre la page indexable.
+
+---
+
+# 15. Résumé de l'orchestration
+
+```text
+PAGE EXISTANTE
+  comparison-analysis-workflow / AUDIT
+        ↓
+search-intent + jobs-to-be-done si pertinent
+        ↓
+content-audit + content-refresh
+        ↓
+fact-check → evidence brief
+        ↓
+evidence-based-reviews pour jugements d'usage
+        ↓
+affiliate-value
+        ↓
+product universe → equivalence → critères → hard gates
+        ↓
+pondération → TSC → scoring → ranking
+        ↓
+PLAN SPÉCIFIQUE À LA DÉCISION
+        ↓
+rédaction depuis preuves et méthode
+        ↓
+fact-check + revalidation ranking
+        ↓
+humanizer → general-writing → anti-ai-slop
+        ↓
+internal-linking-audit → SEO/GEO → editorial-qa
+        ↓
+comparison-analysis-workflow / PUBLISH_REVIEW
+        ↓
+validation humaine
+```
+
+Le workflow orchestre ; il ne remplace pas ses skills spécialisés.
