@@ -934,3 +934,185 @@ p  { font-size: 1rem; color: var(--color-text); }
   .hero { padding-top: 48px; }
   .hero-actions .btn { width: 100%; justify-content: center; white-space: normal; text-align: center; }
 }
+
+/* ============================================================
+   BRAND PAGES — editorial refinements, CSS-only
+   Scoped through the canonical URL so the rest of the site is unchanged.
+   ============================================================ */
+html:has(link[rel="canonical"][href*="/marques/"]) .page-hero {
+  padding: 48px 0 40px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .page-hero h1 {
+  max-width: 900px;
+  letter-spacing: -0.015em;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .page-hero .lead {
+  max-width: 780px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .page-hero .content-type {
+  margin-bottom: 12px;
+  padding: 0 0 0 9px;
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .page-hero .content-type.type-test {
+  border-left-color: var(--color-accent);
+}
+
+/* The current renderer does not output a sidebar on brand pages. Do not
+   reserve an empty 280px column; keep a comfortable editorial measure.
+   If a real sidebar is added later, the two-column layout is restored. */
+html:has(link[rel="canonical"][href*="/marques/"]) .section:has(.content-layout) {
+  padding: 0;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-layout {
+  grid-template-columns: minmax(0, 820px);
+  justify-content: center;
+  gap: 0;
+  padding: 40px 0 64px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-layout:has(.content-sidebar) {
+  grid-template-columns: minmax(0, 1fr) 280px;
+  justify-content: stretch;
+  gap: 48px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2 {
+  margin: 36px 0 14px;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h3 {
+  margin: 26px 0 10px;
+}
+
+/* Internal editorial links must look like links, not body copy. */
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main a:not(.btn) {
+  color: var(--color-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main a:not(.btn):hover {
+  color: #3f5145;
+  text-decoration-color: currentColor;
+}
+
+/* Lead answer: editorial emphasis instead of another generic card. */
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main .article-answer {
+  margin: 0 0 30px;
+  padding: 17px 20px 17px 22px;
+  background: #FDFCF7;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.72;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main:has(h2#verdict) .article-answer,
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main:has(h2#methode) .article-answer {
+  border-left-color: var(--color-accent);
+}
+
+/* Give factual tables breathing room without turning them into cards. */
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main .table-wrapper {
+  margin: 22px 0 28px;
+  border-radius: var(--radius-sm);
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main .comp-table th {
+  letter-spacing: 0.035em;
+}
+
+/* Sources: treat all material after #sources as one calm editorial panel.
+   Sources are the terminal section on brand pages, so the sibling range is
+   intentionally used here to support paragraphs, H3 groups and multiple lists. */
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources {
+  margin-top: 44px;
+  margin-bottom: 0;
+  padding: 20px 22px 8px;
+  border: 1px solid var(--color-border);
+  border-bottom: 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: var(--color-white);
+  font-size: 1.3rem;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ p,
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ h3,
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ .source-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  background: var(--color-white);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ p {
+  padding: 0 22px 12px;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ h3 {
+  padding: 10px 22px 8px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ .source-list {
+  padding: 0 22px 14px 46px;
+  border-top: 0;
+  border-bottom: 0;
+  border-radius: 0;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ .source-list:last-child {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  margin-bottom: 8px;
+}
+
+/* Product and service pages can surface existing summary components without
+   adding decorative chrome. */
+html:has(link[rel="canonical"][href*="/marques/"]) .product-summary {
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+}
+html:has(link[rel="canonical"][href*="/marques/"]) .product-summary-header {
+  background: transparent;
+  border-bottom: 1px solid var(--color-border);
+}
+
+@media (max-width: 768px) {
+  html:has(link[rel="canonical"][href*="/marques/"]) .page-hero {
+    padding: 38px 0 30px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-layout {
+    padding: 28px 0 48px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2 {
+    margin-top: 32px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main .article-answer {
+    margin-bottom: 24px;
+    padding: 14px 15px 14px 17px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources {
+    padding: 18px 18px 8px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ p {
+    padding: 0 18px 10px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ h3 {
+    padding: 10px 18px 7px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .content-main h2#sources ~ .source-list {
+    padding: 0 18px 12px 38px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .summary-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+  html:has(link[rel="canonical"][href*="/marques/"]) .summary-label {
+    min-width: 0;
+  }
+}
