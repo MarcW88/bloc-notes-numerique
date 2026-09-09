@@ -7,6 +7,8 @@ on:
       - "comparison_products.py"
       - "comparison_pages.py"
       - "comparison_bespoke_output.py"
+      - "comparison_bespoke_priority_20260909.py"
+      - "comparison_bespoke_remaining_20260909.py"
       - "comparison_content.py"
       - "apply_comparison_content.py"
       - "generate_comparison_metadata.py"
