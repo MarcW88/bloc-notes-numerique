@@ -1,154 +1,30 @@
 {
   "slug": "kobo-elipsa-vs-remarkable",
   "url": "/comparatifs/kobo-elipsa-vs-remarkable/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "Kobo Elipsa vs reMarkable",
     "type": "head_to_head",
-    "user_job": "choisir entre lecture Kobo et environnement de notes reMarkable"
+    "user_job": "choisir entre une grande liseuse Kobo avec stylet et un carnet numérique spécialisé"
   },
   "criteria": [
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 20
-    },
-    {
-      "id": "reading",
-      "label": "reading",
-      "weight": 20
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 15
-    },
-    {
-      "id": "organization",
-      "label": "organization",
-      "weight": 15
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 10
-    },
-    {
-      "id": "simplicity",
-      "label": "simplicity",
-      "weight": 10
-    },
-    {
-      "id": "cost",
-      "label": "cost",
-      "weight": 10
-    }
+    {"id": "reading", "label": "Lecture et bibliothèque"},
+    {"id": "notebook_depth", "label": "Profondeur des fonctions de carnet"},
+    {"id": "frontlight", "label": "Éclairage frontal"},
+    {"id": "cloud", "label": "Cloud et intégrations"},
+    {"id": "price_bundle", "label": "Prix et bundle stylet"}
   ],
-  "product_universe": [
-    {
-      "id": "kobo_elipsa",
-      "name": "Kobo Elipsa 2E",
-      "status": "ELIGIBLE",
-      "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-      "price_snapshot": "399,99 €"
-    },
-    {
-      "id": "remarkable_pure",
-      "name": "reMarkable Paper Pure",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/shop/compare",
-      "price_snapshot": "à partir de 399 €"
-    }
-  ],
-  "scores": {
-    "kobo_elipsa": {
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
-      },
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
-      },
-      "pdf": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
-      },
-      "simplicity": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for simplicity."
-      },
-      "cost": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
-      }
-    },
-    "remarkable_pure": {
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
-      },
-      "reading": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for reading."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
-      },
-      "simplicity": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
-      },
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
-      }
-    }
+  "recommendation_logic": {
+    "kobo_elipsa": "à privilégier si l'achat est d'abord celui d'une liseuse Kobo grand format",
+    "remarkable_pure": "à privilégier si l'achat est d'abord celui d'un carnet de travail",
+    "universal_winner": false
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "remarkable_pure",
-      "score": 8.1
-    },
-    {
-      "rank": 2,
-      "product_id": "kobo_elipsa",
-      "score": 7.65
-    }
+  "source_urls": [
+    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/shop/connect/pricing"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Reader-first vs notebook-first. Le bundle Kobo et les fonctions Connect reMarkable sont qualifiés plutôt que normalisés dans un score."
 }
