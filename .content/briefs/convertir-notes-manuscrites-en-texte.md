@@ -1,57 +1,47 @@
 ---
 url: /guides/convertir-notes-manuscrites-en-texte/
 slug: convertir-notes-manuscrites-en-texte
-status: DRAFT_READY
+status: QA_IN_PROGRESS
 guide_type: how-to
 primary_keyword: convertir notes manuscrites en texte
-search_intent: transformer un carnet manuscrit en texte éditable
+search_intent: transformer un carnet manuscrit en texte éditable une fois la fonction de reconnaissance choisie
 audience: utilisateur qui rédige rapports, cours ou comptes rendus
-last_researched: 2026-09-08
-refresh_level: new
+last_researched: 2026-09-09
+refresh_level: light_update
 ---
 
 ## Décision éditoriale
 
-- Question centrale : transformer un carnet manuscrit en texte éditable.
-- Valeur propre : procédure de conversion + conservation de l'original pour vérification.
-- Traitement : Contenu neuf : aucune expérience produit simulée.
-- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
+- Décision issue du cluster audit : `LIGHT_UPDATE`.
+- Question centrale : convertir une note déjà identifiée comme candidate à la conversion en un fichier texte réellement réutilisable.
+- Valeur à préserver : procédure, phase de correction, conservation de l'original, choix du format final.
+- Correction ciblée : rendre la frontière avec `/guides/ocr-manuscrit/` explicite et qualifier précisément les fonctions Kindle Scribe 2025+.
+- Hors périmètre : expliquer toutes les familles d'OCR, classement produit ou promesse de précision universelle.
 
-## Demande, intention et SERP
+## Angle et structure conservée
 
-La page doit satisfaire une intention dominante de type `how-to`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
+La page reste procédurale. Elle commence désormais après le choix de la fonction de reconnaissance :
 
-## Entités à expliciter
+1. choisir la destination du texte ;
+2. prendre une page représentative ;
+3. convertir et corriger les erreurs critiques ;
+4. comprendre les différences de sortie selon les écosystèmes ;
+5. valider le format final sur ordinateur ;
+6. décider si la conversion mérite de devenir un critère d'achat.
 
-OCR, TXT, DOCX, PDF recherchable, handwriting recognition.
+## Registre de preuves vérifié le 9 septembre 2026
 
-## Registre de preuves
-
-- reMarkable conversion: https://support.remarkable.com/articles/Knowledge/Convert-handwritten-notes-into-text
-- Supernote recognition: https://support.supernote.com/handwriting-recognition
-- BOOX notes: https://help.boox.com/hc/en-us/articles/10701578837268-Handwritten-Notes
-- Kobo notebooks: https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook
-- Amazon recognition: https://digprjsurvey.amazon.com/csad/help/node/TWTo0OyovlJ9jwOV0B
-
-Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
-
-## Architecture validée
-
-- Réponse autonome dans les premières phrases.
-- H2 : étapes;  écosystèmes;  limites;  correction;  choix.
-- Tableau ou procédure uniquement lorsqu'il améliore la décision.
-- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
-- Section Sources visible.
-
-## Content refresh / différenciation
-
-- Niveau : `new`.
-- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
-- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
-- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+- reMarkable conversion : https://support.remarkable.com/articles/Knowledge/Convert-handwritten-notes-into-text
+- Supernote reconnaissance : https://support.supernote.com/en_US/Tools-Features/handwriting-recognition
+- BOOX notes : https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes
+- Kobo carnets : https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook
+- Amazon partage et conversion : https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs
+- Amazon Drive/OneDrive 2025+ : https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL
 
 ## Risques
 
-dessins, équations et mise en page libre ne se convertissent pas comme du texte linéaire.
+- Dessins, équations et mise en page libre ne se convertissent pas comme du texte linéaire.
+- Ne pas confondre texte éditable, recherche manuscrite et PDF recherchable.
+- Les fonctions Kindle liées aux connexions Drive/OneDrive et à certaines recherches sont à qualifier `2025+`.
 
-`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
+`noindex,follow` doit rester actif jusqu'à validation humaine explicite.
