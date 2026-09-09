@@ -1,87 +1,76 @@
-# Rapport de contrôle — standard guide Prix
+# Guide PUBLISH_REVIEW — OneDrive
 
 ```yaml
 url: /guides/bloc-notes-numerique-onedrive/
-reviewed_at: 2026-09-08
-structural_quality_gate: PASS
-content_status: DRAFT_READY
-indexing_status: noindex
-quality_reference: /guides/prix-bloc-notes-numerique/
-page_role_in_standard: must meet price-guide quality floor
+reviewed_at: 2026-09-09
+workflow: guide-analysis-workflow / PUBLISH_REVIEW
+prior_decision: DEEP_REWRITE
+content_status: QA_IN_PROGRESS
+indexing_status: noindex,follow
+verdict: PASS — READY_FOR_HUMAN_VALIDATION
 ```
 
-## 1. Profondeur sémantique mesurable
+## Machine validation
 
-- Contenu utile hors navigation et hors section Sources : **881 mots**.
-- H2 substantiels : **7**.
-- Tableaux : **1**.
-- Les sections trop courtes, mono-paragraphe non développé ou tableaux sans contexte sont bloquants dans `validate_guide_quality.py`.
+- `validate_guide_quality.py` : PASS sur les 24 guides.
+- Liens internes contextuels : PASS.
+- Robots : PASS, `noindex,follow` conservé.
+- Canonical : cohérente avec l'URL cible.
+- Source persistante : `guide_content_bespoke.py`.
 
-### Détail par section
+## Intention et rôle
 
-- `Définissez ce que « travailler avec OneDrive » veut dire` — 119 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Quatre types d’intégration OneDrive à reconnaître` — 139 mots ; 2 paragraphe(s) ; 1 tableau(x) ; 0 liste(s).
-- `reMarkable : OneDrive comme source et destination de documents` — 100 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Kindle Scribe 2025+ : OneDrive est une connexion d’import et de partage` — 113 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `BOOX et Supernote proposent des approches plus proches du système de fichiers` — 105 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Le vrai test : votre compte Microsoft 365 professionnel` — 111 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Quand OneDrive doit-il éliminer un modèle ?` — 73 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+PASS.
 
-## 2. Maillage interne
+La page répond désormais à une question propre à OneDrive : **l'intégration fonctionne-t-elle avec le vrai environnement Microsoft 365 et le niveau d'autorisation de l'organisation ?**
 
-- Liens internes contextuels : **8**.
-- Cibles uniques : **8**.
+Elle distingue explicitement stockage OneDrive, applications Microsoft et politiques d'entreprise. Elle ne devient ni une page Marque, ni un comparatif de produits.
 
-- `/guides/bloc-notes-numerique-avec-ou-sans-abonnement/`
-- `/guides/bloc-notes-numerique-dropbox/`
-- `/guides/bloc-notes-numerique-google-drive/`
-- `/guides/choisir-bloc-notes-numerique/`
-- `/guides/ecosysteme-ouvert-ou-ferme/`
-- `/guides/exporter-notes/`
-- `/guides/liseuse-ou-bloc-notes-numerique/`
-- `/guides/synchroniser-notes-cloud/`
+## Fact-check et fraîcheur
 
-Le gate exige au minimum 4 liens contextuels et 3 cibles distinctes, sauf modification explicite du standard.
+PASS.
 
-## 3. Sources et factualité
+Vérifications effectuées le 9 septembre 2026 sur les sources officielles :
 
-- Sources externes officielles identifiables : **5**.
-- Les fonctions variables sont rédigées avec leurs marques, générations ou conditions lorsque celles-ci sont nécessaires à la précision.
-- Aucune expérience directe, mesure propriétaire ou résultat de test n'est déduit automatiquement par ce script.
-- Le fact-check éditorial reste une passe distincte : la présence d'une source n'est pas, à elle seule, une preuve que toute affirmation est correcte.
+- reMarkable : OneDrive comme intégration d'import/export distincte du cloud reMarkable ;
+- Kindle Scribe 2025+ : connexion OneDrive, import d'une copie, annotations non resynchronisées vers la source, partage de copies et formats de carnets ;
+- Amazon : accès aux drives professionnels dépendant des paramètres de sécurité de l'organisation ;
+- Supernote : OneDrive comme option de synchronisation avec sélection de dossiers ;
+- BOOX : OneDrive disponible dans le stockage cloud tiers intégré, avec possibilités supplémentaires via Android selon appareil.
 
-## 4. Content refresh / conservation
+Aucune promesse d'intégration Microsoft 365 complète n'est déduite du seul support OneDrive.
 
-- Pour les anciens guides, les angles utiles ont été conservés lorsque cohérents avec le nouveau standard ; l'enrichissement porte sur contexte, exemples, limites, entités et prochaine étape.
-- Pour les pages initialement vides, le contenu est construit depuis le brief et non depuis un simple gabarit H2.
-- La page Prix reste la référence de densité et de valeur décisionnelle, sans imposer une longueur artificiellement identique à chaque tutoriel.
+## Valeur éditoriale et affiliation
 
-## 5. Natural writing / Humanizer / General writing
+PASS.
 
-Ces passes ont été appliquées pendant la réécriture éditoriale mais **ne sont pas déclarées PASS par déduction automatique**. Le script contrôle uniquement des signaux structurels observables. La validation humaine finale doit encore vérifier le rythme, les répétitions, les transitions et le ton dans le rendu.
+La page apporte une valeur indépendante de l'affiliation : elle explique pourquoi un compte personnel n'est pas une preuve suffisante, distingue OneDrive de Word/OneNote et propose un test d'acceptation avec le compte professionnel réel.
 
-## 6. Anti-AI-slop
+## Maillage et frontière de cluster
 
-Le gate structurel bloque le principal défaut du précédent lot : H2 très courts, tableaux sans explication et maillage quasi absent. Il ne prétend pas détecter l'origine d'un texte. Toute formulation générique ou mécanique relevée lors de la lecture finale doit être corrigée avant publication.
+PASS.
 
-## 7. SEO / GEO
+- `/guides/synchroniser-notes-cloud/` garde la théorie du sync et des conflits.
+- `/guides/bloc-notes-numerique-google-drive/` est centré sur le fichier maître et les workflows Google/Kobo/Kindle.
+- `/guides/bloc-notes-numerique-dropbox/` traite la logique d'arborescence neutre.
+- `/guides/ecosysteme-ouvert-ou-ferme/` récupère la question des applications tierces.
+- `/guides/transfert-notes-vers-ordinateur/` couvre les alternatives locales lorsque l'IT bloque le cloud.
 
-- Une réponse initiale autonome est exigée par le quality gate.
-- Les H2 doivent couvrir des sous-questions distinctes et suffisamment développées.
-- Les tableaux doivent être introduits et interprétés.
-- Les entités et sources sont explicites dans le corps lorsqu'elles soutiennent une décision ou un mécanisme.
-- Le maillage dirige vers des guides, usages, comparatifs ou pages marques selon l'étape suivante du lecteur.
+Pas de merge recommandé.
 
-## 8. Technique
+## Anti-AI-slop / similarité structurelle
 
-- `noindex,follow` : **PASS**.
-- HTML généré depuis `_generate.py` et les modules de contenu, pas modifié uniquement à la main dans les pages générées.
-- Les liens internes sont validés séparément dans le workflow CI.
+PASS.
 
-## 9. Blockers observés
+La structure est désormais propre à OneDrive : **autorisation entreprise → OneDrive vs apps Microsoft → comportements par écosystème → test d'acceptation Microsoft → décision**. Elle ne réplique plus la page Google Drive ou Dropbox en remplaçant le nom du service.
 
-- Aucun blocker du quality gate.
+## Risques résiduels
+
+- Les politiques IT peuvent varier d'une organisation à l'autre : la page les présente comme condition à tester, jamais comme comportement universel.
+- Les intégrations cloud peuvent évoluer ; une future mise à jour devra reverifier les documentations fabricants.
 
 ## Verdict
 
-**PASS structurel — DRAFT_READY.** Ce verdict signifie que la page atteint le plancher de profondeur défini à partir du guide Prix. Il ne remplace pas la validation humaine finale et n'autorise ni retrait du `noindex`, ni publication, ni déploiement.
+**PASS — READY_FOR_HUMAN_VALIDATION**
+
+Ce PASS ne retire pas `noindex,follow` et n'autorise pas l'indexation sans validation humaine explicite.
