@@ -55,9 +55,15 @@ for url, page_data in PAGES.items():
         '<span class="page-meta-item">Contenu en préparation</span>',
         f'<span class="page-meta-item">Sources vérifiées le {VERIFIED_AT}</span>'
     )
+    html = html.replace(
+        '<span class="update-tag">Analyse en préparation</span>',
+        f'<span class="update-tag">Sources vérifiées le {VERIFIED_AT}</span>'
+    )
 
     if '<!-- Contenu à rédiger -->' in html:
         raise SystemExit(f'Placeholder still present: {url}')
+    if 'Contenu en préparation' in html or 'Analyse en préparation' in html:
+        raise SystemExit(f'Preparation label still present: {url}')
     if 'name="robots" content="noindex,follow"' not in html:
         raise SystemExit(f'noindex removed: {url}')
     if '<article class="content-main">' not in html:
