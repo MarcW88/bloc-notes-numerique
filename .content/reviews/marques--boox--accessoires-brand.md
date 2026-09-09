@@ -3,10 +3,10 @@
 - Page type: `ACCESSORY_HUB`
 - Brand: `boox`
 - Sources verified: 8 septembre 2026
-- H2 count: 6
-- Internal links: 1
-- Unique targets: 1
-- Official sources: 8
+- H2 count: 7
+- Internal links: 3
+- Unique targets: 3
+- Official sources: 10
 - Robots: `noindex,follow`
 
 ## Editorial gates

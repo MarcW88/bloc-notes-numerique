@@ -5,34 +5,37 @@
   "brand": "boox",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Pourquoi BOOX se distingue",
-    "La contrepartie : plus de réglages et plus de variations",
-    "Une gamme qu’il faut lire modèle par modèle",
-    "Les limites à garder en tête",
-    "À qui BOOX convient-il le mieux ?",
-    "Verdict",
+    "Sur les appareils : beaucoup de liberté, davantage de complexité",
+    "Combien de temps BOOX promet-il des mises à jour ?",
+    "Garantie et réparation : le canal d’achat change la situation",
+    "La politique de retour mérite d’être lue avant de commander",
+    "Compte ONYX, cloud et confidentialité",
+    "Les points forts de BOOX comme marque",
+    "Les limites à accepter",
+    "Verdict : à qui fait-on confiance à BOOX ?",
     "Sur quoi repose cet avis ?",
     "Sources consultées"
   ],
   "internal_links": [
-    "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/boox-vs-supernote/"
-  ],
-  "unique_internal_targets": [
-    "/comparatifs/boox-vs-supernote/",
+    "/marques/boox/",
     "/comparatifs/remarkable-vs-boox/"
   ],
+  "unique_internal_targets": [
+    "/comparatifs/remarkable-vs-boox/",
+    "/marques/boox/"
+  ],
   "official_sources": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://shop.boox.com/products/tabultracpro",
+    "https://help.boox.com/hc/en-us/articles/10701135807124-Firmware-Updates",
+    "https://shop.boox.com/pages/warranty",
+    "https://shop.boox.com/pages/return",
+    "https://help.boox.com/hc/en-us/articles/10701174893972-ONYX-Account-Sign-up-and-Deletion",
     "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/360046663532-BOOX-Privacy-Do-We-Collect-Your-Personal-Information",
+    "https://shop.boox.com/products/noteair5c",
     "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
-    "https://www.digitaltrends.com/tablets/i-tested-an-ai-powered-kindle-scribe-rival-and-it-shows-how-far-behind-amazon-is/"
+    "https://www.digitaltrends.com/tablets/i-tested-an-ai-powered-kindle-scribe-rival-and-it-shows-how-far-behind-amazon-is/",
+    "https://www.trustpilot.com/review/shop.boox.com",
+    "https://www.trustpilot.com/review/boox.com"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

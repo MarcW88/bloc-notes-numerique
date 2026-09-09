@@ -4,9 +4,9 @@
 - Brand: `remarkable`
 - Sources verified: 8 septembre 2026
 - H2 count: 6
-- Internal links: 1
-- Unique targets: 1
-- Official sources: 7
+- Internal links: 2
+- Unique targets: 2
+- Official sources: 10
 - Robots: `noindex,follow`
 
 ## Editorial gates

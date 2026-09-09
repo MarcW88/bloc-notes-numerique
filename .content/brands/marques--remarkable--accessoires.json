@@ -5,27 +5,32 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Compatibilité avant tout",
-    "Marker ou Marker Plus ?",
-    "Folio et protection",
-    "Type Folio : seulement si vous tapez réellement",
-    "Construire un panier réaliste",
+    "Compatibilité des principaux accessoires reMarkable",
+    "Marker ou Marker Plus : que paie-t-on en plus ?",
+    "Sleeve Folio, Book Folio ou Type Folio ?",
+    "Quel panier a réellement du sens ?",
+    "Attention aux accessoires en occasion",
     "Sources consultées"
   ],
   "internal_links": [
-    "/guides/prix-bloc-notes-numerique/"
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/remarkable-paper-pro/"
   ],
   "unique_internal_targets": [
-    "/guides/prix-bloc-notes-numerique/"
+    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/remarkable-paper-pro/"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips"
+    "https://blog.remarkable.com/products/remarkable-paper/markers",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
+    "https://remarkable.com/products/remarkable-paper/pure",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/sleeve-folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro-move/folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro/folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro/type-folio?region_id=000250",
+    "https://remarkable.com/products/remarkable-2/folios",
+    "https://remarkable.com/products/remarkable-2/type-folio",
+    "https://remarkable.com/products/remarkable-2"
   ],
   "noindex_follow": true,
   "analysis_documentary": false
