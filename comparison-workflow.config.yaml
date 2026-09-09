@@ -23,13 +23,16 @@ quality:
   require_cluster_structure_review: true
 
 comparison:
-  score_scale_max: 10
-  require_weights_sum_100: true
-  enable_confidence_adjustment: true
-  require_hard_gates: true
-  require_total_solution_cost_when_relevant: true
-  criteria_before_winner: true
-  evidence_before_score: true
+  require_explicit_decision_logic: true
+  require_criteria_before_recommendation: true
+  require_reasonable_candidate_scope: true
+  require_major_exclusion_reason_when_decision_relevant: true
+  scoring_optional: true
+  weighting_optional: true
+  hard_gates_optional: true
+  total_solution_cost_only_when_decision_relevant: true
+  exhaustive_product_universe_required: false
+  equivalence_engine_required: false
   affiliate_commission_must_not_affect_ranking: true
   comparison_type_defines_structure: false
   allowed_types:
@@ -40,19 +43,12 @@ comparison:
     - HEAD_TO_HEAD
 
 evidence:
-  prefer_primary_sources: true
-  statuses:
-    - VERIFIED
-    - SUPPORTED
-    - INFERRED
-    - USER_PATTERN
-    - FIRST_HAND
-    - UNKNOWN
-    - OUTDATED
-    - CONTRADICTED
+  prefer_primary_sources_for_hard_facts: true
   review_skill: ".agents/skills/evidence-based-reviews/SKILL.md"
   prohibit_model_memory_gap_filling: true
   prohibit_fake_hands_on: true
+  editorial_judgment_is_not_a_measurement: true
+  independent_or_user_evidence_required_for_experience_claims: true
 
 workflow:
   comparisons_dir: ".content/comparisons"
@@ -68,27 +64,32 @@ workflow:
   allow_automatic_merge: false
   allow_automatic_indexation: false
 
+upstream_skill_chain:
+  - "seo-content-audit | rampstackco/claude-skills"
+  - "seo-keyword | rampstackco/claude-skills"
+  - "jobs-to-be-done | wondelai/skills"
+  - "evidence-based-reviews | rampstackco/claude-skills"
+  - "content-brief-authoring | rampstackco/claude-skills"
+  - "content-and-copy | rampstackco/claude-skills"
+  - "seo-onpage | rampstackco/claude-skills"
+  - "general-writing | msimchowitz/writing-skills"
+  - "humanizer | external skill"
+  - "anti-ai-slop | external skill"
+
 editorial_chain:
   - comparison_analysis_audit_for_existing_page
-  - search_intent
+  - seo_keyword_intent_and_cluster
   - jobs_to_be_done_when_relevant
-  - content_audit_and_refresh_when_needed
-  - evidence_brief_and_fact_check
-  - evidence_based_reviews_when_needed
+  - seo_content_audit_preserve_existing_value
+  - evidence_based_reviews_and_fact_check
   - original_affiliate_value
-  - product_universe
-  - equivalence
-  - criteria_and_hard_gates
-  - weighting_and_total_solution_cost_when_relevant
-  - scoring_and_ranking
-  - bespoke_outline_from_decision_and_method
-  - evidence_bound_writing
+  - comparison_scope_criteria_and_recommendation_logic
+  - content_brief_authoring
+  - content_and_copy
   - post_draft_fact_check
-  - ranking_revalidation
   - humanizer_and_general_writing
   - anti_ai_slop
-  - internal_linking_audit
-  - seo_geo_editorial_and_technical
+  - seo_onpage_and_technical
   - editorial_qa
   - machine_validation
   - comparison_analysis_publish_review
@@ -104,5 +105,5 @@ quality_gate:
   prohibit_high_severity_ai_slop: true
   prohibit_unresolved_cannibalization: true
   prohibit_unjustified_structural_cloning: true
-  prohibit_unjustified_ranking_drift: true
   prohibit_affiliate_influence_on_ranking: true
+  prohibit_mandatory_fake_precision: true
