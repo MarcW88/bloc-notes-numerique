@@ -47,24 +47,36 @@ Pour toute création ou réécriture sous `/usages/` :
 8. Conserver `noindex,follow` jusqu’à validation humaine explicite.
 9. Après rédaction, exécuter la chaîne de QA définie dans `usage-content-workflow`, y compris le contrôle anti-cannibalisation avec les comparatifs et guides proches.
 
-## Production éditoriale — Comparatifs et marques
+## Production éditoriale — Comparatifs
 
 - Pour les comparatifs, utiliser `.agents/skills/comparison-content-workflow/SKILL.md` et conserver la logique critères → preuves → scoring → classement.
-- Pour les pages marques, produits et écosystèmes, utiliser `.agents/skills/brand-content-workflow/SKILL.md`.
 - Ne jamais faire varier une recommandation, un score ou un classement en fonction d’une commission d’affiliation.
 
-## Production éditoriale — Pages marques : publish gate obligatoire
+## Production éditoriale — Pages marques
 
-Pour toute création, récupération, réécriture ou validation sous `/marques/` :
+Pour toute URL sous `/marques/`, il n’existe que deux workflows brand à choisir :
 
-1. Déterminer explicitement le type `DIRECTORY`, `BRAND_HUB`, `PRODUCT`, `REVIEW`, `SERVICE`, `ACCESSORY_HUB` ou `ALTERNATIVES` avant de rédiger.
-2. Ne jamais imposer un nombre minimum de mots, de H2/H3, de tableaux ou de liens internes comme proxy de qualité. La structure doit découler du besoin du lecteur.
-3. Éviter tout métadiscours destiné à l’éditeur du site dans le texte utilisateur : ne pas expliquer qu’une page « sert de hub », qu’une section sert le SEO/GEO, qu’un passage crée du maillage ou qu’une page doit accomplir un rôle éditorial.
-4. Toute recommandation doit distinguer faits vérifiés, interprétation éditoriale et expérience réelle. Sans preuve de test physique, une review reste une analyse documentaire ou éditoriale et ne doit jamais imiter un test hands-on.
-5. Après rédaction ou correction, exécuter : intention et rôle de page → valeur originale/affiliée → fact-check et niveau de preuve → Trust/E-E-A-T observable → qualité GEO et relations d’entités → pertinence éditoriale → français naturel/tone of voice → anti-AI-slop + Humanizer → SEO éditorial/technique → `python3 validate_brands.py` → `.agents/skills/brand-editorial-publish-gate/SKILL.md`.
-6. `validate_brands.py` contrôle uniquement les blockers détectables automatiquement. Un PASS du script ne signifie jamais que la page est publiable.
-7. Le rapport `brand-editorial-publish-gate` doit se terminer par `PASS` et `READY FOR HUMAN VALIDATION`. Un seul blocker suffit à maintenir la page en `noindex,follow`.
-8. Ne retirer `noindex` qu’après validation humaine explicite du contenu final.
+1. **Analyser / auditer** : `.agents/skills/brand-analysis-workflow/SKILL.md`.
+2. **Créer / réécrire** : `.agents/skills/brand-content-workflow/SKILL.md`.
+
+Les skills transversaux appelés par ces workflows (`content-audit`, `search-intent`, `affiliate-value`, `fact-check`, `evidence-based-reviews`, `humanizer`, `general-writing`, `anti-ai-slop`, etc.) sont des briques internes. Ne pas créer un nouveau workflow brand lorsqu’un de ces skills couvre déjà l’étape.
+
+### Règles obligatoires
+
+1. Une page existante doit passer par `brand-analysis-workflow` en mode `AUDIT` avant une réécriture substantielle.
+2. Déterminer le type `DIRECTORY`, `BRAND_HUB`, `PRODUCT`, `REVIEW`, `SERVICE`, `ACCESSORY_HUB` ou `ALTERNATIVES`, mais utiliser ce type uniquement comme grille de risque et de frontière éditoriale. **Le type de page ne doit jamais imposer un plan, un ordre de sections, un nombre de H2/H3, un tableau ou une FAQ.**
+3. Le plan final doit être construit après l’analyse d’intention et le research/evidence brief. Chaque section doit être justifiable par une question du lecteur et des preuves disponibles.
+4. Utiliser des sources fiables et actuelles. Pour les facts produits : fabricant/documentation en priorité ; sources indépendantes pour les jugements ; plusieurs sources utilisateurs seulement pour des patterns suffisamment documentés.
+5. Ne jamais remplir un trou de preuve avec la connaissance du modèle. Une information reste `UNKNOWN`, est qualifiée ou est supprimée.
+6. Toute recommandation doit distinguer faits vérifiés, interprétation éditoriale, synthèse d’autres sources et expérience réelle. Sans test physique documenté, aucune review ne peut imiter un test hands-on.
+7. La page doit conserver une vraie valeur si tous les liens affiliés sont supprimés. Ne pas recopier ou simplement reformuler le fabricant ou un retailer.
+8. Comparer la structure avec les pages sœurs : une architecture éditoriale répétée sans justification par l’intention ou les preuves est un signal de production industrialisée et peut imposer `DEEP_REWRITE`.
+9. Éviter tout métadiscours destiné à l’éditeur dans le texte utilisateur : SEO, GEO, hub, maillage, intention de recherche, architecture de page ou stratégie éditoriale.
+10. Après rédaction, exécuter la chaîne définie dans `brand-content-workflow`, puis `brand-analysis-workflow` en mode `PUBLISH_REVIEW`.
+11. `validate_brands.py` contrôle uniquement les blockers détectables automatiquement. Un PASS machine ne signifie jamais que la page est publiable.
+12. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION`. Un seul blocker maintient la page en `noindex,follow`.
+13. Ne retirer `noindex` qu’après validation humaine explicite **et** instruction explicite de rendre la page indexable.
+14. Aucun quota de mots, H2/H3, tableaux ou liens internes ne peut servir de proxy de qualité.
 
 ## Production éditoriale — Bons plans
 

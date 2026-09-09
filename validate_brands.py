@@ -207,7 +207,7 @@ for url, spec in PAGES.items():
     if len(SOURCE_RE.findall(body)) == 0:
         issues.append('no external source found in article')
 
-    # Internal linking is judged contextually by the publish gate; machine validator only flags total absence.
+    # Internal linking is judged contextually by the analysis workflow; machine validator only flags total absence.
     internal_links = [href for href in LINK_RE.findall(body) if href.startswith('/')]
     if not internal_links:
         notes.append('no internal link found; verify next-step navigation manually')
@@ -222,7 +222,7 @@ for url, spec in PAGES.items():
         warnings[url] = notes
 
 if warnings:
-    print('WARNINGS — manual publish-gate review required')
+    print('WARNINGS — manual brand-analysis PUBLISH_REVIEW required')
     for url, notes in warnings.items():
         print('WARN', url)
         for note in notes:
@@ -236,8 +236,8 @@ if failures:
         for issue in issues:
             print('  -', issue)
     print()
-    print('A machine PASS is only a structural floor. Run brand-editorial-publish-gate and obtain human validation before removing noindex.')
+    print('A machine PASS is only a structural floor. Run brand-analysis-workflow in PUBLISH_REVIEW mode and obtain human validation before removing noindex.')
     raise SystemExit(1)
 
 print(f'PASS: {len(PAGES)} brand pages have no machine-detectable publication blockers')
-print('NEXT: run .agents/skills/brand-editorial-publish-gate/SKILL.md on every page before human validation and indexation')
+print('NEXT: run .agents/skills/brand-analysis-workflow/SKILL.md in PUBLISH_REVIEW mode before human validation and indexation')

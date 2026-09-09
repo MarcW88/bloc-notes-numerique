@@ -15,6 +15,9 @@ on:
       - "validate_brands.py"
       - "brand-workflow.config.yaml"
       - ".agents/skills/brand-content-workflow/**"
+      - ".agents/skills/brand-analysis-workflow/**"
+      - ".agents/skills/content-audit/**"
+      - ".agents/skills/evidence-based-reviews/**"
       - ".github/workflows/regenerate-brands.yml"
       - "_generate.py"
   workflow_dispatch:
