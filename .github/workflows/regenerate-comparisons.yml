@@ -11,8 +11,11 @@ on:
       - "generate_comparison_metadata.py"
       - "validate_comparisons.py"
       - ".agents/skills/comparison-content-workflow/**"
+      - ".agents/skills/comparison-editorial-publish-gate/**"
+      - ".content/comparisons/README.md"
       - "comparison-workflow.config.yaml"
       - ".github/workflows/regenerate-comparisons.yml"
+      - ".github/workflows/validate-comparisons.yml"
       - "_generate.py"
 
 permissions:
