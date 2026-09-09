@@ -2,7 +2,7 @@
   "slug": "methode-de-test",
   "page_url": "/methode-de-test/",
   "page_type": "METHODOLOGY",
-  "status": "READY_FOR_DRAFT",
+  "status": "DRAFT_READY",
   "claims": [
     {
       "claim": "Le site interdit de présenter une synthèse documentaire comme un test produit.",
@@ -19,10 +19,17 @@
       "blocked_wording": "Notre laboratoire valide chaque produit."
     },
     {
+      "claim": "Les informations instables comme les prix ou disponibilités sont datées quand elles soutiennent une décision.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "deal-content-workflow, guide-content-workflow et comparison-content-workflow",
+      "allowed_wording": "Les données susceptibles d'évoluer sont datées lorsqu'elles sont utilisées dans une conclusion.",
+      "blocked_wording": "Toutes les pages sont contrôlées chaque jour."
+    },
+    {
       "claim": "Périmètre exact des produits réellement testés physiquement.",
       "evidence_level": "UNKNOWN",
       "source": "",
-      "allowed_wording": "Lorsque nous disposerons d'une observation directe documentée, elle sera signalée comme telle.",
+      "allowed_wording": "Nous ne revendiquons pas de test physique sans observation directe documentée.",
       "blocked_wording": "Nous avons testé les modèles cités."
     }
   ],
@@ -47,9 +54,9 @@
     "claims_mapped": true,
     "no_unverified_test_claims": true,
     "no_fictional_team": true,
-    "affiliate_model_explained": false,
+    "affiliate_model_explained": true,
     "unknowns_not_filled_by_guessing": true,
     "noindex_preserved": true,
-    "final_verdict": "PENDING"
+    "final_verdict": "PASS"
   }
 }
