@@ -5,43 +5,44 @@
   "brand": "boox",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "La gamme à regarder en 2026",
-    "Ce que l’écosystème change au quotidien",
-    "Les points qui font réellement la différence",
-    "Les limites à vérifier avant d’acheter",
-    "À qui cette marque convient-elle le mieux ?",
-    "Comparer les modèles et les alternatives",
-    "Sources consultées"
+    "BOOX n’est pas un modèle : six références ne répondent pas au même besoin",
+    "Android est un avantage seulement si vos applications en profitent",
+    "Pour les PDF, 10,3 ou 13,3 pouces change davantage l’usage que beaucoup de specs",
+    "Le vrai workflow BOOX se juge sur l’entrée et la sortie des documents",
+    "Quel BOOX regarder selon la situation ?",
+    "Avant d’acheter, vérifiez la génération exacte plutôt que la marque",
+    "Sources utilisées pour cette mise à jour"
   ],
   "internal_links": [
-    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/comparatifs/remarkable-vs-boox/",
+    "/usages/annotation-pdf/",
     "/marques/boox/boox-note-air/",
-    "/marques/boox/boox-tab-ultra/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
     "/marques/boox/avis/",
     "/marques/boox/accessoires/",
-    "/marques/boox/alternatives/",
-    "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/boox-vs-supernote/"
+    "/marques/boox/alternatives/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/boox-vs-supernote/",
     "/comparatifs/remarkable-vs-boox/",
     "/guides/ecosysteme-ouvert-ou-ferme/",
     "/marques/boox/accessoires/",
     "/marques/boox/alternatives/",
     "/marques/boox/avis/",
     "/marques/boox/boox-note-air/",
-    "/marques/boox/boox-tab-ultra/"
+    "/usages/annotation-pdf/"
   ],
   "official_sources": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/collections/all-products/handwriting-tools",
     "https://shop.boox.com/products/go103gen2",
     "https://shop.boox.com/products/noteair5c",
     "https://shop.boox.com/products/notemax",
     "https://shop.boox.com/products/tabxc",
     "https://shop.boox.com/products/tabultracpro",
-    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage"
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
+    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup",
+    "https://www.lesnumeriques.com/liseuse/boox-note-air5-c-p78686/test.html",
+    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

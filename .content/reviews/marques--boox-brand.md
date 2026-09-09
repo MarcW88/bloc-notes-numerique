@@ -4,9 +4,9 @@
 - Brand: `boox`
 - Sources verified: 8 septembre 2026
 - H2 count: 7
-- Internal links: 8
-- Unique targets: 8
-- Official sources: 8
+- Internal links: 7
+- Unique targets: 7
+- Official sources: 11
 - Robots: `noindex,follow`
 
 ## Editorial gates
