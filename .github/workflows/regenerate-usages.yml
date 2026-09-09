@@ -6,6 +6,7 @@ on:
     paths:
       - 'usage_bespoke_output.py'
       - 'apply_usage_content.py'
+      - 'usage_presentation_patch.py'
       - 'usage_content.py'
       - 'usage-workflow.config.yaml'
       - 'validate_usage_workflow.py'
@@ -32,6 +33,9 @@ jobs:
 
       - name: Apply reviewed Usage content
         run: python apply_usage_content.py
+
+      - name: Align Usage hub presentation
+        run: python usage_presentation_patch.py
 
       - name: Validate Usage workflow
         run: python validate_usage_workflow.py
