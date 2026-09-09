@@ -2,7 +2,7 @@
   "slug": "comment-nous-comparons",
   "page_url": "/comment-nous-comparons/",
   "page_type": "COMPARISON_POLICY",
-  "status": "READY_FOR_DRAFT",
+  "status": "DRAFT_READY",
   "claims": [
     {
       "claim": "Les comparatifs suivent la logique critères → preuves → scoring → classement.",
@@ -10,6 +10,27 @@
       "source": "AGENTS.md — Production éditoriale — Comparatifs et marques ; comparison-content-workflow",
       "allowed_wording": "Nous définissons les critères avant le classement, documentons les preuves, puis appliquons le scoring.",
       "blocked_wording": "Nous choisissons d'abord les meilleurs produits puis ajustons les critères."
+    },
+    {
+      "claim": "Les poids sont définis avant le calcul et leur somme vaut 100.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "comparison-content-workflow — Pondération",
+      "allowed_wording": "Les poids sont fixés avant le calcul et totalisent 100.",
+      "blocked_wording": "Les poids peuvent être ajustés librement après avoir vu le gagnant."
+    },
+    {
+      "claim": "Le scoring utilise une échelle stable, typiquement 0–10, avec justification et niveau de preuve.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "comparison-content-workflow — Normalisation et scoring",
+      "allowed_wording": "Chaque note doit conserver une justification et son niveau de preuve.",
+      "blocked_wording": "La note est une mesure scientifique universelle."
+    },
+    {
+      "claim": "Des hard gates peuvent éliminer un produit malgré un bon score moyen.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "comparison-content-workflow — Hard Gates",
+      "allowed_wording": "Une incompatibilité fondamentale peut empêcher un produit de gagner malgré une bonne moyenne.",
+      "blocked_wording": "La moyenne suffit toujours à déterminer le gagnant."
     },
     {
       "claim": "Les commissions d'affiliation ne doivent pas faire varier les scores ou classements.",
@@ -24,12 +45,14 @@
     "Sources et preuves",
     "Scoring et pondération",
     "Données manquantes",
+    "Hard gates",
+    "Coût total de la solution",
     "Mises à jour",
     "Rôle nul des commissions dans le ranking",
     "Limites des comparatifs"
   ],
   "unknowns": [
-    "Existe-t-il une fréquence fixe de révision des comparatifs ou uniquement des mises à jour déclenchées par changement ?"
+    "Il n'existe pas de fréquence fixe confirmée de révision identique pour tous les comparatifs."
   ],
   "editorial_rules": {
     "allow_physical_test_claims": false,
@@ -44,6 +67,6 @@
     "affiliate_model_explained": true,
     "unknowns_not_filled_by_guessing": true,
     "noindex_preserved": true,
-    "final_verdict": "PENDING"
+    "final_verdict": "PASS"
   }
 }
