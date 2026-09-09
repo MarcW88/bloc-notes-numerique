@@ -6,6 +6,7 @@ import sys
 
 from comparison_methodology import COMPARISON_METHODS
 from comparison_pages import COMPARISON_PAGES
+from comparison_editorial_strategy import COMPARISON_EDITORIAL_STRATEGIES
 
 ROOT = Path(__file__).resolve().parent
 DATA = ROOT / ".content" / "comparisons"
@@ -20,6 +21,10 @@ VALID_UNIVERSE_STATUS = {
 }
 VALID_EQUIVALENCE = {
     "EXACT", "FUNCTIONALLY_COMPARABLE", "PARTIALLY_COMPARABLE", "NOT_COMPARABLE"
+}
+REQUIRED_EDITORIAL_FIELDS = {
+    "editorial_thesis", "decision_tensions", "architecture_rationale",
+    "must_tell", "can_omit"
 }
 
 
@@ -162,6 +167,24 @@ for slug, method in COMPARISON_METHODS.items():
         if verdict.get("label") != "CONDITIONAL_WINNER" or not verdict.get("alternative"):
             fail(errors, f"{slug}: conditional winner must be reflected in editorial_verdict")
 
+    strategy = COMPARISON_EDITORIAL_STRATEGIES.get(slug)
+    if not strategy:
+        fail(errors, f"{slug}: enriched comparison lacks page-specific editorial strategy")
+    else:
+        missing = REQUIRED_EDITORIAL_FIELDS - set(strategy)
+        if missing:
+            fail(errors, f"{slug}: editorial strategy missing {sorted(missing)}")
+        if len((strategy.get("editorial_thesis") or "").strip()) < 80:
+            fail(errors, f"{slug}: editorial_thesis is too generic/short")
+        if len(strategy.get("decision_tensions") or []) < 2:
+            fail(errors, f"{slug}: decision_tensions must contain at least two real tensions")
+        if len((strategy.get("architecture_rationale") or "").strip()) < 120:
+            fail(errors, f"{slug}: architecture_rationale is too generic/short")
+        if not strategy.get("must_tell"):
+            fail(errors, f"{slug}: must_tell missing")
+        if not strategy.get("can_omit"):
+            fail(errors, f"{slug}: can_omit missing")
+
     json_path = DATA / f"{slug}.json"
     if json_path.exists():
         payload = json.loads(json_path.read_text(encoding="utf-8"))
@@ -169,7 +192,8 @@ for slug, method in COMPARISON_METHODS.items():
             for key in (
                 "evidence_ledger", "hard_gates", "total_solution_cost",
                 "sensitivity", "ranking_confidence", "rank_justification",
-                "excluded_products"
+                "excluded_products", "editorial_thesis", "decision_tensions",
+                "architecture_rationale", "must_tell", "can_omit"
             ):
                 if key not in payload:
                     fail(errors, f"{slug}: generated JSON does not persist {key}")
