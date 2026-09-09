@@ -99,7 +99,7 @@ for url, page_data in PAGES.items():
         re.S,
     )
 
-    article_section = f'''\n<section class="section">\n  <div class="container">\n    <div class="content-layout">\n      <article class="content-main">\n      {body}\n      </article>\n    </div>\n  </div>\n</section>\n'''
+    article_section = f'''\n<section class="section">\n  <div class="container">\n    <div class="content-layout">\n      <article class="content-main">\n      {body}\n      </article>\n      <aside class="content-sidebar" aria-label="Sommaire de la page">\n        <div class="sidebar-box">\n          <h4>Sur cette page</h4>\n          <nav class="sidebar-toc" aria-label="Sommaire"></nav>\n        </div>\n      </aside>\n    </div>\n  </div>\n</section>\n'''
 
     main_pattern = r'(<section class="page-hero">.*?</section>)(.*?)(</main>)'
     m = re.search(main_pattern, html, re.S)
@@ -124,6 +124,8 @@ for url, page_data in PAGES.items():
         raise SystemExit(f'noindex removed: {url}')
     if '<article class="content-main">' not in html:
         raise SystemExit(f'content-main absent after render: {url}')
+    if '<nav class="sidebar-toc" aria-label="Sommaire"></nav>' not in html:
+        raise SystemExit(f'brand TOC sidebar absent after render: {url}')
 
     page.write_text(html, encoding='utf-8')
     print('updated', url)
