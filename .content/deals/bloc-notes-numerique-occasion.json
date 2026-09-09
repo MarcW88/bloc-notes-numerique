@@ -1,0 +1,26 @@
+{
+  "slug": "bloc-notes-numerique-occasion",
+  "page_url": "/bons-plans/bloc-notes-numerique-occasion/",
+  "page_type": "SECOND_HAND",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {"active_offer_ttl_hours": 72, "page_review_ttl_hours": 336},
+  "intent": {"primary_query": "bloc-notes numérique occasion", "reader_goal": "Acheter moins cher sans confondre occasion, reconditionné certifié et ancien modèle risqué.", "closest_comparison": "/comparatifs/bloc-notes-numerique-pas-cher/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/choisir-bloc-notes-numerique/"]},
+  "reference_prices": [
+    {"product": "reMarkable Paper Pure neuf", "price": 399, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/shop/compare", "checked_at": "2026-09-09T08:29:00+02:00"},
+    {"product": "Kobo Elipsa 2E neuve", "price": 399.99, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e", "checked_at": "2026-09-09T08:29:00+02:00"}
+  ],
+  "offers": [
+    {"product": "Produits reconditionnés reMarkable", "merchant": "reMarkable", "price": null, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "PRICE_WATCH", "availability": "Canal reconditionné officiel confirmé ; prix variables", "source": "https://remarkable.com/fr-FR/products/remarkable-2", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "Canal de confiance à vérifier au moment de l'achat ; ne pas figer un prix générique."},
+    {"product": "Kobo certifié reconditionné", "merchant": "Rakuten Kobo", "price": null, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "PRICE_WATCH", "availability": "Rubrique reconditionnée officielle présente, stock variable", "source": "https://www.kobo.com/fr/fr/ereaders", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "Comparer au prix neuf du modèle exact et vérifier la garantie."},
+    {"product": "BOOX Used devices - Note Series", "merchant": "BOOX EURO Shop", "price": 359, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "ACTIVE_STOCK_SENSITIVE", "availability": "Configurations et entrepôts variables", "source": "https://euroshop.boox.com/products/copy-of-used-devices", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "La fiche affiche un prix à partir de 359 € mais la configuration exacte, l'état et le coût final doivent être contrôlés."}
+  ],
+  "watchlist": ["prix reconditionné vs neuf pour le même modèle", "garantie restante", "stylet et accessoires inclus", "état de l'écran et batterie", "compte constructeur dissocié"],
+  "evidence_ledger": [
+    {"claim": "reMarkable propose un canal reconditionné officiel", "source": "https://remarkable.com/fr-FR/products/remarkable-2", "evidence_class": "OFFICIAL_CURRENT"},
+    {"claim": "Kobo référence une catégorie certifiée reconditionnée", "source": "https://www.kobo.com/fr/fr/ereaders", "evidence_class": "OFFICIAL_CURRENT"},
+    {"claim": "BOOX propose des appareils Note Series d'occasion via son Euro Shop", "source": "https://euroshop.boox.com/products/copy-of-used-devices", "evidence_class": "OFFICIAL_CURRENT"}
+  ],
+  "editorial": {"opening_answer": "Pour l'occasion, le bon plan est moins un pourcentage qu'un rapport entre prix, état, garantie et accessoires. Les canaux reconditionnés officiels sont plus faciles à documenter que les annonces entre particuliers, mais doivent être comparés au prix neuf du modèle exact.", "avoid_claims": ["reconditionné toujours meilleur", "batterie comme neuve sans preuve"], "comparison_handoff": "/comparatifs/bloc-notes-numerique-pas-cher/"},
+  "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}
