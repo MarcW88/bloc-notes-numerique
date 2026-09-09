@@ -8,6 +8,8 @@ content:
     - "/comparatifs/"
   source_of_truth:
     - "comparison_bespoke_output.py"
+    - "comparison_bespoke_priority_20260909.py"
+    - "comparison_bespoke_remaining_20260909.py"
     - "comparison_content.py"
     - ".content/comparisons/*.json"
   generated_output: "comparatifs/*/index.html"
@@ -56,7 +58,10 @@ workflow:
   reviews_dir: ".content/reviews"
   content_workflow: ".agents/skills/comparison-content-workflow/SKILL.md"
   analysis_workflow: ".agents/skills/comparison-analysis-workflow/SKILL.md"
-  bespoke_content_source: "comparison_bespoke_output.py"
+  bespoke_content_sources:
+    - "comparison_bespoke_output.py"
+    - "comparison_bespoke_priority_20260909.py"
+    - "comparison_bespoke_remaining_20260909.py"
   legacy_renderer: "comparison_content.py"
   final_review_mode: "PUBLISH_REVIEW"
   apply_script: "apply_comparison_content.py"
