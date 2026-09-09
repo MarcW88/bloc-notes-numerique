@@ -1267,6 +1267,9 @@ GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_TECH)
 GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_CLOUD)
 GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_WORKFLOWS)
 
+from guide_content_bespoke import GUIDE_CONTENT_BESPOKE
+GUIDE_CONTENT.update(GUIDE_CONTENT_BESPOKE)
+
 for path, title, desc in GUIDES:
     crumbs = breadcrumb(("Guides", "/guides/"), title)
     write(path + "index.html", content_page(title, desc, path, crumbs, "Guide", GUIDE_CONTENT.get(path, "")))
