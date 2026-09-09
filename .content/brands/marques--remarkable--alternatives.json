@@ -5,39 +5,22 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Commencez par la raison de votre départ",
-    "Comparez le workflow, pas le nombre de fonctions",
-    "Comparez aussi le coût de la configuration",
-    "Quand rester dans l’écosystème actuel ?",
-    "Quand faut-il réellement envisager une alternative ?",
-    "Le coût caché d’un changement d’écosystème",
-    "Construire une shortlist utile",
-    "Comparatifs à consulter",
-    "Sources officielles consultées"
+    "Si vous voulez davantage d’applications : BOOX",
+    "Si vous voulez mieux structurer les notes : Supernote",
+    "Si la lecture passe avant l’écriture : Kindle ou Kobo",
+    "Si l’abonnement ou le coût vous gêne",
+    "Quel critère doit décider ?",
+    "Sources consultées"
   ],
   "internal_links": [
     "/comparatifs/remarkable-vs-boox/",
     "/comparatifs/remarkable-vs-supernote/",
-    "/comparatifs/kindle-scribe-vs-remarkable/",
-    "/comparatifs/kobo-elipsa-vs-remarkable/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/prix-bloc-notes-numerique/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
-    "/comparatifs/bloc-notes-numerique-professionnel/",
-    "/comparatifs/bloc-notes-numerique-etudiant/",
     "/comparatifs/bloc-notes-numerique-sans-abonnement/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/bloc-notes-numerique-etudiant/",
-    "/comparatifs/bloc-notes-numerique-professionnel/",
     "/comparatifs/bloc-notes-numerique-sans-abonnement/",
-    "/comparatifs/kindle-scribe-vs-remarkable/",
-    "/comparatifs/kobo-elipsa-vs-remarkable/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/remarkable-vs-supernote/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/prix-bloc-notes-numerique/"
+    "/comparatifs/remarkable-vs-supernote/"
   ],
   "official_sources": [
     "https://remarkable.com/fr-fr",
@@ -47,7 +30,9 @@
     "https://remarkable.com/products/remarkable-2",
     "https://remarkable.com/fr-FR/products/remarkable-2/markers",
     "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
-    "https://shop.boox.com/collections/all-products/reading-tools"
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

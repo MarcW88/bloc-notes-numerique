@@ -3,8 +3,8 @@
 - Page type: `DIRECTORY`
 - Brand: `directory`
 - Sources verified: 8 septembre 2026
-- H2 count: 9
-- Internal links: 12
+- H2 count: 4
+- Internal links: 7
 - Unique targets: 7
 - Official sources: 10
 - Robots: `noindex,follow`

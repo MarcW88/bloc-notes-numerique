@@ -3,10 +3,10 @@
 - Page type: `REVIEW`
 - Brand: `remarkable`
 - Sources verified: 8 septembre 2026
-- H2 count: 10
-- Internal links: 8
-- Unique targets: 8
-- Official sources: 5
+- H2 count: 7
+- Internal links: 1
+- Unique targets: 1
+- Official sources: 9
 - Robots: `noindex,follow`
 
 ## Editorial gates

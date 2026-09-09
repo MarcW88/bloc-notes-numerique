@@ -5,15 +5,10 @@
   "brand": "directory",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Cinq écosystèmes à distinguer",
-    "reMarkable : spécialisation et concentration",
-    "BOOX : Android et ouverture",
-    "Kindle Scribe et Kobo Elipsa : la lecture comme point de départ",
-    "Supernote : organiser des connaissances",
-    "Comment choisir une marque avant le modèle ?",
-    "Comparer les marques sur un workflow complet",
-    "Pourquoi ne pas choisir uniquement sur la marque ?",
-    "Sources officielles consultées"
+    "Cinq écosystèmes, cinq logiques différentes",
+    "Quelle marque regarder en premier ?",
+    "Les critères qui évitent un mauvais choix",
+    "Sources consultées"
   ],
   "internal_links": [
     "/marques/remarkable/",
@@ -21,13 +16,8 @@
     "/marques/kindle-scribe/",
     "/marques/kobo-elipsa/",
     "/marques/supernote/",
-    "/marques/remarkable/",
-    "/marques/boox/",
-    "/marques/kindle-scribe/",
-    "/marques/kobo-elipsa/",
-    "/marques/supernote/",
-    "/guides/choisir-bloc-notes-numerique/",
-    "/comparatifs/meilleur-bloc-notes-numerique/"
+    "/comparatifs/meilleur-bloc-notes-numerique/",
+    "/guides/choisir-bloc-notes-numerique/"
   ],
   "unique_internal_targets": [
     "/comparatifs/meilleur-bloc-notes-numerique/",

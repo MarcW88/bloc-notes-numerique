@@ -3,10 +3,10 @@
 - Page type: `SERVICE`
 - Brand: `remarkable`
 - Sources verified: 8 septembre 2026
-- H2 count: 8
-- Internal links: 6
-- Unique targets: 6
-- Official sources: 5
+- H2 count: 6
+- Internal links: 2
+- Unique targets: 2
+- Official sources: 6
 - Robots: `noindex,follow`
 
 ## Editorial gates

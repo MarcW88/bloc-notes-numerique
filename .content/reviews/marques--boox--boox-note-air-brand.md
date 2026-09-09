@@ -3,10 +3,10 @@
 - Page type: `PRODUCT`
 - Brand: `boox`
 - Sources verified: 8 septembre 2026
-- H2 count: 9
-- Internal links: 10
-- Unique targets: 10
-- Official sources: 5
+- H2 count: 6
+- Internal links: 1
+- Unique targets: 1
+- Official sources: 7
 - Robots: `noindex,follow`
 
 ## Editorial gates

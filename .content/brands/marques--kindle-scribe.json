@@ -5,47 +5,29 @@
   "brand": "kindle",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Ce qui distingue Kindle Scribe",
-    "La gamme actuelle et les générations à distinguer",
-    "Comment fonctionne l’écosystème Kindle Scribe",
-    "Les forces réelles de la marque",
-    "Les limites à connaître avant d’acheter",
-    "Pour qui Kindle Scribe est cohérent — et pour qui il l’est moins",
-    "Quels contenus consulter ensuite ?",
-    "Ce qu’il faut vérifier avec vos propres documents",
-    "La marque doit-elle décider de l’achat ?",
-    "Sources officielles consultées"
+    "La gamme à regarder en 2026",
+    "Ce que l’écosystème change au quotidien",
+    "Les points qui font réellement la différence",
+    "Les limites à vérifier avant d’acheter",
+    "À qui cette marque convient-elle le mieux ?",
+    "Comparer les modèles et les alternatives",
+    "Sources consultées"
   ],
   "internal_links": [
     "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/exporter-notes/",
-    "/comparatifs/",
     "/comparatifs/kindle-scribe-vs-remarkable/",
     "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
     "/guides/liseuse-ou-bloc-notes-numerique/",
     "/guides/bloc-notes-numerique-google-drive/",
-    "/guides/bloc-notes-numerique-onedrive/",
-    "/usages/annotation-pdf/",
-    "/usages/prise-de-notes-professionnelle/",
-    "/usages/prise-de-notes-etudiant/",
-    "/usages/annotation-pdf/",
-    "/usages/lecture-et-prise-de-notes/",
-    "/guides/transfert-notes-vers-ordinateur/"
+    "/guides/bloc-notes-numerique-onedrive/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/",
     "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
     "/comparatifs/kindle-scribe-vs-remarkable/",
     "/guides/bloc-notes-numerique-google-drive/",
     "/guides/bloc-notes-numerique-onedrive/",
     "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/exporter-notes/",
-    "/guides/liseuse-ou-bloc-notes-numerique/",
-    "/guides/transfert-notes-vers-ordinateur/",
-    "/usages/annotation-pdf/",
-    "/usages/lecture-et-prise-de-notes/",
-    "/usages/prise-de-notes-etudiant/",
-    "/usages/prise-de-notes-professionnelle/"
+    "/guides/liseuse-ou-bloc-notes-numerique/"
   ],
   "official_sources": [
     "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
@@ -53,7 +35,8 @@
     "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
     "https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN",
     "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL",
-    "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu"
+    "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu",
+    "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

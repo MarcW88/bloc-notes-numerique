@@ -5,45 +5,29 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Où se situe reMarkable 2 dans la gamme actuelle ?",
-    "Les caractéristiques qui changent réellement l’usage",
-    "Comment le modèle s’intègre dans un workflow",
-    "Les limites à ne pas masquer",
-    "Pour qui ce modèle reste cohérent ?",
-    "Quelles alternatives regarder ?",
-    "Ce que la fiche technique ne permet pas de conclure",
-    "Checklist avant achat",
-    "Sources officielles consultées"
+    "Une ancienne génération encore utilisable",
+    "Les caractéristiques qui comptent encore",
+    "Le principal piège : les accessoires",
+    "Que vérifier en occasion ou reconditionné ?",
+    "Les limites à accepter",
+    "Pour qui reste-t-elle cohérente ?",
+    "Sources consultées"
   ],
   "internal_links": [
-    "/marques/remarkable/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
-    "/guides/formats-fichiers-compatibles/",
-    "/guides/synchroniser-notes-cloud/",
-    "/guides/exporter-notes/",
-    "/marques/remarkable/remarkable-2-avis/",
-    "/marques/remarkable/remarkable-paper-pro/",
-    "/guides/prix-bloc-notes-numerique/",
     "/bons-plans/bloc-notes-numerique-occasion/",
-    "/guides/prix-bloc-notes-numerique/"
+    "/marques/remarkable/"
   ],
   "unique_internal_targets": [
     "/bons-plans/bloc-notes-numerique-occasion/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
-    "/guides/exporter-notes/",
-    "/guides/formats-fichiers-compatibles/",
-    "/guides/prix-bloc-notes-numerique/",
-    "/guides/synchroniser-notes-cloud/",
-    "/marques/remarkable/",
-    "/marques/remarkable/remarkable-2-avis/",
-    "/marques/remarkable/remarkable-paper-pro/"
+    "/marques/remarkable/"
   ],
   "official_sources": [
     "https://remarkable.com/fr-fr",
     "https://remarkable.com/fr-FR/shop/compare",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2"
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

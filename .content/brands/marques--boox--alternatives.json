@@ -5,49 +5,32 @@
   "brand": "boox",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Commencez par la raison de votre départ",
-    "Comparez le workflow, pas le nombre de fonctions",
-    "Comparez aussi le coût de la configuration",
-    "Quand rester dans l’écosystème actuel ?",
-    "Quand faut-il réellement envisager une alternative ?",
-    "Le coût caché d’un changement d’écosystème",
-    "Construire une shortlist utile",
-    "Comparatifs à consulter",
-    "Sources officielles consultées"
+    "Si vous voulez moins de réglages : reMarkable",
+    "Si l’organisation des notes passe avant Android : Supernote",
+    "Si vous voulez surtout lire : Kindle ou Kobo",
+    "Quand rester chez BOOX ?",
+    "Choisir selon votre besoin principal",
+    "Sources consultées"
   ],
   "internal_links": [
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/boox-vs-supernote/",
-    "/marques/kindle-scribe/",
-    "/marques/kobo-elipsa/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/prix-bloc-notes-numerique/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
-    "/comparatifs/bloc-notes-numerique-professionnel/",
-    "/comparatifs/bloc-notes-numerique-etudiant/",
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/"
+    "/comparatifs/boox-vs-supernote/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/bloc-notes-numerique-etudiant/",
-    "/comparatifs/bloc-notes-numerique-professionnel/",
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
     "/comparatifs/boox-vs-supernote/",
-    "/comparatifs/meilleur-bloc-notes-numerique/",
-    "/comparatifs/remarkable-vs-boox/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/prix-bloc-notes-numerique/",
-    "/marques/kindle-scribe/",
-    "/marques/kobo-elipsa/"
+    "/comparatifs/remarkable-vs-boox/"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
-    "https://shop.boox.com/collections/all-products/reading-tools"
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/notemax",
+    "https://shop.boox.com/products/tabxc",
+    "https://shop.boox.com/products/tabultracpro",
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
+    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

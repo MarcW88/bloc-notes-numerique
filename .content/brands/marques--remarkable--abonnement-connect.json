@@ -5,29 +5,19 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Connect, qu’est-ce que c’est ?",
-    "Ce qui change avec ou sans abonnement",
-    "Comment décider si le coût est justifié",
-    "Cloud et dépendance : la vraie question",
-    "Quelles fonctions doivent rester indépendantes du service ?",
-    "Pour qui Connect est cohérent ?",
-    "Quelles alternatives si vous refusez l’abonnement ?",
-    "Sources officielles consultées"
+    "Ce qui reste disponible sans abonnement",
+    "Ce que Connect ajoute",
+    "Quand le coût récurrent est-il justifié ?",
+    "La dépendance au cloud à vérifier",
+    "Les limites à garder en tête",
+    "Sources consultées"
   ],
   "internal_links": [
-    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
     "/guides/exporter-notes/",
-    "/guides/bloc-notes-numerique-google-drive/",
-    "/guides/bloc-notes-numerique-onedrive/",
-    "/guides/bloc-notes-numerique-dropbox/",
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/"
+    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
     "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
-    "/guides/bloc-notes-numerique-dropbox/",
-    "/guides/bloc-notes-numerique-google-drive/",
-    "/guides/bloc-notes-numerique-onedrive/",
     "/guides/exporter-notes/"
   ],
   "official_sources": [
@@ -35,7 +25,8 @@
     "https://remarkable.com/fr-FR/shop/compare",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2"
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

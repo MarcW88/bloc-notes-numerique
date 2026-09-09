@@ -3,9 +3,9 @@
 - Page type: `BRAND_HUB`
 - Brand: `remarkable`
 - Sources verified: 8 septembre 2026
-- H2 count: 10
+- H2 count: 7
 - Internal links: 16
-- Unique targets: 16
+- Unique targets: 12
 - Official sources: 6
 - Robots: `noindex,follow`
 

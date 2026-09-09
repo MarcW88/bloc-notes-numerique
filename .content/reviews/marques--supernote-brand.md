@@ -3,9 +3,9 @@
 - Page type: `BRAND_HUB`
 - Brand: `supernote`
 - Sources verified: 8 septembre 2026
-- H2 count: 10
-- Internal links: 14
-- Unique targets: 14
+- H2 count: 7
+- Internal links: 6
+- Unique targets: 6
 - Official sources: 5
 - Robots: `noindex,follow`
 

@@ -5,51 +5,33 @@
   "brand": "boox",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Ce qui distingue BOOX",
-    "La gamme actuelle et les générations à distinguer",
-    "Comment fonctionne l’écosystème BOOX",
-    "Les forces réelles de la marque",
-    "Les limites à connaître avant d’acheter",
-    "Pour qui BOOX est cohérent — et pour qui il l’est moins",
-    "Quels contenus consulter ensuite ?",
-    "Ce qu’il faut vérifier avec vos propres documents",
-    "La marque doit-elle décider de l’achat ?",
-    "Sources officielles consultées"
+    "La gamme à regarder en 2026",
+    "Ce que l’écosystème change au quotidien",
+    "Les points qui font réellement la différence",
+    "Les limites à vérifier avant d’acheter",
+    "À qui cette marque convient-elle le mieux ?",
+    "Comparer les modèles et les alternatives",
+    "Sources consultées"
   ],
   "internal_links": [
     "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/exporter-notes/",
-    "/comparatifs/",
     "/marques/boox/boox-note-air/",
     "/marques/boox/boox-tab-ultra/",
     "/marques/boox/avis/",
     "/marques/boox/accessoires/",
     "/marques/boox/alternatives/",
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/boox-vs-supernote/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/usages/prise-de-notes-professionnelle/",
-    "/usages/prise-de-notes-etudiant/",
-    "/usages/annotation-pdf/",
-    "/usages/lecture-et-prise-de-notes/",
-    "/guides/transfert-notes-vers-ordinateur/"
+    "/comparatifs/boox-vs-supernote/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/",
     "/comparatifs/boox-vs-supernote/",
     "/comparatifs/remarkable-vs-boox/",
     "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/exporter-notes/",
-    "/guides/transfert-notes-vers-ordinateur/",
     "/marques/boox/accessoires/",
     "/marques/boox/alternatives/",
     "/marques/boox/avis/",
     "/marques/boox/boox-note-air/",
-    "/marques/boox/boox-tab-ultra/",
-    "/usages/annotation-pdf/",
-    "/usages/lecture-et-prise-de-notes/",
-    "/usages/prise-de-notes-etudiant/",
-    "/usages/prise-de-notes-professionnelle/"
+    "/marques/boox/boox-tab-ultra/"
   ],
   "official_sources": [
     "https://shop.boox.com/collections/all-products/reading-tools",
@@ -57,7 +39,9 @@
     "https://shop.boox.com/products/go103gen2",
     "https://shop.boox.com/products/noteair5c",
     "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc"
+    "https://shop.boox.com/products/tabxc",
+    "https://shop.boox.com/products/tabultracpro",
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

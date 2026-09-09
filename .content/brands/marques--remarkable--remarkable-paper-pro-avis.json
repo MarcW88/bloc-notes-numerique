@@ -5,42 +5,37 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Quel est le niveau de preuve de cet avis ?",
-    "Les points forts que l’on peut défendre",
-    "Les limites qui peuvent faire changer de choix",
-    "Ce que cela implique dans un workflow réel",
-    "Pour qui reMarkable Paper Pro est cohérent ?",
-    "Alternatives et comparatifs utiles",
-    "Ce que cette analyse ne prétend pas mesurer",
-    "Comment vérifier ce verdict pour votre usage",
-    "Verdict éditorial",
-    "Sources officielles consultées"
+    "Pourquoi le Paper Pro convainc",
+    "La couleur est utile, mais ce n’est pas un écran de tablette classique",
+    "Ce qui peut faire renoncer",
+    "Connect change-t-il notre avis ?",
+    "À qui le Paper Pro convient le mieux ?",
+    "Quelles alternatives regarder avant d’acheter ?",
+    "Verdict",
+    "Sur quoi repose cet avis ?",
+    "Sources consultées"
   ],
   "internal_links": [
-    "/marques/remarkable/",
-    "/guides/annoter-pdf-tablette-e-ink/",
-    "/guides/exporter-notes/",
-    "/guides/prix-bloc-notes-numerique/",
+    "/marques/remarkable/abonnement-connect/",
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/bloc-notes-numerique-couleur/",
-    "/marques/remarkable/remarkable-paper-pro/",
-    "/guides/prix-bloc-notes-numerique/"
+    "/comparatifs/remarkable-vs-supernote/",
+    "/comparatifs/bloc-notes-numerique-couleur/"
   ],
   "unique_internal_targets": [
     "/comparatifs/bloc-notes-numerique-couleur/",
     "/comparatifs/remarkable-vs-boox/",
-    "/guides/annoter-pdf-tablette-e-ink/",
-    "/guides/exporter-notes/",
-    "/guides/prix-bloc-notes-numerique/",
-    "/marques/remarkable/",
-    "/marques/remarkable/remarkable-paper-pro/"
+    "/comparatifs/remarkable-vs-supernote/",
+    "/marques/remarkable/abonnement-connect/"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2"
+    "https://remarkable.com/products/remarkable-paper/pro/details/features",
+    "https://remarkable.com/products/remarkable-paper/pro/details/compare",
+    "https://remarkable.com/products/remarkable-paper/pro?region_id=000036",
+    "https://www.techradar.com/tablets/remarkable-paper-pro-review",
+    "https://www.wired.com/review/remarkable-paper-pro/",
+    "https://www.tomsguide.com/tablets/remarkable-paper-pro",
+    "https://www.forbes.com/sites/forbes-personal-shopper/article/remarkable-paper-pro-review/",
+    "https://www.engadget.com/mobile/tablets/remarkable-paper-pro-review-writing-in-color-is-nice-but-itll-cost-you-173024590.html"
   ],
   "noindex_follow": true,
   "analysis_documentary": true
