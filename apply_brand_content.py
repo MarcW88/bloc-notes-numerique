@@ -55,10 +55,24 @@ for url, page_data in PAGES.items():
         good = f'<p>{positioning[0].upper() + positioning[1:]}.</p>'
         body = body.replace(bad, good)
 
+    if url == '/marques/remarkable/remarkable-2/':
+        body = body.replace(
+            '<h2 id="compatibilite">Le principal piège reste la génération des accessoires</h2>',
+            '<h2 id="compatibilite">Compatibilités et limites : le principal piège reste la génération des accessoires</h2>',
+        )
+
     if url == '/marques/boox/boox-tab-ultra/':
         body = body.replace(
             '<h2 id="limites">Pourquoi l’ancienneté du système compte</h2>',
             '<h2 id="limites">Les limites liées à l’ancienneté du système</h2>',
+        )
+        body = body.replace(
+            '<h2 id="android">Android 12 est un facteur de génération, pas une date d’obsolescence</h2>',
+            '<h2 id="android">Android 12 : une limite de génération, pas une date d’obsolescence</h2>',
+        )
+        body = body.replace(
+            '<h2 id="choix">Quand le Tab Ultra C Pro garde-t-il du sens ?</h2>',
+            '<h2 id="choix">Pour qui le Tab Ultra C Pro garde-t-il du sens ?</h2>',
         )
 
     html = replace_first(r'<title>.*?</title>', f'<title>{title}</title>', html, re.S)
