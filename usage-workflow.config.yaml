@@ -5,6 +5,14 @@ source_of_truth: .content/usages
 record_template: .content/usages/_template.json
 quality_reference: /guides/prix-bloc-notes-numerique/
 
+rendering:
+  legacy_content_source: usage_content.py
+  reviewed_content_source: usage_bespoke_output.py
+  apply_script: apply_usage_content.py
+  reviewed_overrides_win: true
+  merged_routes:
+    /usages/annotation-pdf/: /guides/annoter-pdf-tablette-e-ink/
+
 workflows:
   analysis: .agents/skills/usage-analysis-workflow/SKILL.md
   content: .agents/skills/usage-content-workflow/SKILL.md
@@ -112,7 +120,7 @@ current_routes:
   - /usages/prise-de-notes-professionnelle/
   - /usages/prise-de-notes-etudiant/
   - /usages/prise-de-notes-reunion/
-  - /usages/annotation-pdf/
+  - /usages/annotation-pdf/ # merged redirect retained for continuity
   - /usages/lecture-et-prise-de-notes/
   - /usages/dessin/
   - /usages/remplacer-cahiers-papier/
