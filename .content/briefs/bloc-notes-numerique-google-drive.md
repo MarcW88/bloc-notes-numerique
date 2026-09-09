@@ -1,57 +1,48 @@
 ---
 url: /guides/bloc-notes-numerique-google-drive/
 slug: bloc-notes-numerique-google-drive
-status: DRAFT_READY
-guide_type: how-to
+status: QA_IN_PROGRESS
+guide_type: how-to / compatibility
 primary_keyword: bloc-notes numérique Google Drive
-search_intent: vérifier quels écosystèmes accèdent à Google Drive et dans quel sens
+search_intent: vérifier comment un bloc-notes fait circuler un fichier avec Google Drive et où reste le fichier maître
 audience: utilisateur dont Drive est le stockage principal
-last_researched: 2026-09-08
-refresh_level: new
+last_researched: 2026-09-09
+refresh_level: deep_rewrite
 ---
 
 ## Décision éditoriale
 
-- Question centrale : vérifier quels écosystèmes accèdent à Google Drive et dans quel sens.
-- Valeur propre : comparer import, export et sync au lieu d'un simple oui/non.
-- Traitement : Contenu neuf : aucune expérience produit simulée.
-- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
+- Décision issue du cluster audit : `DEEP_REWRITE`.
+- Question centrale : avec Google Drive, travaille-t-on sur la source, une copie, une arborescence synchronisée ou une application Android ?
+- Valeur propre : faire choisir le bon niveau d'intégration à partir du fichier maître et du workflow réel.
+- Valeur à préserver : facts actuels sur reMarkable, Kindle Scribe, Kobo, Supernote et BOOX ; distinction import/export/sync.
+- Hors périmètre : classement produit, promesse de coédition non documentée, pseudo-test ou affirmation de compatibilité générique.
 
-## Demande, intention et SERP
+## Angle et structure issue de la recherche
 
-La page doit satisfaire une intention dominante de type `how-to`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
+La page ne suit plus le squelette commun des pages cloud. Son fil directeur est le devenir du fichier de référence :
 
-## Entités à expliciter
+1. décider où vit le fichier maître ;
+2. expliciter le modèle de copies Kindle Scribe 2025+ ;
+3. traiter Kobo comme canal d'entrée de PDF/EPUB personnels ;
+4. distinguer la logique de dossiers Supernote/BOOX ;
+5. séparer l'intégration Drive du cloud reMarkable ;
+6. tester un vrai fichier de bout en bout ;
+7. rendre Drive éliminatoire uniquement au niveau d'intégration réellement nécessaire.
 
-Google Drive, reMarkable, BOOX, Kobo, Supernote, Kindle Scribe.
+## Registre de preuves vérifié le 9 septembre 2026
 
-## Registre de preuves
-
-- reMarkable integrations: https://support.remarkable.com/articles/Knowledge/About-my-remarkable-com
-- BOOX cloud tiers: https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
-- Kobo Drive: https://help.kobo.com/hc/en-us/articles/15335985512983-Add-books-to-your-eReader-using-Google-Drive
-- Supernote transfer: https://support.supernote.com/en_US/transfer-files
-- Amazon Drive import: https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN
-
-Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
-
-## Architecture validée
-
-- Réponse autonome dans les premières phrases.
-- H2 : comparaison;  piège du fichier source;  workflow;  critère éliminatoire.
-- Tableau ou procédure uniquement lorsqu'il améliore la décision.
-- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
-- Section Sources visible.
-
-## Content refresh / différenciation
-
-- Niveau : `new`.
-- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
-- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
-- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+- reMarkable import/export/cloud : https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files
+- Kindle Scribe 2025+ import Drive : https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN
+- Kindle Scribe 2025+ partage Drive : https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL
+- Kobo Google Drive : https://help.kobo.com/hc/en-us/articles/15335985512983-Add-books-to-your-eReader-using-Google-Drive
+- Supernote Drive/Dropbox : https://support.supernote.com/en_US/transfer-files
+- BOOX cloud tiers : https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
 
 ## Risques
 
-compatibilité dépend de la génération et du modèle ; annotations pas toujours resynchronisées.
+- Kindle : ne pas laisser entendre que les annotations se resynchronisent vers la source ; il s'agit d'une copie.
+- Kobo : qualifier les modèles compatibles et les DRM.
+- BOOX : ne pas confondre intégration cloud, application Android et synchronisation ONYX.
 
-`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
+`noindex,follow` doit rester actif jusqu'à validation humaine explicite.
