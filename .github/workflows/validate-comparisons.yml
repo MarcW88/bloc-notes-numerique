@@ -1,4 +1,4 @@
-name: Validate comparison editorial workflow
+name: Validate comparison workflow implementation
 
 on:
   pull_request:
@@ -41,9 +41,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate comparison methodology and machine-detectable blockers
+      - name: Validate the implemented comparison pipeline
         run: python3 validate_comparisons.py
-      - name: Explain publication boundary
+      - name: Explain evaluation boundary
         run: |
-          echo "Machine PASS is not a publication decision."
-          echo "Run .agents/skills/comparison-editorial-publish-gate/SKILL.md and obtain explicit human validation before removing noindex."
+          echo "Machine PASS only proves mechanical consistency of the implemented comparison pipeline."
+          echo "Run .agents/skills/comparison-editorial-publish-gate/SKILL.md to evaluate each phase of comparison-content-workflow."
+          echo "Keep noindex until that evaluation passes and a human explicitly validates publication."
