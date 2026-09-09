@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "slug": "bloc-notes-numerique-couleur",
   "url": "/comparatifs/bloc-notes-numerique-couleur/",
   "researched_at": "2026-09-08",
@@ -79,149 +80,177 @@
     "remarkable_pro": {
       "color": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for color."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for color based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "frontlight": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for frontlight."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for frontlight based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "boox_air5c": {
       "color": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for color."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for color based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "frontlight": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for frontlight."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for frontlight based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Air5 C; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/en-ca/products/noteair5c",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "kindle_colorsoft": {
       "color": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for color."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for color based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 2,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "frontlight": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for frontlight."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for frontlight based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe Colorsoft; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "remarkable_move": {
       "color": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for color."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for color based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "frontlight": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for frontlight."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for frontlight based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro Move; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/products/remarkable-paper/pro-move?region_id=000158",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     }
   },
@@ -248,5 +277,5 @@
     }
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk-research scoring. Product facts can be VERIFIED; numeric scores are editorial INFERENCES derived from those facts, not hands-on measurements."
 }

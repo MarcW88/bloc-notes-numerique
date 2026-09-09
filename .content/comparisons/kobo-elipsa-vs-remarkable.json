@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "slug": "kobo-elipsa-vs-remarkable",
   "url": "/comparatifs/kobo-elipsa-vs-remarkable/",
   "researched_at": "2026-09-08",
@@ -65,75 +66,89 @@
     "kobo_elipsa": {
       "writing": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "reading": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for reading based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "organization": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for organization."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for organization based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "simplicity": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for simplicity."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for simplicity based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "remarkable_pure": {
       "writing": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "reading": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for reading."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for reading based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "organization": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for organization based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "simplicity": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for simplicity based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/shop/compare",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     }
   },
@@ -150,5 +165,5 @@
     }
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk-research scoring. Product facts can be VERIFIED; numeric scores are editorial INFERENCES derived from those facts, not hands-on measurements."
 }
