@@ -5,6 +5,7 @@ import json
 from comparison_pages import COMPARISON_PAGES
 from comparison_products import COMPARISON_PRODUCTS
 from comparison_methodology import COMPARISON_METHODS, CHECKED_AT
+from comparison_editorial_strategy import COMPARISON_EDITORIAL_STRATEGIES
 
 ROOT = Path(__file__).resolve().parent
 D = ROOT / ".content" / "comparisons"
@@ -17,6 +18,7 @@ def weighted_total(scores, weights):
 
 for slug, p in COMPARISON_PAGES.items():
     method = COMPARISON_METHODS.get(slug)
+    strategy = COMPARISON_EDITORIAL_STRATEGIES.get(slug)
     researched_at = CHECKED_AT if method else "2026-09-08"
 
     payload = {
@@ -81,8 +83,18 @@ for slug, p in COMPARISON_PAGES.items():
         payload["rank_justification"] = method["rank_justification"]
         payload["editorial_verdict"] = method["editorial_verdict"]
         payload["excluded_products"] = [
-            item["id"] for item in method["universe"] if item["status"] not in {"ELIGIBLE", "CONDITIONALLY_ELIGIBLE"}
+            item["id"] for item in method["universe"]
+            if item["status"] not in {"ELIGIBLE", "CONDITIONALLY_ELIGIBLE"}
         ]
+
+        if strategy:
+            payload["editorial_strategy"] = strategy
+            payload["editorial_thesis"] = strategy["editorial_thesis"]
+            payload["decision_tensions"] = strategy["decision_tensions"]
+            payload["architecture_rationale"] = strategy["architecture_rationale"]
+            payload["must_tell"] = strategy["must_tell"]
+            payload["can_omit"] = strategy["can_omit"]
+
     else:
         payload["criteria"] = [
             {"id": c, "label": c, "weight": w}
