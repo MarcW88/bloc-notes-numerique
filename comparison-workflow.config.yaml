@@ -37,6 +37,24 @@ comparison:
   conditional_winner_when_sensitivity_flips: true
   enable_confidence_adjustment: true
 
+editorial:
+  methodology_is_shared: true
+  page_structure_is_not_shared: true
+  require_editorial_thesis: true
+  require_decision_tensions: true
+  require_architecture_rationale: true
+  require_must_tell_and_can_omit: true
+  forbid_fixed_section_sequence: true
+  forbid_symmetric_product_blocks_by_default: true
+  forbid_cluster_wide_h2_template: true
+  forbid_word_count_quotas: true
+  forbid_heading_count_quotas: true
+  forbid_table_count_quotas: true
+  forbid_internal_link_quotas: true
+  allow_structural_reuse_only_when_editorially_justified: true
+  prefer_shorter_page_over_empty_template_sections: true
+  narrative_must_follow_decision_story: true
+
 workflow:
   comparisons_dir: ".content/comparisons"
   reviews_dir: ".content/reviews"
@@ -53,3 +71,5 @@ evaluation:
   fail_on_unprovable_critical_phase: true
   preserve_noindex_on_fail: true
   require_pipeline_consistency: true
+  require_editorial_architecture_review: true
+  fail_on_unjustified_template_reuse: true
