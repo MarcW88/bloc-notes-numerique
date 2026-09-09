@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'AGENTS.md'
+      - '.github/workflows/validate-usage-workflow.yml'
       - '.agents/skills/usage-analysis-workflow/**'
       - '.agents/skills/usage-content-workflow/**'
       - '.agents/skills/jobs-to-be-done/**'
@@ -30,6 +31,7 @@ on:
   pull_request:
     paths:
       - 'AGENTS.md'
+      - '.github/workflows/validate-usage-workflow.yml'
       - '.agents/skills/usage-analysis-workflow/**'
       - '.agents/skills/usage-content-workflow/**'
       - '.agents/skills/jobs-to-be-done/**'
