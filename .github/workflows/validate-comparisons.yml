@@ -1,0 +1,49 @@
+name: Validate comparison editorial workflow
+
+on:
+  pull_request:
+    paths:
+      - "comparatifs/**"
+      - ".content/comparisons/**"
+      - ".agents/skills/comparison-content-workflow/**"
+      - ".agents/skills/comparison-editorial-publish-gate/**"
+      - "comparison_products.py"
+      - "comparison_pages.py"
+      - "comparison_content.py"
+      - "apply_comparison_content.py"
+      - "generate_comparison_metadata.py"
+      - "validate_comparisons.py"
+      - "comparison-workflow.config.yaml"
+      - "AGENTS.md"
+      - ".github/workflows/validate-comparisons.yml"
+  push:
+    branches: [main]
+    paths:
+      - "comparatifs/**"
+      - ".content/comparisons/**"
+      - ".agents/skills/comparison-content-workflow/**"
+      - ".agents/skills/comparison-editorial-publish-gate/**"
+      - "comparison_products.py"
+      - "comparison_pages.py"
+      - "comparison_content.py"
+      - "apply_comparison_content.py"
+      - "generate_comparison_metadata.py"
+      - "validate_comparisons.py"
+      - "comparison-workflow.config.yaml"
+      - "AGENTS.md"
+      - ".github/workflows/validate-comparisons.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate comparison methodology and machine-detectable blockers
+        run: python3 validate_comparisons.py
+      - name: Explain publication boundary
+        run: |
+          echo "Machine PASS is not a publication decision."
+          echo "Run .agents/skills/comparison-editorial-publish-gate/SKILL.md and obtain explicit human validation before removing noindex."
