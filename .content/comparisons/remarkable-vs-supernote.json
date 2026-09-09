@@ -1,39 +1,9 @@
 {
-  "slug": "remarkable-vs-supernote",
-  "url": "/comparatifs/remarkable-vs-supernote/",
-  "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "reMarkable vs Supernote",
-    "type": "head_to_head",
-    "user_job": "choisir entre simplicité immédiate et organisation manuscrite avancée",
-    "scope_note": "Comparaison des gammes reMarkable et Supernote, avec Paper Pure/Manta comme duel principal."
-  },
-  "criteria": [
-    {"id": "simplicity", "label": "Simplicité"},
-    {"id": "note_networking", "label": "Liens, titres, mots-clés et recherche"},
-    {"id": "color", "label": "Couleur"},
-    {"id": "frontlight", "label": "Éclairage frontal"},
-    {"id": "subscription", "label": "Politique d'abonnement"},
-    {"id": "portability", "label": "Formats mobiles"},
-    {"id": "repairability", "label": "Approche long terme et modularité"}
-  ],
-  "brand_scope": {
-    "remarkable": ["Paper Pure", "Paper Pro", "Paper Pro Move"],
-    "supernote": ["Manta", "Nomad"]
-  },
-  "recommendation_logic": {
-    "remarkable": "simplicité, couleur ou éclairage frontal",
-    "supernote": "organisation manuscrite profonde, absence d'abonnement constructeur et approche long terme",
-    "universal_winner": false
-  },
-  "source_urls": [
-    "https://ewritable.net/remarkable-vs-supernote-which-is-the-best-e-ink-tablet/",
-    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
-    "https://supernote.com/pages/supernote-manta",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/shop/connect/pricing"
-  ],
-  "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Verdict conditionnel. Les fonctions de notes sont vérifiées séparément des préférences de sensation d'écriture. Aucun score numérique."
+  "slug":"remarkable-vs-supernote","url":"/comparatifs/remarkable-vs-supernote/","researched_at":"2026-09-09","status":"READY_FOR_HUMAN_VALIDATION",
+  "intent":{"query":"reMarkable vs Supernote","type":"head_to_head","user_job":"choisir entre simplicité immédiate et organisation manuscrite avancée","scope_note":"Comparaison des gammes reMarkable et Supernote, avec Paper Pure/Manta comme duel principal."},
+  "criteria":[{"id":"simplicity","label":"Simplicité"},{"id":"note_networking","label":"Liens, titres, mots-clés et recherche"},{"id":"color","label":"Couleur"},{"id":"frontlight","label":"Éclairage frontal"},{"id":"subscription","label":"Politique d'abonnement"},{"id":"portability","label":"Formats mobiles"},{"id":"repairability","label":"Approche long terme et modularité"}],
+  "brand_scope":{"remarkable":["Paper Pure","Paper Pro","Paper Pro Move"],"supernote":["Manta","Nomad"]},
+  "recommendation_logic":{"remarkable":"simplicité, couleur ou éclairage frontal","supernote":"organisation manuscrite profonde, absence d'abonnement constructeur et approche long terme","universal_winner":false},
+  "source_urls":["https://ewritable.net/remarkable-vs-supernote-which-is-the-best-e-ink-tablet/","https://supernote.com/pages/note-system-everything-you-need-to-stay-organized","https://supernote.com/pages/supernote-manta","https://remarkable.com/fr-FR/shop/compare","https://remarkable.com/shop/connect/pricing"],
+  "affiliate_commission_used_in_ranking":false,"methodology_note":"Verdict conditionnel. Les fonctions de notes sont vérifiées séparément des préférences de sensation d'écriture. Aucun score numérique."
 }
