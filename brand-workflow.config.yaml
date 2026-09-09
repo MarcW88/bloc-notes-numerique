@@ -12,6 +12,7 @@ content:
     - "brand_render_pages.py"
     - "brand_pages.py"
     - "brand_reviewed_output.py"
+    - "brand_enriched_output.py"
   mode: "recovery"
 
 quality:
