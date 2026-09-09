@@ -20,8 +20,8 @@ ROBOTS_RE = re.compile(r'<meta\b[^>]*name="robots"[^>]*content="([^"]*)"', re.I)
 EDITOR_FACING_PATTERNS = {
     'editor-facing page strategy': [
         r'\bune page marque\b',
-        r'\bcette page (?:doit|sert|permet)\b',
-        r'\bce contenu (?:doit|sert|permet)\b',
+        r'\b(?:la|cette) page\b.{0,80}\b(?:doit|sert|permet)\b',
+        r'\bce contenu\b.{0,80}\b(?:doit|sert|permet)\b',
         r'\bservir de hub\b',
         r'\bpage (?:hub|pilier)\b',
         r'\bmaillage interne\b',
