@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Wire price-standard content into generator
+      - name: Wire existing guide content modules into generator
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -80,7 +80,7 @@ jobs:
           print('PASS: contextual internal targets exist')
           PY
 
-      - name: Enforce price-guide structural quality floor
+      - name: Validate machine-detectable guide blockers
         run: python validate_guide_quality.py
 
       - name: Generate evidence-based QA reports
@@ -100,7 +100,7 @@ jobs:
           print('PASS: all guide pages remain noindex,follow')
           PY
 
-      - name: Commit regenerated quality batch
+      - name: Commit regenerated guide batch
         run: |
           git config user.name "Marc Williame"
           git config user.email "146358493+MarcW88@users.noreply.github.com"
@@ -108,6 +108,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
-            git commit -m "content: regenerate guides at price-standard quality"
+            git commit -m "content: regenerate guides"
             git push origin HEAD:${{ github.ref_name }}
           fi
