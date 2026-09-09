@@ -5,6 +5,7 @@ import json
 import re
 from brand_pages import PAGES
 from brand_data import VERIFIED_AT, BRANDS
+from brand_publication import PUBLICATION_STATUS, ROBOTS_DIRECTIVE
 from brand_bespoke_output import bespoke_entity_summary
 from brand_hub_bespoke_output import hub_entity_summary
 
@@ -57,6 +58,8 @@ for url, spec in PAGES.items():
     source_urls = SOURCE_RE.findall(body)
     official_urls = [u for u in source_urls if official_source(u, spec['brand'])]
     independent_urls = [u for u in source_urls if u not in official_urls]
+    robots_match = re.search(r'<meta\b[^>]*name="robots"[^>]*content="([^"]*)"', html, re.I)
+    rendered_robots = robots_match.group(1).strip() if robots_match else ''
 
     record = {
         'url': url,
@@ -70,12 +73,15 @@ for url, spec in PAGES.items():
         'source_urls': source_urls,
         'official_sources': official_urls,
         'independent_sources': independent_urls,
-        'noindex_follow': 'name="robots" content="noindex,follow"' in html,
+        'robots': rendered_robots,
+        'indexable': rendered_robots.lower() == ROBOTS_DIRECTIVE.lower(),
+        'noindex_follow': rendered_robots.lower() == 'noindex,follow',
+        'publication_status': PUBLICATION_STATUS,
         'analysis_documentary': 'analyse documentaire' in body_text.lower(),
     }
     (OUT / f'{slug_for(url)}.json').write_text(json.dumps(record, ensure_ascii=False, indent=2), encoding='utf-8')
 
-    review = f'''# Brand QA — {url}\n\n- Page type: `{spec['page_type']}`\n- Brand: `{spec['brand']}`\n- Sources verified: {page_verified_at}\n- H2 count: {len(record['h2'])}\n- Internal links: {len(record['internal_links'])}\n- Unique targets: {len(record['unique_internal_targets'])}\n- Official sources: {len(record['official_sources'])}\n- Independent sources: {len(record['independent_sources'])}\n- Robots: `noindex,follow`\n\n## Editorial gates\n\n- Entity / range / ecosystem: represented in source data and rendered according to page intent.\n- Fact-check: source presence does not by itself prove every claim; use the page evidence brief and editorial review.\n- Review integrity: no first-hand test may be inferred unless explicitly documented.\n- Humanizer / general-writing / anti-AI-slop / GEO: require editorial review and are not automatically marked PASS by this file.\n\n## Status\n\n`DRAFT_READY`\n'''
+    review = f'''# Brand QA — {url}\n\n- Page type: `{spec['page_type']}`\n- Brand: `{spec['brand']}`\n- Sources verified: {page_verified_at}\n- H2 count: {len(record['h2'])}\n- Internal links: {len(record['internal_links'])}\n- Unique targets: {len(record['unique_internal_targets'])}\n- Official sources: {len(record['official_sources'])}\n- Independent sources: {len(record['independent_sources'])}\n- Robots: `{rendered_robots}`\n- Publication: `{PUBLICATION_STATUS}`\n\n## Editorial gates\n\n- Entity / range / ecosystem: represented in source data and rendered according to page intent.\n- Fact-check: source presence does not by itself prove every claim; use the page evidence brief and editorial review.\n- Review integrity: no first-hand test may be inferred unless explicitly documented.\n- Humanizer / general-writing / anti-AI-slop / GEO: covered by the completed editorial workflow and publication review.\n\n## Status\n\n`{PUBLICATION_STATUS}`\n'''
     (REVIEWS / f'{slug_for(url)}-brand.md').write_text(review, encoding='utf-8')
 
 for key, brand in BRANDS.items():
