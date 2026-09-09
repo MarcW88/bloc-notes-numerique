@@ -1,43 +1,48 @@
 ---
 name: comparison-editorial-publish-gate
-description: Gate final pour les pages /comparatifs/. Il n'est pas dérivé du Brand gate : il audite, étape par étape, si la page et son classement peuvent réellement être justifiés par le comparison-content-workflow et par les artefacts qui l'ont produit.
+description: Gate final sévère pour les pages /comparatifs/. Il audite si la décision, le ranking et l'architecture éditoriale peuvent réellement être reconstruits et défendus depuis le comparison-content-workflow. Il refuse les rankings fragiles, les preuves insuffisantes et les structures de pages clonées sans justification.
 ---
 
 # Comparison Workflow Evaluation Gate
 
 ## Rôle
 
-Ce gate évalue la conformité d'un comparatif au **workflow Comparison réellement utilisé dans ce dépôt**.
+Ce gate évalue un comparatif contre **le `comparison-content-workflow` réellement utilisé dans ce dépôt**.
 
-Il ne demande pas seulement si le texte est agréable ou si le HTML est propre. Il demande :
+Question centrale :
 
-> **Peut-on reconstruire et défendre la décision publiée en suivant le comparison-content-workflow, depuis l'intention jusqu'au ranking final ?**
+> **Peut-on reconstruire et défendre la décision publiée, depuis l'intention jusqu'au ranking et jusqu'au choix de la structure éditoriale ?**
 
 Le référentiel principal est `.agents/skills/comparison-content-workflow/SKILL.md`.
 
-Le `brand-editorial-publish-gate` ne doit pas servir de structure d'audit pour les comparatifs. Il peut inspirer le niveau de sévérité général, mais les phases, les preuves et les blockers ci-dessous viennent du workflow Comparison.
+Le Brand gate peut inspirer le niveau de sévérité, jamais la structure de l'audit.
 
-Un seul blocker méthodologique suffit à produire `FAIL` et `KEEP NOINDEX`.
+Un blocker méthodologique ou éditorial critique suffit à produire :
+
+- `FAIL`
+- `KEEP NOINDEX`
+
+Le gate ne retire jamais `noindex` automatiquement.
 
 ---
 
-# 0. Lire le pipeline réel avant l'évaluation
+# 0. Lire le pipeline réel
 
-Pour chaque page, lire obligatoirement :
+Lire obligatoirement :
 
 1. `.agents/skills/comparison-content-workflow/SKILL.md` ;
 2. `comparison-workflow.config.yaml` ;
-3. `comparison_products.py` — baseline produit partagée et scores disponibles ;
-4. `comparison_pages.py` — intention, produits retenus, poids et ranking par page ;
-5. `generate_comparison_metadata.py` — manière dont les données sont persistées ;
-6. `.content/comparisons/<slug>.json` — snapshot méthodologique généré ;
-7. `comparison_content.py` — transformation du ranking en contenu éditorial ;
-8. `/comparatifs/<slug>/index.html` — résultat reçu par le lecteur ;
-9. les pages proches `/comparatifs/`, `/usages/`, `/guides/` et `/marques/` si elles peuvent modifier l'intention ou la décision.
+3. `comparison_products.py` ;
+4. `comparison_pages.py` ;
+5. `comparison_methodology.py` ou toute source méthodologique page-spécifique ;
+6. `generate_comparison_metadata.py` ;
+7. `.content/comparisons/<slug>.json` ;
+8. `comparison_content.py` et tout override page-spécifique ;
+9. `/comparatifs/<slug>/index.html` ;
+10. les comparatifs voisins pertinents ;
+11. les pages `/usages/`, `/guides/` et `/marques/` qui peuvent modifier l'interprétation.
 
-L'audit doit vérifier la cohérence **entre ces couches**, pas seulement la page HTML.
-
-Si une information importante n'est pas persistée alors que le workflow exige qu'elle le soit, ne pas supposer que l'étape a eu lieu. Utiliser `UNPROVABLE`, ce qui vaut `FAIL` lorsqu'il s'agit d'une étape nécessaire au ranking.
+L'audit porte sur la cohérence **entre ces couches**, pas seulement sur le HTML.
 
 Statuts d'étape :
 
@@ -46,387 +51,342 @@ Statuts d'étape :
 - `UNPROVABLE`
 - `NOT_APPLICABLE`
 
----
-
-# 1. Router le type de comparatif
-
-Référence : sections 2 et 4 du `comparison-content-workflow`.
-
-Identifier :
-
-- `best_overall`
-- `best_for_use_case`
-- `budget`
-- `feature_specific`
-- `head_to_head`
-
-Vérifier que `comparison_pages.py`, le JSON et le texte final décrivent le même type et le même job utilisateur.
-
-PASS si la décision principale peut être formulée clairement et si les critères peuvent être reliés à cette décision.
-
-FAIL si :
-
-- la page spécialisée reprend essentiellement la logique d'un `best_overall` ;
-- le job stocké ne correspond pas au verdict ;
-- un `head_to_head` compare implicitement d'autres variantes ou générations que celles déclarées ;
-- l'intention réelle est mieux satisfaite par une autre page existante.
-
-Retour en cas d'échec : **workflow Comparison — Search intent / routing**.
+Une étape critique `UNPROVABLE` vaut `FAIL`.
 
 ---
 
-# 2. Auditer le Product Universe
+# 1. Routing & search intent
 
-Référence : section 5.
+Vérifier :
+- type réel du comparatif ;
+- requête et job utilisateur ;
+- sous-intentions ;
+- contrainte principale ;
+- absence de cannibalisation forte avec une autre page.
 
-Le workflow impose de construire l'univers avant de choisir les gagnants.
+FAIL si la page spécialisée reprend essentiellement la logique d'un comparatif général ou si le verdict ne répond pas au job stocké.
 
-Évaluer :
+Retour : **Search intent / routing**.
 
+---
+
+# 2. Product Universe
+
+Vérifier que l'univers a été construit avant le gagnant :
 - candidats évidents considérés ;
 - génération exacte ;
-- statut actuel ;
-- disponibilité pertinente ;
-- raison d'inclusion ;
+- statut et disponibilité ;
+- raisons d'inclusion ;
 - exclusions documentées ;
-- absence d'influence de l'affiliation sur l'univers.
+- affiliation sans influence sur l'univers.
 
-Dans l'implémentation actuelle, `comparison_pages.py` contient directement la liste `products`. Cela ne prouve pas à lui seul qu'un univers plus large a été étudié.
+FAIL/UNPROVABLE si seuls les produits finalement classés sont visibles et qu'aucune trace ne montre les candidats réellement considérés puis exclus.
 
-PASS si les candidats importants et les exclusions peuvent être reconstruits.
-
-UNPROVABLE/FAIL si le fichier ne contient que les produits finalement classés et qu'aucune trace ne montre quels candidats ont été considérés puis exclus.
-
-Retour : **workflow Comparison — Product Universe**.
+Retour : **Product Universe**.
 
 ---
 
-# 3. Auditer l'Equivalence Engine
+# 3. Equivalence Engine
 
-Référence : section 6.
-
-Pour les candidats, déterminer si la comparaison est :
-
+Pour chaque candidat, retrouver :
 - `EXACT`
 - `FUNCTIONALLY_COMPARABLE`
 - `PARTIALLY_COMPARABLE`
 - `NOT_COMPARABLE`
 
-Vérifier que :
+Vérifier catégorie fonctionnelle, workflow, accessoires, logiciel, coûts récurrents et contraintes.
 
-- la catégorie fonctionnelle est comparable pour le job ;
-- les différences d'écosystème ne sont pas réduites à un simple score sans explication ;
-- un produit ne reçoit pas un `0/10` pour une fonction hors de son rôle sans que cette non-comparabilité soit discutée ;
-- bundles, accessoires et variantes ne créent pas une comparaison trompeuse.
+FAIL si une différence de philosophie produit est aplatie en simple score sans traitement de la comparabilité.
 
-Si aucune équivalence n'est persistée, cette étape est `UNPROVABLE` pour les comparatifs où la comparabilité n'est pas évidente.
-
-Retour : **workflow Comparison — Equivalence Engine**.
+Retour : **Equivalence Engine**.
 
 ---
 
-# 4. Auditer l'Evidence Ledger
+# 4. Evidence Ledger
 
-Référence : section 7.
-
-Le workflow stipule : **aucune note avant le registre de preuves**.
-
-Pour chaque différence qui influence un score important, retrouver :
-
+Pour chaque différence qui influence une note importante, retrouver :
 - produit ;
 - critère ;
-- claim ou valeur factuelle ;
+- claim factuel ;
+- valeur ;
 - source ;
 - date ;
 - classe de preuve.
 
-Classes du workflow :
+Classes : `VERIFIED`, `SUPPORTED`, `INFERRED`, `USER_PATTERN`, `FIRST_HAND`, `UNKNOWN`, `PROHIBITED`.
 
-- `VERIFIED`
-- `SUPPORTED`
-- `INFERRED`
-- `USER_PATTERN`
-- `FIRST_HAND`
-- `UNKNOWN`
-- `PROHIBITED`
+Règle absolue : une source officielle peut vérifier **le fait**, pas automatiquement **la note 8/10**.
 
-### Règle critique de l'implémentation actuelle
+FAIL si :
+- un score déterminant n'a pas de preuves référencées ;
+- fait et note sont confondus ;
+- une justification générique remplace le raisonnement ;
+- deux produits ont des notes différentes sans différence factuelle explicable.
 
-`generate_comparison_metadata.py` marque actuellement les notes comme `VERIFIED` tout en expliquant que le score numérique est une `editorial normalization`.
-
-Une source officielle peut vérifier **le fait utilisé pour noter**. Elle ne vérifie pas automatiquement **la note 8/10 ou 9/10**.
-
-Le gate doit donc séparer :
-
-1. preuve du fait ;
-2. règle ou raisonnement qui transforme ce fait en note.
-
-FAIL si une note déterminante n'a qu'une justification générique du type :
-
-> `Official capabilities reviewed ... numeric score is an editorial normalization ...`
-
-FAIL si le registre ne permet pas d'expliquer pourquoi deux produits obtiennent des notes différentes sur un critère important.
-
-Retour : **workflow Comparison — Evidence Ledger**, puis éventuellement `fact-check`.
+Retour : **Evidence Ledger + Fact-check**.
 
 ---
 
-# 5. Auditer les critères
-
-Référence : section 8.
+# 5. Critères
 
 Pour chaque critère :
-
 - lien explicite avec l'intention ;
-- rôle réel dans la décision ;
 - définition stable ;
-- possibilité de comparer les candidats ;
+- rôle réel dans la décision ;
+- comparabilité ;
 - preuve disponible ;
-- absence de doublon conceptuel avec un autre critère.
+- absence de doublon conceptuel.
 
-Les scores partagés dans `comparison_products.py` peuvent être réutilisés entre plusieurs pages seulement si le critère conserve le même sens.
+FAIL si une baseline partagée change implicitement de sens selon la page.
 
-FAIL si un critère change implicitement de définition selon la page tout en réutilisant la même note de baseline.
-
-Retour : **workflow Comparison — critères avant classement**.
+Retour : **Critères avant classement**.
 
 ---
 
-# 6. Auditer les pondérations
-
-Référence : section 9.
+# 6. Pondérations
 
 Vérifier :
-
 - somme = 100 ;
-- poids adaptés au job ;
-- différence réelle entre comparatif général et comparatif spécialisé ;
-- aucune modification opportuniste pour faire gagner un produit ;
-- justification possible avant de regarder le résultat.
+- poids défendables avant résultat ;
+- adaptation réelle au job ;
+- aucun ajustement opportuniste pour conserver un gagnant.
 
-### Sensibilité
+Lorsque le top 2 est proche, appliquer la sensibilité prévue par le workflow.
 
-Lorsque le #1 et le #2 sont proches, tester si une variation raisonnable des poids discutables inverse le résultat.
-
-Si oui :
-
-- le classement peut rester calculé ;
-- mais le verdict doit devenir conditionnel ;
+Si une variation raisonnable inverse le #1 :
+- le ranking calculé peut rester ;
 - la confiance doit baisser ;
-- un langage de « gagnant clair » devient un blocker.
+- le verdict doit devenir conditionnel.
 
-Retour : **workflow Comparison — Pondération**.
+FAIL si un gagnant clair est affirmé malgré un résultat sensible.
+
+Retour : **Pondération / Sensitivity**.
 
 ---
 
-# 7. Auditer la normalisation et le scoring
+# 7. Normalisation & scoring
 
-Référence : section 10.
-
-L'implémentation actuelle utilise des scores 0–10 stockés dans `comparison_products.py`, puis applique les poids de `comparison_pages.py`.
-
-La moyenne pondérée attendue sur une échelle 0–10 est :
+Formule attendue sur une échelle 0–10 :
 
 `total = Σ(score × poids) / 100`
 
 Vérifier :
-
-- toutes les notes nécessaires sont disponibles ;
-- notes entre 0 et 10 ;
+- notes 0–10 ;
+- evidence refs ;
+- justification spécifique ;
 - score final recalculable ;
-- ordre du ranking cohérent avec le calcul ;
-- JSON cohérent avec `comparison_pages.py` ;
-- HTML cohérent avec le ranking ;
-- justification spécifique pour les notes qui font basculer le résultat ;
-- distinction entre preuve factuelle et normalisation éditoriale ;
-- niveau de confiance réduit lorsque la preuve est inférée ou incomplète.
+- ranking cohérent ;
+- JSON cohérent avec les sources ;
+- HTML cohérent avec le JSON ;
+- niveau de confiance proportionné aux preuves.
 
-FAIL si le ranking est seulement hardcodé sans pouvoir être reproduit depuis les données persistées.
+FAIL si la précision numérique dépasse la précision réelle des données.
 
-FAIL si une différence de quelques centièmes est présentée comme une précision objective alors que la notation reste éditoriale.
-
-Retour : **workflow Comparison — Normalisation et scoring**.
+Retour : **Normalisation / Scoring**.
 
 ---
 
-# 8. Auditer les Hard Gates
-
-Référence : section 11.
+# 8. Hard Gates
 
 Rechercher les contraintes éliminatoires propres à la requête :
-
-- fonction indispensable absente ;
+- fonction indispensable ;
 - incompatibilité ;
-- produit obsolète ou indisponible ;
+- disponibilité ;
 - budget maximal ;
-- abonnement incompatible avec l'intention ;
+- abonnement ;
+- politique IT / sécurité ;
 - donnée essentielle non vérifiable.
 
-Un hard gate doit être appliqué avant la moyenne.
+Un produit qui échoue un hard gate ne doit pas gagner par moyenne.
 
-Si le workflow exige un hard gate pertinent mais qu'aucune trace n'existe dans les données, `UNPROVABLE` = `FAIL`.
-
-Retour : **workflow Comparison — Hard Gates**.
+Retour : **Hard Gates**.
 
 ---
 
-# 9. Auditer le Total Solution Cost
+# 9. Total Solution Cost
 
-Référence : section 12.
-
-Applicable lorsque le coût change la décision, notamment `budget`, `sans abonnement`, certains comparatifs étudiant/professionnel et toute comparaison de bundles différents.
-
-Vérifier si nécessaire :
+Lorsque pertinent, vérifier :
 
 `TSC = appareil + accessoires indispensables + protection nécessaire + abonnement utile/obligatoire + autres coûts nécessaires`
 
-FAIL si :
+FAIL si des configurations non équivalentes sont présentées comme comparables ou si une précision de prix artificielle masque taxes, import, bundle ou abonnement.
 
-- un appareil nu est comparé à un bundle complet sans correction ;
-- un accessoire indispensable disparaît du coût ;
-- un abonnement obligatoire est traité comme optionnel ;
-- la note `cost` ne peut pas être reliée à une configuration comparable.
-
-Retour : **workflow Comparison — Total Solution Cost**.
+Retour : **Total Solution Cost**.
 
 ---
 
-# 10. Auditer le Rank Justification
+# 10. Rank Justification
 
-Référence : section 13.
-
-Pour chaque produit classé, vérifier que l'on peut expliquer :
-
+Pour chaque produit classé, vérifier :
 - pourquoi il est présent ;
-- pour qui il est recommandé ;
+- pour qui il est pertinent ;
 - pour qui il ne l'est pas ;
-- avantage principal ;
-- limitation principale ;
-- critère qui déplace réellement la décision ;
+- avantage décisif ;
+- limite décisive ;
 - alternative logique ;
 - raison de sa position.
 
-Pour le #1, le texte doit expliquer ce qu'il gagne **et ce qu'il ne gagne pas**.
+Pour le #1 : expliquer ce qu'il gagne **et ce qu'il ne gagne pas**.
 
-Une phrase qui répète uniquement les trois plus grosses notes n'est pas une justification suffisante si elle n'explique pas la différence avec le #2.
+FAIL si la justification répète seulement les trois plus grosses notes.
 
-Pour un `head_to_head`, un verdict conditionnel peut être plus correct qu'un vainqueur universel.
-
-Retour : **workflow Comparison — Rank Justification**.
+Retour : **Rank Justification**.
 
 ---
 
-# 11. Auditer l'Honest Comparison Standard
-
-Référence : section 14.
+# 11. Honest Comparison Standard
 
 Vérifier :
-
 - défauts visibles du gagnant ;
 - absence de cherry-picking ;
-- distinction spec / conséquence d'usage ;
-- distinction prix affiché / coût réel ;
-- distinction desk research / test physique ;
-- distinction fait / déduction / jugement ;
+- distinction spec / conséquence ;
+- prix affiché / coût réel ;
+- desk research / test physique ;
+- fait / déduction / jugement ;
 - données instables datées ;
-- commission sans influence sur inclusion, score ou classement.
+- commission sans influence.
 
-FAIL en cas de faux test, défaut majeur masqué, certitude non proportionnée aux preuves ou avantage comparatif non démontré.
+FAIL en cas de faux test, certitude disproportionnée ou défaut majeur masqué.
 
-Retour : **workflow Comparison — Honest Comparison Standard**.
+Retour : **Honest Comparison**.
 
 ---
 
-# 12. Auditer l'architecture éditoriale et la rédaction produit
+# 12. Editorial Thesis
 
-Référence : sections 15 et 16.
+Référence : `comparison-content-workflow`, étape **Définir la thèse éditoriale avant le plan**.
 
-Ne pas imposer de quotas de mots, H2, tableaux ou liens.
+Rechercher dans les données persistées :
+- `editorial_thesis` ;
+- `decision_tensions` ;
+- `must_tell` ;
+- `can_omit`.
 
-Évaluer si le contenu rend le ranking compréhensible :
+Puis vérifier que la page raconte effectivement cette thèse.
 
-- verdict assez tôt ;
-- critères réellement interprétés ;
-- produit expliqué par ses arbitrages ;
-- limites concrètes ;
-- profil adapté / non adapté ;
+PASS si le comparatif possède une idée éditoriale spécifique qui explique ce que le lecteur doit comprendre au-delà du tableau de scores.
+
+FAIL si :
+- aucune thèse spécifique n'est identifiable ;
+- la thèse pourrait être copiée sur plusieurs autres comparatifs en changeant seulement les noms ;
+- la page ajoute du volume pour masquer l'absence d'enseignement éditorial ;
+- le texte raconte principalement la mécanique du scoring au lieu de la décision.
+
+Retour : **Editorial Thesis**.
+
+---
+
+# 13. Architecture éditoriale adaptative
+
+Référence : `comparison-content-workflow`, étape **Architecture éditoriale adaptative — aucun template obligatoire**.
+
+Le gate ne vérifie PAS la présence d'une liste fixe de sections.
+
+Il doit au contraire demander :
+
+> **Pourquoi cette page a-t-elle cette structure précise ?**
+
+Rechercher `architecture_rationale` dans la source durable.
+
+Comparer ensuite la page à plusieurs comparatifs voisins pertinents.
+
+### PASS si
+
+- l'ordre des blocs suit le vrai chemin de décision ;
+- les sections existent parce qu'elles servent la thèse ;
+- la longueur des blocs suit l'importance éditoriale ;
+- les produits peuvent être traités de manière asymétrique ;
+- certains blocs standards sont omis lorsqu'ils n'apportent rien ;
+- un tableau synthétise sans être paraphrasé ligne par ligne ;
+- une structure similaire à une page voisine est explicitement justifiable par une logique décisionnelle similaire.
+
+### FAIL si
+
+- le plan est manifestement cloné d'une autre page ;
+- plusieurs pages suivent automatiquement `méthode → critères → classement → produit 1 → produit 2 → profils → coût → limites → sources` ;
+- les mêmes H2 reviennent cluster-wide sans nécessité sémantique ;
+- chaque produit reçoit le même nombre de paragraphes et les mêmes sous-parties par symétrie ;
+- un bloc existe seulement parce que le générateur sait le produire ;
+- la page pourrait être recréée en remplaçant les noms, scores, avantages et limites dans un gabarit commun ;
+- la méthodologie prend plus de place que l'interprétation sans raison ;
+- une section vide de valeur est conservée pour atteindre une longueur, un nombre de H2 ou une structure attendue.
+
+### Important
+
+La diversité éditoriale ne signifie pas variation décorative.
+
+Ne jamais forcer une structure différente uniquement pour "faire différent". Si deux comparatifs ont réellement la même logique décisionnelle, une structure proche peut être correcte — mais le rapport doit expliquer pourquoi.
+
+Retour : **Architecture éditoriale**.
+
+---
+
+# 14. Rédaction et valeur décisionnelle
+
+Évaluer :
+- interprétation réelle des preuves ;
+- arbitrages concrets ;
+- limites ;
 - alternatives ;
-- pas de blocs artificiellement symétriques si les différences exigent autre chose.
+- profil adapté / non adapté seulement lorsqu'utile ;
+- absence de fiche constructeur reformulée ;
+- absence de blocs artificiellement symétriques.
 
 FAIL si le texte final peut être remplacé par une fiche constructeur + score sans perte significative de valeur décisionnelle.
 
-Retour : **workflow Comparison — Architecture / rédaction**.
+Retour : **Rédaction / valeur décisionnelle**.
 
 ---
 
-# 13. Auditer l'Affiliate Value
-
-Référence : section 17.
+# 15. Affiliate Value
 
 Utiliser `affiliate-value`.
 
 PASS si :
-
-- la page reste utile sans liens affiliés ;
-- commission absente des poids/scores/ranking ;
+- page utile sans liens affiliés ;
+- commission absente de l'univers, des poids, scores et ranking ;
 - défauts visibles ;
 - produits non affiliés non pénalisés ;
 - prix datés ;
 - aucune fausse urgence ;
-- disclosure cohérente avec la politique du site.
+- disclosure cohérente.
 
-Retour : **workflow Comparison — Affiliate Value**.
+Retour : **Affiliate Value**.
 
 ---
 
-# 14. Auditer le Fact-check
-
-Référence : section 18.
+# 16. Fact-check
 
 Rejouer `fact-check` sur les faits qui influencent :
-
-- scores ;
-- hard gates ;
+- score ;
+- hard gate ;
 - coût ;
 - ranking ;
 - verdict.
 
-Statuts utiles :
+FAIL si un fait déterminant est `UNVERIFIED`, `CONTRADICTED` ou `OUTDATED` sans effet explicite sur le verdict.
 
-- `CONFIRMED`
-- `PARTIAL`
-- `UNVERIFIED`
-- `CONTRADICTED`
-- `OUTDATED`
-
-FAIL si un fait déterminant est `UNVERIFIED`, `CONTRADICTED` ou `OUTDATED` sans effet explicite sur le score ou le verdict.
-
-Retour : **Fact-check + Evidence Ledger**.
+Retour : **Fact-check**.
 
 ---
 
-# 15. Auditer Search Intent QA et Internal Linking
-
-Référence : sections 19 et 20.
+# 17. Search Intent QA & Internal Linking
 
 Vérifier :
-
-- ranking toujours aligné avec la requête après rédaction ;
-- #1 compatible avec les hard gates ;
-- absence de cannibalisation forte avec un comparatif voisin ;
-- liens vers guides/usages/marques seulement lorsqu'ils aident la prochaine décision ;
-- comparatif non transformé en impasse commerciale.
+- ranking toujours aligné ;
+- #1 compatible avec hard gates ;
+- pas de cannibalisation forte ;
+- liens uniquement lorsqu'ils aident la prochaine décision ;
+- aucun quota de liens ;
+- structure non déformée pour placer des liens internes.
 
 Retour : **Search Intent QA / Internal Linking**.
 
 ---
 
-# 16. Auditer la finition, le SEO et le GEO
+# 18. Finition, SEO & GEO
 
-Référence : sections 21 à 23.
-
-Exécuter ou réutiliser :
-
+Exécuter/réutiliser :
 - `natural-writing`
 - `humanizer`
 - `general-writing`
@@ -436,46 +396,50 @@ Exécuter ou réutiliser :
 - `seo-technical`
 - `editorial-qa`
 
-Le `seo-drift` doit aussi vérifier que le ranking n'a pas changé entre les données et le texte sans modification documentée des preuves, poids ou scores.
+Le SEO ne doit jamais imposer un template de H2 cluster-wide.
 
-Pour GEO, vérifier surtout :
+Le `seo-drift` doit vérifier :
+- données → ranking ;
+- ranking → texte ;
+- `editorial_thesis` → architecture ;
+- absence de normalisation progressive des pages vers une même structure.
 
-- verdict autonome mais conditionné par le besoin ;
-- entités/modèles/générations explicites ;
-- relation `produit → critère → conséquence → profil` claire ;
-- sources identifiables ;
-- distinction claire entre score éditorial et fait vérifié.
-
-FAIL si la finition améliore la forme tout en masquant l'incertitude méthodologique.
+Pour GEO : relations explicites `produit → critère → conséquence → profil`, sources identifiables et verdict proportionné à la confiance.
 
 Retour : **Finition / SEO / GEO**.
 
 ---
 
-# 17. Auditer la persistance et la régénération
+# 19. Persistance & régénération
 
-Cette étape est spécifique à **l'utilisation réelle du workflow dans ce repo**.
+Toute donnée nécessaire au ranking ou à l'architecture éditoriale doit survivre à la régénération.
 
-`generate_comparison_metadata.py` régénère `.content/comparisons/*.json` depuis `comparison_pages.py` et `comparison_products.py`.
+PASS seulement si la source durable conserve, selon pertinence :
+- univers / exclusions ;
+- équivalence ;
+- evidence ledger ;
+- hard gates ;
+- TSC ;
+- scores ;
+- sensitivity / confidence ;
+- rank justification ;
+- `editorial_thesis` ;
+- `decision_tensions` ;
+- `architecture_rationale` ;
+- `must_tell` ;
+- `can_omit`.
 
-Donc toute preuve, exclusion, hard gate, équivalence, coût total, justification ou niveau de confiance ajouté uniquement à la main dans le JSON peut être perdu au prochain run.
+FAIL si une future régénération peut écraser la méthodologie ou remettre un template générique.
 
-PASS seulement si les informations nécessaires à un ranking défendable sont stockées dans une source de vérité durable ou si le générateur sait les préserver.
-
-FAIL si le rapport de méthode semble complet mais sera écrasé par la prochaine régénération.
-
-Retour : **architecture de données du comparison-content-workflow**.
+Retour : **Architecture de données / régénération**.
 
 ---
 
-# 18. Publication
+# 20. Publication
 
-Référence : sections 24 à 28.
+Le contrôle machine prouve seulement la cohérence détectable automatiquement.
 
-Le script `validate_comparisons.py` est un contrôle machine de cohérence. Il ne peut pas déclarer la méthodologie éditoriale valide.
-
-Le gate humain doit terminer par :
-
+Le gate humain termine par :
 - `PASS` seulement si toutes les phases nécessaires passent ;
 - `FAIL` si une phase critique échoue ou est `UNPROVABLE` ;
 - `KEEP NOINDEX` tant qu'un blocker existe ;
@@ -487,30 +451,32 @@ Ne jamais retirer `noindex` automatiquement.
 
 # Blockers absolus
 
-- intention non alignée avec le ranking ;
-- univers produit impossible à défendre ;
+- intention non alignée ;
+- univers impossible à défendre ;
 - candidat majeur omis sans justification ;
-- comparabilité non traitée lorsqu'elle change la décision ;
-- absence de preuve traçable pour un score déterminant ;
-- score éditorial présenté comme `VERIFIED` sans distinguer le fait sous-jacent ;
-- justification générique d'une note déterminante ;
-- poids opportunistes ou non défendables ;
-- score final non reproductible ;
-- ranking non cohérent avec le calcul ;
-- hard gate pertinent non appliqué ;
-- coût réel trompeur pour une page où le budget est déterminant ;
-- gagnant absolu alors que la sensibilité montre un résultat fragile ;
-- fake test / fausse expérience ;
-- commission ayant influencé inclusion, note ou ranking ;
-- divergence entre données, JSON et HTML ;
-- données méthodologiques essentielles non persistées durablement ;
+- comparabilité non traitée ;
+- score déterminant sans preuve traçable ;
+- fait vérifié confondu avec score éditorial ;
+- poids opportunistes ;
+- score non reproductible ;
+- hard gate ignoré ;
+- coût réel trompeur ;
+- gagnant absolu malgré sensibilité forte ;
+- faux test ;
+- commission influençant inclusion/note/ranking ;
+- divergence données / JSON / HTML ;
+- données méthodologiques non persistées ;
+- absence de thèse éditoriale sur une page substantielle ;
+- structure clonée d'un comparatif voisin sans justification ;
+- symétrie de blocs imposée par générateur ;
+- quota de mots/H2/tableaux/liens utilisé comme critère de qualité ;
 - page indexable avant validation humaine explicite.
 
 ---
 
 # Output obligatoire
 
-Créer le rapport dans `.content/reviews/comparisons/<slug>.md` lorsque le dossier est utilisé.
+Créer le rapport dans `.content/reviews/comparisons/<slug>.md`.
 
 ```md
 # Comparison workflow evaluation
@@ -521,30 +487,37 @@ Status: PASS | FAIL
 Publication: KEEP NOINDEX | READY FOR HUMAN VALIDATION
 
 ## Pipeline consistency
-- comparison_products.py → comparison_pages.py: PASS | FAIL
-- comparison_pages.py → JSON: PASS | FAIL
+- sources → JSON: PASS | FAIL
 - JSON → HTML: PASS | FAIL
 - regeneration durability: PASS | FAIL
 
-## Workflow phases
+## Methodology
 - Routing & search intent: PASS | FAIL | UNPROVABLE
 - Product universe: PASS | FAIL | UNPROVABLE
 - Equivalence engine: PASS | FAIL | UNPROVABLE
 - Evidence ledger: PASS | FAIL | UNPROVABLE
 - Criteria: PASS | FAIL
-- Weighting: PASS | FAIL
+- Weighting & sensitivity: PASS | FAIL
 - Scoring: PASS | FAIL | UNPROVABLE
 - Hard gates: PASS | FAIL | UNPROVABLE | NOT_APPLICABLE
 - Total solution cost: PASS | FAIL | UNPROVABLE | NOT_APPLICABLE
 - Rank justification: PASS | FAIL
 - Honest comparison: PASS | FAIL
+
+## Editorial strategy
+- Editorial thesis: PASS | FAIL | UNPROVABLE
+- Adaptive architecture: PASS | FAIL
+- Decision value / writing: PASS | FAIL
+- Neighbour-page structural comparison: PASS | FAIL
+
+## QA
 - Affiliate value: PASS | FAIL
 - Fact-check: PASS | FAIL
 - Search intent QA & linking: PASS | FAIL
 - Writing / SEO / GEO: PASS | FAIL
 
 ## Blockers
-1. [workflow step] ...
+1. ...
 
 ## Required corrections
 1. Return to workflow step X: ...
@@ -556,4 +529,4 @@ Publication: KEEP NOINDEX | READY FOR HUMAN VALIDATION
 KEEP NOINDEX | READY FOR HUMAN VALIDATION
 ```
 
-Ne pas réécrire automatiquement toute la page après un `FAIL`. Revenir uniquement aux étapes du `comparison-content-workflow` responsables du blocker, mettre à jour les sources de vérité, régénérer, puis relancer l'évaluation complète.
+Ne pas réécrire automatiquement toute la page après un `FAIL`. Revenir uniquement aux étapes du `comparison-content-workflow` responsables du blocker, mettre à jour les sources durables, régénérer, puis relancer l'évaluation complète.
