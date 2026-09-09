@@ -1,85 +1,88 @@
-# Rapport de contrôle — standard guide Prix
+# Guide PUBLISH_REVIEW — Conversion manuscrite
 
 ```yaml
 url: /guides/convertir-notes-manuscrites-en-texte/
-reviewed_at: 2026-09-08
-structural_quality_gate: PASS
-content_status: DRAFT_READY
-indexing_status: noindex
-quality_reference: /guides/prix-bloc-notes-numerique/
-page_role_in_standard: must meet price-guide quality floor
+reviewed_at: 2026-09-09
+workflow: guide-analysis-workflow / PUBLISH_REVIEW
+prior_decision: LIGHT_UPDATE
+content_status: QA_IN_PROGRESS
+indexing_status: noindex,follow
+verdict: PASS — READY_FOR_HUMAN_VALIDATION
 ```
 
-## 1. Profondeur sémantique mesurable
+## Machine validation
 
-- Contenu utile hors navigation et hors section Sources : **902 mots**.
-- H2 substantiels : **7**.
-- Tableaux : **1**.
-- Les sections trop courtes, mono-paragraphe non développé ou tableaux sans contexte sont bloquants dans `validate_guide_quality.py`.
+- `validate_guide_quality.py` : PASS sur les 24 guides.
+- Liens internes contextuels : PASS.
+- Robots : PASS, `noindex,follow` conservé.
+- Canonical : cohérente avec l'URL cible.
+- Source persistante : `guide_content_bespoke.py`.
 
-### Détail par section
+## Intention et rôle
 
-- `Définissez ce que vous ferez du texte après conversion` — 102 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Une page bien structurée se convertit plus facilement` — 126 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Les workflows de conversion diffèrent selon les marques` — 137 mots ; 2 paragraphe(s) ; 1 tableau(x) ; 0 liste(s).
-- `La phase de correction fait partie du coût réel` — 119 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Vérifiez la forme du fichier, pas uniquement le texte reconnu` — 108 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Une procédure simple de conversion de bout en bout` — 104 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 1 liste(s).
-- `Quand la conversion doit-elle devenir un critère d’achat ?` — 73 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+PASS.
 
-## 2. Maillage interne
+Le scope du `LIGHT_UPDATE` est respecté. La page reste un **HOW_TO de conversion de bout en bout** et ne réexplique plus inutilement toutes les familles d'OCR.
 
-- Liens internes contextuels : **6**.
-- Cibles uniques : **6**.
+La frontière avec `/guides/ocr-manuscrit/` est désormais explicite dès l'introduction :
 
-- `/guides/bloc-notes-numerique-google-drive/`
-- `/guides/bloc-notes-numerique-onedrive/`
-- `/guides/choisir-bloc-notes-numerique/`
-- `/guides/exporter-notes/`
-- `/guides/ocr-manuscrit/`
-- `/guides/organiser-notes-numeriques/`
+- OCR manuscrit = choisir/comprendre conversion, recherche ou PDF recherchable ;
+- conversion manuscrite = transformer une note en texte réutilisable, corriger et valider le fichier final.
 
-Le gate exige au minimum 4 liens contextuels et 3 cibles distinctes, sauf modification explicite du standard.
+## Conservation de la valeur existante
 
-## 3. Sources et factualité
+PASS.
 
-- Sources externes officielles identifiables : **5**.
-- Les fonctions variables sont rédigées avec leurs marques, générations ou conditions lorsque celles-ci sont nécessaires à la précision.
-- Aucune expérience directe, mesure propriétaire ou résultat de test n'est déduit automatiquement par ce script.
-- Le fact-check éditorial reste une passe distincte : la présence d'une source n'est pas, à elle seule, une preuve que toute affirmation est correcte.
+Ont été conservés :
 
-## 4. Content refresh / conservation
+- le choix de la destination du texte ;
+- l'utilisation d'une page représentative ;
+- la phase de correction ;
+- la conservation de l'original manuscrit ;
+- la distinction TXT / DOCX / PDF recherchable ;
+- la mesure du temps de correction comme critère de valeur réelle.
 
-- Pour les anciens guides, les angles utiles ont été conservés lorsque cohérents avec le nouveau standard ; l'enrichissement porte sur contexte, exemples, limites, entités et prochaine étape.
-- Pour les pages initialement vides, le contenu est construit depuis le brief et non depuis un simple gabarit H2.
-- La page Prix reste la référence de densité et de valeur décisionnelle, sans imposer une longueur artificiellement identique à chaque tutoriel.
+La page n'a pas subi de réécriture intégrale injustifiée.
 
-## 5. Natural writing / Humanizer / General writing
+## Fact-check et fraîcheur
 
-Ces passes ont été appliquées pendant la réécriture éditoriale mais **ne sont pas déclarées PASS par déduction automatique**. Le script contrôle uniquement des signaux structurels observables. La validation humaine finale doit encore vérifier le rythme, les répétitions, les transitions et le ton dans le rendu.
+PASS.
 
-## 6. Anti-AI-slop
+Vérifications effectuées le 9 septembre 2026 sur reMarkable, Supernote, BOOX, Kobo et Amazon.
 
-Le gate structurel bloque le principal défaut du précédent lot : H2 très courts, tableaux sans explication et maillage quasi absent. Il ne prétend pas détecter l'origine d'un texte. Toute formulation générique ou mécanique relevée lors de la lecture finale doit être corrigée avant publication.
+Correction principale : les fonctions Kindle liées aux connexions Google Drive / OneDrive et aux fonctions de recherche manuscrite concernées sont maintenant qualifiées **Kindle Scribe 2025+** au lieu de formulations vagues comme « modèles récents ».
 
-## 7. SEO / GEO
+Aucun taux de précision générique ni expérience personnelle n'est inventé.
 
-- Une réponse initiale autonome est exigée par le quality gate.
-- Les H2 doivent couvrir des sous-questions distinctes et suffisamment développées.
-- Les tableaux doivent être introduits et interprétés.
-- Les entités et sources sont explicites dans le corps lorsqu'elles soutiennent une décision ou un mécanisme.
-- Le maillage dirige vers des guides, usages, comparatifs ou pages marques selon l'étape suivante du lecteur.
+## Valeur éditoriale et affiliation
 
-## 8. Technique
+PASS.
 
-- `noindex,follow` : **PASS**.
-- HTML généré depuis `_generate.py` et les modules de contenu, pas modifié uniquement à la main dans les pages générées.
-- Les liens internes sont validés séparément dans le workflow CI.
+La page reste utile sans affiliation : elle aide à savoir quand convertir, quoi relire en priorité et comment vérifier que le fichier final est réellement réutilisable.
 
-## 9. Blockers observés
+## Maillage et frontière de cluster
 
-- Aucun blocker du quality gate.
+PASS.
+
+- lien amont clair vers `/guides/ocr-manuscrit/` lorsque l'utilisateur n'a pas encore choisi la bonne fonction ;
+- lien aval vers `/guides/exporter-notes/` pour la sortie ;
+- retour vers `/guides/choisir-bloc-notes-numerique/` si la conversion devient un critère d'achat.
+
+Aucun merge avec OCR n'est recommandé.
+
+## Anti-AI-slop / similarité structurelle
+
+PASS.
+
+La page est procédurale alors que l'OCR est explicatif/décisionnel. Les deux ne partagent plus le même centre de gravité éditorial malgré leurs entités communes.
+
+## Risques résiduels
+
+- Les capacités logicielles peuvent évoluer par génération ou firmware.
+- Les dessins, équations et mises en page libres restent des cas à tester avec le contenu réel.
 
 ## Verdict
 
-**PASS structurel — DRAFT_READY.** Ce verdict signifie que la page atteint le plancher de profondeur défini à partir du guide Prix. Il ne remplace pas la validation humaine finale et n'autorise ni retrait du `noindex`, ni publication, ni déploiement.
+**PASS — READY_FOR_HUMAN_VALIDATION**
+
+Ce PASS ne retire pas `noindex,follow` et n'autorise pas l'indexation sans validation humaine explicite.
