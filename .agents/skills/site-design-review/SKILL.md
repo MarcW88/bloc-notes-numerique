@@ -23,15 +23,20 @@ Ne pas étendre l’audit à tout le site lorsqu’une modification locale suffi
 
 ## Vérification visuelle
 
-Lorsque l’environnement le permet :
+Une revue frontend complète inclut un rendu réel. Utiliser l’intégration Playwright du dépôt avant de conclure sur le responsive, les débordements, la densité, les états interactifs ou la hiérarchie visuelle.
+
+Pour auditer les pages marques ou lancer des routes précises, lire [references/playwright-visual-check.md](references/playwright-visual-check.md), exécuter le script indiqué, puis inspecter les captures générées avec un outil de lecture d’image. Le fichier `report.json` sert de diagnostic complémentaire ; ne pas le traiter comme un jugement esthétique.
+
+Pendant la vérification :
 
 1. lancer le site avec les commandes définies par le projet ;
 2. examiner au minimum un viewport mobile et un viewport desktop ;
 3. parcourir les états interactifs importants ;
 4. vérifier le reflow, le focus clavier, les débordements et les contenus tronqués ;
-5. comparer la page aux règles de `DESIGN.md`.
+5. comparer la page aux règles de `DESIGN.md` ;
+6. conserver les captures dans `.artifacts/design-review/`, qui n’est pas versionné.
 
-Si aucun rendu n’est disponible, signaler explicitement que les conclusions sont limitées au code.
+Si Chromium ne peut pas être installé ou lancé, ne pas présenter la revue comme une validation visuelle complète. Signaler précisément l’échec et limiter les conclusions au code.
 
 ## Axes d’audit
 
