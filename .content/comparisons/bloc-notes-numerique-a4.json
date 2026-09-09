@@ -2,41 +2,12 @@
   "slug": "bloc-notes-numerique-a4",
   "url": "/comparatifs/bloc-notes-numerique-a4/",
   "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "meilleur bloc-notes numérique A4",
-    "type": "feature_specific",
-    "user_job": "lire et annoter des documents A4 avec le moins de zoom possible",
-    "scope_note": "Le comparatif distingue les vrais grands formats 13,3 pouces des compromis 10 à 11,8 pouces."
-  },
-  "criteria": [
-    {"id": "screen_surface", "label": "Surface utile pour documents A4"},
-    {"id": "pdf_legibility", "label": "Lisibilité et annotation PDF"},
-    {"id": "frontlight", "label": "Éclairage frontal lorsque nécessaire"},
-    {"id": "color_when_useful", "label": "Couleur lorsque le document en dépend"},
-    {"id": "portability", "label": "Poids et mobilité"},
-    {"id": "file_workflow", "label": "Entrée, annotation et sortie des fichiers"}
-  ],
-  "candidate_scope": [
-    {"name": "BOOX Note Max", "role": "choix par défaut noir et blanc 13,3 pouces", "source": "https://shop.boox.com/products/notemax"},
-    {"name": "BOOX Tab X C", "role": "choix 13,3 pouces couleur avec éclairage", "source": "https://shop.boox.com/products/tabxc"},
-    {"name": "Fujitsu Quaderno A4 Gen.3C", "role": "spécialiste PDF A4 à disponibilité régionale", "source": "https://sdmgr.fmworld.net/digital-paper/product.html"},
-    {"name": "reMarkable Paper Pro", "role": "compromis 11,8 pouces plus mobile", "source": "https://remarkable.com/products/remarkable-paper/pro"}
-  ],
-  "recommendation_logic": {
-    "default": "BOOX Note Max pour des PDF A4 monochromes réguliers",
-    "conditional": [
-      "BOOX Tab X C si couleur et front light sont décisionnels",
-      "Fujitsu Quaderno A4 si le workflow est presque exclusivement PDF et que l'achat/import est acceptable",
-      "reMarkable Paper Pro si 11,8 pouces suffisent et que le focus compte davantage que le vrai format 13,3 pouces"
-    ]
-  },
-  "source_urls": [
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://sdmgr.fmworld.net/digital-paper/product.html",
-    "https://remarkable.com/products/remarkable-paper/pro"
-  ],
+  "status": "READY_FOR_HUMAN_VALIDATION",
+  "intent": {"query": "meilleur bloc-notes numérique A4", "type": "feature_specific", "user_job": "lire et annoter des documents A4 avec le moins de zoom possible", "scope_note": "Le comparatif distingue les vrais grands formats 13,3 pouces des compromis 10 à 11,8 pouces."},
+  "criteria": [{"id":"screen_surface","label":"Surface utile pour documents A4"},{"id":"pdf_legibility","label":"Lisibilité et annotation PDF"},{"id":"frontlight","label":"Éclairage frontal lorsque nécessaire"},{"id":"color_when_useful","label":"Couleur lorsque le document en dépend"},{"id":"portability","label":"Poids et mobilité"},{"id":"file_workflow","label":"Entrée, annotation et sortie des fichiers"}],
+  "candidate_scope": [{"name":"BOOX Note Max","role":"choix par défaut noir et blanc 13,3 pouces","source":"https://shop.boox.com/products/notemax"},{"name":"BOOX Tab X C","role":"choix 13,3 pouces couleur avec éclairage","source":"https://shop.boox.com/products/tabxc"},{"name":"Fujitsu Quaderno A4 Gen.3C","role":"spécialiste PDF A4 à disponibilité régionale","source":"https://sdmgr.fmworld.net/digital-paper/product.html"},{"name":"reMarkable Paper Pro","role":"compromis 11,8 pouces plus mobile","source":"https://remarkable.com/products/remarkable-paper/pro"}],
+  "recommendation_logic": {"default":"BOOX Note Max pour des PDF A4 monochromes réguliers","conditional":["BOOX Tab X C si couleur et front light sont décisionnels","Fujitsu Quaderno A4 si le workflow est presque exclusivement PDF et que l'achat/import est acceptable","reMarkable Paper Pro si 11,8 pouces suffisent et que le focus compte davantage que le vrai format 13,3 pouces"]},
+  "source_urls": ["https://shop.boox.com/products/notemax","https://shop.boox.com/products/tabxc","https://sdmgr.fmworld.net/digital-paper/product.html","https://remarkable.com/products/remarkable-paper/pro"],
   "affiliate_commission_used_in_ranking": false,
   "methodology_note": "Desk research. Aucun scoring numérique n'est utilisé. La recommandation dépend d'abord de la surface réelle, du type de document et des contraintes de mobilité. Aucun test physique propriétaire n'est revendiqué."
 }
