@@ -7,6 +7,7 @@ from brand_reviewed_output import reviewed_body
 from brand_enriched_output import enriched_body
 from brand_bespoke_output import bespoke_body, bespoke_metadata
 from brand_hub_bespoke_output import hub_body, hub_metadata
+from brand_light_update_output import light_body, light_metadata
 
 ROOT = Path(__file__).resolve().parent
 
@@ -33,10 +34,12 @@ for url, page_data in PAGES.items():
     description = page_data['description']
     title, description = bespoke_metadata(url, title, description)
     title, description = hub_metadata(url, title, description)
+    title, description = light_metadata(url, title, description)
     body = reviewed_body(url, page_data).strip()
     body = enriched_body(url, body).strip()
     body = bespoke_body(url, body).strip()
     body = hub_body(url, body).strip()
+    body = light_body(url, body).strip()
 
     # The reMarkable light refresh adds the current Connect source. Keep it
     # in the source list even when the upstream body contains earlier <ul>s.
