@@ -1,0 +1,237 @@
+{
+  "slug": "dessin",
+  "page_url": "/usages/dessin/",
+  "status": "HUMAN_APPROVED",
+  "last_researched": "2026-09-09",
+  "intent": {
+    "primary_query": "dessiner tablette E Ink",
+    "dominant_intent": "Évaluer l'E Ink pour croquis, schémas et dessin et comprendre ses limites face aux tablettes créatives.",
+    "reader_maturity": "Évaluation de catégorie",
+    "expected_outcome": "Distinguer croquis/diagrammes d'illustration avancée.",
+    "semantic_variants": [
+      "bloc notes numérique dessin",
+      "tablette e ink dessin"
+    ],
+    "closest_comparison": "/comparatifs/bloc-notes-numerique-couleur/",
+    "related_guides": [
+      "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+      "/guides/choisir-bloc-notes-numerique/"
+    ],
+    "related_brand_pages": [
+      "/marques/supernote/",
+      "/marques/boox/"
+    ],
+    "cannibalization_risks": [
+      "Ne pas classer les modèles de dessin",
+      "Ne pas promettre un remplacement d'iPad/tablette graphique"
+    ]
+  },
+  "jtbd": {
+    "primary_job_statement": {
+      "circumstances": "Quand je veux capturer et développer rapidement une idée visuelle",
+      "progress": "dessiner et corriger sans multiplier papier et scans",
+      "outcome": "conserver ou exporter un croquis réutilisable",
+      "evidence_class": "INFERRED"
+    },
+    "secondary_jobs": [
+      "faire des schémas",
+      "mind maps",
+      "croquis préparatoires"
+    ],
+    "functional_jobs": [
+      "dessiner",
+      "effacer",
+      "sélectionner",
+      "organiser",
+      "exporter"
+    ],
+    "emotional_jobs": [],
+    "social_jobs": [
+      {
+        "job": "partager un croquis lisible",
+        "evidence_class": "INFERRED"
+      }
+    ],
+    "forces": {
+      "push": [
+        "croquis papier difficiles à retrouver ou partager"
+      ],
+      "pull": [
+        "édition et export numériques"
+      ],
+      "anxiety": [
+        "latence",
+        "couleur limitée",
+        "outils insuffisants"
+      ],
+      "habit": [
+        "papier",
+        "iPad",
+        "tablette graphique"
+      ]
+    },
+    "current_hires": [
+      "papier",
+      "iPad/tablette LCD",
+      "tablette graphique",
+      "ordinateur"
+    ],
+    "big_hire": [
+      "adopter E Ink pour le croquis"
+    ],
+    "little_hire": [
+      "choisir l'appareil pour une idée rapide",
+      "corriger un dessin",
+      "exporter pour continuer ailleurs"
+    ]
+  },
+  "workflow_map": [
+    {
+      "stage": "capture",
+      "task": "dessiner une idée",
+      "current_friction": "papier isolé",
+      "failure_consequence": "croquis perdu ou à scanner",
+      "helpful_capability": "stylet et canevas",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "stage": "édition",
+      "task": "corriger et structurer",
+      "current_friction": "redessin manuel",
+      "failure_consequence": "temps perdu",
+      "helpful_capability": "sélection/calques/transformations",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "sortie",
+      "task": "réutiliser le dessin",
+      "current_friction": "formats fermés",
+      "failure_consequence": "impossible de poursuivre ailleurs",
+      "helpful_capability": "PNG/PDF/export",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "outils de sélection/transformation",
+      "priority": "HIGH",
+      "why_it_matters": "permet de corriger sans redessiner",
+      "conditions": "croquis structurés",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "calques",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "sépare construction et détails",
+      "conditions": "dessin plus élaboré",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "taille d'écran",
+      "priority": "HIGH",
+      "why_it_matters": "conditionne surface de geste et vue d'ensemble",
+      "conditions": "dessin fréquent",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "couleur",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "utile seulement si le job dépend de la couleur",
+      "conditions": "codes colorés/illustration",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "export",
+      "priority": "HIGH",
+      "why_it_matters": "permet de poursuivre dans un autre outil",
+      "conditions": "workflow de publication",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "solution_families": [
+    {
+      "family": "E Ink orienté notes/croquis",
+      "best_when": "croquis, schémas et brainstorming",
+      "main_strength": "capture simple",
+      "main_friction": "outils créatifs limités",
+      "avoid_when": "illustration avancée"
+    },
+    {
+      "family": "E Ink avec application dessin dédiée",
+      "best_when": "besoin de calques et transformations simples",
+      "main_strength": "outils plus structurés",
+      "main_friction": "écosystème toujours plus limité qu'une tablette créative",
+      "avoid_when": "nombreux pinceaux/couches"
+    },
+    {
+      "family": "tablette LCD/tablette graphique",
+      "best_when": "illustration, couleur précise, animation",
+      "main_strength": "outils et fluidité",
+      "main_friction": "moins orientée ePaper",
+      "avoid_when": "simple carnet de croquis"
+    }
+  ],
+  "contraindications": [
+    "peinture numérique",
+    "animation",
+    "couleur fidèle",
+    "nombreux calques",
+    "zoom/pan et aperçu rapide constants"
+  ],
+  "evidence_ledger": [
+    {
+      "claim": "Supernote Atelier propose jusqu'à cinq calques et des fonctions de zoom/édition",
+      "source": "https://support.supernote.com/en_US/Tools-Features/introducing-atelier-the-drawing-app",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "BOOX permet dessin/écriture et export PNG/PDF dans l'app Notes",
+      "source": "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "E Ink Gallery 3 propose des temps de mise à jour différents selon les modes et prend en charge l'écriture au stylet",
+      "source": "https://www.eink.com/brand/detail/Gallery_3",
+      "date_checked": "2026-09-09",
+      "stability": "stable/technologie",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "editorial": {
+    "differentiation": "Séparer croquis et illustration professionnelle avant de parler de produit.",
+    "opening_answer": "E Ink convient surtout au croquis, schéma et brainstorming ; pas automatiquement à l'illustration avancée.",
+    "recommended_sections": [
+      "type de dessin",
+      "outils",
+      "couleur",
+      "critères",
+      "familles",
+      "contre-indications",
+      "suite"
+    ],
+    "comparison_handoff": "/comparatifs/bloc-notes-numerique-couleur/",
+    "guide_handoffs": [
+      "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/"
+    ],
+    "excluded_claims": [
+      "latence imperceptible",
+      "couleurs fidèles",
+      "remplace une tablette graphique"
+    ]
+  },
+  "qa": {
+    "jtbd_without_product": true,
+    "circumstances_specific": true,
+    "alternatives_considered": true,
+    "criteria_derived_from_workflow": true,
+    "contraindications_present": true,
+    "no_product_ranking": true,
+    "hypotheses_labeled": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "slug": "lecture-et-prise-de-notes",
+  "page_url": "/usages/lecture-et-prise-de-notes/",
+  "status": "HUMAN_APPROVED",
+  "last_researched": "2026-09-09",
+  "intent": {
+    "primary_query": "lire et prendre des notes tablette E Ink",
+    "dominant_intent": "Choisir une famille d'appareil pour combiner lecture et prise de notes.",
+    "reader_maturity": "Évaluation de catégorie",
+    "expected_outcome": "Déterminer si la lecture, la bibliothèque ou les notes doivent dominer la décision.",
+    "semantic_variants": [
+      "liseuse prise de notes",
+      "tablette e ink lecture notes"
+    ],
+    "closest_comparison": null,
+    "related_guides": [
+      "/guides/liseuse-ou-bloc-notes-numerique/",
+      "/guides/formats-fichiers-compatibles/"
+    ],
+    "related_brand_pages": [
+      "/marques/kindle-scribe/",
+      "/marques/kobo-elipsa/",
+      "/marques/remarkable/"
+    ],
+    "cannibalization_risks": [
+      "Ne pas dupliquer le guide liseuse vs bloc-notes",
+      "Ne pas classer des appareils"
+    ]
+  },
+  "jtbd": {
+    "primary_job_statement": {
+      "circumstances": "Quand je lis régulièrement des livres et documents qui produisent des notes",
+      "progress": "garder lecture et annotations dans un workflow cohérent",
+      "outcome": "retrouver et réutiliser mes idées sans multiplier les supports",
+      "evidence_class": "INFERRED"
+    },
+    "secondary_jobs": [
+      "annoter des livres",
+      "créer des notes séparées",
+      "retrouver des passages"
+    ],
+    "functional_jobs": [
+      "lire",
+      "annoter",
+      "naviguer",
+      "organiser",
+      "exporter"
+    ],
+    "emotional_jobs": [],
+    "social_jobs": [],
+    "forces": {
+      "push": [
+        "livres et notes séparés"
+      ],
+      "pull": [
+        "unification lecture/écriture"
+      ],
+      "anxiety": [
+        "DRM",
+        "notes enfermées",
+        "bibliothèque incompatible"
+      ],
+      "habit": [
+        "liseuse existante",
+        "papier",
+        "tablette LCD"
+      ]
+    },
+    "current_hires": [
+      "liseuse",
+      "tablette LCD",
+      "livre papier + carnet",
+      "ordinateur"
+    ],
+    "big_hire": [
+      "unifier lecture et notes"
+    ],
+    "little_hire": [
+      "ouvrir le contenu voulu",
+      "annoter",
+      "retrouver les notes"
+    ]
+  },
+  "workflow_map": [
+    {
+      "stage": "bibliothèque",
+      "task": "accéder au contenu",
+      "current_friction": "DRM et écosystèmes",
+      "failure_consequence": "contenu inaccessible",
+      "helpful_capability": "formats/bibliothèque compatibles",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "lecture",
+      "task": "lire et annoter",
+      "current_friction": "taille/outils",
+      "failure_consequence": "usage haché",
+      "helpful_capability": "navigation/stylet",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "stage": "réutilisation",
+      "task": "retrouver/exporter",
+      "current_friction": "annotations liées au livre",
+      "failure_consequence": "notes peu réutilisables",
+      "helpful_capability": "liste d'annotations/export",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "bibliothèque et DRM",
+      "priority": "MUST_HAVE",
+      "why_it_matters": "le contenu doit être accessible",
+      "conditions": "ebooks achetés",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "annotation et récupération",
+      "priority": "HIGH",
+      "why_it_matters": "la valeur vient de la réutilisation des notes",
+      "conditions": "lecture active",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "taille",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "PDF et livres reflowables diffèrent",
+      "conditions": "PDF fréquents",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "éclairage",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "dépend des conditions de lecture",
+      "conditions": "lecture nocturne",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "solution_families": [
+    {
+      "family": "liseuse avec stylet",
+      "best_when": "bibliothèque et lecture dominent",
+      "main_strength": "écosystème de lecture",
+      "main_friction": "notes parfois moins exportables",
+      "avoid_when": "carnets personnels dominants"
+    },
+    {
+      "family": "bloc-notes E Ink",
+      "best_when": "notes et PDF occupent une place centrale",
+      "main_strength": "workflow d'écriture",
+      "main_friction": "bibliothèque ebook plus limitée",
+      "avoid_when": "achats DRM dominants"
+    },
+    {
+      "family": "tablette LCD",
+      "best_when": "web, multimédia et applications",
+      "main_strength": "polyvalence",
+      "main_friction": "moins spécialisée",
+      "avoid_when": "lecture/notes simples dominent"
+    }
+  ],
+  "contraindications": [
+    "bibliothèque incompatible",
+    "DRM central",
+    "multimédia/web dominant",
+    "couleur riche indispensable"
+  ],
+  "evidence_ledger": [
+    {
+      "claim": "reMarkable lit les EPUB importés mais pas les livres Kindle ni les EPUB DRM",
+      "source": "https://support.remarkable.com/articles/Knowledge/Ebooks",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kobo permet l'annotation au stylet avec des limites d'export selon le format",
+      "source": "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kindle synchronise livres, notes et highlights selon les fonctions prises en charge",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/GDCAMDFMC2LZP6BR",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "editorial": {
+    "differentiation": "Faire arbitrer entre bibliothèque, annotation et carnets personnels.",
+    "opening_answer": "Décider d'abord quelle activité domine : lecture, PDF ou création de notes.",
+    "recommended_sections": [
+      "job",
+      "formats",
+      "critères",
+      "familles",
+      "surévalué",
+      "contre-indications",
+      "suite"
+    ],
+    "comparison_handoff": null,
+    "guide_handoffs": [
+      "/guides/liseuse-ou-bloc-notes-numerique/",
+      "/guides/formats-fichiers-compatibles/"
+    ],
+    "excluded_claims": [
+      "meilleur confort visuel au sens médical"
+    ]
+  },
+  "qa": {
+    "jtbd_without_product": true,
+    "circumstances_specific": true,
+    "alternatives_considered": true,
+    "criteria_derived_from_workflow": true,
+    "contraindications_present": true,
+    "no_product_ranking": true,
+    "hypotheses_labeled": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
+}

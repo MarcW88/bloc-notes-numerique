@@ -3,6 +3,8 @@
 
 import os
 
+from usage_content import USAGE_CONTENT
+
 BASE = os.path.dirname(os.path.abspath(__file__))
 
 # ── NAV HTML ──────────────────────────────────────────────────────────────────
@@ -829,18 +831,19 @@ write("/usages/index.html", hub_page(
 ))
 
 USAGES = [
-    ("/usages/prise-de-notes-professionnelle/", "Bloc-notes numérique pour le travail et les réunions", "Quel bloc-notes numérique choisir pour une utilisation professionnelle ? Notre guide et nos recommandations."),
-    ("/usages/prise-de-notes-etudiant/", "Bloc-notes numérique pour les étudiants", "Quel bloc-notes numérique est le mieux adapté aux études ? Notre guide complet pour les étudiants."),
-    ("/usages/prise-de-notes-reunion/", "Prendre des notes en réunion avec un bloc-notes numérique", "Quel appareil choisir pour optimiser votre prise de notes en réunion ?"),
-    ("/usages/annotation-pdf/", "Annoter des PDF avec un bloc-notes numérique", "Les meilleures tablettes E Ink pour annoter, surligner et commenter des PDF."),
-    ("/usages/lecture-et-prise-de-notes/", "Lire et prendre des notes avec une tablette E Ink", "Quelle tablette permet de lire et annoter efficacement ?"),
-    ("/usages/dessin/", "Dessiner avec un bloc-notes numérique", "Croquis, schémas et créativité : les meilleures tablettes E Ink pour dessiner."),
-    ("/usages/remplacer-cahiers-papier/", "Remplacer ses cahiers papier par un bloc-notes numérique", "Comment passer au zéro papier ? Notre guide pour choisir le bon outil."),
+    ("/usages/prise-de-notes-professionnelle/", "Bloc-notes numérique pour le travail : quels usages et critères ?", "Quand un bloc-notes numérique est-il pertinent au travail ? Workflow, critères, limites et alternatives avant de comparer les modèles."),
+    ("/usages/prise-de-notes-etudiant/", "Bloc-notes numérique pour les étudiants : usages, critères et limites", "Cours, PDF, révisions, organisation : dans quels cas un bloc-notes numérique est-il réellement adapté aux études ?"),
+    ("/usages/prise-de-notes-reunion/", "Prendre des notes en réunion avec un bloc-notes numérique", "Capture, suivi, recherche et partage : les critères qui déterminent si un bloc-notes numérique convient à vos réunions."),
+    ("/usages/annotation-pdf/", "Annoter des PDF sur une tablette E Ink : pour quels usages ?", "Évaluez si l'E Ink convient à vos PDF selon la taille, les formats, l'annotation, l'export et votre workflow documentaire."),
+    ("/usages/lecture-et-prise-de-notes/", "Lire et prendre des notes avec une tablette E Ink", "Liseuse à stylet, bloc-notes E Ink ou tablette classique : choisissez selon vos livres, PDF, annotations et besoins d'export."),
+    ("/usages/dessin/", "Dessiner sur une tablette E Ink : usages et limites", "Croquis, schémas, calques, couleur et export : quand une tablette E Ink convient-elle au dessin, et quand préférer une tablette graphique ?"),
+    ("/usages/remplacer-cahiers-papier/", "Remplacer ses cahiers papier par un bloc-notes numérique", "Quand le numérique simplifie-t-il vraiment la prise de notes ? Capture, classement, sauvegarde, export et limites d'un remplacement du papier."),
 ]
 
 for path, title, desc in USAGES:
     crumbs = breadcrumb(("Par usage", "/usages/"), title)
-    write(path + "index.html", content_page(title, desc, path, crumbs, "Guide"))
+    body = USAGE_CONTENT.get(path, "")
+    write(path + "index.html", content_page(title, desc, path, crumbs, "Guide", body))
 
 # ── GUIDES ────────────────────────────────────────────────────────────────────
 write("/guides/index.html", hub_page(

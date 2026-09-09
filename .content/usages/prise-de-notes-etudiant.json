@@ -1,0 +1,261 @@
+{
+  "slug": "prise-de-notes-etudiant",
+  "page_url": "/usages/prise-de-notes-etudiant/",
+  "status": "HUMAN_APPROVED",
+  "last_researched": "2026-09-09",
+  "intent": {
+    "primary_query": "bloc-notes numérique étudiant",
+    "dominant_intent": "Comprendre si un bloc-notes numérique convient aux études et quels critères changent selon les supports de cours.",
+    "reader_maturity": "Évaluation de catégorie avant comparatif étudiant",
+    "expected_outcome": "Identifier le workflow études/cours/PDF/révisions et les critères prioritaires.",
+    "semantic_variants": [
+      "bloc notes numérique étudiant",
+      "tablette e ink étudiant",
+      "prise de notes numérique études"
+    ],
+    "closest_comparison": "/comparatifs/bloc-notes-numerique-etudiant/",
+    "related_guides": [
+      "/guides/taille-ecran-bloc-notes-numerique/",
+      "/guides/prix-bloc-notes-numerique/",
+      "/guides/annoter-pdf-tablette-e-ink/",
+      "/guides/organiser-notes-numeriques/"
+    ],
+    "related_brand_pages": [],
+    "cannibalization_risks": [
+      "Ne pas classer les modèles étudiants",
+      "Ne pas devenir une page généraliste sur la prise de notes"
+    ]
+  },
+  "jtbd": {
+    "primary_job_statement": {
+      "circumstances": "Quand mes cours combinent notes manuscrites, supports PDF et révisions sur plusieurs mois",
+      "progress": "centraliser ce que j'écris et ce que je lis",
+      "outcome": "retrouver et réutiliser l'information au moment des révisions",
+      "evidence_class": "INFERRED"
+    },
+    "secondary_jobs": [
+      "annoter des supports",
+      "classer par cours",
+      "partager ou rendre un document"
+    ],
+    "functional_jobs": [
+      "prendre des notes",
+      "annoter",
+      "classer",
+      "retrouver",
+      "exporter"
+    ],
+    "emotional_jobs": [
+      {
+        "job": "avoir confiance dans la sauvegarde des notes",
+        "evidence_class": "HYPOTHESIS"
+      }
+    ],
+    "social_jobs": [
+      {
+        "job": "partager un document exploitable avec enseignant ou groupe",
+        "evidence_class": "INFERRED"
+      }
+    ],
+    "forces": {
+      "push": [
+        "cahiers dispersés",
+        "supports PDF séparés",
+        "ressaisie"
+      ],
+      "pull": [
+        "centralisation",
+        "annotation directe",
+        "recherche"
+      ],
+      "anxiety": [
+        "prix",
+        "compatibilité avec les cours",
+        "perte de notes"
+      ],
+      "habit": [
+        "papier",
+        "ordinateur",
+        "OneNote ou Goodnotes déjà installé"
+      ]
+    },
+    "current_hires": [
+      "cahiers papier",
+      "ordinateur portable",
+      "tablette LCD",
+      "OneNote",
+      "impression des PDF"
+    ],
+    "big_hire": [
+      "acheter un appareil dédié pour le semestre"
+    ],
+    "little_hire": [
+      "l'utiliser en cours",
+      "retrouver une note pour réviser",
+      "exporter un document"
+    ]
+  },
+  "workflow_map": [
+    {
+      "stage": "avant le cours",
+      "task": "importer un support",
+      "current_friction": "formats et plateformes multiples",
+      "failure_consequence": "support indisponible",
+      "helpful_capability": "import PDF/EPUB/cloud",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "pendant",
+      "task": "écrire et naviguer",
+      "current_friction": "zoom ou organisation",
+      "failure_consequence": "prise de notes ralentie",
+      "helpful_capability": "taille adaptée et navigation",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "stage": "révisions",
+      "task": "retrouver l'information",
+      "current_friction": "volume accumulé",
+      "failure_consequence": "temps perdu",
+      "helpful_capability": "dossiers/recherche/OCR",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "sortie",
+      "task": "partager ou sauvegarder",
+      "current_friction": "formats propriétaires",
+      "failure_consequence": "document inutilisable ailleurs",
+      "helpful_capability": "export PDF/texte/cloud",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "criteria": [
+    {
+      "criterion": "compatibilité avec les supports",
+      "priority": "MUST_HAVE",
+      "why_it_matters": "le dispositif doit ouvrir les documents réels du cursus",
+      "conditions": "PDF, EPUB, plateformes, DRM",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "taille d'écran",
+      "priority": "HIGH",
+      "why_it_matters": "impacte le zoom sur PDF et documents A4",
+      "conditions": "PDF fréquents",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "organisation/recherche",
+      "priority": "HIGH",
+      "why_it_matters": "le volume augmente sur le semestre",
+      "conditions": "plusieurs cours",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "coût total",
+      "priority": "HIGH",
+      "why_it_matters": "stylet, protection et abonnement peuvent modifier le budget",
+      "conditions": "budget contraint",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "applications tierces",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "certains cursus reposent sur OneNote ou outils spécifiques",
+      "conditions": "workflow déjà applicatif",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "solution_families": [
+    {
+      "family": "E Ink minimaliste",
+      "best_when": "écriture et lecture dominent",
+      "main_strength": "simplicité",
+      "main_friction": "applications limitées",
+      "avoid_when": "cours dépendant d'applications web"
+    },
+    {
+      "family": "E Ink ouvert",
+      "best_when": "applications/services tiers utiles",
+      "main_strength": "flexibilité",
+      "main_friction": "complexité et consommation accrues",
+      "avoid_when": "besoin uniquement de notes simples"
+    },
+    {
+      "family": "tablette LCD",
+      "best_when": "vidéo, couleur, collaboration, applications",
+      "main_strength": "polyvalence",
+      "main_friction": "moins spécialisée",
+      "avoid_when": "lecture/écriture quasi exclusives"
+    },
+    {
+      "family": "papier",
+      "best_when": "usage simple et budget minimal",
+      "main_strength": "immédiateté",
+      "main_friction": "recherche/partage",
+      "avoid_when": "fort besoin d'archive numérique"
+    }
+  ],
+  "contraindications": [
+    "plateformes interactives centrales",
+    "logiciels scientifiques/code",
+    "vidéo et multimédia fréquents",
+    "budget insuffisant pour la configuration complète"
+  ],
+  "evidence_ledger": [
+    {
+      "claim": "OneNote permet notes manuscrites, recherche et accès multi-appareils pour l'éducation",
+      "source": "https://www.microsoft.com/fr-be/education/products/onenote",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kobo distingue l'export des annotations selon EPUB et PDF",
+      "source": "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "Kindle Scribe peut écrire directement sur certains PDF et la méthode d'import compte",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/TWXpUGw76dtEg2VD9P",
+      "date_checked": "2026-09-09",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    }
+  ],
+  "editorial": {
+    "differentiation": "Partir du cycle d'un semestre plutôt que d'un persona étudiant générique.",
+    "opening_answer": "Pertinent si notes manuscrites, supports et révisions doivent être centralisés.",
+    "recommended_sections": [
+      "situations",
+      "workflow",
+      "critères",
+      "familles",
+      "surévalué",
+      "contre-indications",
+      "suite"
+    ],
+    "comparison_handoff": "/comparatifs/bloc-notes-numerique-etudiant/",
+    "guide_handoffs": [
+      "/guides/taille-ecran-bloc-notes-numerique/",
+      "/guides/prix-bloc-notes-numerique/"
+    ],
+    "excluded_claims": [
+      "meilleure mémorisation",
+      "moins de distraction pour tous les étudiants"
+    ]
+  },
+  "qa": {
+    "jtbd_without_product": true,
+    "circumstances_specific": true,
+    "alternatives_considered": true,
+    "criteria_derived_from_workflow": true,
+    "contraindications_present": true,
+    "no_product_ranking": true,
+    "hypotheses_labeled": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
+}
