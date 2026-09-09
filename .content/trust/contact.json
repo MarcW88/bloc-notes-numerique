@@ -1,0 +1,44 @@
+{
+  "slug": "contact",
+  "page_url": "/contact/",
+  "page_type": "CONTACT",
+  "status": "NEEDS_OWNER_INPUT",
+  "claims": [
+    {
+      "claim": "Canal de contact public du site.",
+      "evidence_level": "UNKNOWN",
+      "source": "",
+      "allowed_wording": "À compléter avec un canal confirmé.",
+      "blocked_wording": "Écrivez-nous à une adresse inventée ou non validée."
+    }
+  ],
+  "required_disclosures": [
+    "Signaler une erreur factuelle",
+    "Demander une correction",
+    "Exercer un droit de réponse",
+    "Proposer une source ou un produit",
+    "Question liée à l'affiliation",
+    "Problème technique",
+    "Contact professionnel"
+  ],
+  "unknowns": [
+    "Adresse email ou formulaire à utiliser",
+    "Délai de réponse que l'éditeur souhaite éventuellement annoncer",
+    "Canal spécifique pour les demandes professionnelles"
+  ],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": false,
+    "preserve_noindex": true
+  },
+  "qa": {
+    "claims_mapped": true,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": false,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}
