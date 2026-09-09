@@ -33,7 +33,7 @@ jobs:
         run: python apply_comparison_content.py
       - name: Generate comparison methodology files
         run: python generate_comparison_metadata.py
-      - name: Validate comparison cluster
+      - name: Validate implemented comparison pipeline
         run: python validate_comparisons.py
       - name: Commit generated comparison pages
         run: |
