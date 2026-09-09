@@ -1,39 +1,9 @@
 {
-  "slug": "remarkable-vs-boox",
-  "url": "/comparatifs/remarkable-vs-boox/",
-  "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "reMarkable vs BOOX",
-    "type": "head_to_head",
-    "user_job": "choisir entre un écosystème focalisé et une gamme E Ink Android ouverte",
-    "scope_note": "Comparaison marque-vs-marque, pas seulement Paper Pure vs Go 10.3."
-  },
-  "criteria": [
-    {"id": "focus", "label": "Focus et simplicité"},
-    {"id": "apps", "label": "Applications et ouverture"},
-    {"id": "frontlight", "label": "Éclairage frontal"},
-    {"id": "color", "label": "Couleur"},
-    {"id": "large_format", "label": "Grands formats"},
-    {"id": "cloud", "label": "Cloud et circulation des fichiers"}
-  ],
-  "brand_scope": {
-    "remarkable": ["Paper Pure", "Paper Pro", "Paper Pro Move"],
-    "boox": ["Go 10.3 Gen II", "Go 10.3 Gen II Lumi", "Note Air5 C", "Note Max", "Tab X C"]
-  },
-  "recommendation_logic": {
-    "remarkable": "à privilégier pour le focus, une interface cohérente et peu de réglages",
-    "boox": "à privilégier pour Android, Google Play, les apps, l'éclairage et les grands formats",
-    "universal_winner": false
-  },
-  "source_urls": [
-    "https://www.zdnet.fr/guide-achat/remarkable-paper-pure-vs-boox-go-10-3-lumi-2e-generation-quelle-tablette-choisir-pour-le-travail-496047.htm",
-    "https://ewritable.net/remarkable-vs-boox-which-are-the-best-e-ink-tablets/",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax"
-  ],
-  "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Verdict conditionnel par philosophie et gamme. Aucun score global ni gagnant universel. Les préférences de sensation d'écriture sont distinguées des spécifications."
+  "slug":"remarkable-vs-boox","url":"/comparatifs/remarkable-vs-boox/","researched_at":"2026-09-09","status":"READY_FOR_HUMAN_VALIDATION",
+  "intent":{"query":"reMarkable vs BOOX","type":"head_to_head","user_job":"choisir entre un écosystème focalisé et une gamme E Ink Android ouverte","scope_note":"Comparaison marque-vs-marque, pas seulement Paper Pure vs Go 10.3."},
+  "criteria":[{"id":"focus","label":"Focus et simplicité"},{"id":"apps","label":"Applications et ouverture"},{"id":"frontlight","label":"Éclairage frontal"},{"id":"color","label":"Couleur"},{"id":"large_format","label":"Grands formats"},{"id":"cloud","label":"Cloud et circulation des fichiers"}],
+  "brand_scope":{"remarkable":["Paper Pure","Paper Pro","Paper Pro Move"],"boox":["Go 10.3 Gen II","Go 10.3 Gen II Lumi","Note Air5 C","Note Max","Tab X C"]},
+  "recommendation_logic":{"remarkable":"à privilégier pour le focus, une interface cohérente et peu de réglages","boox":"à privilégier pour Android, Google Play, les apps, l'éclairage et les grands formats","universal_winner":false},
+  "source_urls":["https://www.zdnet.fr/guide-achat/remarkable-paper-pure-vs-boox-go-10-3-lumi-2e-generation-quelle-tablette-choisir-pour-le-travail-496047.htm","https://ewritable.net/remarkable-vs-boox-which-are-the-best-e-ink-tablets/","https://remarkable.com/fr-FR/shop/compare","https://shop.boox.com/products/go103gen2","https://shop.boox.com/products/noteair5c","https://shop.boox.com/products/notemax"],
+  "affiliate_commission_used_in_ranking":false,"methodology_note":"Verdict conditionnel par philosophie et gamme. Aucun score global ni gagnant universel. Les préférences de sensation d'écriture sont distinguées des spécifications."
 }
