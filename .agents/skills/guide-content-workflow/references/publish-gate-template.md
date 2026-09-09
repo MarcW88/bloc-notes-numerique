@@ -1,111 +1,122 @@
-# Rapport de contrôle avant publication
+# Rapport Guide — PUBLISH_REVIEW
+
+Ce rapport documente les contrôles réellement exécutés. Le validateur machine ne peut jamais remplir automatiquement les gates éditoriaux.
 
 ```yaml
 url:
 slug:
-brief_status: HUMAN_APPROVED
+audit_decision:
 draft_commit:
 reviewed_at:
-final_status: PASS | FAIL
+publish_review: PASS — READY_FOR_HUMAN_VALIDATION | FAIL — KEEP_NOINDEX
 indexing_status: noindex
 ```
 
-## 1. Content refresh adapté au neuf
+## 1. Intention et rôle
 
-- Éléments du brief conservés :
-- Lacunes corrigées :
-- Éléments supprimés ou différés et raison :
+- Question / tâche principale :
+- Type dominant : CHOICE / EXPLAINER / HOW_TO / HYBRID
+- Intention satisfaite : PASS/FAIL
+- Valeur propre de cette URL :
+- Frontière avec Guides voisins :
+- Frontière avec Usages / Comparatifs / Marques :
 
-## 2. Search intent
+## 2. Valeur existante et scope de correction
 
-- Intention et requête :
-- Fonction de la page :
-- Réponse principale suffisamment précoce : PASS/FAIL
-- Cannibalisation :
+- Éléments demandés à préserver par l’AUDIT :
+- Éléments effectivement préservés :
+- Corrections réalisées :
+- Suppressions ou changements structurants et justification :
 
-## 3. Affiliate value
+## 3. Fact-check et fraîcheur
 
-- Utile sans liens affiliés : PASS/FAIL/NON APPLICABLE
-- Critères, limites et alternatives :
-- Niveau de preuve des recommandations :
+| Affirmation / étape | Statut | Source | Date | Correction / limite |
+|---|---|---|---|---|
 
-## 4. Fact-check
+- Claims instables revérifiés actuellement : PASS/FAIL/NON APPLICABLE
+- Inconnues correctement qualifiées : PASS/FAIL
+- Faux hands-on absent : PASS/FAIL
 
-| Affirmation | Statut | Source | Correction |
-|---|---|---|---|
+## 4. Intégrité Guide
 
-Confiance globale :
+### CHOICE si applicable
+- Critères qui changent réellement la décision :
+- Compromis / critères éliminatoires :
+- Absence de ranking produit déguisé : PASS/FAIL
 
-## 5. Natural writing
+### EXPLAINER si applicable
+- Mécanisme correctement expliqué : PASS/FAIL
+- Conséquence pratique visible : PASS/FAIL
+- Limites / exceptions importantes :
 
-- Passages modifiés :
-- Faits et intention préservés : PASS/FAIL
+### HOW_TO si applicable
+- Prérequis et contexte vérifiés : PASS/FAIL
+- Étapes importantes vérifiées : PASS/FAIL
+- Variantes de version / plateforme correctement séparées : PASS/FAIL/NON APPLICABLE
+- Résultat et limites :
+
+## 5. Affiliate value
+
+- Applicable : OUI/NON
+- Page utile sans liens affiliés : PASS/FAIL/NON APPLICABLE
+- Valeur au-delà d’une source marchande :
+- Limites / alternatives préservées :
 
 ## 6. Internal linking
 
-| Source | Cible | Ancre | Région | Statut |
+| Cible | Ancre | Question suivante résolue | Statut |
+|---|---|---|---|
+
+- Aucun quota utilisé comme proxy : PASS/FAIL
+
+## 7. Humanizer / General writing
+
+- Patterns réellement corrigés :
+- Faits, preuves et intention préservés : PASS/FAIL
+- Nouveau fait introduit après fact-check : OUI/NON
+- Si OUI, repassé par fact-check : PASS/FAIL
+
+## 8. Anti-AI-slop et cluster
+
+| Fragment / structure | Pattern | Gravité | Correction | Statut |
 |---|---|---|---|---|
 
-## 7. Humanizer
+- Architecture justifiée par cette page : PASS/FAIL
+- Clonage structurel substantiel avec les guides voisins : OUI/NON
+- Références CHOICE / EXPLAINER / HOW_TO utilisées comme template : OUI/NON
 
-- Patterns constatés :
-- Corrections :
-- Dépendances appliquées : better-usage / academic-voice / writing-cadence / non-autoregressive-writing-pass
+## 9. SEO et technique
 
-## 8. General writing
+- Title / H1 / intention : PASS/FAIL
+- Canonical : PASS/FAIL
+- Robots : PASS/FAIL
+- Liens / ancres : PASS/FAIL
+- Schema honnête : PASS/FAIL/NON APPLICABLE
+- `python3 validate_guide_quality.py` : PASS/FAIL
 
-- Cohérence globale :
-- Titres, transitions et rythme :
+## 10. Editorial QA
 
-## 9. Anti-AI-slop
-
-| Fragment précis | Pattern | Gravité | Correction | Statut |
-|---|---|---|---|---|
-
-## 10. SEO drift
-
-- Brief vs premier brouillon :
-- Premier brouillon vs version finale :
-- Suppressions expliquées : PASS/FAIL
-
-## 11. SEO technique
-
-- Canonical :
-- Robots :
-- HTML et titres :
-- Liens :
-- Données structurées :
-
-## 12. SEO éditorial
-
-- Title/H1/intention :
-- Structure et couverture :
-- Sur-optimisation :
-
-## 13. GEO
-
-- Réponse autonome :
-- Extractibilité :
-- Entités et sources :
-
-## 14. Editorial QA
-
-- Intent : PASS/FAIL
-- Original affiliate value : PASS/FAIL
+- Intent / task completion : PASS/FAIL
+- Original value : PASS/FAIL
 - Factuality : PASS/FAIL
 - Natural language : PASS/FAIL
 - SEO preservation : PASS/FAIL
 - User usefulness : PASS/FAIL
 
-## 15. Lecture en ordre rendu
+## 11. Lecture en ordre rendu
 
 - Desktop : PASS/FAIL/NON DISPONIBLE
 - Mobile : PASS/FAIL/NON DISPONIBLE
-- Contradictions ou ruptures restantes :
+- Contradictions, répétitions ou ruptures restantes :
 
 ## Verdict
 
-`PASS` ou `FAIL`
+Retourner exactement l’un des deux statuts :
+
+`PASS — READY_FOR_HUMAN_VALIDATION`
+
+ou
+
+`FAIL — KEEP_NOINDEX`
 
 Blockers ou risques résiduels :
-```
