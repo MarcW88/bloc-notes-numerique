@@ -1,57 +1,69 @@
 ---
 url: /guides/ocr-manuscrit/
 slug: ocr-manuscrit
-status: DRAFT_READY
+status: READY_FOR_HUMAN_VALIDATION
 guide_type: explainer
 primary_keyword: OCR manuscrit tablette
 search_intent: distinguer conversion, recherche manuscrite et PDF recherchable
 audience: utilisateur qui veut exploiter son écriture comme texte
-last_researched: 2026-09-08
-refresh_level: new
+last_researched: 2026-09-09
+refresh_level: light_update
 ---
 
 ## Décision éditoriale
 
 - Question centrale : distinguer conversion, recherche manuscrite et PDF recherchable.
-- Valeur propre : comparer les fonctions OCR par résultat concret et conditions d'usage.
-- Traitement : Contenu neuf : aucune expérience produit simulée.
-- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
+- Valeur propre : expliquer les fonctions de reconnaissance par résultat concret et conditions d’usage, sans transformer la page en comparatif de marques.
+- Traitement : `LIGHT_UPDATE` après `guide-analysis-workflow / AUDIT`.
+- Hors périmètre : classement produit, pseudo-test, affirmation d’expérience directe ou donnée instable sans source.
 
 ## Demande, intention et SERP
 
-La page doit satisfaire une intention dominante de type `explainer`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
+La page satisfait une intention dominante `EXPLAINER`. Elle répond à « quelle fonction de reconnaissance me faut-il et qu’est-ce que le résultat permet réellement de faire ? ». Le workflow complet de transformation d’une note manuscrite en fichier exploitable reste sur `/guides/convertir-notes-manuscrites-en-texte/`.
 
 ## Entités à expliciter
 
-OCR, handwriting recognition, TXT, DOCX, PDF recherchable, reMarkable, Supernote, BOOX, Kobo, Kindle Scribe.
+OCR, handwriting recognition / HTR, conversion, recherche manuscrite, TXT, DOCX, PDF recherchable, reMarkable, Supernote, BOOX, Kobo, Kindle Scribe.
 
 ## Registre de preuves
 
-- reMarkable conversion: https://support.remarkable.com/articles/Knowledge/Convert-handwritten-notes-into-text
-- Supernote recognition: https://support.supernote.com/handwriting-recognition
-- BOOX handwriting: https://help.boox.com/hc/en-us/articles/10701578837268-Handwritten-Notes
-- Kobo notebooks: https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet
-- Amazon recognition: https://digprjsurvey.amazon.com/csad/help/node/TWTo0OyovlJ9jwOV0B
+- reMarkable conversion : https://support.remarkable.com/articles/Knowledge/Convert-handwritten-notes-into-text
+- Supernote recognition : https://support.supernote.com/en_US/Tools-Features/handwriting-recognition
+- BOOX handwriting : https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes
+- Kobo notebooks : https://help.kobo.com/hc/en-us/articles/360062226733-Use-your-Kobo-eReader-as-a-notebook
+- Amazon share/search : https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs et https://digprjsurvey.amazon.com/csad/help/node/TXEroxFZdxObrcesZO
 
-Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
+Les fonctions Kindle de recherche manuscrite et certains scénarios de PDF recherchable sont qualifiés pour les Kindle Scribe sortis en 2025 ou après. Les sensations d’écriture, taux de précision et performances comparatives ne sont pas inventés.
 
-## Architecture validée
+## Architecture finale
 
-- Réponse autonome dans les premières phrases.
-- H2 : trois fonctions;  approches fabricants;  précision;  connexion;  test.
-- Tableau ou procédure uniquement lorsqu'il améliore la décision.
-- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
-- Section Sources visible.
+La structure est dérivée de la décision pédagogique :
+
+- distinguer les trois sorties principales ;
+- expliquer les conditions de traitement ;
+- utiliser les marques comme exemples de fonctions, pas comme architecture de comparaison ;
+- expliquer les limites de précision ;
+- proposer un test représentatif ;
+- établir la frontière avec le guide de conversion.
+
+Aucun nombre de sections n’est considéré comme obligatoire.
 
 ## Content refresh / différenciation
 
-- Niveau : `new`.
-- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
-- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
-- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+- Conservation : distinction conversion / recherche / PDF recherchable, limites de précision, sources officielles et logique de test.
+- Ajout : nuance OCR vs reconnaissance manuscrite, qualification Kindle 2025+, frontière explicite avec le guide de conversion.
+- Restructuration : suppression de la succession de sections organisées par marque au profit d’un raisonnement organisé par fonction.
+
+## PUBLISH_REVIEW
+
+Résultat du 9 septembre 2026 :
+
+`PASS — READY_FOR_HUMAN_VALIDATION`
+
+Rapport : `.content/reviews/guide-publish-review-ocr-manuscrit-2026-09-09.md`.
 
 ## Risques
 
-précision variable avec écriture/langue ; ne pas promettre un taux de reconnaissance.
+Les fonctions logicielles et cloud restent évolutives et devront être revérifiées lors d’une mise à jour future.
 
-`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
+`noindex,follow` reste actif jusqu’à validation humaine et instruction explicite d’indexation.
