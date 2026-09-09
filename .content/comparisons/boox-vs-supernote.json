@@ -1,40 +1,9 @@
 {
-  "slug": "boox-vs-supernote",
-  "url": "/comparatifs/boox-vs-supernote/",
-  "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "BOOX vs Supernote",
-    "type": "head_to_head",
-    "user_job": "choisir entre une tablette E Ink Android ouverte et un carnet spécialisé dans l'organisation manuscrite"
-  },
-  "criteria": [
-    {"id": "apps", "label": "Applications Android"},
-    {"id": "note_networking", "label": "Organisation et mise en réseau des notes"},
-    {"id": "open_workflow", "label": "Ouverture des fichiers et services"},
-    {"id": "color", "label": "Couleur"},
-    {"id": "frontlight", "label": "Éclairage frontal"},
-    {"id": "large_format", "label": "Grands formats"},
-    {"id": "simplicity", "label": "Simplicité et focus"}
-  ],
-  "brand_scope": {
-    "boox": ["Go 10.3 Gen II / Lumi", "Note Air5 C", "Note Max", "Tab X C"],
-    "supernote": ["Manta", "Nomad"]
-  },
-  "recommendation_logic": {
-    "boox": "dès qu'une app, la couleur, un 13,3 pouces ou un front light est non négociable",
-    "supernote": "lorsque le cœur du besoin est un système manuscrit structuré, focalisé et sans abonnement constructeur",
-    "universal_winner": false
-  },
-  "source_urls": [
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://supernote.com/pages/supernote-manta",
-    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
-    "https://ewritable.net/brands/boox/tablets/boox-go-10-3-gen-2/",
-    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"
-  ],
-  "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Comparaison de philosophies et de gammes. Aucun score global. Les avantages Android et les fonctions Supernote sont reliés à des cas d'usage explicites."
+  "slug":"boox-vs-supernote","url":"/comparatifs/boox-vs-supernote/","researched_at":"2026-09-09","status":"READY_FOR_HUMAN_VALIDATION",
+  "intent":{"query":"BOOX vs Supernote","type":"head_to_head","user_job":"choisir entre une tablette E Ink Android ouverte et un carnet spécialisé dans l'organisation manuscrite"},
+  "criteria":[{"id":"apps","label":"Applications Android"},{"id":"note_networking","label":"Organisation et mise en réseau des notes"},{"id":"open_workflow","label":"Ouverture des fichiers et services"},{"id":"color","label":"Couleur"},{"id":"frontlight","label":"Éclairage frontal"},{"id":"large_format","label":"Grands formats"},{"id":"simplicity","label":"Simplicité et focus"}],
+  "brand_scope":{"boox":["Go 10.3 Gen II / Lumi","Note Air5 C","Note Max","Tab X C"],"supernote":["Manta","Nomad"]},
+  "recommendation_logic":{"boox":"dès qu'une app, la couleur, un 13,3 pouces ou un front light est non négociable","supernote":"lorsque le cœur du besoin est un système manuscrit structuré, focalisé et sans abonnement constructeur","universal_winner":false},
+  "source_urls":["https://shop.boox.com/products/go103gen2","https://shop.boox.com/products/noteair5c","https://shop.boox.com/products/notemax","https://supernote.com/pages/supernote-manta","https://supernote.com/pages/note-system-everything-you-need-to-stay-organized","https://ewritable.net/brands/boox/tablets/boox-go-10-3-gen-2/","https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"],
+  "affiliate_commission_used_in_ranking":false,"methodology_note":"Comparaison de philosophies et de gammes. Aucun score global. Les avantages Android et les fonctions Supernote sont reliés à des cas d'usage explicites."
 }
