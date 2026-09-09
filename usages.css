@@ -1,0 +1,311 @@
+/* ============================================================
+   USAGE PAGES — editorial refinements
+   Loaded only when site.js detects a /usages/ canonical URL.
+   ============================================================ */
+
+/* Hero: keep the taxonomy calm and the reading measure editorial. */
+html.usage-page .page-hero {
+  padding: 48px 0 40px;
+}
+html.usage-page .page-hero h1 {
+  max-width: 900px;
+  letter-spacing: -0.015em;
+}
+html.usage-page .page-hero .lead {
+  max-width: 800px;
+}
+html.usage-page .page-hero .content-type.type-usage,
+html.usage-page .page-hero .content-type.type-guide {
+  margin-bottom: 12px;
+  padding: 0 0 0 9px;
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-primary);
+}
+
+/* Usage pages explain a workflow: links must remain clearly actionable. */
+html.usage-page .content-main a:not(.btn) {
+  color: var(--color-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+html.usage-page .content-main a:not(.btn):hover {
+  color: #3f5145;
+  text-decoration-color: currentColor;
+}
+html.usage-page .content-main .comp-table a:not(.btn) {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* The opening answer is a diagnostic anchor, not another paragraph. */
+html.usage-page .content-main .article-answer {
+  position: relative;
+  margin: 0 0 32px;
+  padding: 43px 22px 18px;
+  background: #FDFCF7;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.72;
+}
+html.usage-page .content-main .article-answer::before {
+  content: "Le point de départ";
+  position: absolute;
+  top: 15px;
+  left: 22px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* Reading rhythm: slightly tighter than the generic shell. */
+html.usage-page .content-main h2 {
+  margin: 38px 0 14px;
+}
+html.usage-page .content-main h3 {
+  margin: 26px 0 10px;
+}
+
+/* Tables are supporting decision tools rather than the visual centre of the page. */
+html.usage-page .content-main .table-wrapper {
+  margin: 22px 0 30px;
+  border-radius: var(--radius-sm);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+html.usage-page .content-main .table-wrapper:first-of-type {
+  border-top: 3px solid var(--color-primary);
+}
+html.usage-page .content-main .table-wrapper:first-of-type .comp-table td:first-child {
+  font-weight: 600;
+}
+html.usage-page .content-main .comp-table th {
+  letter-spacing: 0.035em;
+}
+
+/* Desktop TOC: fit within the viewport and show the current section. */
+html.usage-page .sidebar-toc {
+  max-height: calc(100vh - var(--header-h) - 210px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+html.usage-page .sidebar-toc a.is-active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ============================================================
+   USAGE HUB
+   Existing links are reused; hierarchy comes from layout only.
+   ============================================================ */
+html.usage-hub-page .page-hero {
+  padding-bottom: 34px;
+}
+html.usage-hub-page .section {
+  padding-top: 42px;
+}
+html.usage-hub-page .hub-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+}
+html.usage-hub-page .hub-link {
+  position: relative;
+  min-height: 66px;
+}
+
+/* Context-led jobs: work, studies and meetings. */
+html.usage-hub-page .hub-link:first-child,
+html.usage-hub-page .hub-link:nth-child(2) {
+  margin-top: 34px;
+}
+html.usage-hub-page .hub-link:first-child::before {
+  content: "Selon votre contexte";
+  position: absolute;
+  top: -27px;
+  left: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+html.usage-hub-page .hub-link:nth-child(3) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 9px);
+}
+
+/* Workflow-led jobs: reading and drawing. */
+html.usage-hub-page .hub-link:nth-child(4),
+html.usage-hub-page .hub-link:nth-child(5) {
+  margin-top: 38px;
+}
+html.usage-hub-page .hub-link:nth-child(4)::before {
+  content: "Selon votre workflow";
+  position: absolute;
+  top: -31px;
+  left: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Migration away from paper is a separate decision, not another context card. */
+html.usage-hub-page .hub-link:nth-child(6) {
+  grid-column: 1 / -1;
+  margin-top: 38px;
+  min-height: 92px;
+  padding: 40px 24px 20px;
+  border-left: 4px solid var(--color-primary);
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  box-shadow: none;
+}
+html.usage-hub-page .hub-link:nth-child(6)::before {
+  content: "Changer de système";
+  position: absolute;
+  top: 15px;
+  left: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  html.usage-page .content-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  html.usage-page .content-sidebar {
+    position: static;
+    order: -1;
+  }
+
+  /* Navigation belongs before the article; affiliation/CTA should not interrupt it. */
+  html.usage-page .content-sidebar > .sidebar-box:not(.sidebar-toc),
+  html.usage-page .content-sidebar > .btn {
+    display: none;
+  }
+  html.usage-page .sidebar-toc {
+    max-height: 250px;
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    overflow-y: auto;
+  }
+  html.usage-page .sidebar-toc h4 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  html.usage-page .page-hero {
+    padding: 38px 0 30px;
+  }
+  html.usage-page .content-layout {
+    padding: 28px 0 48px;
+  }
+  html.usage-page .content-main .article-answer {
+    margin-bottom: 26px;
+    padding: 41px 16px 15px 18px;
+  }
+  html.usage-page .content-main .article-answer::before {
+    left: 18px;
+    top: 14px;
+  }
+  html.usage-page .content-main h2 {
+    margin-top: 32px;
+  }
+
+  /* Mobile TOC: keep only H2s so navigation remains a useful preview. */
+  html.usage-page .sidebar-toc {
+    grid-template-columns: 1fr;
+    max-height: 230px;
+  }
+  html.usage-page .sidebar-toc a.toc-level-3 {
+    display: none;
+  }
+
+  /* Horizontal tables should advertise the gesture and preserve the decision column. */
+  html.usage-page .content-main .table-wrapper::before {
+    content: "Balayez horizontalement pour voir tout le tableau →";
+    display: block;
+    position: sticky;
+    left: 0;
+    width: min(100%, 360px);
+    padding: 8px 12px;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+  html.usage-page .content-main .comp-table {
+    min-width: 620px;
+  }
+  html.usage-page .content-main .comp-table th {
+    white-space: normal;
+    line-height: 1.35;
+  }
+  html.usage-page .content-main .comp-table th:first-child,
+  html.usage-page .content-main .comp-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 135px;
+    background: var(--color-white);
+    box-shadow: 8px 0 12px -12px rgba(32, 35, 33, 0.35);
+  }
+  html.usage-page .content-main .comp-table th:first-child {
+    z-index: 2;
+    background: var(--color-bg-alt);
+  }
+
+  /* Hub: retain the hierarchy while collapsing to one reading column. */
+  html.usage-hub-page .hub-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  html.usage-hub-page .hub-link:first-child {
+    margin-top: 34px;
+  }
+  html.usage-hub-page .hub-link:nth-child(2),
+  html.usage-hub-page .hub-link:nth-child(3),
+  html.usage-hub-page .hub-link:nth-child(5) {
+    margin-top: 0;
+  }
+  html.usage-hub-page .hub-link:nth-child(3) {
+    grid-column: auto;
+    max-width: none;
+  }
+  html.usage-hub-page .hub-link:nth-child(4) {
+    margin-top: 38px;
+  }
+  html.usage-hub-page .hub-link:nth-child(6) {
+    grid-column: auto;
+    min-height: 88px;
+    padding: 39px 20px 18px;
+  }
+  html.usage-hub-page .hub-link:nth-child(6)::before {
+    left: 20px;
+  }
+}
