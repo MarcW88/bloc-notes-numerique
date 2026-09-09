@@ -49,8 +49,33 @@ Pour toute création ou réécriture sous `/usages/` :
 
 ## Production éditoriale — Comparatifs
 
-- Pour les comparatifs, utiliser `.agents/skills/comparison-content-workflow/SKILL.md` et conserver la logique critères → preuves → scoring → classement.
-- Ne jamais faire varier une recommandation, un score ou un classement en fonction d’une commission d’affiliation.
+Pour toute URL sous `/comparatifs/`, il n’existe que deux workflows comparison à choisir :
+
+1. **Analyser / auditer** : `.agents/skills/comparison-analysis-workflow/SKILL.md`.
+2. **Créer / réécrire** : `.agents/skills/comparison-content-workflow/SKILL.md`.
+
+Les skills transversaux appelés par ces workflows (`content-audit`, `search-intent`, `jobs-to-be-done`, `affiliate-value`, `fact-check`, `evidence-based-reviews`, `humanizer`, `general-writing`, `anti-ai-slop`, etc.) sont des briques internes. Ne pas créer un nouveau workflow comparatif lorsqu’un de ces skills couvre déjà l’étape.
+
+### Règles obligatoires
+
+1. Une page existante doit passer par `comparison-analysis-workflow` en mode `AUDIT` avant une réécriture substantielle.
+2. Déterminer le type `BEST_OVERALL`, `USE_CASE`, `BUDGET`, `FEATURE_SPECIFIC` ou `HEAD_TO_HEAD`, mais utiliser ce type uniquement comme grille méthodologique. **Le type de comparatif ne doit jamais imposer un plan, un ordre de sections, un nombre de H2/H3, un tableau, une FAQ ou des fiches produits symétriques.**
+3. Respecter la chaîne décisionnelle : intention → univers produit → équivalence → preuves → critères → hard gates → pondération/TSC si pertinents → scoring → ranking → plan → rédaction.
+4. Les critères et poids sont définis avant le gagnant. Ils ne peuvent pas être modifiés pour produire un classement souhaité.
+5. Toute exclusion de produit doit être documentée. Aucun produit n'est inclus ou favorisé parce qu'il possède un meilleur lien ou une meilleure commission d'affiliation.
+6. Utiliser des sources fiables et actuelles. Les specs reposent d'abord sur le fabricant/documentation ; les jugements d'usage nécessitent des sources indépendantes ou des patterns suffisamment documentés.
+7. Ne jamais remplir un trou de preuve avec la connaissance du modèle. Une information reste `UNKNOWN`, est qualifiée ou est supprimée.
+8. Le scoring doit être auditable : chaque note importante possède une justification et un niveau de preuve. Une spec ne devient pas automatiquement une preuve d'expérience d'usage.
+9. Utiliser les hard gates lorsque l'intention comporte une contrainte éliminatoire. Un produit qui échoue un besoin essentiel ne peut pas gagner par simple moyenne.
+10. Comparer le coût de la configuration réellement utilisable lorsque le prix change la décision. Ne pas comparer un appareil nu à un bundle complet sans le signaler.
+11. Le #1 doit expliquer ce qu'il gagne et ce qu'il ne gagne pas. Un `HEAD_TO_HEAD` peut avoir un verdict conditionnel plutôt qu'un gagnant absolu.
+12. Comparer la structure et la méthode aux comparatifs voisins : réutiliser sans justification les mêmes critères, poids, ordre de produits ou architecture sur des intentions différentes est un signal de production industrialisée et peut imposer `DEEP_REWRITE`.
+13. La page doit rester utile si tous les liens affiliés disparaissent. Les défauts significatifs du gagnant ne doivent pas être masqués.
+14. Après rédaction, exécuter la chaîne définie dans `comparison-content-workflow`, puis `comparison-analysis-workflow` en mode `PUBLISH_REVIEW`.
+15. `validate_comparisons.py` contrôle uniquement les blockers détectables automatiquement. Un PASS machine ne signifie jamais que le ranking ou la page sont publiables.
+16. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION`. Un seul blocker maintient la page en `noindex,follow`.
+17. Ne retirer `noindex` qu’après validation humaine explicite **et** instruction explicite de rendre la page indexable.
+18. Aucun quota de mots, H2/H3, tableaux ou liens internes ne peut servir de proxy de qualité.
 
 ## Production éditoriale — Pages marques
 
