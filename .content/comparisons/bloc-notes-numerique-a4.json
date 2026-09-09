@@ -1,271 +1,42 @@
 {
   "slug": "bloc-notes-numerique-a4",
   "url": "/comparatifs/bloc-notes-numerique-a4/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "meilleur bloc-notes numérique A4",
     "type": "feature_specific",
-    "user_job": "lire et annoter de grands PDF avec le moins de zoom possible"
+    "user_job": "lire et annoter des documents A4 avec le moins de zoom possible",
+    "scope_note": "Le comparatif distingue les vrais grands formats 13,3 pouces des compromis 10 à 11,8 pouces."
   },
   "criteria": [
-    {
-      "id": "large",
-      "label": "large",
-      "weight": 35
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 25
-    },
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 15
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 10
-    },
-    {
-      "id": "cost",
-      "label": "cost",
-      "weight": 10
-    },
-    {
-      "id": "portability",
-      "label": "portability",
-      "weight": 5
-    }
+    {"id": "screen_surface", "label": "Surface utile pour documents A4"},
+    {"id": "pdf_legibility", "label": "Lisibilité et annotation PDF"},
+    {"id": "frontlight", "label": "Éclairage frontal lorsque nécessaire"},
+    {"id": "color_when_useful", "label": "Couleur lorsque le document en dépend"},
+    {"id": "portability", "label": "Poids et mobilité"},
+    {"id": "file_workflow", "label": "Entrée, annotation et sortie des fichiers"}
   ],
-  "product_universe": [
-    {
-      "id": "boox_notemax",
-      "name": "BOOX Note Max",
-      "status": "ELIGIBLE",
-      "source": "https://shop.boox.com/products/notemax",
-      "price_snapshot": "599,99 $ US sur la boutique consultée"
-    },
-    {
-      "id": "remarkable_pro",
-      "name": "reMarkable Paper Pro",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
-      "price_snapshot": "à partir de 649 €"
-    },
-    {
-      "id": "supernote_manta",
-      "name": "Supernote Manta",
-      "status": "ELIGIBLE",
-      "source": "https://supernote.com/products/supernote-manta",
-      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
-    },
-    {
-      "id": "kindle_scribe3",
-      "name": "Kindle Scribe (3e génération)",
-      "status": "ELIGIBLE",
-      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-      "price_snapshot": "prix à vérifier sur Amazon"
-    },
-    {
-      "id": "kobo_elipsa",
-      "name": "Kobo Elipsa 2E",
-      "status": "ELIGIBLE",
-      "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-      "price_snapshot": "399,99 €"
-    }
+  "candidate_scope": [
+    {"name": "BOOX Note Max", "role": "choix par défaut noir et blanc 13,3 pouces", "source": "https://shop.boox.com/products/notemax"},
+    {"name": "BOOX Tab X C", "role": "choix 13,3 pouces couleur avec éclairage", "source": "https://shop.boox.com/products/tabxc"},
+    {"name": "Fujitsu Quaderno A4 Gen.3C", "role": "spécialiste PDF A4 à disponibilité régionale", "source": "https://sdmgr.fmworld.net/digital-paper/product.html"},
+    {"name": "reMarkable Paper Pro", "role": "compromis 11,8 pouces plus mobile", "source": "https://remarkable.com/products/remarkable-paper/pro"}
   ],
-  "scores": {
-    "boox_notemax": {
-      "large": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for large."
-      },
-      "pdf": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for pdf."
-      },
-      "writing": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for writing."
-      },
-      "export": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for cost."
-      },
-      "portability": {
-        "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for portability."
-      }
-    },
-    "remarkable_pro": {
-      "large": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for large."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
-      },
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
-      },
-      "portability": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for portability."
-      }
-    },
-    "supernote_manta": {
-      "large": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for large."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
-      },
-      "writing": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
-      },
-      "export": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
-      },
-      "portability": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for portability."
-      }
-    },
-    "kindle_scribe3": {
-      "large": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for large."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for portability."
-      }
-    },
-    "kobo_elipsa": {
-      "large": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for large."
-      },
-      "pdf": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for portability."
-      }
-    }
+  "recommendation_logic": {
+    "default": "BOOX Note Max pour des PDF A4 monochromes réguliers",
+    "conditional": [
+      "BOOX Tab X C si couleur et front light sont décisionnels",
+      "Fujitsu Quaderno A4 si le workflow est presque exclusivement PDF et que l'achat/import est acceptable",
+      "reMarkable Paper Pro si 11,8 pouces suffisent et que le focus compte davantage que le vrai format 13,3 pouces"
+    ]
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "boox_notemax",
-      "score": 8.85
-    },
-    {
-      "rank": 2,
-      "product_id": "supernote_manta",
-      "score": 8.7
-    },
-    {
-      "rank": 3,
-      "product_id": "remarkable_pro",
-      "score": 8.2
-    },
-    {
-      "rank": 4,
-      "product_id": "kindle_scribe3",
-      "score": 7.6
-    },
-    {
-      "rank": 5,
-      "product_id": "kobo_elipsa",
-      "score": 7.55
-    }
+  "source_urls": [
+    "https://shop.boox.com/products/notemax",
+    "https://shop.boox.com/products/tabxc",
+    "https://sdmgr.fmworld.net/digital-paper/product.html",
+    "https://remarkable.com/products/remarkable-paper/pro"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk research. Aucun scoring numérique n'est utilisé. La recommandation dépend d'abord de la surface réelle, du type de document et des contraintes de mobilité. Aucun test physique propriétaire n'est revendiqué."
 }
