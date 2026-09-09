@@ -2,38 +2,12 @@
   "slug": "bloc-notes-numerique-pas-cher",
   "url": "/comparatifs/bloc-notes-numerique-pas-cher/",
   "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "meilleur bloc-notes numérique pas cher",
-    "type": "budget",
-    "user_job": "obtenir une configuration réellement utilisable pour lire et écrire avec un budget contenu",
-    "scope_note": "Comparer le panier utilisable plutôt que le prix nu de la tablette."
-  },
-  "criteria": [
-    {"id": "usable_configuration_cost", "label": "Coût de la configuration utilisable"},
-    {"id": "stylus_included", "label": "Stylet inclus ou coût à ajouter"},
-    {"id": "reading", "label": "Lecture et PDF"},
-    {"id": "note_depth", "label": "Profondeur des fonctions de notes"},
-    {"id": "region_bundle_clarity", "label": "Clarté du prix, taxes et bundle"}
-  ],
-  "candidate_scope": [
-    {"name": "PocketBook InkPad One", "role": "prix européen le plus bas repéré pour 10,3 pouces + stylet", "source": "https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one"},
-    {"name": "reMarkable Paper Pure", "role": "meilleure valeur écriture autour de 400 €", "source": "https://remarkable.com/fr-FR/shop/compare"},
-    {"name": "Kobo Elipsa 2E", "role": "option lecture Kobo à bundle à vérifier", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"},
-    {"name": "BOOX Go 10.3 Gen II", "role": "option Android au prix régional à vérifier", "source": "https://shop.boox.com/products/go103gen2"}
-  ],
-  "recommendation_logic": {
-    "lowest_current_eu": "PocketBook InkPad One à 329 € avec stylet inclus",
-    "writing_first_value": "reMarkable Paper Pure à partir de 399 € avec Marker inclus",
-    "caveats": ["Kobo: vérifier le bundle réel du stylet", "BOOX: vérifier prix européen, taxes et livraison"]
-  },
-  "source_urls": [
-    "https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one",
-    "https://www.connect.de/testbericht/pocketbook-inkpad-one-test-ereader-review-3213274.html",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-    "https://shop.boox.com/products/go103gen2"
-  ],
+  "status": "READY_FOR_HUMAN_VALIDATION",
+  "intent": {"query":"meilleur bloc-notes numérique pas cher","type":"budget","user_job":"obtenir une configuration réellement utilisable pour lire et écrire avec un budget contenu","scope_note":"Comparer le panier utilisable plutôt que le prix nu de la tablette."},
+  "criteria": [{"id":"usable_configuration_cost","label":"Coût de la configuration utilisable"},{"id":"stylus_included","label":"Stylet inclus ou coût à ajouter"},{"id":"reading","label":"Lecture et PDF"},{"id":"note_depth","label":"Profondeur des fonctions de notes"},{"id":"region_bundle_clarity","label":"Clarté du prix, taxes et bundle"}],
+  "candidate_scope": [{"name":"PocketBook InkPad One","role":"prix européen le plus bas repéré pour 10,3 pouces + stylet","source":"https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one"},{"name":"reMarkable Paper Pure","role":"meilleure valeur écriture autour de 400 €","source":"https://remarkable.com/fr-FR/shop/compare"},{"name":"Kobo Elipsa 2E","role":"option lecture Kobo à bundle à vérifier","source":"https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"},{"name":"BOOX Go 10.3 Gen II","role":"option Android au prix régional à vérifier","source":"https://shop.boox.com/products/go103gen2"}],
+  "recommendation_logic": {"lowest_current_eu":"PocketBook InkPad One à 329 € avec stylet inclus","writing_first_value":"reMarkable Paper Pure à partir de 399 € avec Marker inclus","caveats":["Kobo: vérifier le bundle réel du stylet","BOOX: vérifier prix européen, taxes et livraison"]},
+  "source_urls": ["https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one","https://www.connect.de/testbericht/pocketbook-inkpad-one-test-ereader-review-3213274.html","https://remarkable.com/fr-FR/shop/compare","https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e","https://shop.boox.com/products/go103gen2"],
   "affiliate_commission_used_in_ranking": false,
   "methodology_note": "Budget évalué sur une configuration utilisable. Les prix sont des snapshots et les bundles/taxes doivent être revérifiés au moment de l'achat. Aucun scoring numérique."
 }
