@@ -2,43 +2,12 @@
   "slug": "bloc-notes-numerique-sans-abonnement",
   "url": "/comparatifs/bloc-notes-numerique-sans-abonnement/",
   "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "meilleur bloc-notes numérique sans abonnement",
-    "type": "feature_specific",
-    "user_job": "conserver les fonctions importantes sans paiement mensuel obligatoire",
-    "scope_note": "Distinguer fonctionnement de l'appareil, cloud gratuit et services premium facultatifs."
-  },
-  "criteria": [
-    {"id": "core_without_subscription", "label": "Fonctions essentielles sans abonnement"},
-    {"id": "cloud_without_payment", "label": "Cloud et synchronisation gratuits"},
-    {"id": "offline_features", "label": "Fonctions utilisables hors abonnement/cloud"},
-    {"id": "third_party_cost_risk", "label": "Risque de coûts logiciels tiers"},
-    {"id": "long_term_cost", "label": "Coût récurrent à long terme"}
-  ],
-  "candidate_scope": [
-    {"name": "Supernote Manta / Nomad", "role": "choix le plus net sans abonnement constructeur", "source": "https://supernote.com/"},
-    {"name": "BOOX Go / Note Air / Note Max", "role": "sans abonnement BOOX avec Android ouvert", "source": "https://shop.boox.com/products/go103gen2"},
-    {"name": "reMarkable Paper Pure", "role": "utilisable sans Connect mais fonctions cloud avancées payantes", "source": "https://remarkable.com/shop/connect/pricing"},
-    {"name": "Kindle Scribe", "role": "reader-first sans abonnement appareil imposé", "source": "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW"},
-    {"name": "Kobo Elipsa 2E", "role": "reader-first avec notes et clouds intégrés", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"}
-  ],
-  "recommendation_logic": {
-    "default": "Supernote si l'absence de paiement récurrent est une contrainte absolue et que les notes sont prioritaires",
-    "conditional": [
-      "BOOX si apps et clouds multiples sont nécessaires",
-      "Kindle ou Kobo si la lecture est centrale",
-      "reMarkable si les fonctions Connect nécessaires ont été explicitement vérifiées"
-    ]
-  },
-  "source_urls": [
-    "https://supernote.com/",
-    "https://shop.boox.com/products/go103gen2",
-    "https://remarkable.com/shop/connect/pricing",
-    "https://remarkable.com/products/remarkable-paper/pure",
-    "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW",
-    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"
-  ],
+  "status": "READY_FOR_HUMAN_VALIDATION",
+  "intent": {"query":"meilleur bloc-notes numérique sans abonnement","type":"feature_specific","user_job":"conserver les fonctions importantes sans paiement mensuel obligatoire","scope_note":"Distinguer fonctionnement de l'appareil, cloud gratuit et services premium facultatifs."},
+  "criteria": [{"id":"core_without_subscription","label":"Fonctions essentielles sans abonnement"},{"id":"cloud_without_payment","label":"Cloud et synchronisation gratuits"},{"id":"offline_features","label":"Fonctions utilisables hors abonnement/cloud"},{"id":"third_party_cost_risk","label":"Risque de coûts logiciels tiers"},{"id":"long_term_cost","label":"Coût récurrent à long terme"}],
+  "candidate_scope": [{"name":"Supernote Manta / Nomad","role":"choix le plus net sans abonnement constructeur","source":"https://supernote.com/"},{"name":"BOOX Go / Note Air / Note Max","role":"sans abonnement BOOX avec Android ouvert","source":"https://shop.boox.com/products/go103gen2"},{"name":"reMarkable Paper Pure","role":"utilisable sans Connect mais fonctions cloud avancées payantes","source":"https://remarkable.com/shop/connect/pricing"},{"name":"Kindle Scribe","role":"reader-first sans abonnement appareil imposé","source":"https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW"},{"name":"Kobo Elipsa 2E","role":"reader-first avec notes et clouds intégrés","source":"https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"}],
+  "recommendation_logic": {"default":"Supernote si l'absence de paiement récurrent est une contrainte absolue et que les notes sont prioritaires","conditional":["BOOX si apps et clouds multiples sont nécessaires","Kindle ou Kobo si la lecture est centrale","reMarkable si les fonctions Connect nécessaires ont été explicitement vérifiées"]},
+  "source_urls": ["https://supernote.com/","https://shop.boox.com/products/go103gen2","https://remarkable.com/shop/connect/pricing","https://remarkable.com/products/remarkable-paper/pure","https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW","https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"],
   "affiliate_commission_used_in_ranking": false,
   "methodology_note": "Aucun classement numérique. La page compare ce qui reste réellement disponible sans paiement récurrent et sépare abonnement constructeur, contenu et services tiers."
 }
