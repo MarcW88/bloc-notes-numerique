@@ -11,6 +11,15 @@ Les fichiers `.content/trust/<slug>.json` sont la source de vérité des pages d
 - `transparence-affiliation` → `AFFILIATE_DISCLOSURE`
 - `mentions-legales` → `LEGAL_PENDING` jusqu'à réception des informations légales confirmées
 
+## État éditorial actuel
+
+- `methode-de-test` : `DRAFT_READY` — page rédigée comme méthode d'évaluation, sans revendiquer de test physique non documenté.
+- `comment-nous-comparons` : `DRAFT_READY` — critères, preuves, pondération, scoring, hard gates, données manquantes et affiliation documentés.
+- `transparence-affiliation` : `DRAFT_READY` — fonctionnement de l'affiliation et séparation avec le ranking documentés ; programmes actifs et politique sur prêts/sponsoring restent explicitement inconnus.
+- `a-propos` : `NEEDS_OWNER_INPUT` — placeholder neutralisé, sans fausse équipe ni faux test.
+- `contact` : `NEEDS_OWNER_INPUT` — coordonnées ou mécanisme de contact à confirmer.
+- `mentions-legales` : `LEGAL_PENDING` — aucune donnée juridique ne doit être inventée.
+
 ## Principe
 
 Ne jamais corriger uniquement le HTML lorsqu'une affirmation touche à :
