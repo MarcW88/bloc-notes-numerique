@@ -53,6 +53,22 @@ Pour toute création ou réécriture sous `/usages/` :
 - Pour les pages marques, produits et écosystèmes, utiliser `.agents/skills/brand-content-workflow/SKILL.md`.
 - Ne jamais faire varier une recommandation, un score ou un classement en fonction d’une commission d’affiliation.
 
+## Production éditoriale — Comparatifs : publish gate obligatoire
+
+Pour toute création, récupération, réécriture ou validation sous `/comparatifs/` :
+
+1. Déterminer explicitement le type `BEST_OVERALL`, `BEST_FOR_USE_CASE`, `BUDGET`, `FEATURE_SPECIFIC` ou `HEAD_TO_HEAD` avant de rédiger.
+2. Créer ou mettre à jour `.content/comparisons/<slug>.json` avant la rédaction ; ce fichier est la source de vérité du contrat de décision, de l’univers produit, des exclusions, critères, poids, preuves, scores et classement.
+3. Construire l’univers produit avant de choisir le gagnant. Toute exclusion importante doit être justifiée ; l’existence ou l’absence d’affiliation ne peut décider de l’inclusion.
+4. Ne jamais imposer un nombre minimum de mots, H2/H3, tableaux ou liens internes comme proxy de qualité. La structure doit découler des arbitrages du lecteur.
+5. Distinguer la preuve d’un fait de la justification d’une note : une source officielle peut vérifier une fonction, mais ne vérifie pas automatiquement un `9/10`. Les justifications génériques de scores ne suffisent pas pour défendre un ranking.
+6. Définir les critères et poids avant le classement, appliquer les hard gates avant la moyenne, comparer le coût total lorsque pertinent et tester la sensibilité du gagnant lorsque les scores sont proches ou les poids discutables.
+7. Le verdict éditorial doit rester cohérent avec le scoring : expliquer pourquoi le #1 gagne, ce qu’il ne gagne pas, dans quels cas une alternative devient meilleure et éviter le langage absolu lorsque l’écart est fragile.
+8. Après rédaction ou correction, exécuter : intention/JTBD → univers et équivalence → registre de preuves → critères/pondérations → scoring/hard gates/coût total → fact-check → valeur affiliée → maillage → natural-writing/Humanizer → anti-AI-slop → dérive SEO → SEO éditorial/technique → GEO → editorial QA → `python3 validate_comparisons.py` → `.agents/skills/comparison-editorial-publish-gate/SKILL.md`.
+9. `validate_comparisons.py` contrôle uniquement les blockers détectables automatiquement et l’intégrité mathématique. Un PASS du script ne signifie jamais que le classement est éditorialement défendable.
+10. Le rapport `comparison-editorial-publish-gate` doit se terminer par `PASS` et `READY FOR HUMAN VALIDATION`. Un seul blocker suffit à maintenir la page en `noindex,follow`.
+11. Ne retirer `noindex` qu’après validation humaine explicite du contenu final.
+
 ## Production éditoriale — Pages marques : publish gate obligatoire
 
 Pour toute création, récupération, réécriture ou validation sous `/marques/` :

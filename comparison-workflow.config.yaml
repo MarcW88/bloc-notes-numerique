@@ -6,7 +6,11 @@ project:
 content:
   scope:
     - "/comparatifs/"
-  source_of_truth: "comparison_content.py"
+  source_of_truth:
+    shared_products: "comparison_products.py"
+    page_contracts: "comparison_pages.py"
+    durable_methodology: "comparison_methodology.py"
+    rendered_content: "comparison_content.py + page-specific overrides"
   generated_output: "comparatifs/*/index.html"
   content_type: "affiliate-comparison"
   mode: "auto"
@@ -16,14 +20,56 @@ quality:
   draft_robots: "noindex,follow"
 
 comparison:
+  schema_version: 2
   score_scale_max: 10
   require_weights_sum_100: true
-  enable_confidence_adjustment: true
+  score_formula: "sum(score * weight) / 100"
+  facts_and_scores_must_be_separate: true
+  require_evidence_refs_for_scored_criteria: true
+  require_specific_score_justification: true
+  require_product_universe_decisions: true
+  require_equivalence: true
+  require_exclusion_reasons: true
   require_hard_gates: true
   require_total_solution_cost_when_relevant: true
+  require_sensitivity_test_when_top_margin_lte: 0.30
+  require_ranking_confidence: true
+  conditional_winner_when_sensitivity_flips: true
+  enable_confidence_adjustment: true
+
+editorial:
+  methodology_is_shared: true
+  page_structure_is_not_shared: true
+  require_editorial_thesis: true
+  require_decision_tensions: true
+  require_architecture_rationale: true
+  require_must_tell_and_can_omit: true
+  forbid_fixed_section_sequence: true
+  forbid_symmetric_product_blocks_by_default: true
+  forbid_cluster_wide_h2_template: true
+  forbid_word_count_quotas: true
+  forbid_heading_count_quotas: true
+  forbid_table_count_quotas: true
+  forbid_internal_link_quotas: true
+  allow_structural_reuse_only_when_editorially_justified: true
+  prefer_shorter_page_over_empty_template_sections: true
+  narrative_must_follow_decision_story: true
 
 workflow:
   comparisons_dir: ".content/comparisons"
   reviews_dir: ".content/reviews"
   require_human_validation_before_publish: true
   allow_automatic_merge: false
+  legacy_schema_can_remain_draft: true
+  legacy_schema_cannot_be_publishable: true
+
+evaluation:
+  gate: ".agents/skills/comparison-editorial-publish-gate/SKILL.md"
+  machine_validator: "validate_comparisons.py"
+  report_dir: ".content/reviews/comparisons"
+  mirror_comparison_content_workflow: true
+  fail_on_unprovable_critical_phase: true
+  preserve_noindex_on_fail: true
+  require_pipeline_consistency: true
+  require_editorial_architecture_review: true
+  fail_on_unjustified_template_reuse: true

@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "slug": "bloc-notes-numerique-a4",
   "url": "/comparatifs/bloc-notes-numerique-a4/",
   "researched_at": "2026-09-08",
@@ -81,161 +82,191 @@
     "boox_notemax": {
       "large": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for large."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for large based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "portability": {
         "score": 3,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Note Max; numeric score is an editorial normalization for portability."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/notemax",
+        "justification": "Legacy editorial normalization for portability based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "remarkable_pro": {
       "large": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for large."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for large based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "portability": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for portability."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
+        "justification": "Legacy editorial normalization for portability based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "supernote_manta": {
       "large": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for large."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for large based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "portability": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for portability."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for portability based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "kindle_scribe3": {
       "large": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for large."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for large based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "portability": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for portability."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+        "justification": "Legacy editorial normalization for portability based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "kobo_elipsa": {
       "large": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for large."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for large based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "writing": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "cost": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for cost based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "portability": {
         "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for portability."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+        "justification": "Legacy editorial normalization for portability based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     }
   },
@@ -267,5 +298,5 @@
     }
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk-research scoring. Product facts can be VERIFIED; numeric scores are editorial INFERENCES derived from those facts, not hands-on measurements."
 }

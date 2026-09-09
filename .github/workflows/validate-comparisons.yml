@@ -1,0 +1,65 @@
+name: Validate comparison workflow implementation
+
+on:
+  pull_request:
+    paths:
+      - "comparatifs/**"
+      - ".content/comparisons/**"
+      - ".agents/skills/comparison-content-workflow/**"
+      - ".agents/skills/comparison-editorial-publish-gate/**"
+      - "comparison_products.py"
+      - "comparison_pages.py"
+      - "comparison_methodology.py"
+      - "comparison_editorial_strategy.py"
+      - "comparison_content.py"
+      - "comparison_content_professional.py"
+      - "apply_comparison_content.py"
+      - "generate_comparison_metadata.py"
+      - "validate_comparisons.py"
+      - "validate_comparison_v2.py"
+      - "comparison-workflow.config.yaml"
+      - "AGENTS.md"
+      - ".github/workflows/validate-comparisons.yml"
+  push:
+    branches: [main]
+    paths:
+      - "comparatifs/**"
+      - ".content/comparisons/**"
+      - ".agents/skills/comparison-content-workflow/**"
+      - ".agents/skills/comparison-editorial-publish-gate/**"
+      - "comparison_products.py"
+      - "comparison_pages.py"
+      - "comparison_methodology.py"
+      - "comparison_editorial_strategy.py"
+      - "comparison_content.py"
+      - "comparison_content_professional.py"
+      - "apply_comparison_content.py"
+      - "generate_comparison_metadata.py"
+      - "validate_comparisons.py"
+      - "validate_comparison_v2.py"
+      - "comparison-workflow.config.yaml"
+      - "AGENTS.md"
+      - ".github/workflows/validate-comparisons.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Render comparison pages in the runner
+        run: python3 apply_comparison_content.py
+      - name: Regenerate comparison methodology in the runner
+        run: python3 generate_comparison_metadata.py
+      - name: Validate the implemented comparison pipeline
+        run: python3 validate_comparisons.py
+      - name: Validate enriched comparison workflow v2 data
+        run: python3 validate_comparison_v2.py
+      - name: Explain evaluation boundary
+        run: |
+          echo "Machine PASS proves pipeline consistency and v2 data integrity, not final publication quality."
+          echo "The human gate must also review editorial thesis and architecture against neighbouring comparison pages."
+          echo "No cluster-wide H2 template, word quota, table quota or symmetric product-block template is allowed."
+          echo "Keep noindex until the publish gate passes and a human explicitly validates publication."

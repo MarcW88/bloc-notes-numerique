@@ -1,4 +1,5 @@
 {
+  "schema_version": 1,
   "slug": "boox-vs-supernote",
   "url": "/comparatifs/boox-vs-supernote/",
   "researched_at": "2026-09-08",
@@ -60,65 +61,77 @@
     "boox_go2": {
       "writing": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "organization": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for organization."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for organization based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "simplicity": {
         "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for simplicity."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://shop.boox.com/products/go103gen2",
+        "justification": "Legacy editorial normalization for simplicity based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     },
     "supernote_manta": {
       "writing": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for writing based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "organization": {
         "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for organization based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "pdf": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for pdf based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "export": {
         "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for export based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "apps": {
         "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for apps."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for apps based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       },
       "simplicity": {
         "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
+        "evidence_class": "INFERRED",
+        "fact_source": "https://supernote.com/products/supernote-manta",
+        "justification": "Legacy editorial normalization for simplicity based on the official product source. This page still requires a v2 Evidence Ledger before publication."
       }
     }
   },
@@ -135,5 +148,5 @@
     }
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk-research scoring. Product facts can be VERIFIED; numeric scores are editorial INFERENCES derived from those facts, not hands-on measurements."
 }
