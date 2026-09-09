@@ -23,15 +23,32 @@ Pour toute création, modification ou revue de l’interface :
 
 ## Production éditoriale — Guides
 
-Pour toute création ou réécriture d’un guide sous `/guides/` :
+Pour toute URL sous `/guides/`, il n’existe que deux workflows Guide à choisir :
 
-1. Utiliser `.agents/skills/guide-content-workflow/SKILL.md`.
-2. Séparer la pré-analyse, la rédaction et la validation ; conserver le brief dans `.content/briefs/`.
-3. Vérifier les informations susceptibles d’évoluer auprès de sources officielles avant publication.
-4. Ne jamais présenter une synthèse documentaire comme un test produit.
-5. Ne retirer `noindex` qu’après validation humaine du contenu final.
-6. Après rédaction, exécuter dans l’ordre la chaîne de contrôle définie dans le skill : intention, valeur affiliée, fact-check, natural-writing, maillage interne, Humanizer, general-writing, anti-AI-slop, contrôle de dérive, SEO technique, SEO éditorial et editorial QA.
-7. Une page ne peut être fusionnée ou indexée que si le rapport de contrôle se termine par `PASS`.
+1. **Analyser / auditer** : `.agents/skills/guide-analysis-workflow/SKILL.md`.
+2. **Créer / réécrire** : `.agents/skills/guide-content-workflow/SKILL.md`.
+
+Ces deux fichiers sont des **orchestrateurs**. La méthodologie doit venir majoritairement des skills GitHub spécialisés déjà présents dans le dépôt, notamment `seo-content-audit`, `seo-keyword`, `search-intent`, `content-refresh`, `fact-check`, `evidence-based-reviews` lorsque nécessaire, `affiliate-value`, `content-brief-authoring`, `content-and-copy`, `internal-linking-audit`, `humanizer`, `general-writing`, `anti-ai-slop`, `seo-onpage`, `seo-technical` et `editorial-qa`. Ne pas recopier leurs méthodes dans un workflow Guide custom.
+
+### Règles obligatoires
+
+1. Une page existante passe d’abord par `guide-analysis-workflow` en mode `AUDIT` avant une réécriture substantielle.
+2. `guide-analysis-workflow` possède les trois modes `AUDIT`, `CLUSTER_AUDIT` et `PUBLISH_REVIEW`.
+3. Les types `CHOICE`, `EXPLAINER` et `HOW_TO` sont des grilles de risques, jamais des templates éditoriaux. Un guide peut être hybride.
+4. Le plan final est construit après l’intention, les preuves et le périmètre. Aucun type de guide n’impose un ordre de sections, un nombre de H2/H3, un tableau, une FAQ, une checklist ou un nombre d’étapes.
+5. Respecter les frontières : `/guides/` explique ou rend une tâche faisable ; `/usages/` traite un job et ses circonstances ; `/comparatifs/` choisit entre des produits ; `/marques/` documente un écosystème, une gamme ou un produit.
+6. Pour un `CHOICE`, aider à arbitrer sans fabriquer un podium produit. Pour un `EXPLAINER`, relier mécanisme et conséquence pratique. Pour un `HOW_TO`, publier uniquement des étapes vérifiables et distinguer les versions/plateformes lorsque nécessaire.
+7. Adapter la fraîcheur au risque : logiciel, cloud, abonnement, compatibilité, prix, génération produit et procédures doivent être vérifiés actuellement ; un mécanisme stable n’a pas besoin d’une récence artificielle mais doit rester exact.
+8. Ne jamais remplir un trou de preuve avec la connaissance du modèle. Une information inconnue reste inconnue, est qualifiée ou est retirée.
+9. Utiliser `evidence-based-reviews` seulement lorsqu’un jugement expérientiel produit le nécessite. Ne pas transformer un guide documentaire en faux test.
+10. La page doit rester utile si tous les liens affiliés disparaissent et ne doit pas se réduire à une reformulation marchande.
+11. Comparer la structure aux guides voisins : mêmes fonctions de H2, mêmes tableaux, mêmes procédures, mêmes CTA ou mêmes conclusions sans justification constituent un signal d’industrialisation et peuvent imposer `DEEP_REWRITE`.
+12. Pour une page existante, `guide-content-workflow` doit préserver la valeur identifiée par l’audit et limiter les changements au scope nécessaire pour `LIGHT_UPDATE`.
+13. Après rédaction, exécuter la chaîne définie dans `guide-content-workflow`, puis `guide-analysis-workflow` en mode `PUBLISH_REVIEW`.
+14. `validate_guide_quality.py` ne contrôle que les blockers détectables automatiquement. Il ne peut imposer ni minimum de mots, ni nombre de H2/H3, ni quota de liens ou de sources.
+15. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION` avant validation humaine.
+16. Ne retirer `noindex` qu’après validation humaine explicite **et** instruction explicite de rendre la page indexable.
+17. Aucun quota de mots, H2/H3, tableaux, étapes, FAQ, liens internes ou sources ne peut servir de proxy de qualité.
 
 ## Production éditoriale — Pages Par usage
 
