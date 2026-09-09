@@ -16,6 +16,9 @@ content:
 quality:
   quality_reference: "/guides/prix-bloc-notes-numerique/"
   draft_robots: "noindex,follow"
+  prohibit_word_count_quotas: true
+  prohibit_heading_count_quotas: true
+  prohibit_internal_link_quotas: true
 
 routing:
   page_types:
@@ -45,25 +48,44 @@ evidence:
     - CONTRADICTED
 
 internal_linking:
-  required_paths:
+  policy: "contextual_only"
+  required_destinations_when_relevant:
     - "/comparatifs/"
     - "/guides/"
     - "/usages/"
-  minimum_contextual_links: 6
-  minimum_unique_targets: 5
 
 workflow:
   brands_dir: ".content/brands"
   reviews_dir: ".content/reviews"
   apply_script: "apply_brand_content.py"
   audit_script: "generate_brand_metadata.py"
-  validator: "validate_brands.py"
+  machine_validator: "validate_brands.py"
+  publish_gate: ".agents/skills/brand-editorial-publish-gate/SKILL.md"
+  require_publish_gate_pass: true
   require_human_validation_before_publish: true
   allow_automatic_merge: false
 
+editorial_chain:
+  - page_type_and_search_intent
+  - original_affiliate_value
+  - evidence_and_fact_check
+  - trust_eeat
+  - geo_entity_quality
+  - editorial_relevance
+  - french_tone_and_natural_writing
+  - anti_ai_slop_and_humanizer
+  - seo_editorial_and_technical
+  - machine_validation
+  - brand_editorial_publish_gate
+  - human_validation
+
 quality_gate:
-  minimum_sources: 3
-  require_limit_section: true
-  require_choose_avoid: true
+  require_sources_for_factual_claims: true
+  require_limitations_when_decision_relevant: true
+  require_choose_avoid_when_decision_relevant: true
   require_noindex_in_draft: true
   prohibit_fake_test_language: true
+  prohibit_editor_facing_metadiscourse: true
+  prohibit_merchant_rewrite_without_original_value: true
+  prohibit_high_severity_ai_slop: true
+  prohibit_unresolved_cannibalization: true
