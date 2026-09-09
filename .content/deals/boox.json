@@ -1,0 +1,24 @@
+{
+  "slug": "boox",
+  "page_url": "/bons-plans/boox/",
+  "page_type": "BRAND_DEALS",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {"active_offer_ttl_hours": 72, "page_review_ttl_hours": 168},
+  "intent": {"primary_query": "promo BOOX", "reader_goal": "Distinguer les vraies réductions BOOX des prix barrés avec stock ou TVA variables.", "closest_comparison": "/comparatifs/remarkable-vs-boox/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/tablette-classique-ou-tablette-e-ink/"]},
+  "reference_prices": [
+    {"product": "BOOX Note Air5 C", "price": 529.99, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://euroshop.boox.com/products/noteair5c", "checked_at": "2026-09-09T08:29:00+02:00"},
+    {"product": "BOOX Note Air4 C", "price": 549.99, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://euroshop.boox.com/collections/mid-year-sale", "checked_at": "2026-09-09T08:29:00+02:00"}
+  ],
+  "offers": [
+    {"product": "BOOX Note Air4 C", "merchant": "BOOX EURO Shop", "price": 499.99, "currency": "EUR", "reference_price": 549.99, "reference_price_basis": "Prix barré affiché sur la collection officielle Mid-year sale", "status": "SOLD_OUT", "availability": "Épuisé dans la collection au moment du contrôle", "source": "https://euroshop.boox.com/collections/mid-year-sale", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "Remise visible mais non exploitable tant que le stock n'est pas revenu."},
+    {"product": "BOOX Note Air5 C", "merchant": "BOOX EURO Shop", "price": 529.99, "currency": "EUR", "reference_price": 639.98, "reference_price_basis": "Prix barré visible sur la fiche officielle, avec avertissement que le coût final peut dépendre du bundle, de la TVA et du checkout", "status": "ACTIVE_STOCK_SENSITIVE", "availability": "Achetable, coût final à vérifier au checkout", "source": "https://euroshop.boox.com/products/noteair5c", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "Ne pas présenter le pourcentage comme remise nette avant validation du panier final."}
+  ],
+  "watchlist": ["retour en stock Note Air4 C à 499,99 €", "promotions Note Max", "bundles clavier/étui avec coût final UE vérifiable"],
+  "evidence_ledger": [
+    {"claim": "La collection officielle affiche Note Air4 C à 499,99 € contre 549,99 € mais épuisée", "source": "https://euroshop.boox.com/collections/mid-year-sale", "evidence_class": "OFFICIAL_CURRENT"},
+    {"claim": "La fiche Note Air5 C affiche 529,99 € et avertit que le prix final peut dépendre du checkout", "source": "https://euroshop.boox.com/products/noteair5c", "evidence_class": "OFFICIAL_CURRENT"}
+  ],
+  "editorial": {"opening_answer": "BOOX affiche plusieurs prix promotionnels, mais la disponibilité et le coût final demandent plus de prudence que chez Kobo ou reMarkable. Le Note Air4 C est en rupture au prix promo observé ; le Note Air5 C reste à vérifier au panier final.", "avoid_claims": ["-17 % garanti", "offre disponible partout en Europe"], "comparison_handoff": "/comparatifs/remarkable-vs-boox/"},
+  "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}
