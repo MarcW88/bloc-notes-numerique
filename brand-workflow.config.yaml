@@ -13,6 +13,7 @@ content:
     - "brand_pages.py"
     - "brand_reviewed_output.py"
     - "brand_enriched_output.py"
+    - "brand_bespoke_output.py"
   mode: "recovery"
 
 quality:
