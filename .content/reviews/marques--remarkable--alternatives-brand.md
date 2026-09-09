@@ -2,12 +2,12 @@
 
 - Page type: `ALTERNATIVES`
 - Brand: `remarkable`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 6
-- Internal links: 3
-- Unique targets: 3
-- Official sources: 7
-- Independent sources: 3
+- Internal links: 6
+- Unique targets: 6
+- Official sources: 1
+- Independent sources: 4
 - Robots: `noindex,follow`
 
 ## Editorial gates

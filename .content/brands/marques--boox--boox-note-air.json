@@ -3,38 +3,32 @@
   "title": "BOOX Note Air — La famille et le Note Air5 C actuel",
   "page_type": "PRODUCT",
   "brand": "boox",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "Le Note Air5 C est le modèle actuel à comparer",
-    "Ce qu’Android change réellement",
-    "Couleur et clavier : utiles selon le travail",
-    "Les limites à connaître",
-    "Pour qui le Note Air5 C est-il cohérent ?",
+    "Note Air5 C : ce qui reste stable et ce qui change",
+    "Android 15 et EinkWise : la souplesse reste le cœur du produit",
+    "Le clavier change davantage le rôle du Note Air que la couleur",
+    "Ce que la fiche officielle ne permet pas de promettre",
+    "Quand choisir Note Air5 C plutôt qu’une autre famille BOOX ?",
     "Sources consultées"
   ],
   "internal_links": [
-    "/comparatifs/remarkable-vs-boox/"
+    "/marques/boox/",
+    "/marques/boox/avis/",
+    "/marques/boox/accessoires/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/remarkable-vs-boox/"
+    "/marques/boox/",
+    "/marques/boox/accessoires/",
+    "/marques/boox/avis/"
   ],
   "source_urls": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
     "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://shop.boox.com/products/tabultracpro"
+    "https://shop.boox.com/products/noteair4c"
   ],
   "official_sources": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
     "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://shop.boox.com/products/tabultracpro"
+    "https://shop.boox.com/products/noteair4c"
   ],
   "independent_sources": [],
   "noindex_follow": true,

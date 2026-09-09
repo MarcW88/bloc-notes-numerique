@@ -4,9 +4,9 @@
 - Brand: `remarkable`
 - Sources verified: 8 septembre 2026
 - H2 count: 7
-- Internal links: 1
-- Unique targets: 1
-- Official sources: 6
+- Internal links: 3
+- Unique targets: 3
+- Official sources: 2
 - Independent sources: 3
 - Robots: `noindex,follow`
 

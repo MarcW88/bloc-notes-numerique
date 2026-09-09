@@ -2,12 +2,12 @@
 
 - Page type: `ALTERNATIVES`
 - Brand: `boox`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 6
-- Internal links: 2
-- Unique targets: 2
-- Official sources: 10
-- Independent sources: 0
+- Internal links: 7
+- Unique targets: 7
+- Official sources: 1
+- Independent sources: 4
 - Robots: `noindex,follow`
 
 ## Editorial gates

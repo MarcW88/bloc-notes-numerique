@@ -2,11 +2,11 @@
 
 - Page type: `PRODUCT`
 - Brand: `boox`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 6
-- Internal links: 1
-- Unique targets: 1
-- Official sources: 7
+- Internal links: 3
+- Unique targets: 3
+- Official sources: 2
 - Independent sources: 0
 - Robots: `noindex,follow`
 

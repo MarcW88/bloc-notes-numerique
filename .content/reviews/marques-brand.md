@@ -2,12 +2,12 @@
 
 - Page type: `DIRECTORY`
 - Brand: `directory`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 4
 - Internal links: 7
 - Unique targets: 7
 - Official sources: 0
-- Independent sources: 10
+- Independent sources: 5
 - Robots: `noindex,follow`
 
 ## Editorial gates

@@ -5,38 +5,34 @@
   "brand": "remarkable",
   "verified_at": "8 septembre 2026",
   "h2": [
-    "Ce qui reste convaincant",
-    "Ce que 2026 change dans le verdict",
-    "Les limites qui pèsent le plus aujourd’hui",
+    "Pourquoi les qualités historiques restent pertinentes",
+    "Ce que 2026 change réellement dans le verdict",
+    "Les limites qui pèsent davantage aujourd’hui",
     "À qui la conseiller encore ?",
     "Verdict",
     "Sur quoi repose cet avis ?",
     "Sources consultées"
   ],
   "internal_links": [
+    "/marques/remarkable/remarkable-2/",
+    "/bons-plans/bloc-notes-numerique-occasion/",
     "/marques/remarkable/"
   ],
   "unique_internal_targets": [
-    "/marques/remarkable/"
+    "/bons-plans/bloc-notes-numerique-occasion/",
+    "/marques/remarkable/",
+    "/marques/remarkable/remarkable-2/"
   ],
   "source_urls": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
     "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
+    "https://remarkable.com/fr-fr",
     "https://www.techradar.com/reviews/remarkable-2-tablet",
     "https://www.wired.com/review/remarkable-2/",
     "https://www.tomsguide.com/reviews/remarkable-2-review"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
     "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
+    "https://remarkable.com/fr-fr"
   ],
   "independent_sources": [
     "https://www.techradar.com/reviews/remarkable-2-tablet",

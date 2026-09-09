@@ -2,11 +2,11 @@
 
 - Page type: `SERVICE`
 - Brand: `remarkable`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 6
-- Internal links: 2
-- Unique targets: 2
-- Official sources: 6
+- Internal links: 4
+- Unique targets: 4
+- Official sources: 3
 - Independent sources: 0
 - Robots: `noindex,follow`
 

@@ -3,41 +3,35 @@
   "title": "BOOX Tab Ultra — Famille, Tab Ultra C Pro et alternatives actuelles",
   "page_type": "PRODUCT",
   "brand": "boox",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "Une logique de tablette PC E Ink",
-    "Les caractéristiques à retenir",
-    "Les limites liées à l’ancienneté du système",
-    "Quand le Tab Ultra C Pro garde-t-il du sens ?",
+    "Une tablette PC E Ink de 10,3 pouces, pas un simple carnet",
+    "Ce qu’il faut réellement comparer en 2026",
+    "Android 12 : une limite de génération, pas une date d’obsolescence",
+    "Pour qui le Tab Ultra C Pro garde-t-il du sens ?",
     "Sources consultées"
   ],
   "internal_links": [
     "/marques/boox/boox-note-air/",
-    "/marques/remarkable/"
+    "/marques/boox/",
+    "/marques/boox/avis/",
+    "/marques/boox/alternatives/"
   ],
   "unique_internal_targets": [
-    "/marques/boox/boox-note-air/",
-    "/marques/remarkable/"
+    "/marques/boox/",
+    "/marques/boox/alternatives/",
+    "/marques/boox/avis/",
+    "/marques/boox/boox-note-air/"
   ],
   "source_urls": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
     "https://shop.boox.com/products/tabultracpro",
-    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage"
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/tabxc"
   ],
   "official_sources": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
     "https://shop.boox.com/products/tabultracpro",
-    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage"
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/tabxc"
   ],
   "independent_sources": [],
   "noindex_follow": true,

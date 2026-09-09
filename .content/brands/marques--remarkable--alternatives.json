@@ -3,50 +3,46 @@
   "title": "Alternatives à reMarkable — BOOX, Supernote, Kindle ou Kobo ?",
   "page_type": "ALTERNATIVES",
   "brand": "remarkable",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "Si vous voulez davantage d’applications : BOOX",
-    "Si vous voulez mieux structurer les notes : Supernote",
-    "Si la lecture passe avant l’écriture : Kindle ou Kobo",
-    "Si l’abonnement ou le coût vous gêne",
-    "Quel critère doit décider ?",
+    "Si l’absence d’applications tierces est le problème : BOOX",
+    "Si vous voulez surtout structurer des connaissances : Supernote",
+    "Si la lecture reste le centre du workflow : Kindle ou Kobo",
+    "Si Connect ou le coût total vous gêne",
+    "Le bon critère est celui qui vous fait quitter reMarkable",
     "Sources consultées"
   ],
   "internal_links": [
     "/comparatifs/remarkable-vs-boox/",
     "/comparatifs/remarkable-vs-supernote/",
+    "/marques/supernote/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
     "/comparatifs/bloc-notes-numerique-sans-abonnement/"
   ],
   "unique_internal_targets": [
     "/comparatifs/bloc-notes-numerique-sans-abonnement/",
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/remarkable-vs-supernote/"
+    "/comparatifs/remarkable-vs-supernote/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/marques/supernote/"
   ],
   "source_urls": [
     "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
     "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2"
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
+    "https://www.kobo.com/be/fr/eReaders"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips"
+    "https://remarkable.com/fr-fr"
   ],
   "independent_sources": [
     "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2"
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
+    "https://www.kobo.com/be/fr/eReaders"
   ],
   "noindex_follow": true,
   "analysis_documentary": false

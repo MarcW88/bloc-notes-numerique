@@ -3,48 +3,49 @@
   "title": "Alternatives à BOOX — reMarkable, Supernote, Kindle ou Kobo ?",
   "page_type": "ALTERNATIVES",
   "brand": "boox",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
     "Si vous voulez moins de réglages : reMarkable",
-    "Si l’organisation des notes passe avant Android : Supernote",
+    "Si les notes reliées passent avant Android : Supernote",
     "Si vous voulez surtout lire : Kindle ou Kobo",
-    "Quand rester chez BOOX ?",
-    "Choisir selon votre besoin principal",
+    "Quand rester chez BOOX est plus rationnel",
+    "Choisissez l’alternative qui corrige une friction précise",
     "Sources consultées"
   ],
   "internal_links": [
     "/comparatifs/remarkable-vs-boox/",
-    "/comparatifs/boox-vs-supernote/"
+    "/comparatifs/boox-vs-supernote/",
+    "/marques/supernote/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/marques/boox/",
+    "/marques/boox/boox-note-air/"
   ],
   "unique_internal_targets": [
     "/comparatifs/boox-vs-supernote/",
-    "/comparatifs/remarkable-vs-boox/"
+    "/comparatifs/remarkable-vs-boox/",
+    "/marques/boox/",
+    "/marques/boox/boox-note-air/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/marques/supernote/"
   ],
   "source_urls": [
     "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://shop.boox.com/products/tabultracpro",
-    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
-    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
-    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
+    "https://remarkable.com/fr-fr",
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
+    "https://www.kobo.com/be/fr/eReaders"
   ],
   "official_sources": [
-    "https://shop.boox.com/collections/all-products/reading-tools",
-    "https://shop.boox.com/collections/noteseries",
-    "https://shop.boox.com/products/go103gen2",
-    "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/notemax",
-    "https://shop.boox.com/products/tabxc",
-    "https://shop.boox.com/products/tabultracpro",
-    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
-    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
-    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
+    "https://shop.boox.com/collections/all-products/reading-tools"
   ],
-  "independent_sources": [],
+  "independent_sources": [
+    "https://remarkable.com/fr-fr",
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
+    "https://www.kobo.com/be/fr/eReaders"
+  ],
   "noindex_follow": true,
   "analysis_documentary": false
 }

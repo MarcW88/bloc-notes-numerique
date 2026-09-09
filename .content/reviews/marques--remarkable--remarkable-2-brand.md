@@ -2,11 +2,11 @@
 
 - Page type: `PRODUCT`
 - Brand: `remarkable`
-- Sources verified: 8 septembre 2026
-- H2 count: 7
-- Internal links: 2
-- Unique targets: 2
-- Official sources: 6
+- Sources verified: 9 septembre 2026
+- H2 count: 6
+- Internal links: 3
+- Unique targets: 3
+- Official sources: 2
 - Independent sources: 0
 - Robots: `noindex,follow`
 

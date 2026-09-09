@@ -3,38 +3,36 @@
   "title": "reMarkable Connect — Fonctions, limites et intérêt de l’abonnement",
   "page_type": "SERVICE",
   "brand": "remarkable",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "Ce qui reste disponible sans abonnement",
-    "Ce que Connect ajoute",
-    "Quand le coût récurrent est-il justifié ?",
-    "La dépendance au cloud à vérifier",
-    "Les limites à garder en tête",
+    "Sans Connect, la tablette ne cesse pas de fonctionner",
+    "Ce que Connect ajoute réellement en 2026",
+    "Dans quels cas l’abonnement devient-il rationnel ?",
+    "Annuler Connect : ce qu’il faut vérifier avant",
+    "Sur quels appareils Connect pèse-t-il dans la décision ?",
     "Sources consultées"
   ],
   "internal_links": [
+    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
     "/guides/exporter-notes/",
-    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/"
+    "/marques/remarkable/",
+    "/marques/remarkable/remarkable-paper-pro/"
   ],
   "unique_internal_targets": [
     "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
-    "/guides/exporter-notes/"
+    "/guides/exporter-notes/",
+    "/marques/remarkable/",
+    "/marques/remarkable/remarkable-paper-pro/"
   ],
   "source_urls": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
+    "https://remarkable.com/shop/connect",
+    "https://remarkable.com/shop/connect/pricing",
+    "https://support.remarkable.com/articles/Knowledge/About-Connect-Subscription"
   ],
   "official_sources": [
-    "https://remarkable.com/fr-fr",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
-    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
-    "https://remarkable.com/products/remarkable-2",
-    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
+    "https://remarkable.com/shop/connect",
+    "https://remarkable.com/shop/connect/pricing",
+    "https://support.remarkable.com/articles/Knowledge/About-Connect-Subscription"
   ],
   "independent_sources": [],
   "noindex_follow": true,
