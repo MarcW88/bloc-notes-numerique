@@ -5,6 +5,7 @@ import json
 import re
 from brand_pages import PAGES
 from brand_data import VERIFIED_AT, BRANDS
+from brand_bespoke_output import bespoke_entity_summary
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / '.content' / 'brands'
@@ -89,6 +90,7 @@ for key, brand in BRANDS.items():
         'avoid': brand['avoid'],
         'verified_at': VERIFIED_AT,
     }
+    summary = bespoke_entity_summary(key, summary)
     (OUT / f'entity-{key}.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
 
 print(f'generated metadata for {len(PAGES)} brand pages')
