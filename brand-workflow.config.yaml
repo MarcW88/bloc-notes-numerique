@@ -14,6 +14,8 @@ content:
     - "brand_reviewed_output.py"
     - "brand_enriched_output.py"
     - "brand_bespoke_output.py"
+    - "brand_hub_bespoke_output.py"
+    - "brand_light_update_output.py"
   mode: "recovery"
 
 quality:
@@ -44,7 +46,7 @@ entities:
 
 evidence:
   prefer_primary_sources: true
-  verified_at: "2026-09-08"
+  verified_at: "2026-09-09"
   statuses:
     - VERIFIED
     - SUPPORTED
