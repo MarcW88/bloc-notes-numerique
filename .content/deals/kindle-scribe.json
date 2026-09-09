@@ -1,0 +1,26 @@
+{
+  "slug": "kindle-scribe",
+  "page_url": "/bons-plans/kindle-scribe/",
+  "page_type": "BRAND_DEALS",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {"active_offer_ttl_hours": 72, "page_review_ttl_hours": 168},
+  "intent": {"primary_query": "promo Kindle Scribe", "reader_goal": "Repérer une vraie baisse de prix sur Kindle Scribe sans confondre ancienne génération et gamme 2026.", "closest_comparison": "/comparatifs/kindle-scribe-vs-remarkable/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/liseuse-ou-bloc-notes-numerique/"]},
+  "reference_prices": [
+    {"product": "Kindle Scribe génération 2024", "price": 429.99, "currency": "EUR", "basis": "OFFICIAL_HISTORICAL", "source": "https://www.aboutamazon.fr/actualites/innovations/decouvrez-la-nouvelle-gamme-de-kindle-y-compris-le-premier-kindle-couleur", "checked_at": "2026-09-09T08:29:00+02:00"},
+    {"product": "Kindle Scribe Colorsoft 64 Go", "price": 699.99, "currency": "EUR", "basis": "RETAILER_CURRENT", "source": "https://www.boulanger.com/ref/1240827", "checked_at": "2026-09-09T08:29:00+02:00"}
+  ],
+  "offers": [
+    {"product": "Kindle Scribe 2024 16 Go", "merchant": "marché France via idealo", "price": 389, "currency": "EUR", "reference_price": 429.99, "reference_price_basis": "Prix de lancement officiel Amazon 2024 ; comparaison à interpréter comme ancien modèle, pas comme promo constructeur actuelle", "status": "PRICE_WATCH", "availability": "Offres marché observées", "source": "https://www.idealo.fr/prix/204949858/amazon-kindle-scribe-2024.html", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "SPECIALIST_PRICE_TRACKER", "note": "Le prix inférieur au lancement peut refléter l'âge de la génération ; ne pas présenter comme remise Amazon active."},
+    {"product": "Kindle Scribe 2024 64 Go", "merchant": "Amazon.fr", "price": 329.99, "currency": "EUR", "reference_price": 479.99, "reference_price_basis": "Prix indiqué dans un article deal daté du 11 août 2026", "status": "EXPIRED", "availability": "Promotion historique, non confirmée le 9 septembre", "source": "https://www.numerama.com/tech/2309717-amazon-brade-de-150-e-sa-liseuse-premium-kindle-scribe-qui-fait-carnet-de-notes.html", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "EDITORIAL_REPORT", "note": "Conserver uniquement comme repère de baisse possible, jamais comme offre actuelle."},
+    {"product": "Kindle Scribe Colorsoft 64 Go", "merchant": "Boulanger", "price": 699.99, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "PRICE_WATCH", "availability": "Disponible", "source": "https://www.boulanger.com/ref/1240827", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "RETAILER_CURRENT", "note": "Prix courant observé, pas une promotion vérifiée."}
+  ],
+  "watchlist": ["ancienne génération Scribe sous 330 €", "Scribe 2025 noir et blanc lors des opérations Amazon", "Colorsoft si réduction constructeur claire"],
+  "evidence_ledger": [
+    {"claim": "Le Kindle Scribe 2024 a été lancé à partir de 429,99 €", "source": "https://www.aboutamazon.fr/actualites/innovations/decouvrez-la-nouvelle-gamme-de-kindle-y-compris-le-premier-kindle-couleur", "evidence_class": "OFFICIAL_HISTORICAL"},
+    {"claim": "Une promotion à 329,99 € sur le 64 Go a été rapportée le 11 août 2026", "source": "https://www.numerama.com/tech/2309717-amazon-brade-de-150-e-sa-liseuse-premium-kindle-scribe-qui-fait-carnet-de-notes.html", "evidence_class": "EDITORIAL_REPORT"},
+    {"claim": "Le Colorsoft 64 Go est affiché 699,99 € chez Boulanger", "source": "https://www.boulanger.com/ref/1240827", "evidence_class": "RETAILER_CURRENT"}
+  ],
+  "editorial": {"opening_answer": "Aucune promotion Amazon actuelle suffisamment solide n'est confirmée au 9 septembre 2026. L'ancienne génération reste à surveiller : elle a déjà connu une baisse à 329,99 €, mais cette offre n'est plus considérée active.", "avoid_claims": ["329,99 € actuellement", "meilleur prix actuel sans vérification"], "comparison_handoff": "/comparatifs/kindle-scribe-vs-remarkable/"},
+  "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}
