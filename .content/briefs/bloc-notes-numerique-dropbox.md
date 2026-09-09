@@ -5,7 +5,7 @@ status: QA_IN_PROGRESS
 guide_type: how-to / compatibility
 primary_keyword: bloc-notes numérique Dropbox
 search_intent: comprendre comment conserver une logique de dossiers Dropbox sans multiplier les copies
- audience: utilisateur Dropbox, multi-plateforme ou Kobo
+audience: utilisateur Dropbox, multi-plateforme ou Kobo
 last_researched: 2026-09-09
 refresh_level: deep_rewrite
 ---
