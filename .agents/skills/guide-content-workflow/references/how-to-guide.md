@@ -1,22 +1,24 @@
 # Tutoriel et guide de compatibilité
 
-Utiliser ce parcours pour une action concrète, un transfert, un export ou une intégration.
+Utiliser cette référence pour une action concrète, un transfert, un export ou une intégration.
 
-## Pré-analyse spécifique
+Cette fiche est une **grille de vérification**, pas une procédure générique à recopier. Le nombre, l’ordre et la forme des sections doivent suivre la tâche réelle et la documentation disponible.
 
-- Identifier appareil, système, application, version, compte et abonnement nécessaires.
-- Vérifier chaque procédure dans la documentation officielle actuelle.
-- Distinguer intégration native, application tierce, export manuel et contournement.
-- Prévoir les cas d’échec, limitations de format, confidentialité et perte éventuelle de données.
+## Questions de recherche utiles
 
-## Architecture recommandée
+- Quel résultat concret le lecteur cherche-t-il à obtenir ?
+- Quels appareil, système, application, version, compte ou abonnement sont réellement nécessaires ?
+- La méthode est-elle native, tierce, manuelle ou un contournement ?
+- Quelles étapes sont indispensables et dans quel ordre uniquement lorsque cet ordre compte ?
+- Comment le lecteur vérifie-t-il que le résultat attendu est obtenu ?
+- Quelles différences de version, format, écosystème ou appareil changent la procédure ?
+- Quels échecs probables, limites, risques de perte de données ou questions de confidentialité doivent être signalés ?
+- Existe-t-il une alternative plus simple lorsque la méthode principale n’est pas disponible ?
 
-1. réponse de faisabilité et prérequis ;
-2. tableau de compatibilité si plusieurs appareils sont concernés ;
-3. procédure numérotée par méthode ;
-4. résultat attendu et moyen de le vérifier ;
-5. dépannage des problèmes probables ;
-6. limites, sécurité et alternatives ;
-7. date de vérification.
+## Gate éditorial
 
-Ne pas fusionner des procédures de versions différentes. Une étape incertaine doit rester explicitement à confirmer avant publication.
+Chaque étape publiée doit pouvoir être rattachée à une source actuelle ou à une observation documentée. Ne jamais inventer une étape parce qu’elle paraît logique.
+
+Un tableau de compatibilité, une section dépannage ou une date de vérification sont utiles lorsque le sujet le demande, mais ne sont jamais obligatoires par template.
+
+Ne pas fusionner des procédures de versions différentes sans distinguer clairement leurs conditions.
