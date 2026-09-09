@@ -1,301 +1,39 @@
 {
   "slug": "bloc-notes-numerique-pas-cher",
   "url": "/comparatifs/bloc-notes-numerique-pas-cher/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "meilleur bloc-notes numérique pas cher",
     "type": "budget",
-    "user_job": "obtenir une vraie expérience stylet et PDF avec un budget contenu"
+    "user_job": "obtenir une configuration réellement utilisable pour lire et écrire avec un budget contenu",
+    "scope_note": "Comparer le panier utilisable plutôt que le prix nu de la tablette."
   },
   "criteria": [
-    {
-      "id": "cost",
-      "label": "cost",
-      "weight": 35
-    },
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 15
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 15
-    },
-    {
-      "id": "reading",
-      "label": "reading",
-      "weight": 10
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 10
-    },
-    {
-      "id": "no_sub",
-      "label": "no_sub",
-      "weight": 10
-    },
-    {
-      "id": "portability",
-      "label": "portability",
-      "weight": 5
-    }
+    {"id": "usable_configuration_cost", "label": "Coût de la configuration utilisable"},
+    {"id": "stylus_included", "label": "Stylet inclus ou coût à ajouter"},
+    {"id": "reading", "label": "Lecture et PDF"},
+    {"id": "note_depth", "label": "Profondeur des fonctions de notes"},
+    {"id": "region_bundle_clarity", "label": "Clarté du prix, taxes et bundle"}
   ],
-  "product_universe": [
-    {
-      "id": "kobo_elipsa",
-      "name": "Kobo Elipsa 2E",
-      "status": "ELIGIBLE",
-      "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-      "price_snapshot": "399,99 €"
-    },
-    {
-      "id": "boox_go2",
-      "name": "BOOX Go 10.3 (Gen II)",
-      "status": "ELIGIBLE",
-      "source": "https://shop.boox.com/products/go103gen2",
-      "price_snapshot": "à partir de 399,99 $ US"
-    },
-    {
-      "id": "remarkable_pure",
-      "name": "reMarkable Paper Pure",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/shop/compare",
-      "price_snapshot": "à partir de 399 €"
-    },
-    {
-      "id": "supernote_nomad",
-      "name": "Supernote Nomad",
-      "status": "ELIGIBLE",
-      "source": "https://supernote.com/products/supernote-nomad",
-      "price_snapshot": "à partir de 299 $ US hors droits selon la région"
-    },
-    {
-      "id": "kindle_scribe3",
-      "name": "Kindle Scribe (3e génération)",
-      "status": "ELIGIBLE",
-      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-      "price_snapshot": "prix à vérifier sur Amazon"
-    }
+  "candidate_scope": [
+    {"name": "PocketBook InkPad One", "role": "prix européen le plus bas repéré pour 10,3 pouces + stylet", "source": "https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one"},
+    {"name": "reMarkable Paper Pure", "role": "meilleure valeur écriture autour de 400 €", "source": "https://remarkable.com/fr-FR/shop/compare"},
+    {"name": "Kobo Elipsa 2E", "role": "option lecture Kobo à bundle à vérifier", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e"},
+    {"name": "BOOX Go 10.3 Gen II", "role": "option Android au prix régional à vérifier", "source": "https://shop.boox.com/products/go103gen2"}
   ],
-  "scores": {
-    "kobo_elipsa": {
-      "cost": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
-      },
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for no_sub."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for portability."
-      }
-    },
-    "boox_go2": {
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for cost."
-      },
-      "writing": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
-      },
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for reading."
-      },
-      "export": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for no_sub."
-      },
-      "portability": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for portability."
-      }
-    },
-    "remarkable_pure": {
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
-      },
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
-      },
-      "reading": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for reading."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
-      },
-      "no_sub": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for no_sub."
-      },
-      "portability": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for portability."
-      }
-    },
-    "supernote_nomad": {
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for cost."
-      },
-      "writing": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for pdf."
-      },
-      "reading": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for reading."
-      },
-      "export": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for export."
-      },
-      "no_sub": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for no_sub."
-      },
-      "portability": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Nomad; numeric score is an editorial normalization for portability."
-      }
-    },
-    "kindle_scribe3": {
-      "cost": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
-      },
-      "reading": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for reading."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
-      },
-      "no_sub": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for no_sub."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for portability."
-      }
-    }
+  "recommendation_logic": {
+    "lowest_current_eu": "PocketBook InkPad One à 329 € avec stylet inclus",
+    "writing_first_value": "reMarkable Paper Pure à partir de 399 € avec Marker inclus",
+    "caveats": ["Kobo: vérifier le bundle réel du stylet", "BOOX: vérifier prix européen, taxes et livraison"]
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "boox_go2",
-      "score": 8.65
-    },
-    {
-      "rank": 2,
-      "product_id": "supernote_nomad",
-      "score": 8.4
-    },
-    {
-      "rank": 3,
-      "product_id": "kobo_elipsa",
-      "score": 8.2
-    },
-    {
-      "rank": 4,
-      "product_id": "remarkable_pure",
-      "score": 7.95
-    },
-    {
-      "rank": 5,
-      "product_id": "kindle_scribe3",
-      "score": 7.65
-    }
+  "source_urls": [
+    "https://pocketbook.de/en/news/more-ways-to-take-notes-new-firmware-update-for-the-pocketbook-inkpad-one",
+    "https://www.connect.de/testbericht/pocketbook-inkpad-one-test-ereader-review-3213274.html",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+    "https://shop.boox.com/products/go103gen2"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Budget évalué sur une configuration utilisable. Les prix sont des snapshots et les bundles/taxes doivent être revérifiés au moment de l'achat. Aucun scoring numérique."
 }
