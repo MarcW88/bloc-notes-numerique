@@ -53,17 +53,19 @@ jobs:
           for slug in pending:
               text = Path(slug, 'index.html').read_text(encoding='utf-8')
               assert '<!-- Contenu à rédiger -->' in text, f'{slug} should remain pending'
+          about = Path('a-propos', 'index.html').read_text(encoding='utf-8')
+          assert 'Notre équipe et notre engagement pour des tests indépendants' not in about
           print('PASS: 3 trust pages drafted; 3 unresolved pages remain pending; noindex preserved')
           PY
 
       - name: Commit generated trust pages
         run: |
-          if git diff --quiet -- methode-de-test comment-nous-comparons transparence-affiliation; then
+          if git diff --quiet -- methode-de-test comment-nous-comparons transparence-affiliation a-propos; then
             echo "No generated changes to commit."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add methode-de-test comment-nous-comparons transparence-affiliation
+          git add methode-de-test comment-nous-comparons transparence-affiliation a-propos
           git commit -m "content: apply transparent trust pages"
           git push
