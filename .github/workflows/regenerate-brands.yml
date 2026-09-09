@@ -32,13 +32,15 @@ jobs:
         run: python apply_brand_content.py
       - name: Generate brand audit files
         run: python generate_brand_metadata.py
-      - name: Validate brand cluster
-        run: python validate_brands.py
-      - name: Commit generated brand pages
+      - name: Commit pilot brand pages
         run: |
-          if git diff --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add marques .content/brands .content/reviews
-          git commit -m "content: regenerate brand pages"
+          git add marques/remarkable/index.html \
+            marques/remarkable/remarkable-paper-pro/index.html \
+            marques/remarkable/remarkable-paper-pro-avis/index.html
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "content: publish reMarkable editorial pilots"
           git push
+      - name: Validate brand cluster
+        run: python validate_brands.py
