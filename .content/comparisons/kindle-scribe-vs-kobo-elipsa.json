@@ -1,154 +1,32 @@
 {
   "slug": "kindle-scribe-vs-kobo-elipsa",
   "url": "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "Kindle Scribe vs Kobo Elipsa",
     "type": "head_to_head",
-    "user_job": "choisir une liseuse grand format avec stylet selon sa bibliothèque et ses exports"
+    "user_job": "choisir une liseuse grand format avec stylet selon sa bibliothèque, ses PDF et ses clouds"
   },
   "criteria": [
-    {
-      "id": "reading",
-      "label": "reading",
-      "weight": 25
-    },
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 15
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 20
-    },
-    {
-      "id": "organization",
-      "label": "organization",
-      "weight": 10
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 10
-    },
-    {
-      "id": "cost",
-      "label": "cost",
-      "weight": 10
-    },
-    {
-      "id": "frontlight",
-      "label": "frontlight",
-      "weight": 10
-    }
+    {"id": "library_ecosystem", "label": "Bibliothèque existante"},
+    {"id": "notes", "label": "Notes"},
+    {"id": "frontlight", "label": "Éclairage"},
+    {"id": "cloud", "label": "Clouds documents"},
+    {"id": "pdf", "label": "PDF"},
+    {"id": "bundle", "label": "Stylet et bundle"}
   ],
-  "product_universe": [
-    {
-      "id": "kindle_scribe3",
-      "name": "Kindle Scribe (3e génération)",
-      "status": "ELIGIBLE",
-      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-      "price_snapshot": "prix à vérifier sur Amazon"
-    },
-    {
-      "id": "kobo_elipsa",
-      "name": "Kobo Elipsa 2E",
-      "status": "ELIGIBLE",
-      "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-      "price_snapshot": "399,99 €"
-    }
-  ],
-  "scores": {
-    "kindle_scribe3": {
-      "reading": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for reading."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
-      },
-      "frontlight": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for frontlight."
-      }
-    },
-    "kobo_elipsa": {
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
-      },
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
-      },
-      "cost": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
-      },
-      "frontlight": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for frontlight."
-      }
-    }
+  "recommendation_logic": {
+    "kindle_scribe": "à privilégier pour une bibliothèque Kindle existante et les fonctions de la génération actuelle",
+    "kobo_elipsa": "à privilégier pour une bibliothèque Kobo existante et les intégrations Kobo/Drive/Dropbox",
+    "universal_winner": false
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "kindle_scribe3",
-      "score": 8.05
-    },
-    {
-      "rank": 2,
-      "product_id": "kobo_elipsa",
-      "score": 7.8
-    }
+  "source_urls": [
+    "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+    "https://www.aboutamazon.com/news/devices/kindle-scribe-new-features",
+    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+    "https://ereader.kobo.com/fr-fr/collections/ereaders-with-kobo-stylus-compatibility"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Le critère de départ est l'écosystème de lecture déjà possédé. Le bundle Kobo doit être vérifié au moment de l'achat. Aucun score global."
 }
