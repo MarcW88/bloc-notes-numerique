@@ -4,6 +4,8 @@ import json
 import re
 import sys
 
+from comparison_publication import INDEXABLE_COMPARISON_ROUTES
+
 ROOT = Path(__file__).resolve().parent
 FAIL = []
 WARN = []
@@ -22,6 +24,13 @@ def warn(label):
     WARN.append(label)
 
 
+def robots_value(html: str):
+    match = re.search(r'<meta\s+name="robots"\s+content="([^"]+)"\s*/?>', html, re.I)
+    return match.group(1).lower().replace(' ', '') if match else None
+
+
+seen_routes = set()
+
 for fp in sorted((ROOT / '.content' / 'comparisons').glob('*.json')):
     try:
         data = json.loads(fp.read_text(encoding='utf-8'))
@@ -39,6 +48,8 @@ for fp in sorted((ROOT / '.content' / 'comparisons').glob('*.json')):
 
     if not isinstance(url, str) or not url.startswith('/comparatifs/'):
         fail(f'{fp.name}: comparison url')
+    else:
+        seen_routes.add(url)
 
     if not isinstance(intent, dict) or not intent.get('query'):
         fail(f'{fp.name}: intent/query')
@@ -87,7 +98,6 @@ for fp in sorted((ROOT / '.content' / 'comparisons').glob('*.json')):
                 elif abs(sum(weights) - 100) > 1e-9:
                     fail(f'{fp.name}: weights must sum to 100 when weighting is used')
 
-    # Affiliate influence is forbidden when the field is persisted.
     if data.get('affiliate_commission_used_in_ranking') is True:
         fail(f'{fp.name}: affiliate commission must not affect ranking')
 
@@ -167,8 +177,14 @@ for fp in sorted((ROOT / '.content' / 'comparisons').glob('*.json')):
 
     if '<!-- Contenu à rédiger -->' in body:
         fail(f'{slug}: placeholder')
-    if 'name="robots" content="noindex,follow"' not in html:
-        fail(f'{slug}: noindex removed')
+
+    robots = robots_value(html)
+    if url in INDEXABLE_COMPARISON_ROUTES:
+        if robots != 'index,follow':
+            fail(f'{slug}: approved page must be index,follow (found {robots})')
+    elif robots != 'noindex,follow':
+        fail(f'{slug}: unapproved page must remain noindex,follow (found {robots})')
+
     if len(re.findall(r'<h1\b', html, re.I)) != 1:
         fail(f'{slug}: expected exactly one H1')
     if not re.search(r'<link rel="canonical" href="https://bloc-notes-numeriques\.fr/comparatifs/[^\"]+/">', html, re.I):
@@ -184,6 +200,22 @@ for fp in sorted((ROOT / '.content' / 'comparisons').glob('*.json')):
     if fake_hands_on:
         fail(f'{slug}: possible undocumented hands-on language')
 
+# Validate the hub publication state separately because it has no comparison JSON.
+hub_route = '/comparatifs/'
+hub = ROOT / 'comparatifs' / 'index.html'
+if not hub.exists():
+    fail('comparison hub missing')
+else:
+    hub_robots = robots_value(hub.read_text(encoding='utf-8'))
+    expected = 'index,follow' if hub_route in INDEXABLE_COMPARISON_ROUTES else 'noindex,follow'
+    if hub_robots != expected:
+        fail(f'comparison hub robots must be {expected} (found {hub_robots})')
+
+# The manifest must not silently contain unknown detail routes.
+unknown_approved = INDEXABLE_COMPARISON_ROUTES - seen_routes - {hub_route}
+for route in sorted(unknown_approved):
+    fail(f'indexation manifest contains unknown comparison route: {route}')
+
 if WARN:
     print('\n'.join('WARN ' + x for x in WARN))
 if FAIL:
@@ -191,5 +223,5 @@ if FAIL:
     sys.exit(1)
 
 print('PASS: comparison pages have no machine-detectable publication blockers')
+print('PASS: robots state matches the explicit comparison indexation manifest')
 print('NOTE: scoring, weights, rankings and TSC are optional; when present, persisted data is checked for consistency')
-print('NEXT: run .agents/skills/comparison-analysis-workflow/SKILL.md in PUBLISH_REVIEW mode before human validation and indexation')
