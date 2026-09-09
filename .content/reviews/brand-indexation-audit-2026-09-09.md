@@ -17,33 +17,33 @@ This audit is the human publication/indexation review performed after the machin
 | `/marques/remarkable/remarkable-paper-pro-avis/` | REVIEW | INDEX | Independent-source review intent; differentiated from the product specification page. |
 | `/marques/remarkable/remarkable-2-avis/` | REVIEW | INDEX | Independent-source legacy review; differentiated from ownership/specification page. |
 | `/marques/remarkable/abonnement-connect/` | SERVICE | INDEX | Clear subscription/service intent and standalone decision value. |
-| `/marques/remarkable/accessoires/` | ACCESSORY_HUB | KEEP NOINDEX | Search intent exists, but current editorial value is still too generic. Add an exact compatibility matrix by current model and concrete accessory names before indexation. |
+| `/marques/remarkable/accessoires/` | ACCESSORY_HUB | INDEX | Enriched with a current-generation compatibility matrix for Paper Pure, Paper Pro Move, Paper Pro and reMarkable 2, including stylets, folios and Type Folio compatibility. |
 | `/marques/remarkable/alternatives/` | ALTERNATIVES | INDEX | Distinct commercial-investigation intent by reason to leave reMarkable; useful routing to BOOX, Supernote, Kindle/Kobo and no-subscription choices. |
 | `/marques/boox/boox-note-air/` | PRODUCT | INDEX | Current Note Air5 C/family intent is strong and clearly framed around Android, Kaleido 3 and workflow. |
 | `/marques/boox/boox-tab-ultra/` | PRODUCT | INDEX | Tab Ultra C Pro is still officially sold/documented; page correctly treats it as an older Android generation and routes toward newer alternatives. |
-| `/marques/boox/avis/` | REVIEW | KEEP NOINDEX | Current page is a product/ecosystem review, while the generic `BOOX avis` intent also includes brand reputation, support, updates and after-sales. Expand this before indexation. |
-| `/marques/boox/accessoires/` | ACCESSORY_HUB | KEEP NOINDEX | Search intent exists, but current page lacks a concrete model-by-model compatibility matrix and exact accessory mapping. Enrich before indexation. |
+| `/marques/boox/avis/` | REVIEW | INDEX | Expanded to cover brand-level trust questions: firmware support, warranty, repairs, returns, account/cloud/privacy, independent reviews and customer-service signals. |
+| `/marques/boox/accessoires/` | ACCESSORY_HUB | INDEX | Enriched with exact model-by-model mapping for Go 10.3 Gen II, Note Air5 C, Note Max, Tab X C and Tab Ultra C Pro, including stylus, case, keyboard and microSD support. |
 | `/marques/boox/alternatives/` | ALTERNATIVES | INDEX | Distinct alternatives intent, with clear reasons to choose reMarkable, Supernote, Kindle/Kobo or remain within BOOX. |
 
 ## Summary
 
-- Recommended INDEX: 15 URLs
-- KEEP NOINDEX pending targeted enrichment: 3 URLs
+- Recommended INDEX: 18 URLs
+- KEEP NOINDEX pending enrichment: 0 URLs
 - FUSIONNER: 0 URLs
 
-## Pages to enrich before indexation
+## Enrichment completed before indexation
 
 ### `/marques/remarkable/accessoires/`
-Add a current-generation compatibility matrix covering at minimum Paper Pure, Paper Pro Move, Paper Pro and reMarkable 2, with Marker/Marker Plus, Folio/Book Folio and Type Folio compatibility and whether each accessory is included, optional or incompatible.
+The page now includes a current-generation compatibility matrix covering Paper Pure, Paper Pro Move, Paper Pro and reMarkable 2. It distinguishes current-generation Marker/Marker Plus from reMarkable 2 pens, maps Sleeve Folio / Book Folio / Type Folio by device, explains the Paper Pro Move Type Folio incompatibility, and adds decision guidance by use case.
 
 ### `/marques/boox/accessoires/`
-Add a current-model compatibility matrix covering at minimum Go 10.3 Gen II, Note Air5 C, Note Max, Tab X C and Tab Ultra C Pro. Map current styluses, keyboard covers, cases and microSD support by exact model.
+The page now includes a current-model compatibility matrix covering Go 10.3 Gen II, Note Air5 C, Note Max, Tab X C and Tab Ultra C Pro. It maps the current stylus, official cases, official keyboard availability and microSD support, with additional guidance on bundles and second-hand compatibility.
 
 ### `/marques/boox/avis/`
-Expand beyond device flexibility: include software-update policy where documentable, customer support/after-sales, warranty/repair pathways, privacy/account ecosystem where relevant, recurring user complaints and strengths from independent sources, and clearly separate product experience from merchant/service reputation.
+The page now covers both device quality and brand-level purchase risk: BOOX's stated firmware-support window, Android-version differences, warranty and repair pathways, return-policy conditions, ONYX account/server behavior, third-party cloud integrations, privacy/logging documentation and independent customer-service signals. Public customer reviews are treated as anecdotal evidence rather than statistics.
 
 ## Cannibalisation / merge decision
 
-No mandatory merger is recommended. PRODUCT and REVIEW URLs now serve separate intents: factual purchase/specification pages versus evidence-based editorial reviews. The BOOX hub and BOOX review can also coexist once the review page covers brand-level trust/support intent rather than duplicating the hub.
+No mandatory merger is recommended. PRODUCT and REVIEW URLs serve separate intents: factual purchase/specification pages versus evidence-based editorial reviews. The BOOX hub covers the ecosystem and current range, while `/marques/boox/avis/` now addresses brand trust, support, software lifecycle and purchase-risk questions in addition to device experience.
 
-All pages should remain `noindex,follow` until the recommended indexation changes are explicitly approved and applied.
+All pages remain `noindex,follow` until the indexation changes are explicitly approved and applied.
