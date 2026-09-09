@@ -2,8 +2,8 @@
 """Validate the /usages/ editorial workflow infrastructure.
 
 This validator intentionally checks only observable structural rules. It does
-not claim that JTBD research, fact-checking, Humanizer, SEO or GEO quality have
-passed.
+not claim that JTBD research, fact-checking, Humanizer, SEO/GEO quality or an
+editorial PUBLISH_REVIEW have passed.
 """
 
 from __future__ import annotations
@@ -47,6 +47,29 @@ FORBIDDEN_RECORD_KEYS = {
     "winner",
 }
 
+# These are existing/reused skills that carry the substantive method. The two
+# usage workflows should orchestrate these instead of rebuilding them as custom
+# page-specific agents.
+REUSED_SKILLS = {
+    "content-audit",
+    "search-intent",
+    "jobs-to-be-done",
+    "content-refresh",
+    "fact-check",
+    "evidence-based-reviews",
+    "affiliate-value",
+    "content-brief-authoring",
+    "content-and-copy",
+    "internal-linking-audit",
+    "humanizer",
+    "general-writing",
+    "anti-ai-slop",
+    "seo-onpage",
+    "seo-technical",
+    "seo-best-practices",
+    "editorial-qa",
+}
+
 
 def fail(message: str) -> None:
     raise SystemExit(f"FAIL: {message}")
@@ -62,18 +85,75 @@ def walk_keys(value):
             yield from walk_keys(child)
 
 
+def require_text(path: Path, fragments: list[str]) -> None:
+    text = path.read_text(encoding="utf-8")
+    missing = [fragment for fragment in fragments if fragment not in text]
+    if missing:
+        fail(f"{path.relative_to(ROOT)} missing workflow markers: {', '.join(missing)}")
+
+
 def main() -> None:
     required_files = [
-        ROOT / ".agents/skills/jobs-to-be-done/SKILL.md",
-        ROOT / ".agents/skills/jobs-to-be-done/LICENSE",
+        ROOT / ".agents/skills/usage-analysis-workflow/SKILL.md",
         ROOT / ".agents/skills/usage-content-workflow/SKILL.md",
         ROOT / ".content/usages/_template.json",
         ROOT / ".content/usages/README.md",
         ROOT / "usage-workflow.config.yaml",
     ]
+    required_files.extend(
+        ROOT / f".agents/skills/{skill}/SKILL.md" for skill in sorted(REUSED_SKILLS)
+    )
     missing = [str(path.relative_to(ROOT)) for path in required_files if not path.exists()]
     if missing:
-        fail("missing workflow files: " + ", ".join(missing))
+        fail("missing workflow/reused-skill files: " + ", ".join(missing))
+
+    analysis_skill = ROOT / ".agents/skills/usage-analysis-workflow/SKILL.md"
+    require_text(
+        analysis_skill,
+        [
+            "`AUDIT`",
+            "`CLUSTER_AUDIT`",
+            "`PUBLISH_REVIEW`",
+            "`KEEP`",
+            "`LIGHT_UPDATE`",
+            "`DEEP_REWRITE`",
+            "`MERGE`",
+            "`NOINDEX`",
+            "PASS — READY_FOR_HUMAN_VALIDATION",
+            "FAIL — KEEP_NOINDEX",
+            "jobs-to-be-done",
+            "search-intent",
+            "content-audit",
+        ],
+    )
+
+    content_skill = ROOT / ".agents/skills/usage-content-workflow/SKILL.md"
+    require_text(
+        content_skill,
+        [
+            "usage-analysis-workflow / AUDIT",
+            "usage-analysis-workflow / PUBLISH_REVIEW",
+            "content-brief-authoring",
+            "content-and-copy",
+            "jobs-to-be-done",
+            "aucune architecture éditoriale obligatoire",
+        ],
+    )
+
+    config_path = ROOT / "usage-workflow.config.yaml"
+    require_text(
+        config_path,
+        [
+            "version: 2",
+            "target_existing_skill_share: \">=80%\"",
+            "custom_share_target: \"<=20%\"",
+            "prohibit_word_count_quotas: true",
+            "prohibit_heading_count_quotas: true",
+            "prohibit_internal_link_quotas: true",
+            "prohibit_fixed_usage_page_templates: true",
+            "require_cluster_structure_review: true",
+        ],
+    )
 
     template_path = ROOT / ".content/usages/_template.json"
     try:
@@ -98,6 +178,9 @@ def main() -> None:
     if missing_slugs:
         fail("missing current usage routes: " + ", ".join(sorted(missing_slugs)))
 
+    # Current usage cluster is still in draft/publication-review state. This is
+    # intentionally kept as a structural guard until explicit indexation is
+    # approved through a separate publication step.
     noindex_failures = []
     for slug in sorted(EXPECTED_USAGE_SLUGS):
         page = usage_root / slug / "index.html"
@@ -136,11 +219,17 @@ def main() -> None:
             fail(f"{record_path}: page_url does not match slug")
 
     print(
-        "PASS: usage workflow infrastructure is valid; "
+        "PASS: two-workflow usage infrastructure is valid; "
+        f"{len(REUSED_SKILLS)} reused skills are present and "
         f"{len(EXPECTED_USAGE_SLUGS)} current usage pages remain noindex,follow."
     )
     print(
-        "NOTE: this structural PASS does not imply JTBD, fact-check, editorial, SEO or GEO PASS."
+        "PASS: analysis workflow exposes AUDIT / CLUSTER_AUDIT / PUBLISH_REVIEW "
+        "and the content workflow hands final review back to analysis."
+    )
+    print(
+        "NOTE: this machine PASS does not imply JTBD, fact-check, editorial, SEO/GEO "
+        "or PUBLISH_REVIEW PASS for any page."
     )
 
 
