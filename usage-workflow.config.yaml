@@ -1,0 +1,30 @@
+version: 1
+site: bloc-notes-numeriques.fr
+route_root: /usages/
+source_of_truth: .content/usages
+record_template: .content/usages/_template.json
+quality_reference: /guides/prix-bloc-notes-numerique/
+
+boundaries:
+  usage: "Comprendre le job, les circonstances, le workflow, les critères et les familles de solutions."
+  comparison: "Comparer, scorer et classer des produits."
+  guide: "Expliquer une technologie, un critère ou une procédure."
+  brand: "Documenter une marque, un écosystème ou un produit."
+
+rules:
+  preserve_noindex_until_human_approval: true
+  product_ranking_allowed: false
+  require_jtbd_before_draft: true
+  require_contraindications: true
+  require_non_eink_alternatives_considered: true
+  require_hypothesis_labels: true
+  require_persistent_usage_record: true
+
+current_routes:
+  - /usages/prise-de-notes-professionnelle/
+  - /usages/prise-de-notes-etudiant/
+  - /usages/prise-de-notes-reunion/
+  - /usages/annotation-pdf/
+  - /usages/lecture-et-prise-de-notes/
+  - /usages/dessin/
+  - /usages/remplacer-cahiers-papier/
