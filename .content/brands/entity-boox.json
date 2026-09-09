@@ -4,57 +4,64 @@
   "positioning": "des tablettes E Ink Android qui privilégient l’ouverture logicielle, la compatibilité documentaire et les applications tierces, au prix d’une interface plus riche et plus complexe",
   "current_range": [
     [
-      "Go 10.3 (Gen II)",
+      "Go 10.3 Gen II",
       "CURRENT",
-      "10,3″ noir et blanc",
+      "10,3″ N&B, 300 ppp, sans éclairage frontal, Android 15",
       "notes, PDF et mobilité",
-      "pas d’éclairage frontal sur ce positionnement minimaliste"
+      "lecture nocturne sans lumière externe limitée"
+    ],
+    [
+      "Go 10.3 Gen II Lumi",
+      "CURRENT",
+      "10,3″ N&B, 300 ppp, éclairage frontal, Android 15",
+      "notes, PDF et mobilité avec éclairage",
+      "plus épais et plus lourd que le Go standard"
     ],
     [
       "Note Air5 C",
       "CURRENT",
-      "10,3″ Kaleido 3 couleur",
-      "notes, couleur et productivité légère",
-      "couleur moins vive qu’un écran LCD/OLED"
+      "10,3″ Kaleido 3, Android 15",
+      "couleur, notes et productivité légère",
+      "150 ppp en couleur contre 300 ppp en N&B"
     ],
     [
       "Note Max",
       "CURRENT",
-      "13,3″ noir et blanc 300 ppp",
-      "PDF A4, recherche, travail de bureau",
-      "grand format et absence d’éclairage frontal"
+      "13,3″ N&B, 300 ppp, Android 13",
+      "grands PDF et travail documentaire",
+      "pas d’éclairage frontal et format peu mobile"
     ],
     [
       "Tab X C",
       "CURRENT",
-      "13,3″ couleur",
+      "13,3″ Kaleido 3, Android 13",
       "grand écran couleur et productivité",
-      "format lourd et budget élevé"
+      "plus de 600 g et encombrement élevé"
     ],
     [
       "Tab Ultra C Pro",
-      "CURRENT_DOCUMENTED",
-      "10,3″ couleur, Android 12",
+      "CURRENT_DOCUMENTED_CHANNEL_SENSITIVE",
+      "10,3″ Kaleido 3, Android 12",
       "workflow type tablette avec clavier",
-      "génération logicielle plus ancienne que Note Air5 C"
+      "génération logicielle plus ancienne ; disponibilité à vérifier"
     ]
   ],
   "ecosystem": [
     [
       "Matériel",
-      "gamme large du lecteur compact au 13,3 pouces."
+      "formats 10,3 et 13,3 pouces, noir et blanc ou Kaleido 3 couleur selon modèle."
     ],
     [
       "Stylet",
-      "Pen Plus, Pen3 ou InkSense selon les appareils."
+      "InkSense Plus sur Go 10.3 Gen II, Pen3 sur Note Air5 C, Pen Plus sur Note Max et InkSpire sur Tab X C ; compatibilité à vérifier par modèle."
     ],
     [
       "Système",
-      "Android, avec versions différentes selon génération ; Google Play sur les modèles concernés."
+      "Android 15 sur Go 10.3 Gen II et Note Air5 C, Android 13 sur Note Max et Tab X C, Android 12 sur Tab Ultra C Pro."
     ],
     [
       "Notes",
-      "Notes BOOX, liens, tags, reconnaissance de texte, export PDF/PNG/.note."
+      "Notes BOOX avec écriture manuscrite, organisation et exports documentés."
     ],
     [
       "Lecture",
@@ -70,7 +77,7 @@
     ],
     [
       "Applications",
-      "apps tierces : avantage majeur, mais qualité variable sur E Ink."
+      "Google Play et applications tierces sur les modèles concernés, avec une expérience qui dépend de l’optimisation E Ink."
     ]
   ],
   "strengths": [
@@ -93,5 +100,5 @@
     "vous ne voulez pas gérer les réglages de rafraîchissement et d’applications",
     "vous préférez un écosystème dont toutes les fonctions sont pensées par un seul fabricant"
   ],
-  "verified_at": "8 septembre 2026"
+  "verified_at": "9 septembre 2026"
 }
