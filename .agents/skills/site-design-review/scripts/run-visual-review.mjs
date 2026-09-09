@@ -26,6 +26,29 @@ const BRAND_ROUTES = [
   '/marques/supernote/'
 ];
 
+const COMPARISON_ROUTES = [
+  '/comparatifs/',
+  '/comparatifs/meilleur-bloc-notes-numerique/',
+  '/comparatifs/tablette-e-ink/',
+  '/comparatifs/bloc-notes-numerique-professionnel/',
+  '/comparatifs/bloc-notes-numerique-etudiant/',
+  '/comparatifs/bloc-notes-numerique-couleur/',
+  '/comparatifs/bloc-notes-numerique-a4/',
+  '/comparatifs/bloc-notes-numerique-sans-abonnement/',
+  '/comparatifs/bloc-notes-numerique-pas-cher/',
+  '/comparatifs/kindle-scribe-vs-remarkable/',
+  '/comparatifs/kindle-scribe-vs-kobo-elipsa/',
+  '/comparatifs/remarkable-vs-boox/',
+  '/comparatifs/remarkable-vs-supernote/',
+  '/comparatifs/boox-vs-supernote/',
+  '/comparatifs/kobo-elipsa-vs-remarkable/'
+];
+
+const SCOPES = {
+  brands: BRAND_ROUTES,
+  comparisons: COMPARISON_ROUTES
+};
+
 const VIEWPORTS = [
   { name: 'desktop', width: 1440, height: 1000 },
   { name: 'mobile', width: 390, height: 844 }
@@ -52,10 +75,10 @@ function parseArgs(argv) {
     else throw new Error(`Option inconnue : ${value}`);
   }
 
-  if (options.scope && options.scope !== 'brands') {
-    throw new Error(`Scope inconnu : ${options.scope}`);
+  if (options.scope && !SCOPES[options.scope]) {
+    throw new Error(`Scope inconnu : ${options.scope}. Scopes disponibles : ${Object.keys(SCOPES).join(', ')}`);
   }
-  if (!options.routes.length && options.scope === 'brands') options.routes = BRAND_ROUTES;
+  if (!options.routes.length && options.scope) options.routes = SCOPES[options.scope];
   if (!options.routes.length) options.routes = ['/marques/'];
   return options;
 }
@@ -77,7 +100,7 @@ async function waitForServer(url) {
 
 const options = parseArgs(process.argv.slice(2));
 if (options.help) {
-  console.log('Usage: run-visual-review.mjs [--scope brands] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
+  console.log('Usage: run-visual-review.mjs [--scope brands|comparisons] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
   process.exit(0);
 }
 
@@ -98,6 +121,7 @@ if (!baseUrl) {
 const report = {
   generatedAt: new Date().toISOString(),
   baseUrl,
+  scope: options.scope || null,
   routes: options.routes,
   viewports: VIEWPORTS,
   pages: []
@@ -130,6 +154,8 @@ try {
         const headings = [...document.querySelectorAll('.content-main h2, .content-main h3')];
         const tocLinks = [...document.querySelectorAll('.sidebar-toc a')];
         const fixedHeader = document.querySelector('.site-header');
+        const tables = [...document.querySelectorAll('.table-wrapper')];
+        const articleAnswer = document.querySelector('.article-answer');
         return {
           title: document.title,
           statusReady: document.readyState,
@@ -139,6 +165,15 @@ try {
           headingCount: headings.length,
           tocLinkCount: tocLinks.length,
           missingHeadingIds: headings.filter(heading => !heading.id).map(heading => heading.textContent.trim()),
+          tableCount: tables.length,
+          overflowingTables: tables
+            .filter(wrapper => wrapper.scrollWidth > wrapper.clientWidth)
+            .map(wrapper => ({ scrollWidth: wrapper.scrollWidth, clientWidth: wrapper.clientWidth })),
+          articleAnswer: articleAnswer ? {
+            height: Math.round(articleAnswer.getBoundingClientRect().height),
+            background: getComputedStyle(articleAnswer).backgroundColor,
+            borderLeftWidth: getComputedStyle(articleAnswer).borderLeftWidth
+          } : null,
           sidebar: sidebar ? {
             height: Math.round(sidebar.getBoundingClientRect().height),
             top: Math.round(sidebar.getBoundingClientRect().top),
