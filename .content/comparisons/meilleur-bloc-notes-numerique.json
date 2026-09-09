@@ -1,53 +1,44 @@
 {
   "slug": "meilleur-bloc-notes-numerique",
   "url": "/comparatifs/meilleur-bloc-notes-numerique/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "meilleur bloc-notes numérique",
     "type": "best_overall",
-    "user_job": "choisir le meilleur équilibre pour écrire, annoter et retrouver ses notes"
+    "user_job": "choisir un bloc-notes numérique E Ink adapté à sa manière d'écrire, lire, organiser et faire circuler ses notes",
+    "scope_note": "Tablettes E Ink avec stylet uniquement ; cahiers effaçables, smartpens et tablettes LCD/OLED hors scope."
   },
   "criteria": [
     {
-      "id": "writing",
-      "label": "writing",
-      "weight": 20
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 15
+      "id": "focus",
+      "label": "Écriture focalisée",
+      "rationale": "Le produit peut-il réellement remplacer un carnet sans ajouter de friction ou de distractions inutiles ?"
     },
     {
       "id": "organization",
-      "label": "organization",
-      "weight": 15
+      "label": "Organisation des notes",
+      "rationale": "La profondeur de classement, navigation, recherche et structuration change-t-elle le workflow ?"
     },
     {
-      "id": "export",
-      "label": "export",
-      "weight": 15
+      "id": "openness",
+      "label": "Ouverture et applications",
+      "rationale": "Le besoin d'apps tierces, de plusieurs clouds ou de services de lecture doit-il primer sur la simplicité ?"
     },
     {
       "id": "reading",
-      "label": "reading",
-      "weight": 10
+      "label": "Lecture",
+      "rationale": "Une bibliothèque Kindle/Kobo ou la lecture régulière d'ebooks fait-elle partie de la décision ?"
     },
     {
-      "id": "cost",
-      "label": "cost",
-      "weight": 10
+      "id": "display",
+      "label": "Éclairage, couleur et taille",
+      "rationale": "Le soir, les documents denses, la couleur ou la mobilité imposent-ils un autre format d'écran ?"
     },
     {
-      "id": "simplicity",
-      "label": "simplicity",
-      "weight": 10
-    },
-    {
-      "id": "portability",
-      "label": "portability",
-      "weight": 5
+      "id": "workflow",
+      "label": "Circulation des documents",
+      "rationale": "Les imports, exports et intégrations correspondent-ils au workflow réel du lecteur ?"
     }
   ],
   "product_universe": [
@@ -56,330 +47,148 @@
       "name": "reMarkable Paper Pure",
       "status": "ELIGIBLE",
       "source": "https://remarkable.com/fr-FR/shop/compare",
-      "price_snapshot": "à partir de 399 €"
-    },
-    {
-      "id": "boox_go2",
-      "name": "BOOX Go 10.3 (Gen II)",
-      "status": "ELIGIBLE",
-      "source": "https://shop.boox.com/products/go103gen2",
-      "price_snapshot": "à partir de 399,99 $ US"
+      "role": "default_pick",
+      "reason": "Choix le plus cohérent pour remplacer un carnet papier avec une expérience focalisée."
     },
     {
       "id": "supernote_manta",
       "name": "Supernote Manta",
       "status": "ELIGIBLE",
-      "source": "https://supernote.com/products/supernote-manta",
-      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
+      "source": "https://supernote.com/pages/supernote-manta",
+      "role": "best_for_organization",
+      "reason": "Organisation manuscrite et navigation plus poussées."
+    },
+    {
+      "id": "boox_air5c",
+      "name": "BOOX Note Air5 C",
+      "status": "ELIGIBLE",
+      "source": "https://shop.boox.com/products/noteair5c",
+      "role": "best_for_open_workflow",
+      "reason": "Android 15, Google Play, couleur et clavier optionnel."
     },
     {
       "id": "kindle_scribe3",
       "name": "Kindle Scribe (3e génération)",
       "status": "ELIGIBLE",
       "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-      "price_snapshot": "prix à vérifier sur Amazon"
+      "role": "best_for_reading_and_writing",
+      "reason": "Lecture Kindle et écriture réunies sur un grand écran éclairé."
+    },
+    {
+      "id": "remarkable_pro",
+      "name": "reMarkable Paper Pro",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/products/remarkable-paper/pro/details/compare",
+      "role": "best_for_large_color",
+      "reason": "Grand écran couleur focalisé pour documents et annotations."
+    },
+    {
+      "id": "remarkable_move",
+      "name": "reMarkable Paper Pro Move",
+      "status": "ELIGIBLE",
+      "source": "https://remarkable.com/products/remarkable-paper/pro-move",
+      "role": "best_for_portability",
+      "reason": "Format compact 7,3 pouces, 230 g, couleur et éclairage frontal."
     },
     {
       "id": "kobo_elipsa",
       "name": "Kobo Elipsa 2E",
       "status": "ELIGIBLE",
       "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
-      "price_snapshot": "399,99 €"
+      "role": "best_for_kobo_readers",
+      "reason": "Lecture Kobo, annotation et notebooks dans le même écosystème."
     },
     {
-      "id": "remarkable_pro",
-      "name": "reMarkable Paper Pro",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro",
-      "price_snapshot": "à partir de 649 €"
+      "id": "boox_go2",
+      "name": "BOOX Go 10.3 Gen II / Lumi",
+      "status": "CONSIDERED_NOT_PRIMARY",
+      "source": "https://shop.boox.com/products/go103gen2",
+      "reason": "Excellent candidat léger et Android, mais le Note Air5 C représente mieux la recommandation de polyvalence générale ; le Go reste une alternative monochrome."
+    },
+    {
+      "id": "kindle_colorsoft",
+      "name": "Kindle Scribe Colorsoft",
+      "status": "CONSIDERED_NOT_PRIMARY",
+      "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+      "reason": "La couleur peut être utile mais le prix et les compromis de Kaleido 3 ne justifient pas d'en faire la recommandation lecture + écriture par défaut."
     }
   ],
-  "scores": {
-    "remarkable_pure": {
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for portability."
-      }
+  "recommendation_logic": {
+    "default_pick": "remarkable_pure",
+    "thesis": "Le Paper Pure est le choix par défaut pour remplacer un carnet papier, mais il n'existe pas de gagnant universel : la recommandation change dès que l'organisation, Android, la lecture, la couleur, le grand format ou la mobilité deviennent prioritaires.",
+    "conditional_picks": {
+      "organization": "supernote_manta",
+      "open_android_color": "boox_air5c",
+      "reading_and_writing": "kindle_scribe3",
+      "large_color": "remarkable_pro",
+      "portability": "remarkable_move",
+      "kobo_library": "kobo_elipsa"
     },
-    "boox_go2": {
-      "writing": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for BOOX Go 10.3 (Gen II); numeric score is an editorial normalization for portability."
-      }
-    },
-    "supernote_manta": {
-      "writing": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for portability."
-      }
-    },
-    "kindle_scribe3": {
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kindle Scribe (3e génération); numeric score is an editorial normalization for portability."
-      }
-    },
-    "kobo_elipsa": {
-      "writing": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Kobo Elipsa 2E; numeric score is an editorial normalization for portability."
-      }
-    },
-    "remarkable_pro": {
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for writing."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for pdf."
-      },
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for organization."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for export."
-      },
-      "reading": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for reading."
-      },
-      "cost": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for cost."
-      },
-      "simplicity": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for simplicity."
-      },
-      "portability": {
-        "score": 5,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pro; numeric score is an editorial normalization for portability."
-      }
-    }
+    "numeric_scoring_used": false,
+    "universal_winner_claimed": false
   },
-  "ranking": [
+  "evidence": [
     {
-      "rank": 1,
-      "product_id": "supernote_manta",
-      "score": 8.7
+      "type": "official",
+      "url": "https://remarkable.com/fr-FR/shop/compare",
+      "covers": "Paper Pure, Paper Pro, Paper Pro Move — gamme, écrans, dimensions, Marker et prix affichés"
     },
     {
-      "rank": 2,
-      "product_id": "boox_go2",
-      "score": 8.35
+      "type": "official",
+      "url": "https://supernote.com/pages/supernote-manta",
+      "covers": "Manta — format, modularité, logiciel sans abonnement"
     },
     {
-      "rank": 3,
-      "product_id": "remarkable_pure",
-      "score": 8.15
+      "type": "official",
+      "url": "https://shop.boox.com/products/noteair5c",
+      "covers": "Note Air5 C — Android 15, couleur, stylet et clavier"
     },
     {
-      "rank": 4,
-      "product_id": "remarkable_pro",
-      "score": 7.85
+      "type": "official",
+      "url": "https://shop.boox.com/products/go103gen2",
+      "covers": "Go 10.3 Gen II et Lumi — Android 15, front light selon variante"
     },
     {
-      "rank": 5,
-      "product_id": "kindle_scribe3",
-      "score": 7.5
+      "type": "official",
+      "url": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+      "covers": "Générations Kindle Scribe et Colorsoft"
     },
     {
-      "rank": 6,
-      "product_id": "kobo_elipsa",
-      "score": 7.45
+      "type": "official",
+      "url": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+      "covers": "Kobo Elipsa 2E — écran, éclairage, notebooks, cloud et lecture"
+    },
+    {
+      "type": "independent",
+      "url": "https://www.wired.com/gallery/best-smart-notebooks-and-smart-pens/",
+      "covers": "Comparaison de marché 2026 et expérience d'usage de plusieurs notebooks"
+    },
+    {
+      "type": "independent",
+      "url": "https://www.wired.com/review/remarkable-paper-pure/",
+      "covers": "Paper Pure — expérience d'écriture, contraste, limites"
+    },
+    {
+      "type": "independent",
+      "url": "https://techcrunch.com/2026/07/17/remarkables-new-paper-pure-is-good-thats-why-i-wrote-this-review-on-it/",
+      "covers": "Paper Pure — usage de notes, partage, recherche, PDF et positionnement focalisé"
+    },
+    {
+      "type": "independent",
+      "url": "https://ewritable.net/brands/ratta-supernote/tablets/supernote-a5-x2/",
+      "covers": "Supernote Manta — organisation, logiciel et expérience de prise de notes"
+    },
+    {
+      "type": "independent",
+      "url": "https://www.androidcentral.com/tablets/onyx-boox-note-air-5-c-review",
+      "covers": "Note Air5 C — Android, performances, clavier et polyvalence"
+    },
+    {
+      "type": "independent",
+      "url": "https://www.techradar.com/tablets/ereaders/amazon-kindle-scribe-2025-with-frontlight-review",
+      "covers": "Kindle Scribe 3e génération — écran, lecture, écriture et limites"
     }
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Desk research. Specs officielles pour les faits ; jugements éditoriaux triangulés avec des tests indépendants lorsque nécessaire. Aucun score numérique ni test physique propriétaire n'est utilisé pour la recommandation finale."
 }
