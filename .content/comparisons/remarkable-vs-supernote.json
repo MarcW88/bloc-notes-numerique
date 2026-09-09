@@ -1,139 +1,39 @@
 {
   "slug": "remarkable-vs-supernote",
   "url": "/comparatifs/remarkable-vs-supernote/",
-  "researched_at": "2026-09-08",
-  "status": "DRAFT_READY",
+  "researched_at": "2026-09-09",
+  "status": "READY_FOR_PUBLISH_REVIEW",
   "intent": {
     "query": "reMarkable vs Supernote",
     "type": "head_to_head",
-    "user_job": "choisir entre simplicité reMarkable et organisation avancée Supernote"
+    "user_job": "choisir entre simplicité immédiate et organisation manuscrite avancée",
+    "scope_note": "Comparaison des gammes reMarkable et Supernote, avec Paper Pure/Manta comme duel principal."
   },
   "criteria": [
-    {
-      "id": "writing",
-      "label": "writing",
-      "weight": 25
-    },
-    {
-      "id": "organization",
-      "label": "organization",
-      "weight": 20
-    },
-    {
-      "id": "pdf",
-      "label": "pdf",
-      "weight": 15
-    },
-    {
-      "id": "export",
-      "label": "export",
-      "weight": 15
-    },
-    {
-      "id": "simplicity",
-      "label": "simplicity",
-      "weight": 15
-    },
-    {
-      "id": "cost",
-      "label": "cost",
-      "weight": 10
-    }
+    {"id": "simplicity", "label": "Simplicité"},
+    {"id": "note_networking", "label": "Liens, titres, mots-clés et recherche"},
+    {"id": "color", "label": "Couleur"},
+    {"id": "frontlight", "label": "Éclairage frontal"},
+    {"id": "subscription", "label": "Politique d'abonnement"},
+    {"id": "portability", "label": "Formats mobiles"},
+    {"id": "repairability", "label": "Approche long terme et modularité"}
   ],
-  "product_universe": [
-    {
-      "id": "remarkable_pure",
-      "name": "reMarkable Paper Pure",
-      "status": "ELIGIBLE",
-      "source": "https://remarkable.com/fr-FR/shop/compare",
-      "price_snapshot": "à partir de 399 €"
-    },
-    {
-      "id": "supernote_manta",
-      "name": "Supernote Manta",
-      "status": "ELIGIBLE",
-      "source": "https://supernote.com/products/supernote-manta",
-      "price_snapshot": "à partir de 469 $ US hors droits selon la région"
-    }
-  ],
-  "scores": {
-    "remarkable_pure": {
-      "writing": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for writing."
-      },
-      "organization": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for organization."
-      },
-      "pdf": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for pdf."
-      },
-      "export": {
-        "score": 7,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for export."
-      },
-      "simplicity": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for simplicity."
-      },
-      "cost": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for reMarkable Paper Pure; numeric score is an editorial normalization for cost."
-      }
-    },
-    "supernote_manta": {
-      "writing": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for writing."
-      },
-      "organization": {
-        "score": 10,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for organization."
-      },
-      "pdf": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for pdf."
-      },
-      "export": {
-        "score": 9,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for export."
-      },
-      "simplicity": {
-        "score": 8,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for simplicity."
-      },
-      "cost": {
-        "score": 6,
-        "evidence_class": "VERIFIED",
-        "justification": "Official capabilities reviewed for Supernote Manta; numeric score is an editorial normalization for cost."
-      }
-    }
+  "brand_scope": {
+    "remarkable": ["Paper Pure", "Paper Pro", "Paper Pro Move"],
+    "supernote": ["Manta", "Nomad"]
   },
-  "ranking": [
-    {
-      "rank": 1,
-      "product_id": "supernote_manta",
-      "score": 9.0
-    },
-    {
-      "rank": 2,
-      "product_id": "remarkable_pure",
-      "score": 8.4
-    }
+  "recommendation_logic": {
+    "remarkable": "simplicité, couleur ou éclairage frontal",
+    "supernote": "organisation manuscrite profonde, absence d'abonnement constructeur et approche long terme",
+    "universal_winner": false
+  },
+  "source_urls": [
+    "https://ewritable.net/remarkable-vs-supernote-which-is-the-best-e-ink-tablet/",
+    "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized",
+    "https://supernote.com/pages/supernote-manta",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/shop/connect/pricing"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "Desk-research scoring. Scores are editorial inferences from verified product capabilities, not hands-on measurements."
+  "methodology_note": "Verdict conditionnel. Les fonctions de notes sont vérifiées séparément des préférences de sensation d'écriture. Aucun score numérique."
 }
