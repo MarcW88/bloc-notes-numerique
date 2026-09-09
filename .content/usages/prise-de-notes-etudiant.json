@@ -1,7 +1,7 @@
 {
   "slug": "prise-de-notes-etudiant",
   "page_url": "/usages/prise-de-notes-etudiant/",
-  "status": "READY_FOR_PUBLISH_REVIEW",
+  "status": "READY_FOR_HUMAN_VALIDATION",
   "last_researched": "2026-09-09",
   "intent": {
     "primary_query": "bloc-notes numérique étudiant",
@@ -55,5 +55,5 @@
     "comparison_handoff": "/comparatifs/bloc-notes-numerique-etudiant/",
     "excluded_claims": ["meilleure mémorisation", "moins de distraction pour tous"]
   },
-  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PENDING_PUBLISH_REVIEW"}
+  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PASS — READY_FOR_HUMAN_VALIDATION"}
 }
