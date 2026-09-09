@@ -177,6 +177,7 @@ def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
   <meta name="description" content="{description}">
   <meta name="robots" content="noindex,follow">
   <link rel="canonical" href="https://bloc-notes-numeriques.fr{canonical}">
+  <link rel="alternate" hreflang="fr-FR" href="https://bloc-notes-numeriques.fr{canonical}">
   <link rel="stylesheet" href="{css_path}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
