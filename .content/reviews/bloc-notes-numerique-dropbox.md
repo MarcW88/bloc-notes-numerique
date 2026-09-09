@@ -1,86 +1,75 @@
-# Rapport de contrôle — standard guide Prix
+# Guide PUBLISH_REVIEW — Dropbox
 
 ```yaml
 url: /guides/bloc-notes-numerique-dropbox/
-reviewed_at: 2026-09-08
-structural_quality_gate: PASS
-content_status: DRAFT_READY
-indexing_status: noindex
-quality_reference: /guides/prix-bloc-notes-numerique/
-page_role_in_standard: must meet price-guide quality floor
+reviewed_at: 2026-09-09
+workflow: guide-analysis-workflow / PUBLISH_REVIEW
+prior_decision: DEEP_REWRITE
+content_status: QA_IN_PROGRESS
+indexing_status: noindex,follow
+verdict: PASS — READY_FOR_HUMAN_VALIDATION
 ```
 
-## 1. Profondeur sémantique mesurable
+## Machine validation
 
-- Contenu utile hors navigation et hors section Sources : **825 mots**.
-- H2 substantiels : **7**.
-- Tableaux : **1**.
-- Les sections trop courtes, mono-paragraphe non développé ou tableaux sans contexte sont bloquants dans `validate_guide_quality.py`.
+- `validate_guide_quality.py` : PASS sur les 24 guides.
+- Liens internes contextuels : PASS.
+- Robots : PASS, `noindex,follow` conservé.
+- Canonical : cohérente avec l'URL cible.
+- Source persistante : `guide_content_bespoke.py`.
 
-### Détail par section
+## Intention et rôle
 
-- `Pourquoi Dropbox peut être plus simple qu’un cloud lié à une suite bureautique` — 101 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Les principaux modes d’intégration Dropbox` — 110 mots ; 2 paragraphe(s) ; 1 tableau(x) ; 0 liste(s).
-- `reMarkable : Dropbox comme intégration de documents` — 103 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `BOOX et Supernote : deux approches plus proches du dossier` — 119 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Kobo : Dropbox sert surtout au transfert de livres et documents compatibles` — 95 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Un dossier de test révèle rapidement les limites` — 111 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 1 liste(s).
-- `Dropbox comme critère de choix` — 63 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+PASS.
 
-## 2. Maillage interne
+La page répond à une tâche propre : **utiliser Dropbox comme couche de fichiers et d'arborescence sans perdre le contrôle des versions**. Elle ne se limite plus à lister les marques compatibles.
 
-- Liens internes contextuels : **7**.
-- Cibles uniques : **7**.
+## Fact-check et fraîcheur
 
-- `/guides/bloc-notes-numerique-google-drive/`
-- `/guides/bloc-notes-numerique-onedrive/`
-- `/guides/choisir-bloc-notes-numerique/`
-- `/guides/ecosysteme-ouvert-ou-ferme/`
-- `/guides/formats-fichiers-compatibles/`
-- `/guides/organiser-notes-numeriques/`
-- `/guides/synchroniser-notes-cloud/`
+PASS.
 
-Le gate exige au minimum 4 liens contextuels et 3 cibles distinctes, sauf modification explicite du standard.
+Vérifications effectuées le 9 septembre 2026 :
 
-## 3. Sources et factualité
+- reMarkable : Dropbox comme intégration de fichiers et destination d'export ;
+- Supernote : autorisation Dropbox et sélection de dossiers/sous-dossiers à synchroniser ;
+- Kobo : ajout de PDF/EPUB non protégés via Dropbox sur les modèles compatibles ;
+- BOOX : Dropbox dans le stockage cloud tiers intégré et possibilité d'une seconde voie via Android ;
+- Kindle Scribe 2025+ : les connexions cloud actuellement documentées par Amazon concernent Google Drive, Microsoft OneDrive et OneNote, pas Dropbox.
 
-- Sources externes officielles identifiables : **4**.
-- Les fonctions variables sont rédigées avec leurs marques, générations ou conditions lorsque celles-ci sont nécessaires à la précision.
-- Aucune expérience directe, mesure propriétaire ou résultat de test n'est déduit automatiquement par ce script.
-- Le fact-check éditorial reste une passe distincte : la présence d'une source n'est pas, à elle seule, une preuve que toute affirmation est correcte.
+La page ne transforme pas cette absence documentée en affirmation sur toutes les méthodes de transfert Kindle.
 
-## 4. Content refresh / conservation
+## Valeur éditoriale et affiliation
 
-- Pour les anciens guides, les angles utiles ont été conservés lorsque cohérents avec le nouveau standard ; l'enrichissement porte sur contexte, exemples, limites, entités et prochaine étape.
-- Pour les pages initialement vides, le contenu est construit depuis le brief et non depuis un simple gabarit H2.
-- La page Prix reste la référence de densité et de valeur décisionnelle, sans imposer une longueur artificiellement identique à chaque tutoriel.
+PASS.
 
-## 5. Natural writing / Humanizer / General writing
+La page apporte une méthode indépendante des liens marchands : définir la version de référence, choisir une méthode principale, nommer les copies annotées et tester le workflow avec plusieurs fichiers.
 
-Ces passes ont été appliquées pendant la réécriture éditoriale mais **ne sont pas déclarées PASS par déduction automatique**. Le script contrôle uniquement des signaux structurels observables. La validation humaine finale doit encore vérifier le rythme, les répétitions, les transitions et le ton dans le rendu.
+## Maillage et frontière de cluster
 
-## 6. Anti-AI-slop
+PASS.
 
-Le gate structurel bloque le principal défaut du précédent lot : H2 très courts, tableaux sans explication et maillage quasi absent. Il ne prétend pas détecter l'origine d'un texte. Toute formulation générique ou mécanique relevée lors de la lecture finale doit être corrigée avant publication.
+- `/guides/synchroniser-notes-cloud/` reste le parent des mécanismes de sync.
+- `/guides/bloc-notes-numerique-google-drive/` traite le fichier maître dans l'écosystème Google.
+- `/guides/bloc-notes-numerique-onedrive/` traite Microsoft 365 et les contraintes IT.
+- `/guides/formats-fichiers-compatibles/` récupère DRM et types de documents.
 
-## 7. SEO / GEO
+La séparation des trois URLs fournisseur reste justifiée.
 
-- Une réponse initiale autonome est exigée par le quality gate.
-- Les H2 doivent couvrir des sous-questions distinctes et suffisamment développées.
-- Les tableaux doivent être introduits et interprétés.
-- Les entités et sources sont explicites dans le corps lorsqu'elles soutiennent une décision ou un mécanisme.
-- Le maillage dirige vers des guides, usages, comparatifs ou pages marques selon l'étape suivante du lecteur.
+## Anti-AI-slop / similarité structurelle
 
-## 8. Technique
+PASS.
 
-- `noindex,follow` : **PASS**.
-- HTML généré depuis `_generate.py` et les modules de contenu, pas modifié uniquement à la main dans les pages générées.
-- Les liens internes sont validés séparément dans le workflow CI.
+La structure Dropbox est maintenant propre au sujet : **arborescence existante → sync de dossiers Supernote → canal documentaire Kobo → entrée/sortie reMarkable → flexibilité BOOX → absence de Dropbox dans les connexions Kindle documentées → règle anti-doublons**.
 
-## 9. Blockers observés
+Le squelette fournisseur commun identifié lors du cluster audit n'est plus présent.
 
-- Aucun blocker du quality gate.
+## Risques résiduels
+
+- Les intégrations peuvent évoluer avec les firmwares.
+- Les workflows de copie et de format natif restent à distinguer selon le type de contenu.
 
 ## Verdict
 
-**PASS structurel — DRAFT_READY.** Ce verdict signifie que la page atteint le plancher de profondeur défini à partir du guide Prix. Il ne remplace pas la validation humaine finale et n'autorise ni retrait du `noindex`, ni publication, ni déploiement.
+**PASS — READY_FOR_HUMAN_VALIDATION**
+
+Ce PASS ne retire pas `noindex,follow` et n'autorise pas l'indexation sans validation humaine explicite.
