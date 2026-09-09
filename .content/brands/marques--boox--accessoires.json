@@ -23,6 +23,18 @@
     "/marques/boox/boox-note-air/",
     "/marques/boox/boox-tab-ultra/"
   ],
+  "source_urls": [
+    "https://shop.boox.com/collections/all-products/products/go103gen2",
+    "https://shop.boox.com/products/go103series-magnetic-case",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air5-c",
+    "https://shop.boox.com/products/notemax",
+    "https://shop.boox.com/products/note-max-magnetic-case",
+    "https://shop.boox.com/products/note-max-magnetic-keyboard-cover",
+    "https://shop.boox.com/products/tabxc",
+    "https://shop.boox.com/products/tabultracpro",
+    "https://shop.boox.com/products/keyboard-cover-for-tab-ultra-c-pro"
+  ],
   "official_sources": [
     "https://shop.boox.com/collections/all-products/products/go103gen2",
     "https://shop.boox.com/products/go103series-magnetic-case",
@@ -35,6 +47,7 @@
     "https://shop.boox.com/products/tabultracpro",
     "https://shop.boox.com/products/keyboard-cover-for-tab-ultra-c-pro"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

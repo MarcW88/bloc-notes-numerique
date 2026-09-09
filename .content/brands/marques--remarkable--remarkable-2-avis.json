@@ -19,13 +19,26 @@
   "unique_internal_targets": [
     "/marques/remarkable/"
   ],
-  "official_sources": [
+  "source_urls": [
     "https://remarkable.com/fr-fr",
     "https://remarkable.com/fr-FR/shop/compare",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
     "https://remarkable.com/products/remarkable-2",
     "https://remarkable.com/fr-FR/products/remarkable-2/markers",
+    "https://www.techradar.com/reviews/remarkable-2-tablet",
+    "https://www.wired.com/review/remarkable-2/",
+    "https://www.tomsguide.com/reviews/remarkable-2-review"
+  ],
+  "official_sources": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
+  ],
+  "independent_sources": [
     "https://www.techradar.com/reviews/remarkable-2-tablet",
     "https://www.wired.com/review/remarkable-2/",
     "https://www.tomsguide.com/reviews/remarkable-2-review"

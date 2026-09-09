@@ -20,6 +20,18 @@
     "/guides/prix-bloc-notes-numerique/",
     "/marques/remarkable/remarkable-paper-pro/"
   ],
+  "source_urls": [
+    "https://blog.remarkable.com/products/remarkable-paper/markers",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
+    "https://remarkable.com/products/remarkable-paper/pure",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/sleeve-folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro-move/folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro/folio",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro/type-folio?region_id=000250",
+    "https://remarkable.com/products/remarkable-2/folios",
+    "https://remarkable.com/products/remarkable-2/type-folio",
+    "https://remarkable.com/products/remarkable-2"
+  ],
   "official_sources": [
     "https://blog.remarkable.com/products/remarkable-paper/markers",
     "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
@@ -32,6 +44,7 @@
     "https://remarkable.com/products/remarkable-2/type-folio",
     "https://remarkable.com/products/remarkable-2"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

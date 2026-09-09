@@ -29,6 +29,15 @@
     "/guides/ecosysteme-ouvert-ou-ferme/",
     "/guides/liseuse-ou-bloc-notes-numerique/"
   ],
+  "source_urls": [
+    "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
+    "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW",
+    "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
+    "https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN",
+    "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL",
+    "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu",
+    "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs"
+  ],
   "official_sources": [
     "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
     "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW",
@@ -38,6 +47,7 @@
     "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu",
     "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

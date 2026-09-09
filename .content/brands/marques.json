@@ -28,7 +28,20 @@
     "/marques/remarkable/",
     "/marques/supernote/"
   ],
-  "official_sources": [
+  "source_urls": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/marker-tips",
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2"
+  ],
+  "official_sources": [],
+  "independent_sources": [
     "https://remarkable.com/fr-fr",
     "https://remarkable.com/fr-FR/shop/compare",
     "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",

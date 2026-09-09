@@ -29,6 +29,13 @@
     "/guides/formats-fichiers-compatibles/",
     "/usages/lecture-et-prise-de-notes/"
   ],
+  "source_urls": [
+    "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
+    "https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet",
+    "https://help.kobo.com/hc/fr/articles/15335985512983-Ajouter-des-livres-sur-votre-liseuse-%C3%A0-l-aide-de-Google-Drive",
+    "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
+    "https://www.kobo.com/fr/fr/p/support-documents"
+  ],
   "official_sources": [
     "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e",
     "https://help.kobo.com/hc/fr/articles/360062226733-Utiliser-votre-liseuse-Kobo-comme-un-carnet",
@@ -36,6 +43,7 @@
     "https://help.kobo.com/hc/fr/articles/1500001927562-Annoter-votre-livre-avec-le-stylet-Kobo",
     "https://www.kobo.com/fr/fr/p/support-documents"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

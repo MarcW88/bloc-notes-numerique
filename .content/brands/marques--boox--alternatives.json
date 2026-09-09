@@ -20,6 +20,18 @@
     "/comparatifs/boox-vs-supernote/",
     "/comparatifs/remarkable-vs-boox/"
   ],
+  "source_urls": [
+    "https://shop.boox.com/collections/all-products/reading-tools",
+    "https://shop.boox.com/collections/noteseries",
+    "https://shop.boox.com/products/go103gen2",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/notemax",
+    "https://shop.boox.com/products/tabxc",
+    "https://shop.boox.com/products/tabultracpro",
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
+    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
+  ],
   "official_sources": [
     "https://shop.boox.com/collections/all-products/reading-tools",
     "https://shop.boox.com/collections/noteseries",
@@ -32,6 +44,7 @@
     "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
     "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

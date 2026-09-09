@@ -27,10 +27,22 @@
     "/comparatifs/remarkable-vs-supernote/",
     "/marques/remarkable/abonnement-connect/"
   ],
-  "official_sources": [
+  "source_urls": [
     "https://remarkable.com/products/remarkable-paper/pro/details/features",
     "https://remarkable.com/products/remarkable-paper/pro/details/compare",
     "https://remarkable.com/products/remarkable-paper/pro?region_id=000036",
+    "https://www.techradar.com/tablets/remarkable-paper-pro-review",
+    "https://www.wired.com/review/remarkable-paper-pro/",
+    "https://www.tomsguide.com/tablets/remarkable-paper-pro",
+    "https://www.forbes.com/sites/forbes-personal-shopper/article/remarkable-paper-pro-review/",
+    "https://www.engadget.com/mobile/tablets/remarkable-paper-pro-review-writing-in-color-is-nice-but-itll-cost-you-173024590.html"
+  ],
+  "official_sources": [
+    "https://remarkable.com/products/remarkable-paper/pro/details/features",
+    "https://remarkable.com/products/remarkable-paper/pro/details/compare",
+    "https://remarkable.com/products/remarkable-paper/pro?region_id=000036"
+  ],
+  "independent_sources": [
     "https://www.techradar.com/tablets/remarkable-paper-pro-review",
     "https://www.wired.com/review/remarkable-paper-pro/",
     "https://www.tomsguide.com/tablets/remarkable-paper-pro",

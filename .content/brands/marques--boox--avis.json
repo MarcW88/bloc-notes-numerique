@@ -24,7 +24,7 @@
     "/comparatifs/remarkable-vs-boox/",
     "/marques/boox/"
   ],
-  "official_sources": [
+  "source_urls": [
     "https://help.boox.com/hc/en-us/articles/10701135807124-Firmware-Updates",
     "https://shop.boox.com/pages/warranty",
     "https://shop.boox.com/pages/return",
@@ -32,6 +32,21 @@
     "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
     "https://help.boox.com/hc/en-us/articles/360046663532-BOOX-Privacy-Do-We-Collect-Your-Personal-Information",
     "https://shop.boox.com/products/noteair5c",
+    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
+    "https://www.digitaltrends.com/tablets/i-tested-an-ai-powered-kindle-scribe-rival-and-it-shows-how-far-behind-amazon-is/",
+    "https://www.trustpilot.com/review/shop.boox.com",
+    "https://www.trustpilot.com/review/boox.com"
+  ],
+  "official_sources": [
+    "https://help.boox.com/hc/en-us/articles/10701135807124-Firmware-Updates",
+    "https://shop.boox.com/pages/warranty",
+    "https://shop.boox.com/pages/return",
+    "https://help.boox.com/hc/en-us/articles/10701174893972-ONYX-Account-Sign-up-and-Deletion",
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/360046663532-BOOX-Privacy-Do-We-Collect-Your-Personal-Information",
+    "https://shop.boox.com/products/noteair5c"
+  ],
+  "independent_sources": [
     "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
     "https://www.digitaltrends.com/tablets/i-tested-an-ai-powered-kindle-scribe-rival-and-it-shows-how-far-behind-amazon-is/",
     "https://www.trustpilot.com/review/shop.boox.com",

@@ -21,6 +21,14 @@
     "/bons-plans/bloc-notes-numerique-occasion/",
     "/marques/remarkable/"
   ],
+  "source_urls": [
+    "https://remarkable.com/fr-fr",
+    "https://remarkable.com/fr-FR/shop/compare",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pro?region_id=000250",
+    "https://remarkable.com/fr-FR/products/remarkable-paper/pure/details/features",
+    "https://remarkable.com/products/remarkable-2",
+    "https://remarkable.com/fr-FR/products/remarkable-2/markers"
+  ],
   "official_sources": [
     "https://remarkable.com/fr-fr",
     "https://remarkable.com/fr-FR/shop/compare",
@@ -29,6 +37,7 @@
     "https://remarkable.com/products/remarkable-2",
     "https://remarkable.com/fr-FR/products/remarkable-2/markers"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

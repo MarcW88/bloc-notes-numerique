@@ -27,11 +27,17 @@
     "/marques/remarkable/accessoires/",
     "/marques/remarkable/remarkable-paper-pro-avis/"
   ],
+  "source_urls": [
+    "https://remarkable.com/products/remarkable-paper/pro/details/features",
+    "https://remarkable.com/products/remarkable-paper/pro/details/compare",
+    "https://remarkable.com/products/remarkable-paper/pro?region_id=000036"
+  ],
   "official_sources": [
     "https://remarkable.com/products/remarkable-paper/pro/details/features",
     "https://remarkable.com/products/remarkable-paper/pro/details/compare",
     "https://remarkable.com/products/remarkable-paper/pro?region_id=000036"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

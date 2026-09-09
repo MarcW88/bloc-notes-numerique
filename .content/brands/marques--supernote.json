@@ -29,6 +29,13 @@
     "/guides/ecosysteme-ouvert-ou-ferme/",
     "/guides/organiser-notes-numeriques/"
   ],
+  "source_urls": [
+    "https://supernote.com/products/supernote-manta",
+    "https://supernote.com/products/supernote-nomad",
+    "https://supernote.com/blogs/supernote-blog/an-explanation-of-supernote-product-naming-evolution",
+    "https://support.supernote.com/en_US/Tools-Features/handwriting-recognition",
+    "https://support.supernote.com/en_US/transfer-files"
+  ],
   "official_sources": [
     "https://supernote.com/products/supernote-manta",
     "https://supernote.com/products/supernote-nomad",
@@ -36,6 +43,7 @@
     "https://support.supernote.com/en_US/Tools-Features/handwriting-recognition",
     "https://support.supernote.com/en_US/transfer-files"
   ],
+  "independent_sources": [],
   "noindex_follow": true,
   "analysis_documentary": false
 }

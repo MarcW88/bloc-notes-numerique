@@ -1,9 +1,9 @@
 {
   "url": "/marques/boox/",
-  "title": "BOOX — Gamme, Android, notes, cloud et comparatifs",
+  "title": "BOOX — Choisir entre Go, Note Air, Note Max et Tab X",
   "page_type": "BRAND_HUB",
   "brand": "boox",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
     "BOOX n’est pas un modèle : six références ne répondent pas au même besoin",
     "Android est un avantage seulement si vos applications en profitent",
@@ -31,7 +31,7 @@
     "/marques/boox/boox-note-air/",
     "/usages/annotation-pdf/"
   ],
-  "official_sources": [
+  "source_urls": [
     "https://shop.boox.com/collections/all-products/handwriting-tools",
     "https://shop.boox.com/products/go103gen2",
     "https://shop.boox.com/products/noteair5c",
@@ -41,6 +41,21 @@
     "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
     "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
     "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup",
+    "https://www.lesnumeriques.com/liseuse/boox-note-air5-c-p78686/test.html",
+    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"
+  ],
+  "official_sources": [
+    "https://shop.boox.com/collections/all-products/handwriting-tools",
+    "https://shop.boox.com/products/go103gen2",
+    "https://shop.boox.com/products/noteair5c",
+    "https://shop.boox.com/products/notemax",
+    "https://shop.boox.com/products/tabxc",
+    "https://shop.boox.com/products/tabultracpro",
+    "https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage",
+    "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes",
+    "https://help.boox.com/hc/en-us/articles/25096430940436-Reading-Data-Syncing-and-Backup"
+  ],
+  "independent_sources": [
     "https://www.lesnumeriques.com/liseuse/boox-note-air5-c-p78686/test.html",
     "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"
   ],
