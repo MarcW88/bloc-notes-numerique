@@ -135,52 +135,58 @@
 <div class="container">
   <div class="content-layout">
     <article class="content-main">
-      <p class="article-answer"><strong>Dropbox est l’un des services cloud les plus largement intégrés aux bloc-notes numériques, mais chaque marque l’utilise différemment.</strong> reMarkable s’en sert pour importer et exporter des fichiers, BOOX l’intègre à sa bibliothèque cloud, Supernote peut synchroniser des dossiers et certains Kobo permettent de charger des fichiers depuis Dropbox. Vérifiez toujours si vous manipulez une copie ou un contenu réellement synchronisé.</p>
+      <p class="article-answer"><strong>Dropbox est surtout intéressant sur un bloc-notes numérique lorsque votre organisation repose déjà sur des dossiers de fichiers indépendants d’une suite bureautique.</strong> Selon l’appareil, il peut servir à synchroniser des dossiers, importer des PDF/EPUB, déposer des copies annotées ou accéder au stockage depuis une application Android. Sa force n’est donc pas une « meilleure compatibilité », mais la possibilité de garder une logique de fichiers relativement neutre entre plusieurs plateformes.</p>
 
-      <h2 id="interet">Pourquoi Dropbox peut être plus simple qu’un cloud lié à une suite bureautique</h2>
-      <p>Dropbox sert principalement à stocker et partager des fichiers, sans imposer le même ensemble d’applications bureautiques que Microsoft 365 ou Google Workspace. Pour un workflow basé sur des PDF, EPUB et exports de notes, cette neutralité peut simplifier les échanges entre plusieurs appareils et systèmes.</p>
-      <p>Elle ne garantit toutefois pas une meilleure intégration. Le fabricant décide si Dropbox apparaît comme un explorateur de fichiers, un service d’import/export ou une destination de synchronisation. Un même compte Dropbox peut donc se comporter différemment sur reMarkable, BOOX, Supernote ou Kobo.</p>
-      <p>Le guide <a href="/guides/synchroniser-notes-cloud/">synchronisation cloud</a> fournit la grille pour distinguer ces mécanismes.</p>
+      <h2 id="arborescence">Dropbox prend du sens si votre arborescence existe déjà avant la tablette</h2>
+      <p>Un workflow Dropbox est souvent simple à décrire : un dossier par client ou projet, des fichiers entrants dans une sous-arborescence et des livrables annotés dans une autre. La tablette n’a alors pas besoin de devenir le système documentaire principal ; elle doit seulement respecter suffisamment cette structure pour que les fichiers reviennent au bon endroit.</p>
+      <p>Cette logique est différente d’un cloud principalement utilisé comme continuité d’un écosystème constructeur. Elle peut aussi convenir à quelqu’un qui travaille sur Windows, macOS et mobile sans vouloir lier son choix de bloc-notes à Google Workspace ou Microsoft 365.</p>
+      <p>Pour éviter qu’une arborescence claire se transforme en accumulation de copies, définissez à l’avance la version de référence et la règle de nommage des exports.</p>
 
-      <h2 id="comparaison">Les principaux modes d’intégration Dropbox</h2>
-      <p>Avant de comparer des marques, traduisez la compatibilité en action concrète. Cette étape est particulièrement utile si vous souhaitez garder une architecture de dossiers commune entre ordinateur et tablette.</p>
-      <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Mode</th><th>Usage</th><th>Limite possible</th></tr></thead><tbody>
-        <tr><td>Import</td><td>prendre un PDF dans Dropbox</td><td>copie locale indépendante</td></tr>
-        <tr><td>Export</td><td>déposer une version annotée</td><td>nouveau fichier à gérer</td></tr>
-        <tr><td>Sync de dossiers</td><td>maintenir une arborescence choisie</td><td>conflits et délais</td></tr>
-        <tr><td>App Android</td><td>accès complet à l’app Dropbox</td><td>ergonomie variable sur E Ink</td></tr>
-      </tbody></table></div>
-      <p>Si votre besoin est seulement « récupérer un PDF le matin et le renvoyer le soir », l’import/export suffit. Si vous voulez retrouver automatiquement une arborescence de projet entière, la synchronisation de dossiers devient plus importante.</p>
+      <h2 id="supernote-dropbox">Supernote : Dropbox peut réellement refléter des dossiers sélectionnés</h2>
+      <p>Supernote permet d’autoriser Dropbox puis de choisir les dossiers à synchroniser, y compris des sous-dossiers. Cette approche est particulièrement cohérente si votre structure Dropbox correspond déjà à vos projets. Vous pouvez décider quels dossiers doivent être présents sur l’appareil au lieu d’importer manuellement chaque fichier.</p>
+      <p>Le revers est celui de toute synchronisation : une mauvaise règle de version peut créer des conflits ou des doublons. Évitez d’éditer simultanément la même ressource sur plusieurs appareils avant la fin du sync et gardez une convention claire pour les fichiers terminés.</p>
+      <p>Si vous voulez comprendre le risque de conflits avant de choisir un service, consultez <a href="/guides/synchroniser-notes-cloud/">synchroniser ses notes dans le cloud</a>.</p>
 
-      <h2 id="remarkable">reMarkable : Dropbox comme intégration de documents</h2>
-      <p>reMarkable permet d’importer des fichiers depuis Dropbox et d’y uploader des documents depuis la tablette. Le fonctionnement s’intègre à son système « My files », mais reste distinct de la synchronisation reMarkable vers les applications compagnon.</p>
-      <p>Cette séparation a un avantage : vous pouvez garder Dropbox comme dépôt de projets tout en utilisant le cloud reMarkable pour la continuité entre tablette et desktop app. Elle demande toutefois de comprendre quelle copie est la version de référence.</p>
-      <p>Pour éviter les doublons, définissez une convention : par exemple « source dans Dropbox, copie annotée suffixée -reviewed ». Le guide <a href="/guides/organiser-notes-numeriques/">organiser ses notes numériques</a> aide à construire ces règles.</p>
+      <h2 id="kobo-dropbox">Kobo utilise Dropbox comme canal de documents, pas comme système général de notes</h2>
+      <p>Sur les modèles Kobo compatibles, dont Elipsa et Elipsa 2E, Dropbox permet d’ajouter des EPUB et PDF non protégés. Les contenus chiffrés ou protégés par DRM suivent un autre parcours. Pour un lecteur qui garde ses documents personnels dans Dropbox, cette intégration peut suffire à faire entrer facilement la matière à lire ou annoter.</p>
+      <p>Elle ne signifie pas que tous les carnets Kobo deviennent des fichiers Dropbox synchronisés en continu. Le type de contenu reste déterminant : PDF personnel, ebook protégé et carnet natif ne suivent pas nécessairement la même voie.</p>
+      <p>Pour ce type de besoin, le guide <a href="/guides/formats-fichiers-compatibles/">formats de fichiers compatibles</a> est plus utile qu’une simple liste de services cloud.</p>
 
-      <h2 id="boox-supernote">BOOX et Supernote : deux approches plus proches du dossier</h2>
-      <p>BOOX permet de lier Dropbox dans la bibliothèque cloud et de télécharger les fichiers dans une étagère liée au compte. Certains documents peuvent ensuite être copiés vers le stockage cloud. Sur Android, l’application Dropbox peut aussi être installée, ce qui crée une seconde méthode qu’il vaut mieux ne pas mélanger sans raison.</p>
-      <p>Supernote permet d’autoriser Dropbox puis de sélectionner les dossiers à synchroniser. Le système peut donc correspondre à quelqu’un qui souhaite retrouver une arborescence précise sur son appareil. Comme pour toute sync, évitez d’éditer simultanément la même ressource sur plusieurs appareils avant la fin de l’opération.</p>
-      <p>Si vous hésitez entre flexibilité et simplicité, le guide <a href="/guides/ecosysteme-ouvert-ou-ferme/">écosystème ouvert ou fermé</a> complète cette comparaison.</p>
+      <h2 id="remarkable-dropbox">reMarkable traite Dropbox comme une entrée et une sortie de documents</h2>
+      <p>reMarkable permet d’utiliser Dropbox comme intégration de fichiers et d’y envoyer des documents depuis la tablette. Son propre cloud reste séparé et sert à maintenir les fichiers dans l’écosystème reMarkable et ses applications compagnon.</p>
+      <p>Cette séparation convient bien à un workflow où Dropbox contient les projets tandis que reMarkable sert d’espace de travail temporaire. Il faut simplement décider comment nommer la copie annotée pour ne pas confondre source et livrable.</p>
+      <p>Une convention simple comme <em>nom-du-fichier-review.pdf</em> ou un sous-dossier <em>Annotations</em> peut suffire à supprimer beaucoup d’ambiguïté.</p>
 
-      <h2 id="kobo">Kobo : Dropbox sert surtout au transfert de livres et documents compatibles</h2>
-      <p>Certains modèles Kobo permettent de charger des fichiers non protégés via Dropbox, en complément d’autres méthodes. Comme avec Google Drive, les DRM peuvent imposer un parcours différent et le fichier importé sur une liseuse ne devient pas automatiquement une ressource synchronisée partout dans l’écosystème Kobo.</p>
-      <p>Cette intégration convient à un utilisateur qui stocke ses PDF ou EPUB personnels dans Dropbox et souhaite les récupérer facilement sur la liseuse. Elle ne doit pas être confondue avec une synchronisation collaborative d’un document annoté.</p>
-      <p>Pour les contraintes de format, reportez-vous à <a href="/guides/formats-fichiers-compatibles/">formats de fichiers compatibles</a>.</p>
+      <h2 id="boox-dropbox">BOOX ajoute une couche de flexibilité avec bibliothèque cloud et Android</h2>
+      <p>BOOX prend en charge Dropbox dans son stockage cloud tiers intégré : l’utilisateur peut parcourir les dossiers, télécharger des fichiers dans la bibliothèque et copier certains documents vers le cloud. Les modèles Android permettent également d’installer l’application Dropbox, ce qui crée une autre voie possible.</p>
+      <p>Cette flexibilité est utile si vous devez conserver des habitudes existantes, mais elle peut aussi multiplier les chemins. Si vous ouvrez parfois un PDF via l’intégration système et parfois via l’application Dropbox, vérifiez où sont stockées les annotations et comment le fichier final retourne au cloud.</p>
+      <p>Choisissez une méthode principale et utilisez les autres uniquement comme secours ou pour un cas spécifique.</p>
 
-      <h2 id="test">Un dossier de test révèle rapidement les limites</h2>
-      <p>Créez un dossier Dropbox dédié avec un PDF, un EPUB non protégé et, si besoin, un document bureautique. Connectez le bloc-notes, importez le fichier, annotez-le puis exportez le résultat dans un sous-dossier différent. Regardez ensuite le comportement sur votre ordinateur et votre téléphone.</p>
-      <ol><li>Vérifiez si la structure des dossiers est visible.</li><li>Contrôlez la direction des transferts.</li><li>Observez le nom du fichier exporté.</li><li>Testez une modification sur ordinateur.</li><li>Vérifiez s’il existe un conflit ou simplement deux copies.</li></ol>
-      <p>Ce test vous indique si Dropbox fonctionne comme un vrai espace de travail pour l’appareil ou simplement comme une boîte d’entrée/sortie. Les deux peuvent être utiles, mais pour des besoins différents.</p>
+      <h2 id="kindle-absence">Dropbox n’est pas le cloud natif mis en avant sur les Kindle Scribe récents</h2>
+      <p>La documentation Amazon actuelle pour les Kindle Scribe 2025+ décrit des connexions directes à Google Drive, Microsoft OneDrive et Microsoft OneNote. Dropbox ne fait pas partie de ces connexions documentées. Si Dropbox est votre critère principal, Kindle Scribe ne doit donc pas être évalué comme s’il proposait la même intégration native que Drive ou OneDrive.</p>
+      <p>Vous pouvez toujours faire circuler des documents par d’autres méthodes Kindle, mais cela change la nature du workflow. Pour un utilisateur très attaché à Dropbox, cette différence peut être plus importante que des écarts de fiche technique.</p>
 
-      <h2 id="decision">Dropbox comme critère de choix</h2>
-      <p>Rendez Dropbox éliminatoire uniquement si votre organisation ou vos habitudes reposent réellement dessus. Ensuite, définissez le niveau requis : transfert ponctuel, synchronisation de dossiers ou application complète. Si plusieurs clouds vous conviennent, donnez davantage de poids au logiciel de notes et à l’export final.</p>
-      <p>Pour comparer les alternatives, consultez <a href="/guides/bloc-notes-numerique-google-drive/">Google Drive</a> et <a href="/guides/bloc-notes-numerique-onedrive/">OneDrive</a>, puis replacez le cloud dans le <a href="/guides/choisir-bloc-notes-numerique/">guide général de choix</a>.</p>
+      <h2 id="regle-fichiers">La meilleure protection contre les doublons est une règle de fichiers</h2>
+      <p>Testez Dropbox avec un dossier dédié plutôt qu’avec votre archive entière. Placez-y un PDF source, importez-le ou synchronisez-le, annotez-le puis faites revenir le résultat. Vérifiez si le nom est conservé, si un nouveau fichier apparaît et si l’original reste intact.</p>
+      <ol>
+        <li>Définissez le dossier où arrivent les sources.</li>
+        <li>Décidez si l’original doit rester intact.</li>
+        <li>Choisissez un suffixe ou sous-dossier pour les fichiers annotés.</li>
+        <li>Vérifiez le comportement avec plusieurs fichiers, pas seulement un exemple.</li>
+        <li>Gardez une méthode locale de secours pour les documents importants.</li>
+      </ol>
+      <p>Si cette convention fonctionne, Dropbox peut devenir une couche de circulation simple plutôt qu’un deuxième système documentaire concurrent de la tablette.</p>
+
+      <h2 id="decision">Quand Dropbox est-il le meilleur critère cloud à garder ?</h2>
+      <p>Gardez Dropbox comme critère fort si vous utilisez déjà une arborescence de fichiers indépendante de Google ou Microsoft et que vous voulez la conserver. Privilégiez ensuite les appareils dont le comportement correspond à votre besoin : synchronisation de dossiers, import/export de copies ou application Android.</p>
+      <p>Si votre travail dépend davantage d’autorisations d’entreprise et de Microsoft 365, le guide <a href="/guides/bloc-notes-numerique-onedrive/">OneDrive</a> est plus pertinent. Si vos documents de lecture vivent déjà dans Google Workspace, consultez <a href="/guides/bloc-notes-numerique-google-drive/">Google Drive</a>.</p>
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
-        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : Dropbox et export</a></li>
-        <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : Dropbox intégré</a></li>
-        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : synchronisation Dropbox</a></li>
-        <li><a href="https://help.kobo.com/hc/en-us/articles/360024775093-Add-non-protected-PDF-and-ePub-files-to-your-Kobo-eReader-using-your-computer" rel="noopener noreferrer">Kobo : ajout de fichiers via cloud et USB</a></li>
+        <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : Dropbox comme intégration de fichiers</a></li>
+        <li><a href="https://support.supernote.com/en_US/transfer-files" rel="noopener noreferrer">Supernote : synchronisation de dossiers Dropbox</a></li>
+        <li><a href="https://help.kobo.com/hc/en-us/articles/360033830114-Add-books-to-your-eReader-using-Dropbox" rel="noopener noreferrer">Kobo : ajout de PDF et EPUB via Dropbox</a></li>
+        <li><a href="https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage" rel="noopener noreferrer">BOOX : Dropbox dans le stockage cloud tiers</a></li>
+        <li><a href="https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd" rel="noopener noreferrer">Amazon : connexions cloud documentées sur Kindle Scribe 2025+</a></li>
       </ul>
     </article>
     <aside class="content-sidebar">
