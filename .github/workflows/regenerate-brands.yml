@@ -5,6 +5,7 @@ on:
     branches: [brand-content-all-pages, main]
     paths:
       - "brand_data.py"
+      - "brand_publication.py"
       - "brand_render_common.py"
       - "brand_render_pages.py"
       - "brand_pages.py"

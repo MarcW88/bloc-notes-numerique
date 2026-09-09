@@ -4,6 +4,7 @@ import re
 from html import unescape
 
 from brand_pages import PAGES
+from brand_publication import INDEXATION_SCOPE, PUBLICATION_STATUS, ROBOTS_DIRECTIVE
 
 ROOT = Path(__file__).resolve().parent
 TAG_RE = re.compile(r'<[^>]+>', re.S)
@@ -134,10 +135,14 @@ failures = {}
 warnings = {}
 
 for url, spec in PAGES.items():
-    page = ROOT / url.strip('/') / 'index.html'
     issues = []
     notes = []
 
+    if not url.startswith(INDEXATION_SCOPE):
+        failures[url] = ['brand page outside approved indexation scope']
+        continue
+
+    page = ROOT / url.strip('/') / 'index.html'
     if not page.exists():
         failures[url] = ['page missing']
         continue
@@ -153,13 +158,15 @@ for url, spec in PAGES.items():
     body = article_match.group(1)
     body_text = normalized_text(body)
 
-    # Draft safety and basic SEO integrity.
+    # Publication safety and basic SEO integrity.
     if '<!-- contenu à rédiger -->' in raw_html_lower or 'contenu en préparation' in raw_html_lower:
         issues.append('placeholder/preparation marker remains')
 
     robots = ROBOTS_RE.search(html)
-    if not robots or 'noindex' not in robots.group(1).lower():
-        issues.append('draft must remain noindex until human validation')
+    if not robots:
+        issues.append('robots meta missing')
+    elif robots.group(1).strip().lower() != ROBOTS_DIRECTIVE.lower():
+        issues.append(f'robots directive must be {ROBOTS_DIRECTIVE} for approved brand publication')
 
     titles = TITLE_RE.findall(html)
     if len(titles) != 1 or not clean(titles[0]):
@@ -222,7 +229,7 @@ for url, spec in PAGES.items():
         warnings[url] = notes
 
 if warnings:
-    print('WARNINGS — manual brand-analysis PUBLISH_REVIEW required')
+    print('WARNINGS — manual brand-analysis review notes')
     for url, notes in warnings.items():
         print('WARN', url)
         for note in notes:
@@ -230,14 +237,12 @@ if warnings:
     print()
 
 if failures:
-    print('FAIL — machine-detectable editorial blockers found')
+    print('FAIL — machine-detectable editorial/publication blockers found')
     for url, issues in failures.items():
         print('FAIL', url)
         for issue in issues:
             print('  -', issue)
-    print()
-    print('A machine PASS is only a structural floor. Run brand-analysis-workflow in PUBLISH_REVIEW mode and obtain human validation before removing noindex.')
     raise SystemExit(1)
 
 print(f'PASS: {len(PAGES)} brand pages have no machine-detectable publication blockers')
-print('NEXT: run .agents/skills/brand-analysis-workflow/SKILL.md in PUBLISH_REVIEW mode before human validation and indexation')
+print(f'PUBLICATION: {PUBLICATION_STATUS} — robots={ROBOTS_DIRECTIVE} — scope={INDEXATION_SCOPE}')

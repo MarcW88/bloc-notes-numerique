@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 from brand_pages import PAGES
 from brand_data import VERIFIED_AT, BRANDS
+from brand_publication import INDEXATION_SCOPE, ROBOTS_DIRECTIVE
 from brand_reviewed_output import reviewed_body
 from brand_enriched_output import enriched_body
 from brand_bespoke_output import bespoke_body, bespoke_metadata
@@ -25,6 +26,9 @@ def replace_first(pattern, repl, text, flags=0, required=True):
 
 
 for url, page_data in PAGES.items():
+    if not url.startswith(INDEXATION_SCOPE):
+        raise SystemExit(f'Brand renderer received URL outside approved scope: {url}')
+
     page = html_path(url)
     if not page.exists():
         raise SystemExit(f'Missing brand page: {page}')
@@ -91,6 +95,11 @@ for url, page_data in PAGES.items():
         f'<meta name="description" content="{description}">',
         html,
     )
+    html = replace_first(
+        r'<meta name="robots" content="[^"]*">',
+        f'<meta name="robots" content="{ROBOTS_DIRECTIVE}">',
+        html,
+    )
     html = replace_first(r'<h1>.*?</h1>', f'<h1>{title}</h1>', html, re.S)
     html = replace_first(
         r'<p class="lead">.*?</p>',
@@ -120,8 +129,8 @@ for url, page_data in PAGES.items():
         raise SystemExit(f'Placeholder still present: {url}')
     if 'Contenu en préparation' in html or 'Analyse en préparation' in html:
         raise SystemExit(f'Preparation label still present: {url}')
-    if 'name="robots" content="noindex,follow"' not in html:
-        raise SystemExit(f'noindex removed: {url}')
+    if f'name="robots" content="{ROBOTS_DIRECTIVE}"' not in html:
+        raise SystemExit(f'approved robots directive missing: {url}')
     if '<article class="content-main">' not in html:
         raise SystemExit(f'content-main absent after render: {url}')
     if '<nav class="sidebar-toc" aria-label="Sommaire"></nav>' not in html:
