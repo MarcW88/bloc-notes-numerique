@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 from brand_pages import PAGES
-from brand_data import VERIFIED_AT
+from brand_data import VERIFIED_AT, BRANDS
 from brand_reviewed_output import reviewed_body
 
 ROOT = Path(__file__).resolve().parent
@@ -29,6 +29,13 @@ for url, page_data in PAGES.items():
     title = page_data['title']
     description = page_data['description']
     body = reviewed_body(url, page_data).strip()
+
+    brand_key = page_data.get('brand')
+    if page_data.get('page_type') == 'BRAND_HUB' and brand_key in BRANDS:
+        positioning = BRANDS[brand_key]['positioning']
+        bad = f'<p>{positioning.capitalize()}.</p>'
+        good = f'<p>{positioning[0].upper() + positioning[1:]}.</p>'
+        body = body.replace(bad, good)
 
     if url == '/marques/boox/boox-tab-ultra/':
         body = body.replace(
