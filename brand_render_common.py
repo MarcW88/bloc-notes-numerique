@@ -29,7 +29,43 @@ def ecosystem_table(brand):
 def bullets(items):
     return "<ul>"+"".join(f"<li>{x}</li>" for x in items)+"</ul>"
 
+def _remarkable_pilot_hub(extra_links):
+    return f'''
+<p class="article-answer"><strong>reMarkable s’adresse surtout à ceux qui veulent écrire, annoter des documents et retrouver leurs notes dans un environnement volontairement simple.</strong> En 2026, la gamme neuve s’organise autour de Paper Pure, Paper Pro Move et Paper Pro. Si vos journées dépendent d’applications Android ou d’un navigateur polyvalent, il vaut mieux regarder ailleurs.</p>
+<h2 id="gamme">La gamme reMarkable en 2026</h2>
+<p>Les trois modèles actuels répondent à des usages assez différents. Paper Pure reste le choix noir et blanc en 10,3 pouces, Paper Pro Move privilégie la mobilité avec un petit écran couleur, et Paper Pro vise les grands documents avec son écran couleur de 11,8 pouces. reMarkable 2 appartient désormais à la génération précédente et n’est plus le modèle neuf de référence.</p>
+{range_table('remarkable')}
+<p>Le choix du modèle joue aussi sur les accessoires. Les Markers de reMarkable 2 ne sont pas compatibles avec la génération Paper actuelle, un point à vérifier si vous possédez déjà du matériel de la marque.</p>
+<h2 id="ecosysteme">Un environnement spécialisé plutôt qu’une tablette généraliste</h2>
+<p>reMarkable OS est conçu autour des carnets, PDF et EPUB, avec dossiers, étiquettes, conversion de l’écriture manuscrite et export de documents. Les applications mobiles et desktop prolongent ce travail sur ordinateur ou téléphone, tandis que Google Drive, OneDrive et Dropbox servent à faire entrer des fichiers dans l’écosystème.</p>
+<p>Cette simplicité a une contrepartie : reMarkable ne fonctionne pas comme une tablette Android avec un catalogue d’applications tierces. Si OneNote, un navigateur complet ou une application métier doit tourner directement sur l’appareil, ce choix devient vite limitant. Le comparatif {internal_link('/comparatifs/remarkable-vs-boox/','reMarkable vs BOOX')} détaille cette différence d’approche.</p>
+<h2 id="connect">Ce que l’abonnement Connect change vraiment</h2>
+<p>Les fonctions de base d’écriture restent utilisables sans abonnement. Connect ajoute surtout des services cloud et applicatifs, notamment le stockage cloud illimité, la recherche manuscrite et des fonctions supplémentaires dans les applications reMarkable. Sans Connect, il faut donc vérifier si votre usage dépend de ces fonctions avant de considérer l’abonnement comme un coût obligatoire.</p>
+<p>Pour le détail, voir {internal_link('/marques/remarkable/abonnement-connect/','reMarkable Connect')} et le guide {internal_link('/guides/bloc-notes-numerique-avec-ou-sans-abonnement/','bloc-notes numérique avec ou sans abonnement')}.</p>
+<h2 id="choisir">Quel reMarkable choisir selon votre usage ?</h2>
+<ul>
+<li><strong>Paper Pure</strong> si vous voulez surtout écrire et annoter en noir et blanc sur un format 10,3 pouces.</li>
+<li><strong>Paper Pro Move</strong> si la portabilité compte davantage que la surface disponible pour de grands PDF.</li>
+<li><strong>Paper Pro</strong> si l’écran 11,8 pouces, la couleur et l’éclairage sont utiles pour vos documents ou vos annotations.</li>
+</ul>
+<p>Pour Paper Pro, la {internal_link('/marques/remarkable/remarkable-paper-pro/','fiche produit')} regroupe les caractéristiques utiles à l’achat, tandis que {internal_link('/marques/remarkable/remarkable-paper-pro-avis/','notre analyse du Paper Pro')} confronte ces caractéristiques à des essais indépendants.</p>
+<h2 id="limites">Les points à vérifier avant de rester chez reMarkable</h2>
+<ul>
+<li>vos applications indispensables doivent pouvoir rester sur l’ordinateur ou le téléphone ;</li>
+<li>les fonctions Connect qui vous intéressent doivent être intégrées au coût réel d’usage ;</li>
+<li>la compatibilité des Markers et Folios dépend de la génération ;</li>
+<li>la lecture de livres n’est pas aussi centrale que chez Kindle ou Kobo.</li>
+</ul>
+<p>Si l’ouverture logicielle est prioritaire, regardez {internal_link('/marques/boox/','BOOX')}. Si vous cherchez surtout une organisation poussée des notes, {internal_link('/marques/supernote/','Supernote')} mérite aussi d’être comparé. Pour un choix plus large, partez des {internal_link('/comparatifs/','comparatifs multi-marques')}.</p>
+<h2 id="suite">Aller plus loin dans l’écosystème reMarkable</h2>
+<ul>{''.join(f'<li>{internal_link(url,label)}</li>' for label,url in extra_links)}</ul>
+<h2 id="sources">Sources consultées</h2>
+<p>Gamme, compatibilités et fonctions susceptibles d’évoluer vérifiées le {VERIFIED_AT}.</p>{sources_html(['remarkable'],6)}
+'''
+
 def brand_hub(brand, extra_links, custom=""):
+    if brand == 'remarkable':
+        return _remarkable_pilot_hub(extra_links)
     b=BRANDS[brand]
     return f'''
 <p class="article-answer"><strong>{b["name"]} se distingue surtout par {b["positioning"]}.</strong> Cette page ne repose pas sur un test physique unique : elle synthétise la gamme et les fonctions vérifiées auprès des sources officielles au {VERIFIED_AT}, puis les relie aux usages et comparatifs du site.</p>
