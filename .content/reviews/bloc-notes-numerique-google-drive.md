@@ -1,86 +1,76 @@
-# Rapport de contrôle — standard guide Prix
+# Guide PUBLISH_REVIEW — Google Drive
 
 ```yaml
 url: /guides/bloc-notes-numerique-google-drive/
-reviewed_at: 2026-09-08
-structural_quality_gate: PASS
-content_status: DRAFT_READY
-indexing_status: noindex
-quality_reference: /guides/prix-bloc-notes-numerique/
-page_role_in_standard: must meet price-guide quality floor
+reviewed_at: 2026-09-09
+workflow: guide-analysis-workflow / PUBLISH_REVIEW
+prior_decision: DEEP_REWRITE
+content_status: QA_IN_PROGRESS
+indexing_status: noindex,follow
+verdict: PASS — READY_FOR_HUMAN_VALIDATION
 ```
 
-## 1. Profondeur sémantique mesurable
+## Machine validation
 
-- Contenu utile hors navigation et hors section Sources : **884 mots**.
-- H2 substantiels : **7**.
-- Tableaux : **1**.
-- Les sections trop courtes, mono-paragraphe non développé ou tableaux sans contexte sont bloquants dans `validate_guide_quality.py`.
+- `validate_guide_quality.py` : PASS sur les 24 guides.
+- Liens internes contextuels : PASS, toutes les cibles existent.
+- Robots : PASS, `noindex,follow` conservé.
+- Canonical : cohérente avec l'URL cible.
+- Le contenu est généré depuis `guide_content_bespoke.py`, chargé après les modules Guide génériques.
 
-### Détail par section
+## Intention et rôle
 
-- `Quatre niveaux de compatibilité avec Google Drive` — 132 mots ; 2 paragraphe(s) ; 1 tableau(x) ; 0 liste(s).
-- `reMarkable : Drive comme intégration de fichiers` — 103 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Kindle Scribe 2025+ : import et retour d’une copie` — 120 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Kobo : Drive pour les fichiers non protégés sur certains modèles` — 101 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `BOOX et Supernote : Drive peut s’intégrer à une logique de dossiers` — 119 mots ; 3 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
-- `Le workflow Google Drive à tester avant achat` — 105 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 1 liste(s).
-- `Quand Google Drive doit-il devenir un critère éliminatoire ?` — 86 mots ; 2 paragraphe(s) ; 0 tableau(x) ; 0 liste(s).
+PASS.
 
-## 2. Maillage interne
+La page répond désormais à une question propre : **où reste le fichier maître lorsqu'un bloc-notes travaille avec Google Drive ?** Elle ne se contente plus d'une liste de compatibilités et ne devient pas un comparatif produit.
 
-- Liens internes contextuels : **7**.
-- Cibles uniques : **7**.
+La logique éditoriale est : fichier de référence → comportements Kindle/Kobo → logique de dossiers Supernote/BOOX → rôle distinct du cloud reMarkable → test de bout en bout → critère éliminatoire.
 
-- `/comparatifs/kindle-scribe-vs-remarkable/`
-- `/guides/bloc-notes-numerique-avec-ou-sans-abonnement/`
-- `/guides/bloc-notes-numerique-dropbox/`
-- `/guides/bloc-notes-numerique-onedrive/`
-- `/guides/choisir-bloc-notes-numerique/`
-- `/guides/formats-fichiers-compatibles/`
-- `/guides/synchroniser-notes-cloud/`
+## Fact-check et fraîcheur
 
-Le gate exige au minimum 4 liens contextuels et 3 cibles distinctes, sauf modification explicite du standard.
+PASS.
 
-## 3. Sources et factualité
+Vérifications effectuées le 9 septembre 2026 sur les documentations officielles :
 
-- Sources externes officielles identifiables : **6**.
-- Les fonctions variables sont rédigées avec leurs marques, générations ou conditions lorsque celles-ci sont nécessaires à la précision.
-- Aucune expérience directe, mesure propriétaire ou résultat de test n'est déduit automatiquement par ce script.
-- Le fact-check éditorial reste une passe distincte : la présence d'une source n'est pas, à elle seule, une preuve que toute affirmation est correcte.
+- reMarkable : import/export et upload vers Google Drive ;
+- Kindle Scribe 2025+ : import d'une copie depuis Drive, absence de resynchronisation des annotations vers la source, retour d'une copie PDF, formats de partage des carnets ;
+- Kobo : Google Drive sur les modèles compatibles pour EPUB/PDF non protégés, DRM à traiter séparément ;
+- Supernote : sélection de dossiers à synchroniser avec Google Drive ;
+- BOOX : Drive dans le stockage cloud tiers intégré, distinct des autres mécanismes BOOX/Android.
 
-## 4. Content refresh / conservation
+Aucun comportement expérientiel ou hands-on n'est revendiqué.
 
-- Pour les anciens guides, les angles utiles ont été conservés lorsque cohérents avec le nouveau standard ; l'enrichissement porte sur contexte, exemples, limites, entités et prochaine étape.
-- Pour les pages initialement vides, le contenu est construit depuis le brief et non depuis un simple gabarit H2.
-- La page Prix reste la référence de densité et de valeur décisionnelle, sans imposer une longueur artificiellement identique à chaque tutoriel.
+## Valeur éditoriale et affiliation
 
-## 5. Natural writing / Humanizer / General writing
+PASS.
 
-Ces passes ont été appliquées pendant la réécriture éditoriale mais **ne sont pas déclarées PASS par déduction automatique**. Le script contrôle uniquement des signaux structurels observables. La validation humaine finale doit encore vérifier le rythme, les répétitions, les transitions et le ton dans le rendu.
+La page reste utile sans lien marchand : elle fournit une règle de décision, explique les risques de copies concurrentes et propose un test reproductible avec un vrai document. Les marques servent d'exemples de mécanismes, pas de podium.
 
-## 6. Anti-AI-slop
+## Maillage et frontière de cluster
 
-Le gate structurel bloque le principal défaut du précédent lot : H2 très courts, tableaux sans explication et maillage quasi absent. Il ne prétend pas détecter l'origine d'un texte. Toute formulation générique ou mécanique relevée lors de la lecture finale doit être corrigée avant publication.
+PASS.
 
-## 7. SEO / GEO
+- `/guides/synchroniser-notes-cloud/` reste le parent conceptuel sync/copie/sauvegarde.
+- `/guides/bloc-notes-numerique-onedrive/` traite l'environnement Microsoft/entreprise.
+- `/guides/bloc-notes-numerique-dropbox/` traite l'arborescence de fichiers multi-plateforme.
+- `/guides/formats-fichiers-compatibles/` prend la question DRM/formats.
+- `/guides/choisir-bloc-notes-numerique/` reprend le lecteur pour le choix global.
 
-- Une réponse initiale autonome est exigée par le quality gate.
-- Les H2 doivent couvrir des sous-questions distinctes et suffisamment développées.
-- Les tableaux doivent être introduits et interprétés.
-- Les entités et sources sont explicites dans le corps lorsqu'elles soutiennent une décision ou un mécanisme.
-- Le maillage dirige vers des guides, usages, comparatifs ou pages marques selon l'étape suivante du lecteur.
+Pas de cannibalisation forte détectée.
 
-## 8. Technique
+## Anti-AI-slop / similarité structurelle
 
-- `noindex,follow` : **PASS**.
-- HTML généré depuis `_generate.py` et les modules de contenu, pas modifié uniquement à la main dans les pages générées.
-- Les liens internes sont validés séparément dans le workflow CI.
+PASS.
 
-## 9. Blockers observés
+Le défaut identifié au cluster audit — squelette commun `modes d'intégration → marques → test → décision` — a été supprimé. La page Google Drive est maintenant construite autour du **fichier maître** et utilise Kindle/Kobo comme cas structurants propres à ce service.
 
-- Aucun blocker du quality gate.
+## Risques résiduels
+
+- Les intégrations cloud restent sensibles aux mises à jour logicielles ; une nouvelle vérification est nécessaire lors d'une future actualisation.
+- La page ne promet pas de coédition ou de synchronisation lorsqu'une source officielle décrit seulement un import/export de copie.
 
 ## Verdict
 
-**PASS structurel — DRAFT_READY.** Ce verdict signifie que la page atteint le plancher de profondeur défini à partir du guide Prix. Il ne remplace pas la validation humaine finale et n'autorise ni retrait du `noindex`, ni publication, ni déploiement.
+**PASS — READY_FOR_HUMAN_VALIDATION**
+
+Ce PASS ne retire pas `noindex,follow` et n'autorise pas l'indexation sans validation humaine explicite.
