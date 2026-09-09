@@ -1,0 +1,321 @@
+/* ============================================================
+   COMPARISON PAGES — editorial refinements
+   Loaded only when site.js detects a /comparatifs/ canonical URL.
+   ============================================================ */
+
+/* Hero: shorter reading measure, editorial label rather than a decorative pill. */
+html.comparison-page .page-hero {
+  padding: 48px 0 40px;
+}
+html.comparison-page .page-hero h1 {
+  max-width: 900px;
+  letter-spacing: -0.015em;
+}
+html.comparison-page .page-hero .lead {
+  max-width: 780px;
+}
+html.comparison-page .page-hero .content-type.type-comparatif {
+  margin-bottom: 12px;
+  padding: 0 0 0 9px;
+  border-left: 2px solid var(--color-accent);
+  border-radius: 0;
+  background: transparent;
+  color: #754735;
+}
+
+/* Editorial links must look clickable without turning the article into a link farm. */
+html.comparison-page .content-main a:not(.btn) {
+  color: var(--color-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+html.comparison-page .content-main a:not(.btn):hover {
+  color: #3f5145;
+  text-decoration-color: currentColor;
+}
+html.comparison-page .content-main .comp-table a:not(.btn) {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* The opening answer is the decision anchor of a comparison, not body copy. */
+html.comparison-page .content-main .article-answer {
+  position: relative;
+  margin: 0 0 32px;
+  padding: 43px 22px 18px;
+  background: #FDFCF7;
+  border-left: 3px solid var(--color-accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.72;
+}
+html.comparison-page .content-main .article-answer::before {
+  content: "Notre verdict";
+  position: absolute;
+  top: 15px;
+  left: 22px;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #754735;
+}
+
+/* Reading rhythm. */
+html.comparison-page .content-main h2 {
+  margin: 38px 0 14px;
+}
+html.comparison-page .content-main h3 {
+  margin: 26px 0 10px;
+}
+
+/* Comparison tables: calm by default, stronger hierarchy for the first decision table. */
+html.comparison-page .content-main .table-wrapper {
+  margin: 22px 0 30px;
+  border-radius: var(--radius-sm);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+html.comparison-page .content-main .table-wrapper:first-of-type {
+  border-top: 3px solid var(--color-accent);
+}
+html.comparison-page .content-main .table-wrapper:first-of-type .comp-table td:first-child {
+  font-weight: 600;
+}
+html.comparison-page .content-main .comp-table th {
+  letter-spacing: 0.035em;
+}
+
+/* Desktop TOC: keep the article visible instead of letting a long TOC fill the viewport. */
+html.comparison-page .sidebar-toc {
+  max-height: calc(100vh - var(--header-h) - 210px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+html.comparison-page .sidebar-toc a.is-active {
+  color: var(--color-primary);
+  border-left-color: var(--color-accent);
+  font-weight: 700;
+}
+
+/* ============================================================
+   COMPARISON HUB
+   The existing links are intentionally reused; hierarchy comes from layout,
+   not from adding another card system or duplicating editorial copy.
+   ============================================================ */
+html.comparison-hub-page .page-hero {
+  padding-bottom: 34px;
+}
+html.comparison-hub-page .section {
+  padding-top: 42px;
+}
+html.comparison-hub-page .hub-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 18px;
+}
+html.comparison-hub-page .hub-link {
+  position: relative;
+}
+
+/* Main entry point. */
+html.comparison-hub-page .hub-link:first-child {
+  grid-column: 1 / -1;
+  min-height: 108px;
+  align-items: flex-end;
+  padding: 44px 28px 24px;
+  border-left: 4px solid var(--color-accent);
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  line-height: 1.2;
+  box-shadow: none;
+}
+html.comparison-hub-page .hub-link:first-child::before {
+  content: "Point de départ";
+  position: absolute;
+  top: 18px;
+  left: 28px;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #754735;
+}
+html.comparison-hub-page .hub-link:first-child .hub-link-arrow {
+  font-family: var(--font-sans);
+  font-size: 1.2rem;
+}
+
+/* Usage-led selections. */
+html.comparison-hub-page .hub-link:nth-child(2),
+html.comparison-hub-page .hub-link:nth-child(3) {
+  margin-top: 34px;
+}
+html.comparison-hub-page .hub-link:nth-child(2)::before {
+  content: "Choisir selon votre besoin";
+  position: absolute;
+  top: -27px;
+  left: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* Brand/model duels become a quieter editorial list instead of another card grid. */
+html.comparison-hub-page .hub-link:nth-child(8),
+html.comparison-hub-page .hub-link:nth-child(9) {
+  margin-top: 38px;
+}
+html.comparison-hub-page .hub-link:nth-child(n+8) {
+  min-height: 58px;
+  padding: 15px 4px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  box-shadow: none;
+}
+html.comparison-hub-page .hub-link:nth-child(n+8):hover {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  box-shadow: none;
+}
+html.comparison-hub-page .hub-link:nth-child(8)::before {
+  content: "Comparer deux univers";
+  position: absolute;
+  top: -31px;
+  left: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  html.comparison-page .content-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  html.comparison-page .content-sidebar {
+    position: static;
+    order: -1;
+  }
+  /* Above the article, keep only navigation. Affiliation remains available
+     in the page/footer without becoming a pre-content interruption. */
+  html.comparison-page .content-sidebar > .sidebar-box:not(.sidebar-toc),
+  html.comparison-page .content-sidebar > .btn {
+    display: none;
+  }
+  html.comparison-page .sidebar-toc {
+    max-height: 250px;
+    padding: 16px 18px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 20px;
+    overflow-y: auto;
+  }
+  html.comparison-page .sidebar-toc h4 {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  html.comparison-page .page-hero {
+    padding: 38px 0 30px;
+  }
+  html.comparison-page .content-layout {
+    padding: 28px 0 48px;
+  }
+  html.comparison-page .content-main .article-answer {
+    margin-bottom: 26px;
+    padding: 41px 16px 15px 18px;
+  }
+  html.comparison-page .content-main .article-answer::before {
+    left: 18px;
+    top: 14px;
+  }
+  html.comparison-page .content-main h2 {
+    margin-top: 32px;
+  }
+
+  /* Mobile TOC: H2 only. H3s remain in the article but do not overwhelm navigation. */
+  html.comparison-page .sidebar-toc {
+    grid-template-columns: 1fr;
+    max-height: 230px;
+  }
+  html.comparison-page .sidebar-toc a.toc-level-3 {
+    display: none;
+  }
+
+  /* Make horizontal tables self-explanatory and keep the decision column visible. */
+  html.comparison-page .content-main .table-wrapper::before {
+    content: "Balayez horizontalement pour voir tout le tableau →";
+    display: block;
+    position: sticky;
+    left: 0;
+    width: min(100%, 360px);
+    padding: 8px 12px;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+  html.comparison-page .content-main .comp-table {
+    min-width: 680px;
+  }
+  html.comparison-page .content-main .comp-table th {
+    white-space: normal;
+    line-height: 1.35;
+  }
+  html.comparison-page .content-main .comp-table th:first-child,
+  html.comparison-page .content-main .comp-table td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    min-width: 140px;
+    background: var(--color-white);
+    box-shadow: 8px 0 12px -12px rgba(32, 35, 33, 0.35);
+  }
+  html.comparison-page .content-main .comp-table th:first-child {
+    z-index: 2;
+    background: var(--color-bg-alt);
+  }
+
+  /* Hub: keep hierarchy but collapse to one reading column. */
+  html.comparison-hub-page .hub-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  html.comparison-hub-page .hub-link:first-child {
+    grid-column: auto;
+    min-height: 96px;
+    padding: 42px 20px 20px;
+    font-size: 1.18rem;
+  }
+  html.comparison-hub-page .hub-link:first-child::before {
+    left: 20px;
+  }
+  html.comparison-hub-page .hub-link:nth-child(2) {
+    margin-top: 34px;
+  }
+  html.comparison-hub-page .hub-link:nth-child(3),
+  html.comparison-hub-page .hub-link:nth-child(9) {
+    margin-top: 0;
+  }
+  html.comparison-hub-page .hub-link:nth-child(8) {
+    margin-top: 38px;
+  }
+}
