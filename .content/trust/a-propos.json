@@ -1,0 +1,52 @@
+{
+  "slug": "a-propos",
+  "page_url": "/a-propos/",
+  "page_type": "ABOUT",
+  "status": "NEEDS_OWNER_INPUT",
+  "claims": [
+    {
+      "claim": "Identité de la personne ou structure qui publie le site.",
+      "evidence_level": "UNKNOWN",
+      "source": "",
+      "allowed_wording": "À compléter après confirmation de l'éditeur.",
+      "blocked_wording": "Notre équipe d'experts en tablettes E Ink."
+    },
+    {
+      "claim": "Le site est un média éditorial spécialisé et affilié autour des bloc-notes numériques.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "AGENTS.md et architecture du dépôt",
+      "allowed_wording": "bloc-notes-numeriques.fr publie des guides, comparatifs et analyses autour des bloc-notes numériques.",
+      "blocked_wording": "Nous sommes le laboratoire français de référence."
+    }
+  ],
+  "required_disclosures": [
+    "Qui publie le site",
+    "Pourquoi le site existe",
+    "Expérience pertinente confirmée",
+    "Comment les contenus sont produits",
+    "Limites",
+    "Modèle économique",
+    "Politique de corrections"
+  ],
+  "unknowns": [
+    "Nom à afficher publiquement",
+    "Le site est-il édité en nom propre ou via une structure ?",
+    "Éléments d'expérience professionnelle/personnelle à rendre publics",
+    "Souhait d'écrire à la première personne du singulier ou au nom du site"
+  ],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": false,
+    "preserve_noindex": true
+  },
+  "qa": {
+    "claims_mapped": true,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": false,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}

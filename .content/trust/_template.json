@@ -1,0 +1,32 @@
+{
+  "slug": "example",
+  "page_url": "/example/",
+  "page_type": "ABOUT",
+  "status": "READY_FOR_DRAFT",
+  "claims": [
+    {
+      "claim": "",
+      "evidence_level": "UNKNOWN",
+      "source": "",
+      "allowed_wording": "",
+      "blocked_wording": ""
+    }
+  ],
+  "required_disclosures": [],
+  "unknowns": [],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": false,
+    "preserve_noindex": true
+  },
+  "qa": {
+    "claims_mapped": false,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": false,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}

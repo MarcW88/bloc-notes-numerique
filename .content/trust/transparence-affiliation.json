@@ -1,0 +1,81 @@
+{
+  "slug": "transparence-affiliation",
+  "page_url": "/transparence-affiliation/",
+  "page_type": "AFFILIATE_DISCLOSURE",
+  "status": "DRAFT_READY",
+  "claims": [
+    {
+      "claim": "Le site contient des liens affiliés.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "Footer et encadrés affiliation du site",
+      "allowed_wording": "Certains liens du site sont affiliés et peuvent générer une commission si une transaction éligible est réalisée.",
+      "blocked_wording": "Tous les liens marchands génèrent une commission."
+    },
+    {
+      "claim": "Les commissions ne doivent pas influencer les scores ou classements.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "AGENTS.md — Comparatifs, marques et bons plans",
+      "allowed_wording": "Le niveau de commission n'entre pas dans les critères de scoring ou de classement.",
+      "blocked_wording": "Nous favorisons les marchands qui rémunèrent le mieux."
+    },
+    {
+      "claim": "Un produit ne doit pas être exclu uniquement parce qu'il ne dispose pas de lien affilié.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "comparison-content-workflow — Product Universe et Affiliate Value",
+      "allowed_wording": "L'absence d'affiliation n'est pas en soi un motif d'exclusion d'un produit pertinent.",
+      "blocked_wording": "Nous ne couvrons que les produits monétisables."
+    },
+    {
+      "claim": "Les liens commerciaux doivent utiliser rel=sponsored lorsque nécessaire.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "AGENTS.md — Bons plans ; deal-content-workflow",
+      "allowed_wording": "Les liens affiliés utilisent rel=sponsored lorsque cette qualification s'applique.",
+      "blocked_wording": "Tous les liens externes sont sponsorisés."
+    },
+    {
+      "claim": "Programmes d'affiliation et partenaires réellement utilisés.",
+      "evidence_level": "UNKNOWN",
+      "source": "",
+      "allowed_wording": "La liste détaillée des programmes actifs n'est pas publiée tant qu'elle n'a pas été confirmée.",
+      "blocked_wording": "Liste inventée de programmes ou de taux de commission."
+    },
+    {
+      "claim": "Politique sur produits prêtés/offerts, contenus sponsorisés et relations commerciales directes.",
+      "evidence_level": "UNKNOWN",
+      "source": "",
+      "allowed_wording": "Aucune promesse générale n'est formulée sur ces pratiques tant que la politique n'a pas été confirmée.",
+      "blocked_wording": "Nous n'acceptons jamais de produit prêté, offert ou sponsorisé."
+    }
+  ],
+  "required_disclosures": [
+    "Définition d'un lien affilié",
+    "Quand une commission peut être perçue",
+    "Absence d'influence des commissions sur le ranking",
+    "Traitement des produits sans affiliation",
+    "Prix et disponibilité déterminés par le marchand",
+    "Usage de rel=sponsored lorsque nécessaire",
+    "Inconnues sur les programmes actifs",
+    "Inconnues sur produits prêtés/offerts et contenus sponsorisés"
+  ],
+  "unknowns": [
+    "Programmes d'affiliation actuellement utilisés",
+    "Le site accepte-t-il ou acceptera-t-il des produits prêtés/offerts ?",
+    "Le site accepte-t-il ou acceptera-t-il des contenus sponsorisés ?",
+    "Existe-t-il des relations commerciales directes avec des marques ?"
+  ],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": true,
+    "preserve_noindex": true
+  },
+  "qa": {
+    "claims_mapped": true,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": true,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
+}
