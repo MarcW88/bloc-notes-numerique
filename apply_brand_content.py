@@ -30,6 +30,12 @@ for url, page_data in PAGES.items():
     description = page_data['description']
     body = reviewed_body(url, page_data).strip()
 
+    if url == '/marques/boox/boox-tab-ultra/':
+        body = body.replace(
+            '<h2 id="limites">Pourquoi l’ancienneté du système compte</h2>',
+            '<h2 id="limites">Les limites liées à l’ancienneté du système</h2>',
+        )
+
     html = replace_first(r'<title>.*?</title>', f'<title>{title}</title>', html, re.S)
     html = replace_first(
         r'<meta name="description" content="[^"]*">',
