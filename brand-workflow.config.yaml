@@ -11,6 +11,7 @@ content:
     - "brand_render_common.py"
     - "brand_render_pages.py"
     - "brand_pages.py"
+    - "brand_reviewed_output.py"
   mode: "recovery"
 
 quality:
