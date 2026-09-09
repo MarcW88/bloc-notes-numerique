@@ -19,6 +19,7 @@ content:
 quality:
   quality_reference: "/guides/prix-bloc-notes-numerique/"
   draft_robots: "noindex,follow"
+  published_robots: "index,follow"
   prohibit_word_count_quotas: true
   prohibit_heading_count_quotas: true
   prohibit_internal_link_quotas: true
@@ -65,12 +66,15 @@ workflow:
   legacy_renderer: "comparison_content.py"
   final_review_mode: "PUBLISH_REVIEW"
   apply_script: "apply_comparison_content.py"
+  indexation_script: "apply_comparison_indexation.py"
+  indexation_manifest: "comparison_publication.py"
   metadata_script: "generate_comparison_metadata.py"
   machine_validator: "validate_comparisons.py"
   require_analysis_pass_before_human_validation: true
   require_human_validation_before_publish: true
   allow_automatic_merge: false
   allow_automatic_indexation: false
+  require_explicit_route_manifest_for_indexation: true
 
 upstream_skill_chain:
   - "seo-content-audit | rampstackco/claude-skills"
@@ -102,11 +106,13 @@ editorial_chain:
   - machine_validation
   - comparison_analysis_publish_review
   - human_validation
+  - explicit_indexation_approval
 
 quality_gate:
   require_sources_for_factual_claims: true
   require_limitations_for_recommended_products: true
   require_noindex_in_draft: true
+  require_manifest_for_indexed_pages: true
   prohibit_fake_test_language: true
   prohibit_editor_facing_metadiscourse: true
   prohibit_merchant_rewrite_without_original_value: true
