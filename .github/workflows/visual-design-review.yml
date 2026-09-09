@@ -2,19 +2,36 @@ name: Visual design review
 
 on:
   workflow_dispatch:
-  pull_request:
+  push:
+    branches: [main]
     paths:
       - "marques/**"
+      - "comparatifs/**"
       - "style.css"
       - "site.js"
       - ".agents/skills/site-design-review/**"
       - "package.json"
       - "package-lock.json"
+      - ".github/workflows/visual-design-review.yml"
+  pull_request:
+    paths:
+      - "marques/**"
+      - "comparatifs/**"
+      - "style.css"
+      - "site.js"
+      - ".agents/skills/site-design-review/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/visual-design-review.yml"
 
 jobs:
-  brand-pages:
+  visual-pages:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        scope: [brands, comparisons]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,14 +48,17 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
-      - name: Capture brand pages
-        run: npm run visual:brands
+      - name: Capture ${{ matrix.scope }} pages
+        run: >-
+          node .agents/skills/site-design-review/scripts/run-visual-review.mjs
+          --scope ${{ matrix.scope }}
+          --output .artifacts/design-review/${{ matrix.scope }}
 
       - name: Upload visual review
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: brand-design-review
-          path: .artifacts/design-review/
+          name: ${{ matrix.scope }}-design-review
+          path: .artifacts/design-review/${{ matrix.scope }}/
           if-no-files-found: warn
           retention-days: 14
