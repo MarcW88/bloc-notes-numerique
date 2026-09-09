@@ -1,70 +1,83 @@
-# Modèle de brief
+# Modèle de brief Guide
+
+Ce fichier sert à conserver les décisions qui changent réellement la page. Il ne constitue pas un template éditorial.
 
 ```yaml
 url:
 slug:
 status: BRIEF_READY
-guide_type: choice | explainer | how-to
+guide_type: choice | explainer | how-to | hybrid
 primary_keyword:
 search_intent:
-audience:
+reader_task:
 business_role:
 last_researched:
 ```
 
 ## Décision éditoriale
 
-- Question centrale :
+- Question ou tâche centrale :
 - Réponse attendue en une phrase :
 - Valeur propre de la page :
-- Ce que la page ne doit pas traiter :
+- Ce que cette URL doit traiter :
+- Ce qu'elle ne doit pas traiter :
+- Valeur existante à préserver, si mise à jour :
 
 ## Univers sémantique
 
-| Terme | Rôle | Intention couverte | Page concurrente interne éventuelle |
+| Terme / entité | Rôle pour la compréhension | Intention couverte | Page interne proche éventuelle |
 |---|---|---|---|
 
-## Analyse des résultats de recherche
+## Recherche et intention
 
-- Formats dominants :
-- Angles récurrents :
-- Informations utiles absentes ou mal traitées :
-- Opportunité réaliste :
+- Signaux sémantiques / GSC disponibles :
+- Forme de réponse attendue :
+- Angles utiles déjà bien couverts ailleurs :
+- Lacunes ou besoins que cette page doit réellement résoudre :
+- Incertitudes :
 
 ## Registre de preuves
 
-| Affirmation prévue | Source primaire | Date | Stabilité | Notes/limites |
+| Affirmation ou étape prévue | Source | Date | Stabilité | Portée / limites |
 |---|---|---|---|---|
 
-## Structure proposée
+## Architecture propre à cette page
+
+Ne compléter que les éléments justifiés par l'intention et les preuves.
 
 - Title :
 - Meta description :
 - H1 :
-- Réponse courte :
-- H2/H3 :
-- Tableau, procédure ou visuel utile :
-- FAQ réellement complémentaire :
+- Réponse / orientation initiale :
+- Questions, distinctions, étapes ou arbitrages à traiter :
+- Formats utiles éventuels : tableau / liste / procédure / exemple / aucun :
+- Ordre retenu et justification :
+- Éléments volontairement exclus :
+
+Il n'existe aucun nombre obligatoire de H2/H3, aucun tableau ou FAQ obligatoire et aucune architecture imposée par `guide_type`.
 
 ## Maillage interne
 
-| Depuis/vers | Ancre envisagée | Rôle pour le lecteur |
+| Depuis/vers | Ancre envisagée | Question suivante résolue |
 |---|---|---|
 
-## Risques et exclusions
+## Risques et frontières
 
-- Cannibalisation :
+- Cannibalisation Guide / Guide :
+- Frontière avec `/usages/` :
+- Frontière avec `/comparatifs/` :
+- Frontière avec `/marques/` :
 - Données à revérifier :
 - Affirmations exclues faute de preuve :
-- Test produit nécessaire :
+- Test ou source indépendante nécessaire :
 
 ## Contrôles
 
-- [ ] Sources vérifiées
-- [ ] Intention couverte
+- [ ] Intention / tâche confirmée
+- [ ] Sources adaptées aux claims
 - [ ] Différenciation réelle
-- [ ] SEO/GEO contrôlé
-- [ ] Liens internes contrôlés
+- [ ] Architecture justifiée par cette page
+- [ ] Maillage utile contrôlé
 - [ ] Génération et rendu contrôlés
+- [ ] `guide-analysis-workflow / PUBLISH_REVIEW` exécuté
 - [ ] Validation humaine obtenue avant indexation
-```
