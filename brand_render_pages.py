@@ -2,7 +2,56 @@ from brand_data import VERIFIED_AT
 from brand_render_common import internal_link, sources_html, bullets
 
 
+def _source_list(items):
+    return '<ul class="source-list">' + ''.join(f'<li><a href="{url}" rel="noopener noreferrer">{label}</a></li>' for label, url in items) + '</ul>'
+
+
+def _paper_pro_product_pilot():
+    official_sources = [
+        ('reMarkable Paper Pro — caractéristiques', 'https://remarkable.com/products/remarkable-paper/pro/details/features'),
+        ('Comparateur officiel reMarkable', 'https://remarkable.com/products/remarkable-paper/pro/details/compare'),
+        ('reMarkable Paper Pro — offre et Connect', 'https://remarkable.com/products/remarkable-paper/pro?region_id=000036'),
+    ]
+    return f'''
+<p class="article-answer"><strong>Le reMarkable Paper Pro est le grand modèle couleur de la gamme, avec un écran 11,8 pouces, un éclairage réglable et un Marker inclus.</strong> Il convient surtout aux notes et aux PDF qui profitent d’une grande surface d’affichage. Son intérêt baisse si vous cherchez une tablette polyvalente avec des applications tierces ou si un format 10,3 pouces suffit.</p>
+<h2 id="caracteristiques">Ce que vous achetez réellement</h2>
+<div class="table-wrapper"><table class="comp-table"><thead><tr><th>Point</th><th>Paper Pro</th></tr></thead><tbody>
+<tr><td><strong>Écran</strong></td><td>Canvas Color 11,8 pouces, 2160 × 1620, 229 ppp, éclairage réglable</td></tr>
+<tr><td><strong>Format</strong></td><td>274,1 × 196,6 × 5,1 mm ; environ 525 g</td></tr>
+<tr><td><strong>Stockage</strong></td><td>64 Go</td></tr>
+<tr><td><strong>Stylet</strong></td><td>Marker ou Marker Plus inclus selon la configuration choisie, avec six mines de remplacement</td></tr>
+<tr><td><strong>Documents</strong></td><td>import PDF et EPUB ; export PDF, PNG et SVG</td></tr>
+<tr><td><strong>Système</strong></td><td>reMarkable OS, système Linux spécialisé dans le papier numérique</td></tr>
+</tbody></table></div>
+<p>Le Marker de cette génération se recharge sur la tablette et n’est pas interchangeable avec les anciens Markers de reMarkable 2. Si vous possédez déjà des accessoires reMarkable, la compatibilité mérite donc d’être vérifiée avant l’achat.</p>
+<h2 id="ecran">À quoi servent vraiment le grand écran et la couleur ?</h2>
+<p>Le format 11,8 pouces laisse davantage de place aux PDF, aux documents en deux colonnes, aux schémas et aux annotations en marge. La couleur ajoute surtout de la hiérarchie visuelle : surlignages, codes couleur et dessins deviennent plus faciles à distinguer qu’en noir et blanc.</p>
+<p>Ce gain de surface a une contrepartie simple : avec 525 g et près de 27,5 cm de hauteur, Paper Pro est moins discret dans un sac ou à tenir longtemps qu’un modèle compact. Si vos notes sont courtes et vos PDF simples, le grand format peut être superflu.</p>
+<h2 id="connect">Connect, cloud et applications : ce qui change</h2>
+<p>Paper Pro fonctionne sans abonnement pour écrire et consulter vos documents. reMarkable indique toutefois que, sans Connect, seuls les fichiers utilisés et synchronisés au cours des 50 derniers jours restent stockés dans le cloud et que la prise de notes dans les applications mobile et desktop n’est pas disponible.</p>
+<p>Connect ajoute notamment la recherche dans l’écriture manuscrite, le stockage cloud illimité, la synchronisation, des intégrations et des fonctions supplémentaires dans les applications. Si ces fonctions comptent dans votre usage quotidien, l’abonnement fait partie du coût réel du Paper Pro. Le détail est repris dans {internal_link('/marques/remarkable/abonnement-connect/','notre page sur reMarkable Connect')}.</p>
+<h2 id="accessoires">Marker, Folio et Type Folio : quels surcoûts prévoir ?</h2>
+<p>Le Marker standard est inclus dans la configuration de base. Le Marker Plus, qui ajoute notamment une gomme à son extrémité, représente un surcoût. Les Folios et le Type Folio sont également optionnels.</p>
+<p>Pour un usage principalement manuscrit à domicile ou au bureau, il n’est pas nécessaire d’ajouter tous les accessoires. Le Type Folio a surtout du sens si vous voulez réellement taper de longs passages sur le Paper Pro plutôt que reprendre votre ordinateur. Voir aussi {internal_link('/marques/remarkable/accessoires/','les accessoires reMarkable')}.</p>
+<h2 id="limites">Les limites à connaître avant l’achat</h2>
+<ul>
+<li>reMarkable OS n’offre pas le même catalogue d’applications qu’une tablette Android ;</li>
+<li>le grand format augmente l’encombrement et le poids ;</li>
+<li>certaines fonctions cloud et applicatives sont liées à Connect ;</li>
+<li>les anciens Markers de reMarkable 2 ne sont pas compatibles avec Paper Pro.</li>
+</ul>
+<p>Si l’ouverture logicielle est indispensable, le {internal_link('/comparatifs/remarkable-vs-boox/','comparatif reMarkable vs BOOX')} est plus utile qu’une comparaison de fiches techniques. Si vous hésitez surtout entre les modèles de la marque, revenez à {internal_link('/marques/remarkable/','la gamme reMarkable')}.</p>
+<h2 id="choix">Paper Pro est-il le bon modèle pour vous ?</h2>
+<p><strong>Paper Pro mérite surtout d’être retenu si vous annotez souvent de grands documents, utilisez réellement la couleur ou travaillez dans des conditions où l’éclairage intégré est utile.</strong> Pour de la prise de notes simple en noir et blanc, un modèle plus petit peut couvrir le même besoin avec moins d’encombrement.</p>
+<p>Si vous cherchez un jugement plus critique sur le confort, la simplicité du logiciel, la couleur et le rapport entre prix et usage, consultez {internal_link('/marques/remarkable/remarkable-paper-pro-avis/','notre avis sur le reMarkable Paper Pro')}.</p>
+<h2 id="sources">Sources consultées</h2>
+<p>Caractéristiques et services vérifiés le {VERIFIED_AT}. Prix et disponibilité restent à recontrôler au moment de l’achat.</p>{_source_list(official_sources)}
+'''
+
+
 def product_page(title, brand, status, answer, facts, workflow, limitations, choose, avoid, alternatives):
+    if title == 'reMarkable Paper Pro':
+        return _paper_pro_product_pilot()
     rows = ''.join(f'<tr><td><strong>{k}</strong></td><td>{v}</td></tr>' for k, v in facts)
     table = f'<div class="table-wrapper"><table class="comp-table"><thead><tr><th>Point</th><th>Information vérifiée</th></tr></thead><tbody>{rows}</tbody></table></div>'
     return f'''
@@ -19,7 +68,60 @@ def product_page(title, brand, status, answer, facts, workflow, limitations, cho
 '''
 
 
+def _paper_pro_review_pilot():
+    official_sources = [
+        ('reMarkable Paper Pro — caractéristiques', 'https://remarkable.com/products/remarkable-paper/pro/details/features'),
+        ('Comparateur officiel reMarkable', 'https://remarkable.com/products/remarkable-paper/pro/details/compare'),
+        ('reMarkable Paper Pro — offre et Connect', 'https://remarkable.com/products/remarkable-paper/pro?region_id=000036'),
+    ]
+    independent_sources = [
+        ('TechRadar — reMarkable Paper Pro review', 'https://www.techradar.com/tablets/remarkable-paper-pro-review'),
+        ('WIRED — Review: ReMarkable Paper Pro', 'https://www.wired.com/review/remarkable-paper-pro/'),
+        ('Tom’s Guide — ReMarkable Paper Pro review', 'https://www.tomsguide.com/tablets/remarkable-paper-pro'),
+        ('Forbes Vetted — ReMarkable Paper Pro Review', 'https://www.forbes.com/sites/forbes-personal-shopper/article/remarkable-paper-pro-review/'),
+        ('Engadget — reMarkable Paper Pro review', 'https://www.engadget.com/mobile/tablets/remarkable-paper-pro-review-writing-in-color-is-nice-but-itll-cost-you-173024590.html'),
+    ]
+    return f'''
+<p class="article-answer"><strong>Notre avis : le reMarkable Paper Pro est convaincant si vous voulez un grand carnet numérique centré sur l’écriture et l’annotation, avec couleur et éclairage, mais son prix et son logiciel volontairement limité le rendent moins intéressant comme tablette polyvalente.</strong> Il s’agit d’une analyse documentaire : nous croisons la documentation reMarkable avec plusieurs essais indépendants, sans présenter leurs observations comme une expérience réalisée par nos soins.</p>
+<h2 id="forces">Pourquoi le Paper Pro convainc</h2>
+<p>Le passage à un écran couleur de 11,8 pouces et l’arrivée de l’éclairage changent réellement le produit par rapport aux anciens reMarkable. Les essais de TechRadar, WIRED, Tom’s Guide et Engadget convergent sur un point : la force du Paper Pro reste son environnement d’écriture volontairement simple, désormais plus confortable pour les documents en couleur et les usages en faible lumière.</p>
+<p>Le grand écran est particulièrement intéressant pour les PDF, les annotations en marge et les pages qui deviennent vite étroites sur un format 10 pouces. Forbes Vetted, après plusieurs semaines de test, met également en avant l’éclairage et l’organisation des notes comme des améliorations utiles au quotidien.</p>
+<h2 id="couleur">La couleur est utile, mais ce n’est pas un écran de tablette classique</h2>
+<p>La couleur sert bien aux surlignages, schémas et codes visuels. Elle n’a pas vocation à remplacer un écran LCD ou OLED pour la photo, la vidéo ou une restitution très vive. C’est une différence importante : Paper Pro gagne en lisibilité documentaire sans devenir une tablette multimédia.</p>
+<p>Tom’s Guide souligne aussi qu’un certain délai reste perceptible dans l’expérience, malgré les progrès de réactivité. Pour de l’écriture et de l’annotation, cela n’annule pas l’intérêt du produit, mais il faut éviter d’attendre la fluidité d’un iPad.</p>
+<h2 id="limites">Ce qui peut faire renoncer</h2>
+<p>Le principal compromis est le même dans plusieurs essais indépendants : Paper Pro coûte cher pour un appareil qui choisit délibérément de faire moins de choses qu’une tablette généraliste. WIRED apprécie sa simplicité mais pointe le prix et l’impossibilité de réutiliser l’ancien stylet ; TechRadar juge cette simplicité efficace pour la concentration mais frustrante dès que l’on attend davantage de polyvalence.</p>
+<ul>
+<li>pas de catalogue d’applications comparable à Android ou iPadOS ;</li>
+<li>format 11,8 pouces moins pratique si la mobilité prime ;</li>
+<li>anciens Markers reMarkable 2 incompatibles ;</li>
+<li>certaines fonctions cloud avancées passent par Connect.</li>
+</ul>
+<h2 id="connect">Connect change-t-il notre avis ?</h2>
+<p>Pas pour l’écriture de base : le Paper Pro reste utilisable sans abonnement. En revanche, Connect devient important si vous comptez sur la recherche manuscrite, le stockage cloud illimité ou la prise de notes depuis les applications reMarkable. Sans Connect, reMarkable limite notamment le stockage cloud aux fichiers utilisés et synchronisés dans les 50 derniers jours.</p>
+<p>Pour un usage centré sur le carnet local et l’export ponctuel, ce coût peut rester secondaire. Pour un usage multi-appareils intensif, il doit être intégré dès le départ. Voir {internal_link('/marques/remarkable/abonnement-connect/','reMarkable Connect')}.</p>
+<h2 id="pour-qui">À qui le Paper Pro convient le mieux ?</h2>
+<ul>
+<li>aux personnes qui annotent régulièrement des PDF ou travaillent sur de grands documents ;</li>
+<li>à celles qui utilisent la couleur comme code visuel plutôt que pour du contenu multimédia ;</li>
+<li>à celles qui veulent réduire les notifications et applications pendant l’écriture.</li>
+</ul>
+<p>Nous le conseillerions moins si vous avez besoin d’applications Android, si le prix est le critère principal ou si un écran noir et blanc plus compact répond déjà à vos notes quotidiennes.</p>
+<h2 id="alternatives">Quelles alternatives regarder avant d’acheter ?</h2>
+<p>Le concurrent à examiner dépend surtout de ce qui vous gêne chez reMarkable. Pour davantage d’applications et d’ouverture, commencez par {internal_link('/comparatifs/remarkable-vs-boox/','reMarkable vs BOOX')}. Pour une organisation des notes plus structurée, regardez {internal_link('/comparatifs/remarkable-vs-supernote/','reMarkable vs Supernote')}. Si votre hésitation porte surtout sur la technologie couleur, le {internal_link('/comparatifs/bloc-notes-numerique-couleur/','comparatif des bloc-notes numériques couleur')} est plus pertinent.</p>
+<h2 id="verdict">Verdict</h2>
+<p><strong>Paper Pro est l’un des choix les plus aboutis pour écrire et annoter sur un grand écran E Ink couleur sans transformer l’appareil en tablette généraliste.</strong> Son intérêt repose précisément sur cette spécialisation. Si vous cherchez davantage d’applications, de navigation web ou de polyvalence, son prix devient difficile à justifier face à des alternatives plus ouvertes.</p>
+<h2 id="methode">Sur quoi repose cet avis ?</h2>
+<p>Les caractéristiques, compatibilités et fonctions Connect sont vérifiées auprès de reMarkable. Les éléments liés au confort d’écriture, à la réactivité, à la couleur et à l’usage prolongé proviennent d’essais indépendants réalisés par TechRadar, WIRED, Tom’s Guide, Forbes Vetted et Engadget. Nous n’avons pas réalisé de test physique du Paper Pro.</p>
+<h2 id="sources">Sources consultées</h2>
+<h3>Sources officielles</h3>{_source_list(official_sources)}
+<h3>Essais indépendants</h3>{_source_list(independent_sources)}
+'''
+
+
 def review_page(product, brand, verdict, strengths, limitations, evidence_points, who, avoid, alternatives):
+    if product == 'reMarkable Paper Pro':
+        return _paper_pro_review_pilot()
     rows=''.join(f'<tr><td>{d}</td><td>{claim}</td><td>{level}</td></tr>' for d,claim,level in evidence_points)
     evidence=f'<div class="table-wrapper"><table class="comp-table"><thead><tr><th>Dimension</th><th>Ce que la documentation permet d’affirmer</th><th>Niveau</th></tr></thead><tbody>{rows}</tbody></table></div>'
     return f'''
