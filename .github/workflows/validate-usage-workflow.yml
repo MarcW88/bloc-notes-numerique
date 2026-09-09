@@ -1,0 +1,37 @@
+name: Validate usage content workflow
+
+on:
+  push:
+    paths:
+      - 'AGENTS.md'
+      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/usage-content-workflow/**'
+      - '.content/usages/**'
+      - 'usage-workflow.config.yaml'
+      - 'validate_usage_workflow.py'
+      - 'usages/**'
+  pull_request:
+    paths:
+      - 'AGENTS.md'
+      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/usage-content-workflow/**'
+      - '.content/usages/**'
+      - 'usage-workflow.config.yaml'
+      - 'validate_usage_workflow.py'
+      - 'usages/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate usage workflow
+        run: python validate_usage_workflow.py
