@@ -3,7 +3,20 @@ name: Regenerate and quality-check guide cluster
 on:
   push:
     branches:
+      - main
       - raise-guide-quality
+    paths:
+      - '_generate.py'
+      - 'guide_content_extra.py'
+      - 'guide_content_quality_choice.py'
+      - 'guide_content_quality_tech.py'
+      - 'guide_content_quality_cloud.py'
+      - 'guide_content_quality_workflows.py'
+      - 'guide_content_bespoke.py'
+      - 'validate_guide_quality.py'
+      - 'generate_guide_metadata.py'
+      - '.github/workflows/regenerate-guides.yml'
+      - '.content/briefs/**'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +43,7 @@ jobs:
           from pathlib import Path
           path = Path('_generate.py')
           text = path.read_text(encoding='utf-8')
+
           anchor = "from guide_content_extra import GUIDE_CONTENT_EXTRA\nGUIDE_CONTENT.update(GUIDE_CONTENT_EXTRA)\n"
           quality = anchor + """
 
@@ -46,7 +60,18 @@ jobs:
               if anchor not in text:
                   raise SystemExit('Could not find GUIDE_CONTENT_EXTRA anchor')
               text = text.replace(anchor, quality, 1)
-              path.write_text(text, encoding='utf-8')
+
+          bespoke_anchor = "GUIDE_CONTENT.update(GUIDE_CONTENT_QUALITY_WORKFLOWS)\n"
+          bespoke = bespoke_anchor + """
+          from guide_content_bespoke import GUIDE_CONTENT_BESPOKE
+          GUIDE_CONTENT.update(GUIDE_CONTENT_BESPOKE)
+          """
+          if 'GUIDE_CONTENT_BESPOKE' not in text:
+              if bespoke_anchor not in text:
+                  raise SystemExit('Could not find guide quality override anchor')
+              text = text.replace(bespoke_anchor, bespoke, 1)
+
+          path.write_text(text, encoding='utf-8')
           PY
 
       - name: Regenerate site pages
