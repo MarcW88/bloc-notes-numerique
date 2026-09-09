@@ -109,9 +109,11 @@ Définir le poids des critères avant calcul. La somme des poids = 100. Document
 
 Utiliser une échelle stable, par exemple 0–10. Pour chaque score, conserver valeur, justification, evidence class et éventuelle pénalité d'incertitude.
 
-`criterion_score = normalized_score × criterion_weight`
+Pour des poids exprimés en pourcentage dont la somme vaut 100 :
 
-`total = Σ criterion_score / 10`
+`total = Σ(normalized_score × criterion_weight) / 100`
+
+Le résultat reste ainsi sur la même échelle 0–10 que les scores par critère.
 
 Facteurs de confiance optionnels : VERIFIED 1.00, SUPPORTED 0.95, INFERRED 0.85, USER_PATTERN 0.80. UNKNOWN est interdit pour un critère important.
 
