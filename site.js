@@ -1,6 +1,8 @@
 const canonical = document.querySelector('link[rel="canonical"]')?.href || '';
 const isComparisonPage = canonical.includes('/comparatifs/');
 const isComparisonHub = /\/comparatifs\/$/.test(canonical);
+const isUsagePage = canonical.includes('/usages/');
+const isUsageHub = /\/usages\/$/.test(canonical);
 
 if (isComparisonPage) {
   document.documentElement.classList.add('comparison-page');
@@ -11,6 +13,19 @@ if (isComparisonPage) {
     stylesheet.rel = 'stylesheet';
     stylesheet.href = '/comparisons.css';
     stylesheet.dataset.comparisonStyles = 'true';
+    document.head.appendChild(stylesheet);
+  }
+}
+
+if (isUsagePage) {
+  document.documentElement.classList.add('usage-page');
+  if (isUsageHub) document.documentElement.classList.add('usage-hub-page');
+
+  if (!document.querySelector('link[data-usage-styles]')) {
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = '/usages.css';
+    stylesheet.dataset.usageStyles = 'true';
     document.head.appendChild(stylesheet);
   }
 }
@@ -88,7 +103,7 @@ if (tableOfContents && article) {
     tocLinks.push({ heading, link });
   });
 
-  if (isComparisonPage && tocLinks.length && 'IntersectionObserver' in window) {
+  if ((isComparisonPage || isUsagePage) && tocLinks.length && 'IntersectionObserver' in window) {
     const setActive = (activeLink) => {
       tocLinks.forEach(({ link }) => link.classList.toggle('is-active', link === activeLink));
     };
