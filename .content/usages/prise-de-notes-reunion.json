@@ -1,0 +1,32 @@
+{
+  "slug": "prise-de-notes-reunion",
+  "page_url": "/usages/prise-de-notes-reunion/",
+  "status": "DRAFT_READY",
+  "last_researched": "2026-09-09",
+  "intent": {"primary_query": "prise de notes réunion bloc-notes numérique", "dominant_intent": "Évaluer un dispositif pour capturer, retrouver et partager des notes de réunion.", "reader_maturity": "Évaluation d'usage", "expected_outcome": "Identifier les critères qui comptent pendant et après la réunion.", "semantic_variants": ["tablette e ink réunion", "bloc notes numérique réunion"], "closest_comparison": "/comparatifs/bloc-notes-numerique-professionnel/", "related_guides": ["/guides/convertir-notes-manuscrites-en-texte/", "/guides/exporter-notes/", "/guides/organiser-notes-numeriques/"], "related_brand_pages": [], "cannibalization_risks": ["Ne pas dupliquer la page usage professionnel", "Ne pas classer des modèles"]},
+  "jtbd": {"primary_job_statement": {"circumstances": "Quand une réunion produit des décisions et actions à retenir", "progress": "capturer l'information sans interrompre l'échange puis la retrouver", "outcome": "assurer un suivi exploitable après la réunion", "evidence_class": "INFERRED"}, "secondary_jobs": ["préparer un ordre du jour", "transformer des notes en suivi"], "functional_jobs": ["capturer", "structurer", "retrouver", "partager"], "emotional_jobs": [{"job": "ne pas craindre de perdre une décision importante", "evidence_class": "HYPOTHESIS"}], "social_jobs": [{"job": "partager un compte rendu lisible", "evidence_class": "INFERRED"}], "forces": {"push": ["notes introuvables", "ressaisie"], "pull": ["centralisation", "export"], "anxiety": ["latence", "conversion imparfaite", "confidentialité"], "habit": ["carnet papier", "ordinateur en réunion"]}, "current_hires": ["papier", "ordinateur", "tablette LCD", "OneNote"], "big_hire": ["adopter un appareil dédié"], "little_hire": ["ouvrir immédiatement le bon carnet", "retrouver les décisions", "partager une sortie"]},
+  "workflow_map": [
+    {"stage": "préparation", "task": "ouvrir ordre du jour/document", "current_friction": "fichier séparé", "failure_consequence": "contexte manquant", "helpful_capability": "import/classement", "evidence_class": "SUPPORTED"},
+    {"stage": "capture", "task": "écrire rapidement", "current_friction": "navigation ou démarrage", "failure_consequence": "attention détournée", "helpful_capability": "accès rapide", "evidence_class": "INFERRED"},
+    {"stage": "suivi", "task": "retrouver et partager", "current_friction": "ressaisie", "failure_consequence": "actions perdues", "helpful_capability": "recherche/OCR/export", "evidence_class": "SUPPORTED"}
+  ],
+  "criteria": [
+    {"criterion": "accès rapide aux notes", "priority": "MUST_HAVE", "why_it_matters": "le dispositif doit être utilisable sans préparation", "conditions": "réunions fréquentes", "evidence_class": "INFERRED"},
+    {"criterion": "organisation/recherche", "priority": "HIGH", "why_it_matters": "le suivi se joue après la réunion", "conditions": "volume croissant", "evidence_class": "INFERRED"},
+    {"criterion": "export", "priority": "HIGH", "why_it_matters": "permet le compte rendu ou l'archive", "conditions": "partage régulier", "evidence_class": "SUPPORTED"},
+    {"criterion": "OCR", "priority": "CONDITIONAL", "why_it_matters": "peut accélérer la transformation en texte", "conditions": "compte rendu fréquent", "evidence_class": "SUPPORTED"}
+  ],
+  "solution_families": [
+    {"family": "E Ink minimaliste", "best_when": "écoute + écriture dominent", "main_strength": "simplicité", "main_friction": "peu de fonctions collaboratives", "avoid_when": "transcription/live collaboration indispensables"},
+    {"family": "tablette/ordinateur", "best_when": "réunion connectée et collaborative", "main_strength": "polyvalence", "main_friction": "plus de sollicitations logicielles", "avoid_when": "seule la capture manuscrite compte"},
+    {"family": "papier", "best_when": "faible volume et aucun besoin de sortie numérique", "main_strength": "immédiateté", "main_friction": "recherche et partage", "avoid_when": "suivi numérique récurrent"}
+  ],
+  "contraindications": ["transcription live obligatoire", "visioconférence", "coédition temps réel", "aucun besoin de recherche ou partage"],
+  "evidence_ledger": [
+    {"claim": "reMarkable permet organisation et export via l'application desktop", "source": "https://support.remarkable.com/articles/Knowledge/Desktop-app", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "Kindle Scribe partage notebooks et peut produire des sorties converties selon les fonctions", "source": "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
+    {"claim": "la reconnaissance Kindle Scribe a des limites sur certains dessins/diagrammes/équations", "source": "https://digprjsurvey.amazon.com/csad/help/node/TWTo0OyovlJ9jwOV0B", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"}
+  ],
+  "editorial": {"differentiation": "Centrer la page sur l'après-réunion et le Little Hire.", "opening_answer": "Le numérique est utile si retrouver et partager les décisions est la friction principale.", "recommended_sections": ["moment", "workflow", "critères", "familles", "contre-indications", "suite"], "comparison_handoff": "/comparatifs/bloc-notes-numerique-professionnel/", "guide_handoffs": ["/guides/convertir-notes-manuscrites-en-texte/", "/guides/exporter-notes/"], "excluded_claims": ["meilleure concentration", "OCR parfait"]},
+  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}
