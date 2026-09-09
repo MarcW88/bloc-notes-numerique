@@ -107,8 +107,8 @@ def find_matches(text, patterns):
     return [pattern for pattern in patterns if re.search(pattern, text, re.I)]
 
 
-def heading_levels(html):
-    return [int(level) for level, _ in HEADING_RE.findall(html)]
+def heading_levels(fragment):
+    return [int(level) for level, _ in HEADING_RE.findall(fragment)]
 
 
 def has_heading_jump(levels):
@@ -177,9 +177,10 @@ for url, spec in PAGES.items():
     if len(h1s) != 1:
         issues.append(f'expected exactly one H1, found {len(h1s)}')
 
-    levels = heading_levels(html)
-    if has_heading_jump(levels):
-        issues.append('heading hierarchy skips a level')
+    # Check the document's editorial heading flow only: one page H1 followed by article headings.
+    editorial_levels = ([1] if len(h1s) == 1 else []) + heading_levels(body)
+    if has_heading_jump(editorial_levels):
+        issues.append('article heading hierarchy skips a level')
 
     # Editorial blockers visible in user-facing prose.
     for label, patterns in EDITOR_FACING_PATTERNS.items():
