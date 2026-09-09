@@ -1,51 +1,53 @@
 {
   "url": "/marques/kindle-scribe/",
-  "title": "Kindle Scribe — Gamme 2026, notes, cloud et comparatifs",
+  "title": "Kindle Scribe — Choisir entre 3e génération, Colorsoft et sans éclairage",
   "page_type": "BRAND_HUB",
   "brand": "kindle",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "La gamme à regarder en 2026",
-    "Ce que l’écosystème change au quotidien",
-    "Les points qui font réellement la différence",
-    "Les limites à vérifier avant d’acheter",
-    "À qui cette marque convient-elle le mieux ?",
-    "Comparer les modèles et les alternatives",
-    "Sources consultées"
+    "Commencez par votre bibliothèque, pas par le stylet",
+    "Trois Scribe récents, trois compromis différents",
+    "Le cloud est devenu plus utile, mais ce n’est pas une synchronisation de dossier",
+    "Les générations 2025+ changent davantage la recherche que l’ouverture logicielle",
+    "Les quatre arbitrages à faire avant achat",
+    "Quand regarder une autre marque",
+    "Sources vérifiées"
   ],
   "internal_links": [
-    "/guides/ecosysteme-ouvert-ou-ferme/",
     "/comparatifs/kindle-scribe-vs-remarkable/",
-    "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
-    "/guides/liseuse-ou-bloc-notes-numerique/",
-    "/guides/bloc-notes-numerique-google-drive/",
-    "/guides/bloc-notes-numerique-onedrive/"
+    "/guides/synchroniser-notes-cloud/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/marques/remarkable/",
+    "/marques/supernote/",
+    "/marques/boox/",
+    "/comparatifs/kindle-scribe-vs-kobo-elipsa/"
   ],
   "unique_internal_targets": [
     "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
     "/comparatifs/kindle-scribe-vs-remarkable/",
-    "/guides/bloc-notes-numerique-google-drive/",
-    "/guides/bloc-notes-numerique-onedrive/",
     "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/liseuse-ou-bloc-notes-numerique/"
+    "/guides/synchroniser-notes-cloud/",
+    "/marques/boox/",
+    "/marques/remarkable/",
+    "/marques/supernote/"
   ],
   "source_urls": [
     "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-    "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW",
     "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
     "https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN",
     "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL",
-    "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu",
-    "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs"
+    "https://digprjsurvey.amazon.com/csad/help/node/TXEroxFZdxObrcesZO",
+    "https://digprjsurvey.amazon.com/csad/help/node/TTqOsFUasbkY9S4V9x",
+    "https://digprjsurvey.amazon.com/csad/help/node/GF3LDHSB5YM9BYF7"
   ],
   "official_sources": [
     "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83",
-    "https://digprjsurvey.amazon.com/csad/help/node/G7N7RPHV2SW8CKBW",
     "https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd",
     "https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN",
     "https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL",
-    "https://digprjsurvey.amazon.com/csad/help/node/TIh9JOMGAKr7bY4zqu",
-    "https://digprjsurvey.amazon.com/csad/help/node/TJE2UYmdw0ppUuR3Rs"
+    "https://digprjsurvey.amazon.com/csad/help/node/TXEroxFZdxObrcesZO",
+    "https://digprjsurvey.amazon.com/csad/help/node/TTqOsFUasbkY9S4V9x",
+    "https://digprjsurvey.amazon.com/csad/help/node/GF3LDHSB5YM9BYF7"
   ],
   "independent_sources": [],
   "noindex_follow": true,

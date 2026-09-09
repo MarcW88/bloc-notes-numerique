@@ -64,6 +64,10 @@
     [
       "Applications",
       "apps bureau/mobile ; ce n’est pas une tablette Android généraliste."
+    ],
+    [
+      "Connect 2026",
+      "recherche manuscrite, cloud illimité, intégrations de travail et outils d’IA selon l’offre actuelle."
     ]
   ],
   "strengths": [
@@ -86,5 +90,5 @@
     "vous voulez éviter tout service récurrent pour les fonctions cloud avancées",
     "vous cherchez surtout une liseuse avec une vaste boutique de livres intégrée"
   ],
-  "verified_at": "8 septembre 2026"
+  "verified_at": "9 septembre 2026"
 }

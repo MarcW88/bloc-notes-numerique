@@ -2,10 +2,10 @@
 
 - Page type: `BRAND_HUB`
 - Brand: `kobo`
-- Sources verified: 8 septembre 2026
-- H2 count: 7
-- Internal links: 6
-- Unique targets: 6
+- Sources verified: 9 septembre 2026
+- H2 count: 6
+- Internal links: 4
+- Unique targets: 4
 - Official sources: 5
 - Independent sources: 0
 - Robots: `noindex,follow`

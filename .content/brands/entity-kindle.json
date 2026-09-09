@@ -6,22 +6,22 @@
     [
       "Kindle Scribe (3e génération)",
       "CURRENT",
-      "noir et blanc, éclairage",
-      "lecture Kindle + notes",
-      "workflow de fichiers moins ouvert qu’Android"
+      "noir et blanc, éclairage réglable, 32/64 Go, sortie 2025",
+      "lecture Kindle + notes + cloud 2025+",
+      "pas d’applications tierces généralistes"
     ],
     [
       "Kindle Scribe Colorsoft",
       "CURRENT",
-      "couleur, éclairage",
+      "couleur, éclairage réglable, 32/64 Go, sortie 2025",
       "lecture et annotations couleur",
-      "écosystème centré Amazon"
+      "écosystème toujours centré Kindle"
     ],
     [
-      "Kindle Scribe sans éclairage",
+      "Kindle Scribe sans éclairage frontal",
       "CURRENT",
-      "16 Go, noir et blanc",
-      "écriture/lecture avec configuration plus simple",
+      "noir et blanc, 16 Go, sortie 2026",
+      "lecture et notes en lumière ambiante",
       "pas d’éclairage frontal"
     ],
     [
@@ -29,7 +29,7 @@
       "PREVIOUS_GENERATION",
       "noir et blanc",
       "ancienne génération encore supportée",
-      "pas toutes les nouvelles connexions cloud"
+      "pas les connexions cloud réservées aux modèles 2025+"
     ]
   ],
   "ecosystem": [
@@ -38,32 +38,24 @@
       "Kindle Store et bibliothèque Kindle."
     ],
     [
-      "Stylet",
-      "Premium Pen sur les nouvelles générations documentées."
-    ],
-    [
-      "Workspace",
-      "réunit livres, documents et carnets sur les modèles 2025+."
-    ],
-    [
       "Notes",
-      "carnets, écriture manuscrite, recherche sur nouvelles générations."
+      "carnets manuscrits, recherche manuscrite sur modèles 2025+ et fonctions d’écriture selon génération."
     ],
     [
       "Documents",
-      "Send to Kindle et import de formats compatibles."
+      "Send to Kindle et import de fichiers compatibles."
     ],
     [
       "Cloud tiers",
-      "Google Drive et OneDrive pour modèles 2025+, avec import/export de copies plutôt que synchronisation bidirectionnelle."
+      "Google Drive et OneDrive sur modèles 2025+, avec import/export de copies plutôt qu’une synchronisation bidirectionnelle du fichier source."
     ],
     [
       "OneNote",
       "export de carnets en texte ou image selon le flux proposé."
     ],
     [
-      "Partage",
-      "email et PDF, avec conversion/recherche selon les fonctions."
+      "Couleur",
+      "Kindle Scribe Colorsoft ajoute écriture, surlignage et signets en couleur."
     ]
   ],
   "strengths": [
@@ -86,5 +78,5 @@
     "vous avez besoin d’applications tierces nombreuses",
     "vous recherchez un système de liens et de structuration de notes très avancé"
   ],
-  "verified_at": "8 septembre 2026"
+  "verified_at": "9 septembre 2026"
 }

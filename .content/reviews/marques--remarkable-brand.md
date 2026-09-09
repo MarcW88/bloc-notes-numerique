@@ -6,7 +6,7 @@
 - H2 count: 7
 - Internal links: 16
 - Unique targets: 12
-- Official sources: 6
+- Official sources: 7
 - Independent sources: 0
 - Robots: `noindex,follow`
 

@@ -1,47 +1,49 @@
 {
   "url": "/marques/supernote/",
-  "title": "Supernote — Manta, Nomad, notes liées et comparatifs",
+  "title": "Supernote — Manta ou Nomad, notes liées, InkHub et cloud",
   "page_type": "BRAND_HUB",
   "brand": "supernote",
-  "verified_at": "8 septembre 2026",
+  "verified_at": "9 septembre 2026",
   "h2": [
-    "La gamme à regarder en 2026",
-    "Ce que l’écosystème change au quotidien",
-    "Les points qui font réellement la différence",
-    "Les limites à vérifier avant d’acheter",
-    "À qui cette marque convient-elle le mieux ?",
-    "Comparer les modèles et les alternatives",
-    "Sources consultées"
+    "Manta ou Nomad : le premier filtre est la taille du travail",
+    "L’intérêt de Supernote apparaît quand un carnet cesse d’être linéaire",
+    "La reconnaissance manuscrite sert surtout à sortir du manuscrit",
+    "Le cloud est un moyen de transfert, pas l’identité du produit",
+    "InkHub élargit l’écosystème sans transformer Chauvet en magasin d’applications",
+    "Les limites sont matérielles autant que logicielles",
+    "Sources vérifiées"
   ],
   "internal_links": [
-    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/organiser-notes-numeriques/",
     "/comparatifs/remarkable-vs-supernote/",
-    "/comparatifs/boox-vs-supernote/",
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
-    "/comparatifs/bloc-notes-numerique-professionnel/",
-    "/guides/organiser-notes-numeriques/"
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/comparatifs/boox-vs-supernote/"
   ],
   "unique_internal_targets": [
-    "/comparatifs/bloc-notes-numerique-professionnel/",
-    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
     "/comparatifs/boox-vs-supernote/",
     "/comparatifs/remarkable-vs-supernote/",
-    "/guides/ecosysteme-ouvert-ou-ferme/",
-    "/guides/organiser-notes-numeriques/"
+    "/guides/organiser-notes-numeriques/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/"
   ],
   "source_urls": [
     "https://supernote.com/products/supernote-manta",
     "https://supernote.com/products/supernote-nomad",
-    "https://supernote.com/blogs/supernote-blog/an-explanation-of-supernote-product-naming-evolution",
-    "https://support.supernote.com/en_US/Tools-Features/handwriting-recognition",
-    "https://support.supernote.com/en_US/transfer-files"
+    "https://support.supernote.com/handwriting-recognition",
+    "https://support.supernote.com/en_US/organizing/1759244-using-titles-keywords-and-stars",
+    "https://support.supernote.com/en_US/organizing/2126285-untitled-article",
+    "https://support.supernote.com/en_US/transfer-files",
+    "https://support.supernote.com/changelog-for-manta-and-nomad"
   ],
   "official_sources": [
     "https://supernote.com/products/supernote-manta",
     "https://supernote.com/products/supernote-nomad",
-    "https://supernote.com/blogs/supernote-blog/an-explanation-of-supernote-product-naming-evolution",
-    "https://support.supernote.com/en_US/Tools-Features/handwriting-recognition",
-    "https://support.supernote.com/en_US/transfer-files"
+    "https://support.supernote.com/handwriting-recognition",
+    "https://support.supernote.com/en_US/organizing/1759244-using-titles-keywords-and-stars",
+    "https://support.supernote.com/en_US/organizing/2126285-untitled-article",
+    "https://support.supernote.com/en_US/transfer-files",
+    "https://support.supernote.com/changelog-for-manta-and-nomad"
   ],
   "independent_sources": [],
   "noindex_follow": true,

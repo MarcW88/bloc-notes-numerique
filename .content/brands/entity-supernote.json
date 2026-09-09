@@ -28,35 +28,31 @@
   "ecosystem": [
     [
       "Matériel",
-      "Manta et Nomad, conception modulaire avec batterie/stockage selon modèle."
+      "Manta 10,7″ et Nomad 7,8″, tous deux 300 ppp et sans éclairage frontal."
     ],
     [
-      "Stylet",
-      "écosystème de stylos avec pointe céramique NeverReplace."
+      "Modularité",
+      "batterie remplaçable, microSD et conception orientée réparation selon modèle."
     ],
     [
       "Système",
-      "Chauvet, système Android 11 spécialisé."
+      "Chauvet, système spécialisé basé sur Android 11."
     ],
     [
-      "Notes",
-      "liens, headings, mots-clés, étoiles et organisation orientée connaissances."
+      "Organisation",
+      "headings, mots-clés, étoiles et liens pour naviguer dans les notes."
     ],
     [
       "OCR",
-      "reconnaissance manuscrite en temps réel, export TXT/DOCX."
+      "reconnaissance manuscrite avec export TXT/DOCX."
     ],
     [
       "Cloud",
-      "Supernote Cloud, Dropbox et Google Drive documentés."
+      "Supernote Cloud, Dropbox et Google Drive ; transferts également par USB-C, email et réseau local."
     ],
     [
-      "Transfert",
-      "USB-C, email, réseau local et Browse & Access."
-    ],
-    [
-      "Applications",
-      "apps compagnon desktop/mobile et intégration Kindle."
+      "InkHub",
+      "depuis Chauvet 3.29.42, bibliothèque de ressources pour stickers, templates, notes, digests et dessins."
     ]
   ],
   "strengths": [
@@ -79,5 +75,5 @@
     "vous utilisez beaucoup d’applications tierces Android",
     "la lecture commerciale Kindle/Kobo est votre besoin dominant"
   ],
-  "verified_at": "8 septembre 2026"
+  "verified_at": "9 septembre 2026"
 }

@@ -24,32 +24,20 @@
       "Kobo Store et livres Kobo."
     ],
     [
-      "Stylet",
-      "Kobo Stylus / Stylus 2 selon compatibilité."
+      "Carnets",
+      "carnets manuscrits sauvegardés sur la liseuse et Kobo.com, avec sauvegarde possible vers Google Drive ou Dropbox."
     ],
     [
-      "Carnets",
-      "Basic et Advanced notebooks, recherche et conversion manuscrite."
+      "Annotations de livres",
+      "certaines annotations textuelles de livres Kobo/Kobo Plus peuvent être exportées depuis Kobo.com ; les markups manuscrits ne le sont pas."
     ],
     [
       "PDF",
-      "annotation possible sur PDF non protégés."
-    ],
-    [
-      "EPUB",
-      "annotation manuscrite possible, mais export limité selon le type de contenu."
+      "les PDF non protégés peuvent être exportés avec annotations manuscrites ; les PDF protégés ou non annotables restent limitants."
     ],
     [
       "Cloud",
-      "Kobo Cloud pour carnets, plus Google Drive et Dropbox."
-    ],
-    [
-      "Import",
-      "PDF et EPUB non protégés via Google Drive sur modèles compatibles."
-    ],
-    [
-      "Partage",
-      "export de carnets et PDF annotés selon format et droits."
+      "Google Drive et Dropbox servent au transfert ou à la sauvegarde de contenus compatibles."
     ]
   ],
   "strengths": [
@@ -72,5 +60,5 @@
     "vous avez besoin d’applications métier",
     "votre priorité est une organisation sophistiquée de centaines de notes liées"
   ],
-  "verified_at": "8 septembre 2026"
+  "verified_at": "9 septembre 2026"
 }

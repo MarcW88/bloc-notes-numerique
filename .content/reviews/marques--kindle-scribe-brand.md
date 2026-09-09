@@ -2,10 +2,10 @@
 
 - Page type: `BRAND_HUB`
 - Brand: `kindle`
-- Sources verified: 8 septembre 2026
+- Sources verified: 9 septembre 2026
 - H2 count: 7
-- Internal links: 6
-- Unique targets: 6
+- Internal links: 7
+- Unique targets: 7
 - Official sources: 7
 - Independent sources: 0
 - Robots: `noindex,follow`
