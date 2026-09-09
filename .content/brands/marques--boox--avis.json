@@ -52,6 +52,9 @@
     "https://www.trustpilot.com/review/shop.boox.com",
     "https://www.trustpilot.com/review/boox.com"
   ],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": false
 }

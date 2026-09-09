@@ -38,6 +38,9 @@
     "https://remarkable.com/products/remarkable-paper/pro?region_id=000036"
   ],
   "independent_sources": [],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": false
 }

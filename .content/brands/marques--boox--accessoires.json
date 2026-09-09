@@ -48,6 +48,9 @@
     "https://shop.boox.com/products/keyboard-cover-for-tab-ultra-c-pro"
   ],
   "independent_sources": [],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": false
 }

@@ -39,6 +39,9 @@
     "https://www.wired.com/review/remarkable-2/",
     "https://www.tomsguide.com/reviews/remarkable-2-review"
   ],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": true
 }

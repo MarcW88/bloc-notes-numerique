@@ -59,6 +59,9 @@
     "https://www.lesnumeriques.com/liseuse/boox-note-air5-c-p78686/test.html",
     "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review"
   ],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": false
 }

@@ -49,6 +49,9 @@
     "https://www.forbes.com/sites/forbes-personal-shopper/article/remarkable-paper-pro-review/",
     "https://www.engadget.com/mobile/tablets/remarkable-paper-pro-review-writing-in-color-is-nice-but-itll-cost-you-173024590.html"
   ],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": true
 }

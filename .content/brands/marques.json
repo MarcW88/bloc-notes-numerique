@@ -43,6 +43,9 @@
     "https://www.kobo.com/be/fr/eReaders",
     "https://supernote.com/pages/note-system-everything-you-need-to-stay-organized"
   ],
-  "noindex_follow": true,
+  "robots": "index,follow",
+  "indexable": true,
+  "noindex_follow": false,
+  "publication_status": "PUBLISHED_HUMAN_VALIDATED",
   "analysis_documentary": false
 }
