@@ -1,56 +1,48 @@
 ---
 url: /guides/bloc-notes-numerique-onedrive/
 slug: bloc-notes-numerique-onedrive
-status: DRAFT_READY
-guide_type: how-to
+status: QA_IN_PROGRESS
+guide_type: how-to / compatibility
 primary_keyword: bloc-notes numérique OneDrive
-search_intent: vérifier les flux OneDrive, notamment en environnement Microsoft 365
+search_intent: vérifier si un bloc-notes s'intègre au vrai environnement Microsoft 365 utilisé, pas seulement à OneDrive en théorie
 audience: professionnel ou utilisateur Microsoft
-last_researched: 2026-09-08
-refresh_level: new
+last_researched: 2026-09-09
+refresh_level: deep_rewrite
 ---
 
 ## Décision éditoriale
 
-- Question centrale : vérifier les flux OneDrive, notamment en environnement Microsoft 365.
-- Valeur propre : ajouter la contrainte des politiques IT et distinguer copie de sync.
-- Traitement : Contenu neuf : aucune expérience produit simulée.
-- Hors périmètre : classement produit, pseudo-test, affirmation d'expérience directe ou donnée instable sans source.
+- Décision issue du cluster audit : `DEEP_REWRITE`.
+- Question centrale : le compte Microsoft réel est-il autorisé et le niveau d'intégration correspond-il au workflow attendu ?
+- Valeur propre : distinguer stockage OneDrive, apps Microsoft, politiques d'entreprise et modèles de copie/synchronisation.
+- Valeur à préserver : facts actuels sur reMarkable, Kindle Scribe, Supernote et BOOX ; importance des contraintes IT.
+- Hors périmètre : promettre une compatibilité Microsoft 365 complète à partir du seul logo OneDrive.
 
-## Demande, intention et SERP
+## Angle et structure issue de la recherche
 
-La page doit satisfaire une intention dominante de type `how-to`. Les angles transactionnels purs restent sur `/comparatifs/` ou `/bons-plans/`. La recherche actuelle a servi à vérifier les fonctions 2026 et à éviter les réponses devenues obsolètes, notamment sur les intégrations cloud, l'OCR et les variantes de produits.
+La page est reconstruite autour du contexte entreprise :
 
-## Entités à expliciter
+1. tester d'abord l'autorisation du compte professionnel ;
+2. distinguer OneDrive, OneNote et Word ;
+3. documenter le modèle d'import/export de copies Kindle Scribe 2025+ ;
+4. traiter Supernote comme synchronisation de dossiers ;
+5. situer reMarkable et BOOX sur deux autres niveaux d'intégration ;
+6. effectuer un test d'acceptation dans le vrai environnement Microsoft ;
+7. décider quand OneDrive devient réellement éliminatoire.
 
-OneDrive, Microsoft 365, reMarkable, BOOX, Supernote, Kindle Scribe.
+## Registre de preuves vérifié le 9 septembre 2026
 
-## Registre de preuves
-
-- reMarkable integrations: https://support.remarkable.com/articles/Knowledge/About-my-remarkable-com
-- BOOX cloud tiers: https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
-- Supernote OneDrive: https://support.supernote.com/en_US/Whats-New/utilize-onedrive-your-new-cloud-sync-option-for-file-backup
-- Amazon OneDrive share: https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL
-
-Toutes les affirmations évolutives doivent être qualifiées par modèle, génération ou date lorsque nécessaire. Les sensations d'écriture, autonomies réelles et performances ne sont pas inventées.
-
-## Architecture validée
-
-- Réponse autonome dans les premières phrases.
-- H2 : comparaison;  compte entreprise;  test;  décision.
-- Tableau ou procédure uniquement lorsqu'il améliore la décision.
-- Liens internes vers l'étape suivante du cluster ; pas de quota artificiel.
-- Section Sources visible.
-
-## Content refresh / différenciation
-
-- Niveau : `new`.
-- Conservation : les passages utiles et les angles différenciants de l'ancien contenu sont maintenus quand la page existait.
-- Ajout : profondeur décisionnelle, entités explicites, limites, cas d'usage et maillage contextuel.
-- Suppression : formulations trop générales, exemples isolés qui ne permettaient pas une décision et répétitions.
+- reMarkable import/export/cloud : https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files
+- Kindle Scribe 2025+ connexion OneDrive : https://digprjsurvey.amazon.com/csad/help/node/Tuar1obhcxaS8hVUKd
+- Kindle Scribe 2025+ import Drive/OneDrive : https://digprjsurvey.amazon.com/csad/help/node/TjrMJmg3DZpAQLwVuN
+- Kindle partage Drive/OneDrive et cloud professionnel : https://digprjsurvey.amazon.com/csad/help/node/TP8wuaQilIlwlITVTL
+- Supernote OneDrive : https://support.supernote.com/en_US/Whats-New/utilize-onedrive-your-new-cloud-sync-option-for-file-backup
+- BOOX cloud tiers : https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage
 
 ## Risques
 
-sécurité d'entreprise pouvant bloquer une intégration compatible en théorie.
+- Une organisation peut bloquer une intégration compatible en théorie.
+- Ne pas assimiler OneDrive à OneNote, Word ou à une édition Office complète.
+- Kindle Scribe 2025+ travaille sur des copies ; pas de resynchronisation automatique vers le fichier source.
 
-`noindex,follow` doit rester actif jusqu'à validation humaine du lot.
+`noindex,follow` doit rester actif jusqu'à validation humaine explicite.
