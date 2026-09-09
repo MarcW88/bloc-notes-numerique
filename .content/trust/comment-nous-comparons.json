@@ -1,0 +1,49 @@
+{
+  "slug": "comment-nous-comparons",
+  "page_url": "/comment-nous-comparons/",
+  "page_type": "COMPARISON_POLICY",
+  "status": "READY_FOR_DRAFT",
+  "claims": [
+    {
+      "claim": "Les comparatifs suivent la logique critères → preuves → scoring → classement.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "AGENTS.md — Production éditoriale — Comparatifs et marques ; comparison-content-workflow",
+      "allowed_wording": "Nous définissons les critères avant le classement, documentons les preuves, puis appliquons le scoring.",
+      "blocked_wording": "Nous choisissons d'abord les meilleurs produits puis ajustons les critères."
+    },
+    {
+      "claim": "Les commissions d'affiliation ne doivent pas faire varier les scores ou classements.",
+      "evidence_level": "REPO_EVIDENCE",
+      "source": "AGENTS.md — Production éditoriale — Comparatifs et marques",
+      "allowed_wording": "Le niveau de commission n'entre pas dans le calcul des scores ou du classement.",
+      "blocked_wording": "Les partenaires les plus rémunérateurs peuvent être favorisés."
+    }
+  ],
+  "required_disclosures": [
+    "Définition des critères avant classement",
+    "Sources et preuves",
+    "Scoring et pondération",
+    "Données manquantes",
+    "Mises à jour",
+    "Rôle nul des commissions dans le ranking",
+    "Limites des comparatifs"
+  ],
+  "unknowns": [
+    "Existe-t-il une fréquence fixe de révision des comparatifs ou uniquement des mises à jour déclenchées par changement ?"
+  ],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": true,
+    "preserve_noindex": true
+  },
+  "qa": {
+    "claims_mapped": true,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": true,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}
