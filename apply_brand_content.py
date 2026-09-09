@@ -5,6 +5,7 @@ from brand_pages import PAGES
 from brand_data import VERIFIED_AT, BRANDS
 from brand_reviewed_output import reviewed_body
 from brand_enriched_output import enriched_body
+from brand_bespoke_output import bespoke_body, bespoke_metadata
 
 ROOT = Path(__file__).resolve().parent
 
@@ -29,8 +30,10 @@ for url, page_data in PAGES.items():
     html = page.read_text(encoding='utf-8')
     title = page_data['title']
     description = page_data['description']
+    title, description = bespoke_metadata(url, title, description)
     body = reviewed_body(url, page_data).strip()
     body = enriched_body(url, body).strip()
+    body = bespoke_body(url, body).strip()
 
     brand_key = page_data.get('brand')
     if page_data.get('page_type') == 'BRAND_HUB' and brand_key in BRANDS:
