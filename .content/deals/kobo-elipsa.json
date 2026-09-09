@@ -1,0 +1,22 @@
+{
+  "slug": "kobo-elipsa",
+  "page_url": "/bons-plans/kobo-elipsa/",
+  "page_type": "BRAND_DEALS",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {"active_offer_ttl_hours": 72, "page_review_ttl_hours": 168},
+  "intent": {"primary_query": "promo Kobo Elipsa 2E", "reader_goal": "Savoir si la Kobo Elipsa 2E est réellement en promotion et quel prix utiliser comme repère.", "closest_comparison": "/comparatifs/kindle-scribe-vs-kobo-elipsa/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/annoter-pdf-tablette-e-ink/"]},
+  "reference_prices": [
+    {"product": "Kobo Elipsa 2E", "price": 399.99, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e", "checked_at": "2026-09-09T08:29:00+02:00"}
+  ],
+  "offers": [
+    {"product": "Kobo Elipsa 2E", "merchant": "Rakuten Kobo", "price": 399.99, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "PRICE_WATCH", "availability": "Disponible sur la boutique officielle", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "Prix catalogue, pas de promotion officielle vérifiée au moment du contrôle."}
+  ],
+  "watchlist": ["Elipsa 2E sous 399,99 € chez Kobo ou revendeur majeur", "offre bundle avec étui sans hausse équivalente du panier", "reconditionné certifié Kobo"],
+  "evidence_ledger": [
+    {"claim": "La Kobo Elipsa 2E est affichée 399,99 € et inclut le Kobo Stylus 2", "source": "https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e", "evidence_class": "OFFICIAL_CURRENT"},
+    {"claim": "La gamme Kobo propose une rubrique certifiée reconditionnée", "source": "https://www.kobo.com/fr/fr/ereaders", "evidence_class": "OFFICIAL_CURRENT"}
+  ],
+  "editorial": {"opening_answer": "La Kobo Elipsa 2E est au prix catalogue officiel de 399,99 € au 9 septembre 2026. Sans baisse clairement vérifiée, la bonne stratégie est de traiter ce niveau comme prix de référence et d'attendre une remise réelle plutôt que d'appeler le tarif courant un bon plan.", "avoid_claims": ["promotion en cours", "meilleur prix"], "comparison_handoff": "/comparatifs/kindle-scribe-vs-kobo-elipsa/"},
+  "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}

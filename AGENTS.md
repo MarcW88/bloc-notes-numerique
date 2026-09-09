@@ -52,3 +52,18 @@ Pour toute création ou réécriture sous `/usages/` :
 - Pour les comparatifs, utiliser `.agents/skills/comparison-content-workflow/SKILL.md` et conserver la logique critères → preuves → scoring → classement.
 - Pour les pages marques, produits et écosystèmes, utiliser `.agents/skills/brand-content-workflow/SKILL.md`.
 - Ne jamais faire varier une recommandation, un score ou un classement en fonction d’une commission d’affiliation.
+
+## Production éditoriale — Bons plans
+
+Pour toute création, réécriture ou actualisation sous `/bons-plans/` :
+
+1. Utiliser `.agents/skills/deal-content-workflow/SKILL.md`.
+2. Créer ou mettre à jour `.content/deals/<slug>.json` avant de modifier le texte : prix, disponibilité, statut et date de contrôle doivent être documentés.
+3. Distinguer strictement `ACTIVE_VERIFIED`, `ACTIVE_STOCK_SENSITIVE`, `PRICE_WATCH`, `EXPIRED`, `SOLD_OUT`, `UNVERIFIED` et `NOT_STARTED`.
+4. Un prix barré marchand ne suffit jamais à prouver une remise. Documenter le prix de référence et sa base avant d'afficher une économie ou un pourcentage.
+5. Une offre qui dépasse son TTL ne peut plus être présentée comme active sans nouvelle vérification.
+6. Les pages de bons plans n'effectuent pas de ranking produit selon la commission. Le choix produit reste dans `/comparatifs/` ; la page deal juge l'offre, pas la valeur absolue du produit.
+7. Les liens affiliés doivent rester transparents et utiliser `rel="sponsored"` lorsque nécessaire.
+8. Utiliser `content-refresh`, `fact-check`, `affiliate-value`, `internal-linking-audit`, `natural-writing`, `humanizer`, `anti-ai-slop` et `editorial-qa` conformément au workflow.
+9. Conserver `noindex,follow` jusqu'à validation humaine explicite.
+

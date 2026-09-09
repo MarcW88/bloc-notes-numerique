@@ -1,0 +1,59 @@
+{
+  "slug": "example",
+  "page_url": "/bons-plans/example/",
+  "page_type": "BRAND_DEALS",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {
+    "active_offer_ttl_hours": 72,
+    "page_review_ttl_hours": 168
+  },
+  "intent": {
+    "primary_query": "",
+    "reader_goal": "",
+    "closest_comparison": "",
+    "related_guides": []
+  },
+  "reference_prices": [
+    {
+      "product": "",
+      "price": 0,
+      "currency": "EUR",
+      "basis": "OFFICIAL_CURRENT",
+      "source": "",
+      "checked_at": "2026-09-09T08:29:00+02:00"
+    }
+  ],
+  "offers": [
+    {
+      "product": "",
+      "merchant": "",
+      "price": 0,
+      "currency": "EUR",
+      "reference_price": null,
+      "reference_price_basis": null,
+      "status": "PRICE_WATCH",
+      "availability": "",
+      "source": "",
+      "checked_at": "2026-09-09T08:29:00+02:00",
+      "evidence_class": "OFFICIAL_CURRENT",
+      "note": ""
+    }
+  ],
+  "watchlist": [],
+  "evidence_ledger": [],
+  "editorial": {
+    "opening_answer": "",
+    "avoid_claims": ["meilleur prix jamais vu", "offre exceptionnelle sans preuve"],
+    "comparison_handoff": ""
+  },
+  "qa": {
+    "reference_price_documented": true,
+    "active_offers_fresh": true,
+    "expired_offers_not_promoted": true,
+    "affiliate_independence": true,
+    "no_fake_urgency": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS"
+  }
+}

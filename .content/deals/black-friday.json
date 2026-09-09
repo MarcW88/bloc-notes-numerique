@@ -1,0 +1,23 @@
+{
+  "slug": "black-friday",
+  "page_url": "/bons-plans/black-friday/",
+  "page_type": "EVENT_DEALS",
+  "status": "DRAFT_READY",
+  "checked_at": "2026-09-09T08:29:00+02:00",
+  "freshness_policy": {"active_offer_ttl_hours": 24, "page_review_ttl_hours": 336},
+  "intent": {"primary_query": "Black Friday bloc-notes numérique 2026", "reader_goal": "Préparer l'achat et distinguer les vraies offres du 27 novembre 2026 des faux prix barrés ou promotions anticipées.", "closest_comparison": "/comparatifs/meilleur-bloc-notes-numerique/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/choisir-bloc-notes-numerique/"]},
+  "reference_prices": [
+    {"product": "Date Black Friday 2026", "price": 0, "currency": "EUR", "basis": "OFFICIAL_HISTORICAL", "source": "https://publicholidays.fr/fr/black-friday/", "checked_at": "2026-09-09T08:29:00+02:00"}
+  ],
+  "offers": [
+    {"product": "Black Friday 2026", "merchant": "multi-marchands", "price": null, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "NOT_STARTED", "availability": "Événement futur : vendredi 27 novembre 2026", "source": "https://publicholidays.fr/fr/black-friday/", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_HISTORICAL", "note": "Aucune offre Black Friday 2026 ne doit être présentée comme active au 9 septembre."},
+    {"product": "Promotions appareils Amazon Black Friday 2025", "merchant": "Amazon.fr", "price": null, "currency": "EUR", "reference_price": null, "reference_price_basis": null, "status": "EXPIRED", "availability": "Historique 2025 : campagne du 20 novembre au 1er décembre", "source": "https://www.aboutamazon.fr/actualites/appareils-amazon/meilleures-offres-appareils-amazon-black-friday-2025", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_HISTORICAL", "note": "Historique utile pour anticiper la fenêtre, pas pour prédire le montant des remises 2026."}
+  ],
+  "watchlist": ["reMarkable bundles", "Kindle Scribe ancienne et nouvelle génération", "Kobo Elipsa 2E", "BOOX Note Air / Note Max", "offres reconditionnées"],
+  "evidence_ledger": [
+    {"claim": "Le Black Friday 2026 tombe le vendredi 27 novembre", "source": "https://publicholidays.fr/fr/black-friday/", "evidence_class": "OFFICIAL_HISTORICAL"},
+    {"claim": "Amazon avait étendu sa campagne Black Friday 2025 du 20 novembre au 1er décembre", "source": "https://www.aboutamazon.fr/actualites/appareils-amazon/meilleures-offres-appareils-amazon-black-friday-2025", "evidence_class": "OFFICIAL_HISTORICAL"}
+  ],
+  "editorial": {"opening_answer": "Le Black Friday 2026 aura lieu le 27 novembre. Au 9 septembre, aucune offre 2026 ne doit être présentée comme active : la page sert à fixer les prix de référence et la watchlist, puis basculera en suivi quotidien à l'approche de l'événement.", "avoid_claims": ["jusqu'à -X % prévu", "meilleure offre à venir", "compte à rebours trompeur"], "comparison_handoff": "/comparatifs/meilleur-bloc-notes-numerique/"},
+  "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
+}

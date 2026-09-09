@@ -4,6 +4,7 @@
 import os
 
 from usage_content import USAGE_CONTENT
+from deal_content import DEAL_CONTENT, DEAL_STATUS_LABEL
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
@@ -227,10 +228,10 @@ def hub_page(title, desc, canonical, crumbs, intro, links):
 """
     return html_page(title, desc, crumbs, content, canonical)
 
-def content_page(title, desc, canonical, crumbs, page_type="", body_html=""):
+def content_page(title, desc, canonical, crumbs, page_type="", body_html="", status_label=None):
     type_badge = f'<span class="content-type type-{page_type.lower()}">{page_type}</span>' if page_type else ""
     article_content = body_html.strip() if body_html else "<!-- Contenu à rédiger -->"
-    content_status = "Vérifié le 8 septembre 2026" if body_html else "Contenu en préparation"
+    content_status = status_label or ("Vérifié le 8 septembre 2026" if body_html else "Contenu en préparation")
     content = f"""
 <section class="page-hero">
   <div class="container">
@@ -1271,11 +1272,11 @@ for path, title, desc in GUIDES:
 
 # ── BONS PLANS ────────────────────────────────────────────────────────────────
 write("/bons-plans/index.html", hub_page(
-    "Bons plans — Bloc-notes numériques en promotion",
-    "Les meilleures offres et promotions sur les tablettes E Ink et bloc-notes numériques.",
+    "Bons plans — Offres et prix des bloc-notes numériques",
+    "Promotions, baisses de prix et repères d’achat vérifiés sur les tablettes E Ink et bloc-notes numériques.",
     "/bons-plans/",
     breadcrumb("Bons plans"),
-    "Les meilleures offres du moment sur les bloc-notes numériques, vérifiées régulièrement.",
+    "Des offres vérifiées, des prix de référence datés et les promotions expirées clairement séparées des bons plans encore achetables.",
     [
         ("Tous les bons plans", "/bons-plans/bloc-notes-numerique/"),
         ("Offres reMarkable", "/bons-plans/remarkable/"),
@@ -1288,18 +1289,18 @@ write("/bons-plans/index.html", hub_page(
 ))
 
 BONS_PLANS = [
-    ("/bons-plans/bloc-notes-numerique/", "Bons plans bloc-notes numériques — Promotions en cours", "Toutes les promotions et réductions sur les tablettes E Ink."),
-    ("/bons-plans/remarkable/", "Bons plans reMarkable — Meilleures offres", "Les meilleures offres sur reMarkable Paper Pro et reMarkable 2."),
-    ("/bons-plans/kindle-scribe/", "Bons plans Kindle Scribe — Promotions", "Les meilleures offres sur le Kindle Scribe."),
-    ("/bons-plans/kobo-elipsa/", "Bons plans Kobo Elipsa — Promotions", "Les meilleures offres sur le Kobo Elipsa."),
-    ("/bons-plans/boox/", "Bons plans Boox — Promotions et offres", "Les meilleures offres sur les tablettes Boox."),
-    ("/bons-plans/bloc-notes-numerique-occasion/", "Bloc-notes numérique d'occasion — Guide d'achat", "Acheter un bloc-notes numérique d'occasion : quoi vérifier et où acheter."),
-    ("/bons-plans/black-friday/", "Black Friday — Bloc-notes numériques", "Les meilleures offres Black Friday sur les tablettes E Ink."),
+    ("/bons-plans/bloc-notes-numerique/", "Bons plans bloc-notes numériques — Offres et prix vérifiés", "Promotions réellement vérifiées, prix à surveiller et offres expirées sur les tablettes E Ink."),
+    ("/bons-plans/remarkable/", "Bons plans reMarkable — Offres et prix à surveiller", "Bundles, reconditionné et baisses de prix reMarkable vérifiés avec leur prix de référence."),
+    ("/bons-plans/kindle-scribe/", "Bons plans Kindle Scribe — Offres et baisses de prix", "Promotions Kindle Scribe actives, prix à surveiller et historiques de baisse clairement séparés."),
+    ("/bons-plans/kobo-elipsa/", "Bons plans Kobo Elipsa — Offres et prix", "Prix de référence et promotions vérifiées sur la Kobo Elipsa 2E."),
+    ("/bons-plans/boox/", "Bons plans BOOX — Promotions et disponibilité", "Promotions BOOX vérifiées avec contrôle du stock, du bundle et du coût final."),
+    ("/bons-plans/bloc-notes-numerique-occasion/", "Bloc-notes numérique d'occasion — Guide d'achat", "Acheter un bloc-notes numérique d'occasion ou reconditionné : prix, état, garantie et contrôles utiles."),
+    ("/bons-plans/black-friday/", "Black Friday 2026 — Bloc-notes numériques", "Date, prix de référence et watchlist pour les offres Black Friday 2026 sur les tablettes E Ink."),
 ]
 
 for path, title, desc in BONS_PLANS:
     crumbs = breadcrumb(("Bons plans", "/bons-plans/"), title.split("—")[0].strip())
-    write(path + "index.html", content_page(title, desc, path, crumbs))
+    write(path + "index.html", content_page(title, desc, path, crumbs, "Offres", DEAL_CONTENT.get(path, ""), DEAL_STATUS_LABEL.get(path)))
 
 # ── ACCESSOIRES ───────────────────────────────────────────────────────────────
 write("/accessoires/index.html", hub_page(
