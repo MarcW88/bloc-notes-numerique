@@ -1,42 +1,9 @@
 {
-  "slug": "tablette-e-ink",
-  "url": "/comparatifs/tablette-e-ink/",
-  "researched_at": "2026-09-09",
-  "status": "READY_FOR_PUBLISH_REVIEW",
-  "intent": {
-    "query": "meilleure tablette E Ink",
-    "type": "best_overall",
-    "user_job": "choisir une tablette E Ink polyvalente entre lecture, écriture, applications et documents",
-    "scope_note": "Tablette-first : plus large que le comparatif bloc-notes numérique notebook-first."
-  },
-  "criteria": [
-    {"id": "apps", "label": "Applications et polyvalence"},
-    {"id": "reading", "label": "Lecture"},
-    {"id": "writing", "label": "Écriture"},
-    {"id": "color", "label": "Couleur"},
-    {"id": "frontlight", "label": "Éclairage frontal"},
-    {"id": "complexity", "label": "Complexité et compromis d'autonomie"},
-    {"id": "file_formats", "label": "Fichiers et services"}
-  ],
-  "candidate_scope": [
-    {"name": "BOOX Note Air5 C", "role": "choix tablette polyvalente", "source": "https://shop.boox.com/products/noteair5c"},
-    {"name": "reMarkable Paper Pure", "role": "alternative carnet focalisé", "source": "https://remarkable.com/fr-FR/shop/compare"},
-    {"name": "Supernote Manta", "role": "alternative organisation manuscrite", "source": "https://supernote.com/pages/supernote-manta"},
-    {"name": "Kindle Scribe", "role": "alternative lecture + écriture", "source": "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83"},
-    {"name": "BOOX Note Max / Tab X C", "role": "grands formats", "source": "https://shop.boox.com/products/notemax"}
-  ],
-  "recommendation_logic": {
-    "default": "BOOX Note Air5 C si tablette signifie polyvalence, apps et couleur",
-    "conditional": ["Paper Pure pour le focus", "Supernote Manta pour l'organisation", "Kindle Scribe pour la lecture", "Note Max/Tab X C pour les grands documents"]
-  },
-  "source_urls": [
-    "https://www.androidcentral.com/best-e-ink-tablet",
-    "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
-    "https://shop.boox.com/products/noteair5c",
-    "https://remarkable.com/fr-FR/shop/compare",
-    "https://supernote.com/pages/supernote-manta",
-    "https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83"
-  ],
-  "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "La page choisit d'abord une famille de tablette E Ink puis un appareil. Pas de podium numérique entre catégories de produits qui ne remplissent pas le même rôle."
+  "slug":"tablette-e-ink","url":"/comparatifs/tablette-e-ink/","researched_at":"2026-09-09","status":"READY_FOR_HUMAN_VALIDATION",
+  "intent":{"query":"meilleure tablette E Ink","type":"best_overall","user_job":"choisir une tablette E Ink polyvalente entre lecture, écriture, applications et documents","scope_note":"Tablette-first : plus large que le comparatif bloc-notes numérique notebook-first."},
+  "criteria":[{"id":"apps","label":"Applications et polyvalence"},{"id":"reading","label":"Lecture"},{"id":"writing","label":"Écriture"},{"id":"color","label":"Couleur"},{"id":"frontlight","label":"Éclairage frontal"},{"id":"complexity","label":"Complexité et compromis d'autonomie"},{"id":"file_formats","label":"Fichiers et services"}],
+  "candidate_scope":[{"name":"BOOX Note Air5 C","role":"choix tablette polyvalente","source":"https://shop.boox.com/products/noteair5c"},{"name":"reMarkable Paper Pure","role":"alternative carnet focalisé","source":"https://remarkable.com/fr-FR/shop/compare"},{"name":"Supernote Manta","role":"alternative organisation manuscrite","source":"https://supernote.com/pages/supernote-manta"},{"name":"Kindle Scribe","role":"alternative lecture + écriture","source":"https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83"},{"name":"BOOX Note Max / Tab X C","role":"grands formats","source":"https://shop.boox.com/products/notemax"}],
+  "recommendation_logic":{"default":"BOOX Note Air5 C si tablette signifie polyvalence, apps et couleur","conditional":["Paper Pure pour le focus","Supernote Manta pour l'organisation","Kindle Scribe pour la lecture","Note Max/Tab X C pour les grands documents"]},
+  "source_urls":["https://www.androidcentral.com/best-e-ink-tablet","https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review","https://shop.boox.com/products/noteair5c","https://remarkable.com/fr-FR/shop/compare","https://supernote.com/pages/supernote-manta","https://digprjsurvey.amazon.com/csad/help/node/GK33S847NN4V6Y83"],
+  "affiliate_commission_used_in_ranking":false,"methodology_note":"La page choisit d'abord une famille de tablette E Ink puis un appareil. Pas de podium numérique entre catégories de produits qui ne remplissent pas le même rôle."
 }
