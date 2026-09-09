@@ -3,6 +3,7 @@ from pathlib import Path
 import re
 from brand_pages import PAGES
 from brand_data import VERIFIED_AT
+from brand_reviewed_output import reviewed_body
 
 ROOT = Path(__file__).resolve().parent
 
@@ -27,7 +28,7 @@ for url, page_data in PAGES.items():
     html = page.read_text(encoding='utf-8')
     title = page_data['title']
     description = page_data['description']
-    body = page_data['body'].strip()
+    body = reviewed_body(url, page_data).strip()
 
     html = replace_first(r'<title>.*?</title>', f'<title>{title}</title>', html, re.S)
     html = replace_first(
