@@ -27,3 +27,12 @@ workflow:
   reviews_dir: ".content/reviews"
   require_human_validation_before_publish: true
   allow_automatic_merge: false
+
+evaluation:
+  gate: ".agents/skills/comparison-editorial-publish-gate/SKILL.md"
+  machine_validator: "validate_comparisons.py"
+  report_dir: ".content/reviews/comparisons"
+  mirror_comparison_content_workflow: true
+  fail_on_unprovable_critical_phase: true
+  preserve_noindex_on_fail: true
+  require_pipeline_consistency: true
