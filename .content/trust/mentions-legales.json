@@ -1,0 +1,37 @@
+{
+  "slug": "mentions-legales",
+  "page_url": "/mentions-legales/",
+  "page_type": "LEGAL_PENDING",
+  "status": "LEGAL_PENDING",
+  "claims": [],
+  "required_disclosures": [
+    "Identité ou raison sociale de l'éditeur",
+    "Statut juridique",
+    "Adresse",
+    "Email de contact légal",
+    "Directeur de publication",
+    "Hébergeur",
+    "Outils de mesure/cookies",
+    "Traitements de données personnelles",
+    "Numéro d'entreprise/TVA si applicable"
+  ],
+  "unknowns": [
+    "Toutes les données légales restent à confirmer par l'éditeur avant rédaction."
+  ],
+  "editorial_rules": {
+    "allow_physical_test_claims": false,
+    "allow_team_claims": false,
+    "allow_independence_claims": false,
+    "preserve_noindex": true,
+    "forbid_legal_drafting_from_assumptions": true
+  },
+  "qa": {
+    "claims_mapped": true,
+    "no_unverified_test_claims": true,
+    "no_fictional_team": true,
+    "affiliate_model_explained": false,
+    "unknowns_not_filled_by_guessing": true,
+    "noindex_preserved": true,
+    "final_verdict": "PENDING"
+  }
+}
