@@ -4,8 +4,25 @@ on:
   push:
     paths:
       - 'AGENTS.md'
-      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/usage-analysis-workflow/**'
       - '.agents/skills/usage-content-workflow/**'
+      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/content-audit/**'
+      - '.agents/skills/search-intent/**'
+      - '.agents/skills/content-refresh/**'
+      - '.agents/skills/fact-check/**'
+      - '.agents/skills/evidence-based-reviews/**'
+      - '.agents/skills/affiliate-value/**'
+      - '.agents/skills/content-brief-authoring/**'
+      - '.agents/skills/content-and-copy/**'
+      - '.agents/skills/internal-linking-audit/**'
+      - '.agents/skills/humanizer/**'
+      - '.agents/skills/general-writing/**'
+      - '.agents/skills/anti-ai-slop/**'
+      - '.agents/skills/seo-onpage/**'
+      - '.agents/skills/seo-technical/**'
+      - '.agents/skills/seo-best-practices/**'
+      - '.agents/skills/editorial-qa/**'
       - '.content/usages/**'
       - 'usage-workflow.config.yaml'
       - 'validate_usage_workflow.py'
@@ -13,8 +30,25 @@ on:
   pull_request:
     paths:
       - 'AGENTS.md'
-      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/usage-analysis-workflow/**'
       - '.agents/skills/usage-content-workflow/**'
+      - '.agents/skills/jobs-to-be-done/**'
+      - '.agents/skills/content-audit/**'
+      - '.agents/skills/search-intent/**'
+      - '.agents/skills/content-refresh/**'
+      - '.agents/skills/fact-check/**'
+      - '.agents/skills/evidence-based-reviews/**'
+      - '.agents/skills/affiliate-value/**'
+      - '.agents/skills/content-brief-authoring/**'
+      - '.agents/skills/content-and-copy/**'
+      - '.agents/skills/internal-linking-audit/**'
+      - '.agents/skills/humanizer/**'
+      - '.agents/skills/general-writing/**'
+      - '.agents/skills/anti-ai-slop/**'
+      - '.agents/skills/seo-onpage/**'
+      - '.agents/skills/seo-technical/**'
+      - '.agents/skills/seo-best-practices/**'
+      - '.agents/skills/editorial-qa/**'
       - '.content/usages/**'
       - 'usage-workflow.config.yaml'
       - 'validate_usage_workflow.py'
@@ -33,5 +67,5 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Validate usage workflow
+      - name: Validate two-workflow usage architecture
         run: python validate_usage_workflow.py
