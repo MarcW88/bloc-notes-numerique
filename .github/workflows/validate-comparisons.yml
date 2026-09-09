@@ -10,6 +10,7 @@ on:
       - "comparison_products.py"
       - "comparison_pages.py"
       - "comparison_methodology.py"
+      - "comparison_editorial_strategy.py"
       - "comparison_content.py"
       - "comparison_content_professional.py"
       - "apply_comparison_content.py"
@@ -29,6 +30,7 @@ on:
       - "comparison_products.py"
       - "comparison_pages.py"
       - "comparison_methodology.py"
+      - "comparison_editorial_strategy.py"
       - "comparison_content.py"
       - "comparison_content_professional.py"
       - "apply_comparison_content.py"
@@ -58,5 +60,6 @@ jobs:
       - name: Explain evaluation boundary
         run: |
           echo "Machine PASS proves pipeline consistency and v2 data integrity, not final publication quality."
-          echo "Run .agents/skills/comparison-editorial-publish-gate/SKILL.md to evaluate each phase of comparison-content-workflow."
-          echo "Keep noindex until that evaluation passes and a human explicitly validates publication."
+          echo "The human gate must also review editorial thesis and architecture against neighbouring comparison pages."
+          echo "No cluster-wide H2 template, word quota, table quota or symmetric product-block template is allowed."
+          echo "Keep noindex until the publish gate passes and a human explicitly validates publication."
