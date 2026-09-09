@@ -80,10 +80,19 @@ jobs:
         run: |
           python - <<'PY'
           from pathlib import Path
-          page = Path('guides/ocr-manuscrit/index.html')
-          text = page.read_text(encoding='utf-8')
-          text = text.replace('Vérifié le 8 septembre 2026', 'Vérifié le 9 septembre 2026', 1)
-          page.write_text(text, encoding='utf-8')
+
+          audited_slugs = [
+              'ocr-manuscrit',
+              'bloc-notes-numerique-google-drive',
+              'bloc-notes-numerique-onedrive',
+              'bloc-notes-numerique-dropbox',
+              'convertir-notes-manuscrites-en-texte',
+          ]
+          for slug in audited_slugs:
+              page = Path('guides') / slug / 'index.html'
+              text = page.read_text(encoding='utf-8')
+              text = text.replace('Vérifié le 8 septembre 2026', 'Vérifié le 9 septembre 2026', 1)
+              page.write_text(text, encoding='utf-8')
           PY
 
       - name: Validate internal links in guide bodies
