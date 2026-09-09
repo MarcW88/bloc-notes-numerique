@@ -1,5 +1,5 @@
 from brand_data import VERIFIED_AT
-from brand_render_common import internal_link, sources_section, bullets
+from brand_render_common import internal_link, sources_html, bullets
 
 
 def product_page(title, brand, status, answer, facts, workflow, limitations, choose, avoid, alternatives):
@@ -15,7 +15,7 @@ def product_page(title, brand, status, answer, facts, workflow, limitations, cho
 <h2 id="alternatives">Quelles alternatives regarder ?</h2><ul>{''.join(f'<li>{internal_link(url,label)}</li>' for label,url in alternatives)}</ul><p>L’alternative utile est celle qui corrige la limite principale sans dégrader une fonction plus importante.</p>
 <h2 id="preuve">Ce que la fiche technique ne permet pas de conclure</h2><p>Une fiche constructeur permet de vérifier une diagonale, un format, un système ou une intégration. Elle ne permet pas, à elle seule, d’affirmer qu’un stylet « ressemble au papier », qu’un appareil reste confortable plusieurs heures ou qu’une autonomie annoncée sera reproduite dans votre usage. Ces points nécessitent un test documenté.</p><p>Nous distinguons donc les faits de l’interprétation : présence d’une fonction = fait vérifiable ; pertinence pour un profil = conclusion éditoriale.</p>
 <h2 id="checklist">Checklist avant achat</h2><ol><li>Confirmez la génération exacte.</li><li>Vérifiez votre PDF ou format principal.</li><li>Contrôlez cloud et export.</li><li>Ajoutez stylet, protection et abonnement éventuel au coût total.</li><li>Comparez une alternative qui corrige la principale limite.</li></ol><p>Le guide sur {internal_link('/guides/prix-bloc-notes-numerique/','le prix réel')} aide à comparer des configurations équivalentes.</p>
-{sources_section([brand], 5, f"Informations vérifiées le {VERIFIED_AT}. Prix et disponibilité restent à recontrôler au moment de l’achat.")}
+<h2 id="sources">Sources officielles consultées</h2><p>Informations vérifiées le {VERIFIED_AT}. Prix et disponibilité restent à recontrôler au moment de l’achat.</p>{sources_html([brand],5)}
 '''
 
 
@@ -33,7 +33,7 @@ def review_page(product, brand, verdict, strengths, limitations, evidence_points
 <h2 id="incertitudes">Ce que cette analyse ne prétend pas mesurer</h2><p>Nous ne disposons pas ici d’un protocole physique standardisé pour comparer la latence réelle, le bruit du stylet, la fatigue sur plusieurs heures ou la durée de batterie. Une valeur constructeur est traitée comme une donnée déclarée, pas comme une mesure indépendante.</p><p>Cette séparation évite de transformer une synthèse de sources en faux test, tout en conservant une vraie valeur décisionnelle.</p>
 <h2 id="verification">Comment vérifier ce verdict pour votre usage</h2><p>Choisissez votre tâche la plus importante et cherchez le premier point de friction possible. S’il reste incertain, il doit peser davantage que les avantages secondaires. Croisez ensuite avec un comparatif multi-marques pour vérifier que l’alternative corrige réellement le problème.</p>
 <h2 id="verdict">Verdict éditorial</h2><p>{verdict} Ce verdict est conditionnel à l’usage et au niveau de preuve disponible ; il ne doit pas être lu comme une note issue d’un laboratoire.</p>
-{sources_section([brand], 5)}
+<h2 id="sources">Sources officielles consultées</h2>{sources_html([brand],5)}
 '''
 
 
@@ -47,7 +47,7 @@ def service_page():
 <h2 id="essentiel">Quelles fonctions doivent rester indépendantes du service ?</h2><p>Pour un outil durable, l’écriture locale, l’accès aux notes et une méthode d’export exploitable doivent peser plus lourd que le confort cloud. Simulez une semaine sans abonnement : si votre travail devient impossible, Connect fait partie du coût structurel ; sinon, il finance surtout du confort.</p>
 <h2 id="pour-qui">Pour qui Connect est cohérent ?</h2><p><strong>À privilégier si :</strong></p><ul><li>vous utilisez activement le cloud et les apps reMarkable ;</li><li>la recherche manuscrite vous fait gagner du temps ;</li><li>les intégrations font partie du travail quotidien.</li></ul><p><strong>À éviter ou différer si :</strong></p><ul><li>vous travaillez surtout hors ligne ;</li><li>des exports PDF suffisent ;</li><li>vous refusez tout coût récurrent.</li></ul>
 <h2 id="alternatives">Quelles alternatives si vous refusez l’abonnement ?</h2><p>Le {internal_link('/comparatifs/bloc-notes-numerique-sans-abonnement/','comparatif sans abonnement')} est la suite logique. Comparez la fonction équivalente — cloud, OCR, recherche ou export — et pas seulement la présence d’un paiement.</p>
-{sources_section(['remarkable'], 5)}
+<h2 id="sources">Sources officielles consultées</h2>{sources_html(['remarkable'],5)}
 '''
 
 
@@ -71,7 +71,7 @@ def accessories_page(brand):
 <h2 id="panier">Comment construire votre panier</h2><ol><li>Choisissez le modèle exact.</li><li>Ajoutez le stylet nécessaire.</li><li>Ajoutez une protection si le transport le justifie.</li><li>Ajoutez clavier ou stockage seulement si une tâche l’exige.</li><li>Comparez le total.</li></ol><p>Pages utiles : {', '.join(internal_link(url,label) for label,url in links)}.</p>
 <h2 id="duree">Rapportez le coût à la durée et à la fonction</h2><p>Un accessoire cher peut être rationnel s’il protège chaque jour un appareil coûteux ou remplace réellement une tâche. Pour les consommables, regardez aussi disponibilité et fréquence de remplacement sur plusieurs années.</p>
 <h2 id="limites">À éviter</h2><ul><li>acheter un bundle sans comprendre chaque élément ;</li><li>mélanger anciennes et nouvelles générations ;</li><li>présenter un accessoire officiel comme indispensable sans preuve ;</li><li>comparer un appareil nu à un bundle concurrent.</li></ul>
-{sources_section([brand], 5)}
+<h2 id="sources">Sources officielles consultées</h2>{sources_html([brand],5)}
 '''
 
 
@@ -93,7 +93,7 @@ def alternatives_page(brand):
 <h2 id="migration">Le coût caché d’un changement d’écosystème</h2><p>Changer de marque peut exiger l’export d’anciens carnets, la conversion de fichiers ou la reconstruction de dossiers. Avant de migrer, exportez un échantillon représentatif et vérifiez qu’il reste réellement exploitable dans le nouveau système.</p><p>Une alternative plus ouverte sur le papier peut être moins intéressante si elle vous fait perdre la structure de plusieurs années de notes.</p>
 <h2 id="shortlist">Construire une shortlist utile</h2><p>Ne gardez que deux ou trois options qui corrigent votre problème principal. Si vous quittez reMarkable pour Android, BOOX mérite plus d’attention que Kobo ; si vous quittez BOOX pour simplifier, reMarkable ou Supernote deviennent plus logiques.</p>
 <h2 id="comparatifs">Comparatifs à consulter</h2><p>{internal_link('/comparatifs/meilleur-bloc-notes-numerique/','général')}, {internal_link('/comparatifs/bloc-notes-numerique-professionnel/','professionnels')}, {internal_link('/comparatifs/bloc-notes-numerique-etudiant/','étudiants')} et {internal_link('/comparatifs/bloc-notes-numerique-sans-abonnement/','sans abonnement')}.</p>
-{sources_section(['remarkable','boox','supernote','kindle','kobo'], 8)}
+<h2 id="sources">Sources officielles consultées</h2>{sources_html(['remarkable','boox','supernote','kindle','kobo'],8)}
 '''
 
 
@@ -110,5 +110,5 @@ def directory_page():
 <h2 id="choisir">Comment choisir une marque avant le modèle ?</h2><ol><li>Listez trois tâches.</li><li>Notez clouds et applications indispensables.</li><li>Vérifiez un PDF et un carnet.</li><li>Éliminez les écosystèmes bloquants.</li><li>Comparez les modèles restants.</li></ol><p>Suivez le {internal_link('/guides/choisir-bloc-notes-numerique/','guide de choix')} ou le {internal_link('/comparatifs/meilleur-bloc-notes-numerique/','comparatif')}.</p>
 <h2 id="workflow">Comparer les marques sur un workflow complet</h2><p>Prenez un document réel : où arrive-t-il, peut-on l’annoter, le retrouver et le ressortir dans un format utilisable ailleurs ? Cette chaîne révèle davantage que le nombre de fonctions affichées.</p><p>Les différences sont fortes sur le cloud : Kindle travaille par copies avec Drive/OneDrive sur les modèles récents ; Kobo dépend du type de contenu et des DRM ; BOOX mise sur Android et plusieurs clouds ; reMarkable concentre le workflow dans son propre environnement ; Supernote mise davantage sur la structure des notes.</p>
 <h2 id="limites">Pourquoi ne pas choisir uniquement sur la marque ?</h2><p>Une même marque propose plusieurs générations, formats et technologies. La marque donne le cadre ; le modèle doit encore correspondre à vos documents, votre mobilité et votre budget.</p>
-{sources_section(['remarkable','boox','kindle','kobo','supernote'], 10)}
+<h2 id="sources">Sources officielles consultées</h2>{sources_html(['remarkable','boox','kindle','kobo','supernote'],10)}
 '''
