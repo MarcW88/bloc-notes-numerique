@@ -14,7 +14,6 @@ on:
       - 'guide_content_quality_workflows.py'
       - 'guide_content_bespoke.py'
       - 'validate_guide_quality.py'
-      - 'generate_guide_metadata.py'
       - '.github/workflows/regenerate-guides.yml'
       - '.content/briefs/**'
   workflow_dispatch:
@@ -108,9 +107,6 @@ jobs:
       - name: Validate machine-detectable guide blockers
         run: python validate_guide_quality.py
 
-      - name: Generate evidence-based QA reports
-        run: python generate_guide_metadata.py
-
       - name: Verify all guide pages remain noindex
         run: |
           python - <<'PY'
@@ -129,7 +125,7 @@ jobs:
         run: |
           git config user.name "Marc Williame"
           git config user.email "146358493+MarcW88@users.noreply.github.com"
-          git add _generate.py guides/ .content/reviews/
+          git add _generate.py guides/
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else
