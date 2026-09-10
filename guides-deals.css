@@ -262,23 +262,23 @@
     overflow: visible;
   }
 
-  .guide-page .content-layout > .sidebar-toc,
-  .deal-page .content-layout > .sidebar-toc {
+  .guide-page .content-main > .sidebar-toc,
+  .deal-page .content-main > .sidebar-toc {
     position: static;
-    margin-bottom: 2px;
+    margin: 4px 0 28px;
     padding: 16px 18px;
   }
 
-  .guide-page .content-layout > .sidebar-toc a,
-  .deal-page .content-layout > .sidebar-toc a {
+  .guide-page .content-main > .sidebar-toc a,
+  .deal-page .content-main > .sidebar-toc a {
     display: inline-block;
     width: calc(50% - 6px);
     vertical-align: top;
     margin-right: 6px;
   }
 
-  .guide-page .content-layout > .sidebar-toc a.toc-level-3,
-  .deal-page .content-layout > .sidebar-toc a.toc-level-3 {
+  .guide-page .content-main > .sidebar-toc a.toc-level-3,
+  .deal-page .content-main > .sidebar-toc a.toc-level-3 {
     display: none;
   }
 
@@ -309,8 +309,8 @@
     padding: 14px 15px 14px 17px;
   }
 
-  .guide-page .content-layout > .sidebar-toc a,
-  .deal-page .content-layout > .sidebar-toc a {
+  .guide-page .content-main > .sidebar-toc a,
+  .deal-page .content-main > .sidebar-toc a {
     display: block;
     width: 100%;
     margin-right: 0;
