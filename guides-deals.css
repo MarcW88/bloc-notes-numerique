@@ -1,0 +1,330 @@
+/* ============================================================
+   GUIDES + BONS PLANS — Editorial refinements
+   Loaded by site.js only for /guides/ and /bons-plans/.
+   ============================================================ */
+
+/* Shared editorial rhythm */
+.guide-page .page-hero,
+.deal-page .page-hero {
+  padding: 48px 0 40px;
+}
+
+.guide-page .page-hero h1,
+.deal-page .page-hero h1 {
+  max-width: 900px;
+  letter-spacing: -0.015em;
+}
+
+.guide-page .page-hero .lead,
+.deal-page .page-hero .lead {
+  max-width: 780px;
+}
+
+.guide-page .page-hero .content-type,
+.deal-page .page-hero .content-type {
+  margin-bottom: 12px;
+  padding: 0 0 0 9px;
+  border-left: 2px solid var(--color-primary);
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+}
+
+.deal-page .page-hero .content-type {
+  border-left-color: var(--color-accent);
+}
+
+.guide-page .content-main h2,
+.deal-page .content-main h2 {
+  margin: 36px 0 14px;
+}
+
+.guide-page .content-main h3,
+.deal-page .content-main h3 {
+  margin: 26px 0 10px;
+}
+
+/* Editorial links must read as links, not as body copy. */
+.guide-page .content-main a:not(.btn),
+.deal-page .content-main a:not(.btn) {
+  color: var(--color-primary);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--color-primary) 42%, transparent);
+  text-underline-offset: 3px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.guide-page .content-main a:not(.btn):hover,
+.deal-page .content-main a:not(.btn):hover {
+  color: #3f5145;
+  text-decoration-color: currentColor;
+}
+
+/* Guides: the direct answer is the editorial entry point. */
+.guide-page .content-main .article-answer {
+  margin: 0 0 30px;
+  padding: 17px 20px 17px 22px;
+  background: #FDFCF7;
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  line-height: 1.72;
+}
+
+/* Tables: consistent reading and horizontal safety. */
+.guide-page .content-main .table-wrapper,
+.deal-page .content-main .table-wrapper {
+  margin: 22px 0 28px;
+  border-radius: var(--radius-sm);
+}
+
+.deal-page .content-main .comp-table td:nth-child(2),
+.deal-page .content-main .comp-table th:nth-child(2) {
+  font-variant-numeric: tabular-nums;
+}
+
+.deal-page .deal-status-cell {
+  font-weight: 600;
+}
+
+.deal-page .deal-status-cell::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  vertical-align: 1px;
+}
+
+.deal-page .deal-status-cell.status-active::before { background: var(--color-primary); }
+.deal-page .deal-status-cell.status-watch::before { background: var(--color-accent); }
+.deal-page .deal-status-cell.status-soldout::before { background: var(--color-text-muted); }
+
+/* Freshness is a trust signal on deal pages, not decorative metadata. */
+.deal-page .page-meta-item {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Sidebar / TOC */
+.guide-page .content-sidebar .sidebar-box,
+.deal-page .content-sidebar .sidebar-box {
+  max-height: calc(100vh - var(--header-h) - 32px);
+  overflow-y: auto;
+}
+
+.guide-page .sidebar-toc a.is-active,
+.deal-page .sidebar-toc a.is-active {
+  color: var(--color-primary);
+  border-left-color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ============================================================
+   GUIDES HUB — grouped editorial directory, not a card wall
+   ============================================================ */
+.guide-hub-page .section {
+  padding-top: 56px;
+}
+
+.guide-hub-page .hub-grid.editorial-hub-groups {
+  display: block;
+}
+
+.editorial-hub-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(0, 1fr);
+  gap: 40px;
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.editorial-hub-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.editorial-hub-heading h2 {
+  font-size: 1.45rem;
+  margin-bottom: 8px;
+}
+
+.editorial-hub-heading p {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.editorial-hub-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 28px;
+}
+
+.guide-hub-page .editorial-hub-links .hub-link {
+  border: 0;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 13px 2px;
+  font-size: 0.9rem;
+}
+
+.guide-hub-page .editorial-hub-links .hub-link:hover {
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+.guide-hub-page .hub-link--featured {
+  grid-column: 1 / -1;
+  margin-bottom: 8px;
+  padding: 18px 20px !important;
+  background: var(--color-white) !important;
+  border: 1px solid var(--color-border) !important;
+  border-left: 3px solid var(--color-primary) !important;
+  border-radius: var(--radius-sm) !important;
+}
+
+.hub-link-kicker {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ============================================================
+   DEAL HUB — state and role first, without ecommerce theatrics
+   ============================================================ */
+.deal-hub-page .hub-grid {
+  gap: 12px;
+}
+
+.deal-hub-page .hub-link {
+  min-height: 92px;
+  align-items: flex-start;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+}
+
+.deal-hub-page .hub-link-main {
+  min-width: 0;
+}
+
+.deal-hub-page .hub-link-title {
+  display: block;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.deal-hub-page .hub-link-meta {
+  display: block;
+  margin-top: 5px;
+  max-width: 34ch;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--color-text-muted);
+}
+
+.deal-hub-page .hub-link-state {
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 9px;
+  border-left: 2px solid var(--color-border);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.deal-hub-page .hub-link-state.state-verified { border-left-color: var(--color-primary); }
+.deal-hub-page .hub-link-state.state-watch,
+.deal-hub-page .hub-link-state.state-future { border-left-color: var(--color-accent); }
+
+.deal-hub-page .hub-link-arrow {
+  margin-top: 3px;
+  flex: 0 0 auto;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .guide-page .content-sidebar .sidebar-box,
+  .deal-page .content-sidebar .sidebar-box {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .guide-page .content-layout > .sidebar-toc,
+  .deal-page .content-layout > .sidebar-toc {
+    position: static;
+    margin-bottom: 2px;
+    padding: 16px 18px;
+  }
+
+  .guide-page .content-layout > .sidebar-toc a,
+  .deal-page .content-layout > .sidebar-toc a {
+    display: inline-block;
+    width: calc(50% - 6px);
+    vertical-align: top;
+    margin-right: 6px;
+  }
+
+  .guide-page .content-layout > .sidebar-toc a.toc-level-3,
+  .deal-page .content-layout > .sidebar-toc a.toc-level-3 {
+    display: none;
+  }
+
+  .editorial-hub-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guide-page .page-hero,
+  .deal-page .page-hero {
+    padding: 38px 0 30px;
+  }
+
+  .guide-page .content-layout,
+  .deal-page .content-layout {
+    padding: 28px 0 48px;
+  }
+
+  .guide-page .content-main h2,
+  .deal-page .content-main h2 {
+    margin-top: 32px;
+  }
+
+  .guide-page .content-main .article-answer {
+    margin-bottom: 24px;
+    padding: 14px 15px 14px 17px;
+  }
+
+  .guide-page .content-layout > .sidebar-toc a,
+  .deal-page .content-layout > .sidebar-toc a {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .editorial-hub-links {
+    grid-template-columns: 1fr;
+  }
+
+  .guide-hub-page .hub-link--featured {
+    grid-column: auto;
+  }
+
+  .deal-hub-page .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}
