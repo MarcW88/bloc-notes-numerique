@@ -63,14 +63,14 @@ def render_card(product_id: str, product: dict, placement: str) -> str:
         )
 
     return (
-        f'<article class="product-card" data-product-id="{esc(product_id)}">'
+        f'<div class="product-card" data-product-id="{esc(product_id)}">'
         f'{image_html}'
         '<div class="product-card__body">'
         f'<h3 class="product-card__title">{esc(product["name"])}</h3>'
         f'<p class="product-card__best"><strong>À privilégier pour :</strong> {esc(product["best_for"])}</p>'
         f'<dl class="product-card__specs">{specs}</dl>'
         f'<div class="product-card__actions">{commerce_html}</div>'
-        "</div></article>"
+        "</div></div>"
     )
 
 
