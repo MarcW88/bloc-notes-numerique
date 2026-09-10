@@ -16,12 +16,6 @@ on:
       - 'validate_guide_quality.py'
       - '.github/workflows/regenerate-guides.yml'
       - '.content/briefs/**'
-      - '.content/products/**'
-      - 'product_cards.py'
-      - 'apply_product_cards.py'
-      - 'validate_product_cards.py'
-      - 'assets/product-cards.css'
-      - 'assets/product-affiliate.js'
   workflow_dispatch:
 
 permissions:
@@ -101,7 +95,7 @@ jobs:
               page.write_text(text, encoding='utf-8')
           PY
 
-      - name: Apply approved Guide product module
+      - name: Apply approved Guide product modules
         run: python apply_product_cards.py guides
 
       - name: Validate internal links in guide bodies
@@ -135,7 +129,7 @@ jobs:
       - name: Apply approved Guide indexation
         run: python apply_section_indexation.py guides
 
-      - name: Validate Guide product module
+      - name: Validate Guide product modules
         run: python validate_product_cards.py guides
 
       - name: Validate machine-detectable guide blockers
