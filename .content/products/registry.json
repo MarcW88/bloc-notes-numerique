@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "products": {
+    "remarkable-paper-pure": {
+      "name": "reMarkable Paper Pure",
+      "internal_url": "/marques/remarkable/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "10,3 pouces, monochrome"},
+        {"label": "Éclairage", "value": "Sans éclairage frontal"},
+        {"label": "Positionnement", "value": "Carnet numérique focalisé"}
+      ],
+      "best_for": "Écriture, réunions et travail sans distractions"
+    },
+    "boox-note-air5-c": {
+      "name": "BOOX Note Air5 C",
+      "internal_url": "/marques/boox/boox-note-air/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "10,3 pouces, couleur"},
+        {"label": "Système", "value": "Android 15 avec Google Play"},
+        {"label": "Éclairage", "value": "Éclairage frontal"}
+      ],
+      "best_for": "Applications, plusieurs clouds et documents couleur"
+    },
+    "kindle-scribe-3": {
+      "name": "Kindle Scribe (3e génération)",
+      "internal_url": "/marques/kindle-scribe/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "Grand écran E Ink monochrome"},
+        {"label": "Éclairage", "value": "Éclairage frontal"},
+        {"label": "Écosystème", "value": "Kindle + carnets et documents"}
+      ],
+      "best_for": "Lire des ebooks et prendre des notes sur le même appareil"
+    },
+    "boox-go-10-3-lumi": {
+      "name": "BOOX Go 10.3 Gen II Lumi",
+      "internal_url": "/marques/boox/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
+        {"label": "Système", "value": "Android 15 avec Google Play"},
+        {"label": "Éclairage", "value": "Éclairage frontal"}
+      ],
+      "best_for": "Workflow professionnel avec applications et clouds"
+    },
+    "supernote-manta": {
+      "name": "Supernote Manta",
+      "internal_url": "/marques/supernote/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Affichage", "value": "E Ink monochrome"},
+        {"label": "Éclairage", "value": "Sans éclairage frontal"},
+        {"label": "Organisation", "value": "Titres, liens, mots-clés et recherche"}
+      ],
+      "best_for": "Structurer et retrouver des notes de projet sur la durée"
+    }
+  }
+}
