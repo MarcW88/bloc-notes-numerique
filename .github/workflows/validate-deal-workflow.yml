@@ -8,6 +8,8 @@ on:
       - 'deal_content.py'
       - 'apply_deal_content.py'
       - 'validate_deal_workflow.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'deal-workflow.config.yaml'
       - 'bons-plans/**'
       - '_generate.py'
@@ -20,6 +22,8 @@ on:
       - 'deal_content.py'
       - 'apply_deal_content.py'
       - 'validate_deal_workflow.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'deal-workflow.config.yaml'
       - 'bons-plans/**'
       - '_generate.py'
@@ -33,10 +37,12 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile workflow scripts
-        run: python -m py_compile deal_content.py apply_deal_content.py validate_deal_workflow.py
+        run: python -m py_compile deal_content.py apply_deal_content.py validate_deal_workflow.py publication_indexation.py apply_section_indexation.py
+      - name: Rebuild expected deal state
+        run: |
+          python apply_deal_content.py
+          python apply_section_indexation.py deals
       - name: Validate records and generated pages
         run: python validate_deal_workflow.py
       - name: Check generator idempotence
-        run: |
-          python apply_deal_content.py
-          git diff --exit-code -- _generate.py AGENTS.md bons-plans
+        run: git diff --exit-code -- _generate.py AGENTS.md bons-plans sitemap.xml robots.txt
