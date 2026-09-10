@@ -32,10 +32,12 @@ EXPECTED_SCOPE = {
     "usages": {
         "prise-de-notes-professionnelle",
         "prise-de-notes-etudiant",
-        "annotation-pdf",
         "lecture-et-prise-de-notes",
     },
-    "guides": {"choisir-bloc-notes-numerique"},
+    "guides": {
+        "choisir-bloc-notes-numerique",
+        "annoter-pdf-tablette-e-ink",
+    },
 }
 PROHIBITED_MODULE_ROOTS = {"marques", "bons-plans"}
 ALLOWED_IMAGE_SOURCES = {"UNSET", "OWN", "MANUFACTURER_AUTHORIZED", "AMAZON_CREATORS_API"}
