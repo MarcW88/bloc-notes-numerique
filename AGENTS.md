@@ -124,17 +124,34 @@ Les skills transversaux appelés par ces workflows (`content-audit`, `search-int
 
 ## Production éditoriale — Bons plans
 
-Pour toute création, réécriture ou actualisation sous `/bons-plans/` :
+Pour toute URL sous `/bons-plans/`, il n’existe que deux workflows Deal à choisir :
 
-1. Utiliser `.agents/skills/deal-content-workflow/SKILL.md`.
-2. Créer ou mettre à jour `.content/deals/<slug>.json` avant de modifier le texte : prix, disponibilité, statut et date de contrôle doivent être documentés.
-3. Distinguer strictement `ACTIVE_VERIFIED`, `ACTIVE_STOCK_SENSITIVE`, `PRICE_WATCH`, `EXPIRED`, `SOLD_OUT`, `UNVERIFIED` et `NOT_STARTED`.
-4. Un prix barré marchand ne suffit jamais à prouver une remise. Documenter le prix de référence et sa base avant d’afficher une économie ou un pourcentage.
-5. Une offre qui dépasse son TTL ne peut plus être présentée comme active sans nouvelle vérification.
-6. Les pages de bons plans n’effectuent pas de ranking produit selon la commission. Le choix produit reste dans `/comparatifs/` ; la page deal juge l’offre, pas la valeur absolue du produit.
-7. Les liens affiliés doivent rester transparents et utiliser `rel="sponsored"` lorsque nécessaire.
-8. Utiliser `content-refresh`, `fact-check`, `affiliate-value`, `internal-linking-audit`, `natural-writing`, `humanizer`, `anti-ai-slop` et `editorial-qa` conformément au workflow.
-9. Conserver `noindex,follow` jusqu’à validation humaine explicite.
+1. **Analyser / auditer** : `.agents/skills/deal-analysis-workflow/SKILL.md`.
+2. **Créer / corriger / réécrire** : `.agents/skills/deal-content-workflow/SKILL.md`.
+
+Ces deux fichiers sont des **orchestrateurs**. La méthodologie doit venir majoritairement des skills spécialisés déjà présents dans le dépôt. La couche custom doit rester limitée à l’intégrité de l’offre, la preuve de prix, la fraîcheur, les frontières éditoriales et la cohérence du cluster.
+
+### Règles obligatoires
+
+1. Une page existante passe d’abord par `deal-analysis-workflow` en mode `AUDIT` avant toute correction substantielle.
+2. `deal-analysis-workflow` possède les trois modes `AUDIT`, `CLUSTER_AUDIT` et `PUBLISH_REVIEW`.
+3. L’audit décide `KEEP`, `LIGHT_UPDATE`, `DEEP_REWRITE`, `MERGE` ou `NOINDEX`.
+4. Un `CONTENT_HANDOFF` vers `deal-content-workflow` n’est généré que pour `LIGHT_UPDATE` ou `DEEP_REWRITE`. `KEEP` ne déclenche aucune rédaction ; `MERGE` et `NOINDEX` nécessitent une décision humaine avant action structurelle.
+5. Créer ou mettre à jour `.content/deals/<slug>.json` avant de modifier le texte : prix, disponibilité, statut, source et date de contrôle doivent être documentés.
+6. Distinguer strictement `ACTIVE_VERIFIED`, `ACTIVE_STOCK_SENSITIVE`, `PRICE_WATCH`, `EXPIRED`, `SOLD_OUT`, `UNVERIFIED` et `NOT_STARTED`. Le HTML ne peut jamais être plus affirmatif que le registre.
+7. Un prix barré marchand ne suffit jamais à prouver une remise. Documenter le prix de référence et sa base avant d’afficher une économie ou un pourcentage.
+8. Une offre qui dépasse son TTL ne peut plus être présentée comme active sans nouvelle vérification.
+9. Les types `LIVE_DEALS`, `BRAND_DEALS`, `EVENT_DEALS` et `SECOND_HAND` sont des grilles de risque, jamais des templates. Aucun type n’impose un ordre de sections, un tableau, une FAQ ou un nombre minimum d’offres.
+10. Les pages Bons plans jugent l’offre, pas le classement absolu des produits. Si la question devient « quel produit choisir ? », passer au `comparison-content-workflow`.
+11. Aucun produit ou deal ne peut être favorisé selon la commission. Les liens affiliés restent transparents et utilisent `rel="sponsored"` lorsque nécessaire.
+12. Ne jamais inventer prix, disponibilité, réduction, durée, stock, compte à rebours ou notion de « meilleur prix ». Une donnée absente reste inconnue ou change de statut.
+13. Pour une page existante, `deal-content-workflow` doit respecter le niveau de changement décidé par l’audit et préserver la valeur listée dans le `CONTENT_HANDOFF`.
+14. Après rédaction/correction, exécuter la chaîne définie dans `deal-content-workflow`, puis `deal-analysis-workflow` en mode `PUBLISH_REVIEW`.
+15. `validate_deal_workflow.py` contrôle uniquement les blockers détectables automatiquement. Un PASS machine ne signifie jamais que la page est publiable.
+16. Le `PUBLISH_REVIEW` doit se terminer par `PASS — READY_FOR_HUMAN_VALIDATION` avant validation humaine.
+17. En cas de FAIL éditorial, générer un nouveau `CONTENT_HANDOFF` limité aux gates en échec plutôt que de relancer automatiquement une réécriture complète.
+18. Conserver `noindex,follow` jusqu’à validation humaine explicite **et** instruction explicite de rendre la page indexable.
+19. Aucun quota de mots, H2/H3, offres, tableaux, liens ou sources ne peut servir de proxy de qualité.
 
 ## Production éditoriale — Pages de confiance du site
 
