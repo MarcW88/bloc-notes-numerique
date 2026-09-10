@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bloc-notes-numeriques.fr/sitemap.xml
