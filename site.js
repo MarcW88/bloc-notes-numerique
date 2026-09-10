@@ -252,7 +252,6 @@ if (isDealPage && !isDealHub) {
 const tableOfContents = document.querySelector('.sidebar-toc');
 const article = document.querySelector('.content-main');
 const contentSidebar = document.querySelector('.content-sidebar');
-const contentLayout = document.querySelector('.content-layout');
 
 if (tableOfContents && article) {
   const headings = article.querySelectorAll('h2, h3');
@@ -310,10 +309,16 @@ if (tableOfContents && article) {
   }
 }
 
-if ((isGuidePage || isDealPage) && !isGuideHub && !isDealHub && tableOfContents && article && contentSidebar && contentLayout) {
+if ((isGuidePage || isDealPage) && !isGuideHub && !isDealHub && tableOfContents && article && contentSidebar) {
   const moveEditorialToc = () => {
     if (window.matchMedia('(max-width: 1024px)').matches) {
-      if (tableOfContents.parentElement !== contentLayout) contentLayout.insertBefore(tableOfContents, article);
+      if (tableOfContents.parentElement !== article) {
+        const intro = isGuidePage
+          ? article.querySelector(':scope > .article-answer')
+          : article.querySelector(':scope > p:first-of-type');
+        if (intro) intro.insertAdjacentElement('afterend', tableOfContents);
+        else article.prepend(tableOfContents);
+      }
     } else if (tableOfContents.parentElement !== contentSidebar) {
       contentSidebar.insertBefore(tableOfContents, contentSidebar.firstChild);
     }
