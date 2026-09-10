@@ -1,7 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "pages": {
     "meilleur-bloc-notes-numerique": {
+      "layout": "recommendation_list",
       "insert_before_heading_id": "methode",
       "section_id": "voir-prix",
       "section_title": "Où vérifier les modèles que nous retenons",
@@ -9,6 +10,7 @@
       "products": ["remarkable-paper-pure", "boox-note-air5-c", "kindle-scribe-3"]
     },
     "bloc-notes-numerique-professionnel": {
+      "layout": "recommendation_list",
       "insert_before_heading_id": "sources",
       "section_id": "voir-prix",
       "section_title": "Trois modèles à vérifier avant achat",
@@ -16,6 +18,7 @@
       "products": ["boox-go-10-3-lumi", "remarkable-paper-pure", "supernote-manta"]
     },
     "kindle-scribe-vs-remarkable": {
+      "layout": "comparison_cards",
       "insert_before_heading_id": "origine",
       "section_id": "voir-prix",
       "section_title": "Vérifier les deux modèles",
