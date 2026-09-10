@@ -15,6 +15,12 @@ on:
       - "apply_comparison_indexation.py"
       - "generate_comparison_metadata.py"
       - "validate_comparisons.py"
+      - ".content/products/**"
+      - "product_cards.py"
+      - "apply_product_cards.py"
+      - "validate_product_cards.py"
+      - "assets/product-cards.css"
+      - "assets/product-affiliate.js"
       - ".agents/skills/comparison-content-workflow/**"
       - ".agents/skills/comparison-analysis-workflow/**"
       - ".agents/skills/seo-keyword/**"
@@ -48,10 +54,14 @@ jobs:
           python-version: "3.12"
       - name: Apply comparison content
         run: python apply_comparison_content.py
+      - name: Apply Phase-1 product-card pilot
+        run: python apply_product_cards.py
       - name: Generate comparison methodology files
         run: python generate_comparison_metadata.py
       - name: Apply approved comparison indexation
         run: python apply_comparison_indexation.py
+      - name: Validate product-card pilot
+        run: python validate_product_cards.py
       - name: Validate comparison cluster
         run: python validate_comparisons.py
       - name: Commit generated comparison pages
