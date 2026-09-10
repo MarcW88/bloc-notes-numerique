@@ -123,28 +123,17 @@ jobs:
           print('PASS: contextual internal targets exist')
           PY
 
+      - name: Apply approved Guide indexation
+        run: python apply_section_indexation.py guides
+
       - name: Validate machine-detectable guide blockers
         run: python validate_guide_quality.py
-
-      - name: Verify all guide pages remain noindex
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          failed=[]
-          for page in Path('guides').glob('*/index.html'):
-              html=page.read_text(encoding='utf-8')
-              if 'name="robots" content="noindex,follow"' not in html:
-                  failed.append(str(page))
-          if failed:
-              raise SystemExit('Missing noindex: ' + ', '.join(failed))
-          print('PASS: all guide pages remain noindex,follow')
-          PY
 
       - name: Commit regenerated guide batch
         run: |
           git config user.name "Marc Williame"
           git config user.email "146358493+MarcW88@users.noreply.github.com"
-          git add _generate.py guides/
+          git add _generate.py guides/ sitemap.xml robots.txt
           if git diff --cached --quiet; then
             echo "No generated changes to commit"
           else

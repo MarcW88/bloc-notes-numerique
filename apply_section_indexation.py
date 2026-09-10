@@ -3,8 +3,7 @@
 
 Approved routes become ``index,follow``. Any other route inside the same scope
 remains or is reset to ``noindex,follow``. The script also rebuilds a sitemap
-from all currently indexable, self-canonical pages in the five main editorial
-sections and writes a minimal robots.txt pointing to it.
+from the explicit publication registry and writes a minimal robots.txt.
 """
 
 from __future__ import annotations
@@ -12,28 +11,27 @@ from __future__ import annotations
 import argparse
 import re
 from pathlib import Path
-from urllib.parse import urlsplit
 from xml.sax.saxutils import escape
 
-from publication_indexation import INDEXABLE_ROUTES_BY_SCOPE, SCOPE_ROOTS
+from publication_indexation import (
+    INDEXABLE_ROUTES_BY_SCOPE,
+    SCOPE_ROOTS,
+    SITEMAP_APPROVED_ROUTES,
+)
 
 ROOT = Path(__file__).resolve().parent
 SITE_ORIGIN = "https://bloc-notes-numeriques.fr"
-ROBOTS_RE = re.compile(
-    r'<meta\s+name="robots"\s+content="[^"]*"\s*/?>', re.I
-)
+ROBOTS_RE = re.compile(r'<meta\s+name="robots"\s+content="[^"]*"\s*/?>', re.I)
 CANONICAL_RE = re.compile(
     r'<link\b[^>]*rel="canonical"[^>]*href="([^"]+)"[^>]*>', re.I
 )
-SITEMAP_ROOTS = ("comparatifs", "marques", "usages", "guides", "bons-plans")
 
 
 def route_for_page(page: Path) -> str:
     relative = page.relative_to(ROOT).as_posix()
     if not relative.endswith("/index.html"):
         raise SystemExit(f"Unsupported page path: {relative}")
-    route = "/" + relative[: -len("index.html")]
-    return route
+    return "/" + relative[: -len("index.html")]
 
 
 def page_for_route(route: str) -> Path:
@@ -55,27 +53,33 @@ def set_robots(page: Path, directive: str) -> None:
         page.write_text(updated, encoding="utf-8")
 
 
+def require_self_canonical(route: str) -> Path:
+    page = page_for_route(route)
+    if not page.exists():
+        raise SystemExit(f"Missing approved route: {route}")
+    html = page.read_text(encoding="utf-8")
+    expected = f"{SITE_ORIGIN}{route}"
+    canonical = canonical_for_html(html)
+    if canonical != expected:
+        raise SystemExit(
+            f"Refusing publication for non-self-canonical route {route}: "
+            f"canonical={canonical!r}, expected={expected!r}"
+        )
+    return page
+
+
 def apply_scope(scope: str) -> None:
     approved = INDEXABLE_ROUTES_BY_SCOPE[scope]
     root = ROOT / SCOPE_ROOTS[scope]
 
-    missing = [route for route in sorted(approved) if not page_for_route(route).exists()]
-    if missing:
-        raise SystemExit(f"Missing approved {scope} routes: {', '.join(missing)}")
+    for route in sorted(approved):
+        require_self_canonical(route)
 
     index_count = 0
     noindex_count = 0
     for page in sorted(root.rglob("index.html")):
         route = route_for_page(page)
-        html = page.read_text(encoding="utf-8")
         if route in approved:
-            expected_canonical = f"{SITE_ORIGIN}{route}"
-            canonical = canonical_for_html(html)
-            if canonical != expected_canonical:
-                raise SystemExit(
-                    f"Refusing to index non-self-canonical route {route}: "
-                    f"canonical={canonical!r}, expected={expected_canonical!r}"
-                )
             set_robots(page, "index,follow")
             index_count += 1
         else:
@@ -89,28 +93,13 @@ def apply_scope(scope: str) -> None:
 
 
 def rebuild_sitemap() -> None:
-    urls: set[str] = set()
-    for root_name in SITEMAP_ROOTS:
-        root = ROOT / root_name
-        if not root.exists():
-            continue
-        for page in root.rglob("index.html"):
-            html = page.read_text(encoding="utf-8")
-            if '<meta name="robots" content="index,follow">' not in html:
-                continue
-            canonical = canonical_for_html(html)
-            if not canonical:
-                continue
-            route = route_for_page(page)
-            parsed = urlsplit(canonical)
-            if parsed.scheme != "https" or parsed.netloc != "bloc-notes-numeriques.fr":
-                continue
-            if parsed.path != route:
-                continue
-            urls.add(canonical)
+    urls = []
+    for route in sorted(SITEMAP_APPROVED_ROUTES):
+        require_self_canonical(route)
+        urls.append(f"{SITE_ORIGIN}{route}")
 
     body = "\n".join(
-        f"  <url><loc>{escape(url)}</loc></url>" for url in sorted(urls)
+        f"  <url><loc>{escape(url)}</loc></url>" for url in urls
     )
     sitemap = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -124,7 +113,7 @@ def rebuild_sitemap() -> None:
         f"Sitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
-    print(f"PASS sitemap: {len(urls)} indexable self-canonical URL(s)")
+    print(f"PASS sitemap: {len(urls)} approved self-canonical URL(s)")
 
 
 def main() -> None:

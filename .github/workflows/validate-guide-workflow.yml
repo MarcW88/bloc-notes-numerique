@@ -24,6 +24,8 @@ on:
       - '.agents/skills/seo-technical/**'
       - '.agents/skills/editorial-qa/**'
       - 'validate_guide_quality.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'guides/**'
   pull_request:
     paths:
@@ -48,6 +50,8 @@ on:
       - '.agents/skills/seo-technical/**'
       - '.agents/skills/editorial-qa/**'
       - 'validate_guide_quality.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'guides/**'
   workflow_dispatch:
 
@@ -62,6 +66,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Apply approved Guide indexation
+        run: python apply_section_indexation.py guides
 
       - name: Validate Guide machine blockers
         run: python validate_guide_quality.py

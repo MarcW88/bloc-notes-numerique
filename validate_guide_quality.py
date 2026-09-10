@@ -10,6 +10,8 @@ import html as html_lib
 import re
 from urllib.parse import urlsplit
 
+from publication_indexation import INDEXABLE_GUIDE_ROUTES
+
 ROOT = Path(__file__).resolve().parent
 GUIDES = ROOT / "guides"
 SITE_ORIGIN = "https://bloc-notes-numeriques.fr"
@@ -49,9 +51,16 @@ def clean_text(raw: str) -> str:
     return re.sub(r"\s+", " ", raw).strip()
 
 
+def route_for_page(page: Path) -> str:
+    return f"/guides/{page.parent.name}/"
+
+
 def expected_canonical(page: Path) -> str:
-    slug = page.parent.name
-    return f"{SITE_ORIGIN}/guides/{slug}/"
+    return f"{SITE_ORIGIN}{route_for_page(page)}"
+
+
+def expected_robots(route: str) -> str:
+    return "index,follow" if route in INDEXABLE_GUIDE_ROUTES else "noindex,follow"
 
 
 def local_target_exists(href: str) -> bool:
@@ -59,7 +68,6 @@ def local_target_exists(href: str) -> bool:
     path = parsed.path
     if not path or not path.startswith("/") or path.startswith("//"):
         return True
-
     target = ROOT / path.lstrip("/")
     if target.is_dir():
         target = target / "index.html"
@@ -69,6 +77,7 @@ def local_target_exists(href: str) -> bool:
 def inspect(page: Path):
     page_html = page.read_text(encoding="utf-8")
     issues = []
+    route = route_for_page(page)
 
     article_matches = ARTICLE_RE.findall(page_html)
     if len(article_matches) != 1:
@@ -101,15 +110,16 @@ def inspect(page: Path):
         ",".join(part.strip().lower() for part in value.split(","))
         for value in robots
     ]
-    if "noindex,follow" not in normalized_robots:
-        issues.append("noindex,follow absent")
+    expected = expected_robots(route)
+    if expected not in normalized_robots:
+        issues.append(f"robots publication state mismatch: expected {expected}")
 
     canonicals = CANONICAL_RE.findall(page_html)
-    expected = expected_canonical(page)
+    expected_canonical_url = expected_canonical(page)
     if len(canonicals) != 1:
         issues.append(f"canonical count={len(canonicals)} (expected 1)")
-    elif canonicals[0] != expected:
-        issues.append(f"canonical mismatch: {canonicals[0]} != {expected}")
+    elif canonicals[0] != expected_canonical_url:
+        issues.append(f"canonical mismatch: {canonicals[0]} != {expected_canonical_url}")
 
     ids = ID_RE.findall(page_html)
     duplicates = sorted({value for value in ids if ids.count(value) > 1})
@@ -126,8 +136,6 @@ def inspect(page: Path):
         if href.startswith("/") and not local_target_exists(href):
             issues.append(f"broken internal link: {href}")
 
-    # A Sources section that contains no actual external source is mechanically
-    # inconsistent. The validator does NOT require every guide to have N sources.
     if SOURCES_H2_RE.search(article):
         after_sources = re.split(SOURCES_H2_RE, article, maxsplit=1)[-1]
         if not EXTERNAL_LINK_RE.search(after_sources):
@@ -136,9 +144,25 @@ def inspect(page: Path):
     return issues
 
 
+def inspect_hub() -> list[str]:
+    page = GUIDES / "index.html"
+    issues = []
+    html = page.read_text(encoding="utf-8")
+    if '<meta name="robots" content="index,follow">' not in html:
+        issues.append("Guide hub expected index,follow")
+    canonical = CANONICAL_RE.findall(html)
+    if canonical != [f"{SITE_ORIGIN}/guides/"]:
+        issues.append("Guide hub canonical mismatch")
+    return issues
+
+
 def main():
     pages = sorted(GUIDES.glob("*/index.html"))
     failures = {}
+
+    hub_issues = inspect_hub()
+    if hub_issues:
+        failures["_hub"] = hub_issues
 
     for page in pages:
         issues = inspect(page)
@@ -153,11 +177,12 @@ def main():
         raise SystemExit(1)
 
     print(
-        f"PASS: {len(pages)} guide pages have no machine-detectable publication blockers"
+        f"PASS: {len(pages) + 1} Guide routes have no machine-detectable "
+        "publication blockers and match explicit indexation approval"
     )
     print(
-        "NEXT: run .agents/skills/guide-analysis-workflow/SKILL.md in "
-        "PUBLISH_REVIEW mode before human validation and indexation"
+        "NOTE: machine validation does not replace guide-analysis-workflow / "
+        "PUBLISH_REVIEW or human editorial judgment."
     )
 
 

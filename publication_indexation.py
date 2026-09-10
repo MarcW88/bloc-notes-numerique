@@ -8,6 +8,29 @@ approval.
 Human approval recorded: 2026-09-10.
 """
 
+from comparison_publication import INDEXABLE_COMPARISON_ROUTES
+
+INDEXABLE_BRAND_ROUTES = {
+    "/marques/",
+    "/marques/remarkable/",
+    "/marques/remarkable/remarkable-paper-pro/",
+    "/marques/remarkable/remarkable-paper-pro-avis/",
+    "/marques/remarkable/remarkable-2/",
+    "/marques/remarkable/remarkable-2-avis/",
+    "/marques/remarkable/abonnement-connect/",
+    "/marques/remarkable/accessoires/",
+    "/marques/remarkable/alternatives/",
+    "/marques/boox/",
+    "/marques/boox/boox-note-air/",
+    "/marques/boox/boox-tab-ultra/",
+    "/marques/boox/avis/",
+    "/marques/boox/accessoires/",
+    "/marques/boox/alternatives/",
+    "/marques/kindle-scribe/",
+    "/marques/kobo-elipsa/",
+    "/marques/supernote/",
+}
+
 INDEXABLE_USAGE_ROUTES = {
     "/usages/",
     "/usages/prise-de-notes-professionnelle/",
@@ -71,6 +94,14 @@ SCOPE_ROOTS = {
     "guides": "guides",
     "deals": "bons-plans",
 }
+
+SITEMAP_APPROVED_ROUTES = (
+    INDEXABLE_COMPARISON_ROUTES
+    | INDEXABLE_BRAND_ROUTES
+    | INDEXABLE_USAGE_ROUTES
+    | INDEXABLE_GUIDE_ROUTES
+    | INDEXABLE_DEAL_ROUTES
+)
 
 HUMAN_VALIDATED_AT = "2026-09-10"
 EXPLICIT_INDEXATION_APPROVED_AT = "2026-09-10"
