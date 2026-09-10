@@ -3,24 +3,24 @@
   "page_url": "/bons-plans/remarkable/",
   "page_type": "BRAND_DEALS",
   "status": "DRAFT_READY",
-  "checked_at": "2026-09-09T08:29:00+02:00",
+  "checked_at": "2026-09-10T10:02:00+02:00",
   "freshness_policy": {"active_offer_ttl_hours": 72, "page_review_ttl_hours": 168},
   "intent": {"primary_query": "promo reMarkable", "reader_goal": "Savoir quelles réductions reMarkable sont réelles et si un bundle vaut mieux que l'achat séparé.", "closest_comparison": "/comparatifs/remarkable-vs-boox/", "related_guides": ["/guides/prix-bloc-notes-numerique/", "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/"]},
   "reference_prices": [
-    {"product": "reMarkable Paper Pure", "price": 399, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/shop/compare", "checked_at": "2026-09-09T08:29:00+02:00"},
-    {"product": "reMarkable Paper Pro Move", "price": 479, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/shop/compare", "checked_at": "2026-09-09T08:29:00+02:00"},
-    {"product": "reMarkable Paper Pro", "price": 649, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-09T08:29:00+02:00"}
+    {"product": "reMarkable Paper Pure", "price": 399, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/shop/compare", "checked_at": "2026-09-10T10:02:00+02:00"},
+    {"product": "reMarkable Paper Pro Move", "price": 479, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/shop/compare", "checked_at": "2026-09-10T10:02:00+02:00"},
+    {"product": "reMarkable Paper Pro", "price": 649, "currency": "EUR", "basis": "OFFICIAL_CURRENT", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-10T10:02:00+02:00"}
   ],
   "offers": [
-    {"product": "reMarkable Paper Pro + Marker Plus + Book Folio", "merchant": "reMarkable", "price": 849, "currency": "EUR", "reference_price": 898, "reference_price_basis": "Référence d'achat séparé affichée sur la fiche officielle", "status": "ACTIVE_VERIFIED", "availability": "Pack configurable", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "49 € d'écart observé ; avantage uniquement si l'étui et le Marker Plus sont voulus."},
-    {"product": "reMarkable Paper Pro + Marker Plus + Type Folio", "merchant": "reMarkable", "price": 899, "currency": "EUR", "reference_price": 948, "reference_price_basis": "Référence d'achat séparé affichée sur la fiche officielle", "status": "ACTIVE_VERIFIED", "availability": "Pack configurable", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-09T08:29:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "49 € d'écart observé ; ne pas acheter le clavier uniquement pour bénéficier de la remise."}
+    {"product": "reMarkable Paper Pro + Marker Plus + Book Folio", "merchant": "reMarkable", "price": 849, "currency": "EUR", "reference_price": 898, "reference_price_basis": "Référence d'achat séparé affichée sur la fiche officielle", "status": "ACTIVE_VERIFIED", "availability": "Pack configurable", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-10T10:02:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "49 € d'écart observé ; avantage uniquement si l'étui et le Marker Plus sont voulus."},
+    {"product": "reMarkable Paper Pro + Marker Plus + Type Folio", "merchant": "reMarkable", "price": 899, "currency": "EUR", "reference_price": 948, "reference_price_basis": "Référence d'achat séparé affichée sur la fiche officielle", "status": "ACTIVE_VERIFIED", "availability": "Pack configurable", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "checked_at": "2026-09-10T10:02:00+02:00", "evidence_class": "OFFICIAL_CURRENT", "note": "49 € d'écart observé ; ne pas acheter le clavier uniquement pour bénéficier de la remise."}
   ],
   "watchlist": ["reconditionné officiel reMarkable", "bundle Paper Pure", "Paper Pro Move lors de campagnes temporaires"],
   "evidence_ledger": [
     {"claim": "Paper Pure démarre à 399 €, Paper Pro Move à 479 €", "source": "https://remarkable.com/fr-FR/shop/compare", "evidence_class": "OFFICIAL_CURRENT"},
     {"claim": "Paper Pro démarre à 649 € et les bundles Book Folio/Type Folio montrent un écart de 49 €", "source": "https://remarkable.com/fr-FR/products/remarkable-paper/pro", "evidence_class": "OFFICIAL_CURRENT"},
-    {"claim": "reMarkable propose une offre reconditionnée officielle", "source": "https://remarkable.com/fr-FR/products/remarkable-2", "evidence_class": "OFFICIAL_CURRENT"}
+    {"claim": "reMarkable maintient une boutique officielle de produits reconditionnés avec Paper Pro Move, Paper Pro et reMarkable 2", "source": "https://remarkable.com/fr-FR/shop/refurbished/remarkable-paper-pro", "evidence_class": "OFFICIAL_CURRENT"}
   ],
-  "editorial": {"opening_answer": "Le meilleur levier reMarkable vérifié le 9 septembre 2026 est surtout le bundle : 49 € d'écart sur certains packs Paper Pro. Ce n'est intéressant que si les accessoires inclus correspondent déjà au besoin.", "avoid_claims": ["promotion exceptionnelle", "prix le plus bas jamais vu"], "comparison_handoff": "/comparatifs/remarkable-vs-boox/"},
+  "editorial": {"opening_answer": "Le meilleur levier reMarkable vérifié le 10 septembre 2026 est surtout le bundle : 49 € d'écart sur certains packs Paper Pro. Ce n'est intéressant que si les accessoires inclus correspondent déjà au besoin.", "avoid_claims": ["promotion exceptionnelle", "prix le plus bas jamais vu"], "comparison_handoff": "/comparatifs/remarkable-vs-boox/"},
   "qa": {"reference_price_documented": true, "active_offers_fresh": true, "expired_offers_not_promoted": true, "affiliate_independence": true, "no_fake_urgency": true, "noindex_preserved": true, "final_verdict": "PASS"}
 }
