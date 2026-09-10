@@ -69,13 +69,13 @@ if (burger && navigation) {
     }
   });
 
-  navigation.addEventListener('click', (event) => {
+  navigation.addEventListener('click', event => {
     if (event.target.closest('a') && window.matchMedia('(max-width: 768px)').matches) {
       closeMenu();
     }
   });
 
-  document.addEventListener('keydown', (event) => {
+  document.addEventListener('keydown', event => {
     if (event.key === 'Escape') closeMenu();
   });
 
@@ -233,15 +233,17 @@ if (isDealPage && !isDealHub) {
       wrapper.appendChild(table);
     }
 
+    const finalHeader = table.querySelector('thead th:last-child')?.textContent.trim().toLowerCase() || '';
+    if (!finalHeader.includes('statut')) return;
+
     table.querySelectorAll('tbody tr').forEach(row => {
       const statusCell = row.lastElementChild;
       if (!statusCell) return;
       const text = statusCell.textContent.trim().toLowerCase();
-      if (!/(active|vérifi|surveill|rupture|sold out|stock|promo|catalogue|constructeur|checkout|revendeur)/.test(text)) return;
 
       statusCell.classList.add('deal-status-cell');
       if (/(rupture|sold out|épuis)/.test(text)) statusCell.classList.add('status-soldout');
-      else if (/(surveill|stock|checkout|catalogue|revendeur|constructeur)/.test(text)) statusCell.classList.add('status-watch');
+      else if (/(surveill|stock|catalogue)/.test(text)) statusCell.classList.add('status-watch');
       else statusCell.classList.add('status-active');
     });
   });
