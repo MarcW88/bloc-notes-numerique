@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "products": {
     "remarkable-paper-pure": {
       "name": "reMarkable Paper Pure",
@@ -13,6 +13,30 @@
       ],
       "best_for": "Écriture, réunions et travail sans distractions"
     },
+    "remarkable-paper-pro": {
+      "name": "reMarkable Paper Pro",
+      "internal_url": "/marques/remarkable/remarkable-paper-pro/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "11,8 pouces, couleur"},
+        {"label": "Éclairage", "value": "Éclairage frontal"},
+        {"label": "Positionnement", "value": "Grand carnet numérique focalisé"}
+      ],
+      "best_for": "Grands documents, annotation couleur et écriture focalisée"
+    },
+    "remarkable-paper-pro-move": {
+      "name": "reMarkable Paper Pro Move",
+      "internal_url": "/marques/remarkable/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "7,3 pouces, couleur"},
+        {"label": "Éclairage", "value": "Éclairage frontal"},
+        {"label": "Format", "value": "Compact et mobile"}
+      ],
+      "best_for": "Prendre des notes partout avec un appareil couleur compact"
+    },
     "boox-note-air5-c": {
       "name": "BOOX Note Air5 C",
       "internal_url": "/marques/boox/boox-note-air/",
@@ -25,17 +49,17 @@
       ],
       "best_for": "Applications, plusieurs clouds et documents couleur"
     },
-    "kindle-scribe-3": {
-      "name": "Kindle Scribe (3e génération)",
-      "internal_url": "/marques/kindle-scribe/",
+    "boox-go-10-3-gen2": {
+      "name": "BOOX Go 10.3 (Gen II)",
+      "internal_url": "/marques/boox/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
       "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
-        {"label": "Écran", "value": "Grand écran E Ink monochrome"},
-        {"label": "Éclairage", "value": "Éclairage frontal"},
-        {"label": "Écosystème", "value": "Kindle + carnets et documents"}
+        {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
+        {"label": "Système", "value": "Android 15 avec Google Play"},
+        {"label": "Éclairage", "value": "Sans éclairage frontal"}
       ],
-      "best_for": "Lire des ebooks et prendre des notes sur le même appareil"
+      "best_for": "PDF, applications et exports dans un format fin et ouvert"
     },
     "boox-go-10-3-lumi": {
       "name": "BOOX Go 10.3 Gen II Lumi",
@@ -49,6 +73,54 @@
       ],
       "best_for": "Workflow professionnel avec applications et clouds"
     },
+    "boox-note-max": {
+      "name": "BOOX Note Max",
+      "internal_url": "/marques/boox/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "13,3 pouces, monochrome 300 ppp"},
+        {"label": "Système", "value": "Android 13 avec applications"},
+        {"label": "Éclairage", "value": "Sans éclairage frontal"}
+      ],
+      "best_for": "Lire et annoter des PDF proches du format A4"
+    },
+    "boox-tab-x-c": {
+      "name": "BOOX Tab X C",
+      "internal_url": "/marques/boox/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "13,3 pouces, couleur Kaleido 3"},
+        {"label": "Éclairage", "value": "Éclairage frontal"},
+        {"label": "Système", "value": "Android avec applications"}
+      ],
+      "best_for": "Grands PDF couleur et travail en faible lumière"
+    },
+    "kindle-scribe-3": {
+      "name": "Kindle Scribe (3e génération)",
+      "internal_url": "/marques/kindle-scribe/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "Grand écran E Ink monochrome"},
+        {"label": "Éclairage", "value": "Éclairage frontal"},
+        {"label": "Écosystème", "value": "Kindle + carnets et documents"}
+      ],
+      "best_for": "Lire des ebooks et prendre des notes sur le même appareil"
+    },
+    "kobo-elipsa-2e": {
+      "name": "Kobo Elipsa 2E",
+      "internal_url": "/marques/kobo-elipsa/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "10,3 pouces, monochrome"},
+        {"label": "Éclairage", "value": "ComfortLight PRO"},
+        {"label": "Écosystème", "value": "Kobo + stylet et carnets"}
+      ],
+      "best_for": "Lecture Kobo, annotation et prise de notes simple"
+    },
     "supernote-manta": {
       "name": "Supernote Manta",
       "internal_url": "/marques/supernote/",
@@ -60,6 +132,18 @@
         {"label": "Organisation", "value": "Titres, liens, mots-clés et recherche"}
       ],
       "best_for": "Structurer et retrouver des notes de projet sur la durée"
+    },
+    "supernote-nomad": {
+      "name": "Supernote Nomad",
+      "internal_url": "/marques/supernote/",
+      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
+      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "specs": [
+        {"label": "Écran", "value": "7,8 pouces, monochrome"},
+        {"label": "Éclairage", "value": "Sans éclairage frontal"},
+        {"label": "Organisation", "value": "Notes structurées dans un format mobile"}
+      ],
+      "best_for": "Études et prise de notes organisée dans un format très mobile"
     }
   }
 }
