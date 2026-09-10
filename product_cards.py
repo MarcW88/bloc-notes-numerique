@@ -9,7 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 REGISTRY_PATH = ROOT / ".content" / "products" / "registry.json"
-PILOT_PATH = ROOT / ".content" / "products" / "pilot-comparisons.json"
+PLACEMENTS_PATH = ROOT / ".content" / "products" / "placements.json"
+LEGACY_PILOT_PATH = ROOT / ".content" / "products" / "pilot-comparisons.json"
 ALLOWED_LAYOUTS = {"recommendation_list", "comparison_cards"}
 
 
@@ -21,8 +22,21 @@ def load_registry() -> dict[str, dict]:
     return load_json(REGISTRY_PATH)["products"]
 
 
+def load_placements(section: str | None = None) -> dict:
+    data = load_json(PLACEMENTS_PATH)
+    sections = data["sections"]
+    if section is None:
+        return sections
+    if section not in sections:
+        raise KeyError(f"Unknown product-placement section: {section}")
+    return sections[section]
+
+
 def load_pilot() -> dict[str, dict]:
-    return load_json(PILOT_PATH)["pages"]
+    """Backward-compatible loader while old workflow commits drain."""
+    if LEGACY_PILOT_PATH.exists():
+        return load_json(LEGACY_PILOT_PATH)["pages"]
+    return load_placements("comparisons")["pages"]
 
 
 def esc(value: object) -> str:
@@ -111,14 +125,20 @@ def render_recommendation_row(product_id: str, product: dict, placement: str) ->
     )
 
 
-def render_section(page_slug: str, config: dict, registry: dict[str, dict]) -> str:
+def render_section(
+    page_slug: str,
+    config: dict,
+    registry: dict[str, dict],
+    section: str | None = None,
+) -> str:
     layout = config.get("layout")
     if layout not in ALLOWED_LAYOUTS:
         raise ValueError(f"{page_slug}: unsupported product layout {layout!r}")
 
+    placement = f"{section}:{page_slug}" if section else page_slug
     if layout == "comparison_cards":
         products_html = "".join(
-            render_card(product_id, registry[product_id], page_slug)
+            render_card(product_id, registry[product_id], placement)
             for product_id in config["products"]
         )
         module_html = (
@@ -128,7 +148,7 @@ def render_section(page_slug: str, config: dict, registry: dict[str, dict]) -> s
         section_class = "product-card-section product-card-section--comparison"
     else:
         products_html = "".join(
-            render_recommendation_row(product_id, registry[product_id], page_slug)
+            render_recommendation_row(product_id, registry[product_id], placement)
             for product_id in config["products"]
         )
         module_html = (
@@ -137,13 +157,22 @@ def render_section(page_slug: str, config: dict, registry: dict[str, dict]) -> s
         )
         section_class = "product-card-section product-card-section--recommendations"
 
+    if section:
+        start_marker = f'<!-- PRODUCT_MODULE:{esc(section)}:{esc(page_slug)}:START -->'
+        end_marker = f'<!-- PRODUCT_MODULE:{esc(section)}:{esc(page_slug)}:END -->'
+        module_attr = 'data-product-module="true"'
+    else:
+        start_marker = f'<!-- PRODUCT_PILOT:{esc(page_slug)}:START -->'
+        end_marker = f'<!-- PRODUCT_PILOT:{esc(page_slug)}:END -->'
+        module_attr = 'data-product-pilot="true"'
+
     return (
-        f'<!-- PRODUCT_PILOT:{esc(page_slug)}:START -->\n'
-        f'<section class="{section_class}" data-product-pilot="true" '
-        f'data-product-placement="{esc(page_slug)}" data-product-layout="{esc(layout)}">\n'
+        f'{start_marker}\n'
+        f'<section class="{section_class}" {module_attr} '
+        f'data-product-placement="{esc(placement)}" data-product-layout="{esc(layout)}">\n'
         f'  <h2 id="{esc(config["section_id"])}">{esc(config["section_title"])}</h2>\n'
         f'  <p class="product-card-section__intro">{esc(config["intro"])}</p>\n'
         f'  {module_html}\n'
         '</section>\n'
-        f'<!-- PRODUCT_PILOT:{esc(page_slug)}:END -->'
+        f'{end_marker}'
     )
