@@ -143,14 +143,6 @@
           "intro": "Ces modèles ne sont pas un podium : ils couvrent trois besoins fréquents chez les étudiants, de l’ouverture Android à la mobilité en passant par la lecture.",
           "products": ["boox-go-10-3-gen2", "supernote-nomad", "kobo-elipsa-2e"]
         },
-        "annotation-pdf": {
-          "layout": "recommendation_list",
-          "insert_before_heading_id": "sources",
-          "section_id": "modeles-a-verifier",
-          "section_title": "Trois formats à considérer pour annoter des PDF",
-          "intro": "Le meilleur appareil dépend surtout du format de vos documents, de la couleur et des applications nécessaires. Ces trois modèles couvrent ces arbitrages sans prétendre remplacer le choix expliqué dans l’article.",
-          "products": ["boox-note-max", "boox-note-air5-c", "remarkable-paper-pro"]
-        },
         "lecture-et-prise-de-notes": {
           "layout": "recommendation_list",
           "insert_before_heading_id": "sources",
@@ -171,6 +163,14 @@
           "section_title": "Trois profils de produits pour concrétiser votre choix",
           "intro": "Cette sélection intervient seulement après les critères du guide. Elle illustre trois profils fréquents — simplicité, ouverture et lecture — sans transformer le guide en page de vente.",
           "products": ["remarkable-paper-pure", "boox-note-air5-c", "kindle-scribe-3"]
+        },
+        "annoter-pdf-tablette-e-ink": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois formats à considérer pour annoter des PDF",
+          "intro": "Le meilleur appareil dépend surtout du format de vos documents, de la couleur et des applications nécessaires. Ces trois modèles couvrent ces arbitrages sans remplacer la méthode expliquée dans le guide.",
+          "products": ["boox-note-max", "boox-note-air5-c", "remarkable-paper-pro"]
         }
       }
     }
