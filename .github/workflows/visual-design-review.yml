@@ -8,9 +8,12 @@ on:
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
+      - "guides/**"
+      - "bons-plans/**"
       - "style.css"
       - "comparisons.css"
       - "usages.css"
+      - "guides-deals.css"
       - "site.js"
       - ".agents/skills/site-design-review/**"
       - "package.json"
@@ -21,9 +24,12 @@ on:
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
+      - "guides/**"
+      - "bons-plans/**"
       - "style.css"
       - "comparisons.css"
       - "usages.css"
+      - "guides-deals.css"
       - "site.js"
       - ".agents/skills/site-design-review/**"
       - "package.json"
@@ -33,11 +39,11 @@ on:
 jobs:
   visual-pages:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     strategy:
       fail-fast: false
       matrix:
-        scope: [brands, comparisons, usages]
+        scope: [brands, comparisons, usages, guides, deals]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
