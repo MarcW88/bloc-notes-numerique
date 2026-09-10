@@ -54,10 +54,51 @@ const USAGE_ROUTES = [
   '/usages/remplacer-cahiers-papier/'
 ];
 
+const GUIDE_ROUTES = [
+  '/guides/',
+  '/guides/choisir-bloc-notes-numerique/',
+  '/guides/liseuse-ou-bloc-notes-numerique/',
+  '/guides/tablette-classique-ou-tablette-e-ink/',
+  '/guides/taille-ecran-bloc-notes-numerique/',
+  '/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/',
+  '/guides/bloc-notes-numerique-avec-ou-sans-abonnement/',
+  '/guides/prix-bloc-notes-numerique/',
+  '/guides/tablette-e-ink/',
+  '/guides/encre-electronique-fonctionnement/',
+  '/guides/latence-ecriture/',
+  '/guides/ocr-manuscrit/',
+  '/guides/autonomie-tablette-e-ink/',
+  '/guides/formats-fichiers-compatibles/',
+  '/guides/exporter-notes/',
+  '/guides/synchroniser-notes-cloud/',
+  '/guides/bloc-notes-numerique-google-drive/',
+  '/guides/bloc-notes-numerique-onedrive/',
+  '/guides/bloc-notes-numerique-dropbox/',
+  '/guides/ecosysteme-ouvert-ou-ferme/',
+  '/guides/annoter-pdf-tablette-e-ink/',
+  '/guides/convertir-notes-manuscrites-en-texte/',
+  '/guides/organiser-notes-numeriques/',
+  '/guides/transfert-notes-vers-ordinateur/',
+  '/guides/imprimer-notes-numeriques/'
+];
+
+const DEAL_ROUTES = [
+  '/bons-plans/',
+  '/bons-plans/bloc-notes-numerique/',
+  '/bons-plans/remarkable/',
+  '/bons-plans/kindle-scribe/',
+  '/bons-plans/kobo-elipsa/',
+  '/bons-plans/boox/',
+  '/bons-plans/bloc-notes-numerique-occasion/',
+  '/bons-plans/black-friday/'
+];
+
 const SCOPES = {
   brands: BRAND_ROUTES,
   comparisons: COMPARISON_ROUTES,
-  usages: USAGE_ROUTES
+  usages: USAGE_ROUTES,
+  guides: GUIDE_ROUTES,
+  deals: DEAL_ROUTES
 };
 
 const VIEWPORTS = [
@@ -111,7 +152,7 @@ async function waitForServer(url) {
 
 const options = parseArgs(process.argv.slice(2));
 if (options.help) {
-  console.log('Usage: run-visual-review.mjs [--scope brands|comparisons|usages] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
+  console.log('Usage: run-visual-review.mjs [--scope brands|comparisons|usages|guides|deals] [--route /chemin/] [--base-url URL] [--output dossier] [--port 4173]');
   process.exit(0);
 }
 
@@ -163,10 +204,12 @@ try {
       const measurements = await page.evaluate(() => {
         const sidebar = document.querySelector('.content-sidebar');
         const headings = [...document.querySelectorAll('.content-main h2, .content-main h3')];
+        const toc = document.querySelector('.sidebar-toc');
         const tocLinks = [...document.querySelectorAll('.sidebar-toc a')];
         const fixedHeader = document.querySelector('.site-header');
         const tables = [...document.querySelectorAll('.table-wrapper')];
         const articleAnswer = document.querySelector('.article-answer');
+        const firstEditorialLink = document.querySelector('.content-main a:not(.btn)');
         return {
           title: document.title,
           statusReady: document.readyState,
@@ -175,8 +218,10 @@ try {
           clientWidth: document.documentElement.clientWidth,
           headingCount: headings.length,
           tocLinkCount: tocLinks.length,
+          tocParentClass: toc?.parentElement?.className || null,
           missingHeadingIds: headings.filter(heading => !heading.id).map(heading => heading.textContent.trim()),
           tableCount: tables.length,
+          rawTableCount: document.querySelectorAll('.content-main table:not(.comp-table)').length,
           overflowingTables: tables
             .filter(wrapper => wrapper.scrollWidth > wrapper.clientWidth)
             .map(wrapper => ({ scrollWidth: wrapper.scrollWidth, clientWidth: wrapper.clientWidth })),
@@ -184,6 +229,10 @@ try {
             height: Math.round(articleAnswer.getBoundingClientRect().height),
             background: getComputedStyle(articleAnswer).backgroundColor,
             borderLeftWidth: getComputedStyle(articleAnswer).borderLeftWidth
+          } : null,
+          firstEditorialLink: firstEditorialLink ? {
+            color: getComputedStyle(firstEditorialLink).color,
+            decoration: getComputedStyle(firstEditorialLink).textDecorationLine
           } : null,
           sidebar: sidebar ? {
             height: Math.round(sidebar.getBoundingClientRect().height),
