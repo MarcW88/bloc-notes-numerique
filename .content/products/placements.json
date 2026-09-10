@@ -1,0 +1,178 @@
+{
+  "schema_version": 3,
+  "policy": {
+    "max_modules_per_page": 1,
+    "max_products_per_module": 3,
+    "purpose": "decision_support_only",
+    "excluded_sections": ["brands", "deals", "hubs", "informational_guides"]
+  },
+  "sections": {
+    "comparisons": {
+      "base_path": "comparatifs",
+      "pages": {
+        "meilleur-bloc-notes-numerique": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "methode",
+          "section_id": "voir-prix",
+          "section_title": "Où vérifier les modèles que nous retenons",
+          "intro": "Ces liens sont volontairement limités aux modèles réellement recommandés dans ce comparatif. Le prix n’est pas recopié ici : vérifiez le tarif et la disponibilité au moment de l’achat.",
+          "products": ["remarkable-paper-pure", "boox-note-air5-c", "kindle-scribe-3"]
+        },
+        "tablette-e-ink": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois tablettes E Ink à vérifier avant de choisir",
+          "intro": "Ces trois modèles illustrent les principaux arbitrages du comparatif : polyvalence couleur, ouverture Android ou priorité à la lecture.",
+          "products": ["boox-note-air5-c", "boox-go-10-3-gen2", "kindle-scribe-3"]
+        },
+        "bloc-notes-numerique-professionnel": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "voir-prix",
+          "section_title": "Trois modèles à vérifier avant achat",
+          "intro": "Nous limitons les liens marchands aux trois options qui couvrent les workflows professionnels principaux décrits ci-dessus.",
+          "products": ["boox-go-10-3-lumi", "remarkable-paper-pure", "supernote-manta"]
+        },
+        "bloc-notes-numerique-etudiant": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois modèles cohérents pour les études",
+          "intro": "Nous retenons ici trois profils différents : polyvalence Android, prise de notes très mobile et lecture avec stylet. Le bon choix dépend surtout de vos PDF, de votre organisation et de votre budget.",
+          "products": ["boox-go-10-3-gen2", "supernote-nomad", "kobo-elipsa-2e"]
+        },
+        "bloc-notes-numerique-couleur": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois approches de la couleur à comparer",
+          "intro": "Ces modèles couvrent trois usages réellement différents de la couleur : applications et PDF, grand écran focalisé, ou prise de notes compacte.",
+          "products": ["boox-note-air5-c", "remarkable-paper-pro", "remarkable-paper-pro-move"]
+        },
+        "bloc-notes-numerique-a4": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois grands écrans à vérifier",
+          "intro": "Nous gardons uniquement les options qui correspondent aux choix développés dans ce comparatif : A4 monochrome, A4 couleur et compromis plus mobile.",
+          "products": ["boox-note-max", "boox-tab-x-c", "remarkable-paper-pro"]
+        },
+        "bloc-notes-numerique-sans-abonnement": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois modèles à comparer sans abonnement obligatoire",
+          "intro": "Ces options restent pertinentes si votre priorité est de conserver les fonctions essentielles sans dépendre d’un abonnement mensuel pour le cœur de l’usage.",
+          "products": ["supernote-manta", "boox-go-10-3-gen2", "kobo-elipsa-2e"]
+        },
+        "bloc-notes-numerique-pas-cher": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois options à vérifier avec un budget contenu",
+          "intro": "Le prix seul ne suffit pas : ces trois modèles représentent des compromis différents entre format, PDF, lecture et organisation des notes.",
+          "products": ["boox-go-10-3-gen2", "supernote-nomad", "kobo-elipsa-2e"]
+        },
+        "kindle-scribe-vs-remarkable": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "origine",
+          "section_id": "voir-prix",
+          "section_title": "Vérifier les deux modèles",
+          "intro": "Le duel se joue entre deux logiques différentes. Comparez les configurations exactes avant achat, notamment la génération, le stockage et l’éclairage.",
+          "products": ["kindle-scribe-3", "remarkable-paper-pure"]
+        },
+        "kindle-scribe-vs-kobo-elipsa": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Vérifier les deux liseuses avec stylet",
+          "intro": "Le choix dépend surtout de votre bibliothèque, de vos PDF et de la manière dont vous souhaitez récupérer vos notes.",
+          "products": ["kindle-scribe-3", "kobo-elipsa-2e"]
+        },
+        "remarkable-vs-boox": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Vérifier les deux approches",
+          "intro": "reMarkable privilégie la simplicité et BOOX l’ouverture. Vérifiez les modèles correspondant à ces deux philosophies avant achat.",
+          "products": ["remarkable-paper-pure", "boox-go-10-3-gen2"]
+        },
+        "remarkable-vs-supernote": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Vérifier les deux modèles",
+          "intro": "Les deux appareils visent l’écriture, mais diffèrent nettement dans leur manière d’organiser et de retrouver les notes.",
+          "products": ["remarkable-paper-pure", "supernote-manta"]
+        },
+        "boox-vs-supernote": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Vérifier les deux modèles",
+          "intro": "BOOX et Supernote répondent à des besoins opposés : applications Android d’un côté, environnement de notes spécialisé de l’autre.",
+          "products": ["boox-go-10-3-gen2", "supernote-manta"]
+        },
+        "kobo-elipsa-vs-remarkable": {
+          "layout": "comparison_cards",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Vérifier les deux modèles",
+          "intro": "Comparez surtout la place de la lecture, l’organisation des carnets et les sorties de vos notes avant de trancher.",
+          "products": ["kobo-elipsa-2e", "remarkable-paper-pure"]
+        }
+      }
+    },
+    "usages": {
+      "base_path": "usages",
+      "pages": {
+        "prise-de-notes-professionnelle": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois modèles selon votre environnement de travail",
+          "intro": "Une fois vos contraintes IT, d’export et de documents validées, ces trois options représentent des philosophies de travail différentes sans transformer cette page en comparatif marchand.",
+          "products": ["boox-go-10-3-lumi", "supernote-manta", "remarkable-paper-pure"]
+        },
+        "prise-de-notes-etudiant": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois profils d’appareils pour les études",
+          "intro": "Ces modèles ne sont pas un podium : ils couvrent trois besoins fréquents chez les étudiants, de l’ouverture Android à la mobilité en passant par la lecture.",
+          "products": ["boox-go-10-3-gen2", "supernote-nomad", "kobo-elipsa-2e"]
+        },
+        "annotation-pdf": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois formats à considérer pour annoter des PDF",
+          "intro": "Le meilleur appareil dépend surtout du format de vos documents, de la couleur et des applications nécessaires. Ces trois modèles couvrent ces arbitrages sans prétendre remplacer le choix expliqué dans l’article.",
+          "products": ["boox-note-max", "boox-note-air5-c", "remarkable-paper-pro"]
+        },
+        "lecture-et-prise-de-notes": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois écosystèmes à vérifier pour lire et écrire",
+          "intro": "Kindle, Kobo et Android n’organisent pas la lecture et les notes de la même manière. Comparez d’abord l’écosystème qui correspond à vos livres et documents.",
+          "products": ["kindle-scribe-3", "kobo-elipsa-2e", "boox-go-10-3-gen2"]
+        }
+      }
+    },
+    "guides": {
+      "base_path": "guides",
+      "pages": {
+        "choisir-bloc-notes-numerique": {
+          "layout": "recommendation_list",
+          "insert_before_heading_id": "sources",
+          "section_id": "modeles-a-verifier",
+          "section_title": "Trois profils de produits pour concrétiser votre choix",
+          "intro": "Cette sélection intervient seulement après les critères du guide. Elle illustre trois profils fréquents — simplicité, ouverture et lecture — sans transformer le guide en page de vente.",
+          "products": ["remarkable-paper-pure", "boox-note-air5-c", "kindle-scribe-3"]
+        }
+      }
+    }
+  }
+}
