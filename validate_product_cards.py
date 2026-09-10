@@ -12,9 +12,9 @@ ROOT = Path(__file__).resolve().parent
 REGISTRY = ROOT / ".content" / "products" / "registry.json"
 PILOT = ROOT / ".content" / "products" / "pilot-comparisons.json"
 EXPECTED_PILOT = {
-    "meilleur-bloc-notes-numerique": 3,
-    "bloc-notes-numerique-professionnel": 3,
-    "kindle-scribe-vs-remarkable": 2,
+    "meilleur-bloc-notes-numerique": {"count": 3, "layout": "recommendation_list"},
+    "bloc-notes-numerique-professionnel": {"count": 3, "layout": "recommendation_list"},
+    "kindle-scribe-vs-remarkable": {"count": 2, "layout": "comparison_cards"},
 }
 ALLOWED_IMAGE_SOURCES = {"UNSET", "OWN", "MANUFACTURER_AUTHORIZED", "AMAZON_CREATORS_API"}
 ALLOWED_AFFILIATE_HOSTS = {"amazon.fr", "www.amazon.fr", "amazon.com.be", "www.amazon.com.be", "amzn.to"}
@@ -83,13 +83,17 @@ def main() -> None:
             continue
         pilot_cards_found.add(slug)
         if slug not in EXPECTED_PILOT:
-            fail(f"product cards leaked outside pilot scope: {slug}")
+            fail(f"product modules leaked outside pilot scope: {slug}")
 
     if pilot_cards_found != set(EXPECTED_PILOT):
-        fail("pilot cards missing on: " + ", ".join(sorted(set(EXPECTED_PILOT) - pilot_cards_found)))
+        fail("pilot modules missing on: " + ", ".join(sorted(set(EXPECTED_PILOT) - pilot_cards_found)))
 
-    for slug, expected_count in EXPECTED_PILOT.items():
+    for slug, expected in EXPECTED_PILOT.items():
         config = pages[slug]
+        expected_count = expected["count"]
+        expected_layout = expected["layout"]
+        if config.get("layout") != expected_layout:
+            fail(f"{slug}: expected layout {expected_layout}")
         if len(config.get("products", [])) != expected_count:
             fail(f"{slug}: expected {expected_count} configured products")
         unknown = [pid for pid in config["products"] if pid not in products]
@@ -100,14 +104,31 @@ def main() -> None:
         text = page.read_text(encoding="utf-8")
         if '<meta name="robots" content="index,follow">' not in text:
             fail(f"{slug}: pilot page is no longer index,follow")
-        if text.count('class="product-card"') != expected_count:
-            fail(f"{slug}: rendered product-card count mismatch")
+        if text.count(f'data-product-layout="{expected_layout}"') != 1:
+            fail(f"{slug}: rendered layout marker mismatch")
         if text.count(f'<!-- PRODUCT_PILOT:{slug}:START -->') != 1 or text.count(f'<!-- PRODUCT_PILOT:{slug}:END -->') != 1:
             fail(f"{slug}: pilot marker count mismatch")
         if '<link rel="stylesheet" href="/assets/product-cards.css">' not in text:
             fail(f"{slug}: product card stylesheet missing")
         if '<script src="/assets/product-affiliate.js" defer></script>' not in text:
             fail(f"{slug}: affiliate click instrumentation missing")
+
+        if expected_layout == "recommendation_list":
+            if text.count('class="product-recommendation-list"') != 1:
+                fail(f"{slug}: recommendation list wrapper missing")
+            if text.count('class="product-recommendation-row"') != expected_count:
+                fail(f"{slug}: rendered recommendation-row count mismatch")
+            if 'product-card-grid--3' in text or 'class="product-card"' in text:
+                fail(f"{slug}: three-card grid regression detected")
+        elif expected_layout == "comparison_cards":
+            if expected_count != 2:
+                fail(f"{slug}: comparison_cards is restricted to exactly two products")
+            if text.count('class="product-card-grid product-card-grid--2"') != 1:
+                fail(f"{slug}: two-card comparison grid missing")
+            if text.count('class="product-card"') != 2:
+                fail(f"{slug}: rendered product-card count mismatch")
+            if 'product-recommendation-list' in text:
+                fail(f"{slug}: comparison page unexpectedly uses recommendation list")
 
         expected_affiliate_links = sum(
             1 for pid in config["products"] if (products[pid]["amazon"].get("affiliate_url") or "").strip()
@@ -124,8 +145,10 @@ def main() -> None:
                 if not required.issubset(tokens):
                     fail(f"{slug}: Amazon CTA missing required rel tokens")
 
-    print("PASS: Phase-1 product-card pilot is limited to 3 comparison URLs")
-    print("PASS: cards contain no static Amazon prices and affiliate CTAs are conditional")
+    print("PASS: Phase-1 product pilot is limited to 3 comparison URLs")
+    print("PASS: 3-product pages use editorial recommendation lists, not 3-column card grids")
+    print("PASS: head-to-head comparison is restricted to exactly two balanced cards")
+    print("PASS: modules contain no static Amazon prices and affiliate CTAs are conditional")
     print("PASS: image provenance and Amazon link safeguards are active")
 
 
