@@ -306,3 +306,5 @@
     white-space: normal;
   }
 }
+
+/* Intentional guardrail: recommendation pages never use a three-column product-card grid. */
