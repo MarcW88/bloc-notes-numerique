@@ -37,6 +37,9 @@ jobs:
       - name: Align Usage hub presentation
         run: python usage_presentation_patch.py
 
+      - name: Apply approved Usage indexation
+        run: python apply_section_indexation.py usages
+
       - name: Validate Usage workflow
         run: python validate_usage_workflow.py
 
@@ -46,5 +49,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -u
+          git add sitemap.xml robots.txt
           git commit -m "content: apply reviewed usage cluster"
           git push

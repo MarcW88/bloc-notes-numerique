@@ -27,6 +27,8 @@ on:
       - '.content/usages/**'
       - 'usage-workflow.config.yaml'
       - 'validate_usage_workflow.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'usages/**'
   pull_request:
     paths:
@@ -54,6 +56,8 @@ on:
       - '.content/usages/**'
       - 'usage-workflow.config.yaml'
       - 'validate_usage_workflow.py'
+      - 'publication_indexation.py'
+      - 'apply_section_indexation.py'
       - 'usages/**'
   workflow_dispatch:
 
@@ -68,6 +72,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+
+      - name: Apply expected publication state
+        run: python apply_section_indexation.py usages
 
       - name: Validate two-workflow usage architecture
         run: python validate_usage_workflow.py

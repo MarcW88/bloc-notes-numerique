@@ -11,6 +11,8 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from publication_indexation import INDEXABLE_USAGE_ROUTES
+
 ROOT = Path(__file__).resolve().parent
 
 EXPECTED_USAGE_SLUGS = {
@@ -47,9 +49,6 @@ FORBIDDEN_RECORD_KEYS = {
     "winner",
 }
 
-# These are existing/reused skills that carry the substantive method. The two
-# usage workflows should orchestrate these instead of rebuilding them as custom
-# page-specific agents.
 REUSED_SKILLS = {
     "content-audit",
     "search-intent",
@@ -92,6 +91,14 @@ def require_text(path: Path, fragments: list[str]) -> None:
         fail(f"{path.relative_to(ROOT)} missing workflow markers: {', '.join(missing)}")
 
 
+def assert_robots(route: str, page: Path) -> None:
+    html = page.read_text(encoding="utf-8")
+    expected = "index,follow" if route in INDEXABLE_USAGE_ROUTES else "noindex,follow"
+    marker = f'name="robots" content="{expected}"'
+    if marker not in html:
+        fail(f"{route} expected robots={expected}")
+
+
 def main() -> None:
     required_files = [
         ROOT / ".agents/skills/usage-analysis-workflow/SKILL.md",
@@ -99,6 +106,8 @@ def main() -> None:
         ROOT / ".content/usages/_template.json",
         ROOT / ".content/usages/README.md",
         ROOT / "usage-workflow.config.yaml",
+        ROOT / "publication_indexation.py",
+        ROOT / "apply_section_indexation.py",
     ]
     required_files.extend(
         ROOT / f".agents/skills/{skill}/SKILL.md" for skill in sorted(REUSED_SKILLS)
@@ -178,17 +187,9 @@ def main() -> None:
     if missing_slugs:
         fail("missing current usage routes: " + ", ".join(sorted(missing_slugs)))
 
-    # Current usage cluster is still in draft/publication-review state. This is
-    # intentionally kept as a structural guard until explicit indexation is
-    # approved through a separate publication step.
-    noindex_failures = []
+    assert_robots("/usages/", usage_root / "index.html")
     for slug in sorted(EXPECTED_USAGE_SLUGS):
-        page = usage_root / slug / "index.html"
-        html = page.read_text(encoding="utf-8")
-        if 'name="robots" content="noindex,follow"' not in html:
-            noindex_failures.append(slug)
-    if noindex_failures:
-        fail("usage pages missing noindex,follow: " + ", ".join(noindex_failures))
+        assert_robots(f"/usages/{slug}/", usage_root / slug / "index.html")
 
     records_dir = ROOT / ".content/usages"
     for record_path in sorted(records_dir.glob("*.json")):
@@ -219,17 +220,16 @@ def main() -> None:
             fail(f"{record_path}: page_url does not match slug")
 
     print(
-        "PASS: two-workflow usage infrastructure is valid; "
-        f"{len(REUSED_SKILLS)} reused skills are present and "
-        f"{len(EXPECTED_USAGE_SLUGS)} current usage pages remain noindex,follow."
+        "PASS: usage infrastructure and publication state are valid; "
+        f"{len(INDEXABLE_USAGE_ROUTES)} approved route(s) are indexable."
     )
     print(
-        "PASS: analysis workflow exposes AUDIT / CLUSTER_AUDIT / PUBLISH_REVIEW "
-        "and the content workflow hands final review back to analysis."
+        "PASS: /usages/annotation-pdf/ remains noindex because it redirects and "
+        "canonicals to the consolidated Guide."
     )
     print(
-        "NOTE: this machine PASS does not imply JTBD, fact-check, editorial, SEO/GEO "
-        "or PUBLISH_REVIEW PASS for any page."
+        "NOTE: this machine PASS does not replace JTBD, fact-check, editorial, "
+        "SEO/GEO or PUBLISH_REVIEW judgment."
     )
 
 
