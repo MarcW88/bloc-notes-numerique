@@ -1,0 +1,20 @@
+{
+  "id": "homepage-hero",
+  "page": "index.html",
+  "slot": "hero",
+  "required": true,
+  "reason": "Remplacer le visuel abstrait actuel par une scène éditoriale réaliste qui montre immédiatement l'usage d'un bloc-notes numérique sans prétendre représenter un modèle précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<div class=\"paper-study\" aria-hidden=\"true\"><span></span><span></span><span></span></div>",
+  "output_path": "assets/generated/homepage-hero.webp",
+  "prompt": "Photorealistic editorial photograph for the homepage of a French website about digital notebooks. A person seated at a tidy desk is naturally writing with a stylus on a generic unbranded E Ink digital notepad, three-quarter view, hands and device clearly visible, calm modern home-office environment, soft natural window light, subtle warm neutral tones, realistic skin, realistic paper-like display surface, realistic materials and proportions, candid documentary photography, premium but not advertising-like, no visible brand, no logo, no readable text on the screen, no watermark, no futuristic interface, no CGI look.",
+  "alt": "Personne prenant des notes au stylet sur un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
