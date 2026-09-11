@@ -130,16 +130,20 @@ def main() -> int:
             errors.append(f"{slug}: unknowns must be a list")
 
         rules = record.get("editorial_rules", {})
-        if rules.get("preserve_noindex") is not True:
-            errors.append(f"{slug}: preserve_noindex must be true")
+        preserve_noindex = rules.get("preserve_noindex")
+        if not isinstance(preserve_noindex, bool):
+            errors.append(f"{slug}: preserve_noindex must be a boolean")
+            preserve_noindex = True
 
         if not html_path.exists():
             errors.append(f"{slug}: missing HTML page {html_path.relative_to(ROOT)}")
             continue
 
         html = html_path.read_text(encoding="utf-8")
-        if 'name="robots" content="noindex,follow"' not in html:
-            errors.append(f"{slug}: noindex,follow is missing")
+        expected_robots = 'name="robots" content="noindex,follow"' if preserve_noindex else 'name="robots" content="index,follow"'
+        if expected_robots not in html:
+            state = "noindex,follow" if preserve_noindex else "index,follow"
+            errors.append(f"{slug}: expected robots state {state} is missing")
 
         strict = status in STRICT_STATUSES
         for category, patterns in SENSITIVE_PATTERNS.items():

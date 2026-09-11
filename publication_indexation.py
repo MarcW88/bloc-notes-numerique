@@ -6,9 +6,29 @@ sections remains ``noindex,follow`` until it receives a new explicit human
 approval.
 
 Human approval recorded: 2026-09-10.
+Extended sitewide approval recorded: 2026-09-11.
 """
 
 from comparison_publication import INDEXABLE_COMPARISON_ROUTES
+
+INDEXABLE_SITE_ROUTES = {
+    "/",
+    "/a-propos/",
+    "/accessoires/",
+    "/accessoires/boox/",
+    "/accessoires/claviers/",
+    "/accessoires/housses-etuis/",
+    "/accessoires/kindle-scribe/",
+    "/accessoires/pointes-stylet/",
+    "/accessoires/protections-ecran/",
+    "/accessoires/remarkable/",
+    "/accessoires/stylets/",
+    "/comment-nous-comparons/",
+    "/contact/",
+    "/mentions-legales/",
+    "/methode-de-test/",
+    "/transparence-affiliation/",
+}
 
 INDEXABLE_BRAND_ROUTES = {
     "/marques/",
@@ -96,7 +116,8 @@ SCOPE_ROOTS = {
 }
 
 SITEMAP_APPROVED_ROUTES = (
-    INDEXABLE_COMPARISON_ROUTES
+    INDEXABLE_SITE_ROUTES
+    | INDEXABLE_COMPARISON_ROUTES
     | INDEXABLE_BRAND_ROUTES
     | INDEXABLE_USAGE_ROUTES
     | INDEXABLE_GUIDE_ROUTES
@@ -104,4 +125,4 @@ SITEMAP_APPROVED_ROUTES = (
 )
 
 HUMAN_VALIDATED_AT = "2026-09-10"
-EXPLICIT_INDEXATION_APPROVED_AT = "2026-09-10"
+EXPLICIT_INDEXATION_APPROVED_AT = "2026-09-11"

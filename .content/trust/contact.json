@@ -30,7 +30,7 @@
     "allow_physical_test_claims": false,
     "allow_team_claims": false,
     "allow_independence_claims": false,
-    "preserve_noindex": true
+    "preserve_noindex": false
   },
   "qa": {
     "claims_mapped": true,
@@ -38,7 +38,7 @@
     "no_fictional_team": true,
     "affiliate_model_explained": false,
     "unknowns_not_filled_by_guessing": true,
-    "noindex_preserved": true,
+    "noindex_preserved": false,
     "final_verdict": "PENDING"
   }
 }
