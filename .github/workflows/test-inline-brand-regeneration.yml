@@ -1,0 +1,30 @@
+name: Test inline affiliate brand regeneration
+
+on:
+  push:
+    branches:
+      - feature/affiliate-inline-placements
+    paths:
+      - '.github/workflows/test-inline-brand-regeneration.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Regenerate brands with affiliate placements
+        run: |
+          python -m py_compile apply_brand_content.py apply_inline_affiliate_links.py validate_inline_affiliate_links.py
+          python apply_brand_content.py
+          python validate_brands.py
+          python validate_inline_affiliate_links.py
+      - name: Check brand idempotence
+        run: git diff --exit-code -- marques
