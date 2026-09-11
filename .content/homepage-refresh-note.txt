@@ -1,1 +1,0 @@
-Homepage refresh prepared before indexing. Temporary marker file to force PR creation context; safe to remove before merge.
