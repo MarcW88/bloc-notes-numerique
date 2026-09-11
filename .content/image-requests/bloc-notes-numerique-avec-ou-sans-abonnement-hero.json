@@ -6,7 +6,7 @@
   "reason": "Illustrer la dépendance logicielle et la continuité d'usage entre le bloc-notes et l'ordinateur, plutôt qu'un abonnement abstrait ou un prix précis.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"definition\">",
   "placement": "before",
   "output_path": "assets/generated/bloc-notes-numerique-avec-ou-sans-abonnement-hero.webp",
@@ -16,5 +16,9 @@
   "width": 1280,
   "height": 720,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "246f74a7-486d-43da-ae8d-d16822928faa",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-09-11T14:51:09.751233+00:00"
 }

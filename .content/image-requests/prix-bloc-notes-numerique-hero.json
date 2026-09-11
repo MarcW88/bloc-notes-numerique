@@ -6,7 +6,7 @@
   "reason": "Illustrer le coût d'une configuration complète en montrant appareil et accessoires utiles, sans afficher de prix ni de marque susceptibles d'être faux ou périmés.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"combien\">",
   "placement": "before",
   "output_path": "assets/generated/prix-bloc-notes-numerique-hero.webp",
@@ -16,5 +16,9 @@
   "width": 1280,
   "height": 720,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "4e18bbb6-74d8-4963-829a-4a3fb41de3e8",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-09-11T14:51:38.578826+00:00"
 }

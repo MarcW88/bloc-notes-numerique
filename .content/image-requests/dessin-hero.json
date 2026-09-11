@@ -6,7 +6,7 @@
   "reason": "Montrer un usage de croquis réellement adapté à l'E Ink : dessin direct au stylet sur un écran mat, sans suggérer un environnement créatif LCD professionnel.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"type-dessin\">",
   "placement": "before",
   "output_path": "assets/generated/dessin-hero.webp",
@@ -16,5 +16,9 @@
   "width": 1280,
   "height": 720,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "e1e2eedc-6e75-4eae-a744-d9c0d7711f9d",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-09-11T14:51:29.207933+00:00"
 }

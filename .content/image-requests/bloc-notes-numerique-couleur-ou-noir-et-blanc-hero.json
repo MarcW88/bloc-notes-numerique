@@ -6,7 +6,7 @@
   "reason": "Montrer visuellement la différence entre un écran E Ink couleur discret et un écran monochrome sans faire croire à un rendu LCD/OLED.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"technologie\">",
   "placement": "before",
   "output_path": "assets/generated/bloc-notes-numerique-couleur-ou-noir-et-blanc-hero.webp",
@@ -16,5 +16,9 @@
   "width": 1280,
   "height": 720,
   "prompt_upsampling": true,
-  "seed": null
+  "seed": null,
+  "bfl_request_id": "1c20e6b9-c7b6-44da-93ee-8b64a7fa6146",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0,
+  "generated_at": "2026-09-11T14:51:18.716227+00:00"
 }
