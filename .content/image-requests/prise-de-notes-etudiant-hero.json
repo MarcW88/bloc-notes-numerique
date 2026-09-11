@@ -6,7 +6,7 @@
   "reason": "Illustrer l'usage étudiant dans un cadre crédible et sobre, sans représenter un produit précis.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "REGENERATE",
+  "status": "GENERATED",
   "marker": "<h2 id=\"supports\">",
   "placement": "before",
   "output_path": "assets/generated/prise-de-notes-etudiant-hero.webp",
@@ -17,8 +17,8 @@
   "height": 720,
   "prompt_upsampling": true,
   "seed": null,
-  "generated_at": "2026-09-11T13:55:05.665557+00:00",
-  "bfl_request_id": "cb58ea30-88a5-42fd-9343-d7d6dbcafa0d",
+  "generated_at": "2026-09-11T14:33:18.516996+00:00",
+  "bfl_request_id": "07390964-a443-4972-a7d0-dc82176e69ea",
   "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
   "bfl_cost": 3.0
 }
