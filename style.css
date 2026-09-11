@@ -1147,3 +1147,20 @@ html:has(link[rel="canonical"][href*="/marques/"]) .product-summary-header {
     display: none;
   }
 }
+
+
+/* Homepage hero image: fill the placeholder without letterboxing. */
+.hero-visual {
+  min-height: 0;
+  aspect-ratio: 32 / 21;
+}
+.hero-visual .editorial-media {
+  width: 100%;
+  height: 100%;
+  margin: 0 !important;
+}
+.hero-visual .editorial-media img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
