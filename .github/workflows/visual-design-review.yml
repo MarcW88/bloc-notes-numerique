@@ -2,6 +2,9 @@ name: Visual design review
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Generate approved editorial images with BFL"]
+    types: [completed]
   push:
     branches: [main]
     paths:
@@ -50,6 +53,10 @@ on:
 
 jobs:
   visual-pages:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       !startsWith(github.event.workflow_run.head_commit.message, 'chore(images): generate approved editorial images'))
     runs-on: ubuntu-latest
     timeout-minutes: 25
     strategy:
