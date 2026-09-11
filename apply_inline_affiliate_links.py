@@ -19,6 +19,7 @@ AFFILIATE_PATH = ROOT / ".content" / "products" / "affiliate.json"
 INLINE_PATH = ROOT / ".content" / "products" / "inline-affiliate.json"
 
 STYLE_TAG = '<link rel="stylesheet" href="/assets/product-cards.css">'
+INLINE_STYLE_TAG = '<link rel="stylesheet" href="/assets/inline-affiliate.css">'
 SCRIPT_TAG = '<script src="/assets/product-affiliate.js" defer></script>'
 GENERATED_RE = re.compile(
     r"\n?<!-- INLINE_AFFILIATE:[^>]+:START -->.*?<!-- INLINE_AFFILIATE:[^>]+:END -->\n?",
@@ -78,6 +79,8 @@ def cta(product_id: str, product: dict, affiliate: dict, placement: str, table: 
 def ensure_assets(page_html: str) -> str:
     if STYLE_TAG not in page_html:
         page_html = page_html.replace("</head>", f"  {STYLE_TAG}\n</head>", 1)
+    if INLINE_STYLE_TAG not in page_html:
+        page_html = page_html.replace("</head>", f"  {INLINE_STYLE_TAG}\n</head>", 1)
     if SCRIPT_TAG not in page_html:
         page_html = page_html.replace("</body>", f"{SCRIPT_TAG}\n</body>", 1)
     return page_html
