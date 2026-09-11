@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "roots": ["marques", "bons-plans"],
+  "products": {
+    "remarkable-paper-pro": {
+      "row_aliases": ["reMarkable Paper Pro", "Paper Pro"],
+      "subject_paths": [
+        "marques/remarkable/remarkable-paper-pro/index.html",
+        "marques/remarkable/remarkable-paper-pro-avis/index.html"
+      ]
+    },
+    "boox-note-air5-c": {
+      "row_aliases": ["BOOX Note Air5 C", "Note Air5 C"],
+      "subject_paths": ["marques/boox/boox-note-air/index.html"]
+    },
+    "boox-go-10-3-gen2": {
+      "row_aliases": ["BOOX Go 10.3 (Gen II)", "Go 10.3 Gen II"],
+      "subject_paths": []
+    },
+    "boox-go-10-3-lumi": {
+      "row_aliases": ["BOOX Go 10.3 Gen II Lumi", "Go 10.3 Gen II Lumi"],
+      "subject_paths": []
+    },
+    "boox-tab-x-c": {
+      "row_aliases": ["BOOX Tab X C", "Tab X C"],
+      "subject_paths": []
+    },
+    "kindle-scribe-3": {
+      "row_aliases": ["Kindle Scribe (3e génération)", "Kindle Scribe 3e génération"],
+      "subject_paths": []
+    },
+    "kobo-elipsa-2e": {
+      "row_aliases": ["Kobo Elipsa 2E", "Elipsa 2E"],
+      "subject_paths": ["marques/kobo-elipsa/index.html"]
+    }
+  }
+}
