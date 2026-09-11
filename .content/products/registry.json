@@ -17,7 +17,7 @@
       "name": "reMarkable Paper Pro",
       "internal_url": "/marques/remarkable/remarkable-paper-pro/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0DG9ZXWMK", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "11,8 pouces, couleur"},
         {"label": "Éclairage", "value": "Éclairage frontal"},
@@ -41,7 +41,7 @@
       "name": "BOOX Note Air5 C",
       "internal_url": "/marques/boox/boox-note-air/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0FR4KXMKF", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "10,3 pouces, couleur"},
         {"label": "Système", "value": "Android 15 avec Google Play"},
@@ -53,7 +53,7 @@
       "name": "BOOX Go 10.3 (Gen II)",
       "internal_url": "/marques/boox/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0GS9QDBG6", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
         {"label": "Système", "value": "Android 15 avec Google Play"},
@@ -65,7 +65,7 @@
       "name": "BOOX Go 10.3 Gen II Lumi",
       "internal_url": "/marques/boox/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0GS9NDWW4", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
         {"label": "Système", "value": "Android 15 avec Google Play"},
@@ -89,7 +89,7 @@
       "name": "BOOX Tab X C",
       "internal_url": "/marques/boox/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0F63CNRQ7", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "13,3 pouces, couleur Kaleido 3"},
         {"label": "Éclairage", "value": "Éclairage frontal"},
@@ -101,7 +101,7 @@
       "name": "Kindle Scribe (3e génération)",
       "internal_url": "/marques/kindle-scribe/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0FC1XB22K", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "Grand écran E Ink monochrome"},
         {"label": "Éclairage", "value": "Éclairage frontal"},
@@ -113,7 +113,7 @@
       "name": "Kobo Elipsa 2E",
       "internal_url": "/marques/kobo-elipsa/",
       "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "amazon": {"asin": "B0C15G7J3V", "affiliate_url": "", "marketplace": "amazon.fr"},
       "specs": [
         {"label": "Écran", "value": "10,3 pouces, monochrome"},
         {"label": "Éclairage", "value": "ComfortLight PRO"},
