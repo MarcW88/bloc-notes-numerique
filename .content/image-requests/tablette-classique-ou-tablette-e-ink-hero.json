@@ -1,0 +1,21 @@
+{
+  "id": "tablette-classique-ou-tablette-e-ink-hero",
+  "page": "guides/tablette-classique-ou-tablette-e-ink/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer le contraste d'usage entre une tablette classique et une tablette E Ink dans un contexte réaliste.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"technologie\">",
+  "placement": "before",
+  "output_path": "assets/generated/tablette-classique-ou-tablette-e-ink-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide comparing a classic tablet and an E Ink digital notebook. A generic glossy tablet and a generic matte E Ink writing tablet are placed side by side on a tidy desk, with a person using a stylus on the E Ink device. Soft daylight, realistic reflections and textures, calm professional setting, explanatory editorial tone, no brand, no logo, no readable text on screens, no watermark, no CGI look.",
+  "alt": "Tablette classique et tablette E Ink génériques côte à côte sur un bureau",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
