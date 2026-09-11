@@ -1,0 +1,21 @@
+{
+  "id": "prise-de-notes-reunion-hero",
+  "page": "usages/prise-de-notes-reunion/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Montrer un usage en réunion concret et immédiatement compréhensible sans représenter un produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"premiere-minute\">",
+  "placement": "before",
+  "output_path": "assets/generated/prise-de-notes-reunion-hero.webp",
+  "prompt": "Photorealistic editorial photograph of a small meeting scene where one person is taking notes with a stylus on a generic unbranded digital notebook, modern meeting room, subtle colleagues softly out of focus in the background, realistic professional atmosphere, natural light, clear focus on the note-taking action, no visible brand, no logos, no readable text on devices or screens, no watermark, no CGI look.",
+  "alt": "Prise de notes en réunion sur un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}

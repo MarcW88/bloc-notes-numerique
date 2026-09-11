@@ -1,0 +1,21 @@
+{
+  "id": "annoter-pdf-tablette-e-ink-hero",
+  "page": "guides/annoter-pdf-tablette-e-ink/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Montrer un usage concret d'annotation de document sur tablette E Ink sans prétendre représenter une interface ou un produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"avant\">",
+  "placement": "before",
+  "output_path": "assets/generated/annoter-pdf-tablette-e-ink-hero.webp",
+  "prompt": "Photorealistic editorial photograph of a person annotating a PDF-like document on a generic unbranded E Ink tablet with a stylus, document layout visible but unreadable, hands clearly visible, desk environment, natural light, realistic device proportions and paper-like screen texture, educational editorial style, no visible brand, no logo, no readable text, no watermark, no CGI look.",
+  "alt": "Personne annotant un document sur une tablette E Ink générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}

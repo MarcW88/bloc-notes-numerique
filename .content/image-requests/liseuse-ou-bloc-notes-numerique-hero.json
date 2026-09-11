@@ -1,0 +1,21 @@
+{
+  "id": "liseuse-ou-bloc-notes-numerique-hero",
+  "page": "guides/liseuse-ou-bloc-notes-numerique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Montrer visuellement la différence d'usage entre lecture et prise de notes active, sans représenter de modèle précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"difference\">",
+  "placement": "before",
+  "output_path": "assets/generated/liseuse-ou-bloc-notes-numerique-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide comparing an e-reader and a digital notebook. On a clean desk, a generic reading device and a generic unbranded E Ink note-taking device are shown in a realistic everyday setting, with a person interacting mainly with the note-taking device using a stylus. Soft natural light, realistic proportions and materials, calm educational editorial tone, no visible brands, no logos, no readable screen text, no watermark, no CGI look.",
+  "alt": "Liseuse et bloc-notes numérique génériques dans un contexte de comparaison d'usage",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}

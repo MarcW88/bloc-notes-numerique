@@ -1,0 +1,21 @@
+{
+  "id": "prise-de-notes-etudiant-hero",
+  "page": "usages/prise-de-notes-etudiant/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer l'usage étudiant dans un cadre crédible et sobre, sans représenter un produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"supports\">",
+  "placement": "before",
+  "output_path": "assets/generated/prise-de-notes-etudiant-hero.webp",
+  "prompt": "Photorealistic editorial photograph of a student using a generic unbranded digital notebook to take notes in a bright study environment such as a library or classroom desk, stylus in hand, focused posture, realistic academic atmosphere, natural light, subtle books and study materials around, no visible brand, no logo, no readable text, no watermark, no CGI look.",
+  "alt": "Étudiant prenant des notes sur un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
