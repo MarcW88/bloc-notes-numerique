@@ -5,6 +5,8 @@ on:
     branches:
       - feature/amazon-affiliate-links
     paths:
+      - "product_cards.py"
+      - ".content/products/**"
       - ".github/workflows/apply-amazon-affiliate-links-branch.yml"
 
 permissions:
