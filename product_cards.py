@@ -133,7 +133,7 @@ def render_recommendation_row(product_id: str, product: dict, placement: str) ->
         f'<div class="{row_class}" data-product-id="{esc(product_id)}">'
         f'{media_html}'
         '<div class="product-recommendation-row__content">'
-        f'<h3 class="product-recommendation-row__title">{esc(product["name"])} </h3>'
+        f'<h3 class="product-recommendation-row__title">{esc(product["name"])}</h3>'
         f'<p class="product-recommendation-row__best"><strong>À privilégier pour :</strong> {esc(product["best_for"])}</p>'
         f'<dl class="product-recommendation-row__specs">{specs}</dl>'
         "</div>"
