@@ -6,6 +6,7 @@ import sys
 ROOT = Path(__file__).resolve().parent
 GEN = ROOT / "_generate.py"
 AGENTS = ROOT / "AGENTS.md"
+INLINE_AFFILIATE = ROOT / "apply_inline_affiliate_links.py"
 
 
 def patch_generator():
@@ -89,6 +90,13 @@ def main():
     patch_generator()
     patch_agents()
     subprocess.run([sys.executable, str(GEN)], cwd=ROOT, check=True)
+    # Deal pages are generator-owned: restore verified inline Amazon CTAs as part
+    # of the same deterministic render so workflow idempotence remains intact.
+    subprocess.run(
+        [sys.executable, str(INLINE_AFFILIATE), "bons-plans"],
+        cwd=ROOT,
+        check=True,
+    )
     return 0
 
 
