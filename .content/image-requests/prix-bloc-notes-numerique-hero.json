@@ -1,0 +1,20 @@
+{
+  "id": "prix-bloc-notes-numerique-hero",
+  "page": "guides/prix-bloc-notes-numerique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer le coût d'une configuration complète en montrant appareil et accessoires utiles, sans afficher de prix ni de marque susceptibles d'être faux ou périmés.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"combien\">",
+  "placement": "before",
+  "output_path": "assets/generated/prix-bloc-notes-numerique-hero.webp",
+  "prompt": "Photorealistic editorial flat-lay photograph for a French guide about the total cost of a digital notebook setup. A generic unbranded matte E Ink digital notepad is shown on a desk with a stylus, simple protective folio, spare stylus tips and a compact generic keyboard accessory arranged nearby to suggest a complete configuration. Include a small neutral calculator or notebook with no readable numbers. Soft natural daylight, realistic proportions and materials, sober premium editorial photography, no visible brand, no logo, no readable price, no currency symbols, no watermark, no glowing LCD screen, no ecommerce styling, no CGI look.",
+  "alt": "Bloc-notes numérique générique avec stylet, housse et accessoires sur un bureau",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}
