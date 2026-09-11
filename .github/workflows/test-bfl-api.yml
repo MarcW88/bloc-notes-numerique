@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature/bfl-image-api
+      - main
     paths:
       - '.github/workflows/test-bfl-api.yml'
       - 'scripts/generate_bfl_images.py'
