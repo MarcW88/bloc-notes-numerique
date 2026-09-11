@@ -3,7 +3,7 @@
 
 This complements the existing product modules. It only touches brand/deal pages,
 adds one CTA on configured subject pages, and adds a compact CTA to table rows
-whose first cells clearly identify a verified product.
+whose cells clearly identify a verified product.
 """
 
 from __future__ import annotations
@@ -11,6 +11,7 @@ from __future__ import annotations
 import html
 import json
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -173,10 +174,15 @@ def main() -> None:
     affiliate = load_json(AFFILIATE_PATH)
     config = load_json(INLINE_PATH)
     configs = config["products"]
+    allowed_roots = config.get("roots", [])
+    requested_roots = sys.argv[1:] or allowed_roots
+    unknown_roots = sorted(set(requested_roots) - set(allowed_roots))
+    if unknown_roots:
+        raise SystemExit("Unknown inline-affiliate root(s): " + ", ".join(unknown_roots))
 
     changed_pages = 0
     total_ctas = 0
-    for root_name in config.get("roots", []):
+    for root_name in requested_roots:
         root = ROOT / root_name
         if not root.exists():
             continue
