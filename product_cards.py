@@ -67,7 +67,7 @@ def render_commerce(product_id: str, product: dict, placement: str) -> str:
         return (
             f'<a class="product-card__cta" href="{esc(affiliate_url)}" '
             'target="_blank" rel="sponsored nofollow noopener noreferrer" '
-            f'data-affiliate-link="amazon" data-product-id="{esc(product_id)}" '
+            f'data-affiliate-link="amazon" data-product-key="{esc(product_id)}" '
             f'data-placement="{esc(placement)}">Voir le prix sur Amazon →</a>'
             '<span class="product-card__disclosure">Lien rémunéré</span>'
         )
