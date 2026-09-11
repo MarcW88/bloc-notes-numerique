@@ -1,0 +1,21 @@
+{
+  "id": "choisir-bloc-notes-numerique-hero",
+  "page": "guides/choisir-bloc-notes-numerique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer immédiatement le choix d'un bloc-notes numérique avec une scène réaliste de comparaison et d'évaluation, sans représenter un produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"workflow\">",
+  "placement": "before",
+  "output_path": "assets/generated/choisir-bloc-notes-numerique-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide about choosing a digital notebook. A person at a tidy desk is evaluating a generic unbranded E Ink digital notepad with a stylus, alongside a paper notebook and a few neutral documents for comparison. Three-quarter view, hands and device clearly visible, soft natural window light, realistic materials and proportions, calm modern workspace, documentary editorial photography, premium but not advertising-like, no visible brand, no logo, no readable text on screen or paper, no watermark, no futuristic interface, no CGI look.",
+  "alt": "Personne évaluant un bloc-notes numérique générique à son bureau",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
