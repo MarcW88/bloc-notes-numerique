@@ -1,0 +1,20 @@
+{
+  "id": "bloc-notes-numerique-couleur-ou-noir-et-blanc-hero",
+  "page": "guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Montrer visuellement la différence entre un écran E Ink couleur discret et un écran monochrome sans faire croire à un rendu LCD/OLED.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"technologie\">",
+  "placement": "before",
+  "output_path": "assets/generated/bloc-notes-numerique-couleur-ou-noir-et-blanc-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide comparing color and monochrome E Ink digital notebooks. Two generic unbranded e-paper devices lie side by side on a desk, both with matte paper-like screens. One shows a simple muted low-saturation e-paper color diagram with soft subdued colors; the other shows a similar grayscale diagram. The screens must look reflective and non-emissive, with no glow and no saturated LCD/OLED appearance. Realistic stylus and paper texture nearby, soft daylight, documentary editorial photography, no visible brand, no logo, no readable text, no watermark, no futuristic interface, no CGI look.",
+  "alt": "Comparaison entre un écran E Ink couleur discret et un écran monochrome",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}
