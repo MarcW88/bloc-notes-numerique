@@ -79,6 +79,12 @@ jobs:
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
+      - name: Force images eager for deterministic screenshots
+        shell: bash
+        run: |
+          find marques comparatifs usages guides bons-plans -name '*.html' -type f -print0 \
+            | xargs -0 -r sed -i 's/loading="lazy"/loading="eager"/g'
+
       - name: Capture ${{ matrix.scope }} pages
         run: >-
           node .agents/skills/site-design-review/scripts/run-visual-review.mjs
