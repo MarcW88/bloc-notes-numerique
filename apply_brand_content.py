@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 from pathlib import Path
 import re
+import subprocess
+import sys
 from brand_pages import PAGES
 from brand_data import VERIFIED_AT, BRANDS
 from brand_publication import INDEXATION_SCOPE, ROBOTS_DIRECTIVE
@@ -11,6 +13,7 @@ from brand_hub_bespoke_output import hub_body, hub_metadata
 from brand_light_update_output import light_body, light_metadata
 
 ROOT = Path(__file__).resolve().parent
+INLINE_AFFILIATE = ROOT / "apply_inline_affiliate_links.py"
 
 
 def html_path(url):
@@ -138,3 +141,11 @@ for url, page_data in PAGES.items():
 
     page.write_text(html, encoding='utf-8')
     print('updated', url)
+
+# Brand pages are renderer-owned. Re-apply verified Amazon placements after the
+# editorial render so future brand refreshes cannot silently remove them.
+subprocess.run(
+    [sys.executable, str(INLINE_AFFILIATE), "marques"],
+    cwd=ROOT,
+    check=True,
+)
