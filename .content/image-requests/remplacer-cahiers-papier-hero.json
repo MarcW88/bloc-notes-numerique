@@ -1,0 +1,20 @@
+{
+  "id": "remplacer-cahiers-papier-hero",
+  "page": "usages/remplacer-cahiers-papier/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer le passage d'un système de cahiers papier à un bloc-notes numérique sans promettre un remplacement total ni représenter un produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"job\">",
+  "placement": "before",
+  "output_path": "assets/generated/remplacer-cahiers-papier-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French article about replacing paper notebooks with a digital notebook. On a real desk, a person is writing directly with a stylus on a generic unbranded E Ink digital notepad while two or three closed paper notebooks and loose neutral notes sit nearby, clearly suggesting a transition from paper to digital rather than eliminating paper completely. The stylus tip visibly touches a matte monochrome e-paper screen with faint non-readable handwriting strokes. Soft natural daylight, realistic materials and proportions, calm documentary editorial photography, no visible brand, no logo, no readable text, no watermark, no glowing LCD screen, no futuristic UI, no CGI look.",
+  "alt": "Passage de cahiers papier à un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}

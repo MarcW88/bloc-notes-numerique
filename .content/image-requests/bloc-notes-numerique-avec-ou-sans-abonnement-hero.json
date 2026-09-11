@@ -1,0 +1,20 @@
+{
+  "id": "bloc-notes-numerique-avec-ou-sans-abonnement-hero",
+  "page": "guides/bloc-notes-numerique-avec-ou-sans-abonnement/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer la dépendance logicielle et la continuité d'usage entre le bloc-notes et l'ordinateur, plutôt qu'un abonnement abstrait ou un prix précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"definition\">",
+  "placement": "before",
+  "output_path": "assets/generated/bloc-notes-numerique-avec-ou-sans-abonnement-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide about digital notebooks with or without subscription services. A generic unbranded E Ink digital notepad with a matte monochrome screen sits beside a laptop in a calm workspace, suggesting note synchronization and file export between devices. The laptop interface is minimal and out of focus with only generic folder or cloud shapes, no readable text, no real service logos. The e-paper device must look non-emissive and paper-like, not like an LCD tablet. Soft natural daylight, realistic materials, documentary editorial photography, no visible brand, no logo, no watermark, no credit-card advertising scene, no futuristic UI, no CGI look.",
+  "alt": "Bloc-notes numérique générique utilisé avec un ordinateur pour synchroniser des notes",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}
