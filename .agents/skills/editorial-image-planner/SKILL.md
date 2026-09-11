@@ -1,11 +1,11 @@
 ---
 name: editorial-image-planner
-description: Décide si une page de bloc-notes-numeriques.fr a réellement besoin d'une image éditoriale générée, puis crée une requête compatible avec l'automatisation locale Draw Things. À utiliser après la rédaction et avant la publication.
+description: Décide si une page de bloc-notes-numeriques.fr a réellement besoin d'une image éditoriale générée, puis crée une requête compatible avec l'automatisation BFL. À utiliser après la rédaction et avant la publication.
 license: MIT
 metadata:
   adapted_for: bloc-notes-numeriques.fr
-  generator: Draw Things local API
-  default_model: FLUX.2 Klein 4B
+  generator: Black Forest Labs FLUX API
+  default_model: FLUX.2 Pro Preview
 ---
 
 # Editorial Image Planner
@@ -14,7 +14,7 @@ metadata:
 
 Ajouter des images uniquement lorsqu'elles améliorent réellement la page. Une image générée n'est jamais un quota SEO, un remplissage décoratif ou une preuve produit.
 
-Le workflow de génération est piloté par les fichiers `.content/image-requests/*.json`. Le moteur local ne génère que les requêtes explicitement marquées `required: true`, `allow_ai_generation: true` et `status: PENDING` ou `REGENERATE`.
+Le workflow de génération est piloté par les fichiers `.content/image-requests/*.json`. Le moteur ne génère que les requêtes explicitement marquées `required: true`, `allow_ai_generation: true` et `status: PENDING` ou `REGENERATE`.
 
 ## 1. Décision : image nécessaire ou non
 
@@ -48,7 +48,7 @@ Mettre `allow_ai_generation: false` lorsque l'image devrait représenter fidèle
 - une personne réelle identifiable ;
 - une scène présentée comme un test hands-on du site.
 
-Dans ces cas, conserver éventuellement la requête avec `status: BLOCKED` afin de documenter qu'une vraie image est nécessaire, mais ne pas déclencher Draw Things.
+Dans ces cas, conserver éventuellement la requête avec `status: BLOCKED` afin de documenter qu'une vraie image est nécessaire, mais ne pas déclencher BFL.
 
 ## 3. Types d'images autorisés
 
@@ -79,15 +79,16 @@ Renseigner au minimum :
 - `output_path` : toujours sous `assets/generated/` ;
 - `prompt` : brief photographique complet ;
 - `alt` : description utile et concise ;
-- dimensions et paramètres de génération.
+- dimensions, `prompt_upsampling` et éventuellement `seed`.
 
-Pour FLUX.2 Klein 4B sur le Mac 16 Go du projet, utiliser par défaut :
+Pour BFL FLUX.2 [pro], utiliser par défaut :
 
-- `width: 768` ;
-- `height: 512` ;
-- `steps: 4` ;
-- `guidance_scale: 1.0` ;
-- `batch_count: 1`.
+- `width: 1024` ;
+- `height: 672` ;
+- `prompt_upsampling: true` ;
+- `seed: null` sauf besoin explicite de reproductibilité.
+
+FLUX.2 n'utilise pas de negative prompt. Décrire positivement le rendu souhaité et intégrer les contraintes utiles dans le prompt.
 
 ## 5. Placer le marqueur dans la source de vérité
 
@@ -101,7 +102,7 @@ Exemple :
 
 Le placer à l'endroit exact où l'image apporte le plus de valeur. Éviter de mettre automatiquement toutes les images juste sous le H1.
 
-Lors de l'exécution locale, le script remplace ce marqueur dans le HTML généré par la balise `<figure>` correspondante. Si le site est régénéré plus tard et que le marqueur réapparaît, l'automatisation réinsère l'image existante sans la régénérer.
+Lors de l'exécution GitHub Actions, le script remplace ce marqueur dans le HTML généré par la balise `<figure>` correspondante. Si le site est régénéré plus tard et que le marqueur réapparaît, l'automatisation réinsère l'image existante sans la régénérer.
 
 ## 6. Prompt photographique
 
@@ -117,7 +118,7 @@ Le prompt doit décrire :
 
 Terminer généralement par des contraintes du type :
 
-`photorealistic editorial photography, natural light, realistic proportions and materials, generic unbranded device, no readable text, no logo, no watermark, no CGI look`
+`photorealistic editorial photography, natural light, realistic proportions and materials, generic unbranded device, blank or non-readable screen content, no visible logo or watermark, candid documentary framing`
 
 Ne pas demander au modèle d'inventer une marque, un écran lisible ou une référence produit précise.
 

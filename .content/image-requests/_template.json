@@ -10,14 +10,11 @@
   "marker": "<!-- EDITORIAL_IMAGE:<slug>-<slot> -->",
   "output_path": "assets/generated/<slug>-<slot>.png",
   "prompt": "",
-  "negative_prompt": "readable text, logo, watermark, brand name, distorted hands, deformed objects, CGI, illustration",
   "alt": "",
   "caption": "",
-  "width": 768,
-  "height": 512,
-  "steps": 4,
-  "guidance_scale": 1.0,
-  "seed": -1,
-  "batch_count": 1,
+  "width": 1024,
+  "height": 672,
+  "prompt_upsampling": true,
+  "seed": null,
   "generated_at": null
 }
