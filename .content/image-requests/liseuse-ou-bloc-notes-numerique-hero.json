@@ -6,7 +6,7 @@
   "reason": "Montrer visuellement la différence d'usage entre lecture et prise de notes active, sans représenter de modèle précis.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"difference\">",
   "placement": "before",
   "output_path": "assets/generated/liseuse-ou-bloc-notes-numerique-hero.webp",
@@ -17,5 +17,8 @@
   "height": 720,
   "prompt_upsampling": true,
   "seed": null,
-  "generated_at": null
+  "generated_at": "2026-09-11T13:54:57.451186+00:00",
+  "bfl_request_id": "700696c3-d3af-47d6-8a47-6f1cf20e840c",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0
 }

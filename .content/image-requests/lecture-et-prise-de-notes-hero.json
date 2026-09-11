@@ -6,7 +6,7 @@
   "reason": "Illustrer un usage mêlant lecture longue et prise de notes sans représenter de produit ou d'interface précis.",
   "allow_ai_generation": true,
   "truth_risk": "LOW",
-  "status": "PENDING",
+  "status": "GENERATED",
   "marker": "<h2 id=\"entree\">",
   "placement": "before",
   "output_path": "assets/generated/lecture-et-prise-de-notes-hero.webp",
@@ -17,5 +17,8 @@
   "height": 720,
   "prompt_upsampling": true,
   "seed": null,
-  "generated_at": null
+  "generated_at": "2026-09-11T13:54:48.319570+00:00",
+  "bfl_request_id": "244e028a-7177-46f4-8b24-c1fc60fb48bc",
+  "bfl_endpoint": "https://api.bfl.ai/v1/flux-2-pro-preview",
+  "bfl_cost": 3.0
 }
