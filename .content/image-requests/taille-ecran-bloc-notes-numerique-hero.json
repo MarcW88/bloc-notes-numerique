@@ -1,0 +1,20 @@
+{
+  "id": "taille-ecran-bloc-notes-numerique-hero",
+  "page": "guides/taille-ecran-bloc-notes-numerique/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer concrètement le compromis entre mobilité et surface utile avec plusieurs formats génériques de bloc-notes E Ink, sans représenter de produit précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"diagonale\">",
+  "placement": "before",
+  "output_path": "assets/generated/taille-ecran-bloc-notes-numerique-hero.webp",
+  "prompt": "Photorealistic editorial photograph for a French guide about choosing screen size for a digital notebook. On a calm desk, three generic unbranded E Ink digital notepads of clearly different physical sizes are arranged side by side: compact, medium around 10 inches, and large document-sized. Matte paper-like monochrome screens, realistic bezels and proportions, one stylus placed nearby for scale, soft natural window light, premium documentary editorial photography, no visible brand, no logo, no readable text, no watermark, no glowing LCD or OLED screens, no futuristic UI, no CGI look.",
+  "alt": "Trois formats de bloc-notes numériques génériques comparés sur un bureau",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}
