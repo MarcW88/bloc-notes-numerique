@@ -1,1 +1,0 @@
-Final indexing release: homepage hero fitted and all public HTML opened to index,follow. Temporary marker for PR creation; remove before merge.
