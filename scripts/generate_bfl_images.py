@@ -25,6 +25,7 @@ DEFAULT_REQUESTS_DIR = ".content/image-requests"
 DEFAULT_BFL_API_URL = "https://api.bfl.ai/v1/flux-2-pro-preview"
 ACTIVE_STATUSES = {"PENDING", "REGENERATE"}
 VALID_STATUSES = {"NOT_NEEDED", "BLOCKED", "PENDING", "GENERATED", "REGENERATE"}
+VALID_PLACEMENTS = {"replace", "before", "after"}
 TERMINAL_FAILURES = {"Error", "Failed"}
 
 
@@ -121,6 +122,10 @@ def validate_request(root: Path, source: Path, req: dict[str, Any]) -> None:
     if status not in VALID_STATUSES:
         raise RequestError(f"{source}: status {status!r} invalide; attendu {sorted(VALID_STATUSES)}")
 
+    placement = req.get("placement", "replace")
+    if placement not in VALID_PLACEMENTS:
+        raise RequestError(f"{source}: placement {placement!r} invalide; attendu {sorted(VALID_PLACEMENTS)}")
+
     required = req.get("required")
     allowed = req.get("allow_ai_generation")
     if not isinstance(required, bool) or not isinstance(allowed, bool):
@@ -171,9 +176,9 @@ def figure_markup(req: dict[str, Any]) -> str:
     height = int(req["height"])
 
     lines = [
-        f'<figure class="editorial-media" data-generated-image="{request_id}" style="margin:28px 0 32px;">',
+        f'<figure class="editorial-media" data-generated-image="{request_id}" style="width:100%;max-width:none;margin:28px 0 32px;">',
         f'  <img src="{html.escape(src, quote=True)}" alt="{alt}" width="{width}" height="{height}" '
-        'loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:var(--radius-md);display:block;">',
+        f'loading="lazy" decoding="async" style="width:100%;height:auto;aspect-ratio:{width}/{height};object-fit:cover;border-radius:var(--radius-md);display:block;">',
     ]
     if caption:
         lines.append(
@@ -345,7 +350,16 @@ def insert_or_restore_figure(root: Path, source: Path, req: dict[str, Any]) -> b
     if marker not in text:
         raise RequestError(f"{source}: impossible d'insérer l'image, marker absent: {marker}")
 
-    page_path.write_text(text.replace(marker, figure_markup(req), 1), encoding="utf-8")
+    figure = figure_markup(req)
+    placement = str(req.get("placement", "replace"))
+    if placement == "before":
+        replacement = f"{figure}\n\n{marker}"
+    elif placement == "after":
+        replacement = f"{marker}\n\n{figure}"
+    else:
+        replacement = figure
+
+    page_path.write_text(text.replace(marker, replacement, 1), encoding="utf-8")
     return True
 
 
