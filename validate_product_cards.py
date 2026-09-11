@@ -3,15 +3,17 @@
 
 from __future__ import annotations
 
+import html
 import json
 import re
 import sys
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 ROOT = Path(__file__).resolve().parent
 REGISTRY = ROOT / ".content" / "products" / "registry.json"
 PLACEMENTS = ROOT / ".content" / "products" / "placements.json"
+AFFILIATE_CONFIG = ROOT / ".content" / "products" / "affiliate.json"
 EXPECTED_SCOPE = {
     "comparisons": {
         "meilleur-bloc-notes-numerique",
@@ -41,10 +43,11 @@ EXPECTED_SCOPE = {
 }
 PROHIBITED_MODULE_ROOTS = {"marques", "bons-plans"}
 ALLOWED_IMAGE_SOURCES = {"UNSET", "OWN", "MANUFACTURER_AUTHORIZED", "AMAZON_CREATORS_API"}
-ALLOWED_AFFILIATE_HOSTS = {"amazon.fr", "www.amazon.fr", "amazon.com.be", "www.amazon.com.be", "amzn.to"}
+ALLOWED_AFFILIATE_HOSTS = {"amazon.fr", "www.amazon.fr", "amazon.com.be", "www.amazon.com.be"}
 FORBIDDEN_COMMERCE_KEYS = {"price", "current_price", "reference_price", "discount", "discount_pct"}
 STYLE_TAG = '<link rel="stylesheet" href="/assets/product-cards.css">'
 SCRIPT_TAG = '<script src="/assets/product-affiliate.js" defer></script>'
+ASIN_RE = re.compile(r"^[A-Z0-9]{10}$")
 
 
 def fail(message: str) -> None:
@@ -61,11 +64,25 @@ def walk_keys(value):
             yield from walk_keys(child)
 
 
-def validate_registry(registry_data: dict) -> dict[str, dict]:
+def has_amazon_link(product: dict) -> bool:
+    amazon = product.get("amazon", {})
+    return bool((amazon.get("asin") or "").strip() or (amazon.get("affiliate_url") or "").strip())
+
+
+def validate_registry(registry_data: dict, affiliate_data: dict) -> dict[str, dict]:
     products = registry_data.get("products", {})
     forbidden = FORBIDDEN_COMMERCE_KEYS & set(walk_keys(registry_data))
     if forbidden:
         fail("static commerce data is forbidden in product registry: " + ", ".join(sorted(forbidden)))
+
+    amazon_config = affiliate_data.get("amazon_fr", {})
+    tracking_id = (amazon_config.get("tracking_id") or "").strip()
+    base_url = (amazon_config.get("base_url") or "").strip()
+    parsed_base = urlsplit(base_url)
+    if not tracking_id:
+        fail("Amazon.fr tracking_id is missing")
+    if parsed_base.scheme != "https" or parsed_base.hostname not in {"amazon.fr", "www.amazon.fr"}:
+        fail("Amazon.fr base_url must be an HTTPS amazon.fr URL")
 
     for product_id, product in products.items():
         for key in ("name", "internal_url", "image", "amazon", "specs", "best_for"):
@@ -88,11 +105,20 @@ def validate_registry(registry_data: dict) -> dict[str, dict]:
         if source_type == "AMAZON_CREATORS_API" and image_url and not image_url.startswith("https://"):
             fail(f"{product_id}: Creators API image must remain a remote HTTPS URL")
 
-        affiliate_url = (product["amazon"].get("affiliate_url") or "").strip()
+        amazon = product["amazon"]
+        asin = (amazon.get("asin") or "").strip()
+        if asin and not ASIN_RE.fullmatch(asin):
+            fail(f"{product_id}: invalid Amazon ASIN {asin!r}")
+
+        affiliate_url = (amazon.get("affiliate_url") or "").strip()
         if affiliate_url:
             parsed = urlsplit(affiliate_url)
             if parsed.scheme != "https" or parsed.hostname not in ALLOWED_AFFILIATE_HOSTS:
-                fail(f"{product_id}: unsupported Amazon/SiteStripe affiliate URL")
+                fail(f"{product_id}: unsupported Amazon affiliate URL")
+            if parse_qs(parsed.query).get("tag") != [tracking_id]:
+                fail(f"{product_id}: Amazon affiliate URL must use tracking id {tracking_id}")
+            if asin and f"/dp/{asin}" not in parsed.path:
+                fail(f"{product_id}: affiliate URL does not match configured ASIN {asin}")
     return products
 
 
@@ -144,10 +170,16 @@ def validate_config(placements_data: dict, products: dict[str, dict]) -> None:
         fail(f"approved product-module scope must remain 19 pages, got {total_pages}")
 
 
-def validate_rendered_section(section: str, placements_data: dict, products: dict[str, dict]) -> None:
+def validate_rendered_section(
+    section: str,
+    placements_data: dict,
+    products: dict[str, dict],
+    affiliate_data: dict,
+) -> None:
     section_config = placements_data["sections"][section]
     base_path = section_config["base_path"]
     expected_pages = section_config["pages"]
+    tracking_id = affiliate_data["amazon_fr"]["tracking_id"]
 
     found = set()
     for page in sorted((ROOT / base_path).glob("*/index.html")):
@@ -201,9 +233,7 @@ def validate_rendered_section(section: str, placements_data: dict, products: dic
             if 'product-recommendation-list' in text:
                 fail(f"{section}/{slug}: duel unexpectedly uses recommendation list")
 
-        expected_affiliate_links = sum(
-            1 for pid in config["products"] if (products[pid]["amazon"].get("affiliate_url") or "").strip()
-        )
+        expected_affiliate_links = sum(1 for pid in config["products"] if has_amazon_link(products[pid]))
         actual_affiliate_links = text.count('data-affiliate-link="amazon"')
         if actual_affiliate_links != expected_affiliate_links:
             fail(f"{section}/{slug}: expected {expected_affiliate_links} Amazon CTAs, got {actual_affiliate_links}")
@@ -213,6 +243,13 @@ def validate_rendered_section(section: str, placements_data: dict, products: dic
             required = {"sponsored", "nofollow", "noopener", "noreferrer"}
             if not required.issubset(tokens):
                 fail(f"{section}/{slug}: Amazon CTA missing required rel tokens")
+
+            href = re.search(r'href="([^"]+)"', tag, re.I)
+            if not href:
+                fail(f"{section}/{slug}: Amazon CTA missing href")
+            rendered_url = html.unescape(href.group(1))
+            if parse_qs(urlsplit(rendered_url).query).get("tag") != [tracking_id]:
+                fail(f"{section}/{slug}: Amazon CTA missing tracking id {tracking_id}")
 
 
 def validate_prohibited_roots() -> None:
@@ -235,13 +272,14 @@ def main() -> None:
 
     registry_data = json.loads(REGISTRY.read_text(encoding="utf-8"))
     placements_data = json.loads(PLACEMENTS.read_text(encoding="utf-8"))
-    products = validate_registry(registry_data)
+    affiliate_data = json.loads(AFFILIATE_CONFIG.read_text(encoding="utf-8"))
+    products = validate_registry(registry_data, affiliate_data)
     validate_policy(placements_data)
     validate_config(placements_data, products)
     validate_prohibited_roots()
 
     for section in sections_to_validate:
-        validate_rendered_section(section, placements_data, products)
+        validate_rendered_section(section, placements_data, products, affiliate_data)
 
     names = ", ".join(sections_to_validate)
     print(f"PASS: product modules validated for {names}")
@@ -249,6 +287,7 @@ def main() -> None:
     print("PASS: brands, deals, hubs and informational guides stay outside product-module scope")
     print("PASS: recommendation lists contain at most 3 products; duels contain exactly 2")
     print("PASS: no static Amazon prices are stored; affiliate CTAs remain conditional and sponsored")
+    print(f"PASS: every Amazon CTA carries tracking id {affiliate_data['amazon_fr']['tracking_id']}")
 
 
 if __name__ == "__main__":

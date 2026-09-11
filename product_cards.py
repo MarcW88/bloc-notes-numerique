@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 REGISTRY_PATH = ROOT / ".content" / "products" / "registry.json"
 PLACEMENTS_PATH = ROOT / ".content" / "products" / "placements.json"
+AFFILIATE_CONFIG_PATH = ROOT / ".content" / "products" / "affiliate.json"
 LEGACY_PILOT_PATH = ROOT / ".content" / "products" / "pilot-comparisons.json"
 ALLOWED_LAYOUTS = {"recommendation_list", "comparison_cards"}
 
@@ -43,14 +44,30 @@ def esc(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
-def render_commerce(product_id: str, product: dict, placement: str) -> str:
+def amazon_affiliate_url(product: dict) -> str:
+    """Return an explicit affiliate URL or build the canonical Amazon.fr link from ASIN."""
     amazon = product.get("amazon", {})
     affiliate_url = (amazon.get("affiliate_url") or "").strip()
+    if affiliate_url:
+        return affiliate_url
+
+    asin = (amazon.get("asin") or "").strip()
+    if not asin:
+        return ""
+
+    config = load_json(AFFILIATE_CONFIG_PATH)["amazon_fr"]
+    base_url = config["base_url"].rstrip("/")
+    tracking_id = config["tracking_id"]
+    return f"{base_url}/dp/{asin}/ref=nosim?tag={tracking_id}"
+
+
+def render_commerce(product_id: str, product: dict, placement: str) -> str:
+    affiliate_url = amazon_affiliate_url(product)
     if affiliate_url:
         return (
             f'<a class="product-card__cta" href="{esc(affiliate_url)}" '
             'target="_blank" rel="sponsored nofollow noopener noreferrer" '
-            f'data-affiliate-link="amazon" data-product-id="{esc(product_id)}" '
+            f'data-affiliate-link="amazon" data-product-key="{esc(product_id)}" '
             f'data-placement="{esc(placement)}">Voir le prix sur Amazon →</a>'
             '<span class="product-card__disclosure">Lien rémunéré</span>'
         )
