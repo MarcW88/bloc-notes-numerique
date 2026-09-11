@@ -1,0 +1,21 @@
+{
+  "id": "prise-de-notes-professionnelle-hero",
+  "page": "usages/prise-de-notes-professionnelle/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer le contexte professionnel de prise de notes avec un bloc-notes numérique générique.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"continuite\">",
+  "placement": "before",
+  "output_path": "assets/generated/prise-de-notes-professionnelle-hero.webp",
+  "prompt": "Photorealistic editorial image of a professional using a generic unbranded digital notebook during work, seated at a clean desk in a modern office, stylus in hand, focused note-taking posture, laptop and papers subtly present in the environment, natural daylight, realistic materials and skin, calm premium editorial style, no visible brand, no logo, no readable text, no watermark, no CGI look.",
+  "alt": "Professionnel prenant des notes sur un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
