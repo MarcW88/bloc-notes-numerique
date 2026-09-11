@@ -1,0 +1,21 @@
+{
+  "id": "lecture-et-prise-de-notes-hero",
+  "page": "usages/lecture-et-prise-de-notes/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Illustrer un usage mêlant lecture longue et prise de notes sans représenter de produit ou d'interface précis.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"entree\">",
+  "placement": "before",
+  "output_path": "assets/generated/lecture-et-prise-de-notes-hero.webp",
+  "prompt": "Photorealistic editorial photograph of a person reading and taking notes with a generic unbranded digital notebook, calm home or study setting, book or document nearby, stylus in hand, reflective focused mood, natural window light, realistic textures and proportions, no visible brand, no logo, no readable text on device or paper, no watermark, no CGI look.",
+  "alt": "Personne lisant et prenant des notes sur un bloc-notes numérique générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null,
+  "generated_at": null
+}
