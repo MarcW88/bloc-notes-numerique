@@ -1,0 +1,20 @@
+{
+  "id": "dessin-hero",
+  "page": "usages/dessin/index.html",
+  "slot": "editorial",
+  "required": true,
+  "reason": "Montrer un usage de croquis réellement adapté à l'E Ink : dessin direct au stylet sur un écran mat, sans suggérer un environnement créatif LCD professionnel.",
+  "allow_ai_generation": true,
+  "truth_risk": "LOW",
+  "status": "PENDING",
+  "marker": "<h2 id=\"type-dessin\">",
+  "placement": "before",
+  "output_path": "assets/generated/dessin-hero.webp",
+  "prompt": "Photorealistic editorial photograph of a person sketching directly with a stylus on a generic unbranded E Ink digital notebook. The stylus tip visibly touches the matte paper-like monochrome screen, which shows a simple black line sketch or storyboard with no readable text. The device must look reflective and non-emissive, not like an iPad or LCD drawing tablet. Calm creative desk with a few pencils and paper references nearby, soft natural daylight, realistic hand anatomy and proportions, documentary editorial photography, no visible brand, no logo, no saturated interface, no watermark, no CGI look.",
+  "alt": "Personne réalisant un croquis au stylet sur un bloc-notes E Ink générique",
+  "caption": "",
+  "width": 1280,
+  "height": 720,
+  "prompt_upsampling": true,
+  "seed": null
+}
