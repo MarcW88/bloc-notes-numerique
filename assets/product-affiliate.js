@@ -6,7 +6,7 @@
     const detail = {
       event: 'affiliate_click',
       provider: 'amazon',
-      product_id: link.dataset.productId || '',
+      product_id: link.dataset.productKey || '',
       placement: link.dataset.placement || '',
       page_path: window.location.pathname,
       destination_host: (() => {
