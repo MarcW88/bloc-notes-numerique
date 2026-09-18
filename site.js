@@ -11,14 +11,6 @@ const isShopPage = /\/boutique\/$/.test(canonical);
 
 if (isShopPage) {
   document.documentElement.classList.add('shop-page');
-  if (!document.querySelector('link[data-shop-styles]')) {
-    const stylesheet = document.createElement('link');
-    stylesheet.rel = 'stylesheet';
-    stylesheet.href = '/boutique.css';
-    stylesheet.dataset.shopStyles = 'true';
-    document.head.appendChild(stylesheet);
-  }
-
   if (!document.querySelector('script[data-shop-script]')) {
     const script = document.createElement('script');
     script.src = '/boutique.js';
