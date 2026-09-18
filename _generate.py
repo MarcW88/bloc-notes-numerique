@@ -110,7 +110,7 @@ HEADER = """
       <span class="logo-line2">numériques.fr</span>
     </a>
     {nav}
-    <a href="/guides/choisir-bloc-notes-numerique/" class="header-cta">Trouver mon modèle</a>
+    <a href="/boutique/" class="header-cta">Voir les produits</a>
     <button class="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-navigation">
       <span></span><span></span><span></span>
     </button>
@@ -131,6 +131,7 @@ FOOTER = """
       </div>
       <div class="footer-col">
         <h4>Comparatifs</h4>
+        <a href="/boutique/">Boutique</a>
         <a href="/comparatifs/meilleur-bloc-notes-numerique/">Meilleurs modèles</a>
         <a href="/comparatifs/bloc-notes-numerique-professionnel/">Professionnels</a>
         <a href="/comparatifs/bloc-notes-numerique-etudiant/">Étudiants</a>
@@ -655,6 +656,17 @@ homepage = html_page(
 )
 
 write("/index.html", homepage)
+
+# ── BOUTIQUE D'AFFILIATION ──────────────────────────────────────────────────
+from shop_content import render_shop_content
+
+write("/boutique/index.html", html_page(
+    "Boutique de bloc-notes numériques — Modèles analysés",
+    "Comparez les bloc-notes numériques déjà analysés sur le site et vérifiez leur prix chez nos partenaires marchands.",
+    breadcrumb("Boutique"),
+    render_shop_content(),
+    "/boutique/",
+))
 
 # ── COMPARATIFS ───────────────────────────────────────────────────────────────
 write("/comparatifs/index.html", hub_page(
