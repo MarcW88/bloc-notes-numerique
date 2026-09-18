@@ -165,7 +165,7 @@ FOOTER = """
 </footer>
 """
 
-def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
+def html_page(title, description, breadcrumb_html, content_html, canonical="/", robots="noindex,follow"):
     depth = canonical.count("/") - 1
     css_path = ("../" * depth) + "style.css" if depth > 0 else "style.css"
     js_path = ("../" * depth) + "site.js" if depth > 0 else "site.js"
@@ -176,7 +176,7 @@ def html_page(title, description, breadcrumb_html, content_html, canonical="/"):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content="{description}">
-  <meta name="robots" content="noindex,follow">
+  <meta name="robots" content="{robots}">
   <link rel="canonical" href="https://bloc-notes-numeriques.fr{canonical}">
   <link rel="alternate" hreflang="fr-FR" href="https://bloc-notes-numeriques.fr{canonical}">
   <link rel="stylesheet" href="{css_path}">
@@ -666,6 +666,7 @@ write("/boutique/index.html", html_page(
     breadcrumb("Boutique"),
     render_shop_content(),
     "/boutique/",
+    robots="index,follow",
 ))
 
 # ── COMPARATIFS ───────────────────────────────────────────────────────────────
