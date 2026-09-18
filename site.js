@@ -7,6 +7,33 @@ const isGuidePage = canonical.includes('/guides/');
 const isGuideHub = /\/guides\/$/.test(canonical);
 const isDealPage = canonical.includes('/bons-plans/');
 const isDealHub = /\/bons-plans\/$/.test(canonical);
+const isShopPage = /\/boutique\/$/.test(canonical);
+
+if (isShopPage) {
+  document.documentElement.classList.add('shop-page');
+  if (!document.querySelector('link[data-shop-styles]')) {
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = '/boutique.css';
+    stylesheet.dataset.shopStyles = 'true';
+    document.head.appendChild(stylesheet);
+  }
+
+  if (!document.querySelector('script[data-shop-script]')) {
+    const script = document.createElement('script');
+    script.src = '/boutique.js';
+    script.defer = true;
+    script.dataset.shopScript = 'true';
+    document.head.appendChild(script);
+  }
+
+  if (!document.querySelector('script[src="/assets/product-affiliate.js"]')) {
+    const affiliateScript = document.createElement('script');
+    affiliateScript.src = '/assets/product-affiliate.js';
+    affiliateScript.defer = true;
+    document.head.appendChild(affiliateScript);
+  }
+}
 
 if (isComparisonPage) {
   document.documentElement.classList.add('comparison-page');
