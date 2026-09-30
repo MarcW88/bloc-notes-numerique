@@ -166,3 +166,6 @@ Pour toute création ou réécriture de `/methode-de-test/`, `/comment-nous-comp
 7. `/mentions-legales/` reste `LEGAL_PENDING` tant que les informations de l’éditeur, de l’hébergeur, des traitements de données et autres données légales n’ont pas été confirmées.
 8. Exécuter `fact-check`, `affiliate-value` lorsque pertinent, `natural-writing`, `humanizer`, `general-writing`, `anti-ai-slop`, `internal-linking-audit`, `editorial-qa`, puis `validate_trust_workflow.py`.
 9. Conserver `noindex,follow` jusqu’à validation humaine explicite ; une validation éditoriale n’entraîne jamais automatiquement l’indexation.
+## Maintenance mensuelle à la demande
+
+Pour « lance la maintenance mensuelle », suivre `docs/content-maintenance.md` et préparer le lot avec `scripts/maintenance_orchestrator.py prepare` (ou l'Action manuelle correspondante). Lire le workflow d'analyse sélectionné pour chaque page. La préparation n'est pas un audit. Exécuter les skills existants ici, enregistrer les vrais rapports avec `record`, puis n'appeler le content-workflow que pour LIGHT_UPDATE/DEEP_REWRITE. Conserver la validation humaine, l'état d'indexation et la chaîne de génération existante. Aucun appel API modèle ou service IA externe n'est requis par cette orchestration.
