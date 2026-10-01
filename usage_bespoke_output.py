@@ -158,8 +158,8 @@ USAGE_BESPOKE_CONTENT = {
 <p>Avant de regarder un appareil, écrivez les cinq opérations que vous faites le plus souvent : tracer, effacer, déplacer, zoomer, dupliquer, gérer des calques, changer de pinceau ou exporter. Ce sont ces gestes qui doivent décider.</p>
 
 <h2 id="atelier">Les apps de dessin E Ink progressent, mais restent spécialisées</h2>
-<p>Supernote Atelier illustre bien cette évolution. L’application propose des calques et des outils dédiés au dessin ; sa mise à jour de juillet 2026 a affiné le pinceau crayon, ajouté le réglage de l’opacité de la couche de référence, élargi la plage de niveaux de gris et permis le partage vers InkHub. Ces améliorations rendent le croquis structuré plus crédible sans transformer l’E Ink en environnement de peinture numérique complet.</p>
-<p>BOOX propose de son côté dessin et écriture dans son application Notes avec export, tout en offrant un environnement Android plus ouvert. Cette flexibilité peut aider si une application tierce est indispensable, mais son comportement doit être vérifié sur E Ink plutôt que supposé identique à une tablette LCD.</p>
+<p>Supernote Atelier illustre bien cette évolution. L’application propose des calques et des outils dédiés au dessin ; sa mise à jour de juin 2026 (Atelier 1.1.78) a affiné le pinceau crayon, ajouté le réglage de l’opacité de la couche de référence, élargi la plage de niveaux de gris et permis le partage vers InkHub. Ces améliorations rendent le croquis structuré plus crédible sans transformer l’E Ink en environnement de peinture numérique complet.</p>
+<p>La fiche du BOOX Note Air6 C décrit des pinceaux et des outils d’écriture dans Notes, au sein d’un environnement Android ouvert. Pour réutiliser le croquis ailleurs, vérifiez le format de sortie proposé par votre version de l’application. Cette flexibilité peut aider si une application tierce est indispensable, mais son comportement doit être vérifié sur E Ink plutôt que supposé identique à une tablette LCD.</p>
 
 <h2 id="continuum">Situez votre pratique sur un continuum plutôt que de chercher « la meilleure tablette pour dessiner »</h2>
 <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Pratique</th><th>E Ink</th><th>Point de vigilance</th></tr></thead><tbody>
@@ -180,9 +180,9 @@ USAGE_BESPOKE_CONTENT = {
 <p>Si la couleur est votre question principale plutôt que le dessin lui-même, utilisez le <a href="/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/">guide couleur ou noir et blanc</a>, puis éventuellement le <a href="/comparatifs/bloc-notes-numerique-couleur/">comparatif des modèles couleur</a>.</p>
 
 <h2 id="sources">Sources consultées</h2><ul class="source-list">
-<li><a href="https://supernote.com/blogs/supernote-blog/supernote-atelier-update-pencil-brush-refined-adjustable-reference-opacity" rel="noopener noreferrer">Supernote — mise à jour Atelier, juillet 2026</a></li>
+<li><a href="https://supernote.com/blogs/supernote-blog/supernote-atelier-update-pencil-brush-refined-adjustable-reference-opacity" rel="noopener noreferrer">Supernote — Atelier 1.1.78, juin 2026</a></li>
 <li><a href="https://support.supernote.com/en_US/Tools-Features/introducing-atelier-the-drawing-app" rel="noopener noreferrer">Supernote — Atelier et outils de dessin</a></li>
-<li><a href="https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes" rel="noopener noreferrer">BOOX — Notes et export</a></li>
+<li><a href="https://shop.boox.com/products/noteair6c" rel="noopener noreferrer">BOOX — Note Air6 C et outils Notes</a></li>
 <li><a href="https://www.eink.com/brand/detail/Gallery_3" rel="noopener noreferrer">E Ink — Gallery 3</a></li>
 </ul>
 ''',

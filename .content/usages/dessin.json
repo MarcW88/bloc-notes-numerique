@@ -2,7 +2,7 @@
   "slug": "dessin",
   "page_url": "/usages/dessin/",
   "status": "READY_FOR_HUMAN_VALIDATION",
-  "last_researched": "2026-09-09",
+  "last_researched": "2026-10-01",
   "intent": {
     "primary_query": "dessiner tablette E Ink",
     "dominant_intent": "Évaluer l'E Ink pour le croquis et le dessin structuré, puis identifier les limites qui renvoient vers une tablette créative.",
@@ -10,38 +10,179 @@
     "boundary": "Le guide couleur tranche l'utilité de la couleur ; cette page traite le workflow créatif."
   },
   "jtbd": {
-    "primary_job_statement": {"circumstances": "Quand je veux capturer et développer rapidement une idée visuelle", "progress": "dessiner, corriger et structurer sans multiplier papier et scans", "outcome": "conserver ou exporter un croquis réutilisable", "evidence_class": "INFERRED"},
-    "current_hires": ["papier", "iPad/tablette LCD", "tablette graphique", "ordinateur"],
-    "forces": {"push": ["croquis papier difficiles à retrouver ou partager"], "pull": ["édition et export numériques"], "anxiety": ["latence", "couleur limitée", "outils insuffisants"], "habit": ["papier", "iPad", "tablette graphique"]}
+    "primary_job_statement": {
+      "circumstances": "Quand je veux capturer et développer rapidement une idée visuelle",
+      "progress": "dessiner, corriger et structurer sans multiplier papier et scans",
+      "outcome": "conserver ou exporter un croquis réutilisable",
+      "evidence_class": "INFERRED"
+    },
+    "current_hires": [
+      "papier",
+      "iPad/tablette LCD",
+      "tablette graphique",
+      "ordinateur"
+    ],
+    "forces": {
+      "push": [
+        "croquis papier difficiles à retrouver ou partager"
+      ],
+      "pull": [
+        "édition et export numériques"
+      ],
+      "anxiety": [
+        "latence",
+        "couleur limitée",
+        "outils insuffisants"
+      ],
+      "habit": [
+        "papier",
+        "iPad",
+        "tablette graphique"
+      ]
+    }
   },
   "workflow_map": [
-    {"stage": "capture", "task": "dessiner une idée", "current_friction": "papier isolé", "failure_consequence": "croquis perdu ou à scanner", "helpful_capability": "stylet/canevas", "evidence_class": "INFERRED"},
-    {"stage": "édition", "task": "corriger et structurer", "current_friction": "redessin manuel", "failure_consequence": "temps perdu", "helpful_capability": "sélection/calques/transformations", "evidence_class": "SUPPORTED"},
-    {"stage": "sortie", "task": "réutiliser le dessin", "current_friction": "formats aplatis ou fermés", "failure_consequence": "poursuite difficile", "helpful_capability": "export adapté au besoin", "evidence_class": "SUPPORTED"}
+    {
+      "stage": "capture",
+      "task": "dessiner une idée",
+      "current_friction": "papier isolé",
+      "failure_consequence": "croquis perdu ou à scanner",
+      "helpful_capability": "stylet/canevas",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "stage": "édition",
+      "task": "corriger et structurer",
+      "current_friction": "redessin manuel",
+      "failure_consequence": "temps perdu",
+      "helpful_capability": "sélection/calques/transformations",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "stage": "sortie",
+      "task": "réutiliser le dessin",
+      "current_friction": "formats aplatis ou fermés",
+      "failure_consequence": "poursuite difficile",
+      "helpful_capability": "export adapté au besoin",
+      "evidence_class": "SUPPORTED"
+    }
   ],
   "criteria": [
-    {"criterion": "outils de sélection/transformation", "priority": "HIGH", "why_it_matters": "corriger sans redessiner", "conditions": "croquis structurés", "evidence_class": "SUPPORTED"},
-    {"criterion": "calques", "priority": "CONDITIONAL", "why_it_matters": "séparer construction et détails", "conditions": "dessin plus élaboré", "evidence_class": "SUPPORTED"},
-    {"criterion": "surface", "priority": "HIGH", "why_it_matters": "conditionne le geste et la vue d'ensemble", "conditions": "dessin fréquent", "evidence_class": "INFERRED"},
-    {"criterion": "couleur", "priority": "CONDITIONAL", "why_it_matters": "utile si elle transporte une information", "conditions": "croquis couleur", "evidence_class": "SUPPORTED"},
-    {"criterion": "export", "priority": "HIGH", "why_it_matters": "permet de poursuivre dans un autre outil", "conditions": "workflow créatif aval", "evidence_class": "SUPPORTED"}
+    {
+      "criterion": "outils de sélection/transformation",
+      "priority": "HIGH",
+      "why_it_matters": "corriger sans redessiner",
+      "conditions": "croquis structurés",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "calques",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "séparer construction et détails",
+      "conditions": "dessin plus élaboré",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "surface",
+      "priority": "HIGH",
+      "why_it_matters": "conditionne le geste et la vue d'ensemble",
+      "conditions": "dessin fréquent",
+      "evidence_class": "INFERRED"
+    },
+    {
+      "criterion": "couleur",
+      "priority": "CONDITIONAL",
+      "why_it_matters": "utile si elle transporte une information",
+      "conditions": "croquis couleur",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "criterion": "export",
+      "priority": "HIGH",
+      "why_it_matters": "permet de poursuivre dans un autre outil",
+      "conditions": "workflow créatif aval",
+      "evidence_class": "SUPPORTED"
+    }
   ],
   "solution_families": [
-    {"family": "E Ink notes/croquis", "best_when": "croquis, schémas et brainstorming", "main_strength": "capture simple", "main_friction": "outils créatifs limités", "avoid_when": "illustration avancée"},
-    {"family": "E Ink avec app dessin dédiée", "best_when": "quelques calques et transformations sont nécessaires", "main_strength": "édition structurée", "main_friction": "écosystème plus limité qu'une tablette créative", "avoid_when": "nombreux pinceaux/calques"},
-    {"family": "tablette LCD/tablette graphique", "best_when": "illustration, couleur précise, animation", "main_strength": "outils et fluidité", "main_friction": "autre philosophie d'écran", "avoid_when": "simple carnet de croquis"}
+    {
+      "family": "E Ink notes/croquis",
+      "best_when": "croquis, schémas et brainstorming",
+      "main_strength": "capture simple",
+      "main_friction": "outils créatifs limités",
+      "avoid_when": "illustration avancée"
+    },
+    {
+      "family": "E Ink avec app dessin dédiée",
+      "best_when": "quelques calques et transformations sont nécessaires",
+      "main_strength": "édition structurée",
+      "main_friction": "écosystème plus limité qu'une tablette créative",
+      "avoid_when": "nombreux pinceaux/calques"
+    },
+    {
+      "family": "tablette LCD/tablette graphique",
+      "best_when": "illustration, couleur précise, animation",
+      "main_strength": "outils et fluidité",
+      "main_friction": "autre philosophie d'écran",
+      "avoid_when": "simple carnet de croquis"
+    }
   ],
-  "contraindications": ["peinture numérique", "animation", "couleur fidèle", "nombreux calques", "zoom/pan constant"],
+  "contraindications": [
+    "peinture numérique",
+    "animation",
+    "couleur fidèle",
+    "nombreux calques",
+    "zoom/pan constant"
+  ],
   "evidence_ledger": [
-    {"claim": "Atelier a reçu en juillet 2026 un pinceau crayon retravaillé, une opacité de référence réglable, une gamme de gris élargie et le partage InkHub", "source": "https://supernote.com/blogs/supernote-blog/supernote-atelier-update-pencil-brush-refined-adjustable-reference-opacity", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
-    {"claim": "BOOX permet dessin/écriture et export dans l'app Notes", "source": "https://help.boox.com/hc/en-us/articles/8569373888788-Handwritten-Notes", "date_checked": "2026-09-09", "stability": "évolutive", "evidence_class": "SUPPORTED"},
-    {"claim": "E Ink Gallery 3 est une technologie ePaper couleur distincte d'un écran LCD/OLED", "source": "https://www.eink.com/brand/detail/Gallery_3", "date_checked": "2026-09-09", "stability": "stable/technologie", "evidence_class": "SUPPORTED"}
+    {
+      "claim": "Atelier 1.1.78 : mise à jour datée juin 2026, opacité de référence, gris et partage InkHub",
+      "source": "https://supernote.com/blogs/supernote-blog/supernote-atelier-update-pencil-brush-refined-adjustable-reference-opacity",
+      "date_checked": "2026-10-01",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "La fiche Note Air6 C documente les pinceaux et Notes ; formats de sortie non établis ici",
+      "source": "https://shop.boox.com/products/noteair6c",
+      "date_checked": "2026-10-01",
+      "stability": "évolutive",
+      "evidence_class": "SUPPORTED"
+    },
+    {
+      "claim": "E Ink Gallery 3 est une technologie ePaper couleur distincte d'un écran LCD/OLED",
+      "source": "https://www.eink.com/brand/detail/Gallery_3",
+      "date_checked": "2026-09-09",
+      "stability": "stable/technologie",
+      "evidence_class": "SUPPORTED"
+    }
   ],
   "editorial": {
     "differentiation": "Situer la pratique sur un continuum croquis → dessin structuré → illustration plutôt que classer des appareils.",
     "structure_basis": "type de dessin → outils 2026 → continuum de pratiques → couleur → sortie → limites",
     "comparison_handoff": "/comparatifs/bloc-notes-numerique-couleur/",
-    "excluded_claims": ["latence imperceptible", "couleurs fidèles", "remplace une tablette graphique"]
+    "excluded_claims": [
+      "latence imperceptible",
+      "couleurs fidèles",
+      "remplace une tablette graphique"
+    ]
   },
-  "qa": {"jtbd_without_product": true, "circumstances_specific": true, "alternatives_considered": true, "criteria_derived_from_workflow": true, "contraindications_present": true, "no_product_ranking": true, "hypotheses_labeled": true, "noindex_preserved": true, "final_verdict": "PASS — READY_FOR_HUMAN_VALIDATION"}
+  "qa": {
+    "jtbd_without_product": true,
+    "circumstances_specific": true,
+    "alternatives_considered": true,
+    "criteria_derived_from_workflow": true,
+    "contraindications_present": true,
+    "no_product_ranking": true,
+    "hypotheses_labeled": true,
+    "noindex_preserved": true,
+    "final_verdict": "PASS — READY_FOR_HUMAN_VALIDATION"
+  },
+  "maintenance_review": {
+    "date": "2026-10-01",
+    "decision": "LIGHT_UPDATE",
+    "report": ".content/reviews/maintenance-usage-dessin-2026-10-01.md",
+    "publication_review": "PASS — READY_FOR_HUMAN_VALIDATION",
+    "validation_scope": "audited page; global baseline failures documented"
+  }
 }

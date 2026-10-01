@@ -9,30 +9,80 @@
     "user_job": "utiliser la couleur lorsqu'elle apporte de l'information aux notes, PDF, schémas ou contenus lus"
   },
   "criteria": [
-    {"id": "color_usefulness", "label": "Utilité réelle de la couleur"},
-    {"id": "apps", "label": "Applications"},
-    {"id": "big_screen", "label": "Surface de travail"},
-    {"id": "frontlight", "label": "Éclairage frontal"},
-    {"id": "mobility", "label": "Mobilité"},
-    {"id": "text_contrast", "label": "Compromis couleur / contraste"}
+    {
+      "id": "color_usefulness",
+      "label": "Utilité réelle de la couleur"
+    },
+    {
+      "id": "apps",
+      "label": "Applications"
+    },
+    {
+      "id": "big_screen",
+      "label": "Surface de travail"
+    },
+    {
+      "id": "frontlight",
+      "label": "Éclairage frontal"
+    },
+    {
+      "id": "mobility",
+      "label": "Mobilité"
+    },
+    {
+      "id": "text_contrast",
+      "label": "Compromis couleur / contraste"
+    }
   ],
   "candidate_scope": [
-    {"name": "BOOX Note Air5 C", "role": "choix couleur polyvalent", "source": "https://shop.boox.com/products/noteair5c"},
-    {"name": "reMarkable Paper Pro", "role": "grand carnet couleur focalisé", "source": "https://remarkable.com/fr-FR/shop/compare"},
-    {"name": "Kindle Scribe Colorsoft", "role": "lecture Kindle couleur + notes", "source": "https://www.aboutamazon.com/news/devices/new-amazon-kindle-scribe-color"},
-    {"name": "reMarkable Paper Pro Move", "role": "couleur mobile", "source": "https://remarkable.com/fr-FR/shop/compare"}
+    {
+      "name": "BOOX Note Air6 C",
+      "role": "génération actuelle couleur + apps, jugement documentaire",
+      "source": "https://shop.boox.com/products/noteair6c"
+    },
+    {
+      "name": "BOOX Note Air5 C",
+      "role": "génération précédente ; intérêt conditionnel au prix complet",
+      "source": "https://shop.boox.com/products/noteair5c"
+    },
+    {
+      "name": "reMarkable Paper Pro",
+      "role": "grand carnet couleur focalisé",
+      "source": "https://remarkable.com/fr-FR/shop/compare"
+    },
+    {
+      "name": "Kindle Scribe Colorsoft",
+      "role": "lecture Kindle couleur + notes",
+      "source": "https://www.aboutamazon.com/news/devices/new-amazon-kindle-scribe-color"
+    },
+    {
+      "name": "reMarkable Paper Pro Move",
+      "role": "couleur mobile",
+      "source": "https://remarkable.com/fr-FR/shop/compare"
+    }
   ],
   "recommendation_logic": {
-    "default": "BOOX Note Air5 C pour la polyvalence couleur + apps",
-    "conditional": ["Paper Pro pour grand écran couleur sans Android", "Scribe Colorsoft pour lecture Kindle", "Paper Pro Move pour mobilité"]
+    "default": "Examiner Air6 C pour apps/Android 16 ; Air5 C si prix complet justifie génération précédente, sans extrapoler ses tests",
+    "conditional": [
+      "Paper Pro pour grand écran couleur sans Android",
+      "Scribe Colorsoft pour lecture Kindle",
+      "Paper Pro Move pour mobilité"
+    ]
   },
   "source_urls": [
     "https://shop.boox.com/products/noteair5c",
     "https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review",
     "https://remarkable.com/fr-FR/shop/compare",
     "https://www.aboutamazon.com/news/devices/new-amazon-kindle-scribe-color",
-    "https://www.androidcentral.com/best-e-ink-tablet"
+    "https://www.androidcentral.com/best-e-ink-tablet",
+    "https://shop.boox.com/products/noteair6c"
   ],
   "affiliate_commission_used_in_ranking": false,
-  "methodology_note": "La couleur n'est pas un score en soi : elle est évaluée selon le travail qu'elle accomplit. Aucun classement numérique entre technologies et formats différents."
+  "methodology_note": "La couleur n'est pas un score en soi : elle est évaluée selon le travail qu'elle accomplit. Aucun classement numérique entre technologies et formats différents.",
+  "maintenance_review": {
+    "date": "2026-10-01",
+    "decision": "LIGHT_UPDATE",
+    "publication_review": "PASS — READY_FOR_HUMAN_VALIDATION",
+    "validation_scope": "audited page; global baseline failures documented"
+  }
 }

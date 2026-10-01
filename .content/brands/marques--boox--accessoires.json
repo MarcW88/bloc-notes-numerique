@@ -24,10 +24,14 @@
     "/marques/boox/boox-tab-ultra/"
   ],
   "source_urls": [
+    "https://www.amazon.fr/dp/B0GS9QDBG6/ref=nosim?tag=500338-21",
+    "https://www.amazon.fr/dp/B0FR4KXMKF/ref=nosim?tag=500338-21",
+    "https://www.amazon.fr/dp/B0F63CNRQ7/ref=nosim?tag=500338-21",
     "https://shop.boox.com/collections/all-products/products/go103gen2",
     "https://shop.boox.com/products/go103series-magnetic-case",
+    "https://shop.boox.com/products/noteair6c",
     "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air5-c",
+    "https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air-6-c",
     "https://shop.boox.com/products/notemax",
     "https://shop.boox.com/products/note-max-magnetic-case",
     "https://shop.boox.com/products/note-max-magnetic-keyboard-cover",
@@ -38,8 +42,9 @@
   "official_sources": [
     "https://shop.boox.com/collections/all-products/products/go103gen2",
     "https://shop.boox.com/products/go103series-magnetic-case",
+    "https://shop.boox.com/products/noteair6c",
     "https://shop.boox.com/products/noteair5c",
-    "https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air5-c",
+    "https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air-6-c",
     "https://shop.boox.com/products/notemax",
     "https://shop.boox.com/products/note-max-magnetic-case",
     "https://shop.boox.com/products/note-max-magnetic-keyboard-cover",
@@ -47,7 +52,11 @@
     "https://shop.boox.com/products/tabultracpro",
     "https://shop.boox.com/products/keyboard-cover-for-tab-ultra-c-pro"
   ],
-  "independent_sources": [],
+  "independent_sources": [
+    "https://www.amazon.fr/dp/B0GS9QDBG6/ref=nosim?tag=500338-21",
+    "https://www.amazon.fr/dp/B0FR4KXMKF/ref=nosim?tag=500338-21",
+    "https://www.amazon.fr/dp/B0F63CNRQ7/ref=nosim?tag=500338-21"
+  ],
   "robots": "index,follow",
   "indexable": true,
   "noindex_follow": false,

@@ -178,7 +178,7 @@ CONTENT = {
 ''',
 
 "bloc-notes-numerique-couleur": r'''
-<p class="article-answer"><strong>Pour la couleur la plus polyvalente, notre choix est le BOOX Note Air5 C.</strong> Android 15, Google Play, 10,3 pouces, front light et stylet en font l'appareil qui couvre le plus de scénarios. Le reMarkable Paper Pro est plus adapté si vous voulez surtout écrire et annoter sur un grand écran couleur sans apps ; Kindle Scribe Colorsoft est plus logique si la lecture Kindle reste centrale ; Paper Pro Move gagne sur la mobilité.</p>
+<p class="article-answer"><strong>Pour combiner couleur et applications, examinez d’abord le BOOX Note Air6 C, la génération actuelle documentée par BOOX.</strong> Sa configuration associe Android 16 à un écran Kaleido 3 de 10,3 pouces avec éclairage. Ce choix repose sur les fonctions documentées, pas sur un test physique du nouveau modèle. Le reMarkable Paper Pro est plus adapté si vous voulez surtout écrire et annoter sur un grand écran couleur sans apps ; Kindle Scribe Colorsoft est plus logique si la lecture Kindle reste centrale ; Paper Pro Move gagne sur la mobilité.</p>
 
 <h2 id="utile">Avant de payer pour la couleur, demandez-lui de faire un travail</h2>
 <p>La couleur est pertinente pour différencier des catégories de notes, lire des graphiques, annoter des plans, surligner plusieurs niveaux d'information ou travailler sur des contenus illustrés. Elle apporte beaucoup moins à quelqu'un qui écrit uniquement du texte noir sur fond blanc.</p>
@@ -186,15 +186,16 @@ CONTENT = {
 
 <h2 id="selection">Quatre approches de la couleur</h2>
 <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Usage couleur</th><th>Choix</th><th>Compromis</th></tr></thead><tbody>
-<tr><td>Apps, PDF, notes et polyvalence</td><td><a href="/marques/boox/boox-note-air/">BOOX Note Air5 C</a></td><td>Interface plus complexe, couleurs plus douces</td></tr>
+<tr><td>Apps, PDF, notes et polyvalence</td><td><a href="/marques/boox/boox-note-air/">BOOX Note Air6 C</a></td><td>Interface plus complexe, couleurs plus douces</td></tr>
 <tr><td>Grand carnet couleur focalisé</td><td><a href="/marques/remarkable/remarkable-paper-pro/">reMarkable Paper Pro</a></td><td>11,8" et prix élevé, pas d'apps tierces</td></tr>
 <tr><td>Lecture Kindle en couleur + notes</td><td><a href="/marques/kindle-scribe/">Kindle Scribe Colorsoft</a></td><td>Écosystème Amazon plus fermé</td></tr>
 <tr><td>Couleur vraiment mobile</td><td><a href="/marques/remarkable/">Paper Pro Move</a></td><td>7,3" trop petit pour beaucoup de PDF</td></tr>
 </tbody></table></div>
 
-<h2 id="air5c">Note Air5 C : le choix pour ceux qui veulent vraiment une tablette</h2>
+<h2 id="air5c">Note Air6 C et Air5 C : vérifier la génération avant achat</h2>
+<p>Le Note Air6 C est documenté sous Android 16. Le Note Air5 C reste une option de génération précédente si l’écart de prix de la configuration complète justifie Android 15. Nous n’avons pas mesuré la fluidité ni l’autonomie du 6 ; les observations du test cité ci-dessous concernent uniquement le 5.</p>
 <p>Le Note Air5 C utilise un écran Kaleido 3 de 10,3 pouces, Android 15 et Google Play. TechRadar le juge excellent pour l'écriture et très polyvalent, mais note que certaines couleurs paraissent ternes et que la batterie est plus sollicitée par Android et le front light.</p>
-<p>C'est donc notre premier choix lorsque la couleur doit cohabiter avec plusieurs applications, lecteurs ou clouds. Si votre priorité est seulement de prendre des notes avec quelques surlignages colorés, une machine plus simple peut être plus agréable.</p>
+<p>Ces modèles répondent à un besoin d’applications et de clouds multiples ; une nouvelle génération ne garantit pas à elle seule un gain d’autonomie ou un meilleur confort d’écriture. Si votre priorité est seulement de prendre des notes avec quelques surlignages colorés, une machine plus simple peut être plus agréable.</p>
 
 <h2 id="paper-pro">Paper Pro : quand la couleur sert le document plutôt que les apps</h2>
 <p>Le Paper Pro propose un écran couleur de 11,8 pouces et un éclairage frontal dans l'écosystème reMarkable. Sa grande surface est intéressante pour des documents annotés, schémas et présentations. Il n'a pas Google Play, ce qui limite la polyvalence mais protège aussi l'expérience focalisée de la marque.</p>
@@ -208,6 +209,7 @@ CONTENT = {
 <p>Avec 7,3 pouces et 230 g, le Move est beaucoup plus facile à sortir dans les transports ou pendant une visite de terrain. Sa petite taille est justement la raison de ne pas le recommander pour les PDF complexes : la couleur ne compense pas le manque de surface.</p>
 
 <h2 id="sources">Sources consultées</h2><ul class="source-list">
+<li><a href="https://shop.boox.com/products/noteair6c" rel="noopener noreferrer">BOOX — Note Air6 C, génération actuelle</a></li>
 <li><a href="https://shop.boox.com/products/noteair5c" rel="noopener noreferrer">BOOX — Note Air5 C</a></li>
 <li><a href="https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review" rel="noopener noreferrer">TechRadar — Note Air5 C</a></li>
 <li><a href="https://remarkable.com/fr-FR/shop/compare" rel="noopener noreferrer">reMarkable — Paper Pro et Move</a></li>

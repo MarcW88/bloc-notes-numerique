@@ -1,1 +1,95 @@
-{"schema_version": 1, "pages": {}}
+{
+  "schema_version": 1,
+  "pages": {
+    "/bons-plans/black-friday/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-10-15",
+      "fingerprint": "918c717f468518d7a763e45681a310307fca85a1e0b85e8992f16617bd7c3cda",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-black-friday-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/deal-content-workflow/SKILL.md"
+    },
+    "/comparatifs/bloc-notes-numerique-a4/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-10-31",
+      "fingerprint": "c1e1bb2e3c1559d9c03949cbad7b72a25d195f3a839477c48e2bbdc4e62f3acc",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-comparison-bloc-notes-numerique-a4-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/comparison-content-workflow/SKILL.md"
+    },
+    "/guides/annoter-pdf-tablette-e-ink/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-12-30",
+      "fingerprint": "43b5df1dcad921b924f932fa92c9abcc9b4c9f691c6fc147282a5e94e65ef351",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-guide-annoter-pdf-tablette-e-ink-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/guide-content-workflow/SKILL.md"
+    },
+    "/marques/boox/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-11-15",
+      "fingerprint": "c2367a4098b97597fd91136d3210aac58afa62878c3e666f8c39841a26cdecb4",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-boox-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/brand-content-workflow/SKILL.md"
+    },
+    "/usages/annotation-pdf/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-12-30",
+      "fingerprint": "af2ff74a456859254a4bd7d2333c6c003abb4b80021e0cd9e291c084abe37c14",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-annotation-pdf-2026-10-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/usage-content-workflow/SKILL.md"
+    },
+    "/bons-plans/bloc-notes-numerique-occasion/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-10-15",
+      "fingerprint": "130b2fbb51e31123003cbf983813784bd01cd30853f7f18796f45a1cb2f53abe",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-bloc-notes-numerique-occasion-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/deal-content-workflow/SKILL.md"
+    },
+    "/comparatifs/bloc-notes-numerique-couleur/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-10-31",
+      "fingerprint": "855463bb4b22415ddd029da6a31ac0ee7cf1a2f6323722351bfb546188ec6734",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-comparison-bloc-notes-numerique-couleur-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/comparison-content-workflow/SKILL.md"
+    },
+    "/guides/autonomie-tablette-e-ink/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-12-30",
+      "fingerprint": "ee26bcb2533314c64a88ce407a4dd1090b75c147e95ce92b524e5a0d642fe2cd",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-autonomie-tablette-e-ink-2026-10-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/guide-content-workflow/SKILL.md"
+    },
+    "/marques/boox/accessoires/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-11-15",
+      "fingerprint": "275c7e399edfaed07f437e9695935f2cf61ac32dfeb0b909e13b2f28f28ad044",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-accessoires-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/brand-content-workflow/SKILL.md"
+    },
+    "/usages/dessin/": {
+      "last_reviewed": "2026-10-01",
+      "next_review": "2026-12-30",
+      "fingerprint": "57d66f770ff445cc02897bc85d142ca822adfd92afb9df357da958b34e69464e",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-usage-dessin-2026-10-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/usage-content-workflow/SKILL.md"
+    }
+  }
+}
