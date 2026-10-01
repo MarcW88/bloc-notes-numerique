@@ -26,12 +26,12 @@ GUIDE_CONTENT_QUALITY_WORKFLOWS = {
       <p>Un outil peut être excellent pour griffonner mais faible pour retrouver ensuite l’information. Si l’annotation sert à étudier ou à relire un contrat, la navigation après écriture a autant de valeur que le trait lui-même.</p>
 
       <h2 id="ecosystemes">Ce que montrent les principaux écosystèmes</h2>
-      <p>Supernote permet d’écrire directement sur les PDF et demande d’exporter le document pour rendre les annotations visibles hors de l’appareil ; l’utilisateur peut notamment choisir certains paramètres de couleur ou de rendu. BOOX NeoReader offre écriture, gestion des annotations et export en PDF ou PNG selon les fonctions. Kobo enregistre les annotations manuscrites directement dans les PDF non protégés et permet de récupérer ces fichiers par USB.</p>
+      <p>Supernote permet d’écrire directement sur les PDF et demande d’exporter le document pour rendre les annotations visibles hors de l’appareil ; l’utilisateur peut notamment choisir certains paramètres de couleur ou de rendu. BOOX documente l’annotation dans NeoReader et le partage des documents sur ses fiches produits. Les formats de sortie doivent être vérifiés sur votre modèle et votre firmware. Kobo enregistre les annotations manuscrites directement dans les PDF non protégés et permet de récupérer ces fichiers par USB.</p>
       <p>Kindle Scribe accepte l’écriture directe sur certains documents selon le format et la méthode d’envoi. Amazon distingue notamment les documents passés par Send to Kindle et certains fichiers USB. reMarkable, de son côté, est centré sur l’import de PDF, leur annotation et l’export vers application, email ou cloud.</p>
       <p>Cette diversité explique pourquoi le <a href="/guides/liseuse-ou-bloc-notes-numerique/">choix entre liseuse et bloc-notes</a> change aussi l’expérience PDF.</p>
 
       <h2 id="export">L’export du PDF annoté est le test décisif</h2>
-      <p>Un document peut sembler parfait sur la tablette et devenir incomplet après export. Vérifiez si l’écriture est incorporée au PDF, si les couleurs restent visibles, si les surlignages sont conservés et si le fichier peut être ouvert dans un lecteur standard. Sur BOOX, par exemple, certaines situations nécessitent d’incorporer les données au PDF pour que les annotations apparaissent ailleurs.</p>
+      <p>Un document peut sembler parfait sur la tablette et devenir incomplet après export. Vérifiez si l’écriture est incorporée au PDF, si les couleurs restent visibles, si les surlignages sont conservés et si le fichier peut être ouvert dans un lecteur standard. Sur BOOX aussi, contrôlez le fichier obtenu dans un lecteur PDF externe plutôt que de supposer que toutes les données visibles sur la tablette y figurent.</p>
       <p>Pour un workflow de correction, ouvrez la copie sur un ordinateur qui n’a aucun logiciel du fabricant. Si le destinataire voit exactement ce qu’il doit voir, l’export est valide. Si vous devez expliquer « ouvre-le dans telle app », votre dépendance à l’écosystème est plus forte.</p>
       <p>Le guide <a href="/guides/exporter-notes/">exporter ses notes</a> développe la différence entre PDF, image, texte et formats propriétaires.</p>
 
@@ -46,7 +46,7 @@ GUIDE_CONTENT_QUALITY_WORKFLOWS = {
 
       <h2 id="sources">Sources consultées</h2><ul class="source-list">
         <li><a href="https://support.supernote.com/en_US/organizing/contents-bookmarks-and-annotations" rel="noopener noreferrer">Supernote : annotations PDF et export</a></li>
-        <li><a href="https://help.boox.com/hc/en-us/articles/8569296110100-Take-Notes-on-Books" rel="noopener noreferrer">BOOX : annotation dans NeoReader</a></li>
+        <li><a href="https://shop.boox.com/products/notemax" rel="noopener noreferrer">BOOX Note Max : annotation et partage documentés</a></li>
         <li><a href="https://help.kobo.com/hc/en-us/articles/1500001927562-Write-notes-in-your-book-with-Kobo-Stylus" rel="noopener noreferrer">Kobo : annotation et export des PDF non protégés</a></li>
         <li><a href="https://digprjsurvey.amazon.com/csad/help/node/TNtSm13k3txFI4EvDV" rel="noopener noreferrer">Amazon : documents compatibles avec les notes Kindle Scribe</a></li>
         <li><a href="https://support.remarkable.com/articles/Knowledge/importing-and-exporting-files" rel="noopener noreferrer">reMarkable : import/export de PDF</a></li>

@@ -55,13 +55,13 @@ CONTENT = {
 
 <h2 id="a4-signifie">Un écran « A4 » n'est pas simplement un grand 10 pouces</h2>
 <p>Une feuille A4 mesure 210 × 297 mm. Sur une tablette E Ink, le terme A4 est souvent utilisé de façon approximative pour désigner un appareil confortable avec de grands documents. La différence est pourtant importante : 10,2 ou 10,3 pouces restent pratiques à transporter, mais demandent plus souvent du zoom ou du recadrage sur des articles scientifiques, contrats, partitions ou plans conçus pour une page A4.</p>
-<p>Les appareils 13,3 pouces comme le Note Max, le Tab X C ou le Fujitsu Quaderno A4 offrent une surface beaucoup plus proche du document original. La contrepartie est immédiate : ils pèsent autour de 600 g pour les BOOX et occupent nettement plus de place dans un sac.</p>
+<p>Les appareils 13,3 pouces comme le Note Max ou le Tab X C offrent une surface beaucoup plus proche du document original. La contrepartie est immédiate : ils pèsent autour de 600 g pour les BOOX et occupent nettement plus de place dans un sac.</p>
 
 <h2 id="choix">Trois choix selon votre façon de travailler</h2>
 <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Besoin</th><th>Choix</th><th>Atout déterminant</th><th>Limite</th></tr></thead><tbody>
 <tr><td>PDF A4 en noir et blanc</td><td><a href="/marques/boox/">BOOX Note Max</a></td><td>13,3", 300 ppp, Android 13, stylet inclus</td><td>Pas d'éclairage frontal, environ 615 g</td></tr>
 <tr><td>A4 + couleur + usage le soir</td><td><a href="/marques/boox/">BOOX Tab X C</a></td><td>13,3" Kaleido 3, éclairage frontal, apps Android</td><td>Plus cher, environ 625 g, couleur 150 ppp</td></tr>
-<tr><td>PDF et annotation avant tout</td><td>Fujitsu Quaderno A4 Gen.3C</td><td>13,3" explicitement décliné en format A4, stylet, interface documentaire</td><td>Écosystème et disponibilité européenne à vérifier avant achat</td></tr>
+<tr><td>PDF et annotation avant tout</td><td>Fujitsu Quaderno A4 Gen.3C</td><td>Format A4, stylet, interface documentaire</td><td>Écosystème et disponibilité européenne à vérifier avant achat</td></tr>
 <tr><td>Compromis plus mobile</td><td><a href="/marques/remarkable/remarkable-paper-pro/">reMarkable Paper Pro</a></td><td>11,8", couleur, éclairage, environnement focalisé</td><td>Moins proche de l'A4 qu'un 13,3"</td></tr>
 </tbody></table></div>
 
@@ -74,7 +74,7 @@ CONTENT = {
 <p>Nous le privilégierions donc seulement si la couleur apporte de l'information au document. Pour du texte juridique, des articles scientifiques monochromes ou des partitions, le Note Max reste plus rationnel.</p>
 
 <h2 id="quaderno">Le Fujitsu Quaderno A4 est le spécialiste à ne pas oublier</h2>
-<p>Le Quaderno A4 Gen.3C utilise lui aussi un écran flexible de 13,3 pouces, avec 4096 couleurs et un stylet à 4096 niveaux de pression. Sa documentation reste très centrée sur le PDF, ce qui peut être un avantage pour un utilisateur qui ne veut ni Android ni une multitude d'applications.</p>
+<p>Fujitsu documente le Quaderno A4 Gen.3C comme un appareil couleur pour les notes et l’annotation de PDF, livré avec un stylet Wacom sans recharge. Nous ne retenons pas ici de chiffres de couleur ou de pression qui n’ont pas pu être revérifiés avec certitude. Sa documentation reste très centrée sur le PDF, ce qui peut être un avantage pour un utilisateur qui ne veut ni Android ni une multitude d'applications.</p>
 <p>Nous ne le plaçons pas comme recommandation principale pour la France : la gamme est avant tout commercialisée et documentée par Fujitsu au Japon, et il faut vérifier le canal d'achat, la garantie et les applications nécessaires avant import. C'est un excellent exemple de produit techniquement pertinent mais commercialement moins simple.</p>
 
 <h2 id="10-pouces">Quand un 10,3 pouces reste préférable</h2>
@@ -84,7 +84,7 @@ CONTENT = {
 <h2 id="sources">Sources consultées</h2><ul class="source-list">
 <li><a href="https://shop.boox.com/products/notemax" rel="noopener noreferrer">BOOX — Note Max, spécifications officielles</a></li>
 <li><a href="https://shop.boox.com/products/tabxc" rel="noopener noreferrer">BOOX — Tab X C, spécifications officielles</a></li>
-<li><a href="https://sdmgr.fmworld.net/digital-paper/product.html" rel="noopener noreferrer">Fujitsu — Quaderno A4 Gen.3C</a></li>
+<li><a href="https://www.fmworld.net/digital-paper/product.html" rel="noopener noreferrer">Fujitsu — Quaderno A4 Gen.3C</a></li>
 <li><a href="https://remarkable.com/products/remarkable-paper/pro" rel="noopener noreferrer">reMarkable — Paper Pro</a></li>
 </ul>
 ''',

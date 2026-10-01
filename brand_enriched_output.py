@@ -57,8 +57,9 @@ def _boox_accessories():
     sources = [
         ('BOOX — Go 10.3 (Gen II)', 'https://shop.boox.com/collections/all-products/products/go103gen2'),
         ('BOOX — Magnetic Case for Go 10.3 Series', 'https://shop.boox.com/products/go103series-magnetic-case'),
+        ('BOOX — Note Air6 C', 'https://shop.boox.com/products/noteair6c'),
         ('BOOX — Note Air5 C', 'https://shop.boox.com/products/noteair5c'),
-        ('BOOX — Magnetic Keyboard Cover for Note Air5 C', 'https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air5-c'),
+        ('BOOX — Magnetic Keyboard Cover for Note Air6 C/Note Air5 C', 'https://shop.boox.com/products/magnetic-keyboard-cover-for-note-air-6-c'),
         ('BOOX — Note Max', 'https://shop.boox.com/products/notemax'),
         ('BOOX — Magnetic Case for Note Max / Tab X C', 'https://shop.boox.com/products/note-max-magnetic-case'),
         ('BOOX — Magnetic Keyboard Cover for Note Max / Tab X C', 'https://shop.boox.com/products/note-max-magnetic-keyboard-cover'),
@@ -67,15 +68,17 @@ def _boox_accessories():
         ('BOOX — Keyboard Cover for Tab Ultra C Pro', 'https://shop.boox.com/products/keyboard-cover-for-tab-ultra-c-pro'),
     ]
     return f'''
-<p class="article-answer"><strong>Les accessoires BOOX ne sont pas universels : le stylet, l’étui, le clavier et même l’extension de stockage changent selon le modèle.</strong> Une compatibilité correcte exige donc de partir du nom exact de l’appareil — Go 10.3 Gen II, Note Air5 C, Note Max, Tab X C ou Tab Ultra C Pro — plutôt que d’acheter un accessoire simplement marqué « BOOX ».</p>
+<p class="article-answer"><strong>Les accessoires BOOX ne sont pas universels : le stylet, l’étui, le clavier et même l’extension de stockage changent selon le modèle.</strong> Une compatibilité correcte exige donc de partir du nom exact de l’appareil — Go 10.3 Gen II, Note Air6 C ou Air5 C, Note Max, Tab X C ou Tab Ultra C Pro — plutôt que d’acheter un accessoire simplement marqué « BOOX ».</p>
 <h2 id="matrice">Compatibilité des accessoires BOOX par modèle</h2>
 <div class="table-wrapper"><table class="comp-table"><thead><tr><th>Modèle</th><th>Stylet</th><th>Étui / protection</th><th>Clavier officiel</th><th>microSD</th></tr></thead><tbody>
 <tr><td><strong>Go 10.3 Gen II</strong></td><td>InkSense Plus, inclus dans le pack standard</td><td>BOOX Magnetic Case for Go 10.3 Series</td><td>Aucun clavier magnétique dédié mis en avant</td><td>pas de slot microSD indiqué dans les spécifications officielles actuelles</td></tr>
+<tr><td><strong>Note Air6 C</strong></td><td>Pen3, inclus</td><td>référence indiquant explicitement Note Air6 C</td><td>Magnetic Keyboard Cover for Note Air6 C/Note Air5 C</td><td>oui</td></tr>
 <tr><td><strong>Note Air5 C</strong></td><td>Pen3, inclus</td><td>Note Air5 C Magnetic Protective Case</td><td>Magnetic Keyboard Cover for Note Air5 C</td><td>oui, jusqu’à 2 To annoncés</td></tr>
 <tr><td><strong>Note Max</strong></td><td>Pen Plus, inclus</td><td>Magnetic Case partagé avec Tab X C</td><td>Magnetic Keyboard Cover partagé avec Tab X C</td><td>pas de slot microSD indiqué dans les spécifications officielles actuelles</td></tr>
 <tr><td><strong>Tab X C</strong></td><td>InkSpire, inclus</td><td>Magnetic Case partagé avec Note Max</td><td>Magnetic Keyboard Cover partagé avec Note Max</td><td>pas de slot microSD indiqué dans les spécifications officielles actuelles</td></tr>
 <tr><td><strong>Tab Ultra C Pro</strong></td><td>Pen2 Pro dans le pack standard actuel ; BOOX documente aussi un stylet magnétique avec gomme dans certains bundles</td><td>Three-Fold Case / protection dédiée selon bundle</td><td>Magnetic Keyboard Cover with Trackpad</td><td>oui</td></tr>
 </tbody></table></div>
+<p>Contrôle du 1 octobre 2026 : le clavier actuellement nommé « Note Air6 C/Note Air5 C » liste les deux modèles. Cela ne permet pas d’étendre cette compatibilité à tout ancien étui ou clavier portant seulement le nom Air5 C. Le Note Air6 C est livré avec un Pen3 et dispose d’un slot microSD.</p>
 <h2 id="stylets">Le stylet est le point le plus facile à rater</h2>
 <p>BOOX utilise plusieurs générations de stylets. Le Go 10.3 Gen II est explicitement limité à l’InkSense Plus, alors que le Note Air5 C est fourni avec le Pen3. Note Max est livré avec un Pen Plus, et Tab X C utilise le nouvel InkSpire avec recharge magnétique sans fil. Acheter un second stylet « BOOX » sans vérifier le modèle exact peut donc conduire à une incompatibilité ou à des fonctions perdues.</p>
 <h2 id="claviers">Quels modèles méritent réellement un clavier ?</h2>

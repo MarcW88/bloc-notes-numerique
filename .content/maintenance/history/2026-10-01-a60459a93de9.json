@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "url": "/bons-plans/black-friday/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-black-friday-2026-10-01.md"
+    },
+    {
+      "url": "/comparatifs/bloc-notes-numerique-a4/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-comparison-bloc-notes-numerique-a4-2026-10-01.md"
+    },
+    {
+      "url": "/guides/annoter-pdf-tablette-e-ink/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-guide-annoter-pdf-tablette-e-ink-2026-10-01.md"
+    },
+    {
+      "url": "/marques/boox/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-boox-2026-10-01.md"
+    },
+    {
+      "url": "/usages/annotation-pdf/",
+      "reviewed_at": "2026-10-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-annotation-pdf-2026-10-01.md"
+    },
+    {
+      "url": "/bons-plans/bloc-notes-numerique-occasion/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-bloc-notes-numerique-occasion-2026-10-01.md"
+    },
+    {
+      "url": "/comparatifs/bloc-notes-numerique-couleur/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-comparison-bloc-notes-numerique-couleur-2026-10-01.md"
+    },
+    {
+      "url": "/guides/autonomie-tablette-e-ink/",
+      "reviewed_at": "2026-10-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-autonomie-tablette-e-ink-2026-10-01.md"
+    },
+    {
+      "url": "/marques/boox/accessoires/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-accessoires-2026-10-01.md"
+    },
+    {
+      "url": "/usages/dessin/",
+      "reviewed_at": "2026-10-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-usage-dessin-2026-10-01.md"
+    }
+  ]
+}

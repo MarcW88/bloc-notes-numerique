@@ -18,8 +18,15 @@
       "plus épais et plus lourd que le Go standard"
     ],
     [
-      "Note Air5 C",
+      "Note Air6 C",
       "CURRENT",
+      "10,3″ Kaleido 3, Android 16",
+      "couleur et applications",
+      "performances non testées ici"
+    ],
+    [
+      "Note Air5 C",
+      "PREVIOUS_GENERATION",
       "10,3″ Kaleido 3, Android 15",
       "couleur, notes et productivité légère",
       "150 ppp en couleur contre 300 ppp en N&B"
@@ -53,11 +60,11 @@
     ],
     [
       "Stylet",
-      "InkSense Plus sur Go 10.3 Gen II, Pen3 sur Note Air5 C, Pen Plus sur Note Max et InkSpire sur Tab X C ; compatibilité à vérifier par modèle."
+      "InkSense Plus sur Go 10.3 Gen II, Pen3 sur Note Air6 C et Note Air5 C, Pen Plus sur Note Max et InkSpire sur Tab X C ; compatibilité à vérifier par modèle."
     ],
     [
       "Système",
-      "Android 15 sur Go 10.3 Gen II et Note Air5 C, Android 13 sur Note Max et Tab X C, Android 12 sur Tab Ultra C Pro."
+      "Android 16 sur Note Air6 C, Android 15 sur Go 10.3 Gen II et Note Air5 C, Android 13 sur Note Max et Tab X C, Android 12 sur Tab Ultra C Pro."
     ],
     [
       "Notes",
@@ -69,7 +76,7 @@
     ],
     [
       "Cloud",
-      "Onyx Cloud et intégrations Dropbox, Google Drive, OneDrive, WebDAV/Nextcloud selon firmware."
+      "Onyx Cloud et intégrations Dropbox, Google Drive, OneDrive selon firmware."
     ],
     [
       "Synchronisation",
@@ -100,5 +107,5 @@
     "vous ne voulez pas gérer les réglages de rafraîchissement et d’applications",
     "vous préférez un écosystème dont toutes les fonctions sont pensées par un seul fabricant"
   ],
-  "verified_at": "9 septembre 2026"
+  "verified_at": "1er octobre 2026"
 }

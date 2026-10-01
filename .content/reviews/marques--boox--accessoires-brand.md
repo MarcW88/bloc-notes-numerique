@@ -6,8 +6,8 @@
 - H2 count: 7
 - Internal links: 3
 - Unique targets: 3
-- Official sources: 10
-- Independent sources: 0
+- Official sources: 11
+- Independent sources: 3
 - Robots: `index,follow`
 - Publication: `PUBLISHED_HUMAN_VALIDATED`
 

@@ -2,12 +2,12 @@
 
 - Page type: `BRAND_HUB`
 - Brand: `boox`
-- Sources verified: 9 septembre 2026
+- Sources verified: 8 septembre 2026
 - H2 count: 7
 - Internal links: 7
 - Unique targets: 7
-- Official sources: 9
-- Independent sources: 2
+- Official sources: 7
+- Independent sources: 5
 - Robots: `index,follow`
 - Publication: `PUBLISHED_HUMAN_VALIDATED`
 
