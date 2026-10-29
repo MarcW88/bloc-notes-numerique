@@ -42,7 +42,7 @@ EXPECTED_SCOPE = {
     },
 }
 PROHIBITED_MODULE_ROOTS = {"marques", "bons-plans"}
-ALLOWED_IMAGE_SOURCES = {"UNSET", "OWN", "MANUFACTURER_AUTHORIZED", "AMAZON_CREATORS_API"}
+ALLOWED_IMAGE_SOURCES = {"UNSET", "OWN", "MANUFACTURER_AUTHORIZED", "MANUFACTURER_PUBLIC", "AMAZON_CREATORS_API"}
 ALLOWED_AFFILIATE_HOSTS = {"amazon.fr", "www.amazon.fr", "amazon.com.be", "www.amazon.com.be"}
 FORBIDDEN_COMMERCE_KEYS = {"price", "current_price", "reference_price", "discount", "discount_pct"}
 STYLE_TAG = '<link rel="stylesheet" href="/assets/product-cards.css">'
@@ -102,6 +102,15 @@ def validate_registry(registry_data: dict, affiliate_data: dict) -> dict[str, di
             fail(f"{product_id}: image URL requires an explicit source type")
         if source_type == "MANUFACTURER_AUTHORIZED" and image_url and not image.get("rights_checked"):
             fail(f"{product_id}: manufacturer image requires rights_checked=true")
+        if source_type == "MANUFACTURER_PUBLIC" and image_url:
+            # Provenance is distinct from verified reproduction rights.
+            if image.get("rights_checked") is not False or image.get("rights_status") != "not_verified_owner_requested_use":
+                fail(f"{product_id}: public manufacturer imagery must disclose unverified rights")
+            for key in ("source_page", "original_url"):
+                if urlsplit(image.get(key, "")).scheme != "https":
+                    fail(f"{product_id}: public manufacturer imagery requires HTTPS {key}")
+            if not image.get("attribution") or not image.get("rights_basis"):
+                fail(f"{product_id}: public manufacturer imagery requires attribution and rights context")
         if source_type == "AMAZON_CREATORS_API" and image_url and not image_url.startswith("https://"):
             fail(f"{product_id}: Creators API image must remain a remote HTTPS URL")
 
