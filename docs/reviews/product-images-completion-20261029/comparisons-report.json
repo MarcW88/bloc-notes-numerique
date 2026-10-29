@@ -1,0 +1,1852 @@
+{
+  "generatedAt": "2026-10-29T10:41:47.369Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "scope": "comparisons",
+  "routes": [
+    "/comparatifs/",
+    "/comparatifs/meilleur-bloc-notes-numerique/",
+    "/comparatifs/tablette-e-ink/",
+    "/comparatifs/bloc-notes-numerique-professionnel/",
+    "/comparatifs/bloc-notes-numerique-etudiant/",
+    "/comparatifs/bloc-notes-numerique-couleur/",
+    "/comparatifs/bloc-notes-numerique-a4/",
+    "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+    "/comparatifs/bloc-notes-numerique-pas-cher/",
+    "/comparatifs/kindle-scribe-vs-remarkable/",
+    "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
+    "/comparatifs/remarkable-vs-boox/",
+    "/comparatifs/remarkable-vs-supernote/",
+    "/comparatifs/boox-vs-supernote/",
+    "/comparatifs/kobo-elipsa-vs-remarkable/"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/comparatifs/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comparatifs de bloc-notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/meilleur-bloc-notes-numerique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--meilleur-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 17,
+      "tocLinkCount": 17,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 929,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/tablette-e-ink/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        }
+      ],
+      "title": "Meilleure tablette E Ink 2026 : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 788,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-professionnel/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-professionnel.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique professionnel 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 820,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-etudiant/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-etudiant.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique étudiant 2026 : notre sélection",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 798,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-couleur/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-couleur.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "remarkable-paper-pro-move",
+          "src": "/assets/products/remarkable-paper-pro-move.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique couleur 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 776,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-a4/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-a4.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-max",
+          "src": "/assets/products/boox-note-max.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet"
+        },
+        {
+          "productId": "boox-tab-x-c",
+          "src": "/assets/products/boox-tab-x-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Tab X C de 13,3 pouces avec son clavier"
+        },
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique A4 : les meilleurs grands écrans E Ink en 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 776,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-sans-abonnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique sans abonnement : que choisir en 2026 ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 754,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-pas-cher/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--bloc-notes-numerique-pas-cher.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique pas cher : les choix réellement utilisables en 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 776,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kindle-scribe-vs-remarkable/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--kindle-scribe-vs-remarkable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kindle Scribe vs reMarkable en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(255, 255, 255)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 701,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--kindle-scribe-vs-kobo-elipsa.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kindle Scribe vs Kobo Elipsa 2E en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 669,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/remarkable-vs-boox/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--remarkable-vs-boox.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "reMarkable vs BOOX en 2026 : simplicité ou Android ouvert ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 701,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/remarkable-vs-supernote/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--remarkable-vs-supernote.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "reMarkable vs Supernote en 2026 : quel carnet E Ink choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 768,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/boox-vs-supernote/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--boox-vs-supernote.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "BOOX vs Supernote en 2026 : Android ou carnet spécialisé ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 144,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 745,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kobo-elipsa-vs-remarkable/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/desktop/comparatifs--kobo-elipsa-vs-remarkable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kobo Elipsa 2E vs reMarkable en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 144,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(255, 255, 255)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 679,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comparatifs de bloc-notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/meilleur-bloc-notes-numerique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--meilleur-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 17,
+      "tocLinkCount": 17,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 414,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/tablette-e-ink/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        }
+      ],
+      "title": "Meilleure tablette E Ink 2026 : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 359,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-professionnel/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-professionnel.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique professionnel 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 359,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 528,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-etudiant/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-etudiant.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique étudiant 2026 : notre sélection",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 560,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-couleur/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-couleur.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-air5-c",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "remarkable-paper-pro-move",
+          "src": "/assets/products/remarkable-paper-pro-move.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Meilleur bloc-notes numérique couleur 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 359,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 494,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-a4/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-a4.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-note-max",
+          "src": "/assets/products/boox-note-max.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet"
+        },
+        {
+          "productId": "boox-tab-x-c",
+          "src": "/assets/products/boox-tab-x-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Tab X C de 13,3 pouces avec son clavier"
+        },
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique A4 : les meilleurs grands écrans E Ink en 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 508,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-sans-abonnement/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-sans-abonnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique sans abonnement : que choisir en 2026 ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 414,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 494,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/bloc-notes-numerique-pas-cher/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--bloc-notes-numerique-pas-cher.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique pas cher : les choix réellement utilisables en 2026",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 494,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kindle-scribe-vs-remarkable/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--kindle-scribe-vs-remarkable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kindle Scribe vs reMarkable en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(255, 255, 255)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kindle-scribe-vs-kobo-elipsa/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--kindle-scribe-vs-kobo-elipsa.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kindle-scribe-3",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kindle Scribe vs Kobo Elipsa 2E en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 304,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 475,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/remarkable-vs-boox/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--remarkable-vs-boox.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "reMarkable vs BOOX en 2026 : simplicité ou Android ouvert ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 359,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/remarkable-vs-supernote/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--remarkable-vs-supernote.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "reMarkable vs Supernote en 2026 : quel carnet E Ink choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/boox-vs-supernote/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--boox-vs-supernote.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "BOOX vs Supernote en 2026 : Android ou carnet spécialisé ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 276,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 508,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/comparatifs/kobo-elipsa-vs-remarkable/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/comparisons/mobile/comparatifs--kobo-elipsa-vs-remarkable.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 230,
+          "displayHeight": 200,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Kobo Elipsa 2E vs reMarkable en 2026 : lequel choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 680,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 249,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(255, 255, 255)",
+        "decoration": "none"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 540,
+        "position": "static"
+      },
+      "headerHeight": 64
+    }
+  ]
+}
