@@ -136,7 +136,8 @@
     "height": 900,
     "alt": "BOOX Tab X C de 13,3 pouces avec son clavier",
     "original_sha256": "47b7935be3eab00a9df73c6c67b7c3f4d7e98ad23b872565214b66daacab799a",
-    "optimized_bytes": 16204
+    "optimized_bytes": 21636,
+    "processing": "Editorial crop of surrounding background to enlarge the complete device and accessories; centered on white 900 x 900 canvas. No device content altered."
   },
   "kindle-scribe-3": {
     "url": "/assets/products/kindle-scribe-3.webp",
@@ -151,6 +152,7 @@
     "height": 900,
     "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet",
     "original_sha256": "31d4d81e5663a465f69785fd6a5fbbe1d8a0d5df98f01c38dda975b6b7377f0b",
-    "optimized_bytes": 18716
+    "optimized_bytes": 34740,
+    "processing": "Editorial crop of surrounding background to enlarge the complete device and accessories; centered on white 900 x 900 canvas. No device content altered."
   }
 }
