@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "boutique/**"
+      - "shop_content.py"
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
@@ -32,6 +34,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "boutique/**"
+      - "shop_content.py"
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
@@ -132,6 +136,7 @@ jobs:
         run: >-
           node .agents/skills/site-design-review/scripts/run-visual-review.mjs
           --route /
+          --route /boutique/
           --output .artifacts/design-review/home
 
       - name: Upload homepage visual review

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from pathlib import Path
 
 from product_cards import amazon_affiliate_url
@@ -61,21 +62,13 @@ def render_product(product_id: str, product: dict) -> str:
     if image_url:
         visual = (
             '<div class="shop-product__visual shop-product__visual--image">'
-            f'<img src="{esc(image_url)}" alt="{esc(product["name"])}" loading="lazy" decoding="async">'
+            f'<img src="{esc(image_url)}" alt="{esc(image.get("alt") or product["name"])}" width="900" height="900" loading="lazy" decoding="async">'
             '</div>'
         )
     else:
-        brand_label = {
-            "remarkable": "reMarkable",
-            "boox": "BOOX",
-            "kindle": "Kindle",
-            "kobo": "Kobo",
-            "supernote": "Supernote",
-        }[facets["brand"]]
         visual = (
-            '<div class="shop-product__visual" aria-hidden="true">'
-            '<span class="shop-product__device"><span></span></span>'
-            f'<span class="shop-product__brand">{esc(brand_label)}</span>'
+            '<div class="shop-product__visual shop-product__visual--missing">'
+            '<span>Photographie indisponible</span>'
             '</div>'
         )
 
@@ -189,3 +182,17 @@ def render_shop_content() -> str:
   </div>
 </section>
 """
+
+
+def apply_shop_content() -> None:
+    """Refresh only the shop sections while preserving its page shell and metadata."""
+    page = ROOT / "boutique" / "index.html"
+    text = page.read_text(encoding="utf-8")
+    pattern = re.compile(r'<section class="shop-hero">.*?(?=</main>)', re.S)
+    if len(pattern.findall(text)) != 1:
+        raise ValueError("Expected one shop content region")
+    page.write_text(pattern.sub(lambda _: render_shop_content().lstrip() + "\n", text), encoding="utf-8")
+
+
+if __name__ == "__main__":
+    apply_shop_content()

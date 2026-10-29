@@ -211,8 +211,8 @@ try {
         const articleAnswer = document.querySelector('.article-answer');
         const firstEditorialLink = document.querySelector('.content-main a:not(.btn)');
         return {
-          productImages: [...document.querySelectorAll('[data-product-id] img')].map(image => ({
-            productId: image.closest('[data-product-id]').dataset.productId,
+          productImages: [...document.querySelectorAll('[data-product-id] img, [data-shop-product] img')].map(image => ({
+            productId: image.closest('[data-product-id]')?.dataset.productId || image.closest('[data-shop-product]').querySelector('h2')?.textContent,
             src: image.getAttribute('src'),
             loaded: image.complete && image.naturalWidth > 0,
             naturalWidth: image.naturalWidth,
