@@ -200,6 +200,9 @@ try {
 
       const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts?.ready);
+      await page.evaluate(async () => {
+        await Promise.all([...document.images].map(image => image.decode().catch(() => {})));
+      });
 
       const measurements = await page.evaluate(() => {
         const sidebar = document.querySelector('.content-sidebar');
