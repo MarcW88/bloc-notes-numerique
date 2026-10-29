@@ -1,0 +1,103 @@
+{
+  "date": "2026-10-29",
+  "status": "rights_review_required",
+  "policy": "Do not import manufacturer/retailer copyrighted photographs without an explicit compatible license or authorization; no AI substitutes.",
+  "products": {
+    "remarkable-paper-pure": {
+      "name": "reMarkable Paper Pure",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Do not substitute reMarkable 2 Commons photograph: this is a different model."
+    },
+    "remarkable-paper-pro": {
+      "name": "reMarkable Paper Pro",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "remarkable-paper-pro-move": {
+      "name": "reMarkable Paper Pro Move",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "boox-note-air5-c": {
+      "name": "BOOX Note Air5 C",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "boox-go-10-3-gen2": {
+      "name": "BOOX Go 10.3 (Gen II)",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "boox-go-10-3-lumi": {
+      "name": "BOOX Go 10.3 Gen II Lumi",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "boox-note-max": {
+      "name": "BOOX Note Max",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "boox-tab-x-c": {
+      "name": "BOOX Tab X C",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "kindle-scribe-3": {
+      "name": "Kindle Scribe (3e génération)",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "kobo-elipsa-2e": {
+      "name": "Kobo Elipsa 2E",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "supernote-manta": {
+      "name": "Supernote Manta",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    },
+    "supernote-nomad": {
+      "name": "Supernote Nomad",
+      "image_status": "awaiting_authorized_exact_model_photo",
+      "source_page": null,
+      "license": null,
+      "attribution": null,
+      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+    }
+  }
+}
