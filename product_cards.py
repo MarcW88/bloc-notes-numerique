@@ -84,7 +84,7 @@ def render_card(product_id: str, product: dict, placement: str) -> str:
     if image_url:
         image_html = (
             '<div class="product-card__media">'
-            f'<img src="{esc(image_url)}" alt="{esc(product["name"])}" width="550" height="550" loading="lazy" decoding="async">'
+            f'<img src="{esc(image_url)}" alt="{esc(image.get("alt") or product["name"])}" width="550" height="550" loading="lazy" decoding="async">'
             "</div>"
         )
 
@@ -117,7 +117,7 @@ def render_recommendation_row(product_id: str, product: dict, placement: str) ->
         row_class += " product-recommendation-row--with-media"
         media_html = (
             '<div class="product-recommendation-row__media">'
-            f'<img src="{esc(image_url)}" alt="{esc(product["name"])}" width="550" height="550" loading="lazy" decoding="async">'
+            f'<img src="{esc(image_url)}" alt="{esc(image.get("alt") or product["name"])}" width="550" height="550" loading="lazy" decoding="async">'
             "</div>"
         )
 

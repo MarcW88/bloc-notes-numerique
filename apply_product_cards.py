@@ -47,6 +47,16 @@ def apply_page(section: str, base_path: str, slug: str, config: dict, registry: 
         raise SystemExit(f"Missing configured product-module page: {page}")
 
     text = page.read_text(encoding="utf-8")
+    existing = re.compile(
+        rf'<!-- PRODUCT_MODULE:{re.escape(section)}:{re.escape(slug)}:START -->.*?'
+        rf'<!-- PRODUCT_MODULE:{re.escape(section)}:{re.escape(slug)}:END -->', re.S
+    )
+    if existing.search(text):
+        block = render_section(slug, config, registry, section=section)
+        text = existing.sub(lambda _: block, text)
+        page.write_text(text, encoding="utf-8")
+        print(f"product module updated: {section}/{slug}")
+        return
     text = strip_previous_block(text, section, slug)
     text = ensure_asset_tag(text, STYLE_TAG, "</head>")
     text = ensure_asset_tag(text, SCRIPT_TAG, "</body>")
