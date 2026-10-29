@@ -11,8 +11,9 @@
     "width": 900,
     "height": 900,
     "original_sha256": "a207219818d7c7451a6d78ac8f00c9338210a3293a7b51a24cb389252d19eca2",
-    "optimized_bytes": 21424,
-    "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+    "optimized_bytes": 26780,
+    "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
   },
   "remarkable-paper-pro": {
     "url": "/assets/products/remarkable-paper-pro.webp",
@@ -26,8 +27,9 @@
     "width": 900,
     "height": 900,
     "original_sha256": "991108a4fb9f68b7f50c000c1752d8509b4981a5b4cc66a4632a49cd92eba96a",
-    "optimized_bytes": 23166,
-    "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+    "optimized_bytes": 29872,
+    "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
   },
   "remarkable-paper-pro-move": {
     "url": "/assets/products/remarkable-paper-pro-move.webp",
@@ -41,8 +43,9 @@
     "width": 900,
     "height": 900,
     "original_sha256": "33b5ded895138340104085b94d29f1051e219cca9da5f6f48b5b9f641c4c8fd2",
-    "optimized_bytes": 14324,
-    "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+    "optimized_bytes": 20734,
+    "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
   },
   "boox-go-10-3-gen2": {
     "url": "/assets/products/boox-go-10-3-gen2.webp",
@@ -58,8 +61,9 @@
     "press_kit_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
     "model_verification": "Exact Gen II asset labelled Go 10.3 (Gen II) on series comparison; not the Gen I image (Group_46).",
     "original_sha256": "b5c8d38f86d4975ba494a02158a7d7dd73df82662cab0feab125a06c56b198a6",
-    "optimized_bytes": 6560,
-    "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+    "optimized_bytes": 13250,
+    "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
   },
   "boox-go-10-3-lumi": {
     "url": "/assets/products/boox-go-10-3-lumi.webp",
@@ -74,9 +78,10 @@
     "height": 900,
     "press_kit_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
     "original_sha256": "bd4e448f217fc6daea7edfd1f968fb80cb624f4000e3ce91c3ec4e665cb0a453",
-    "optimized_bytes": 16162,
+    "optimized_bytes": 20478,
     "alt": "BOOX Go 10.3 Gen II Lumi — vue de face",
-    "original_archive_path": "Go 10.3 Gen II Series/Go 10.3 Gen II Series (1)/Go 10.3( Gen Ⅱ) Lumi .jpg"
+    "original_archive_path": "Go 10.3 Gen II Series/Go 10.3 Gen II Series (1)/Go 10.3( Gen Ⅱ) Lumi .jpg",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
   },
   "kobo-elipsa-2e": {
     "url": "/assets/products/kobo-elipsa-2e.webp",
@@ -90,7 +95,72 @@
     "width": 900,
     "height": 900,
     "original_sha256": "dd62b586df5a7d95e6ba31d1d98f19d6e5fe129ae8303084da72de8121973933",
-    "optimized_bytes": 52934,
-    "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+    "optimized_bytes": 61946,
+    "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet",
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
+  },
+  "boox-note-air5-c": {
+    "url": "/assets/products/boox-note-air5-c.webp",
+    "source_type": "MANUFACTURER_AUTHORIZED",
+    "rights_checked": true,
+    "source_page": "https://ventureworld.org/press-release/2025-10-21/25089/boox-presents-the-note-air5-c-an-epaper-device-for-light-productivity",
+    "original_url": "https://dashboard.kingnewswire.com/uploads/press-release/2025/10/21/176103750168f74cbda0fb6176103750168f74cbda0fb9.jpg",
+    "attribution": "BOOX",
+    "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+    "checked_on": "2026-10-29",
+    "width": 900,
+    "height": 900,
+    "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3",
+    "original_sha256": "4dfca114b77cb05349784dd10d2480721b4033987559195da7b6b88c088b7acb",
+    "optimized_bytes": 35132,
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
+  },
+  "boox-note-max": {
+    "url": "/assets/products/boox-note-max.webp",
+    "source_type": "MANUFACTURER_AUTHORIZED",
+    "rights_checked": true,
+    "source_page": "https://prtimes.jp/main/html/rd/p/000000049.000033556.html",
+    "original_url": "https://prcdn.freetls.fastly.net/release_image/33556/49/33556-49-b6517d448c6225efef9ce71236b76d1f-1000x1000.jpg",
+    "attribution": "BOOX",
+    "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+    "checked_on": "2026-10-29",
+    "width": 900,
+    "height": 900,
+    "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet",
+    "original_sha256": "3a11cfa1da9375e2605856195ec0c66bc834a4a4ee51a19fb9cb356423535878",
+    "optimized_bytes": 17538,
+    "processing": "Trim surrounding white margins, preserve full product and accessories, fit on a white 900 x 900 canvas. No device content altered."
+  },
+  "boox-tab-x-c": {
+    "url": "/assets/products/boox-tab-x-c.webp",
+    "source_type": "MANUFACTURER_AUTHORIZED",
+    "rights_checked": true,
+    "source_page": "https://www.financialcontent.com/article/getnews-2025-5-8-boox-introduces-tab-x-c-133-color-epaper-tablet-for-productivity-and-intentional-living",
+    "original_url": "https://lh3.googleusercontent.com/pw/AP1GczMwt8eHfL_KdFmbFXr7Rzhi6VOvOvMfuTspiD4-k49-ZKmlhSpDfuvbrqj5mUg_icny5UEzMlbZ8fWnlOqp81LVHSV6nzJHGoxpff5QhovLa7_4O0y2Z9A7d6RIqzsXE9pgU-G6wKQQjojWiW0p8W8Y=w1634-h919-s-no-gm?authuser=0",
+    "attribution": "BOOX",
+    "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+    "checked_on": "2026-10-29",
+    "width": 900,
+    "height": 900,
+    "alt": "BOOX Tab X C de 13,3 pouces avec son clavier",
+    "original_sha256": "47b7935be3eab00a9df73c6c67b7c3f4d7e98ad23b872565214b66daacab799a",
+    "optimized_bytes": 21636,
+    "processing": "Editorial crop of surrounding background to enlarge the complete device and accessories; centered on white 900 x 900 canvas. No device content altered."
+  },
+  "kindle-scribe-3": {
+    "url": "/assets/products/kindle-scribe-3.webp",
+    "source_type": "MANUFACTURER_AUTHORIZED",
+    "rights_checked": true,
+    "source_page": "https://press.aboutamazon.com/search/devices?q=Kindle%20Scribe&p=2",
+    "original_url": "https://assets.aboutamazon.com/06/f0/8cf07cfa41c5bfbb5406bcbb1df5/kindle-scribe-hero-shot.jpg",
+    "attribution": "Amazon",
+    "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+    "checked_on": "2026-10-29",
+    "width": 900,
+    "height": 900,
+    "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet",
+    "original_sha256": "31d4d81e5663a465f69785fd6a5fbbe1d8a0d5df98f01c38dda975b6b7377f0b",
+    "optimized_bytes": 34740,
+    "processing": "Editorial crop of surrounding background to enlarge the complete device and accessories; centered on white 900 x 900 canvas. No device content altered."
   }
 }

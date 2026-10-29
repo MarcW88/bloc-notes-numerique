@@ -116,10 +116,17 @@
       "name": "BOOX Note Air5 C",
       "internal_url": "/marques/boox/boox-note-air/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
-        "rights_checked": false,
-        "source_page": ""
+        "url": "/assets/products/boox-note-air5-c.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://ventureworld.org/press-release/2025-10-21/25089/boox-presents-the-note-air5-c-an-epaper-device-for-light-productivity",
+        "original_url": "https://dashboard.kingnewswire.com/uploads/press-release/2025/10/21/176103750168f74cbda0fb6176103750168f74cbda0fb9.jpg",
+        "attribution": "BOOX",
+        "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
       },
       "amazon": {
         "asin": "B0FR4KXMKF",
@@ -224,10 +231,17 @@
       "name": "BOOX Note Max",
       "internal_url": "/marques/boox/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
-        "rights_checked": false,
-        "source_page": ""
+        "url": "/assets/products/boox-note-max.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://prtimes.jp/main/html/rd/p/000000049.000033556.html",
+        "original_url": "https://prcdn.freetls.fastly.net/release_image/33556/49/33556-49-b6517d448c6225efef9ce71236b76d1f-1000x1000.jpg",
+        "attribution": "BOOX",
+        "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet"
       },
       "amazon": {
         "asin": "",
@@ -254,10 +268,17 @@
       "name": "BOOX Tab X C",
       "internal_url": "/marques/boox/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
-        "rights_checked": false,
-        "source_page": ""
+        "url": "/assets/products/boox-tab-x-c.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://www.financialcontent.com/article/getnews-2025-5-8-boox-introduces-tab-x-c-133-color-epaper-tablet-for-productivity-and-intentional-living",
+        "original_url": "https://lh3.googleusercontent.com/pw/AP1GczMwt8eHfL_KdFmbFXr7Rzhi6VOvOvMfuTspiD4-k49-ZKmlhSpDfuvbrqj5mUg_icny5UEzMlbZ8fWnlOqp81LVHSV6nzJHGoxpff5QhovLa7_4O0y2Z9A7d6RIqzsXE9pgU-G6wKQQjojWiW0p8W8Y=w1634-h919-s-no-gm?authuser=0",
+        "attribution": "BOOX",
+        "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "BOOX Tab X C de 13,3 pouces avec son clavier"
       },
       "amazon": {
         "asin": "B0F63CNRQ7",
@@ -284,10 +305,17 @@
       "name": "Kindle Scribe (3e génération)",
       "internal_url": "/marques/kindle-scribe/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
-        "rights_checked": false,
-        "source_page": ""
+        "url": "/assets/products/kindle-scribe-3.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://press.aboutamazon.com/search/devices?q=Kindle%20Scribe&p=2",
+        "original_url": "https://assets.aboutamazon.com/06/f0/8cf07cfa41c5bfbb5406bcbb1df5/kindle-scribe-hero-shot.jpg",
+        "attribution": "Amazon",
+        "rights_basis": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
       },
       "amazon": {
         "asin": "B0FC1XB22K",

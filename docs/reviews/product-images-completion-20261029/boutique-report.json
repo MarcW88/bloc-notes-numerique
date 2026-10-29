@@ -1,0 +1,350 @@
+{
+  "generatedAt": "2026-10-29T10:41:46.233Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "scope": null,
+  "routes": [
+    "/",
+    "/boutique/"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/home/desktop/home.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numériques — Comparatifs, analyses et guides",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/boutique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/home/desktop/boutique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "reMarkable Paper Pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "reMarkable Paper Pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "reMarkable Paper Pro Move",
+          "src": "/assets/products/remarkable-paper-pro-move.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "BOOX Note Air5 C",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "BOOX Go 10.3 (Gen II)",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "BOOX Go 10.3 Gen II Lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "BOOX Note Max",
+          "src": "/assets/products/boox-note-max.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet"
+        },
+        {
+          "productId": "BOOX Tab X C",
+          "src": "/assets/products/boox-tab-x-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "BOOX Tab X C de 13,3 pouces avec son clavier"
+        },
+        {
+          "productId": "Kindle Scribe (3e génération)",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "Kobo Elipsa 2E",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 115,
+          "displayHeight": 115,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Boutique de bloc-notes numériques — Modèles analysés",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/home/mobile/home.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numériques — Comparatifs, analyses et guides",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 603,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/boutique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/home/mobile/boutique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "reMarkable Paper Pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "reMarkable Paper Pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "reMarkable Paper Pro Move",
+          "src": "/assets/products/remarkable-paper-pro-move.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "BOOX Note Air5 C",
+          "src": "/assets/products/boox-note-air5-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "BOOX Note Air5 C avec écran couleur et stylet Pen3"
+        },
+        {
+          "productId": "BOOX Go 10.3 (Gen II)",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "BOOX Go 10.3 Gen II Lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "BOOX Note Max",
+          "src": "/assets/products/boox-note-max.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "BOOX Note Max, grand écran monochrome de 13,3 pouces et stylet"
+        },
+        {
+          "productId": "BOOX Tab X C",
+          "src": "/assets/products/boox-tab-x-c.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "BOOX Tab X C de 13,3 pouces avec son clavier"
+        },
+        {
+          "productId": "Kindle Scribe (3e génération)",
+          "src": "/assets/products/kindle-scribe-3.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "Kindle Scribe de troisième génération, écran monochrome et stylet"
+        },
+        {
+          "productId": "Kobo Elipsa 2E",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 316,
+          "displayHeight": 210,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Boutique de bloc-notes numériques — Modèles analysés",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    }
+  ]
+}

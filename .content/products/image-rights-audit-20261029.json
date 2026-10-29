@@ -1,6 +1,6 @@
 {
   "date": "2026-10-29",
-  "status": "partial_integration_6_of_12",
+  "status": "partial_integration_10_of_12",
   "policy": "Use manufacturer media galleries and press kits for editorial product coverage; retain copyright and provenance. No open license claimed. Do not import store-only assets where reuse authorization is not established.",
   "products": {
     "remarkable-paper-pure": {
@@ -35,11 +35,13 @@
     },
     "boox-note-air5-c": {
       "name": "BOOX Note Air5 C",
-      "image_status": "blocked_reuse_authorization_not_established",
-      "source_page": "https://shop.boox.com/products/noteair5c",
-      "license": null,
-      "attribution": null,
-      "notes": "Exact Note Air5 C manufacturer product photos identified. The downloaded 2026 BOOX press kit contains Note Air6 C, not Air5 C; no exact-model authorized press asset established. Do not substitute Air6 C."
+      "image_status": "integrated_local_webp",
+      "source_page": "https://ventureworld.org/press-release/2025-10-21/25089/boox-presents-the-note-air5-c-an-epaper-device-for-light-productivity",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "BOOX",
+      "notes": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/boox-note-air5-c.webp",
+      "original_url": "https://dashboard.kingnewswire.com/uploads/press-release/2025/10/21/176103750168f74cbda0fb6176103750168f74cbda0fb9.jpg"
     },
     "boox-go-10-3-gen2": {
       "name": "BOOX Go 10.3 (Gen II)",
@@ -63,27 +65,33 @@
     },
     "boox-note-max": {
       "name": "BOOX Note Max",
-      "image_status": "blocked_reuse_authorization_not_established",
-      "source_page": "https://shop.boox.com/products/notemax",
-      "license": null,
-      "attribution": null,
-      "notes": "Exact model official product photos identified. No Note Max image in the retrieved BOOX press kit and no reusable exact-model press download established."
+      "image_status": "integrated_local_webp",
+      "source_page": "https://prtimes.jp/main/html/rd/p/000000049.000033556.html",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "BOOX",
+      "notes": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/boox-note-max.webp",
+      "original_url": "https://prcdn.freetls.fastly.net/release_image/33556/49/33556-49-b6517d448c6225efef9ce71236b76d1f-1000x1000.jpg"
     },
     "boox-tab-x-c": {
       "name": "BOOX Tab X C",
-      "image_status": "blocked_reuse_authorization_not_established",
-      "source_page": "https://shop.boox.com/products/tabxc",
-      "license": null,
-      "attribution": null,
-      "notes": "Exact Tab X C product photos identified. No authorized exact-model download in the retrieved BOOX press kit; product listing alone is not treated as permission."
+      "image_status": "integrated_local_webp",
+      "source_page": "https://www.financialcontent.com/article/getnews-2025-5-8-boox-introduces-tab-x-c-133-color-epaper-tablet-for-productivity-and-intentional-living",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "BOOX",
+      "notes": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/boox-tab-x-c.webp",
+      "original_url": "https://lh3.googleusercontent.com/pw/AP1GczMwt8eHfL_KdFmbFXr7Rzhi6VOvOvMfuTspiD4-k49-ZKmlhSpDfuvbrqj5mUg_icny5UEzMlbZ8fWnlOqp81LVHSV6nzJHGoxpff5QhovLa7_4O0y2Z9A7d6RIqzsXE9pgU-G6wKQQjojWiW0p8W8Y=w1634-h919-s-no-gm?authuser=0"
     },
     "kindle-scribe-3": {
       "name": "Kindle Scribe (3e génération)",
-      "image_status": "blocked_reuse_authorization_not_established",
-      "source_page": "https://www.aboutamazon.com/news/devices/new-amazon-kindle-scribe-color",
-      "license": null,
-      "attribution": null,
-      "notes": "2025 third-generation model verified separately from Colorsoft, 2024 and no-front-light versions. No exact-model local-reproduction authorization established from retrieved press material. No Amazon listing image copied."
+      "image_status": "integrated_local_webp",
+      "source_page": "https://press.aboutamazon.com/search/devices?q=Kindle%20Scribe&p=2",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "Amazon",
+      "notes": "Manufacturer-supplied press photograph distributed with the product announcement for editorial coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/kindle-scribe-3.webp",
+      "original_url": "https://assets.aboutamazon.com/06/f0/8cf07cfa41c5bfbb5406bcbb1df5/kindle-scribe-hero-shot.jpg"
     },
     "kobo-elipsa-2e": {
       "name": "Kobo Elipsa 2E",
