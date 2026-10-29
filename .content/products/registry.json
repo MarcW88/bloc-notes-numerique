@@ -379,10 +379,18 @@
       "name": "Supernote Manta",
       "internal_url": "/marques/supernote/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
+        "url": "/assets/products/supernote-manta.webp",
+        "source_type": "MANUFACTURER_PUBLIC",
         "rights_checked": false,
-        "source_page": ""
+        "rights_status": "not_verified_owner_requested_use",
+        "source_page": "https://supernote.com/products/supernote-manta",
+        "original_url": "https://cdn.shopify.com/s/files/1/0565/1945/9007/files/Manta_2026.png?v=1773990066",
+        "attribution": "© Ratta / Supernote",
+        "rights_basis": "Official public product imagery; no reproduction licence or individual authorization verified. Included at the site owner’s explicit request on 2026-10-29; no open licence claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "Supernote Manta A5 X2 de 10,7 pouces — vues avant et arrière"
       },
       "amazon": {
         "asin": "",
@@ -409,10 +417,18 @@
       "name": "Supernote Nomad",
       "internal_url": "/marques/supernote/",
       "image": {
-        "url": "",
-        "source_type": "UNSET",
+        "url": "/assets/products/supernote-nomad.webp",
+        "source_type": "MANUFACTURER_PUBLIC",
         "rights_checked": false,
-        "source_page": ""
+        "rights_status": "not_verified_owner_requested_use",
+        "source_page": "https://supernote.com/products/supernote-nomad",
+        "original_url": "https://cdn.shopify.com/s/files/1/0565/1945/9007/files/white_awarded.png?v=1701832872",
+        "attribution": "© Ratta / Supernote",
+        "rights_basis": "Official public product imagery; no reproduction licence or individual authorization verified. Included at the site owner’s explicit request on 2026-10-29; no open licence claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "Supernote Nomad A6 X2 blanc de 7,8 pouces — vues avant et arrière"
       },
       "amazon": {
         "asin": "",

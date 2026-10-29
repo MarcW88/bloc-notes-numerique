@@ -1,7 +1,7 @@
 {
   "date": "2026-10-29",
-  "status": "partial_integration_10_of_12",
-  "policy": "Use manufacturer media galleries and press kits for editorial product coverage; retain copyright and provenance. No open license claimed. Do not import store-only assets where reuse authorization is not established.",
+  "status": "integration_12_of_12_with_2_reuse_rights_unverified",
+  "policy": "Manufacturer press sources retained for the first ten products. The owner explicitly requested use of official public Supernote product imagery; reproduction rights for those two are not verified and must not be represented as authorized.",
   "products": {
     "remarkable-paper-pure": {
       "name": "reMarkable Paper Pure",
@@ -105,19 +105,25 @@
     },
     "supernote-manta": {
       "name": "Supernote Manta",
-      "image_status": "blocked_reuse_authorization_not_established",
+      "image_status": "integrated_local_webp",
       "source_page": "https://supernote.com/products/supernote-manta",
       "license": null,
-      "attribution": null,
-      "notes": "Exact official product photos found. Supernote terms prohibit reproducing site content without express written permission; VI guideline downloads supply logos/fonts, not device photos. No alternative authorized photograph established."
+      "rights_status": "not_verified_owner_requested_use",
+      "attribution": "© Ratta / Supernote",
+      "notes": "Official public product imagery; no reproduction licence or individual authorization verified. Included at the site owner’s explicit request on 2026-10-29; no open licence claimed.",
+      "local_path": "/assets/products/supernote-manta.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0565/1945/9007/files/Manta_2026.png?v=1773990066"
     },
     "supernote-nomad": {
       "name": "Supernote Nomad",
-      "image_status": "blocked_reuse_authorization_not_established",
+      "image_status": "integrated_local_webp",
       "source_page": "https://supernote.com/products/supernote-nomad",
       "license": null,
-      "attribution": null,
-      "notes": "Exact official product photos found. Supernote terms prohibit reproducing site content without express written permission; VI guideline downloads supply logos/fonts, not device photos. No alternative authorized photograph established."
+      "rights_status": "not_verified_owner_requested_use",
+      "attribution": "© Ratta / Supernote",
+      "notes": "Official public product imagery; no reproduction licence or individual authorization verified. Included at the site owner’s explicit request on 2026-10-29; no open licence claimed.",
+      "local_path": "/assets/products/supernote-nomad.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0565/1945/9007/files/white_awarded.png?v=1701832872"
     }
   }
 }

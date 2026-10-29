@@ -13,6 +13,7 @@ This registry centralizes product presentation so a product is configured once a
 7. Add an image only when its provenance is explicit:
    - `OWN`: an image owned by the site, usually stored under `/assets/products/`;
    - `MANUFACTURER_AUTHORIZED`: a manufacturer image whose reuse rights were checked (`rights_checked: true`);
+   - `MANUFACTURER_PUBLIC`: official public manufacturer imagery included at the owner’s explicit request, with `rights_checked: false`, `rights_status: not_verified_owner_requested_use`, HTTPS source/original URLs, attribution and rights context. This is provenance, not verified permission; never relabel it as authorized without evidence;
    - `AMAZON_CREATORS_API`: reserved for the future API integration. The image stays remote and must not be downloaded into the repo.
 8. Do not scrape Amazon product pages or copy Amazon-hosted images into the repository.
 9. Run `python apply_product_cards.py all`, then `python validate_product_cards.py all`.
