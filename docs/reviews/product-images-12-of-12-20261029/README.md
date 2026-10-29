@@ -46,3 +46,17 @@ Les originaux proviennent des fiches officielles Supernote et sont conservés da
 - 8 tests unitaires : réussis, dont 4 couvrant la distinction entre provenance et autorisation.
 - git diff --check : réussi.
 - CSS existant préservé : 300 × 260 px dans la boutique, 210 × 220 px pour les listes desktop, images contenues et mobile empilé.
+
+## QA visuelle finale
+
+GitHub Actions [40886342373](https://github.com/MarcW88/bloc-notes-numerique/actions/runs/40886342373), code `9b014729` : les six jobs visuels réussissent. Boutique desktop et mobile : 12 images chargées sur chaque viewport, surface 300 × 260 px, aucun débordement horizontal ni erreur console/page. Comparatifs : 30 rendus, 72 références photo chargées, aucune erreur console/page ou débordement horizontal. Inspection visuelle des deux modèles dans la boutique desktop et du duel reMarkable/Supernote mobile effectuée.
+
+![Boutique : les deux Supernote](supernote-boutique-detail.webp)
+
+![Boutique desktop complète](desktop-boutique.webp)
+
+![Boutique mobile complète](mobile-boutique.webp)
+
+![Duel desktop](desktop-supernote-comparison.webp)
+
+![Duel mobile](mobile-supernote-comparison.webp)
