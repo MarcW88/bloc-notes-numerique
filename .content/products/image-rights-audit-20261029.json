@@ -6,26 +6,26 @@
     "remarkable-paper-pure": {
       "name": "reMarkable Paper Pure",
       "image_status": "awaiting_authorized_exact_model_photo",
-      "source_page": null,
+      "source_page": "https://remarkable.com/products/remarkable-paper/pure",
       "license": null,
       "attribution": null,
-      "notes": "Do not substitute reMarkable 2 Commons photograph: this is a different model."
+      "notes": "Official product page identified; image-specific URL, reuse authorization and downloadable file remain to be verified."
     },
     "remarkable-paper-pro": {
       "name": "reMarkable Paper Pro",
       "image_status": "awaiting_authorized_exact_model_photo",
-      "source_page": null,
+      "source_page": "https://remarkable.com/shop",
       "license": null,
       "attribution": null,
-      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+      "notes": "Official product page identified; image-specific URL, reuse authorization and downloadable file remain to be verified."
     },
     "remarkable-paper-pro-move": {
       "name": "reMarkable Paper Pro Move",
       "image_status": "awaiting_authorized_exact_model_photo",
-      "source_page": null,
+      "source_page": "https://remarkable.com/shop",
       "license": null,
       "attribution": null,
-      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+      "notes": "Official product page identified; image-specific URL, reuse authorization and downloadable file remain to be verified."
     },
     "boox-note-air5-c": {
       "name": "BOOX Note Air5 C",
@@ -86,18 +86,18 @@
     "supernote-manta": {
       "name": "Supernote Manta",
       "image_status": "awaiting_authorized_exact_model_photo",
-      "source_page": null,
+      "source_page": "https://supernote.com/pages/help-me-choose-supernote",
       "license": null,
       "attribution": null,
-      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+      "notes": "Official product page identified; image-specific URL, reuse authorization and downloadable file remain to be verified."
     },
     "supernote-nomad": {
       "name": "Supernote Nomad",
       "image_status": "awaiting_authorized_exact_model_photo",
-      "source_page": null,
+      "source_page": "https://supernote.com/pages/help-me-choose-supernote",
       "license": null,
       "attribution": null,
-      "notes": "Manufacturer or retailer product listings alone do not grant permission to republish."
+      "notes": "Official product page identified; image-specific URL, reuse authorization and downloadable file remain to be verified."
     }
   }
 }
