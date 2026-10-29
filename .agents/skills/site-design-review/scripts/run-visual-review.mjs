@@ -200,6 +200,9 @@ try {
 
       const response = await page.goto(`${baseUrl}${route}`, { waitUntil: 'networkidle' });
       await page.evaluate(() => document.fonts?.ready);
+      await page.evaluate(async () => {
+        await Promise.all([...document.images].map(image => image.decode().catch(() => {})));
+      });
 
       const measurements = await page.evaluate(() => {
         const sidebar = document.querySelector('.content-sidebar');
@@ -211,8 +214,8 @@ try {
         const articleAnswer = document.querySelector('.article-answer');
         const firstEditorialLink = document.querySelector('.content-main a:not(.btn)');
         return {
-          productImages: [...document.querySelectorAll('[data-product-id] img')].map(image => ({
-            productId: image.closest('[data-product-id]').dataset.productId,
+          productImages: [...document.querySelectorAll('[data-product-id] img, [data-shop-product] img')].map(image => ({
+            productId: image.closest('[data-product-id]')?.dataset.productId || image.closest('[data-shop-product]').querySelector('h2')?.textContent,
             src: image.getAttribute('src'),
             loaded: image.complete && image.naturalWidth > 0,
             naturalWidth: image.naturalWidth,

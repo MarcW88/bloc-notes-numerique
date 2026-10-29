@@ -6,6 +6,7 @@ on:
     paths:
       - '.content/products/**'
       - 'product_cards.py'
+      - 'shop_content.py'
       - 'apply_product_cards.py'
       - 'validate_product_cards.py'
       - 'assets/product-cards.css'
@@ -31,7 +32,9 @@ jobs:
           python-version: '3.12'
 
       - name: Apply approved product modules
-        run: python apply_product_cards.py all
+        run: |
+          python apply_product_cards.py all
+          python shop_content.py
 
       - name: Validate approved product-module scope
         run: python validate_product_cards.py all
@@ -41,7 +44,7 @@ jobs:
           if git diff --quiet; then exit 0; fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add comparatifs usages guides
+          git add comparatifs usages guides boutique
           git commit -m "content: apply guarded product modules"
           git pull --rebase origin main
           git push origin HEAD:main

@@ -9,6 +9,8 @@ on:
     branches: [main]
     paths:
       - "index.html"
+      - "boutique/**"
+      - "shop_content.py"
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
@@ -32,6 +34,8 @@ on:
   pull_request:
     paths:
       - "index.html"
+      - "boutique/**"
+      - "shop_content.py"
       - "marques/**"
       - "comparatifs/**"
       - "usages/**"
@@ -126,12 +130,13 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Force homepage images eager for deterministic screenshots
-        run: sed -i 's/loading="lazy"/loading="eager"/g' index.html
+        run: sed -i 's/loading="lazy"/loading="eager"/g' index.html boutique/index.html
 
       - name: Capture homepage
         run: >-
           node .agents/skills/site-design-review/scripts/run-visual-review.mjs
           --route /
+          --route /boutique/
           --output .artifacts/design-review/home
 
       - name: Upload homepage visual review
