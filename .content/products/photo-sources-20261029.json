@@ -59,7 +59,7 @@
     "model_verification": "Exact Gen II asset labelled Go 10.3 (Gen II) on series comparison; not the Gen I image (Group_46).",
     "original_sha256": "b5c8d38f86d4975ba494a02158a7d7dd73df82662cab0feab125a06c56b198a6",
     "optimized_bytes": 6560,
-    "alt": "BOOX Go 10.3 (Gen II) — vue du bloc-notes numérique avec son stylet"
+    "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
   },
   "boox-go-10-3-lumi": {
     "url": "/assets/products/boox-go-10-3-lumi.webp",
@@ -75,7 +75,8 @@
     "press_kit_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
     "original_sha256": "bd4e448f217fc6daea7edfd1f968fb80cb624f4000e3ce91c3ec4e665cb0a453",
     "optimized_bytes": 16162,
-    "alt": "BOOX Go 10.3 Gen II Lumi — vue du bloc-notes numérique avec son stylet"
+    "alt": "BOOX Go 10.3 Gen II Lumi — vue de face",
+    "original_archive_path": "Go 10.3 Gen II Series/Go 10.3 Gen II Series (1)/Go 10.3( Gen Ⅱ) Lumi .jpg"
   },
   "kobo-elipsa-2e": {
     "url": "/assets/products/kobo-elipsa-2e.webp",

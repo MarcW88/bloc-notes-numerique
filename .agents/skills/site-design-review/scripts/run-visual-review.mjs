@@ -263,6 +263,7 @@ try {
       if (await productModule.count()) {
         await productModule.screenshot({
           path: path.join(viewportFolder, `${slug(route)}--products.png`),
+          style: ".site-header { visibility: hidden !important; }",
           animations: 'disabled'
         });
       }
