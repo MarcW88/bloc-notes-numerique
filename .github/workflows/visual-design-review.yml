@@ -130,7 +130,7 @@ jobs:
         run: npx playwright install --with-deps chromium
 
       - name: Force homepage images eager for deterministic screenshots
-        run: sed -i 's/loading="lazy"/loading="eager"/g' index.html
+        run: sed -i 's/loading="lazy"/loading="eager"/g' index.html boutique/index.html
 
       - name: Capture homepage
         run: >-
