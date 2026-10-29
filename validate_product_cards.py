@@ -221,7 +221,7 @@ def validate_rendered_section(
         if layout == "recommendation_list":
             if text.count('class="product-recommendation-list"') != 1:
                 fail(f"{section}/{slug}: recommendation list wrapper missing")
-            if text.count('class="product-recommendation-row"') != expected_count:
+            if len(re.findall(r'class="product-recommendation-row(?: [^"]*)?"', text)) != expected_count:
                 fail(f"{section}/{slug}: recommendation-row count mismatch")
             if 'product-card-grid--3' in text:
                 fail(f"{section}/{slug}: three-card grid regression detected")

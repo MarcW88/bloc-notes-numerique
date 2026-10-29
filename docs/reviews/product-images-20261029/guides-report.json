@@ -1,0 +1,1982 @@
+{
+  "generatedAt": "2026-10-29T09:51:27.128Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "scope": "guides",
+  "routes": [
+    "/guides/",
+    "/guides/choisir-bloc-notes-numerique/",
+    "/guides/liseuse-ou-bloc-notes-numerique/",
+    "/guides/tablette-classique-ou-tablette-e-ink/",
+    "/guides/taille-ecran-bloc-notes-numerique/",
+    "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
+    "/guides/prix-bloc-notes-numerique/",
+    "/guides/tablette-e-ink/",
+    "/guides/encre-electronique-fonctionnement/",
+    "/guides/latence-ecriture/",
+    "/guides/ocr-manuscrit/",
+    "/guides/autonomie-tablette-e-ink/",
+    "/guides/formats-fichiers-compatibles/",
+    "/guides/exporter-notes/",
+    "/guides/synchroniser-notes-cloud/",
+    "/guides/bloc-notes-numerique-google-drive/",
+    "/guides/bloc-notes-numerique-onedrive/",
+    "/guides/bloc-notes-numerique-dropbox/",
+    "/guides/ecosysteme-ouvert-ou-ferme/",
+    "/guides/annoter-pdf-tablette-e-ink/",
+    "/guides/convertir-notes-manuscrites-en-texte/",
+    "/guides/organiser-notes-numeriques/",
+    "/guides/transfert-notes-vers-ordinateur/",
+    "/guides/imprimer-notes-numeriques/"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/guides/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Guides — Choisir et utiliser un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/choisir-bloc-notes-numerique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--choisir-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Comment choisir son bloc-notes numérique selon son usage ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 875,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/liseuse-ou-bloc-notes-numerique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--liseuse-ou-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Liseuse ou bloc-notes numérique : quelles différences ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/tablette-classique-ou-tablette-e-ink/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--tablette-classique-ou-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Tablette classique ou tablette E Ink : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/taille-ecran-bloc-notes-numerique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--taille-ecran-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Quelle taille d’écran pour un bloc-notes numérique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--bloc-notes-numerique-couleur-ou-noir-et-blanc.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique couleur ou noir et blanc : le choix",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 706,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--bloc-notes-numerique-avec-ou-sans-abonnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique avec ou sans abonnement : choisir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/prix-bloc-notes-numerique/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--prix-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Prix d’un bloc-notes numérique : quel budget prévoir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 144,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/tablette-e-ink/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comprendre la technologie E Ink",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 437,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/encre-electronique-fonctionnement/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--encre-electronique-fonctionnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comment fonctionne l'encre électronique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 437,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/latence-ecriture/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--latence-ecriture.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Latence d'écriture sur tablette E Ink — Ce qu'il faut savoir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 706,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/ocr-manuscrit/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--ocr-manuscrit.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "OCR et reconnaissance de l'écriture manuscrite",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 696,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/autonomie-tablette-e-ink/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--autonomie-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Autonomie des tablettes E Ink — Ce qu'il faut savoir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/formats-fichiers-compatibles/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--formats-fichiers-compatibles.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Formats de fichiers compatibles avec les bloc-notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 144,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 706,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/exporter-notes/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--exporter-notes.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comment exporter ses notes depuis un bloc-notes numérique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 684,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/synchroniser-notes-cloud/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--synchroniser-notes-cloud.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Synchronisation cloud des notes — Guide complet",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 706,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-google-drive/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--bloc-notes-numerique-google-drive.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et Google Drive — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 751,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-onedrive/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--bloc-notes-numerique-onedrive.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et OneDrive — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 751,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-dropbox/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--bloc-notes-numerique-dropbox.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et Dropbox — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 199,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 872,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/ecosysteme-ouvert-ou-ferme/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--ecosysteme-ouvert-ou-ferme.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Écosystème ouvert ou fermé — Quelle tablette choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 839,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/annoter-pdf-tablette-e-ink/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--annoter-pdf-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Annoter des PDF sur tablette E Ink — Guide pratique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 808,
+        "top": 462,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/convertir-notes-manuscrites-en-texte/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--convertir-notes-manuscrites-en-texte.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Convertir ses notes manuscrites en texte",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 674,
+        "top": 405,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/organiser-notes-numeriques/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--organiser-notes-numeriques.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Organiser ses notes numériques efficacement",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 783,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/transfert-notes-vers-ordinateur/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--transfert-notes-vers-ordinateur.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Transférer ses notes vers l'ordinateur",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 694,
+        "top": 405,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/imprimer-notes-numeriques/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/desktop/guides--imprimer-notes-numeriques.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Imprimer ses notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 172,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 662,
+        "top": 405,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Guides — Choisir et utiliser un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/choisir-bloc-notes-numerique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--choisir-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Comment choisir son bloc-notes numérique selon son usage ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 445,
+          "clientWidth": 340
+        },
+        {
+          "scrollWidth": 530,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 9724,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/liseuse-ou-bloc-notes-numerique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--liseuse-ou-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Liseuse ou bloc-notes numérique : quelles différences ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 697,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 7316,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/tablette-classique-ou-tablette-e-ink/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--tablette-classique-ou-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Tablette classique ou tablette E Ink : laquelle choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 452,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 7292,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/taille-ecran-bloc-notes-numerique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--taille-ecran-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Quelle taille d’écran pour un bloc-notes numérique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 538,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6865,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--bloc-notes-numerique-couleur-ou-noir-et-blanc.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique couleur ou noir et blanc : le choix",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 504,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6833,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--bloc-notes-numerique-avec-ou-sans-abonnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique avec ou sans abonnement : choisir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 490,
+          "clientWidth": 340
+        },
+        {
+          "scrollWidth": 548,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 7743,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/prix-bloc-notes-numerique/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--prix-bloc-notes-numerique.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Prix d’un bloc-notes numérique : quel budget prévoir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 722,
+          "clientWidth": 340
+        },
+        {
+          "scrollWidth": 481,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 303,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 7271,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/tablette-e-ink/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comprendre la technologie E Ink",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 464,
+          "clientWidth": 340
+        },
+        {
+          "scrollWidth": 409,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6702,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/encre-electronique-fonctionnement/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--encre-electronique-fonctionnement.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comment fonctionne l'encre électronique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 5872,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/latence-ecriture/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--latence-ecriture.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Latence d'écriture sur tablette E Ink — Ce qu'il faut savoir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 517,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6386,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/ocr-manuscrit/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--ocr-manuscrit.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "OCR et reconnaissance de l'écriture manuscrite",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 398,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 413,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 5731,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/autonomie-tablette-e-ink/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--autonomie-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Autonomie des tablettes E Ink — Ce qu'il faut savoir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 546,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6277,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/formats-fichiers-compatibles/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--formats-fichiers-compatibles.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Formats de fichiers compatibles avec les bloc-notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 2,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 363,
+          "clientWidth": 340
+        },
+        {
+          "scrollWidth": 428,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 303,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6760,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/exporter-notes/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--exporter-notes.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Comment exporter ses notes depuis un bloc-notes numérique ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 507,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6653,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/synchroniser-notes-cloud/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--synchroniser-notes-cloud.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Synchronisation cloud des notes — Guide complet",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 421,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6491,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-google-drive/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--bloc-notes-numerique-google-drive.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et Google Drive — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6361,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-onedrive/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--bloc-notes-numerique-onedrive.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et OneDrive — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6258,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/bloc-notes-numerique-dropbox/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--bloc-notes-numerique-dropbox.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Bloc-notes numérique et Dropbox — Compatibilité",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 413,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6715,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/ecosysteme-ouvert-ou-ferme/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--ecosysteme-ouvert-ou-ferme.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Écosystème ouvert ou fermé — Quelle tablette choisir ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 513,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6283,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/annoter-pdf-tablette-e-ink/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--annoter-pdf-tablette-e-ink.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "remarkable-paper-pro",
+          "src": "/assets/products/remarkable-paper-pro.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Annoter des PDF sur tablette E Ink — Guide pratique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 404,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 8134,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/convertir-notes-manuscrites-en-texte/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--convertir-notes-manuscrites-en-texte.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Convertir ses notes manuscrites en texte",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 386,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 5391,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/organiser-notes-numeriques/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--organiser-notes-numeriques.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Organiser ses notes numériques efficacement",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6442,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/transfert-notes-vers-ordinateur/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--transfert-notes-vers-ordinateur.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Transférer ses notes vers l'ordinateur",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 9,
+      "tocLinkCount": 9,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 343,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 6567,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/guides/imprimer-notes-numeriques/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/guides/mobile/guides--imprimer-notes-numeriques.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Imprimer ses notes numériques",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-main",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 392,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 358,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 187,
+        "top": 5787,
+        "position": "static"
+      },
+      "headerHeight": 64
+    }
+  ]
+}

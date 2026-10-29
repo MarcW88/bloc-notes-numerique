@@ -4,144 +4,406 @@
     "remarkable-paper-pure": {
       "name": "reMarkable Paper Pure",
       "internal_url": "/marques/remarkable/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/remarkable-paper-pure.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://news.remarkable.com/media/album/72bac760-0eb2-4f6e-976f-0ea693dfdf57",
+        "original_url": "https://ucarecdn.com/1f273dd0-c11a-43e2-b84c-816f34778248/",
+        "attribution": "reMarkable",
+        "rights_basis": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+      },
+      "amazon": {
+        "asin": "",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "10,3 pouces, monochrome"},
-        {"label": "Éclairage", "value": "Sans éclairage frontal"},
-        {"label": "Positionnement", "value": "Carnet numérique focalisé"}
+        {
+          "label": "Écran",
+          "value": "10,3 pouces, monochrome"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Sans éclairage frontal"
+        },
+        {
+          "label": "Positionnement",
+          "value": "Carnet numérique focalisé"
+        }
       ],
       "best_for": "Écriture, réunions et travail sans distractions"
     },
     "remarkable-paper-pro": {
       "name": "reMarkable Paper Pro",
       "internal_url": "/marques/remarkable/remarkable-paper-pro/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0DG9ZXWMK", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/remarkable-paper-pro.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://news.remarkable.com/media/album/973a79fb-9799-468f-984c-b65982ba476f",
+        "original_url": "https://cdn.uc.assets.prezly.com/1bf5754b-8e05-412a-89e0-ef1c330bd358/",
+        "attribution": "reMarkable",
+        "rights_basis": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "reMarkable Paper Pro — vue du bloc-notes numérique avec son stylet"
+      },
+      "amazon": {
+        "asin": "B0DG9ZXWMK",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "11,8 pouces, couleur"},
-        {"label": "Éclairage", "value": "Éclairage frontal"},
-        {"label": "Positionnement", "value": "Grand carnet numérique focalisé"}
+        {
+          "label": "Écran",
+          "value": "11,8 pouces, couleur"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        },
+        {
+          "label": "Positionnement",
+          "value": "Grand carnet numérique focalisé"
+        }
       ],
       "best_for": "Grands documents, annotation couleur et écriture focalisée"
     },
     "remarkable-paper-pro-move": {
       "name": "reMarkable Paper Pro Move",
       "internal_url": "/marques/remarkable/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/remarkable-paper-pro-move.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://news.remarkable.com/media/album/4e3cd5e0-e577-4390-96d3-517558a19874",
+        "original_url": "https://cdn.uc.assets.prezly.com/39430533-c0ee-4067-943a-ce0f375ecb62/",
+        "attribution": "reMarkable",
+        "rights_basis": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "reMarkable Paper Pro Move — vue du bloc-notes numérique avec son stylet"
+      },
+      "amazon": {
+        "asin": "",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "7,3 pouces, couleur"},
-        {"label": "Éclairage", "value": "Éclairage frontal"},
-        {"label": "Format", "value": "Compact et mobile"}
+        {
+          "label": "Écran",
+          "value": "7,3 pouces, couleur"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        },
+        {
+          "label": "Format",
+          "value": "Compact et mobile"
+        }
       ],
       "best_for": "Prendre des notes partout avec un appareil couleur compact"
     },
     "boox-note-air5-c": {
       "name": "BOOX Note Air5 C",
       "internal_url": "/marques/boox/boox-note-air/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0FR4KXMKF", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "B0FR4KXMKF",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "10,3 pouces, couleur"},
-        {"label": "Système", "value": "Android 15 avec Google Play"},
-        {"label": "Éclairage", "value": "Éclairage frontal"}
+        {
+          "label": "Écran",
+          "value": "10,3 pouces, couleur"
+        },
+        {
+          "label": "Système",
+          "value": "Android 15 avec Google Play"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        }
       ],
       "best_for": "Applications, plusieurs clouds et documents couleur"
     },
     "boox-go-10-3-gen2": {
       "name": "BOOX Go 10.3 (Gen II)",
       "internal_url": "/marques/boox/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0GS9QDBG6", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/boox-go-10-3-gen2.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://shop.boox.com/products/go103gen2",
+        "original_url": "https://cdn.shopify.com/s/files/1/0606/1824/4315/files/Group_45.png?v=1773633495",
+        "attribution": "BOOX",
+        "rights_basis": "BOOX press kit explicitly linked from the manufacturer launch release for editorial coverage of the Go 10.3 Gen II series. Copyright BOOX; no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "press_kit_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
+        "model_verification": "Exact Gen II asset labelled Go 10.3 (Gen II) on series comparison; not the Gen I image (Group_46).",
+        "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+      },
+      "amazon": {
+        "asin": "B0GS9QDBG6",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
-        {"label": "Système", "value": "Android 15 avec Google Play"},
-        {"label": "Éclairage", "value": "Sans éclairage frontal"}
+        {
+          "label": "Écran",
+          "value": "10,3 pouces, monochrome 300 ppp"
+        },
+        {
+          "label": "Système",
+          "value": "Android 15 avec Google Play"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Sans éclairage frontal"
+        }
       ],
       "best_for": "PDF, applications et exports dans un format fin et ouvert"
     },
     "boox-go-10-3-lumi": {
       "name": "BOOX Go 10.3 Gen II Lumi",
       "internal_url": "/marques/boox/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0GS9NDWW4", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/boox-go-10-3-lumi.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://www.prnewswire.com/news-releases/boox-unveils-go-10-3-gen-ii----worlds-best-e-ink-tablet-now-even-better-with-front-light-lower-weight-302714932.html",
+        "original_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
+        "attribution": "BOOX",
+        "rights_basis": "BOOX press kit explicitly linked from the manufacturer launch release for editorial coverage of the Go 10.3 Gen II series. Copyright BOOX; no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "press_kit_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1",
+        "alt": "BOOX Go 10.3 Gen II Lumi — vue de face",
+        "original_archive_path": "Go 10.3 Gen II Series/Go 10.3 Gen II Series (1)/Go 10.3( Gen Ⅱ) Lumi .jpg"
+      },
+      "amazon": {
+        "asin": "B0GS9NDWW4",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "10,3 pouces, monochrome 300 ppp"},
-        {"label": "Système", "value": "Android 15 avec Google Play"},
-        {"label": "Éclairage", "value": "Éclairage frontal"}
+        {
+          "label": "Écran",
+          "value": "10,3 pouces, monochrome 300 ppp"
+        },
+        {
+          "label": "Système",
+          "value": "Android 15 avec Google Play"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        }
       ],
       "best_for": "Workflow professionnel avec applications et clouds"
     },
     "boox-note-max": {
       "name": "BOOX Note Max",
       "internal_url": "/marques/boox/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "13,3 pouces, monochrome 300 ppp"},
-        {"label": "Système", "value": "Android 13 avec applications"},
-        {"label": "Éclairage", "value": "Sans éclairage frontal"}
+        {
+          "label": "Écran",
+          "value": "13,3 pouces, monochrome 300 ppp"
+        },
+        {
+          "label": "Système",
+          "value": "Android 13 avec applications"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Sans éclairage frontal"
+        }
       ],
       "best_for": "Lire et annoter des PDF proches du format A4"
     },
     "boox-tab-x-c": {
       "name": "BOOX Tab X C",
       "internal_url": "/marques/boox/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0F63CNRQ7", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "B0F63CNRQ7",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "13,3 pouces, couleur Kaleido 3"},
-        {"label": "Éclairage", "value": "Éclairage frontal"},
-        {"label": "Système", "value": "Android avec applications"}
+        {
+          "label": "Écran",
+          "value": "13,3 pouces, couleur Kaleido 3"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        },
+        {
+          "label": "Système",
+          "value": "Android avec applications"
+        }
       ],
       "best_for": "Grands PDF couleur et travail en faible lumière"
     },
     "kindle-scribe-3": {
       "name": "Kindle Scribe (3e génération)",
       "internal_url": "/marques/kindle-scribe/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0FC1XB22K", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "B0FC1XB22K",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "Grand écran E Ink monochrome"},
-        {"label": "Éclairage", "value": "Éclairage frontal"},
-        {"label": "Écosystème", "value": "Kindle + carnets et documents"}
+        {
+          "label": "Écran",
+          "value": "Grand écran E Ink monochrome"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Éclairage frontal"
+        },
+        {
+          "label": "Écosystème",
+          "value": "Kindle + carnets et documents"
+        }
       ],
       "best_for": "Lire des ebooks et prendre des notes sur le même appareil"
     },
     "kobo-elipsa-2e": {
       "name": "Kobo Elipsa 2E",
       "internal_url": "/marques/kobo-elipsa/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "B0C15G7J3V", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "/assets/products/kobo-elipsa-2e.webp",
+        "source_type": "MANUFACTURER_AUTHORIZED",
+        "rights_checked": true,
+        "source_page": "https://www.kobo.com/media-hub/kobo-elipsa-2e",
+        "original_url": "https://drive.google.com/uc?export=download&id=19ndpRhNGzRCX0JutGg7zqeFk-KmCCLT7",
+        "attribution": "Rakuten Kobo",
+        "rights_basis": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+        "checked_on": "2026-10-29",
+        "width": 900,
+        "height": 900,
+        "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+      },
+      "amazon": {
+        "asin": "B0C15G7J3V",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "10,3 pouces, monochrome"},
-        {"label": "Éclairage", "value": "ComfortLight PRO"},
-        {"label": "Écosystème", "value": "Kobo + stylet et carnets"}
+        {
+          "label": "Écran",
+          "value": "10,3 pouces, monochrome"
+        },
+        {
+          "label": "Éclairage",
+          "value": "ComfortLight PRO"
+        },
+        {
+          "label": "Écosystème",
+          "value": "Kobo + stylet et carnets"
+        }
       ],
       "best_for": "Lecture Kobo, annotation et prise de notes simple"
     },
     "supernote-manta": {
       "name": "Supernote Manta",
       "internal_url": "/marques/supernote/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Affichage", "value": "E Ink monochrome"},
-        {"label": "Éclairage", "value": "Sans éclairage frontal"},
-        {"label": "Organisation", "value": "Titres, liens, mots-clés et recherche"}
+        {
+          "label": "Affichage",
+          "value": "E Ink monochrome"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Sans éclairage frontal"
+        },
+        {
+          "label": "Organisation",
+          "value": "Titres, liens, mots-clés et recherche"
+        }
       ],
       "best_for": "Structurer et retrouver des notes de projet sur la durée"
     },
     "supernote-nomad": {
       "name": "Supernote Nomad",
       "internal_url": "/marques/supernote/",
-      "image": {"url": "", "source_type": "UNSET", "rights_checked": false, "source_page": ""},
-      "amazon": {"asin": "", "affiliate_url": "", "marketplace": "amazon.fr"},
+      "image": {
+        "url": "",
+        "source_type": "UNSET",
+        "rights_checked": false,
+        "source_page": ""
+      },
+      "amazon": {
+        "asin": "",
+        "affiliate_url": "",
+        "marketplace": "amazon.fr"
+      },
       "specs": [
-        {"label": "Écran", "value": "7,8 pouces, monochrome"},
-        {"label": "Éclairage", "value": "Sans éclairage frontal"},
-        {"label": "Organisation", "value": "Notes structurées dans un format mobile"}
+        {
+          "label": "Écran",
+          "value": "7,8 pouces, monochrome"
+        },
+        {
+          "label": "Éclairage",
+          "value": "Sans éclairage frontal"
+        },
+        {
+          "label": "Organisation",
+          "value": "Notes structurées dans un format mobile"
+        }
       ],
       "best_for": "Études et prise de notes organisée dans un format très mobile"
     }

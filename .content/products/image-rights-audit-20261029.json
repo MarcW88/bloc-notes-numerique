@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-29",
+  "status": "partial_integration_6_of_12",
+  "policy": "Use manufacturer media galleries and press kits for editorial product coverage; retain copyright and provenance. No open license claimed. Do not import store-only assets where reuse authorization is not established.",
+  "products": {
+    "remarkable-paper-pure": {
+      "name": "reMarkable Paper Pure",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://news.remarkable.com/media/album/72bac760-0eb2-4f6e-976f-0ea693dfdf57",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "reMarkable",
+      "notes": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/remarkable-paper-pure.webp",
+      "original_url": "https://ucarecdn.com/1f273dd0-c11a-43e2-b84c-816f34778248/"
+    },
+    "remarkable-paper-pro": {
+      "name": "reMarkable Paper Pro",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://news.remarkable.com/media/album/973a79fb-9799-468f-984c-b65982ba476f",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "reMarkable",
+      "notes": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/remarkable-paper-pro.webp",
+      "original_url": "https://cdn.uc.assets.prezly.com/1bf5754b-8e05-412a-89e0-ef1c330bd358/"
+    },
+    "remarkable-paper-pro-move": {
+      "name": "reMarkable Paper Pro Move",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://news.remarkable.com/media/album/4e3cd5e0-e577-4390-96d3-517558a19874",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "reMarkable",
+      "notes": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/remarkable-paper-pro-move.webp",
+      "original_url": "https://cdn.uc.assets.prezly.com/39430533-c0ee-4067-943a-ce0f375ecb62/"
+    },
+    "boox-note-air5-c": {
+      "name": "BOOX Note Air5 C",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://shop.boox.com/products/noteair5c",
+      "license": null,
+      "attribution": null,
+      "notes": "Exact Note Air5 C manufacturer product photos identified. The downloaded 2026 BOOX press kit contains Note Air6 C, not Air5 C; no exact-model authorized press asset established. Do not substitute Air6 C."
+    },
+    "boox-go-10-3-gen2": {
+      "name": "BOOX Go 10.3 (Gen II)",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://shop.boox.com/products/go103gen2",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "BOOX",
+      "notes": "BOOX press kit explicitly linked from the manufacturer launch release for editorial coverage of the Go 10.3 Gen II series. Copyright BOOX; no open license claimed.",
+      "local_path": "/assets/products/boox-go-10-3-gen2.webp",
+      "original_url": "https://cdn.shopify.com/s/files/1/0606/1824/4315/files/Group_45.png?v=1773633495"
+    },
+    "boox-go-10-3-lumi": {
+      "name": "BOOX Go 10.3 Gen II Lumi",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://www.prnewswire.com/news-releases/boox-unveils-go-10-3-gen-ii----worlds-best-e-ink-tablet-now-even-better-with-front-light-lower-weight-302714932.html",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "BOOX",
+      "notes": "BOOX press kit explicitly linked from the manufacturer launch release for editorial coverage of the Go 10.3 Gen II series. Copyright BOOX; no open license claimed.",
+      "local_path": "/assets/products/boox-go-10-3-lumi.webp",
+      "original_url": "https://www.dropbox.com/scl/fo/6efgjdw8zuv1amegj7fkp/AO4bxSMZBd_n5rdptG0SlUU?rlkey=pl50ntf8gt7o4ocng1b246gta&dl=1"
+    },
+    "boox-note-max": {
+      "name": "BOOX Note Max",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://shop.boox.com/products/notemax",
+      "license": null,
+      "attribution": null,
+      "notes": "Exact model official product photos identified. No Note Max image in the retrieved BOOX press kit and no reusable exact-model press download established."
+    },
+    "boox-tab-x-c": {
+      "name": "BOOX Tab X C",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://shop.boox.com/products/tabxc",
+      "license": null,
+      "attribution": null,
+      "notes": "Exact Tab X C product photos identified. No authorized exact-model download in the retrieved BOOX press kit; product listing alone is not treated as permission."
+    },
+    "kindle-scribe-3": {
+      "name": "Kindle Scribe (3e génération)",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://www.aboutamazon.com/news/devices/new-amazon-kindle-scribe-color",
+      "license": null,
+      "attribution": null,
+      "notes": "2025 third-generation model verified separately from Colorsoft, 2024 and no-front-light versions. No exact-model local-reproduction authorization established from retrieved press material. No Amazon listing image copied."
+    },
+    "kobo-elipsa-2e": {
+      "name": "Kobo Elipsa 2E",
+      "image_status": "integrated_local_webp",
+      "source_page": "https://www.kobo.com/media-hub/kobo-elipsa-2e",
+      "license": "Manufacturer editorial press asset; copyright retained; not Creative Commons",
+      "attribution": "Rakuten Kobo",
+      "notes": "Manufacturer media gallery / press kit supplied for editorial product coverage; copyright retained by manufacturer, no open license claimed.",
+      "local_path": "/assets/products/kobo-elipsa-2e.webp",
+      "original_url": "https://drive.google.com/uc?export=download&id=19ndpRhNGzRCX0JutGg7zqeFk-KmCCLT7"
+    },
+    "supernote-manta": {
+      "name": "Supernote Manta",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://supernote.com/products/supernote-manta",
+      "license": null,
+      "attribution": null,
+      "notes": "Exact official product photos found. Supernote terms prohibit reproducing site content without express written permission; VI guideline downloads supply logos/fonts, not device photos. No alternative authorized photograph established."
+    },
+    "supernote-nomad": {
+      "name": "Supernote Nomad",
+      "image_status": "blocked_reuse_authorization_not_established",
+      "source_page": "https://supernote.com/products/supernote-nomad",
+      "license": null,
+      "attribution": null,
+      "notes": "Exact official product photos found. Supernote terms prohibit reproducing site content without express written permission; VI guideline downloads supply logos/fonts, not device photos. No alternative authorized photograph established."
+    }
+  }
+}

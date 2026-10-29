@@ -1,0 +1,678 @@
+{
+  "generatedAt": "2026-10-29T09:51:25.653Z",
+  "baseUrl": "http://127.0.0.1:4173",
+  "scope": "usages",
+  "routes": [
+    "/usages/",
+    "/usages/prise-de-notes-professionnelle/",
+    "/usages/prise-de-notes-etudiant/",
+    "/usages/prise-de-notes-reunion/",
+    "/usages/lecture-et-prise-de-notes/",
+    "/usages/dessin/",
+    "/usages/remplacer-cahiers-papier/"
+  ],
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "pages": [
+    {
+      "route": "/usages/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Par usage — Définir vos besoins avant de choisir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-professionnelle/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--prise-de-notes-professionnelle.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique au travail : est-il adapté à votre workflow ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 798,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-etudiant/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--prise-de-notes-etudiant.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique pour les études : est-il adapté à vos cours ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 897,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-reunion/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--prise-de-notes-reunion.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Prendre des notes en réunion avec un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 6,
+      "tocLinkCount": 6,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 576,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/lecture-et-prise-de-notes/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--lecture-et-prise-de-notes.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 104,
+          "displayHeight": 104,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "Lire, annoter et réutiliser ses notes sur une tablette E Ink",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 700,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/dessin/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--dessin.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Dessiner sur une tablette E Ink : quels usages restent pertinents ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 696,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/remplacer-cahiers-papier/",
+      "viewport": "desktop",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/desktop/usages--remplacer-cahiers-papier.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Remplacer ses cahiers papier par un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": {
+        "height": 171,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 662,
+        "top": 495,
+        "position": "sticky"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Par usage — Définir vos besoins avant de choisir",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 0,
+      "tocLinkCount": 0,
+      "tocParentClass": null,
+      "missingHeadingIds": [],
+      "tableCount": 0,
+      "rawTableCount": 0,
+      "overflowingTables": [],
+      "articleAnswer": null,
+      "firstEditorialLink": null,
+      "sidebar": null,
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-professionnelle/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--prise-de-notes-professionnelle.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-lumi",
+          "src": "/assets/products/boox-go-10-3-lumi.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 Gen II Lumi — vue de face"
+        },
+        {
+          "productId": "remarkable-paper-pure",
+          "src": "/assets/products/remarkable-paper-pure.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "reMarkable Paper Pure — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique au travail : est-il adapté à votre workflow ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 11,
+      "tocLinkCount": 11,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 528,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-etudiant/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--prise-de-notes-etudiant.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        },
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        }
+      ],
+      "title": "Bloc-notes numérique pour les études : est-il adapté à vos cours ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 12,
+      "tocLinkCount": 12,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 496,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/prise-de-notes-reunion/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--prise-de-notes-reunion.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Prendre des notes en réunion avec un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 6,
+      "tocLinkCount": 6,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 496,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/lecture-et-prise-de-notes/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--lecture-et-prise-de-notes.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [
+        {
+          "productId": "kobo-elipsa-2e",
+          "src": "/assets/products/kobo-elipsa-2e.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "Kobo Elipsa 2E — vue du bloc-notes numérique avec son stylet"
+        },
+        {
+          "productId": "boox-go-10-3-gen2",
+          "src": "/assets/products/boox-go-10-3-gen2.webp",
+          "loaded": true,
+          "naturalWidth": 900,
+          "naturalHeight": 900,
+          "displayWidth": 96,
+          "displayHeight": 96,
+          "objectFit": "contain",
+          "alt": "BOOX Go 10.3 (Gen II) — vues avant et arrière avec stylet"
+        }
+      ],
+      "title": "Lire, annoter et réutiliser ses notes sur une tablette E Ink",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 10,
+      "tocLinkCount": 10,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 331,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 528,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/dessin/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--dessin.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Dessiner sur une tablette E Ink : quels usages restent pertinents ?",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 7,
+      "tocLinkCount": 7,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 304,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 496,
+        "position": "static"
+      },
+      "headerHeight": 64
+    },
+    {
+      "route": "/usages/remplacer-cahiers-papier/",
+      "viewport": "mobile",
+      "httpStatus": 200,
+      "screenshot": ".artifacts/design-review/usages/mobile/usages--remplacer-cahiers-papier.png",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "productImages": [],
+      "title": "Remplacer ses cahiers papier par un bloc-notes numérique",
+      "statusReady": "complete",
+      "horizontalOverflow": false,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "headingCount": 8,
+      "tocLinkCount": 8,
+      "tocParentClass": "content-sidebar",
+      "missingHeadingIds": [],
+      "tableCount": 1,
+      "rawTableCount": 0,
+      "overflowingTables": [
+        {
+          "scrollWidth": 620,
+          "clientWidth": 340
+        }
+      ],
+      "articleAnswer": {
+        "height": 304,
+        "background": "rgb(253, 252, 247)",
+        "borderLeftWidth": "3px"
+      },
+      "firstEditorialLink": {
+        "color": "rgb(82, 103, 90)",
+        "decoration": "underline"
+      },
+      "sidebar": {
+        "height": 230,
+        "top": 528,
+        "position": "static"
+      },
+      "headerHeight": 64
+    }
+  ]
+}
