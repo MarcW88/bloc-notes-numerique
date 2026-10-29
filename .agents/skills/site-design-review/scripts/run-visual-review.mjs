@@ -211,6 +211,17 @@ try {
         const articleAnswer = document.querySelector('.article-answer');
         const firstEditorialLink = document.querySelector('.content-main a:not(.btn)');
         return {
+          productImages: [...document.querySelectorAll('[data-product-id] img')].map(image => ({
+            productId: image.closest('[data-product-id]').dataset.productId,
+            src: image.getAttribute('src'),
+            loaded: image.complete && image.naturalWidth > 0,
+            naturalWidth: image.naturalWidth,
+            naturalHeight: image.naturalHeight,
+            displayWidth: image.getBoundingClientRect().width,
+            displayHeight: image.getBoundingClientRect().height,
+            objectFit: getComputedStyle(image).objectFit,
+            alt: image.alt
+          })),
           title: document.title,
           statusReady: document.readyState,
           horizontalOverflow: document.documentElement.scrollWidth > document.documentElement.clientWidth,
@@ -247,6 +258,14 @@ try {
       await mkdir(viewportFolder, { recursive: true });
       const screenshot = path.join(viewportFolder, `${slug(route)}.png`);
       await page.screenshot({ path: screenshot, fullPage: true, animations: 'disabled' });
+
+      const productModule = page.locator('[data-product-module="true"]');
+      if (await productModule.count()) {
+        await productModule.screenshot({
+          path: path.join(viewportFolder, `${slug(route)}--products.png`),
+          animations: 'disabled'
+        });
+      }
 
       if (viewport.name === 'mobile' && route === options.routes[0]) {
         const burger = page.locator('.burger');
