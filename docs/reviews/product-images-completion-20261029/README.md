@@ -57,3 +57,22 @@ Les pages produits exactes existent : https://supernote.com/pages/supernote-mant
 ![Boutique desktop](desktop-boutique.webp)
 
 ![Boutique mobile](mobile-boutique.webp)
+
+## Correction de la taille des photos (retour sur captures)
+
+La version précédente réservait seulement 104–115 px aux images. La boutique place maintenant les photos au-dessus du contenu, avec une surface de 260 px de haut (max. 300 px de large). Les listes comparatives passent à une colonne photo de 210 px avec une image de 220 px de haut ; les actions se placent sous le texte. Sur mobile, la photo est centrée au-dessus des informations. Les duels utilisent 240 px de haut. `object-fit: contain` est conservé.
+
+Les marges blanches excessives des huit packshots ont été réduites. Les fonds périphériques du Kindle Scribe et du Tab X C ont été recadrés pour rendre les appareils plus visibles, sans couper les appareils ou leurs accessoires. Les deux fichiers existants sont réutilisés : aucune variante supplémentaire de fichier. Les textes et liens affiliés n'ont pas changé.
+
+Fichiers CSS : `style.css` et `assets/product-cards.css`. Ce complément reste dans la PR #33, sans fusion ni publication. Les captures originales plus haut documentent la première intégration ; les captures `*-large-photos.webp` documentent cette correction.
+
+
+Contrôle final : [GitHub Actions 40873154545](https://github.com/MarcW88/bloc-notes-numerique/actions/runs/40873154545), commit `d8d5f1b`. Les six jobs visuels réussissent. Boutique : 10 images chargées sur chacun des deux viewports, surface image mesurée 300 × 260 px. Comparatifs : 30 rendus, 60 références chargées ; photos desktop mesurées 210 × 220 px. Aucune erreur console/page ou débordement horizontal sur ces routes. Captures inspectées sur desktop et mobile.
+
+![Boutique desktop, grandes photos](desktop-boutique-large-photos.webp)
+
+![Boutique mobile, grandes photos](mobile-boutique-large-photos.webp)
+
+![Sélection desktop, grandes photos](desktop-comparison-large-photos.webp)
+
+![Sélection mobile, grandes photos](mobile-comparison-large-photos.webp)
