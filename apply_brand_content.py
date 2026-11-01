@@ -124,6 +124,13 @@ for url, page_data in PAGES.items():
         '<span class="update-tag">Analyse en préparation</span>',
         f'<span class="update-tag">Sources vérifiées le {VERIFIED_AT}</span>'
     )
+    if url == '/marques/boox/avis/':
+        html = re.sub(
+            r'<span class="page-meta-item">Sources vérifiées le [^<]+</span>',
+            '<span class="page-meta-item">Sources vérifiées le 1er novembre 2026</span>',
+            html,
+            count=1,
+        )
 
     if '<!-- Contenu à rédiger -->' in html:
         raise SystemExit(f'Placeholder still present: {url}')

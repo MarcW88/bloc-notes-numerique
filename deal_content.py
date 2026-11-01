@@ -5,18 +5,18 @@ Do not edit a live offer in prose without updating its evidence record first.
 """
 
 DEAL_STATUS_LABEL = {
-    "/bons-plans/bloc-notes-numerique/": "Offres vérifiées le 10 septembre 2026",
+    "/bons-plans/bloc-notes-numerique/": "Offres vérifiées le 1er novembre 2026",
     "/bons-plans/remarkable/": "Offres vérifiées le 10 septembre 2026",
     "/bons-plans/kindle-scribe/": "Prix vérifiés le 9 septembre 2026",
     "/bons-plans/kobo-elipsa/": "Prix vérifié le 9 septembre 2026",
-    "/bons-plans/boox/": "Offres vérifiées le 10 septembre 2026",
+    "/bons-plans/boox/": "Offres vérifiées le 1er novembre 2026",
     "/bons-plans/bloc-notes-numerique-occasion/": "Canaux vérifiés le 10 septembre 2026",
     "/bons-plans/black-friday/": "Préparation vérifiée le 10 septembre 2026",
 }
 
 DEAL_CONTENT = {
     "/bons-plans/bloc-notes-numerique/": r'''
-      <p>Au 10 septembre 2026, le bundle reMarkable reste l'offre la plus simple à documenter proprement. BOOX affiche aussi un Note Air5 C à prix barré, mais le coût final dépend encore du bundle, de la TVA et du checkout. Pour Kindle et Kobo, les prix observés servent surtout de repères : ils ne doivent pas être transformés en promotions par défaut.</p>
+      <p>Au 1er novembre 2026, le bundle reMarkable reste l'offre la plus simple à documenter proprement. BOOX affiche désormais les Note Air5 C et Note Air6 C à prix barré, mais leur coût final dépend encore du bundle, de la TVA et du checkout. Pour Kindle et Kobo, les prix observés servent surtout de repères : ils ne doivent pas être transformés en promotions par défaut.</p>
 
       <h2 id="offres-verifiees">Offres actives et prix à surveiller</h2>
       <table>
@@ -24,13 +24,14 @@ DEAL_CONTENT = {
         <tbody>
           <tr><td>reMarkable Paper Pro + Marker Plus + Book Folio</td><td>849 €</td><td>898 € séparément</td><td>Active et vérifiée</td></tr>
           <tr><td>BOOX Note Air5 C</td><td>529,99 €</td><td>639,98 € barré</td><td>Actif, mais checkout à contrôler</td></tr>
+          <tr><td>BOOX Note Air6 C</td><td>579,99 €</td><td>689,98 € barré</td><td>Actif, mais checkout à contrôler</td></tr>
           <tr><td>BOOX Note Air4 C</td><td>499,99 €</td><td>Référence incohérente selon la page BOOX</td><td>Rupture de stock</td></tr>
           <tr><td>Kindle Scribe 2024 16 Go</td><td>à partir de 389 € hors frais</td><td>429,99 € au lancement</td><td>Prix marché à surveiller, pas une promo Amazon</td></tr>
           <tr><td>Kobo Elipsa 2E</td><td>399,99 €</td><td>Prix catalogue officiel</td><td>Prix à surveiller, pas une promo</td></tr>
         </tbody>
       </table>
       <p>Le bundle reMarkable économise 49 € par rapport à la référence d'achat séparé affichée par le constructeur. Ce n'est toutefois un bon plan que si le Book Folio et le Marker Plus faisaient déjà partie du panier prévu. Ajouter un accessoire inutile pour « profiter » d'un bundle reste une dépense supplémentaire.</p>
-      <p>Pour BOOX, nous évitons de convertir mécaniquement les prix barrés en pourcentage. Le Note Air5 C est affiché à 529,99 €, mais BOOX précise que le prix final peut varier selon le bundle, la TVA et le checkout. Le Note Air4 C est en rupture et les propres pages de BOOX affichent deux références barrées différentes ; nous ne retenons donc pas de remise nette tant que cette incohérence persiste.</p>
+      <p>Pour BOOX, nous évitons de convertir mécaniquement les prix barrés en pourcentage. Le Note Air5 C est affiché à 529,99 € et le nouveau Note Air6 C à 579,99 €, mais BOOX précise dans les deux cas que le prix final peut varier selon le bundle, la TVA et le checkout. Le Note Air4 C reste un ancien signal en rupture ; nous ne retenons pas de remise nette pour ce modèle tant que sa référence demeure incohérente.</p>
 
       <h2 id="ce-qui-nest-pas-un-bon-plan">Ce qui n'est pas considéré comme un bon plan</h2>
       <p>Un prix inférieur au lancement d'un ancien modèle n'est pas automatiquement une promotion. De même, un produit affiché avec une remise mais signalé épuisé ne doit pas être présenté comme achetable. Nous séparons donc les offres actives, les prix à surveiller et les promotions expirées.</p>
@@ -44,6 +45,7 @@ DEAL_CONTENT = {
       <ul>
         <li>Kindle Scribe 2024 sous le niveau marché actuel de 389 € à configuration comparable.</li>
         <li>BOOX Note Air4 C si le stock revient avec une référence de prix clarifiée.</li>
+        <li>BOOX Note Air6 C uniquement après contrôle du bundle, de l'entrepôt et du total TTC au checkout.</li>
         <li>Kobo Elipsa 2E dès qu'elle passe clairement sous son tarif officiel de 399,99 €.</li>
         <li>Bundles reMarkable uniquement lorsque l'accessoire inclus est réellement utile.</li>
       </ul>
@@ -52,6 +54,7 @@ DEAL_CONTENT = {
       <ul class="source-list">
         <li><a href="https://remarkable.com/fr-FR/products/remarkable-paper/pro" rel="noopener noreferrer">reMarkable : Paper Pro et bundles</a></li>
         <li><a href="https://euroshop.boox.com/products/noteair5c" rel="noopener noreferrer">BOOX EURO Shop : Note Air5 C</a></li>
+        <li><a href="https://euroshop.boox.com/products/noteair6c" rel="noopener noreferrer">BOOX EURO Shop : Note Air6 C</a></li>
         <li><a href="https://euroshop.boox.com/products/noteair4c" rel="noopener noreferrer">BOOX EURO Shop : Note Air4 C</a></li>
         <li><a href="https://www.idealo.fr/prix/204949872/amazon-kindle-scribe-16gb-grey-2024.html" rel="noopener noreferrer">idealo : Kindle Scribe 2024 16 Go</a></li>
         <li><a href="https://ereader.kobo.com/fr-fr/products/kobo-elipsa-2e" rel="noopener noreferrer">Rakuten Kobo : Kobo Elipsa 2E</a></li>
@@ -125,7 +128,10 @@ DEAL_CONTENT = {
     "/bons-plans/boox/": r'''
       <p>BOOX affiche plusieurs prix barrés, mais ce sont aussi les offres qui demandent le plus de prudence. Le stock, le bundle, l'entrepôt, la TVA et le checkout peuvent modifier le prix réellement payé. Nous séparons donc prix affiché, référence barrée et offre réellement exploitable.</p>
 
-      <h2 id="air4c">Note Air4 C : prix affiché, rupture et références contradictoires</h2>
+      <h2 id="air6c">Note Air6 C : 579,99 €, génération actuelle et checkout à contrôler</h2>
+      <p>Le Note Air6 C est affiché à 579,99 € avec une référence barrée à 689,98 €. Il s'agit de la génération lancée en septembre 2026, avec Android 16. BOOX précise néanmoins que le prix peut ne pas inclure la TVA après sélection du bundle et que le total final dépend du checkout. Nous le classons donc comme <strong>actif mais sensible au panier final</strong>, sans convertir le prix barré en remise garantie.</p>
+
+      <h2 id="air4c">Note Air4 C : ancien signal en rupture et références contradictoires</h2>
       <p>Le Note Air4 C est affiché à 499,99 €, mais il est signalé <strong>épuisé</strong> au moment de notre contrôle. Surtout, BOOX ne montre pas la même référence barrée partout : la collection « Mid-year sale » affiche 549,99 €, tandis que la fiche produit affiche 629,98 €.</p>
       <p>Nous conservons donc 499,99 € comme prix observé, mais nous ne calculons aucun pourcentage de remise et ne retenons pas de prix de référence unique tant que cette contradiction subsiste. Une remise visible n'est pas suffisamment défendable si sa propre base varie selon la page du marchand.</p>
 
@@ -138,7 +144,7 @@ DEAL_CONTENT = {
       <p>Pour choisir d'abord la bonne famille de produit, consultez <a href="/comparatifs/remarkable-vs-boox/">reMarkable vs BOOX</a> ou le <a href="/guides/tablette-classique-ou-tablette-e-ink/">guide tablette classique vs E Ink</a>.</p>
 
       <h2 id="sources">Sources consultées</h2>
-      <ul class="source-list"><li><a href="https://euroshop.boox.com/products/noteair4c" rel="noopener noreferrer">BOOX EURO Shop : Note Air4 C</a></li><li><a href="https://euroshop.boox.com/collections/mid-year-sale" rel="noopener noreferrer">BOOX EURO Shop : Mid-year sale</a></li><li><a href="https://euroshop.boox.com/products/noteair5c" rel="noopener noreferrer">BOOX EURO Shop : Note Air5 C</a></li></ul>
+      <ul class="source-list"><li><a href="https://euroshop.boox.com/products/noteair6c" rel="noopener noreferrer">BOOX EURO Shop : Note Air6 C</a></li><li><a href="https://shop.boox.com/products/noteair6c" rel="noopener noreferrer">BOOX : caractéristiques du Note Air6 C</a></li><li><a href="https://euroshop.boox.com/products/noteair4c" rel="noopener noreferrer">BOOX EURO Shop : Note Air4 C</a></li><li><a href="https://euroshop.boox.com/collections/mid-year-sale" rel="noopener noreferrer">BOOX EURO Shop : Mid-year sale</a></li><li><a href="https://euroshop.boox.com/products/noteair5c" rel="noopener noreferrer">BOOX EURO Shop : Note Air5 C</a></li></ul>
     ''',
 
     "/bons-plans/bloc-notes-numerique-occasion/": r'''

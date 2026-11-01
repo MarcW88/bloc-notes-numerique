@@ -19,3 +19,9 @@ Le calendrier par modèle et les retours utilisateurs ne permettent pas de mesur
 ## Handoff
 
 Mettre à jour uniquement le panorama de gamme, l'ouverture, les sources et le registre avec Note Air6 C/Android 16 ; préserver le jugement, les limites, la garantie, les retours, le cloud et l'état d'indexation.
+
+## PUBLISH_REVIEW
+
+`FAIL — KEEP_NOINDEX`
+
+La cible elle-même est factuellement réalignée : Note Air6 C, Android 16, source officielle et date du 2026-11-01 sont persistés sans faux hands-on. Toutefois, `validate_brands.py` reste rouge à cause d'un blocker global préexistant sur `/marques/boox/boox-note-air/` (`limitations` absent), page hors lot et inchangée. Le changement de l'avis BOOX est donc conservé dans la branche pour validation humaine, sans modification automatique de son état robots.

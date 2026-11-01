@@ -22,3 +22,9 @@ Le coût final BOOX dépend encore du panier et du checkout. Aucun historique su
 ## Handoff
 
 Mettre à jour uniquement le tableau, l'ouverture, la watchlist et les preuves BOOX ; conserver l'architecture, les autres offres et l'état d'indexation.
+
+## PUBLISH_REVIEW
+
+`PASS — READY_FOR_HUMAN_VALIDATION`
+
+Le registre, la source de génération et le HTML sont alignés sur les vérifications du 2026-11-01. Note Air6 C est qualifié `ACTIVE_STOCK_SENSITIVE`; aucun pourcentage BOOX garanti n'est publié. URL, canonical, robots et affiliation sont préservés. `validate_deal_workflow.py` passe ; ses deux avertissements restants concernent uniquement la page reMarkable hors lot.
