@@ -1,1 +1,95 @@
-{"schema_version": 1, "pages": {}}
+{
+  "schema_version": 1,
+  "pages": {
+    "/bons-plans/bloc-notes-numerique/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-11-15",
+      "fingerprint": "2a34c269d542c11482445e9f35c64787fd32c68451ba0d77d42a6d63a8dab53b",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-hub-2026-11-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/deal-content-workflow/SKILL.md"
+    },
+    "/comparatifs/bloc-notes-numerique-etudiant/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-12-01",
+      "fingerprint": "93660dc1570aa33d8f86882e373446e4c302cb8d23d1047ad9f7522d2c5a1a58",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-comparison-etudiant-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/comparison-content-workflow/SKILL.md"
+    },
+    "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2027-01-30",
+      "fingerprint": "9b1ed3b506a0202bc696885fddf8e66d76aac1b4da01da6b3d1eb49186d185dc",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-abonnement-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/guide-content-workflow/SKILL.md"
+    },
+    "/marques/boox/alternatives/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-12-16",
+      "fingerprint": "d5836f7a48d8b97d7f1ebd3972c6da5c61aa2ed4780544d62f8e811c4f0ca727",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-brand-boox-alternatives-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/brand-content-workflow/SKILL.md"
+    },
+    "/usages/lecture-et-prise-de-notes/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2027-01-30",
+      "fingerprint": "bf31c8caef33ca4ec0bc325a839542d68dab1f0ea4b2ed5612e7d025aa047f93",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-lecture-notes-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/usage-content-workflow/SKILL.md"
+    },
+    "/bons-plans/boox/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-11-15",
+      "fingerprint": "21dec2dd00359a59fdb11a3e9835189dd11ba4b3c64f35a3ba03740dbd0c4ee4",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-boox-2026-11-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/deal-content-workflow/SKILL.md"
+    },
+    "/comparatifs/bloc-notes-numerique-pas-cher/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-12-01",
+      "fingerprint": "1178112727191b9952ecef4bd457e00e808a8f2c2cc6ccc868e530d5b7e25aeb",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-comparison-pas-cher-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/comparison-content-workflow/SKILL.md"
+    },
+    "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2027-01-30",
+      "fingerprint": "27120b827b2b4c895afeef20b87bb93c1bdfbe633e73f27d673281ae25218fe9",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-couleur-mono-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/guide-content-workflow/SKILL.md"
+    },
+    "/marques/boox/avis/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2026-12-16",
+      "fingerprint": "b709c6cf8e61750f7aaaa67ebcbb01e1d0709655ee24ce172d7648a693b1c15b",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-boox-avis-2026-11-01.md",
+      "next_action": "CONTENT_WORKFLOW",
+      "content_workflow": ".agents/skills/brand-content-workflow/SKILL.md"
+    },
+    "/usages/prise-de-notes-etudiant/": {
+      "last_reviewed": "2026-11-01",
+      "next_review": "2027-01-30",
+      "fingerprint": "d82c02e0cd308923a712d684607fdb4f149fd3a2198af26214aee53b37562ae4",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-etudiant-2026-11-01.md",
+      "next_action": "NONE",
+      "content_workflow": ".agents/skills/usage-content-workflow/SKILL.md"
+    }
+  }
+}
