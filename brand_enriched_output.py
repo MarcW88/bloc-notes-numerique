@@ -109,6 +109,7 @@ def _boox_review():
         ('BOOX — fonctionnement du cloud tiers', 'https://help.boox.com/hc/en-us/articles/8569457124628-Integrated-Third-Party-Cloud-Storage'),
         ('BOOX — données et confidentialité', 'https://help.boox.com/hc/en-us/articles/360046663532-BOOX-Privacy-Do-We-Collect-Your-Personal-Information'),
         ('BOOX — Note Air5 C', 'https://shop.boox.com/products/noteair5c'),
+        ('BOOX — Note Air6 C', 'https://shop.boox.com/products/noteair6c'),
     ]
     independent = [
         ('TechRadar — Onyx BOOX Note Air5 C review', 'https://www.techradar.com/tablets/ereaders/onyx-boox-note-air5-c-review'),
@@ -119,8 +120,8 @@ def _boox_review():
     return f'''
 <p class="article-answer"><strong>Notre avis sur BOOX en 2026 : la marque reste l’une des plus intéressantes pour qui veut Android, des PDF avancés et des applications tierces sur E Ink, mais l’achat demande davantage de vérifications qu’un reMarkable ou un Kindle.</strong> Le modèle exact, la version Android, la politique de retour du canal d’achat et la durée de support logiciel comptent presque autant que l’écran lui-même.</p>
 <h2 id="produits">Sur les appareils : beaucoup de liberté, davantage de complexité</h2>
-<p>Le principal avantage de BOOX reste Android. Google Play, NeoReader, l’application Notes, les clouds tiers et les nombreux réglages de rafraîchissement permettent d’adapter l’appareil à des workflows très différents. Les essais indépendants du Note Air5 C soulignent cette polyvalence et la richesse des outils.</p>
-<p>La contrepartie est connue : toutes les applications Android ne sont pas conçues pour E Ink, et les réglages de contraste, vitesse ou couleur peuvent demander du temps. La gamme change aussi rapidement ; Go 10.3 Gen II et Note Air5 C tournent aujourd’hui sous Android 15, quand Note Max et Tab X C sont sous Android 13 et Tab Ultra C Pro sous Android 12.</p>
+<p>Le principal avantage de BOOX reste Android. Google Play, NeoReader, l’application Notes, les clouds tiers et les nombreux réglages de rafraîchissement permettent d’adapter l’appareil à des workflows très différents. Les essais indépendants du Note Air5 C soulignent cette polyvalence et la richesse des outils ; le Note Air6 C lancé en septembre 2026 prolonge désormais cette famille avec Android 16.</p>
+<p>La contrepartie est connue : toutes les applications Android ne sont pas conçues pour E Ink, et les réglages de contraste, vitesse ou couleur peuvent demander du temps. La gamme change aussi rapidement : Note Air6 C tourne sous Android 16, Go 10.3 Gen II et Note Air5 C sous Android 15, tandis que Note Max et Tab X C restent sous Android 13 et Tab Ultra C Pro sous Android 12.</p>
 <h2 id="updates">Combien de temps BOOX promet-il des mises à jour ?</h2>
 <p>BOOX indique fournir des mises à jour firmware gratuites pendant <strong>au moins trois ans à compter du lancement du modèle</strong>. Cette promesse porte sur le firmware BOOX, pas nécessairement sur un changement de version majeure d’Android. La marque précise aussi que les mises à jour sont déployées par vagues et que le calendrier peut varier selon le modèle.</p>
 <p>C’est un point positif pour un appareil E Ink destiné à durer plusieurs années, mais il faut distinguer « firmware BOOX maintenu » et « version Android récente ». Pour un usage professionnel dépendant d’applications tierces, la version Android de départ reste donc un critère important.</p>
@@ -153,7 +154,7 @@ def _boox_review():
 <p><strong>BOOX est un bon choix si vous savez pourquoi vous avez besoin d’Android et si vous acceptez de gérer un appareil plus configurable.</strong> La marque apporte une vraie valeur aux utilisateurs avancés de PDF, aux professionnels avec des applications spécifiques et à ceux qui veulent éviter un écosystème trop fermé. Pour un usage simple de carnet, cette liberté peut au contraire devenir une charge inutile.</p>
 <p>Avant achat, nous vérifierions systématiquement quatre points : version Android du modèle, durée restante dans la fenêtre de mises à jour, conditions de garantie du vendeur et politique de retour applicable à l’entrepôt choisi. Pour le choix matériel, voir {internal_link('/marques/boox/', 'la gamme BOOX')} et {internal_link('/comparatifs/remarkable-vs-boox/', 'reMarkable vs BOOX')}.</p>
 <h2 id="methode">Sur quoi repose cet avis ?</h2>
-<p>Les informations sur les mises à jour, la garantie, les retours, le compte ONYX, le cloud et la confidentialité proviennent de la documentation BOOX consultée le {VERIFIED_AT}. Les observations sur l’expérience produit viennent d’essais indépendants. Les avis clients publics servent uniquement à identifier des thèmes récurrents à vérifier ; ils ne sont pas transformés en statistiques ni présentés comme notre propre expérience.</p>
+<p>Les informations sur les modèles actuels, les mises à jour, la garantie, les retours, le compte ONYX, le cloud et la confidentialité proviennent de la documentation BOOX, avec une nouvelle vérification du Note Air6 C le 1er novembre 2026. Les observations sur l’expérience produit viennent d’essais indépendants. Les avis clients publics servent uniquement à identifier des thèmes récurrents à vérifier ; ils ne sont pas transformés en statistiques ni présentés comme notre propre expérience.</p>
 <h2 id="sources">Sources consultées</h2>
 <h3>Documentation BOOX</h3>{_source_list(official)}
 <h3>Essais et retours indépendants</h3>{_source_list(independent)}

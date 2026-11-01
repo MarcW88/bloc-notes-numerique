@@ -1,0 +1,64 @@
+{
+  "pages": [
+    {
+      "url": "/bons-plans/bloc-notes-numerique/",
+      "reviewed_at": "2026-11-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-hub-2026-11-01.md"
+    },
+    {
+      "url": "/comparatifs/bloc-notes-numerique-etudiant/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-comparison-etudiant-2026-11-01.md"
+    },
+    {
+      "url": "/guides/bloc-notes-numerique-avec-ou-sans-abonnement/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-abonnement-2026-11-01.md"
+    },
+    {
+      "url": "/marques/boox/alternatives/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-brand-boox-alternatives-2026-11-01.md"
+    },
+    {
+      "url": "/usages/lecture-et-prise-de-notes/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-lecture-notes-2026-11-01.md"
+    },
+    {
+      "url": "/bons-plans/boox/",
+      "reviewed_at": "2026-11-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-deal-boox-2026-11-01.md"
+    },
+    {
+      "url": "/comparatifs/bloc-notes-numerique-pas-cher/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-comparison-pas-cher-2026-11-01.md"
+    },
+    {
+      "url": "/guides/bloc-notes-numerique-couleur-ou-noir-et-blanc/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-guide-couleur-mono-2026-11-01.md"
+    },
+    {
+      "url": "/marques/boox/avis/",
+      "reviewed_at": "2026-11-01",
+      "decision": "LIGHT_UPDATE",
+      "audit_report": ".content/reviews/maintenance-brand-boox-avis-2026-11-01.md"
+    },
+    {
+      "url": "/usages/prise-de-notes-etudiant/",
+      "reviewed_at": "2026-11-01",
+      "decision": "KEEP",
+      "audit_report": ".content/reviews/maintenance-usage-etudiant-2026-11-01.md"
+    }
+  ]
+}
